@@ -9,6 +9,7 @@
 #
 #===------------------------------------------------------------------------===#
 # FIXME: Integrate with clang-tidy-diff.py
+# NOTE: Original in: https://github.com/llvm-mirror/clang-tools-extra/blob/master/clang-tidy/tool/run-clang-tidy.py
 
 """
 Parallel clang-tidy runner
