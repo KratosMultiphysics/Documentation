@@ -60,7 +60,7 @@ class SimulationScenario(AnalysisStage):
         return Q
 
 
-########################################################################################################################################################################################################
+###############################################################################################################################################################################
 
 
 # function generating the random sample
@@ -101,11 +101,6 @@ def ExecuteInstance_Task(pickled_model,pickled_parameters,source_term_list,insta
 
 """
 function serializing and pickling the model and the parameters of the problem
-the idea is the following:
-i)   from Model/Parameters Kratos object to StreamSerializer Kratos object
-ii)  from StreamSerializer Kratos object to pickle string
-iii) from pickle string to StreamSerializer Kratos object
-iv)  from StreamSerializer Kratos object to Model/Parameters Kratos object
 input:
         parameter_file_name: path of the Project Parameters file
 output:
@@ -136,7 +131,6 @@ if __name__ == '__main__':
 
     # set the ProjectParameters.json path
     parameter_file_name = "problem_settings/project_parameters.json"
-    # parameter_file_name = "/ABSOLUTE/path/to/project_parameters/file"
     # create a serialization of the model and of the project parameters
     pickled_model,pickled_parameters = SerializeModelParameters_Task(parameter_file_name)
     # set batch size and initialize qoi list where to append Quantity of Interests values
