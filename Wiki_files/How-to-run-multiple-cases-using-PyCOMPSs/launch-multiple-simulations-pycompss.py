@@ -74,13 +74,13 @@ function executing an instance of the problem
 input:
         pickled_model:      serialization of the model
         pickled_parameters: serialization of the Project Parameters
-        source_term_list:   list of values for \varepsilon
+        heat_flux_list:     list of values for \varepsilon
         instance:           iteration number
 output:
         QoI: Quantity of Interest
 """
 @task(returns=1)
-def ExecuteInstance_Task(pickled_model,pickled_parameters,source_term_list,instance):
+def ExecuteInstance_Task(pickled_model,pickled_parameters,heat_flux_list,instance):
     # overwrite the old model serializer with the unpickled one
     model_serializer = pickle.loads(pickled_model)
     current_model = KratosMultiphysics.Model()
@@ -92,7 +92,7 @@ def ExecuteInstance_Task(pickled_model,pickled_parameters,source_term_list,insta
     serialized_parameters.Load("ParametersSerialization",current_parameters)
     del(serialized_parameters)
     # get sample
-    sample = GetValueFromListList(source_term_list,instance) # take
+    sample = GetValueFromListList(heat_flux_list,instance) # take
     simulation = SimulationScenario(current_model,current_parameters,sample)
     simulation.Run()
     QoI = simulation.EvaluateQuantityOfInterest()
@@ -136,11 +136,11 @@ if __name__ == '__main__':
     # set batch size and initialize qoi list where to append Quantity of Interests values
     batch_size = 20
     qoi = []
-    # define the list for source term values
-    source_term_list = np.random.beta(2.0,6.0,batch_size)
+    # define the list for heat flux values
+    heat_flux_list = np.random.beta(2.0,6.0,batch_size)
     # start algorithm
     for instance in range (0,batch_size):
-        qoi.append(ExecuteInstance_Task(pickled_model,pickled_parameters,source_term_list,instance))
+        qoi.append(ExecuteInstance_Task(pickled_model,pickled_parameters,heat_flux_list,instance))
 
     # synchronize to local machine
     qoi = compss_wait_on(qoi)
