@@ -9,4 +9,4 @@ This folder contains the source files required to follow the practical exercises
 * **3. Data management**: [Source files](3_data_management/3_data_management.zip)
 * **4. Solving strategies**: [Source files](4_solving_strategies/4_solving_strategies.zip)
 * **5. Manipulating solution values**: [Source files](5_manipulating_solution_values/5_manipulating_solution_values.zip)
-* **6. Multiphysics**: [Source files](6_multiphysics/66_multiphysics.zip)
+* **6. Multiphysics**: [Source files](6_multiphysics/6_multiphysics.zip)
