@@ -19,9 +19,10 @@ except ImportError:
     import pickle
 
 # Import pycompss
-from pycompss.api.task import task
-from pycompss.api.api import compss_wait_on
-from pycompss.api.parameter import *
+# from pycompss.api.task import task
+# from pycompss.api.api import compss_wait_on
+# from pycompss.api.parameter import *
+from exaqute.ExaquteTaskPyCOMPSs import *   # to execute with runcompss
 
 
 """
@@ -79,7 +80,7 @@ input:
 output:
         QoI: Quantity of Interest
 """
-@task(returns=1)
+@ExaquteTask(returns=1)
 def ExecuteInstance_Task(pickled_model,pickled_parameters,heat_flux_list,instance):
     # overwrite the old model serializer with the unpickled one
     model_serializer = pickle.loads(pickled_model)
@@ -107,7 +108,7 @@ output:
         pickled_model:      model serializaton
         pickled_parameters: project parameters serialization
 """
-@task(parameter_file_name=FILE_IN,returns=2)
+@ExaquteTask(parameter_file_name=FILE_IN,returns=2)
 def SerializeModelParameters_Task(parameter_file_name):
     with open(parameter_file_name,'r') as parameter_file:
         parameters = KratosMultiphysics.Parameters(parameter_file.read())
