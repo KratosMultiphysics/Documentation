@@ -7,7 +7,7 @@ import KratosMultiphysics
 import KratosMultiphysics.ConvectionDiffusionApplication as KratosConvDiff
 
 # Importing the base class
-from analysis_stage import AnalysisStage
+from KratosMultiphysics.analysis_stage import AnalysisStage
 
 # Import packages
 import numpy as np
@@ -40,8 +40,8 @@ class SimulationScenario(AnalysisStage):
         self._GetSolver().main_model_part.AddNodalSolutionStepVariable(KratosMultiphysics.NODAL_AREA)
 
     def _CreateSolver(self):
-        import convection_diffusion_stationary_solver
-        return convection_diffusion_stationary_solver.CreateSolver(self.model,self.project_parameters["solver_settings"])
+        import KratosMultiphysics.ConvectionDiffusionApplication.convection_diffusion_stationary_solver
+        return KratosMultiphysics.ConvectionDiffusionApplication.convection_diffusion_stationary_solver.CreateSolver(self.model,self.project_parameters["solver_settings"])
 
     # function indtroducing the stochasticity in the right hand side defining the forcing function and apply the stochastic contribute
     def ModifyInitialProperties(self):
