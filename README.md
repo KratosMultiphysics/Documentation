@@ -9,4 +9,4 @@ This repository hosts the documentation related with _Kratos Multi-Physics_. The
 * **Resources**: Presentations, and any other documentation related with Kratos Multi-Physics.
 * **Workshops**: Presentations, and any other documentation used for the *Kratos* team on workshops.
 
-In the future more sections will be added as it is need to provide a 
+In the future more sections will be added as needed
