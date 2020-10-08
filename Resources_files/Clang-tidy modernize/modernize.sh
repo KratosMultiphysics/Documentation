@@ -1,3 +1,4 @@
+# See https://clang.llvm.org/extra/clang-tidy/checks/list.html
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-avoid-bind' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-deprecated-headers' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-loop-convert' -fix
@@ -12,10 +13,18 @@ python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-auto' -fi
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-bool-literals' -fix
 # python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-default-member-init' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-emplace' -fix
-# python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-equals-default' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-noexcept' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-nodiscard' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-equals-default' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-equals-delete' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-nullptr' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-override' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-transparent-functors' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-using' -fix
-
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-concat-nested-namespaces' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-replace-disallow-copy-and-assign-macro' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-replace-random-shuffle' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-return-braced-init-list' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-unary-static-assert' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-trailing-return-type' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-uncaught-exceptions' -fix
