@@ -28,3 +28,35 @@ python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-return-braced
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-unary-static-assert' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-trailing-return-type' -fix
 python run-clang-tidy.py -header-filter='.*' -checks='-*,modernize-use-uncaught-exceptions' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,performance-for-range-copy' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,performance-inefficient-algorithm' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,performance-inefficient-vector-operation' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,performance-move-const-arg' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,performance-move-constructor-init' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,performance-noexcept-move-constructor' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,performance-trivially-destructible' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,performance-type-promotion-in-math-fn' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,performance-unnecessary-value-param' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-braces-around-statements' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-convert-member-functions-to-static' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-delete-null-pointer' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-else-after-return' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-implicit-bool-conversion' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-inconsistent-declaration-parameter-name' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-isolate-declaration' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-make-member-function-const' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-string-compare' -fix
+# python run-clang-tidy.py -header-filter='.*' -checks='-*,cppcoreguidelines-init-variables' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,misc-unused-alias-decls' -fix
+# python run-clang-tidy.py -header-filter='.*' -checks='-*,misc-unused-parameters' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,misc-redundant-expression' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,misc-static-assert' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-static-accessed-through-instance' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-simplify-subscript-expr' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-simplify-boolean-expr' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-redundant-member-init' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-redundant-function-ptr-dereference' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-redundant-declaration' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-redundant-control-flow' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-non-const-parameter' -fix
+python run-clang-tidy.py -header-filter='.*' -checks='-*,readability-misplaced-array-index' -fix
