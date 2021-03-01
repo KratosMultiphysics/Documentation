@@ -5,7 +5,7 @@ from KratosMultiphysics.assign_scalar_variable_to_conditions_process import Assi
 import json
 
 #Import visualization tool
-import vtkplotter
+import vedo
 
 #Slider class
 class Slider():
@@ -31,9 +31,9 @@ class InteractiveSimulation(StructuralMechanicsAnalysisROM):
         self.Continue = True
         self.timestep= 0
         self.slider1 = Slider(0)
-        self.Plot = vtkplotter.Plotter(title="Simulation Results",interactive=False)
+        self.Plot = vedo.Plotter(title="Simulation Results",interactive=False)
         self.Plot.addSlider2D(self.slider1.GenericSlider, -200, 400 , value = 0, pos=3, title="Pressure (MPa)")
-        self.Plot += vtkplotter.Text('Move the slides to change the Pressure on the Face of the Bunny', s=1.2)
+        self.Plot += vedo.Text2D('Move the slider to change the Pressure on the Face of the Bunny', s=1.2)
         self.PauseButton = self.Plot.addButton(
                 self.PauseButtonFunc,
                 pos=(0.9, .9),  # x,y fraction from bottom left corner
@@ -60,7 +60,7 @@ class InteractiveSimulation(StructuralMechanicsAnalysisROM):
         self.Plot.show()
 
     def PauseButtonFunc(self):
-        vtkplotter.printc(self.PauseButton.status(), box="_", dim=True)
+        vedo.printc(self.PauseButton.status(), box="_", dim=True)
         if self.PauseButton.status() == "PAUSE":
             self.Plot.interactive = True
         else:
@@ -68,7 +68,7 @@ class InteractiveSimulation(StructuralMechanicsAnalysisROM):
         self.PauseButton.switch() # change to next status
 
     def StopButtonFunc(self):
-        vtkplotter.printc(self.StopButton.status(), box="_", dim=True)
+        vedo.printc(self.StopButton.status(), box="_", dim=True)
         if self.StopButton.status() == "STOP":
             self.Finalize()
             self.Continue = False
@@ -89,17 +89,17 @@ class InteractiveSimulation(StructuralMechanicsAnalysisROM):
         super().FinalizeSolutionStep()
         if self.timestep>1.5:
             if self.timestep==2:
-                self.a = vtkplotter.load(f'./vtk_output/VISUALIZE_HROM_0_{self.timestep}.vtk')
-                displs = self.a.getPointArray("DISPLACEMENT")
+                self.a_mesh = vedo.load(f'./vtk_output/VISUALIZE_HROM_0_{self.timestep}.vtk').tomesh(fill=True, shrink=1)
+                displs = self.a_mesh.getPointArray("DISPLACEMENT")
 
             if self.timestep>2:
-                b = vtkplotter.load(f'./vtk_output/VISUALIZE_HROM_0_{self.timestep}.vtk')
-                newpoints = b.points()
-                displs = b.getPointArray("DISPLACEMENT")
-                self.a.points(newpoints+displs)
+                b_mesh = vedo.load(f'./vtk_output/VISUALIZE_HROM_0_{self.timestep}.vtk').tomesh(fill=True, shrink=1)
+                newpoints = b_mesh.points()
+                displs = b_mesh.getPointArray("DISPLACEMENT")
+                self.a_mesh.points(newpoints+displs)
 
-            self.a.pointColors(vtkplotter.mag(displs), cmap='jet').addScalarBar(vmin = 0, vmax = 0.009)
-            self.a.show(axes=1, viewup='z')
+            self.a_mesh.pointColors(vedo.mag(displs), cmap='jet',vmin = 0, vmax = 0.009).addScalarBar()
+            self.a_mesh.show(axes=1, viewup='z')
         self.timestep +=1
 
     def KeepAdvancingSolutionLoop(self):
