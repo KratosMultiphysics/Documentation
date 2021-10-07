@@ -31,6 +31,9 @@ from KratosMultiphysics.analysis_stage import AnalysisStage
 
 # Import PyCOMPSs
 from exaqute import task, FILE_IN, get_value_from_remote
+from exaqute import init as exaqute_init
+exaqute_init() # must not be called more than once
+
 
 
 def GetValueFromListList(values,iteration):
