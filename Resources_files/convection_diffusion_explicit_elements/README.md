@@ -1,4 +1,4 @@
-# Convection of a gaussian hill problem
+# Eulerian convection diffusion explicit elements
 
 **Author:** [Riccardo Tosi](https://github.com/riccardotosi)
 
