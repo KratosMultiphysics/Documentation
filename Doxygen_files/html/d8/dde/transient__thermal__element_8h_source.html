@@ -156,14 +156,14 @@ $(function() {
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d6/da0/class_kratos_1_1_transient_thermal_element.html#a56235831e77f06fc726fc777ef740596">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d6/da0/class_kratos_1_1_transient_thermal_element.html#a56235831e77f06fc726fc777ef740596">CalculateLocalSystem</a>(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">MatrixType</a>&amp; rLeftHandSideMatrix,</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                              <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">VectorType</a>&amp; rRightHandSideVector,</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../d6/da0/class_kratos_1_1_transient_thermal_element.html#a56235831e77f06fc726fc777ef740596">   78</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d6/da0/class_kratos_1_1_transient_thermal_element.html#a56235831e77f06fc726fc777ef740596">CalculateLocalSystem</a>(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">MatrixType</a>&amp;        rLeftHandSideMatrix,</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                              <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">VectorType</a>&amp;        rRightHandSideVector,</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                              <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo)<span class="keyword"> override</span></div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">GeometryType::ShapeFunctionsGradientsType</a> dN_dX_container;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> det_J_container;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>                                    det_J_container;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        GetGeometry().ShapeFunctionsIntegrationPointsGradients(dN_dX_container, det_J_container,</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                               GetIntegrationMethod());</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> integration_coefficients = CalculateIntegrationCoefficients(det_J_container);</div>
@@ -283,7 +283,7 @@ $(function() {
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keywordflow">if</span> constexpr (TDim == 2) {</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_geometry = GetGeometry();</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keyword">auto</span> pos               = std::find_if(r_geometry.begin(), r_geometry.end(),</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            <span class="keyword">auto</span>        pos        = std::find_if(r_geometry.begin(), r_geometry.end(),</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                                                  [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code" href="../../d5/da1/structnode.html">node</a>) { return node.Z() != 0.0; });</div>
 <div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <a class="code" href="../../d5/d4d/group___kratos_core.html#ga421c079910a05f8a88688b045190ac9b">KRATOS_ERROR_IF_NOT</a>(pos == r_geometry.end())</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                &lt;&lt; <span class="stringliteral">&quot; Node with non-zero Z coordinate found. Id: &quot;</span> &lt;&lt; pos-&gt;Id() &lt;&lt; std::endl;</div>
@@ -327,11 +327,11 @@ $(function() {
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt; CalculateConductivityMatrix(</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">GeometryType::ShapeFunctionsGradientsType</a>&amp; rShapeFunctionGradients,</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rIntegrationCoefficients,</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keyword">const</span> ProcessInfo&amp; rCurrentProcessInfo)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp;                                    rIntegrationCoefficients,</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keyword">const</span> ProcessInfo&amp;                               rCurrentProcessInfo)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;        GeoThermalDispersionLaw law{TDim};</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> constitutive_matrix =</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>              constitutive_matrix =</div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            law.CalculateThermalDispersionMatrix(GetProperties(), rCurrentProcessInfo);</div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="keyword">auto</span> result = BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt;{<a class="code" href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">ZeroMatrix</a>{TNumNodes, TNumNodes}};</div>
@@ -350,10 +350,10 @@ $(function() {
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt; CalculateCapacityMatrix(<span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rIntegrationCoefficients,</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                                                                        <span class="keyword">const</span> ProcessInfo&amp; rCurrentProcessInfo)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_properties = GetProperties();</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp;              r_properties = GetProperties();</div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        RetentionLaw::Parameters <a class="code" href="../../d6/dfc/namespacefluid__chimera__analysis.html#a478ba81a91db4a67740637b0d16012ce">parameters</a>(r_properties, rCurrentProcessInfo);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keyword">auto</span> retention_law      = <a class="code" href="../../d9/d8b/class_kratos_1_1_retention_law_factory.html#a973318f473570077106b7160107c7bc2">RetentionLawFactory::Clone</a>(r_properties);</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> saturation = retention_law-&gt;CalculateSaturation(<a class="code" href="../../d6/dfc/namespacefluid__chimera__analysis.html#a478ba81a91db4a67740637b0d16012ce">parameters</a>);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keyword">auto</span>                     retention_law = <a class="code" href="../../d9/d8b/class_kratos_1_1_retention_law_factory.html#a973318f473570077106b7160107c7bc2">RetentionLawFactory::Clone</a>(r_properties);</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span>             saturation    = retention_law-&gt;CalculateSaturation(<a class="code" href="../../d6/dfc/namespacefluid__chimera__analysis.html#a478ba81a91db4a67740637b0d16012ce">parameters</a>);</div>
 <div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> c_water = r_properties[POROSITY] * saturation * r_properties[DENSITY_WATER] *</div>
 <div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                             r_properties[SPECIFIC_HEAT_CAPACITY_WATER];</div>
 <div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> c_solid = (1.0 - r_properties[POROSITY]) * r_properties[DENSITY_SOLID] *</div>
@@ -373,7 +373,7 @@ $(function() {
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    array_1d&lt;double, TNumNodes&gt; GetNodalValuesOf(<span class="keyword">const</span> Variable&lt;double&gt;&amp; rNodalVariable)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keyword">auto</span> result            = array_1d&lt;double, TNumNodes&gt;{};</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keyword">auto</span>        result     = array_1d&lt;double, TNumNodes&gt;{};</div>
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_geometry = GetGeometry();</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        std::transform(r_geometry.begin(), r_geometry.end(), result.begin(), [&amp;rNodalVariable](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code" href="../../d5/da1/structnode.html">node</a>) {</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            return node.FastGetSolutionStepValue(rNodalVariable);</div>
@@ -455,7 +455,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 7 2024 02:04:10 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Feb 8 2024 02:04:27 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
