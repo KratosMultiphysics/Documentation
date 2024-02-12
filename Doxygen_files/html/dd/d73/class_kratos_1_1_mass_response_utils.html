@@ -109,8 +109,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:abd60c8883d37b00532ab586780479dae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c00427abbe4d4d69f55be4f51cd87ee"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d73/class_kratos_1_1_mass_response_utils.html#a3c00427abbe4d4d69f55be4f51cd87ee">CalculateValue</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
 <tr class="separator:a3c00427abbe4d4d69f55be4f51cd87ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e5f63c05e7d274eb778c724036be5d6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d73/class_kratos_1_1_mass_response_utils.html#a5e5f63c05e7d274eb778c724036be5d6">CalculateGradient</a> (const <a class="el" href="../../dd/d73/class_kratos_1_1_mass_response_utils.html#a2a78e34efbae323d06dcccc804220bc5">PhysicalFieldVariableTypes</a> &amp;rPhysicalVariable, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rGradientRequiredModelPart, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rGradientComputedModelPart, std::vector&lt; <a class="el" href="../../dd/d73/class_kratos_1_1_mass_response_utils.html#aaf4ce1d9882d3831356732cc34548af5">ContainerExpressionType</a> &gt; &amp;rListOfContainerExpressions)</td></tr>
-<tr class="separator:a5e5f63c05e7d274eb778c724036be5d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76fa31e127b5d3b53df9d35306b13a5e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d73/class_kratos_1_1_mass_response_utils.html#a76fa31e127b5d3b53df9d35306b13a5e">CalculateGradient</a> (const <a class="el" href="../../dd/d73/class_kratos_1_1_mass_response_utils.html#a2a78e34efbae323d06dcccc804220bc5">PhysicalFieldVariableTypes</a> &amp;rPhysicalVariable, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rGradientRequiredModelPart, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rGradientComputedModelPart, std::vector&lt; <a class="el" href="../../dd/d73/class_kratos_1_1_mass_response_utils.html#aaf4ce1d9882d3831356732cc34548af5">ContainerExpressionType</a> &gt; &amp;rListOfContainerExpressions, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> PerturbationSize)</td></tr>
+<tr class="separator:a76fa31e127b5d3b53df9d35306b13a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="aaf4ce1d9882d3831356732cc34548af5"></a>
@@ -170,8 +170,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a5e5f63c05e7d274eb778c724036be5d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e5f63c05e7d274eb778c724036be5d6">&#9670;&nbsp;</a></span>CalculateGradient()</h2>
+<a id="a76fa31e127b5d3b53df9d35306b13a5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a76fa31e127b5d3b53df9d35306b13a5e">&#9670;&nbsp;</a></span>CalculateGradient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -201,7 +201,13 @@ Static Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; <a class="el" href="../../dd/d73/class_kratos_1_1_mass_response_utils.html#aaf4ce1d9882d3831356732cc34548af5">ContainerExpressionType</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>rListOfContainerExpressions</em>&#160;</td>
+          <td class="paramname"><em>rListOfContainerExpressions</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>PerturbationSize</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -277,7 +283,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 11 2024 03:33:55 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Feb 12 2024 03:26:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
