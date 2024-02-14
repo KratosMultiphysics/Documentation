@@ -647,7 +647,7 @@ $(function() {
 <div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a2a5ae84f97fbee7e64e6b734e741bebf">IndexType</a> I,</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a2a5ae84f97fbee7e64e6b734e741bebf">IndexType</a> <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a0dcc8fdbf3703c6395c0f78646371997">J</a>)<span class="keyword"> const</span></div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a2a5ae84f97fbee7e64e6b734e741bebf">IndexType</a> j_col_index = -1;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a2a5ae84f97fbee7e64e6b734e741bebf">IndexType</a> j_col_index = 0;</div>
 <div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a2a5ae84f97fbee7e64e6b734e741bebf">IndexType</a> i_row_index = mRowIndices[I];</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = mColIndices.begin() + i_row_index; it != mColIndices.end(); ++it) {</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;            <span class="keywordflow">if</span> (*it == <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a0dcc8fdbf3703c6395c0f78646371997">J</a>) {</div>
@@ -668,43 +668,42 @@ $(function() {
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160; </div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <span class="comment">// Get position in the column indices vector as this is the same one to be used in the values vector</span></div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a2a5ae84f97fbee7e64e6b734e741bebf">IndexType</a> ij_col_index = GetColumVectorIndex(aux_i_id, aux_j_id);</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        <a class="code" href="../../d5/d4d/group___kratos_core.html#ga9fdd4e0364598f28a529107663707cf3">KRATOS_ERROR_IF</a>(ij_col_index &lt; 0) &lt;&lt; <span class="stringliteral">&quot;Column index cannot be found for ij-edge &quot;</span> &lt;&lt; GlobalIdI &lt;&lt; <span class="stringliteral">&quot;-&quot;</span> &lt;&lt; GlobalIdJ &lt;&lt; <span class="stringliteral">&quot;.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160; </div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        <span class="keywordflow">return</span> mEdgeData[ij_col_index];</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;    }</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160; </div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160; </div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;        <span class="keywordflow">return</span> mEdgeData[ij_col_index];</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;    }</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160; </div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160; </div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160; </div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160; </div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160; </div>
 <div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160; </div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160; </div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;}; <span class="comment">// Class CsrMatrix</span></div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160; </div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;}; <span class="comment">// Class CsrMatrix</span></div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160; </div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160; </div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160; </div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TDim&gt;</div>
-<div class="line"><a name="l00709"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga2a63d7615553e6c46d1756bf85f00e21">  709</a></span>&#160;<span class="keyword">inline</span> std::istream &amp;<a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator&gt;&gt;</a>(</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    std::istream &amp;rIStream,</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;    <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html">EdgeBasedDataStructure&lt;TDim&gt;</a> &amp;rThis)</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;{</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;    <span class="keywordflow">return</span> rIStream;</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;}</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TDim&gt;</div>
-<div class="line"><a name="l00718"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga7938e9bebaecd044fd4d21f641c380c8">  718</a></span>&#160;<span class="keyword">inline</span> std::ostream &amp;<a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator&lt;&lt;</a>(</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    std::ostream &amp;rOStream,</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html">EdgeBasedDataStructure&lt;TDim&gt;</a> &amp;rThis)</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;{</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    rThis.<a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a27775f0e8c5b7b97adcd9d163035fabf">PrintInfo</a>(rOStream);</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    rOStream &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    rThis.<a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a25191f642e404bee36eb0f11e66179b2">PrintData</a>(rOStream);</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;}</div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160; </div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160; </div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160; </div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TDim&gt;</div>
+<div class="line"><a name="l00708"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga2a63d7615553e6c46d1756bf85f00e21">  708</a></span>&#160;<span class="keyword">inline</span> std::istream &amp;<a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator&gt;&gt;</a>(</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    std::istream &amp;rIStream,</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html">EdgeBasedDataStructure&lt;TDim&gt;</a> &amp;rThis)</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;{</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;    <span class="keywordflow">return</span> rIStream;</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;}</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160; </div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;<span class="keyword">template</span> &lt;<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> TDim&gt;</div>
+<div class="line"><a name="l00717"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga7938e9bebaecd044fd4d21f641c380c8">  717</a></span>&#160;<span class="keyword">inline</span> std::ostream &amp;<a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator&lt;&lt;</a>(</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    std::ostream &amp;rOStream,</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html">EdgeBasedDataStructure&lt;TDim&gt;</a> &amp;rThis)</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;{</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;    rThis.<a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a27775f0e8c5b7b97adcd9d163035fabf">PrintInfo</a>(rOStream);</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    rOStream &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;    rThis.<a class="code" href="../../d4/d0e/class_kratos_1_1_edge_based_data_structure.html#a25191f642e404bee36eb0f11e66179b2">PrintData</a>(rOStream);</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160; </div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;}</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160; </div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160; </div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160; </div>
 <div class="ttc" id="aclass_kratos_1_1_edge_based_data_structure_1_1_edge_data_html"><div class="ttname"><a href="../../d1/de9/class_kratos_1_1_edge_based_data_structure_1_1_edge_data.html">Kratos::EdgeBasedDataStructure::EdgeData</a></div><div class="ttdef"><b>Definition:</b> edge_based_data_structure.h:71</div></div>
 <div class="ttc" id="aclass_kratos_1_1_edge_based_data_structure_1_1_edge_data_html_a04ca5ce92d52a92d47bb4a07d99f2d9a"><div class="ttname"><a href="../../d1/de9/class_kratos_1_1_edge_based_data_structure_1_1_edge_data.html#a04ca5ce92d52a92d47bb4a07d99f2d9a">Kratos::EdgeBasedDataStructure::EdgeData::AddOffDiagonalValues</a></div><div class="ttdeci">void AddOffDiagonalValues(const double Weight, const double Ni, const double Nj, const array_1d&lt; double, TDim &gt; &amp;rDNiDX, const array_1d&lt; double, TDim &gt; &amp;rDNjDX)</div><div class="ttdef"><b>Definition:</b> edge_based_data_structure.h:128</div></div>
 <div class="ttc" id="aclass_kratos_1_1_edge_based_data_structure_1_1_edge_data_html_a1c11039b1a0a45ecf354e648e7e5ea19"><div class="ttname"><a href="../../d1/de9/class_kratos_1_1_edge_based_data_structure_1_1_edge_data.html#a1c11039b1a0a45ecf354e648e7e5ea19">Kratos::EdgeBasedDataStructure::EdgeData::GetLength</a></div><div class="ttdeci">double GetLength() const</div><div class="ttdef"><b>Definition:</b> edge_based_data_structure.h:83</div></div>
@@ -788,7 +787,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2024 02:34:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 14 2024 02:37:06 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

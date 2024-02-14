@@ -82,7 +82,7 @@ $(function() {
 <p>The functions that the <code>GeoMechanicsTimeIntegrationScheme</code> class implements are mostly dictated by the <code>Scheme</code> interface and include functionality like checking if all variables are allocated in the modelpart, getting <em>DofLists, EquationIds</em> and calling different flavors of the Initialize/Finalize/CalculateSystemContributions functions on elements and conditions.</p>
 <p>It also has a general <code>Update</code> step, which calls the <code>UpdateVariablesDerivatives</code> function. This is a purely virtual function that has to be implemented by the derived classes. This is because the actual updating of the derivatives, defines a time integration scheme. The derived classes then use the lists of variables to update the derivatives. In our structure (see the class diagram), only the <code>BackwardEulerScheme</code> and the <code>GeneralizedNewmarkScheme</code> classes implement this function. Similarly the <code>SetTimeFactors</code> function, updates the delta time, but also the time coefficients, for which the overrides are found in the derived classes. For the specific equations, see sections <a href="../../#backward-euler">Backward Euler</a> and <a href="../../#generalized-newmark">Generalized Newmark</a>.</p>
 <p><img src="../../SchemeStructure.svg" alt="SchemeStructure.svg" style="pointer-events: none;" class="inline"/> <em>Class structure of the schemes generated using the SchemeStructure.puml file with PlantUML. Note that the class diagram is simplified and only shows the functions that need emphasis.</em></p>
-<p>The child classes which actually specify which variables are used in the time integration scheme (e.g. the <code>BackwardEulerUPwScheme</code> or the `GeneralizedNewmarkTScheme), only fill the lists of first/second order variables.</p>
+<p>The child classes which actually specify which variables are used in the time integration scheme (e.g. the <code>BackwardEulerUPwScheme</code> or the <code>GeneralizedNewmarkTScheme</code>), only fill the lists of first/second order variables.</p>
 <p>The exceptions are the <code>NewmarkQuasistaticUPwScheme</code>, which has functionality for nodal smoothing (this should be moved to another location) and the damped and dynamic UPw schemes. More info on these can be found in the <a href="../../#dynamic-and-damped-schemes">Dynamic and damped schemes</a> section.</p>
 <h1>Backward Euler</h1>
 <p>The most straight-forward scheme type is called Backward Euler. The functionality described in this section can be found in the <code>BackwardEulerScheme</code> class. The first and second time derivatives are simply calculated by dividing the difference in their integrated variables by the time step. This results in the following equations for the scalar and vector derivatives.</p>
@@ -94,7 +94,7 @@ $(function() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2024 02:54:14 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 14 2024 02:56:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

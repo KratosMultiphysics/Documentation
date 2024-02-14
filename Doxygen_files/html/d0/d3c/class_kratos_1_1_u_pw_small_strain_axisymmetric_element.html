@@ -117,7 +117,6 @@ Public Types</h2></td></tr>
 <tr class="memitem:af71e0c570ed8d4c8457c3623471de188"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3c/class_kratos_1_1_u_pw_small_strain_axisymmetric_element.html#af71e0c570ed8d4c8457c3623471de188">MatrixType</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a></td></tr>
 <tr class="separator:af71e0c570ed8d4c8457c3623471de188"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a007f25a6cd274085a568c92c38ee6336"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3c/class_kratos_1_1_u_pw_small_strain_axisymmetric_element.html#a007f25a6cd274085a568c92c38ee6336">SizeType</a> = std::size_t</td></tr>
-<tr class="memdesc:a007f25a6cd274085a568c92c38ee6336"><td class="mdescLeft">&#160;</td><td class="mdescRight">The definition of the sizetype.  <a href="../../d0/d3c/class_kratos_1_1_u_pw_small_strain_axisymmetric_element.html#a007f25a6cd274085a568c92c38ee6336">More...</a><br /></td></tr>
 <tr class="separator:a007f25a6cd274085a568c92c38ee6336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_class_kratos_1_1_u_pw_small_strain_element"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_kratos_1_1_u_pw_small_strain_element')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a></td></tr>
 <tr class="memitem:a2777759a4feff9bb8cdcae455f2ec923 inherit pub_types_class_kratos_1_1_u_pw_small_strain_element"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a2777759a4feff9bb8cdcae455f2ec923">IndexType</a> = std::size_t</td></tr>
@@ -812,6 +811,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a31792166147e96b1f327f2d789624ac9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a213ff38cf73cc890fa5b41ca7122f31f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3c/class_kratos_1_1_u_pw_small_strain_axisymmetric_element.html#a213ff38cf73cc890fa5b41ca7122f31f">CalculateIntegrationCoefficient</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">GeometryType::IntegrationPointsArrayType</a> &amp;IntegrationPoints, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> PointNumber, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> detJ) override</td></tr>
 <tr class="separator:a213ff38cf73cc890fa5b41ca7122f31f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a014618b154e0fb49c0e7ac68d0b829f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d3c/class_kratos_1_1_u_pw_small_strain_axisymmetric_element.html#a014618b154e0fb49c0e7ac68d0b829f9">CalculateGreenLagrangeStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rDeformationGradient) override</td></tr>
+<tr class="separator:a014618b154e0fb49c0e7ac68d0b829f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_kratos_1_1_u_pw_small_strain_element')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a></td></tr>
 <tr class="memitem:a6876546f09f883f1366121093d9dca20 inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a6876546f09f883f1366121093d9dca20">SaveGPStress</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rStressContainer, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStressVector, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> GPoint)</td></tr>
 <tr class="separator:a6876546f09f883f1366121093d9dca20 inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -873,10 +874,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a61f2b42540bb1eea22402042f6265f2a inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab91af0b063d5da9df1dee28d72ce8d4c inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#ab91af0b063d5da9df1dee28d72ce8d4c">CalculateBiotCoefficient</a> (const <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> hasBiotCoefficient) const</td></tr>
 <tr class="separator:ab91af0b063d5da9df1dee28d72ce8d4c inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b8e3095e0227d423f5188c8afd13bcd inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a5b8e3095e0227d423f5188c8afd13bcd">CalculateCauchyAlmansiStrain</a> (<a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables)</td></tr>
-<tr class="separator:a5b8e3095e0227d423f5188c8afd13bcd inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae452dc440fb81f995595af01ed09fe2e inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#ae452dc440fb81f995595af01ed09fe2e">CalculateCauchyGreenStrain</a> (<a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables)</td></tr>
-<tr class="separator:ae452dc440fb81f995595af01ed09fe2e inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a121d63356ab7e94ea05447a53f632e02 inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a121d63356ab7e94ea05447a53f632e02">CalculateCauchyStrain</a> (<a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables)</td></tr>
 <tr class="separator:a121d63356ab7e94ea05447a53f632e02 inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38436fa77b3dce9f7ba9c746f5476811 inherit pro_methods_class_kratos_1_1_u_pw_small_strain_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a38436fa77b3dce9f7ba9c746f5476811">CalculateStrain</a> (<a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> GPoint)</td></tr>
@@ -1193,8 +1190,6 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>The definition of the sizetype. </p>
-
 </div>
 </div>
 <a id="a42a623c6ca2917be18daad9a3bfca67a"></a>
@@ -1235,14 +1230,13 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 <p>Default Constructor. </p>
-<hr  />
- 
+
 </div>
 </div>
 <a id="a9feec4e95b6ce952a084a44b16c40557"></a>
@@ -1448,6 +1442,36 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
  <hr  />
  
 <p>Reimplemented from <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#ace36a2343fe2e9983400a0443adb715e">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a014618b154e0fb49c0e7ac68d0b829f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a014618b154e0fb49c0e7ac68d0b829f9">&#9670;&nbsp;</a></span>CalculateGreenLagrangeStrain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> <a class="el" href="../../d0/d3c/class_kratos_1_1_u_pw_small_strain_axisymmetric_element.html">Kratos::UPwSmallStrainAxisymmetricElement</a>&lt; TDim, TNumNodes &gt;::CalculateGreenLagrangeStrain </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDeformationGradient</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a2990075020d5f00cd6a99f3469d73e31">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>.</p>
 
 </div>
 </div>
@@ -1720,7 +1744,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Feb 13 2024 03:20:52 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Feb 14 2024 03:23:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
