@@ -130,7 +130,7 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#a8800d088c956c72d2bd8450ad457a8c3">   83</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">MatrixType</a> = <span class="keyword">typename</span> <a class="code" href="../../de/da9/namespace_kratos_1_1_geometrical_transformation_utilities.html#a7c3b9a52c7004d968fe5d185778f03f7">BaseType::MatrixType</a>;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#af05c908e17f4b9f78f2c12ad76d6a80d">   86</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> = <span class="keyword">typename</span> <a class="code" href="../../d9/d3f/namespace_kratos_1_1_expression_helper_utilities.html#a7de96fc4bd459ab0432700ec9a1953cf">BaseType::IndexType</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#af05c908e17f4b9f78f2c12ad76d6a80d">   86</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> = <span class="keyword">typename</span> <a class="code" href="../../d9/d3f/namespace_kratos_1_1_expression_helper_utilities.html#a7de96fc4bd459ab0432700ec9a1953cf">BaseType::IndexType</a>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#acf1150076fbaef7a66a183ebe420e8a4">   89</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#acf1150076fbaef7a66a183ebe420e8a4">GeometryPointerType</a> = <span class="keyword">typename</span> BaseType::GeometryType::Pointer;</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
@@ -172,14 +172,14 @@ $(function() {
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="comment">// Constructor 1</span></div>
 <div class="line"><a name="l00146"></a><span class="lineno"><a class="line" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#acf9f60916b75c0c37557f5478b0cf96a">  146</a></span>&#160;    <a class="code" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#acf9f60916b75c0c37557f5478b0cf96a">MeshTyingMortarCondition</a>(</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        GeometryType::Pointer pGeometry</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        ) :<a class="code" href="../../de/d29/class_kratos_1_1_paired_condition.html">PairedCondition</a>(NewId, pGeometry)</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {}</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">// Constructor 2</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#abf2e73b40663299a10f53978bc8010cf">  153</a></span>&#160;    <a class="code" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#abf2e73b40663299a10f53978bc8010cf">MeshTyingMortarCondition</a>(</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        GeometryType::Pointer pGeometry,</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        PropertiesType::Pointer pProperties</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        ) :<a class="code" href="../../de/d29/class_kratos_1_1_paired_condition.html">PairedCondition</a>( NewId, pGeometry, pProperties )</div>
@@ -187,7 +187,7 @@ $(function() {
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="comment">// Constructor 3</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#a229f596ff6d140866485393b4e2dfe04">  161</a></span>&#160;    <a class="code" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#a229f596ff6d140866485393b4e2dfe04">MeshTyingMortarCondition</a>(</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        GeometryType::Pointer pGeometry,</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        PropertiesType::Pointer pProperties,</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        GeometryType::Pointer pMasterGeometry</div>
@@ -223,19 +223,19 @@ $(function() {
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        ) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    Condition::Pointer <a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ab92c2e9f910c89e79f484975c7a83520">Create</a>(</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">NodesArrayType</a> <span class="keyword">const</span>&amp; rThisNodes,</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        PropertiesType::Pointer pProperties</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        ) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    Condition::Pointer <a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ab92c2e9f910c89e79f484975c7a83520">Create</a>(</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        GeometryType::Pointer pGeom,</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        PropertiesType::Pointer pProperties</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        ) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    Condition::Pointer <a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ab92c2e9f910c89e79f484975c7a83520">Create</a>(</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        GeometryType::Pointer pGeom,</div>
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        PropertiesType::Pointer pProperties,</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        GeometryType::Pointer pMasterGeom</div>
@@ -343,9 +343,9 @@ $(function() {
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            )</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        {</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            <span class="comment">// Fill master information</span></div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> i_node = 0; i_node &lt; TNumNodesMaster; ++i_node) {</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> i_node = 0; i_node &lt; TNumNodesMaster; ++i_node) {</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_node = rGeometryInput[i_node];</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> i_dof = 0; i_dof &lt; rpDoFVariables.size(); ++i_dof) {</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> i_dof = 0; i_dof &lt; rpDoFVariables.size(); ++i_dof) {</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                    <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a13a6c1c63dede1d20b0fdcec1ee7e84d">u2</a>(i_node, i_dof) = r_node.FastGetSolutionStepValue(*rpDoFVariables[i_dof]);</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;                }</div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            }</div>
@@ -396,9 +396,9 @@ $(function() {
 <div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;        <span class="keyword">auto</span>&amp; r_slave_geometry = this-&gt;GetParentGeometry();</div>
 <div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160; </div>
 <div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        <span class="comment">// Retrieve values</span></div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> i_node = 0; i_node &lt; TNumNodes; i_node++) {</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> i_node = 0; i_node &lt; TNumNodes; i_node++) {</div>
 <div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_node = r_slave_geometry[i_node];</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> i_dof = 0; i_dof &lt; mpDoFVariables.size(); ++i_dof) {</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> i_dof = 0; i_dof &lt; mpDoFVariables.size(); ++i_dof) {</div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                rDofData.<a class="code" href="../../d6/ddd/struct_kratos_1_1_mesh_tying_mortar_condition_1_1_dof_data.html#af7f0cfa0f24120f337d7263f234d8f58">u1</a>(i_node, i_dof) = r_node.FastGetSolutionStepValue(*mpDoFVariables[i_dof]);</div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                rDofData.<a class="code" href="../../d6/ddd/struct_kratos_1_1_mesh_tying_mortar_condition_1_1_dof_data.html#a9d253078a70244f191aa93e17421b241">LagrangeMultipliers</a>(i_node, i_dof) = r_node.FastGetSolutionStepValue(*mpLMVariables[i_dof]);</div>
 <div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;            }</div>
@@ -458,7 +458,7 @@ $(function() {
 <div class="line"><a name="l00635"></a><span class="lineno"><a class="line" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#a34e24122e87c06f9660d2cd88ddffff5">  635</a></span>&#160;    <a class="code" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> <a class="code" href="../../df/d93/class_kratos_1_1_mesh_tying_mortar_condition.html#a34e24122e87c06f9660d2cd88ddffff5">GetIntegrationMethod</a>()<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        <span class="comment">// Setting the auxiliary integration points</span></div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> integration_order = GetProperties().Has(INTEGRATION_ORDER_CONTACT) ? GetProperties().GetValue(INTEGRATION_ORDER_CONTACT) : 2;</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> integration_order = GetProperties().Has(INTEGRATION_ORDER_CONTACT) ? GetProperties().GetValue(INTEGRATION_ORDER_CONTACT) : 2;</div>
 <div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        <span class="keywordflow">switch</span> (integration_order) {</div>
 <div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;            <span class="keywordflow">case</span> 1: <span class="keywordflow">return</span> <a class="code" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404fac865d92aa445dbb1943a3ea35d55a52e">GeometryData::IntegrationMethod::GI_GAUSS_1</a>;</div>
 <div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;            <span class="keywordflow">case</span> 2: <span class="keywordflow">return</span> <a class="code" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404fae2cedfa1aef3c412f3530688f51acc5d">GeometryData::IntegrationMethod::GI_GAUSS_2</a>;</div>
@@ -499,7 +499,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_condition_html_a872056fc4266d5da38b0ee894cfc9314"><div class="ttname"><a href="../../d1/d6e/class_kratos_1_1_condition.html#a872056fc4266d5da38b0ee894cfc9314">Kratos::Condition::DofsVectorType</a></div><div class="ttdeci">std::vector&lt; DofType::Pointer &gt; DofsVectorType</div><div class="ttdef"><b>Definition:</b> condition.h:100</div></div>
 <div class="ttc" id="aclass_kratos_1_1_dual_lagrange_multiplier_operators_html"><div class="ttname"><a href="../../de/d18/class_kratos_1_1_dual_lagrange_multiplier_operators.html">Kratos::DualLagrangeMultiplierOperators</a></div><div class="ttdoc">This is the definition dual lagrange multiplier operators according to the work of Alexander Popp: ht...</div><div class="ttdef"><b>Definition:</b> mortar_classes.h:1513</div></div>
 <div class="ttc" id="aclass_kratos_1_1_exact_mortar_integration_utility_html"><div class="ttname"><a href="../../d0/d46/class_kratos_1_1_exact_mortar_integration_utility.html">Kratos::ExactMortarIntegrationUtility&lt; TDim, TNumNodes, false, TNumNodesMaster &gt;</a></div></div>
-<div class="ttc" id="aclass_kratos_1_1_flags_html_a1f4b3e4f3daee1af0dd323fb16755244"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">Kratos::Flags::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> flags.h:74</div></div>
+<div class="ttc" id="aclass_kratos_1_1_flags_html_aea919baba86193ae475d3cdb836b925c"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">Kratos::Flags::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> flags.h:72</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometrical_object_html"><div class="ttname"><a href="../../d3/d62/class_kratos_1_1_geometrical_object.html">Kratos::GeometricalObject</a></div><div class="ttdoc">This defines the geometrical object, base definition of the element and condition entities.</div><div class="ttdef"><b>Definition:</b> geometrical_object.h:58</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a86f17c328cce116053a8786b7a0f404f"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">Kratos::GeometryData::IntegrationMethod</a></div><div class="ttdeci">IntegrationMethod</div><div class="ttdef"><b>Definition:</b> geometry_data.h:76</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a86f17c328cce116053a8786b7a0f404fab8e55895af8a242a5791cd7aba1b7890"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404fab8e55895af8a242a5791cd7aba1b7890">Kratos::GeometryData::IntegrationMethod::GI_GAUSS_5</a></div><div class="ttdeci">@ GI_GAUSS_5</div></div>
@@ -575,7 +575,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 14 2024 02:03:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Feb 15 2024 02:01:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -369,7 +369,7 @@ $(function() {
 <div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160; </div>
 <div class="line"><a name="l00557"></a><span class="lineno"><a class="line" href="../../de/d49/struct_kratos_1_1_solid_shell_element_sprism3_d6_n_1_1_cartesian_derivatives.html#ac3bcad294b4f009054653b37959d4e35">  557</a></span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../de/d49/struct_kratos_1_1_solid_shell_element_sprism3_d6_n_1_1_cartesian_derivatives.html#ac3bcad294b4f009054653b37959d4e35">clear</a>()</div>
 <div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        {</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; 6; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++) {</div>
+<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; 6; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++) {</div>
 <div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;                <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(InPlaneCartesianDerivativesGauss[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]) = <a class="code" href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">ZeroMatrix</a>(2, 4);</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;                <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(TransversalCartesianDerivativesGauss[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]) = <a class="code" href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">ZeroMatrix</a>(6, 1);</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;            }</div>
@@ -580,7 +580,7 @@ $(function() {
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160; </div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160; </div>
 <div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;    <span class="keywordtype">bool</span> HasNeighbour(</div>
-<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> <a class="code" href="../../d4/d9b/namespacehdf5__io__tools.html#a62cd2a22a5b2e26d9d65b94cf9e502d7">Index</a>,</div>
+<div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> <a class="code" href="../../d4/d9b/namespacehdf5__io__tools.html#a62cd2a22a5b2e26d9d65b94cf9e502d7">Index</a>,</div>
 <div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/ddd/class_kratos_1_1_node.html">NodeType</a>&amp; NeighbourNode</div>
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        ) <span class="keyword">const</span> ;</div>
 <div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160; </div>
@@ -614,14 +614,14 @@ $(function() {
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160; </div>
 <div class="line"><a name="l00915"></a><span class="lineno">  915</span>&#160;    <span class="keywordtype">void</span> ComputeLocalDerivativesQuadratic(</div>
 <div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedMatrix&lt;double, 4, 2 &gt;</a>&amp; rLocalDerivativePatch,</div>
-<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NodeGauss</div>
+<div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NodeGauss</div>
 <div class="line"><a name="l00918"></a><span class="lineno">  918</span>&#160;        );</div>
 <div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160; </div>
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;    <span class="keywordtype">void</span> CalculateJacobianCenterGauss(</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">GeometryType::JacobiansType</a>&amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a0dcc8fdbf3703c6395c0f78646371997">J</a>,</div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        std::vector&lt; Matrix &gt;&amp; Jinv,</div>
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; detJ,</div>
-<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> rPointNumber,</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> rPointNumber,</div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> ZetaGauss</div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;        );</div>
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160; </div>
@@ -658,7 +658,7 @@ $(function() {
 <div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedMatrix&lt;double, 2, 4 &gt;</a> &amp; InPlaneCartesianDerivativesGauss,</div>
 <div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedMatrix&lt;double, 12, 3 &gt;</a> &amp; NodesCoord,</div>
 <div class="line"><a name="l01003"></a><span class="lineno"> 1003</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d17/struct_kratos_1_1_solid_shell_element_sprism3_d6_n_1_1_orthogonal_base.html">OrthogonalBase</a>&amp; ThisOrthogonalBase,</div>
-<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NodeGauss,</div>
+<div class="line"><a name="l01004"></a><span class="lineno"> 1004</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NodeGauss,</div>
 <div class="line"><a name="l01005"></a><span class="lineno"> 1005</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/dae/class_kratos_1_1_solid_shell_element_sprism3_d6_n.html#a3f5bfec2f99c8f0d346e51424e676cbc">GeometricLevel</a> Part</div>
 <div class="line"><a name="l01006"></a><span class="lineno"> 1006</span>&#160;        );</div>
 <div class="line"><a name="l01007"></a><span class="lineno"> 1007</span>&#160; </div>
@@ -680,7 +680,7 @@ $(function() {
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedMatrix&lt;double, 3, 2 &gt;</a>&amp; InPlaneGradientFGauss,</div>
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedMatrix&lt;double, 2, 4 &gt;</a>&amp; InPlaneCartesianDerivativesGauss,</div>
 <div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedMatrix&lt;double, 12, 3 &gt;</a>&amp; NodesCoord,</div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NodeGauss,</div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NodeGauss,</div>
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/dae/class_kratos_1_1_solid_shell_element_sprism3_d6_n.html#a3f5bfec2f99c8f0d346e51424e676cbc">GeometricLevel</a> Part</div>
 <div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;        );</div>
 <div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160; </div>
@@ -701,7 +701,7 @@ $(function() {
 <div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedMatrix&lt;double, 3, 1 &gt;</a>&amp; CMembrane,</div>
 <div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedMatrix&lt;double, 2, 4 &gt;</a>&amp; InPlaneCartesianDerivativesGauss,</div>
 <div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedMatrix&lt;double, 3, 2 &gt;</a>&amp; InPlaneGradientFGauss,</div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NodeGauss</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NodeGauss</div>
 <div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;        );</div>
 <div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160; </div>
 <div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    <span class="keywordtype">void</span> CalculateAndAddMembraneKgeometric(</div>
@@ -820,7 +820,7 @@ $(function() {
 <div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160;    <span class="keywordtype">void</span> SetGeneralVariables(</div>
 <div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;        <a class="code" href="../../d5/df1/struct_kratos_1_1_solid_shell_element_sprism3_d6_n_1_1_general_variables.html">GeneralVariables</a>&amp; rVariables,</div>
 <div class="line"><a name="l01315"></a><span class="lineno"> 1315</span>&#160;        <a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a>&amp; rValues,</div>
-<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> rPointNumber</div>
+<div class="line"><a name="l01316"></a><span class="lineno"> 1316</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> rPointNumber</div>
 <div class="line"><a name="l01317"></a><span class="lineno"> 1317</span>&#160;        );</div>
 <div class="line"><a name="l01318"></a><span class="lineno"> 1318</span>&#160; </div>
 <div class="line"><a name="l01325"></a><span class="lineno"> 1325</span>&#160;    <span class="keywordtype">void</span> InitializeSystemMatrices(</div>
@@ -835,7 +835,7 @@ $(function() {
 <div class="line"><a name="l01346"></a><span class="lineno"> 1346</span>&#160;        <a class="code" href="../../d5/df1/struct_kratos_1_1_solid_shell_element_sprism3_d6_n_1_1_general_variables.html">GeneralVariables</a>&amp; rVariables,</div>
 <div class="line"><a name="l01347"></a><span class="lineno"> 1347</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d2/d90/struct_kratos_1_1_solid_shell_element_sprism3_d6_n_1_1_common_components.html">CommonComponents</a>&amp; rCommonComponents,</div>
 <div class="line"><a name="l01348"></a><span class="lineno"> 1348</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">GeometryType::IntegrationPointsArrayType</a>&amp; rIntegrationPoints,</div>
-<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> rPointNumber,</div>
+<div class="line"><a name="l01349"></a><span class="lineno"> 1349</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> rPointNumber,</div>
 <div class="line"><a name="l01350"></a><span class="lineno"> 1350</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AlphaEAS,</div>
 <div class="line"><a name="l01351"></a><span class="lineno"> 1351</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> ZetaGauss</div>
 <div class="line"><a name="l01352"></a><span class="lineno"> 1352</span>&#160;        );</div>
@@ -856,12 +856,12 @@ $(function() {
 <div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160; </div>
 <div class="line"><a name="l01389"></a><span class="lineno"> 1389</span>&#160;    <span class="keywordtype">void</span> FinalizeStepVariables(</div>
 <div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;        <a class="code" href="../../d5/df1/struct_kratos_1_1_solid_shell_element_sprism3_d6_n_1_1_general_variables.html">GeneralVariables</a> &amp; rVariables,</div>
-<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> rPointNumber</div>
+<div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> rPointNumber</div>
 <div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;        );</div>
 <div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160; </div>
 <div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160;    <span class="keywordtype">void</span> GetHistoricalVariables(</div>
 <div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;        <a class="code" href="../../d5/df1/struct_kratos_1_1_solid_shell_element_sprism3_d6_n_1_1_general_variables.html">GeneralVariables</a>&amp; rVariables,</div>
-<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> rPointNumber</div>
+<div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> rPointNumber</div>
 <div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160;        );</div>
 <div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160; </div>
 <div class="line"><a name="l01409"></a><span class="lineno"> 1409</span>&#160;    <span class="keywordtype">void</span> CalculateVolumeChange(</div>
@@ -887,7 +887,7 @@ $(function() {
 <div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;    {</div>
 <div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">GeometryType::IntegrationPointsArrayType</a>&amp; integration_points = GetGeometry().IntegrationPoints( this-&gt;GetIntegrationMethod() );</div>
 <div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160; </div>
-<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> point_number = 0; point_number &lt;integration_points.size(); ++point_number ) {</div>
+<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;        <span class="keywordflow">for</span> ( <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> point_number = 0; point_number &lt;integration_points.size(); ++point_number ) {</div>
 <div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;            mConstitutiveLawVector[point_number]-&gt;GetValue( rVariable,rOutput[point_number]);</div>
 <div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160;        }</div>
 <div class="line"><a name="l01469"></a><span class="lineno"> 1469</span>&#160;    }</div>
@@ -960,8 +960,8 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_base_solid_element_html"><div class="ttname"><a href="../../d3/d4c/class_kratos_1_1_base_solid_element.html">Kratos::BaseSolidElement</a></div><div class="ttdoc">This is base class used to define the solid elements.</div><div class="ttdef"><b>Definition:</b> base_solid_element.h:67</div></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html">Kratos::ConstitutiveLaw</a></div><div class="ttdef"><b>Definition:</b> constitutive_law.h:47</div></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html_a4aa7ede3775eade83e2fae640f6ebcb6"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6">Kratos::ConstitutiveLaw::StressMeasure</a></div><div class="ttdeci">StressMeasure</div><div class="ttdef"><b>Definition:</b> constitutive_law.h:69</div></div>
-<div class="ttc" id="aclass_kratos_1_1_flags_html"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></div><div class="ttdef"><b>Definition:</b> flags.h:58</div></div>
-<div class="ttc" id="aclass_kratos_1_1_flags_html_a1f4b3e4f3daee1af0dd323fb16755244"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">Kratos::Flags::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> flags.h:74</div></div>
+<div class="ttc" id="aclass_kratos_1_1_flags_html"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></div><div class="ttdoc">Forward declaration.</div><div class="ttdef"><b>Definition:</b> flags.h:56</div></div>
+<div class="ttc" id="aclass_kratos_1_1_flags_html_aea919baba86193ae475d3cdb836b925c"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">Kratos::Flags::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> flags.h:72</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a86f17c328cce116053a8786b7a0f404f"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">Kratos::GeometryData::IntegrationMethod</a></div><div class="ttdeci">IntegrationMethod</div><div class="ttdef"><b>Definition:</b> geometry_data.h:76</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_a3cc5848cd4aba1954d1671419bd5c60c"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">Kratos::Geometry::IntegrationPointsArrayType</a></div><div class="ttdeci">std::vector&lt; IntegrationPointType &gt; IntegrationPointsArrayType</div><div class="ttdef"><b>Definition:</b> geometry.h:161</div></div>
 <div class="ttc" id="aclass_kratos_1_1_global_pointers_vector_html"><div class="ttname"><a href="../../d4/dc2/class_kratos_1_1_global_pointers_vector.html">Kratos::GlobalPointersVector</a></div><div class="ttdoc">This class is a vector which stores global pointers.</div><div class="ttdef"><b>Definition:</b> global_pointers_vector.h:61</div></div>
@@ -1097,7 +1097,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 14 2024 02:27:06 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Feb 15 2024 02:24:54 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

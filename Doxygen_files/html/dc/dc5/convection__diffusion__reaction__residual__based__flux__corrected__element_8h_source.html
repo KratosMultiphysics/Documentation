@@ -130,7 +130,7 @@ $(function() {
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#a16b227b688b800d1b333787593137ae9">   59</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">MatrixType</a> = <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#ad137ea57e79ae71271b538e6696b8f9e">   61</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> = std::size_t;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#ad137ea57e79ae71271b538e6696b8f9e">   61</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> = std::size_t;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#a5725c21f0d417cc166912ed1d0351120">   63</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">EquationIdVectorType</a> = std::vector&lt;IndexType&gt;;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
@@ -149,27 +149,27 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#ae0d94f2893f7639ce905a37c4d4c191c">   89</a></span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#ae0d94f2893f7639ce905a37c4d4c191c">ConvectionDiffusionReactionResidualBasedFluxCorrectedElement</a>(</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId = 0)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId = 0)</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    : <a class="code" href="../../d3/d62/class_kratos_1_1_geometrical_object.html">BaseType</a>(NewId)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#acabdb15ac1dc78f207826ec81a925040">   98</a></span>&#160;    <a class="code" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#acabdb15ac1dc78f207826ec81a925040">ConvectionDiffusionReactionResidualBasedFluxCorrectedElement</a>(</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">NodesArrayType</a>&amp; ThisNodes)</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    : <a class="code" href="../../d3/d62/class_kratos_1_1_geometrical_object.html">BaseType</a>(NewId, ThisNodes)</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#ae21bb3944889061271096d85b31f0825">  108</a></span>&#160;    <a class="code" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#ae21bb3944889061271096d85b31f0825">ConvectionDiffusionReactionResidualBasedFluxCorrectedElement</a>(</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        GeometryType::Pointer pGeometry)</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    : <a class="code" href="../../d3/d62/class_kratos_1_1_geometrical_object.html">BaseType</a>(NewId, pGeometry)</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
 <div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#a84f80b2d5a95621ab5ed2993c51d4493">  118</a></span>&#160;    <a class="code" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#a84f80b2d5a95621ab5ed2993c51d4493">ConvectionDiffusionReactionResidualBasedFluxCorrectedElement</a>(</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        GeometryType::Pointer pGeometry,</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keyword">typename</span> PropertiesType::Pointer pProperties)</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    : <a class="code" href="../../d3/d62/class_kratos_1_1_geometrical_object.html">BaseType</a>(NewId, pGeometry, pProperties)</div>
@@ -186,7 +186,7 @@ $(function() {
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
 <div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#a0ad2434a0bda6d66ccd5d19ff222ab82">  156</a></span>&#160;    Element::Pointer <a class="code" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#a0ad2434a0bda6d66ccd5d19ff222ab82">Create</a>(</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">NodesArrayType</a> <span class="keyword">const</span>&amp; ThisNodes,</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keyword">typename</span> PropertiesType::Pointer pProperties)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="keyword">    </span>{</div>
@@ -197,7 +197,7 @@ $(function() {
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    }</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
 <div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#a979b5d77f0a5ba9fb4f206a72aeb91a8">  174</a></span>&#160;    Element::Pointer <a class="code" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#a979b5d77f0a5ba9fb4f206a72aeb91a8">Create</a>(</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        GeometryType::Pointer pGeom,</div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <span class="keyword">typename</span> PropertiesType::Pointer pProperties)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keyword">    </span>{</div>
@@ -207,7 +207,7 @@ $(function() {
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;    }</div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
 <div class="line"><a name="l00191"></a><span class="lineno"><a class="line" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#ac92ba3ecf44075f67431519ec4d485ed">  191</a></span>&#160;    Element::Pointer <a class="code" href="../../d6/d87/class_kratos_1_1_convection_diffusion_reaction_residual_based_flux_corrected_element.html#ac92ba3ecf44075f67431519ec4d485ed">Clone</a>(</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> NewId,</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId,</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">NodesArrayType</a> <span class="keyword">const</span>&amp; ThisNodes)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
@@ -339,7 +339,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_element_html_abb4bc2919fc17612f0441d8545d4c6f6"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#abb4bc2919fc17612f0441d8545d4c6f6">Kratos::Element::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> element.h:1135</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_ae71a1a55ae484b69ec9ec5f18919e324"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Kratos::Element::EquationIdVectorType</a></div><div class="ttdeci">std::vector&lt; std::size_t &gt; EquationIdVectorType</div><div class="ttdef"><b>Definition:</b> element.h:98</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_ae7832e8bf96597bb61a6cd9ffa6c0de9"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#ae7832e8bf96597bb61a6cd9ffa6c0de9">Kratos::Element::pGetProperties</a></div><div class="ttdeci">PropertiesType::Pointer pGetProperties()</div><div class="ttdoc">returns the pointer to the property of the element. Does not throw an error, to allow copying of elem...</div><div class="ttdef"><b>Definition:</b> element.h:1014</div></div>
-<div class="ttc" id="aclass_kratos_1_1_flags_html_a1f4b3e4f3daee1af0dd323fb16755244"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">Kratos::Flags::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> flags.h:74</div></div>
+<div class="ttc" id="aclass_kratos_1_1_flags_html_aea919baba86193ae475d3cdb836b925c"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">Kratos::Flags::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> flags.h:72</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometrical_object_html"><div class="ttname"><a href="../../d3/d62/class_kratos_1_1_geometrical_object.html">Kratos::GeometricalObject</a></div><div class="ttdoc">This defines the geometrical object, base definition of the element and condition entities.</div><div class="ttdef"><b>Definition:</b> geometrical_object.h:58</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometrical_object_html_a4f9fe36156afc7d5d5c8555ff3378b78"><div class="ttname"><a href="../../d3/d62/class_kratos_1_1_geometrical_object.html#a4f9fe36156afc7d5d5c8555ff3378b78">Kratos::GeometricalObject::GetGeometry</a></div><div class="ttdeci">GeometryType &amp; GetGeometry()</div><div class="ttdoc">Returns the reference of the geometry.</div><div class="ttdef"><b>Definition:</b> geometrical_object.h:158</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a86f17c328cce116053a8786b7a0f404f"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">Kratos::GeometryData::IntegrationMethod</a></div><div class="ttdeci">IntegrationMethod</div><div class="ttdef"><b>Definition:</b> geometry_data.h:76</div></div>
@@ -370,7 +370,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 14 2024 02:19:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Feb 15 2024 02:17:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

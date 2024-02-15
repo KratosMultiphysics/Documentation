@@ -125,7 +125,7 @@ $(function() {
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#aa7a2c1e4eba0376565b364573556c794">   75</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">GeometryType</a> = <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;Node&gt;</a>; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#a8f2fd171cc404868bb24d144c8662ad5">   78</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> = std::size_t;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#a8f2fd171cc404868bb24d144c8662ad5">   78</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> = std::size_t;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#a3aea5fa8cf9428075c5350252dcdfee6">   81</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d4/d0e/class_kratos_1_1_point_object.html">PointType</a> = <a class="code" href="../../d4/d0e/class_kratos_1_1_point_object.html">PointObject&lt;Condition&gt;</a>; </div>
 <div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#ae8390e931dffb1f5fbb116440314bcd4">   82</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#ae8390e931dffb1f5fbb116440314bcd4">PointTypePointer</a> = <span class="keyword">typename</span> PointType::Pointer; </div>
@@ -258,7 +258,7 @@ $(function() {
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
 <div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> CheckPairing(</div>
 <div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rComputingModelPart,</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a>&amp; rConditionId</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&amp; rConditionId</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        );</div>
 <div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ComputeActiveInactiveNodes();</div>
@@ -273,7 +273,7 @@ $(function() {
 <div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keyword">virtual</span> Condition::Pointer AddPairing(</div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rComputingModelPart,</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a>&amp; rConditionId,</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&amp; rConditionId,</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;        GeometricalObject::Pointer pObjectSlave,</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a>&amp; rSlaveNormal,</div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        GeometricalObject::Pointer pObjectMaster,</div>
@@ -341,21 +341,21 @@ $(function() {
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160; </div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;    <span class="keywordtype">void</span> ClearDestinationListAndAssignFlags(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rSubContactModelPart);</div>
 <div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160; </div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> PerformKDTreeSearch(</div>
+<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> PerformKDTreeSearch(</div>
 <div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        <a class="code" href="../../d8/d13/class_kratos_1_1_tree.html">KDTree</a>&amp; rTreePoints,</div>
 <div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;        <a class="code" href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#a2c1f6d17581b743ea21af31443ce5abc">PointVector</a>&amp; rPointsFound,</div>
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">GeometryType</a>&amp; rGeometry,</div>
 <div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#a2eb4382e4fd3ba9d55f298e8a14da7b0">SearchTreeType</a> TypeSearch = SearchTreeType::KdtreeInBox,</div>
 <div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> SearchFactor = 3.5,</div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> AllocationSize = 1000,</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> AllocationSize = 1000,</div>
 <div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> Dynamic = <span class="keyword">false</span></div>
 <div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        );</div>
 <div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160; </div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a> GetMaximumConditionsIds();</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keyword">inline</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> GetMaximumConditionsIds();</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160; </div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;    <span class="keywordtype">void</span> AddPotentialPairing(</div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rComputingModelPart,</div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a>&amp; rConditionId,</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&amp; rConditionId,</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        GeometricalObject::Pointer pObjectSlave,</div>
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a>&amp; rSlaveNormal,</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        GeometricalObject::Pointer pObjectMaster,</div>
@@ -373,7 +373,7 @@ $(function() {
 <div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> CreateAuxiliaryConditions(</div>
 <div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rContactModelPart,</div>
 <div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rComputingModelPart,</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">IndexType</a>&amp; rConditionId</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&amp; rConditionId</div>
 <div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;        );</div>
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160; </div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;    <span class="keywordtype">void</span> CreateDebugFile(</div>
@@ -442,7 +442,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_base_contact_search_process_html_aef2deaa0a784671173bf2e757aa8bba9"><div class="ttname"><a href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#aef2deaa0a784671173bf2e757aa8bba9">Kratos::BaseContactSearchProcess::NodesArrayType</a></div><div class="ttdeci">ModelPart::NodesContainerType NodesArrayType</div><div class="ttdoc">Containers definition.</div><div class="ttdef"><b>Definition:</b> base_contact_search_process.h:71</div></div>
 <div class="ttc" id="aclass_kratos_1_1_base_contact_search_process_html_af0809af678cd67c8deda4111e18f7367"><div class="ttname"><a href="../../db/de1/class_kratos_1_1_base_contact_search_process.html#af0809af678cd67c8deda4111e18f7367">Kratos::BaseContactSearchProcess::KRATOS_DEFINE_LOCAL_FLAG</a></div><div class="ttdeci">KRATOS_DEFINE_LOCAL_FLAG(MULTIPLE_SEARCHS)</div></div>
 <div class="ttc" id="aclass_kratos_1_1_bucket_html"><div class="ttname"><a href="../../dd/d8e/class_kratos_1_1_bucket.html">Kratos::Bucket</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> bucket.h:57</div></div>
-<div class="ttc" id="aclass_kratos_1_1_flags_html_a1f4b3e4f3daee1af0dd323fb16755244"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#a1f4b3e4f3daee1af0dd323fb16755244">Kratos::Flags::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> flags.h:74</div></div>
+<div class="ttc" id="aclass_kratos_1_1_flags_html_aea919baba86193ae475d3cdb836b925c"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">Kratos::Flags::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> flags.h:72</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html_a0960956dac2688d5d72cdb874c450e1d"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html#a0960956dac2688d5d72cdb874c450e1d">Kratos::ModelPart::ConditionsContainerType</a></div><div class="ttdeci">MeshType::ConditionsContainerType ConditionsContainerType</div><div class="ttdoc">Condintions container. A vector set of Conditions with their Id's as key.</div><div class="ttdef"><b>Definition:</b> model_part.h:183</div></div>
@@ -470,7 +470,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 14 2024 02:03:56 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Feb 15 2024 02:01:59 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
