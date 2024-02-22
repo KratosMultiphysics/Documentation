@@ -103,10 +103,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa35969b15b289bcfa2ce2abbc7dfbb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2557eb61527777c61c5874aeb99cabe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#ac2557eb61527777c61c5874aeb99cabe">CalculateBMatrix</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rGradNpT, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rNp, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &gt; &amp;rGeometry) const override</td></tr>
 <tr class="separator:ac2557eb61527777c61c5874aeb99cabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9d02a8a6cb772e3aa2ed0290aff27cc6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#a9d02a8a6cb772e3aa2ed0290aff27cc6">CalculateGreenLagrangeStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rTotalDeformationGradient) const override</td></tr>
-<tr class="separator:a9d02a8a6cb772e3aa2ed0290aff27cc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c57ad607a952bf511fade6173994c77"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a3af372ea08f0c45365786d82a166d8a3">unique_ptr</a>&lt; <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">StressStatePolicy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#a8c57ad607a952bf511fade6173994c77">Clone</a> () const override</td></tr>
-<tr class="separator:a8c57ad607a952bf511fade6173994c77"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad5a04544f6011e8b5139b18b63fb0ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#ad5a04544f6011e8b5139b18b63fb0ec8">CalculateGreenLagrangeStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rDeformationGradient) const override</td></tr>
+<tr class="separator:ad5a04544f6011e8b5139b18b63fb0ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12415bab8aa714bccd16068db828b81b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">StressStatePolicy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#a12415bab8aa714bccd16068db828b81b">Clone</a> () const override</td></tr>
+<tr class="separator:a12415bab8aa714bccd16068db828b81b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_kratos_1_1_stress_state_policy"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_kratos_1_1_stress_state_policy')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">Kratos::StressStatePolicy</a></td></tr>
 <tr class="memitem:a3af49e9ae1ebb0c84e0bfa1f27dcce83 inherit pub_methods_class_kratos_1_1_stress_state_policy"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a3af49e9ae1ebb0c84e0bfa1f27dcce83">~StressStatePolicy</a> ()=default</td></tr>
 <tr class="separator:a3af49e9ae1ebb0c84e0bfa1f27dcce83 inherit pub_methods_class_kratos_1_1_stress_state_policy"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,8 +156,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d02a8a6cb772e3aa2ed0290aff27cc6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d02a8a6cb772e3aa2ed0290aff27cc6">&#9670;&nbsp;</a></span>CalculateGreenLagrangeStrain()</h2>
+<a id="ad5a04544f6011e8b5139b18b63fb0ec8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5a04544f6011e8b5139b18b63fb0ec8">&#9670;&nbsp;</a></span>CalculateGreenLagrangeStrain()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -169,7 +169,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> Kratos::AxisymmetricStressState::CalculateGreenLagrangeStrain </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>rTotalDeformationGradient</em></td><td>)</td>
+          <td class="paramname"><em>rDeformationGradient</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -180,7 +180,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#abd76dfd867de6ee8fe2b8020f55a6a43">Kratos::StressStatePolicy</a>.</p>
+<p>Implements <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#acd8dca1c25250439d2a994e80b5dea65">Kratos::StressStatePolicy</a>.</p>
 
 </div>
 </div>
@@ -224,12 +224,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a6da5b557335d200e503dd183ede968f1">Kratos::StressStatePolicy</a>.</p>
+<p>Implements <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#af0c087f9c0ac6c5ad74c4fd0430fe5ee">Kratos::StressStatePolicy</a>.</p>
 
 </div>
 </div>
-<a id="a8c57ad607a952bf511fade6173994c77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8c57ad607a952bf511fade6173994c77">&#9670;&nbsp;</a></span>Clone()</h2>
+<a id="a12415bab8aa714bccd16068db828b81b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12415bab8aa714bccd16068db828b81b">&#9670;&nbsp;</a></span>Clone()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -238,7 +238,7 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a3af372ea08f0c45365786d82a166d8a3">unique_ptr</a>&lt; <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">StressStatePolicy</a> &gt; Kratos::AxisymmetricStressState::Clone </td>
+          <td class="memname">std::unique_ptr&lt; <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">StressStatePolicy</a> &gt; Kratos::AxisymmetricStressState::Clone </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -262,7 +262,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Feb 21 2024 03:18:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Feb 22 2024 03:23:27 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
