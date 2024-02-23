@@ -143,9 +143,9 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                            <a class="code" href="../../db/d66/namespace_kratos.html#a8cc375c875cc5176998d59a7d3ea4803">NodesArrayType</a> <span class="keyword">const</span>&amp;   ThisNodes,</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                            PropertiesType::Pointer pProperties) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> EquationIdVector(EquationIdVectorType&amp; rResult, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> EquationIdVector(EquationIdVectorType&amp; rResult, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp;) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> GetDofList(DofsVectorType&amp; rElementalDofList, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> GetDofList(DofsVectorType&amp; rElementalDofList, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp;) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <span class="keywordtype">void</span> Initialize(<span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
@@ -222,14 +222,16 @@ $(function() {
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    <span class="keywordtype">void</span> CalculateLumpedMassVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">VectorType</a>&amp; rMassVector, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno"><a class="line" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  218</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;};</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;    [[nodiscard]] <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a> GetDofs() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno"><a class="line" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  220</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;};</div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html">Kratos::Element</a></div><div class="ttdoc">Base class for all Elements.</div><div class="ttdef"><b>Definition:</b> element.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_a55fa27d5cdbb596f0bc19f7ba572355c"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">Kratos::Element::SizeType</a></div><div class="ttdeci">std::size_t SizeType</div><div class="ttdef"><b>Definition:</b> element.h:94</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_a83ae9b09dd7a0ed7ab3bc1baa6429df5"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Kratos::Element::DofsVectorType</a></div><div class="ttdeci">std::vector&lt; DofType::Pointer &gt; DofsVectorType</div><div class="ttdef"><b>Definition:</b> element.h:100</div></div>
@@ -271,7 +273,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 22 2024 02:06:43 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Feb 23 2024 02:05:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

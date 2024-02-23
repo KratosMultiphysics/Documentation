@@ -381,8 +381,8 @@ $(function() {
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                <span class="keywordtype">double</span>&amp; r_reaction = it_node-&gt;FastGetSolutionStepValue(REACTION_Y);</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                r_reaction = -force_residual[1];</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">if</span>( it_node-&gt;IsFixed(WATER_PRESSURE) == <span class="keyword">true</span> ) {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                <span class="keywordtype">double</span>&amp; r_reaction = it_node-&gt;FastGetSolutionStepValue(REACTION_WATER_PRESSURE);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">if</span>( it_node-&gt;IsFixed(LIQUID_PRESSURE) == <span class="keyword">true</span> ) {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                <span class="keywordtype">double</span>&amp; r_reaction = it_node-&gt;FastGetSolutionStepValue(REACTION_LIQUID_PRESSURE);</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                r_reaction = -flux_residual;</div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            }</div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>==3) {</div>
@@ -407,13 +407,13 @@ $(function() {
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keyword">auto</span> itCurrentNode = it_node_begin + <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>;</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a>&amp; r_current_displacement = itCurrentNode-&gt;FastGetSolutionStepValue(DISPLACEMENT);</div>
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a>&amp; r_previous_displacement = itCurrentNode-&gt;FastGetSolutionStepValue(DISPLACEMENT,1);</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; r_current_water_pressure = itCurrentNode-&gt;FastGetSolutionStepValue(WATER_PRESSURE);</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; r_previous_water_pressure = itCurrentNode-&gt;FastGetSolutionStepValue(WATER_PRESSURE,1);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; r_current_liquid_pressure = itCurrentNode-&gt;FastGetSolutionStepValue(LIQUID_PRESSURE);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; r_previous_liquid_pressure = itCurrentNode-&gt;FastGetSolutionStepValue(LIQUID_PRESSURE,1);</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a> delta_displacement;</div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(delta_displacement) = r_current_displacement - r_previous_displacement;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> delta_water_pressure = r_current_water_pressure - r_previous_water_pressure;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> norm_2_du = <a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(delta_displacement,delta_displacement) + delta_water_pressure*delta_water_pressure;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> norm_2_u_old = <a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(r_previous_displacement,r_previous_displacement) + r_previous_water_pressure*r_previous_water_pressure;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> delta_liquid_pressure = r_current_liquid_pressure - r_previous_liquid_pressure;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> norm_2_du = <a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(delta_displacement,delta_displacement) + delta_liquid_pressure*delta_liquid_pressure;</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> norm_2_u_old = <a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(r_previous_displacement,r_previous_displacement) + r_previous_liquid_pressure*r_previous_liquid_pressure;</div>
 <div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
 <div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            l2_numerator += norm_2_du;</div>
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            l2_denominator += norm_2_u_old;</div>
@@ -526,7 +526,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 22 2024 02:17:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Feb 23 2024 02:16:06 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

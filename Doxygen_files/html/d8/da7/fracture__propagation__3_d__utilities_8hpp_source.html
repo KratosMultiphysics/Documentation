@@ -989,18 +989,18 @@ $(function() {
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;                }</div>
 <div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;                itNodeNew-&gt;FastGetSolutionStepValue(ACCELERATION_Z) = <a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(ShapeFunctionsValuesVector,NodalVariableVector);</div>
 <div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;            }</div>
-<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;            <span class="keywordflow">if</span>( itNodeNew-&gt;IsFixed(WATER_PRESSURE)==<span class="keyword">false</span> )</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;            <span class="keywordflow">if</span>( itNodeNew-&gt;IsFixed(LIQUID_PRESSURE)==<span class="keyword">false</span> )</div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;            {</div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> &lt; PointsNumber; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>++)</div>
 <div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;                {</div>
-<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;                    NodalVariableVector[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>] = pElementOld-&gt;GetGeometry().GetPoint(<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>).FastGetSolutionStepValue(WATER_PRESSURE);</div>
+<div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;                    NodalVariableVector[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>] = pElementOld-&gt;GetGeometry().GetPoint(<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>).FastGetSolutionStepValue(LIQUID_PRESSURE);</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;                }</div>
-<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                itNodeNew-&gt;FastGetSolutionStepValue(WATER_PRESSURE) = <a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(ShapeFunctionsValuesVector,NodalVariableVector);</div>
+<div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                itNodeNew-&gt;FastGetSolutionStepValue(LIQUID_PRESSURE) = <a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(ShapeFunctionsValuesVector,NodalVariableVector);</div>
 <div class="line"><a name="l00938"></a><span class="lineno">  938</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> &lt; PointsNumber; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>++)</div>
 <div class="line"><a name="l00939"></a><span class="lineno">  939</span>&#160;                {</div>
-<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;                    NodalVariableVector[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>] = pElementOld-&gt;GetGeometry().GetPoint(<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>).FastGetSolutionStepValue(DT_WATER_PRESSURE);</div>
+<div class="line"><a name="l00940"></a><span class="lineno">  940</span>&#160;                    NodalVariableVector[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>] = pElementOld-&gt;GetGeometry().GetPoint(<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>).FastGetSolutionStepValue(DT_LIQUID_PRESSURE);</div>
 <div class="line"><a name="l00941"></a><span class="lineno">  941</span>&#160;                }</div>
-<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;                itNodeNew-&gt;FastGetSolutionStepValue(DT_WATER_PRESSURE) = <a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(ShapeFunctionsValuesVector,NodalVariableVector);</div>
+<div class="line"><a name="l00942"></a><span class="lineno">  942</span>&#160;                itNodeNew-&gt;FastGetSolutionStepValue(DT_LIQUID_PRESSURE) = <a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(ShapeFunctionsValuesVector,NodalVariableVector);</div>
 <div class="line"><a name="l00943"></a><span class="lineno">  943</span>&#160;            }</div>
 <div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;        }</div>
 <div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;    }</div>
@@ -1516,7 +1516,7 @@ $(function() {
 <div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;        <span class="comment">// Locate FracturePoints inside CellMatrix</span></div>
 <div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160;        FracturePoint MyFracturePoint;</div>
 <div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;        <a class="code" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">GeometryData::IntegrationMethod</a> MyIntegrationMethod;</div>
-<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/de1/namespaceedgebased___pure_convection.html#a4b2ba243d5072905771aa99f3fb6dc75">ProcessInfo</a>&amp; CurrentProcessInfo = rModelPart.GetProcessInfo();</div>
+<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/de1/namespaceedgebased___pure_convection.html#a4b2ba243d5072905771aa99f3fb6dc75">ProcessInfo</a>&amp; rCurrentProcessInfo = rModelPart.GetProcessInfo();</div>
 <div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;        rPropagationData.pProcessInfo = rModelPart.pGetProcessInfo();</div>
 <div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;        array_1d&lt;double,3&gt; AuxLocalCoordinates;</div>
 <div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160; </div>
@@ -1543,7 +1543,7 @@ $(function() {
 <div class="line"><a name="l01487"></a><span class="lineno"> 1487</span>&#160;                <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> detJContainer(NumGPoints);</div>
 <div class="line"><a name="l01488"></a><span class="lineno"> 1488</span>&#160;                rGeom.DeterminantOfJacobian(detJContainer,MyIntegrationMethod);</div>
 <div class="line"><a name="l01489"></a><span class="lineno"> 1489</span>&#160;                std::vector&lt;double&gt; DamageVector(NumGPoints);</div>
-<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;                itElem-&gt;CalculateOnIntegrationPoints(DAMAGE_VARIABLE,DamageVector,CurrentProcessInfo);</div>
+<div class="line"><a name="l01490"></a><span class="lineno"> 1490</span>&#160;                itElem-&gt;CalculateOnIntegrationPoints(DAMAGE_VARIABLE,DamageVector,rCurrentProcessInfo);</div>
 <div class="line"><a name="l01491"></a><span class="lineno"> 1491</span>&#160;                <span class="keywordtype">int</span> Row;</div>
 <div class="line"><a name="l01492"></a><span class="lineno"> 1492</span>&#160;                <span class="keywordtype">int</span> Column;</div>
 <div class="line"><a name="l01493"></a><span class="lineno"> 1493</span>&#160;                <span class="keywordtype">int</span> Section;</div>
@@ -1679,12 +1679,12 @@ $(function() {
 <div class="line"><a name="l01624"></a><span class="lineno"> 1624</span>&#160; </div>
 <div class="line"><a name="l01625"></a><span class="lineno"> 1625</span>&#160;        <span class="keywordtype">double</span> PropagationDistance = 0.1*PropagationLength;</div>
 <div class="line"><a name="l01626"></a><span class="lineno"> 1626</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> PropagationDamage = rParameters[<span class="stringliteral">&quot;fracture_data&quot;</span>][<span class="stringliteral">&quot;propagation_damage&quot;</span>].GetDouble();</div>
-<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/de1/namespaceedgebased___pure_convection.html#a4b2ba243d5072905771aa99f3fb6dc75">ProcessInfo</a>&amp; CurrentProcessInfo = *(rPropagationData.pProcessInfo);</div>
+<div class="line"><a name="l01627"></a><span class="lineno"> 1627</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/de1/namespaceedgebased___pure_convection.html#a4b2ba243d5072905771aa99f3fb6dc75">ProcessInfo</a>&amp; rCurrentProcessInfo = *(rPropagationData.pProcessInfo);</div>
 <div class="line"><a name="l01628"></a><span class="lineno"> 1628</span>&#160; </div>
 <div class="line"><a name="l01629"></a><span class="lineno"> 1629</span>&#160;        <span class="keywordflow">if</span> (IsInside == <span class="keyword">true</span>)</div>
 <div class="line"><a name="l01630"></a><span class="lineno"> 1630</span>&#160;        {</div>
 <div class="line"><a name="l01631"></a><span class="lineno"> 1631</span>&#160;            std::vector&lt;double&gt; DamageVector;</div>
-<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;            pElement-&gt;CalculateOnIntegrationPoints(DAMAGE_VARIABLE,DamageVector,CurrentProcessInfo);</div>
+<div class="line"><a name="l01632"></a><span class="lineno"> 1632</span>&#160;            pElement-&gt;CalculateOnIntegrationPoints(DAMAGE_VARIABLE,DamageVector,rCurrentProcessInfo);</div>
 <div class="line"><a name="l01633"></a><span class="lineno"> 1633</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NumGPoints = DamageVector.size();</div>
 <div class="line"><a name="l01634"></a><span class="lineno"> 1634</span>&#160;            <span class="keywordtype">double</span> InvNumGPoints = 1.0/<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(NumGPoints);</div>
 <div class="line"><a name="l01635"></a><span class="lineno"> 1635</span>&#160;            <span class="keywordtype">double</span> ElementDamage = 0.0;</div>
@@ -1758,7 +1758,7 @@ $(function() {
 <div class="line"><a name="l01703"></a><span class="lineno"> 1703</span>&#160;                <span class="keywordflow">if</span> (IsInside == <span class="keyword">true</span>)</div>
 <div class="line"><a name="l01704"></a><span class="lineno"> 1704</span>&#160;                {</div>
 <div class="line"><a name="l01705"></a><span class="lineno"> 1705</span>&#160;                    std::vector&lt;double&gt; DamageVector;</div>
-<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;                    pElement-&gt;CalculateOnIntegrationPoints(DAMAGE_VARIABLE,DamageVector,CurrentProcessInfo);</div>
+<div class="line"><a name="l01706"></a><span class="lineno"> 1706</span>&#160;                    pElement-&gt;CalculateOnIntegrationPoints(DAMAGE_VARIABLE,DamageVector,rCurrentProcessInfo);</div>
 <div class="line"><a name="l01707"></a><span class="lineno"> 1707</span>&#160;                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NumGPoints = DamageVector.size();</div>
 <div class="line"><a name="l01708"></a><span class="lineno"> 1708</span>&#160;                    <span class="keywordtype">double</span> InvNumGPoints = 1.0/<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(NumGPoints);</div>
 <div class="line"><a name="l01709"></a><span class="lineno"> 1709</span>&#160;                    <span class="keywordtype">double</span> ElementDamage = 0.0;</div>
@@ -1793,7 +1793,7 @@ $(function() {
 <div class="line"><a name="l01738"></a><span class="lineno"> 1738</span>&#160;                <span class="keywordflow">if</span> (IsInside == <span class="keyword">true</span>)</div>
 <div class="line"><a name="l01739"></a><span class="lineno"> 1739</span>&#160;                {</div>
 <div class="line"><a name="l01740"></a><span class="lineno"> 1740</span>&#160;                    std::vector&lt;double&gt; DamageVector;</div>
-<div class="line"><a name="l01741"></a><span class="lineno"> 1741</span>&#160;                    pElement-&gt;CalculateOnIntegrationPoints(DAMAGE_VARIABLE,DamageVector,CurrentProcessInfo);</div>
+<div class="line"><a name="l01741"></a><span class="lineno"> 1741</span>&#160;                    pElement-&gt;CalculateOnIntegrationPoints(DAMAGE_VARIABLE,DamageVector,rCurrentProcessInfo);</div>
 <div class="line"><a name="l01742"></a><span class="lineno"> 1742</span>&#160;                    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NumGPoints = DamageVector.size();</div>
 <div class="line"><a name="l01743"></a><span class="lineno"> 1743</span>&#160;                    <span class="keywordtype">double</span> InvNumGPoints = 1.0/<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(NumGPoints);</div>
 <div class="line"><a name="l01744"></a><span class="lineno"> 1744</span>&#160;                    <span class="keywordtype">double</span> ElementDamage = 0.0;</div>
@@ -2199,7 +2199,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 22 2024 02:18:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Feb 23 2024 02:16:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

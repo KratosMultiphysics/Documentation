@@ -623,7 +623,7 @@ $(function() {
 , <a class="el" href="dd/d7f/class_kratos_1_1_p_f_e_m2_monolithic_slip_scheme.html#a3c31571b65feb91e075818569ce68880">Kratos::PFEM2MonolithicSlipScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
 , <a class="el" href="dc/d04/class_kratos_1_1_poro_explicit_c_d_scheme.html#ab15bbf213a7a452b7d7ab6780e55f9d2">Kratos::PoroExplicitCDScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
 , <a class="el" href="d7/dca/class_kratos_1_1_poromechanics_ramm_arc_length_strategy.html#a85249845ede7225545b34862170f0539">Kratos::PoromechanicsRammArcLengthStrategy&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
-, <a class="el" href="df/d55/class_kratos_1_1_poro_newmark_quasistatic_u_pw_scheme.html#a0bd254e003a701b0185d10e061cbc1aa">Kratos::PoroNewmarkQuasistaticUPwScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
+, <a class="el" href="df/d0d/class_kratos_1_1_poro_newmark_quasistatic_u_pl_scheme.html#a24d2cfad342188f44b46178d4287ae1e">Kratos::PoroNewmarkQuasistaticUPlScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
 , <a class="el" href="dd/d13/class_kratos_1_1_residual_based_adams_moulton_scheme.html#a77ea6c851da7f0c6f8dbf9da5aad1246">Kratos::ResidualBasedAdamsMoultonScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
 , <a class="el" href="dd/d00/class_kratos_1_1_residual_based_adjoint_bossak_scheme.html#ad65803e60ec1cd686b4b574b06c92809">Kratos::ResidualBasedAdjointBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
 , <a class="el" href="dd/d7b/class_kratos_1_1_residual_based_adjoint_static_scheme.html#a06d4ba9a17dcea13dfaf2edcbcafbc06">Kratos::ResidualBasedAdjointStaticScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
@@ -1493,8 +1493,8 @@ $(function() {
 , <a class="el" href="d6/d35/class_kratos_1_1_generalized_newmark_g_n11_scheme.html#ace85b725b54eba5b42f2d03f013deb19">Kratos::GeneralizedNewmarkGN11Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>
 , <a class="el" href="db/d4b/class_kratos_1_1_generalized_newmark_scheme.html#a5d290dcedd22793a8e7389d123f5c0af">Kratos::GeneralizedNewmarkScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
 , <a class="el" href="d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#ab660f8743153bf6d51c89da2fc4fde58">Kratos::GeoMechanicsTimeIntegrationScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
-, <a class="el" href="d9/d22/class_kratos_1_1_poro_newmark_dynamic_u_pw_scheme.html#a7706dd03628b9a7cea776ce788f177f5">Kratos::PoroNewmarkDynamicUPwScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
-, <a class="el" href="df/d55/class_kratos_1_1_poro_newmark_quasistatic_u_pw_scheme.html#a27c88354dfee4aa9ba5a80ed6ac8d898">Kratos::PoroNewmarkQuasistaticUPwScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
+, <a class="el" href="d8/d13/class_kratos_1_1_poro_newmark_dynamic_u_pl_scheme.html#a3020bb9e6a7d87cccbe24ba178cde117">Kratos::PoroNewmarkDynamicUPlScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
+, <a class="el" href="df/d0d/class_kratos_1_1_poro_newmark_quasistatic_u_pl_scheme.html#a35ad057601ba21e4c5169bc7f2848d28">Kratos::PoroNewmarkQuasistaticUPlScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
 </li>
 <li>UpdateVectorOfHistoricalForcesAndComputeNewAverage()
 : <a class="el" href="d0/df0/class_kratos_1_1_poromechanics_face_load_control_module_process.html#ac12152c0a0a5da31fab41c43e0df8cba">Kratos::PoromechanicsFaceLoadControlModuleProcess</a>
@@ -1522,25 +1522,61 @@ $(function() {
 <li>UpdateWithRelaxation()
 : <a class="el" href="d6/dca/class_kratos_1_1_trilinos_residual_based_incremental_aitken_static_scheme.html#a726370666233278ccd7e7fa837214a6c">Kratos::TrilinosResidualBasedIncrementalAitkenStaticScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
 </li>
+<li>UPlCondition()
+: <a class="el" href="d0/dc3/class_kratos_1_1_u_pl_condition.html#a06184142e10e88d9b270165cc957d7c7">Kratos::UPlCondition&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlElement()
+: <a class="el" href="d4/de7/class_kratos_1_1_u_pl_element.html#aeb8ec6cdbb06c03aeb8f973039139ad4">Kratos::UPlElement&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlFaceLoadCondition()
+: <a class="el" href="d0/d6f/class_kratos_1_1_u_pl_face_load_condition.html#a2a34f969da2b667acb59c871debf3057">Kratos::UPlFaceLoadCondition&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlFaceLoadInterfaceCondition()
+: <a class="el" href="da/d34/class_kratos_1_1_u_pl_face_load_interface_condition.html#a80f47880c4a0d001848146e15430ea8d">Kratos::UPlFaceLoadInterfaceCondition&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlForceCondition()
+: <a class="el" href="d4/d90/class_kratos_1_1_u_pl_force_condition.html#a25d1a0663f30fa015b342c32ab3582eb">Kratos::UPlForceCondition&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlLiquidDischargeCondition()
+: <a class="el" href="da/dbc/class_kratos_1_1_u_pl_liquid_discharge_condition.html#a8f58428df876e87bfbef02979992681c">Kratos::UPlLiquidDischargeCondition&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlNormalFaceLoadCondition()
+: <a class="el" href="da/d46/class_kratos_1_1_u_pl_normal_face_load_condition.html#a9d14be6e0a14af9c1f17e9270ea5b869">Kratos::UPlNormalFaceLoadCondition&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlNormalLiquidFluxCondition()
+: <a class="el" href="d1/d34/class_kratos_1_1_u_pl_normal_liquid_flux_condition.html#a9e9fd6acee9411f00f0c469dffd45243">Kratos::UPlNormalLiquidFluxCondition&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlNormalLiquidFluxFICCondition()
+: <a class="el" href="d5/d3f/class_kratos_1_1_u_pl_normal_liquid_flux_f_i_c_condition.html#ac249cc81f1a730c83f4e2541aa2c5621">Kratos::UPlNormalLiquidFluxFICCondition&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlNormalLiquidFluxInterfaceCondition()
+: <a class="el" href="dc/dc0/class_kratos_1_1_u_pl_normal_liquid_flux_interface_condition.html#a426806e1ca3d314325d5f77d3d341e48">Kratos::UPlNormalLiquidFluxInterfaceCondition&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlSmallStrainElement()
+: <a class="el" href="da/d52/class_kratos_1_1_u_pl_small_strain_element.html#ae38ff47b70e3388e1c2411843bf09feb">Kratos::UPlSmallStrainElement&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlSmallStrainFICElement()
+: <a class="el" href="d8/d47/class_kratos_1_1_u_pl_small_strain_f_i_c_element.html#a75e1c7571e4cbb31ad755678c13eac96">Kratos::UPlSmallStrainFICElement&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlSmallStrainInterfaceElement()
+: <a class="el" href="d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a3b96cf3ae0201569ee6ae6e6f5857ed2">Kratos::UPlSmallStrainInterfaceElement&lt; TDim, TNumNodes &gt;</a>
+</li>
+<li>UPlSmallStrainLinkInterfaceElement()
+: <a class="el" href="d3/d17/class_kratos_1_1_u_pl_small_strain_link_interface_element.html#acd0426fca53820ffbcbb8c61e1046f1c">Kratos::UPlSmallStrainLinkInterfaceElement&lt; TDim, TNumNodes &gt;</a>
+</li>
 <li>upper_bound()
 : <a class="el" href="d1/d2b/classonthefly__kratos__inlet__process_1_1_regular_grid1_d.html#a37fbbf98bcf076da5370a5e8c216397c">onthefly_kratos_inlet_process.RegularGrid1D</a>
 , <a class="el" href="db/dbd/classonthefly__kratos__inlet__process_1_1_sub_grid1_d.html#a49d1ae5212b33e35bd4d9b05787eb59e">onthefly_kratos_inlet_process.SubGrid1D</a>
 , <a class="el" href="d6/d34/classprojection__utilities_1_1_regular_grid1_d.html#ae3c5177eaf01ad424485681542e0e0fe">projection_utilities.RegularGrid1D</a>
 </li>
 <li>UPwBaseElement()
-: <a class="el" href="dd/df7/class_kratos_1_1_u_pw_base_element.html#a431a2473443d24fa39233374f0238761">Kratos::UPwBaseElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="dd/df7/class_kratos_1_1_u_pw_base_element.html#a05398225d35ac8bf5a0cff7a1eb4098a">Kratos::UPwBaseElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwCondition()
 : <a class="el" href="dc/d12/class_kratos_1_1_u_pw_condition.html#a40824003214a9f2d2e0b827df91db848">Kratos::UPwCondition&lt; TDim, TNumNodes &gt;</a>
 </li>
-<li>UPwDischargeCondition()
-: <a class="el" href="da/d3d/class_kratos_1_1_u_pw_discharge_condition.html#a42776461656c0ef278edd75f7316e23a">Kratos::UPwDischargeCondition&lt; TDim, TNumNodes &gt;</a>
-</li>
-<li>UPwElement()
-: <a class="el" href="d9/d6a/class_kratos_1_1_u_pw_element.html#aa47f35a73813cd3d41be0233d7d67c34">Kratos::UPwElement&lt; TDim, TNumNodes &gt;</a>
-</li>
 <li>UPwFaceLoadCondition()
-: <a class="el" href="d5/d18/class_kratos_1_1_u_pw_face_load_condition.html#a2270c7a5c942008614d6b3987248f726">Kratos::UPwFaceLoadCondition&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d5/d18/class_kratos_1_1_u_pw_face_load_condition.html#a9cd8344f9960fba624ed5373e25eee35">Kratos::UPwFaceLoadCondition&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwFaceLoadInterfaceCondition()
 : <a class="el" href="de/ded/class_kratos_1_1_u_pw_face_load_interface_condition.html#a1693773f808516e4a834f2f5567ce000">Kratos::UPwFaceLoadInterfaceCondition&lt; TDim, TNumNodes &gt;</a>
@@ -1549,16 +1585,16 @@ $(function() {
 : <a class="el" href="da/d60/class_kratos_1_1_u_pw_force_condition.html#a3eef57cb28007e831de2a0c300de26d8">Kratos::UPwForceCondition&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwLysmerAbsorbingCondition()
-: <a class="el" href="d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#a35bc2caff9304e65719fe8253f35382d">Kratos::UPwLysmerAbsorbingCondition&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#a41b62355353593091aacf077649a7e4b">Kratos::UPwLysmerAbsorbingCondition&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwNormalFaceLoadCondition()
-: <a class="el" href="dc/d6b/class_kratos_1_1_u_pw_normal_face_load_condition.html#ad0091480cc6e123b79fd5f452f9a374d">Kratos::UPwNormalFaceLoadCondition&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="dc/d6b/class_kratos_1_1_u_pw_normal_face_load_condition.html#ad3eb4aae1ccc7e94d6b3b690733b4ed2">Kratos::UPwNormalFaceLoadCondition&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwNormalFluxCondition()
 : <a class="el" href="d4/d6b/class_kratos_1_1_u_pw_normal_flux_condition.html#aee1aa5a23785f535eae3e51fd124af80">Kratos::UPwNormalFluxCondition&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwNormalFluxFICCondition()
-: <a class="el" href="d4/d86/class_kratos_1_1_u_pw_normal_flux_f_i_c_condition.html#afa1eee0e160b942d06860d28ec1091f7">Kratos::UPwNormalFluxFICCondition&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d4/d86/class_kratos_1_1_u_pw_normal_flux_f_i_c_condition.html#a52825f45ae835982def1bb1b480558c2">Kratos::UPwNormalFluxFICCondition&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwNormalFluxInterfaceCondition()
 : <a class="el" href="d9/dde/class_kratos_1_1_u_pw_normal_flux_interface_condition.html#aba9f56aced90e81c7e0e473827880193">Kratos::UPwNormalFluxInterfaceCondition&lt; TDim, TNumNodes &gt;</a>
@@ -1570,28 +1606,28 @@ $(function() {
 : <a class="el" href="d3/dfc/class_kratos_1_1_u_pw_small_strain_axisymmetric_f_i_c_element.html#ad1c4242a6362093070698e0c5a08dc09">Kratos::UPwSmallStrainAxisymmetricFICElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwSmallStrainElement()
-: <a class="el" href="db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#ad15c9e6f54b89e3484c3b8b0705f1199">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a4995b366ef5f9bbf2954ffcb577bf4ca">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwSmallStrainFICElement()
-: <a class="el" href="d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#a411c36573f5bd5d3fa2a92a89090a70a">Kratos::UPwSmallStrainFICElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#a0e71c91f7d2fb2b58563af8327d142c7">Kratos::UPwSmallStrainFICElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwSmallStrainInterfaceElement()
-: <a class="el" href="da/de1/class_kratos_1_1_u_pw_small_strain_interface_element.html#a36f8d600dbb58271efa6c273d2ca40bc">Kratos::UPwSmallStrainInterfaceElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="da/de1/class_kratos_1_1_u_pw_small_strain_interface_element.html#a01b22514d7aa9d64528dc0a97c37b28a">Kratos::UPwSmallStrainInterfaceElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwSmallStrainLinkInterfaceElement()
-: <a class="el" href="d3/d22/class_kratos_1_1_u_pw_small_strain_link_interface_element.html#a5a97d4f00080bdc793ca96b795b39db0">Kratos::UPwSmallStrainLinkInterfaceElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d3/d22/class_kratos_1_1_u_pw_small_strain_link_interface_element.html#ad60b7bf14aeb9ca2a9c142f705115d8a">Kratos::UPwSmallStrainLinkInterfaceElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwUpdatedLagrangianAxisymmetricElement()
 : <a class="el" href="dc/d98/class_kratos_1_1_u_pw_updated_lagrangian_axisymmetric_element.html#a7c601733735cfddd7168513d170925a5">Kratos::UPwUpdatedLagrangianAxisymmetricElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwUpdatedLagrangianAxisymmetricFICElement()
-: <a class="el" href="d3/dfa/class_kratos_1_1_u_pw_updated_lagrangian_axisymmetric_f_i_c_element.html#ae8978a11010938496dcd67f4a2a24a63">Kratos::UPwUpdatedLagrangianAxisymmetricFICElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d3/dfa/class_kratos_1_1_u_pw_updated_lagrangian_axisymmetric_f_i_c_element.html#af195be60ec6c1c3544687653a97df6c5">Kratos::UPwUpdatedLagrangianAxisymmetricFICElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwUpdatedLagrangianElement()
-: <a class="el" href="d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#af7323c39d09f27dbf882d5d26b8fddcd">Kratos::UPwUpdatedLagrangianElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#ac8ac88e8029766f020027c367b481ceb">Kratos::UPwUpdatedLagrangianElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>UPwUpdatedLagrangianFICElement()
-: <a class="el" href="d8/d18/class_kratos_1_1_u_pw_updated_lagrangian_f_i_c_element.html#a00c5809807f9fc7cb6b1f20364d07f1d">Kratos::UPwUpdatedLagrangianFICElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d8/d18/class_kratos_1_1_u_pw_updated_lagrangian_f_i_c_element.html#a8ef60b8070a637f7e2b6ceebe7a9df16">Kratos::UPwUpdatedLagrangianFICElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>use_count()
 : <a class="el" href="d3/d62/class_kratos_1_1_geometrical_object.html#adf5e6360dd552990194f18f756880f19">Kratos::GeometricalObject</a>
@@ -1603,7 +1639,7 @@ $(function() {
 : <a class="el" href="de/dd6/class_kratos_1_1_eigenfrequency_response_function_utility.html#ad2784fbbd29d9e7ad19c4ad716522426">Kratos::EigenfrequencyResponseFunctionUtility</a>
 </li>
 <li>UseElementProvidedStrain()
-: <a class="el" href="d3/d4c/class_kratos_1_1_base_solid_element.html#a574286c1a6517798e8a724c351c2c83a">Kratos::BaseSolidElement</a>
+: <a class="el" href="d3/d4c/class_kratos_1_1_base_solid_element.html#a902e310abc6f1074e46e1b3dbd6cfbe9">Kratos::BaseSolidElement</a>
 , <a class="el" href="d7/d12/class_kratos_1_1_generic_small_strain_fem_dem_element.html#a125f0a6bc8f0045d74717f487154e00a">Kratos::GenericSmallStrainFemDemElement&lt; TDim, TyieldSurf &gt;</a>
 , <a class="el" href="d2/d22/class_kratos_1_1_small_displacement.html#ae6124d83cd220fd66cbd4c0053ca8c7b">Kratos::SmallDisplacement</a>
 , <a class="el" href="d9/d4d/class_kratos_1_1_small_displacement_bbar.html#a9c9298f708fa20dac51cf8240598e603">Kratos::SmallDisplacementBbar</a>
@@ -1626,7 +1662,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 22 2024 03:53:07 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Feb 23 2024 03:46:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

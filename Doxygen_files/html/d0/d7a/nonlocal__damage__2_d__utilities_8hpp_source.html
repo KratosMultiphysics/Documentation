@@ -168,7 +168,7 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">// Locate GaussPoints inside CellMatrix</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NGPoints = 0;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">GeometryData::IntegrationMethod</a> MyIntegrationMethod;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; CurrentProcessInfo = rModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a78674e1f2609ef421e202c8b206b59ae">GetProcessInfo</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo = rModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a78674e1f2609ef421e202c8b206b59ae">GetProcessInfo</a>();</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a> AuxGlobalCoordinates;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a> AuxLocalCoordinates;</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        </div>
@@ -196,7 +196,7 @@ $(function() {
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> detJContainer(NumGPoints);</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                rGeom.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a6d2b05ee63064ed2a21c828b19d6d273">DeterminantOfJacobian</a>(detJContainer,MyIntegrationMethod);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                std::vector&lt;ConstitutiveLaw::Pointer&gt; ConstitutiveLawVector(NumGPoints);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                itElem-&gt;CalculateOnIntegrationPoints(CONSTITUTIVE_LAW,ConstitutiveLawVector,CurrentProcessInfo);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                itElem-&gt;CalculateOnIntegrationPoints(CONSTITUTIVE_LAW,ConstitutiveLawVector,rCurrentProcessInfo);</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                <span class="keywordtype">int</span> Row;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                <span class="keywordtype">int</span> Column;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
@@ -431,7 +431,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 22 2024 02:18:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Feb 23 2024 02:16:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -488,144 +488,148 @@ $(function() {
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;    }</div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160; </div>
-<div class="line"><a name="l00627"></a><span class="lineno"><a class="line" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#afb9d05c375908bf4d44ee79701b6f269">  627</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#afb9d05c375908bf4d44ee79701b6f269">Info</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;AuxiliarModelPartUtilities&quot;</span>;</div>
-<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    }</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
-<div class="line"><a name="l00633"></a><span class="lineno"><a class="line" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#ad8a9845170225f1396c902232baacf1f">  633</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#ad8a9845170225f1396c902232baacf1f">PrintInfo</a>(std::ostream&amp; rOStream)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;    }</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160; </div>
-<div class="line"><a name="l00639"></a><span class="lineno"><a class="line" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a83c4c1fac9ca6ad4d04253e1ffa0b11b">  639</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a83c4c1fac9ca6ad4d04253e1ffa0b11b">PrintData</a>(std::ostream&amp; rOStream)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    }</div>
+<div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;    std::unordered_map&lt;IndexType, std::vector&lt;IndexType&gt;&gt; RetrieveElementsNeighbourElementsIds();</div>
+<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160; </div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;    std::unordered_map&lt;IndexType, std::vector&lt;IndexType&gt;&gt; RetrieveConditionsNeighbourConditionsIds();</div>
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160; </div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160; </div>
-<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;    <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; mrModelPart;</div>
-<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160; </div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160; </div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160; </div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TDataType, <span class="keyword">class</span> TContainerType, <span class="keyword">class</span> TDataContainerType&gt;</div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;    <span class="keywordtype">void</span> GetScalarDataFromContainer(</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        <span class="keyword">const</span> TContainerType&amp; rContainer,</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;TDataType&gt;</a>&amp; rVariable,</div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        TDataContainerType&amp; <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
+<div class="line"><a name="l00645"></a><span class="lineno"><a class="line" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#afb9d05c375908bf4d44ee79701b6f269">  645</a></span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#afb9d05c375908bf4d44ee79701b6f269">Info</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;AuxiliarModelPartUtilities&quot;</span>;</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;    }</div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160; </div>
+<div class="line"><a name="l00651"></a><span class="lineno"><a class="line" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#ad8a9845170225f1396c902232baacf1f">  651</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#ad8a9845170225f1396c902232baacf1f">PrintInfo</a>(std::ostream&amp; rOStream)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;        rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;    }</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160; </div>
+<div class="line"><a name="l00657"></a><span class="lineno"><a class="line" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a83c4c1fac9ca6ad4d04253e1ffa0b11b">  657</a></span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a83c4c1fac9ca6ad4d04253e1ffa0b11b">PrintData</a>(std::ostream&amp; rOStream)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    }</div>
+<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160; </div>
+<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160; </div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        DataSizeCheck(rContainer.size(), <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>.size());</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;    <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; mrModelPart;</div>
 <div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160; </div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        <a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html">IndexPartition&lt;std::size_t&gt;</a>(rContainer.size()).<a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html#af1ce67064923939c2a8a0172cdb5e344">for_each</a>([&amp;](std::size_t index){</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_entity = *(rContainer.begin() + index);</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;            <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>[index] = r_entity.GetValue(rVariable);</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        });</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160; </div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;    }</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160; </div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160; </div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TDataType, <span class="keyword">class</span> TContainerType, <span class="keyword">class</span> TDataContainerType&gt;</div>
-<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    <span class="keywordtype">void</span> GetVectorDataFromContainer(</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;    <span class="keywordtype">void</span> GetScalarDataFromContainer(</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;        <span class="keyword">const</span> TContainerType&amp; rContainer,</div>
-<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        <span class="keyword">const</span> std::size_t VectorSize,</div>
-<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        <span class="keyword">const</span> Variable&lt;TDataType&gt;&amp; rVariable,</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;        TDataContainerType&amp; <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160; </div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;        DataSizeCheck(rContainer.size()*VectorSize, <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>.size());</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160; </div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;        IndexPartition&lt;std::size_t&gt;(rContainer.size()).for_each([&amp;](std::size_t index){</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_entity = *(rContainer.begin() + index);</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_val = r_entity.GetValue(rVariable);</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;            <span class="keywordflow">for</span>(std::size_t <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a> = 0 ; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a> &lt; VectorSize ; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>++){</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;                <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>[(VectorSize*index) + <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>] = r_val[<a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>];</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;            }</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;        });</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160; </div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    }</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TDataType, <span class="keyword">class</span> TContainerType, <span class="keyword">class</span> TDataContainerType&gt;</div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;    <span class="keywordtype">void</span> SetScalarDataFromContainer(</div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        TContainerType&amp; rContainer,</div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <span class="keyword">const</span> Variable&lt;TDataType&gt;&amp; rVariable,</div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;        <span class="keyword">const</span> TDataContainerType&amp; rData)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160; </div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        DataSizeCheck(rContainer.size(), rData.size());</div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160; </div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        IndexPartition&lt;std::size_t&gt;(rContainer.size()).for_each([&amp;](std::size_t index){</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;            <span class="keyword">auto</span>&amp; r_entity = *(rContainer.begin() + index);</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            r_entity.SetValue(rVariable, rData[index]);</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;TDataType&gt;</a>&amp; rVariable,</div>
+<div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;        TDataContainerType&amp; <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
+<div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160; </div>
+<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;        DataSizeCheck(rContainer.size(), <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>.size());</div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160; </div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        <a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html">IndexPartition&lt;std::size_t&gt;</a>(rContainer.size()).<a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html#af1ce67064923939c2a8a0172cdb5e344">for_each</a>([&amp;](std::size_t index){</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_entity = *(rContainer.begin() + index);</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;            <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>[index] = r_entity.GetValue(rVariable);</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        });</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160; </div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;    }</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160; </div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TDataType, <span class="keyword">class</span> TContainerType, <span class="keyword">class</span> TDataContainerType&gt;</div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;    <span class="keywordtype">void</span> GetVectorDataFromContainer(</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;        <span class="keyword">const</span> TContainerType&amp; rContainer,</div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;        <span class="keyword">const</span> std::size_t VectorSize,</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        <span class="keyword">const</span> Variable&lt;TDataType&gt;&amp; rVariable,</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;        TDataContainerType&amp; <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160; </div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;        DataSizeCheck(rContainer.size()*VectorSize, <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>.size());</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160; </div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;        IndexPartition&lt;std::size_t&gt;(rContainer.size()).for_each([&amp;](std::size_t index){</div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_entity = *(rContainer.begin() + index);</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_val = r_entity.GetValue(rVariable);</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;            <span class="keywordflow">for</span>(std::size_t <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a> = 0 ; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a> &lt; VectorSize ; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>++){</div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;                <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>[(VectorSize*index) + <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>] = r_val[<a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>];</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;            }</div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        });</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
 <div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    }</div>
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160; </div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TDataType, <span class="keyword">class</span> TContainerType, <span class="keyword">class</span> TDataContainerType&gt;</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keywordtype">void</span> SetVectorDataFromContainer(</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keywordtype">void</span> SetScalarDataFromContainer(</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        TContainerType&amp; rContainer,</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        <span class="keyword">const</span> std::size_t VectorSize,</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="keyword">const</span> Variable&lt;TDataType&gt;&amp; rVariable,</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        <span class="keyword">const</span> TDataContainerType&amp; rData)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160; </div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        DataSizeCheck(rContainer.size()*VectorSize, rData.size());</div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160; </div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        IndexPartition&lt;std::size_t&gt;(rContainer.size()).for_each([&amp;](std::size_t index){</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            <span class="keyword">auto</span>&amp; r_entity = *(rContainer.begin() + index);</div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;            TDataType aux;</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;            <a class="code" href="../../d5/d4d/group___kratos_core.html#gab957b416207ac826a58f2b9503cb0d38">KRATOS_DEBUG_ERROR_IF</a>(aux.size() != VectorSize) &lt;&lt; <span class="stringliteral">&quot;mismatch in size!&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;            <span class="keywordflow">for</span>(std::size_t <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a> = 0 ; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a> &lt; VectorSize ; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>++){</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;                aux[<a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>] = rData[(VectorSize*index) + <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>];</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;            }</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;            r_entity.SetValue(rVariable, aux);</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        });</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160; </div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    }</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;    <span class="keywordtype">void</span> DataSizeCheck(</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        <span class="keyword">const</span> std::size_t ContainerSize,</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        <span class="keyword">const</span> std::size_t DataSize)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        <a class="code" href="../../d5/d4d/group___kratos_core.html#ga9fdd4e0364598f28a529107663707cf3">KRATOS_ERROR_IF</a>(ContainerSize != DataSize) &lt;&lt; <span class="stringliteral">&quot;Mismatch in size! Container size: &quot;</span> &lt;&lt; ContainerSize &lt;&lt; <span class="stringliteral">&quot; | Data size: &quot;</span> &lt;&lt; DataSize &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;    }</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160; </div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    <span class="keywordtype">void</span> DeepCopySubModelPart(</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;        <span class="keyword">const</span> ModelPart&amp; rOldModelPart,</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        ModelPart&amp; rNewModelPart</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;        );</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        <span class="keyword">const</span> Variable&lt;TDataType&gt;&amp; rVariable,</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="keyword">const</span> TDataContainerType&amp; rData)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160; </div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        DataSizeCheck(rContainer.size(), rData.size());</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160; </div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;        IndexPartition&lt;std::size_t&gt;(rContainer.size()).for_each([&amp;](std::size_t index){</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;            <span class="keyword">auto</span>&amp; r_entity = *(rContainer.begin() + index);</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;            r_entity.SetValue(rVariable, rData[index]);</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;        });</div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160; </div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;    }</div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160; </div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TDataType, <span class="keyword">class</span> TContainerType, <span class="keyword">class</span> TDataContainerType&gt;</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;    <span class="keywordtype">void</span> SetVectorDataFromContainer(</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        TContainerType&amp; rContainer,</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        <span class="keyword">const</span> std::size_t VectorSize,</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;        <span class="keyword">const</span> Variable&lt;TDataType&gt;&amp; rVariable,</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;        <span class="keyword">const</span> TDataContainerType&amp; rData)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160; </div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        DataSizeCheck(rContainer.size()*VectorSize, rData.size());</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160; </div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        IndexPartition&lt;std::size_t&gt;(rContainer.size()).for_each([&amp;](std::size_t index){</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;            <span class="keyword">auto</span>&amp; r_entity = *(rContainer.begin() + index);</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;            TDataType aux;</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;            <a class="code" href="../../d5/d4d/group___kratos_core.html#gab957b416207ac826a58f2b9503cb0d38">KRATOS_DEBUG_ERROR_IF</a>(aux.size() != VectorSize) &lt;&lt; <span class="stringliteral">&quot;mismatch in size!&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;            <span class="keywordflow">for</span>(std::size_t <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a> = 0 ; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a> &lt; VectorSize ; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>++){</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                aux[<a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>] = rData[(VectorSize*index) + <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">dim</a>];</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;            }</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;            r_entity.SetValue(rVariable, aux);</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;        });</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160; </div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;    }</div>
 <div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160; </div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160; </div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;    <span class="keywordtype">void</span> DataSizeCheck(</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;        <span class="keyword">const</span> std::size_t ContainerSize,</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;        <span class="keyword">const</span> std::size_t DataSize)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        <a class="code" href="../../d5/d4d/group___kratos_core.html#ga9fdd4e0364598f28a529107663707cf3">KRATOS_ERROR_IF</a>(ContainerSize != DataSize) &lt;&lt; <span class="stringliteral">&quot;Mismatch in size! Container size: &quot;</span> &lt;&lt; ContainerSize &lt;&lt; <span class="stringliteral">&quot; | Data size: &quot;</span> &lt;&lt; DataSize &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    }</div>
 <div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160; </div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160; </div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;};<span class="comment">// class AuxiliarModelPartUtilities</span></div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160; </div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160; </div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160; </div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;    <span class="keywordtype">void</span> DeepCopySubModelPart(</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;        <span class="keyword">const</span> ModelPart&amp; rOldModelPart,</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        ModelPart&amp; rNewModelPart</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;        );</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160; </div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160; </div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160; </div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160; </div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160; </div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;};<span class="comment">// class AuxiliarModelPartUtilities</span></div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160; </div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160; </div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160; </div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160; </div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html">Kratos::AuxiliarModelPartUtilities</a></div><div class="ttdoc">This utility includes auxiliar methods not included in the model part to avoid increase more than nec...</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:48</div></div>
 <div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_a12b2b5091b0c06973de930e5e3545f30"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a12b2b5091b0c06973de930e5e3545f30">Kratos::AuxiliarModelPartUtilities::DeepCopyEntities</a></div><div class="ttdeci">void DeepCopyEntities(ModelPart &amp;rModelPart, TClassContainer &amp;rEntities, TReferenceClassContainer &amp;rReferenceEntities, std::unordered_map&lt; Geometry&lt; Node &gt;::Pointer, Geometry&lt; Node &gt;::Pointer &gt; &amp;rGeometryPointerDatabase)</div><div class="ttdoc">This method deep copies a entities.</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:597</div></div>
 <div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_a5bcc1400b1f68292a976ae3174fc2e16"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a5bcc1400b1f68292a976ae3174fc2e16">Kratos::AuxiliarModelPartUtilities::GetVectorData</a></div><div class="ttdeci">void GetVectorData(const Variable&lt; TVarType &gt; &amp;rVariable, const DataLocation DataLoc, TContainerType &amp;data) const</div><div class="ttdoc">To Export a Vector data (std::vector/array/..)</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:349</div></div>
-<div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_a83c4c1fac9ca6ad4d04253e1ffa0b11b"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a83c4c1fac9ca6ad4d04253e1ffa0b11b">Kratos::AuxiliarModelPartUtilities::PrintData</a></div><div class="ttdeci">virtual void PrintData(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:639</div></div>
+<div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_a83c4c1fac9ca6ad4d04253e1ffa0b11b"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a83c4c1fac9ca6ad4d04253e1ffa0b11b">Kratos::AuxiliarModelPartUtilities::PrintData</a></div><div class="ttdeci">virtual void PrintData(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:657</div></div>
 <div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_a8b500037f3b2777064f3d7272ec310d9"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a8b500037f3b2777064f3d7272ec310d9">Kratos::AuxiliarModelPartUtilities::SetScalarData</a></div><div class="ttdeci">void SetScalarData(const Variable&lt; typename TContainerType::value_type &gt; &amp;rVariable, const DataLocation DataLoc, const TContainerType &amp;rData)</div><div class="ttdoc">To Import a Scalar data (Double/int/...)</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:440</div></div>
 <div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_a92b3f03e9cba5c7b21272e1b1fe919b0"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a92b3f03e9cba5c7b21272e1b1fe919b0">Kratos::AuxiliarModelPartUtilities::SetVectorData</a></div><div class="ttdeci">void SetVectorData(const Variable&lt; TVarType &gt; &amp;rVariable, const DataLocation DataLoc, const TContainerType &amp;rData)</div><div class="ttdoc">To Import a Vector data (std::vector/array/..)</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:491</div></div>
 <div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_a9b4280682b070be97fe533dfa2d2e453"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#a9b4280682b070be97fe533dfa2d2e453">Kratos::AuxiliarModelPartUtilities::AuxiliarModelPartUtilities</a></div><div class="ttdeci">AuxiliarModelPartUtilities(ModelPart &amp;rModelPart)</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:65</div></div>
 <div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_ab5d728c402553db9c0cb963036c299e5"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#ab5d728c402553db9c0cb963036c299e5">Kratos::AuxiliarModelPartUtilities::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(AuxiliarModelPartUtilities)</div><div class="ttdoc">Counted pointer of AuxiliarModelPartUtilities.</div></div>
 <div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_aca6d2bcaa9f29ea04f158b984637629e"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#aca6d2bcaa9f29ea04f158b984637629e">Kratos::AuxiliarModelPartUtilities::~AuxiliarModelPartUtilities</a></div><div class="ttdeci">virtual ~AuxiliarModelPartUtilities()=default</div></div>
-<div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_ad8a9845170225f1396c902232baacf1f"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#ad8a9845170225f1396c902232baacf1f">Kratos::AuxiliarModelPartUtilities::PrintInfo</a></div><div class="ttdeci">virtual void PrintInfo(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:633</div></div>
+<div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_ad8a9845170225f1396c902232baacf1f"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#ad8a9845170225f1396c902232baacf1f">Kratos::AuxiliarModelPartUtilities::PrintInfo</a></div><div class="ttdeci">virtual void PrintInfo(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:651</div></div>
 <div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_ad9c478116dd3f50dbf616921b35c0bf6"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#ad9c478116dd3f50dbf616921b35c0bf6">Kratos::AuxiliarModelPartUtilities::GetScalarData</a></div><div class="ttdeci">void GetScalarData(const Variable&lt; typename TContainerType::value_type &gt; &amp;rVariable, const DataLocation DataLoc, TContainerType &amp;data) const</div><div class="ttdoc">To Export a Scalar data (Double/int/...)</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:288</div></div>
-<div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_afb9d05c375908bf4d44ee79701b6f269"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#afb9d05c375908bf4d44ee79701b6f269">Kratos::AuxiliarModelPartUtilities::Info</a></div><div class="ttdeci">virtual std::string Info() const</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:627</div></div>
+<div class="ttc" id="aclass_kratos_1_1_auxiliar_model_part_utilities_html_afb9d05c375908bf4d44ee79701b6f269"><div class="ttname"><a href="../../db/d65/class_kratos_1_1_auxiliar_model_part_utilities.html#afb9d05c375908bf4d44ee79701b6f269">Kratos::AuxiliarModelPartUtilities::Info</a></div><div class="ttdeci">virtual std::string Info() const</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> auxiliar_model_part_utilities.h:645</div></div>
 <div class="ttc" id="aclass_kratos_1_1_condition_html"><div class="ttname"><a href="../../d1/d6e/class_kratos_1_1_condition.html">Kratos::Condition</a></div><div class="ttdoc">Base class for all Conditions.</div><div class="ttdef"><b>Definition:</b> condition.h:59</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html">Kratos::Element</a></div><div class="ttdoc">Base class for all Elements.</div><div class="ttdef"><b>Definition:</b> element.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></div><div class="ttdoc">Forward declaration.</div><div class="ttdef"><b>Definition:</b> flags.h:56</div></div>
@@ -657,7 +661,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Feb 22 2024 02:57:59 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Feb 23 2024 02:54:10 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
