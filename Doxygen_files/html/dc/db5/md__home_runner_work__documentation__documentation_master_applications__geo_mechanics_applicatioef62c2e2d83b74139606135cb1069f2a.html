@@ -76,7 +76,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><h1>Introduction</h1>
-<p>The <code>Scheme</code> class in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> is used to create time integration schemes. It is an abstract class, for which Geomechanics has implemented a number of flavors, subdivided in the Backward Euler and the Generalized Newmark families.</p>
+<p>The <code>Scheme</code> class in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> is used to create time integration schemes. It is a base class, for which Geomechanics has implemented a number of flavors, subdivided in the Backward Euler and the Generalized Newmark families.</p>
 <h1>Code Structure</h1>
 <p>The bulk of the functionality is implemented in the <code>GeoMechanicsTimeIntegrationScheme</code> class. It contains two lists of variables that are used in the time integration schemes. A list of first order scalar variables (such as water pressure or temperature) and a list of second order vector variables (such as displacements or rotations). For the first order time derivatives, only the first time derivative is taken into account, while for the second order time derivatives, both the first and the second time derivatives are considered. These lists are filled in the constructor by derived classes that specify which variables are used in the time integration scheme.</p>
 <p>The functions that the <code>GeoMechanicsTimeIntegrationScheme</code> class implements are mostly dictated by the <code>Scheme</code> interface and include functionality like checking if all variables are allocated in the modelpart, getting <em>DofLists, EquationIds</em> and calling different flavors of the Initialize/Finalize/CalculateSystemContributions functions on elements and conditions.</p>
@@ -94,7 +94,7 @@ $(function() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Feb 23 2024 02:54:57 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Feb 24 2024 02:50:04 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
