@@ -113,22 +113,22 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a410956b6f2a2ee67be9a34e0c563edc1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a410956b6f2a2ee67be9a34e0c563edc1">ComputeBoundingBoxesWithToleranceCheckingNullBB</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rBoundingBoxes, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Tolerance, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rBoundingBoxesWithTolerance)</td></tr>
 <tr class="memdesc:a410956b6f2a2ee67be9a34e0c563edc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute the bounding boxes of the given bounding boxes from a given tolerance, additionally checking if the bounding boxes are initialized.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a410956b6f2a2ee67be9a34e0c563edc1">More...</a><br /></td></tr>
 <tr class="separator:a410956b6f2a2ee67be9a34e0c563edc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa320ef3060276df16b52b81e9815b1fe"><td class="memTemplParams" colspan="2">template&lt;typename TPointIteratorType &gt; </td></tr>
-<tr class="memitem:aa320ef3060276df16b52b81e9815b1fe"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#aa320ef3060276df16b52b81e9815b1fe">SynchronousPointSynchronization</a> (TPointIteratorType itPointBegin, TPointIteratorType itPointEnd, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rAllPointsCoordinates, std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">IndexType</a> &gt; &amp;rAllPointsIds, const <a class="el" href="../../dc/d92/class_kratos_1_1_data_communicator.html">DataCommunicator</a> &amp;rDataCommunicator)</td></tr>
-<tr class="memdesc:aa320ef3060276df16b52b81e9815b1fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">SynchronousPointSynchronization prepares synchronously the coordinates of the points for MPI search.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#aa320ef3060276df16b52b81e9815b1fe">More...</a><br /></td></tr>
-<tr class="separator:aa320ef3060276df16b52b81e9815b1fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3044d3ed1f6fe8887e22655b01f01a95"><td class="memTemplParams" colspan="2">template&lt;typename TPointIteratorType , typename TBoundingBoxType &gt; </td></tr>
-<tr class="memitem:a3044d3ed1f6fe8887e22655b01f01a95"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">IndexType</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a3044d3ed1f6fe8887e22655b01f01a95">SynchronousPointSynchronizationWithBoundingBox</a> (TPointIteratorType itPointBegin, TPointIteratorType itPointEnd, <a class="el" href="../../da/d45/struct_kratos_1_1_distributed_search_information.html">DistributedSearchInformation</a> &amp;rSearchInfo, const TBoundingBoxType &amp;rBoundingBox, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ThresholdBoundingBox, const <a class="el" href="../../dc/d92/class_kratos_1_1_data_communicator.html">DataCommunicator</a> &amp;rDataCommunicator, const <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> IndexItIsJustCounter=false)</td></tr>
-<tr class="memdesc:a3044d3ed1f6fe8887e22655b01f01a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">SynchronousPointSynchronization prepares synchronously the coordinates of the points for MPI search.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a3044d3ed1f6fe8887e22655b01f01a95">More...</a><br /></td></tr>
-<tr class="separator:a3044d3ed1f6fe8887e22655b01f01a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9914d6ddf36291a04ecbb62030dbb958"><td class="memTemplParams" colspan="2">template&lt;typename TPointIteratorType &gt; </td></tr>
-<tr class="memitem:a9914d6ddf36291a04ecbb62030dbb958"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a9914d6ddf36291a04ecbb62030dbb958">SynchronousPointSynchronizationWithRecvSizes</a> (TPointIteratorType itPointBegin, TPointIteratorType itPointEnd, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rAllPointsCoordinates, std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">IndexType</a> &gt; &amp;rAllPointsIds, const <a class="el" href="../../dc/d92/class_kratos_1_1_data_communicator.html">DataCommunicator</a> &amp;rDataCommunicator)</td></tr>
-<tr class="memdesc:a9914d6ddf36291a04ecbb62030dbb958"><td class="mdescLeft">&#160;</td><td class="mdescRight">SynchronousPointSynchronizationWithRecvSizes prepares synchronously the coordinates of the points for MPI search including the recv sizes.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a9914d6ddf36291a04ecbb62030dbb958">More...</a><br /></td></tr>
-<tr class="separator:a9914d6ddf36291a04ecbb62030dbb958"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa7b01b9232122b74c20e793e53e62ae1"><td class="memTemplParams" colspan="2">template&lt;typename TPointIteratorType &gt; </td></tr>
-<tr class="memitem:aa7b01b9232122b74c20e793e53e62ae1"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#aa7b01b9232122b74c20e793e53e62ae1">SynchronousPointSynchronizationWithRadius</a> (TPointIteratorType itPointBegin, TPointIteratorType itPointEnd, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rAllPointsCoordinates, std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">IndexType</a> &gt; &amp;rAllPointsIds, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rRadius, const <a class="el" href="../../dc/d92/class_kratos_1_1_data_communicator.html">DataCommunicator</a> &amp;rDataCommunicator)</td></tr>
-<tr class="memdesc:aa7b01b9232122b74c20e793e53e62ae1"><td class="mdescLeft">&#160;</td><td class="mdescRight">SynchronousPointSynchronizationWithRadius prepares synchronously the coordinates of the points for MPI search including radius.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#aa7b01b9232122b74c20e793e53e62ae1">More...</a><br /></td></tr>
-<tr class="separator:aa7b01b9232122b74c20e793e53e62ae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81701ab01db2de0a8dccefe57514dc5b"><td class="memTemplParams" colspan="2">template&lt;typename TPointIteratorType &gt; </td></tr>
+<tr class="memitem:a81701ab01db2de0a8dccefe57514dc5b"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a81701ab01db2de0a8dccefe57514dc5b">SynchronousPointSynchronization</a> (TPointIteratorType itPointBegin, TPointIteratorType itPointEnd, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rAllPointsCoordinates, std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a1fab68c228171a90b05033c215b13f63">SignedIndexType</a> &gt; &amp;rAllPointsIds, const <a class="el" href="../../dc/d92/class_kratos_1_1_data_communicator.html">DataCommunicator</a> &amp;rDataCommunicator)</td></tr>
+<tr class="memdesc:a81701ab01db2de0a8dccefe57514dc5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SynchronousPointSynchronization prepares synchronously the coordinates of the points for MPI search.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a81701ab01db2de0a8dccefe57514dc5b">More...</a><br /></td></tr>
+<tr class="separator:a81701ab01db2de0a8dccefe57514dc5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81778380f94340c3ca5b50cf3f9d6d26"><td class="memTemplParams" colspan="2">template&lt;typename TPointIteratorType , typename TBoundingBoxType &gt; </td></tr>
+<tr class="memitem:a81778380f94340c3ca5b50cf3f9d6d26"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a81778380f94340c3ca5b50cf3f9d6d26">SynchronousPointSynchronizationWithBoundingBox</a> (TPointIteratorType itPointBegin, TPointIteratorType itPointEnd, <a class="el" href="../../da/d45/struct_kratos_1_1_distributed_search_information.html">DistributedSearchInformation</a> &amp;rSearchInfo, const TBoundingBoxType &amp;rBoundingBox, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ThresholdBoundingBox, const <a class="el" href="../../dc/d92/class_kratos_1_1_data_communicator.html">DataCommunicator</a> &amp;rDataCommunicator, const <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> IndexItIsJustPosition=false)</td></tr>
+<tr class="memdesc:a81778380f94340c3ca5b50cf3f9d6d26"><td class="mdescLeft">&#160;</td><td class="mdescRight">SynchronousPointSynchronization prepares synchronously the coordinates of the points for MPI search.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a81778380f94340c3ca5b50cf3f9d6d26">More...</a><br /></td></tr>
+<tr class="separator:a81778380f94340c3ca5b50cf3f9d6d26"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea8309ceefc96a7331202778ca1d6e4b"><td class="memTemplParams" colspan="2">template&lt;typename TPointIteratorType &gt; </td></tr>
+<tr class="memitem:aea8309ceefc96a7331202778ca1d6e4b"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#aea8309ceefc96a7331202778ca1d6e4b">SynchronousPointSynchronizationWithRecvSizes</a> (TPointIteratorType itPointBegin, TPointIteratorType itPointEnd, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rAllPointsCoordinates, std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a1fab68c228171a90b05033c215b13f63">SignedIndexType</a> &gt; &amp;rAllPointsIds, const <a class="el" href="../../dc/d92/class_kratos_1_1_data_communicator.html">DataCommunicator</a> &amp;rDataCommunicator)</td></tr>
+<tr class="memdesc:aea8309ceefc96a7331202778ca1d6e4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SynchronousPointSynchronizationWithRecvSizes prepares synchronously the coordinates of the points for MPI search including the recv sizes.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#aea8309ceefc96a7331202778ca1d6e4b">More...</a><br /></td></tr>
+<tr class="separator:aea8309ceefc96a7331202778ca1d6e4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1f26a5babc6ae8af6e8f6f8906430b"><td class="memTemplParams" colspan="2">template&lt;typename TPointIteratorType &gt; </td></tr>
+<tr class="memitem:abc1f26a5babc6ae8af6e8f6f8906430b"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#abc1f26a5babc6ae8af6e8f6f8906430b">SynchronousPointSynchronizationWithRadius</a> (TPointIteratorType itPointBegin, TPointIteratorType itPointEnd, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rAllPointsCoordinates, std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a1fab68c228171a90b05033c215b13f63">SignedIndexType</a> &gt; &amp;rAllPointsIds, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rRadius, const <a class="el" href="../../dc/d92/class_kratos_1_1_data_communicator.html">DataCommunicator</a> &amp;rDataCommunicator)</td></tr>
+<tr class="memdesc:abc1f26a5babc6ae8af6e8f6f8906430b"><td class="mdescLeft">&#160;</td><td class="mdescRight">SynchronousPointSynchronizationWithRadius prepares synchronously the coordinates of the points for MPI search including radius.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#abc1f26a5babc6ae8af6e8f6f8906430b">More...</a><br /></td></tr>
+<tr class="separator:abc1f26a5babc6ae8af6e8f6f8906430b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac35f69c75e178774aac7f5c0d4767f7e"><td class="memTemplParams" colspan="2">template&lt;class TContainer , class TResultType &gt; </td></tr>
 <tr class="memitem:ac35f69c75e178774aac7f5c0d4767f7e"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; typename <a class="el" href="../../d4/d0e/class_kratos_1_1_point_object.html">PointObject</a>&lt; typename TContainer::value_type &gt;::Pointer &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#ac35f69c75e178774aac7f5c0d4767f7e">PrepareSearch</a> (const TContainer &amp;rStructure, const TContainer &amp;rInput, TResultType &amp;rResults, <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#afbb222e8c4fe90fa4c3e3b59e4747551">VectorDistanceType</a> &amp;rResultsDistance)</td></tr>
 <tr class="memdesc:ac35f69c75e178774aac7f5c0d4767f7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prepares the search.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#ac35f69c75e178774aac7f5c0d4767f7e">More...</a><br /></td></tr>
@@ -137,10 +137,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a64b604228bdd585efc3f3cca6e36229e"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a64b604228bdd585efc3f3cca6e36229e">PrepareOutputSearch</a> (const TContainer &amp;rInput, TResultType &amp;rResults, <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#afbb222e8c4fe90fa4c3e3b59e4747551">VectorDistanceType</a> &amp;rResultsDistance)</td></tr>
 <tr class="memdesc:a64b604228bdd585efc3f3cca6e36229e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prepares the search output.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a64b604228bdd585efc3f3cca6e36229e">More...</a><br /></td></tr>
 <tr class="separator:a64b604228bdd585efc3f3cca6e36229e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a84c98edc85354c387f6b299c1bb26f"><td class="memTemplParams" colspan="2">template&lt;class TContainer &gt; </td></tr>
-<tr class="memitem:a3a84c98edc85354c387f6b299c1bb26f"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; typename <a class="el" href="../../d4/d0e/class_kratos_1_1_point_object.html">PointObject</a>&lt; typename TContainer::value_type &gt;::Pointer &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a3a84c98edc85354c387f6b299c1bb26f">PreparePointsSearch</a> (const TContainer &amp;rStructure)</td></tr>
-<tr class="memdesc:a3a84c98edc85354c387f6b299c1bb26f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prepares the points for search.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a3a84c98edc85354c387f6b299c1bb26f">More...</a><br /></td></tr>
-<tr class="separator:a3a84c98edc85354c387f6b299c1bb26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7dc7a3efa7e9ab72e788cb905c73131f"><td class="memTemplParams" colspan="2">template&lt;class TContainer &gt; </td></tr>
+<tr class="memitem:a7dc7a3efa7e9ab72e788cb905c73131f"><td class="memTemplItemLeft" align="right" valign="top">static std::vector&lt; typename <a class="el" href="../../d4/d0e/class_kratos_1_1_point_object.html">PointObject</a>&lt; typename TContainer::value_type &gt;::Pointer &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a7dc7a3efa7e9ab72e788cb905c73131f">PreparePointsSearch</a> (const TContainer &amp;rStructure, const <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> Rank=-1)</td></tr>
+<tr class="memdesc:a7dc7a3efa7e9ab72e788cb905c73131f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method prepares the points for search.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a7dc7a3efa7e9ab72e788cb905c73131f">More...</a><br /></td></tr>
+<tr class="separator:a7dc7a3efa7e9ab72e788cb905c73131f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9593425725398de3062b15eb233cf74"><td class="memTemplParams" colspan="2">template&lt;class TContainer , class TSpatialContainer , class TResultType &gt; </td></tr>
 <tr class="memitem:ac9593425725398de3062b15eb233cf74"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#ac9593425725398de3062b15eb233cf74">ParallelSearch</a> (const TContainer &amp;rInput, const <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#ae81a04d23b5c868074f55fbfdb2590e0">RadiusArrayType</a> &amp;rRadius, TSpatialContainer &amp;rSearch, TResultType &amp;rResults, <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#afbb222e8c4fe90fa4c3e3b59e4747551">VectorDistanceType</a> &amp;rResultsDistance, const <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> AllocationSize=1000)</td></tr>
 <tr class="memdesc:ac9593425725398de3062b15eb233cf74"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method performs the search in parallel.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#ac9593425725398de3062b15eb233cf74">More...</a><br /></td></tr>
@@ -153,6 +153,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:adc269c134b8d5c69db3aa9dd3e97d354"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">IndexType</a> = long unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a></td></tr>
 <tr class="memdesc:adc269c134b8d5c69db3aa9dd3e97d354"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index type definition.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">More...</a><br /></td></tr>
 <tr class="separator:adc269c134b8d5c69db3aa9dd3e97d354"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1fab68c228171a90b05033c215b13f63"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a1fab68c228171a90b05033c215b13f63">SignedIndexType</a> = long <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a></td></tr>
+<tr class="memdesc:a1fab68c228171a90b05033c215b13f63"><td class="mdescLeft">&#160;</td><td class="mdescRight">The signed index type definition.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a1fab68c228171a90b05033c215b13f63">More...</a><br /></td></tr>
+<tr class="separator:a1fab68c228171a90b05033c215b13f63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e0c60b420d136ad2781392a83b43fbb"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a5e0c60b420d136ad2781392a83b43fbb">SizeType</a> = std::size_t</td></tr>
 <tr class="memdesc:a5e0c60b420d136ad2781392a83b43fbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">The size type definition.  <a href="../../d4/d75/class_kratos_1_1_search_utilities.html#a5e0c60b420d136ad2781392a83b43fbb">More...</a><br /></td></tr>
 <tr class="separator:a5e0c60b420d136ad2781392a83b43fbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -232,6 +235,22 @@ Vicente Mataix Ferrandiz </dd></dl>
 </div><div class="memdoc">
 
 <p>Input/output types. </p>
+
+</div>
+</div>
+<a id="a1fab68c228171a90b05033c215b13f63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1fab68c228171a90b05033c215b13f63">&#9670;&nbsp;</a></span>SignedIndexType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a1fab68c228171a90b05033c215b13f63">Kratos::SearchUtilities::SignedIndexType</a> =  long <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The signed index type definition. </p>
 
 </div>
 </div>
@@ -675,8 +694,8 @@ template&lt;class TContainer , class TResultType &gt; </div>
 
 </div>
 </div>
-<a id="a3a84c98edc85354c387f6b299c1bb26f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a84c98edc85354c387f6b299c1bb26f">&#9670;&nbsp;</a></span>PreparePointsSearch()</h2>
+<a id="a7dc7a3efa7e9ab72e788cb905c73131f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7dc7a3efa7e9ab72e788cb905c73131f">&#9670;&nbsp;</a></span>PreparePointsSearch()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -690,8 +709,18 @@ template&lt;class TContainer &gt; </div>
           <td class="memname">static std::vector&lt;typename <a class="el" href="../../d4/d0e/class_kratos_1_1_point_object.html">PointObject</a>&lt;typename TContainer::value_type&gt;::Pointer&gt; Kratos::SearchUtilities::PreparePointsSearch </td>
           <td>(</td>
           <td class="paramtype">const TContainer &amp;&#160;</td>
-          <td class="paramname"><em>rStructure</em></td><td>)</td>
+          <td class="paramname"><em>rStructure</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
+          <td class="paramname"><em>Rank</em> = <code>-1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -705,6 +734,7 @@ template&lt;class TContainer &gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rStructure</td><td>The structure to be searched </td></tr>
+    <tr><td class="paramname">Rank</td><td>The current MPI rank. If negative will be not considered </td></tr>
   </table>
   </dd>
 </dl>
@@ -785,8 +815,8 @@ template&lt;class TContainer , class TResultType &gt; </div>
 
 </div>
 </div>
-<a id="aa320ef3060276df16b52b81e9815b1fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa320ef3060276df16b52b81e9815b1fe">&#9670;&nbsp;</a></span>SynchronousPointSynchronization()</h2>
+<a id="a81701ab01db2de0a8dccefe57514dc5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81701ab01db2de0a8dccefe57514dc5b">&#9670;&nbsp;</a></span>SynchronousPointSynchronization()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -817,7 +847,7 @@ template&lt;typename TPointIteratorType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">IndexType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a1fab68c228171a90b05033c215b13f63">SignedIndexType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>rAllPointsIds</em>, </td>
         </tr>
         <tr>
@@ -859,8 +889,8 @@ template&lt;typename TPointIteratorType &gt; </div>
 
 </div>
 </div>
-<a id="a3044d3ed1f6fe8887e22655b01f01a95"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3044d3ed1f6fe8887e22655b01f01a95">&#9670;&nbsp;</a></span>SynchronousPointSynchronizationWithBoundingBox()</h2>
+<a id="a81778380f94340c3ca5b50cf3f9d6d26"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81778380f94340c3ca5b50cf3f9d6d26">&#9670;&nbsp;</a></span>SynchronousPointSynchronizationWithBoundingBox()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -871,7 +901,7 @@ template&lt;typename TPointIteratorType , typename TBoundingBoxType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::vector&lt;<a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">IndexType</a>&gt; Kratos::SearchUtilities::SynchronousPointSynchronizationWithBoundingBox </td>
+          <td class="memname">static void Kratos::SearchUtilities::SynchronousPointSynchronizationWithBoundingBox </td>
           <td>(</td>
           <td class="paramtype">TPointIteratorType&#160;</td>
           <td class="paramname"><em>itPointBegin</em>, </td>
@@ -910,7 +940,7 @@ template&lt;typename TPointIteratorType , typename TBoundingBoxType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td>
-          <td class="paramname"><em>IndexItIsJustCounter</em> = <code>false</code>&#160;</td>
+          <td class="paramname"><em>IndexItIsJustPosition</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -934,7 +964,7 @@ template&lt;typename TPointIteratorType , typename TBoundingBoxType &gt; </div>
     <tr><td class="paramname">rBoundingBox</td><td>The bounding box considered. </td></tr>
     <tr><td class="paramname">ThresholdBoundingBox</td><td>The threshold for computing is inside bounding box considered. </td></tr>
     <tr><td class="paramname">rDataCommunicator</td><td>The data communicator. </td></tr>
-    <tr><td class="paramname">IndexItIsJustCounter</td><td>If the index considered it it just a counter. </td></tr>
+    <tr><td class="paramname">IndexItIsJustPosition</td><td>If the index considered it it just the position. </td></tr>
   </table>
   </dd>
 </dl>
@@ -949,8 +979,8 @@ template&lt;typename TPointIteratorType , typename TBoundingBoxType &gt; </div>
 
 </div>
 </div>
-<a id="aa7b01b9232122b74c20e793e53e62ae1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa7b01b9232122b74c20e793e53e62ae1">&#9670;&nbsp;</a></span>SynchronousPointSynchronizationWithRadius()</h2>
+<a id="abc1f26a5babc6ae8af6e8f6f8906430b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1f26a5babc6ae8af6e8f6f8906430b">&#9670;&nbsp;</a></span>SynchronousPointSynchronizationWithRadius()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -981,7 +1011,7 @@ template&lt;typename TPointIteratorType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">IndexType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a1fab68c228171a90b05033c215b13f63">SignedIndexType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>rAllPointsIds</em>, </td>
         </tr>
         <tr>
@@ -1031,8 +1061,8 @@ template&lt;typename TPointIteratorType &gt; </div>
 
 </div>
 </div>
-<a id="a9914d6ddf36291a04ecbb62030dbb958"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9914d6ddf36291a04ecbb62030dbb958">&#9670;&nbsp;</a></span>SynchronousPointSynchronizationWithRecvSizes()</h2>
+<a id="aea8309ceefc96a7331202778ca1d6e4b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea8309ceefc96a7331202778ca1d6e4b">&#9670;&nbsp;</a></span>SynchronousPointSynchronizationWithRecvSizes()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1063,7 +1093,7 @@ template&lt;typename TPointIteratorType &gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#adc269c134b8d5c69db3aa9dd3e97d354">IndexType</a> &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d4/d75/class_kratos_1_1_search_utilities.html#a1fab68c228171a90b05033c215b13f63">SignedIndexType</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>rAllPointsIds</em>, </td>
         </tr>
         <tr>
@@ -1138,7 +1168,7 @@ template&lt;typename TPointIteratorType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Feb 26 2024 03:00:55 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Feb 27 2024 02:54:31 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
