@@ -261,9 +261,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adecbe7f3ade6e1ad68ce6b36fdd6e266 inherit pub_methods_class_kratos_1_1_flags"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type Definitions</h2></td></tr>
-<tr class="memitem:a4b0c8170bcf792aaf6cb263796c65240"><td class="memItemLeft" align="right" valign="top">typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a4b0c8170bcf792aaf6cb263796c65240">IndexType</a></td></tr>
-<tr class="memdesc:a4b0c8170bcf792aaf6cb263796c65240"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index type definition.  <a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a4b0c8170bcf792aaf6cb263796c65240">More...</a><br /></td></tr>
-<tr class="separator:a4b0c8170bcf792aaf6cb263796c65240"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b522aa0fa0fb3704defe0109f971f14"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a3b522aa0fa0fb3704defe0109f971f14">IndexType</a> = std::size_t</td></tr>
+<tr class="memdesc:a3b522aa0fa0fb3704defe0109f971f14"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index type definition.  <a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a3b522aa0fa0fb3704defe0109f971f14">More...</a><br /></td></tr>
+<tr class="separator:a3b522aa0fa0fb3704defe0109f971f14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a675facf78d5cf5ff64e34917e396c183"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a675facf78d5cf5ff64e34917e396c183">KRATOS_CLASS_POINTER_DEFINITION</a> (<a class="el" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>)</td></tr>
 <tr class="memdesc:a675facf78d5cf5ff64e34917e396c183"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html" title="The base class for all processes in Kratos.">Process</a>.  <a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a675facf78d5cf5ff64e34917e396c183">More...</a><br /></td></tr>
 <tr class="separator:a675facf78d5cf5ff64e34917e396c183"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -333,14 +333,14 @@ Additional Inherited Members</h2></td></tr>
 <div class="textblock"><p>This function verifies that the skin has no holes nor overlapped geometries this is accomplished by storing all of the edges in the model in a hash map and verifying that no edge appears more than twice (which would imply an overlap) or less than once (which would imply a gap in the skin) </p>
 <p>In the case such condition is violated an error is thrown </p><dl class="section author"><dt>Author</dt><dd>Riccardo Rossi </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a4b0c8170bcf792aaf6cb263796c65240"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4b0c8170bcf792aaf6cb263796c65240">&#9670;&nbsp;</a></span>IndexType</h2>
+<a id="a3b522aa0fa0fb3704defe0109f971f14"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b522aa0fa0fb3704defe0109f971f14">&#9670;&nbsp;</a></span>IndexType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::size_t <a class="el" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a4b0c8170bcf792aaf6cb263796c65240">Kratos::CheckSkinProcess::IndexType</a></td>
+          <td class="memname">using <a class="el" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a3b522aa0fa0fb3704defe0109f971f14">Kratos::CheckSkinProcess::IndexType</a> =  std::size_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -434,7 +434,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -581,13 +581,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/kratos/processes/<a class="el" href="../../d6/d98/check__skin__process_8h_source.html">check_skin_process.h</a></li>
+<li>/home/runner/work/Documentation/Documentation/master/kratos/processes/<a class="el" href="../../de/da7/check__skin__process_8cpp.html">check_skin_process.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 5 2024 02:54:15 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Mar 6 2024 02:55:30 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

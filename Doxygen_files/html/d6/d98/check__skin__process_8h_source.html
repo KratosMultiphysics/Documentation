@@ -91,190 +91,118 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//  Main authors:    Riccardo Rossi</span></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef KRATOS_VERIFY_WATERTIGHTNESS_PROCESS_H</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define KRATOS_VERIFY_WATERTIGHTNESS_PROCESS_H</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// System includes</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;unordered_map&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// System includes</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// External includes</span></div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// External includes</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Project includes</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d67/define_8h.html">includes/define.h</a>&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/dfe/model__part_8h.html">includes/model_part.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d42/process_8h.html">processes/process.h</a>&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d48/key__hash_8h.html">includes/key_hash.h</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">   38</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    : <span class="keyword">public</span> <a class="code" href="../../d2/d8c/class_kratos_1_1_process.html">Process</a></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a675facf78d5cf5ff64e34917e396c183">   46</a></span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a675facf78d5cf5ff64e34917e396c183">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a4b0c8170bcf792aaf6cb263796c65240">   49</a></span>&#160;    <span class="keyword">typedef</span> std::size_t <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a4b0c8170bcf792aaf6cb263796c65240">IndexType</a>;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a5375c26fdb87ae86e8c458c3eb96a40d">   56</a></span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a5375c26fdb87ae86e8c458c3eb96a40d">CheckSkinProcess</a>(</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> Options</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        ): <a class="code" href="../../d2/d8c/class_kratos_1_1_process.html">Process</a>(Options),</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;           mrModelPart(rModelPart)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ac9583f0339022b00f35af712aef25636">   65</a></span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ac9583f0339022b00f35af712aef25636">~CheckSkinProcess</a>()<span class="keyword"> override </span>{}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a7b49257781333bcb9239612307717857">   72</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a7b49257781333bcb9239612307717857">operator()</a>()</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ad2b5b9bbdb5bde9727aa82922f06e7b7">Execute</a>();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// Project includes</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d42/process_8h.html">processes/process.h</a>&quot;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">   33</a></span>&#160;<span class="keyword">class </span>KRATOS_API(KRATOS_CORE) <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    : <span class="keyword">public</span> <a class="code" href="../../d2/d8c/class_kratos_1_1_process.html">Process</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a675facf78d5cf5ff64e34917e396c183">   41</a></span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a675facf78d5cf5ff64e34917e396c183">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a3b522aa0fa0fb3704defe0109f971f14">   44</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> = std::size_t;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a5375c26fdb87ae86e8c458c3eb96a40d">   51</a></span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a5375c26fdb87ae86e8c458c3eb96a40d">CheckSkinProcess</a>(</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> Options</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        ): <a class="code" href="../../d2/d8c/class_kratos_1_1_process.html">Process</a>(Options),</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;           mrModelPart(rModelPart)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ac9583f0339022b00f35af712aef25636">   60</a></span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ac9583f0339022b00f35af712aef25636">~CheckSkinProcess</a>()<span class="keyword"> override </span>{}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a7b49257781333bcb9239612307717857">   67</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a7b49257781333bcb9239612307717857">operator()</a>()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    {</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        Execute();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">void</span> Execute() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ad2b5b9bbdb5bde9727aa82922f06e7b7">   85</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ad2b5b9bbdb5bde9727aa82922f06e7b7">Execute</a>()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <a class="code" href="../../d5/d4d/group___kratos_core.html#ga9fdd4e0364598f28a529107663707cf3">KRATOS_ERROR_IF</a>(mrModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a6754ddb1e657c4efba0705a341de0294">Conditions</a>().size() == 0 &amp;&amp; mrModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a94dfb23c46340061bd57e9b9c4e317c8">Elements</a>().size() != 0) &lt;&lt; <span class="stringliteral">&quot;The number of conditions is zero and the number of elements is not, hence the skin can not envelope the domain&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">typedef</span> std::unordered_map&lt;DenseVector&lt;IndexType&gt;, <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a4b0c8170bcf792aaf6cb263796c65240">IndexType</a>, <a class="code" href="../../dc/d9b/struct_kratos_1_1_key_hasher_range.html">KeyHasherRange&lt;DenseVector&lt;IndexType&gt;</a>&gt;, <a class="code" href="../../d1/dea/struct_kratos_1_1_key_comparor_range.html">KeyComparorRange&lt;DenseVector&lt;IndexType&gt;</a>&gt; &gt; <a class="code" href="../../db/d66/namespace_kratos.html#a6a9e851f61029617864ace8136c0e3f7">hashmap</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a6a9e851f61029617864ace8136c0e3f7">hashmap</a> edge_map;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">DenseVector&lt;IndexType&gt;</a> ids(2);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="comment">// Add 1 to the counter for every edge find in the model part</span></div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; r_cond : mrModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a6754ddb1e657c4efba0705a341de0294">Conditions</a>()) {</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> edges = r_cond.GetGeometry().GenerateEdges();</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">for</span>(<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> edge=0; edge&lt;edges.size(); edge++) {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordflow">for</span>(<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>&lt;edges[edge].size(); <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    ids[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>] = edges[edge][<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].Id();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                }</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a352686467630e15918e3c65967d49067">   94</a></span>&#160;    std::string <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a352686467630e15918e3c65967d49067">Info</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;CheckSkinProcess&quot;</span>;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a44f83474b6e93d844ddf7669fc455a0b">  100</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a44f83474b6e93d844ddf7669fc455a0b">PrintInfo</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        rOStream &lt;&lt; <span class="stringliteral">&quot;CheckSkinProcess&quot;</span>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="comment">//*** THE ARRAY OF IDS MUST BE ORDERED!!! ***</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                std::sort(ids.<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#ab79f497f435a04f0d739a12413fd4321">begin</a>(), ids.<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a5f3bafe72f07b07c45416018e3487eb7">end</a>());</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                edge_map[ids] += 1;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        }</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="comment">// Now loop over the entire edge map.</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="comment">// All values shall have a value of 2</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="comment">// If that is not the case throw an error</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">for</span>(<span class="keyword">auto</span> it=edge_map.begin(); it!=edge_map.end(); ++it) {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordflow">if</span>(it-&gt;second &gt; 2) {</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                <a class="code" href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a> &lt;&lt; <span class="stringliteral">&quot;ERROR OVERLAPPING CONDITIONS IN SKIN FOUND : &quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;The edge between nodes &quot;</span> &lt;&lt; it-&gt;first[0] &lt;&lt; <span class="stringliteral">&quot; and &quot;</span> &lt;&lt; it-&gt;first[1] &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot; belongs to an overlapping condition &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(it-&gt;second &lt; 2) {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                <a class="code" href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a> &lt;&lt; <span class="stringliteral">&quot;ERROR NON CLOSED SKIN &quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;The edge between nodes &quot;</span> &lt;&lt; it-&gt;first[0] &lt;&lt; <span class="stringliteral">&quot; and &quot;</span> &lt;&lt; it-&gt;first[1] &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot; only appears once, hence it belongs to a non watertight boundary &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="../../df/da3/group___kratos.html#ga1aa4c61e78fd7fa7e4972ed28500bd6d">KRATOS_INFO</a>(<span class="stringliteral">&quot;CheckSkinProcess&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;Checked &quot;</span> &lt;&lt; edge_map.size() &lt;&lt; <span class="stringliteral">&quot; edges in the skin. No gap or overlap found &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ab1c4d6d5970052028fd5f06f51aba9b7">  106</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ab1c4d6d5970052028fd5f06f51aba9b7">PrintData</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        this-&gt;PrintInfo(rOStream);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; mrModelPart; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>(<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a352686467630e15918e3c65967d49067">  143</a></span>&#160;    std::string <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a352686467630e15918e3c65967d49067">Info</a>()<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;CheckSkinProcess&quot;</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a44f83474b6e93d844ddf7669fc455a0b">  149</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a44f83474b6e93d844ddf7669fc455a0b">PrintInfo</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        rOStream &lt;&lt; <span class="stringliteral">&quot;CheckSkinProcess&quot;</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    }</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ab1c4d6d5970052028fd5f06f51aba9b7">  155</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ab1c4d6d5970052028fd5f06f51aba9b7">PrintData</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        this-&gt;<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a44f83474b6e93d844ddf7669fc455a0b">PrintInfo</a>(rOStream);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;}; <span class="comment">// Class Process</span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga8d6abc04a480eaa784a016d67b08fbb2">  154</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(std::istream&amp; rIStream,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                                  <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>&amp; rThis);</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gaedc7b779cdfbe4c4671ea0f23bac9e62">  158</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(std::ostream&amp; rOStream,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                  <span class="keyword">const</span> <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>&amp; rThis)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;{</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    rThis.<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a44f83474b6e93d844ddf7669fc455a0b">PrintInfo</a>(rOStream);</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    rOStream &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    rThis.<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ab1c4d6d5970052028fd5f06f51aba9b7">PrintData</a>(rOStream);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;}</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; mrModelPart;</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>&amp; operator=(<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a> <span class="keyword">const</span>&amp; rOther);</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a5375c26fdb87ae86e8c458c3eb96a40d">CheckSkinProcess</a>(<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a> <span class="keyword">const</span>&amp; rOther);</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;}; <span class="comment">// Class Process</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga8d6abc04a480eaa784a016d67b08fbb2">  203</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(std::istream&amp; rIStream,</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                                  <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>&amp; rThis);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gaedc7b779cdfbe4c4671ea0f23bac9e62">  207</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(std::ostream&amp; rOStream,</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                                  <span class="keyword">const</span> <a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html">CheckSkinProcess</a>&amp; rThis)</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;{</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    rThis.<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a44f83474b6e93d844ddf7669fc455a0b">PrintInfo</a>(rOStream);</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    rOStream &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;    rThis.<a class="code" href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ab1c4d6d5970052028fd5f06f51aba9b7">PrintData</a>(rOStream);</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;}</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_VERIFY_WATERTIGHTNESS_PROCESS_H</span></div>
-<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html">Kratos::CheckSkinProcess</a></div><div class="ttdoc">This function verifies that the skin has no holes nor overlapped geometries this is accomplished by s...</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:40</div></div>
-<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a352686467630e15918e3c65967d49067"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a352686467630e15918e3c65967d49067">Kratos::CheckSkinProcess::Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:143</div></div>
-<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a44f83474b6e93d844ddf7669fc455a0b"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a44f83474b6e93d844ddf7669fc455a0b">Kratos::CheckSkinProcess::PrintInfo</a></div><div class="ttdeci">void PrintInfo(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:149</div></div>
-<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a4b0c8170bcf792aaf6cb263796c65240"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a4b0c8170bcf792aaf6cb263796c65240">Kratos::CheckSkinProcess::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdoc">The index type definition.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:49</div></div>
-<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a5375c26fdb87ae86e8c458c3eb96a40d"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a5375c26fdb87ae86e8c458c3eb96a40d">Kratos::CheckSkinProcess::CheckSkinProcess</a></div><div class="ttdeci">CheckSkinProcess(ModelPart &amp;rModelPart, const Flags Options)</div><div class="ttdoc">Constructor for CheckSkinProcess Process.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:56</div></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
+<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html">Kratos::CheckSkinProcess</a></div><div class="ttdoc">This function verifies that the skin has no holes nor overlapped geometries this is accomplished by s...</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:35</div></div>
+<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a352686467630e15918e3c65967d49067"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a352686467630e15918e3c65967d49067">Kratos::CheckSkinProcess::Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:94</div></div>
+<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a44f83474b6e93d844ddf7669fc455a0b"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a44f83474b6e93d844ddf7669fc455a0b">Kratos::CheckSkinProcess::PrintInfo</a></div><div class="ttdeci">void PrintInfo(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:100</div></div>
+<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a5375c26fdb87ae86e8c458c3eb96a40d"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a5375c26fdb87ae86e8c458c3eb96a40d">Kratos::CheckSkinProcess::CheckSkinProcess</a></div><div class="ttdeci">CheckSkinProcess(ModelPart &amp;rModelPart, const Flags Options)</div><div class="ttdoc">Constructor for CheckSkinProcess Process.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:51</div></div>
 <div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a675facf78d5cf5ff64e34917e396c183"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a675facf78d5cf5ff64e34917e396c183">Kratos::CheckSkinProcess::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(CheckSkinProcess)</div><div class="ttdoc">Pointer definition of Process.</div></div>
-<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a7b49257781333bcb9239612307717857"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a7b49257781333bcb9239612307717857">Kratos::CheckSkinProcess::operator()</a></div><div class="ttdeci">void operator()()</div><div class="ttdoc">This operator is provided to call the process as a function and simply calls the Execute method.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:72</div></div>
-<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_ab1c4d6d5970052028fd5f06f51aba9b7"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ab1c4d6d5970052028fd5f06f51aba9b7">Kratos::CheckSkinProcess::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:155</div></div>
-<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_ac9583f0339022b00f35af712aef25636"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ac9583f0339022b00f35af712aef25636">Kratos::CheckSkinProcess::~CheckSkinProcess</a></div><div class="ttdeci">~CheckSkinProcess() override</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:65</div></div>
-<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_ad2b5b9bbdb5bde9727aa82922f06e7b7"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ad2b5b9bbdb5bde9727aa82922f06e7b7">Kratos::CheckSkinProcess::Execute</a></div><div class="ttdeci">void Execute() override</div><div class="ttdoc">Check elements to make sure that their jacobian is positive and conditions to ensure that their face ...</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:85</div></div>
+<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_a7b49257781333bcb9239612307717857"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#a7b49257781333bcb9239612307717857">Kratos::CheckSkinProcess::operator()</a></div><div class="ttdeci">void operator()()</div><div class="ttdoc">This operator is provided to call the process as a function and simply calls the Execute method.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:67</div></div>
+<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_ab1c4d6d5970052028fd5f06f51aba9b7"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ab1c4d6d5970052028fd5f06f51aba9b7">Kratos::CheckSkinProcess::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:106</div></div>
+<div class="ttc" id="aclass_kratos_1_1_check_skin_process_html_ac9583f0339022b00f35af712aef25636"><div class="ttname"><a href="../../df/d5a/class_kratos_1_1_check_skin_process.html#ac9583f0339022b00f35af712aef25636">Kratos::CheckSkinProcess::~CheckSkinProcess</a></div><div class="ttdeci">~CheckSkinProcess() override</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> check_skin_process.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></div><div class="ttdoc">Forward declaration.</div><div class="ttdef"><b>Definition:</b> flags.h:56</div></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html_aea919baba86193ae475d3cdb836b925c"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">Kratos::Flags::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> flags.h:72</div></div>
-<div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix</a></div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:41</div></div>
-<div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html_a5f3bafe72f07b07c45416018e3487eb7"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a5f3bafe72f07b07c45416018e3487eb7">Kratos::Internals::Matrix::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:243</div></div>
-<div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html_ab79f497f435a04f0d739a12413fd4321"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#ab79f497f435a04f0d739a12413fd4321">Kratos::Internals::Matrix::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:241</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
-<div class="ttc" id="aclass_kratos_1_1_model_part_html_a6754ddb1e657c4efba0705a341de0294"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html#a6754ddb1e657c4efba0705a341de0294">Kratos::ModelPart::Conditions</a></div><div class="ttdeci">ConditionsContainerType &amp; Conditions(IndexType ThisIndex=0)</div><div class="ttdef"><b>Definition:</b> model_part.h:1381</div></div>
-<div class="ttc" id="aclass_kratos_1_1_model_part_html_a94dfb23c46340061bd57e9b9c4e317c8"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html#a94dfb23c46340061bd57e9b9c4e317c8">Kratos::ModelPart::Elements</a></div><div class="ttdeci">ElementsContainerType &amp; Elements(IndexType ThisIndex=0)</div><div class="ttdef"><b>Definition:</b> model_part.h:1189</div></div>
 <div class="ttc" id="aclass_kratos_1_1_process_html"><div class="ttname"><a href="../../d2/d8c/class_kratos_1_1_process.html">Kratos::Process</a></div><div class="ttdoc">The base class for all processes in Kratos.</div><div class="ttdef"><b>Definition:</b> process.h:49</div></div>
-<div class="ttc" id="adefine_8h_html"><div class="ttname"><a href="../../df/d67/define_8h.html">define.h</a></div></div>
-<div class="ttc" id="adefine_8h_html_a5eac541f5e39bf0360a12f51f0248513"><div class="ttname"><a href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a></div><div class="ttdeci">#define KRATOS_CATCH(MoreInfo)</div><div class="ttdef"><b>Definition:</b> define.h:110</div></div>
-<div class="ttc" id="adefine_8h_html_ab9c29d6a0d19ff26bbc4e45e3181fb3f"><div class="ttname"><a href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div><div class="ttdeci">#define KRATOS_TRY</div><div class="ttdef"><b>Definition:</b> define.h:109</div></div>
-<div class="ttc" id="agroup___kratos_core_html_ga376e02451bc7cc3a5fd77b57f0549e6b"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a></div><div class="ttdeci">#define KRATOS_ERROR</div><div class="ttdef"><b>Definition:</b> exception.h:161</div></div>
-<div class="ttc" id="agroup___kratos_core_html_ga9fdd4e0364598f28a529107663707cf3"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga9fdd4e0364598f28a529107663707cf3">KRATOS_ERROR_IF</a></div><div class="ttdeci">#define KRATOS_ERROR_IF(conditional)</div><div class="ttdef"><b>Definition:</b> exception.h:162</div></div>
-<div class="ttc" id="agroup___kratos_html_ga1aa4c61e78fd7fa7e4972ed28500bd6d"><div class="ttname"><a href="../../df/da3/group___kratos.html#ga1aa4c61e78fd7fa7e4972ed28500bd6d">KRATOS_INFO</a></div><div class="ttdeci">#define KRATOS_INFO(label)</div><div class="ttdef"><b>Definition:</b> logger.h:250</div></div>
-<div class="ttc" id="akey__hash_8h_html"><div class="ttname"><a href="../../d9/d48/key__hash_8h.html">key_hash.h</a></div></div>
-<div class="ttc" id="amodel__part_8h_html"><div class="ttname"><a href="../../dd/dfe/model__part_8h.html">model_part.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
-<div class="ttc" id="anamespace_kratos_html_a6a9e851f61029617864ace8136c0e3f7"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a6a9e851f61029617864ace8136c0e3f7">Kratos::hashmap</a></div><div class="ttdeci">std::unordered_multimap&lt; DenseVector&lt; int &gt;, std::vector&lt; Condition::Pointer &gt;, KeyHasherRange&lt; DenseVector&lt; int &gt; &gt;, KeyComparorRange&lt; DenseVector&lt; int &gt; &gt;&gt; hashmap</div><div class="ttdef"><b>Definition:</b> find_neighbour_elements_of_conditions_process.hpp:24</div></div>
 <div class="ttc" id="anamespace_kratos_html_a9c6097d0b0a27d1cea94992b1087f56a"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">Kratos::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;rIStream, LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">input stream function</div></div>
 <div class="ttc" id="anamespace_kratos_html_acfc842a43d19dffc2d8105e5cbea17a9"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">Kratos::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;rOStream, const LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">output stream function</div><div class="ttdef"><b>Definition:</b> linear_master_slave_constraint.h:432</div></div>
-<div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="aprocess_8h_html"><div class="ttname"><a href="../../da/d42/process_8h.html">process.h</a></div></div>
-<div class="ttc" id="astruct_kratos_1_1_key_comparor_range_html"><div class="ttname"><a href="../../d1/dea/struct_kratos_1_1_key_comparor_range.html">Kratos::KeyComparorRange</a></div><div class="ttdoc">This is a key comparer of general pourpose between two classes.</div><div class="ttdef"><b>Definition:</b> key_hash.h:100</div></div>
-<div class="ttc" id="astruct_kratos_1_1_key_hasher_range_html"><div class="ttname"><a href="../../dc/d9b/struct_kratos_1_1_key_hasher_range.html">Kratos::KeyHasherRange</a></div><div class="ttdoc">This is a hasher of general pourpose.</div><div class="ttdef"><b>Definition:</b> key_hash.h:138</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 5 2024 02:47:21 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Mar 6 2024 02:48:32 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

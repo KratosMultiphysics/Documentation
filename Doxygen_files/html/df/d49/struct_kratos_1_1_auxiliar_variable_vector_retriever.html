@@ -83,7 +83,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This struct is an auxiliar base class of the <a class="el" href="../../d2/dea/struct_kratos_1_1_variable_vector_retriever.html" title="This struct is used in order to retrieve values without loosing performance.">VariableVectorRetriever</a>.  
+<p>Serves as a base class for retrieving vectors of variables associated with a given geometry.  
  <a href="../../df/d49/struct_kratos_1_1_auxiliar_variable_vector_retriever.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d0/d5d/compute__nodal__gradient__process_8h_source.html">compute_nodal_gradient_process.h</a>&gt;</code></p>
@@ -102,18 +102,19 @@ Collaboration diagram for Kratos::AuxiliarVariableVectorRetriever:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b2e88d70fc2ef679d542226137e362e"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d49/struct_kratos_1_1_auxiliar_variable_vector_retriever.html#a7b2e88d70fc2ef679d542226137e362e">~AuxiliarVariableVectorRetriever</a> ()</td></tr>
-<tr class="memdesc:a7b2e88d70fc2ef679d542226137e362e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="../../df/d49/struct_kratos_1_1_auxiliar_variable_vector_retriever.html#a7b2e88d70fc2ef679d542226137e362e">More...</a><br /></td></tr>
-<tr class="separator:a7b2e88d70fc2ef679d542226137e362e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8326d319160c82b0b121fa0322fa1a05"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d49/struct_kratos_1_1_auxiliar_variable_vector_retriever.html#a8326d319160c82b0b121fa0322fa1a05">~AuxiliarVariableVectorRetriever</a> ()=default</td></tr>
+<tr class="memdesc:a8326d319160c82b0b121fa0322fa1a05"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual destructor to ensure proper cleanup of derived classes.  <a href="../../df/d49/struct_kratos_1_1_auxiliar_variable_vector_retriever.html#a8326d319160c82b0b121fa0322fa1a05">More...</a><br /></td></tr>
+<tr class="separator:a8326d319160c82b0b121fa0322fa1a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae9261cd9241c0858e4f071c51171475"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d49/struct_kratos_1_1_auxiliar_variable_vector_retriever.html#aae9261cd9241c0858e4f071c51171475">GetVariableVector</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &gt; &amp;rGeometry, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rVariable, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rVector)</td></tr>
-<tr class="memdesc:aae9261cd9241c0858e4f071c51171475"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method fills the vector of values.  <a href="../../df/d49/struct_kratos_1_1_auxiliar_variable_vector_retriever.html#aae9261cd9241c0858e4f071c51171475">More...</a><br /></td></tr>
+<tr class="memdesc:aae9261cd9241c0858e4f071c51171475"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a vector of values for a specified variable from a given geometry.  <a href="../../df/d49/struct_kratos_1_1_auxiliar_variable_vector_retriever.html#aae9261cd9241c0858e4f071c51171475">More...</a><br /></td></tr>
 <tr class="separator:aae9261cd9241c0858e4f071c51171475"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This struct is an auxiliar base class of the <a class="el" href="../../d2/dea/struct_kratos_1_1_variable_vector_retriever.html" title="This struct is used in order to retrieve values without loosing performance.">VariableVectorRetriever</a>. </p>
+<div class="textblock"><p>Serves as a base class for retrieving vectors of variables associated with a given geometry. </p>
+<p>This class defines the interface for retrieving vectors of variables. It is intended to be inherited by classes that implement specific variable vector retrieval functionalities. The base class provides a default implementation for the GetVariableVector method, which should be overridden by derived classes to provide specific behaviors. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a7b2e88d70fc2ef679d542226137e362e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7b2e88d70fc2ef679d542226137e362e">&#9670;&nbsp;</a></span>~AuxiliarVariableVectorRetriever()</h2>
+<a id="a8326d319160c82b0b121fa0322fa1a05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8326d319160c82b0b121fa0322fa1a05">&#9670;&nbsp;</a></span>~AuxiliarVariableVectorRetriever()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -130,12 +131,12 @@ Public Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Destructor. </p>
+<p>Virtual destructor to ensure proper cleanup of derived classes. </p>
 
 </div>
 </div>
@@ -180,17 +181,24 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>This method fills the vector of values. </p>
+<p>Retrieves a vector of values for a specified variable from a given geometry. </p>
+<p>This method is designed to be overridden in derived classes to implement the specific logic for retrieving the vector of values associated with the specified variable and geometry. The base class implementation throws an error, indicating that the method should not be called directly on an instance of the base class.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rGeometry</td><td>The geometry where values are stored </td></tr>
-    <tr><td class="paramname">rVariable</td><td>The variable to retrieve </td></tr>
-    <tr><td class="paramname">rVector</td><td>The vector to fill </td></tr>
+    <tr><td class="paramname">rGeometry</td><td>Reference to the geometry from which values are to be retrieved. This parameter provides the context in which the variable's values are stored and accessed. </td></tr>
+    <tr><td class="paramname">rVariable</td><td>The variable whose values are to be retrieved. This parameter specifies which variable's vector of values is to be filled. </td></tr>
+    <tr><td class="paramname">rVector</td><td>Reference to the vector where the retrieved values will be stored. This parameter is filled by the method with the values retrieved for the specified variable. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>Throws an error if called on the base class, indicating that the method must be overridden in a derived class. </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Reimplemented in <a class="el" href="../../d2/dea/struct_kratos_1_1_variable_vector_retriever.html#ae5647acad398c6498129fa832e039bff">Kratos::VariableVectorRetriever&lt; THistorical &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d2/dea/struct_kratos_1_1_variable_vector_retriever.html#ad15a17ca1b8e44f8b207d4c9db3f342a">Kratos::VariableVectorRetriever&lt; TInputHistorical &gt;</a>.</p>
 
 </div>
 </div>
@@ -200,7 +208,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 5 2024 02:54:15 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Mar 6 2024 02:55:30 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

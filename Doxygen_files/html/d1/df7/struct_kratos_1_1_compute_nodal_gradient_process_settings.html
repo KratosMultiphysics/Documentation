@@ -83,7 +83,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This struct is used in order to identify when using the hitorical and non historical variables.  
+<p>Settings for the computation of nodal gradients.  
  <a href="../../d1/df7/struct_kratos_1_1_compute_nodal_gradient_process_settings.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d0/d5d/compute__nodal__gradient__process_8h_source.html">compute_nodal_gradient_process.h</a>&gt;</code></p>
@@ -97,16 +97,21 @@ Collaboration diagram for Kratos::ComputeNodalGradientProcessSettings:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:ad2fad158bb6be74258939be44f137200"><td class="memItemLeft" align="right" valign="top">constexpr static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df7/struct_kratos_1_1_compute_nodal_gradient_process_settings.html#ad2fad158bb6be74258939be44f137200">SaveAsHistoricalVariable</a> = true</td></tr>
+<tr class="memdesc:ad2fad158bb6be74258939be44f137200"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option to save computed gradients as historical variables.  <a href="../../d1/df7/struct_kratos_1_1_compute_nodal_gradient_process_settings.html#ad2fad158bb6be74258939be44f137200">More...</a><br /></td></tr>
 <tr class="separator:ad2fad158bb6be74258939be44f137200"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a180723ba6dd54ea0a09b3cffb3194390"><td class="memItemLeft" align="right" valign="top">constexpr static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df7/struct_kratos_1_1_compute_nodal_gradient_process_settings.html#a180723ba6dd54ea0a09b3cffb3194390">SaveAsNonHistoricalVariable</a> = false</td></tr>
+<tr class="memdesc:a180723ba6dd54ea0a09b3cffb3194390"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option to save computed gradients as non-historical variables.  <a href="../../d1/df7/struct_kratos_1_1_compute_nodal_gradient_process_settings.html#a180723ba6dd54ea0a09b3cffb3194390">More...</a><br /></td></tr>
 <tr class="separator:a180723ba6dd54ea0a09b3cffb3194390"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2aa83ea8c97dabcb0cb664f099e8d084"><td class="memItemLeft" align="right" valign="top">constexpr static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df7/struct_kratos_1_1_compute_nodal_gradient_process_settings.html#a2aa83ea8c97dabcb0cb664f099e8d084">GetAsHistoricalVariable</a> = true</td></tr>
+<tr class="memdesc:a2aa83ea8c97dabcb0cb664f099e8d084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option to retrieve gradients as historical variables.  <a href="../../d1/df7/struct_kratos_1_1_compute_nodal_gradient_process_settings.html#a2aa83ea8c97dabcb0cb664f099e8d084">More...</a><br /></td></tr>
 <tr class="separator:a2aa83ea8c97dabcb0cb664f099e8d084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7c029da4b111a97b8265a3a7fdb2e950"><td class="memItemLeft" align="right" valign="top">constexpr static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df7/struct_kratos_1_1_compute_nodal_gradient_process_settings.html#a7c029da4b111a97b8265a3a7fdb2e950">GetAsNonHistoricalVariable</a> = false</td></tr>
+<tr class="memdesc:a7c029da4b111a97b8265a3a7fdb2e950"><td class="mdescLeft">&#160;</td><td class="mdescRight">Option to retrieve gradients as non-historical variables.  <a href="../../d1/df7/struct_kratos_1_1_compute_nodal_gradient_process_settings.html#a7c029da4b111a97b8265a3a7fdb2e950">More...</a><br /></td></tr>
 <tr class="separator:a7c029da4b111a97b8265a3a7fdb2e950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This struct is used in order to identify when using the hitorical and non historical variables. </p>
+<div class="textblock"><p>Settings for the computation of nodal gradients. </p>
+<p>This struct provides settings to control how nodal gradients are computed and identified, distinguishing between historical and non-historical variables. </p>
 </div><h2 class="groupheader">Member Data Documentation</h2>
 <a id="a2aa83ea8c97dabcb0cb664f099e8d084"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2aa83ea8c97dabcb0cb664f099e8d084">&#9670;&nbsp;</a></span>GetAsHistoricalVariable</h2>
@@ -127,6 +132,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Option to retrieve gradients as historical variables. </p>
+<p>If set to true, gradients will be retrieved as historical variables. Historical variables typically represent past states or values over time. </p>
 
 </div>
 </div>
@@ -150,6 +158,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Option to retrieve gradients as non-historical variables. </p>
+<p>If set to true, gradients will be retrieved as non-historical variables. Non-historical variables typically represent instantaneous states or values. </p>
+
 </div>
 </div>
 <a id="ad2fad158bb6be74258939be44f137200"></a>
@@ -171,6 +182,9 @@ Static Public Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Option to save computed gradients as historical variables. </p>
+<p>If set to true, computed gradients will be saved as historical variables. Historical variables typically represent past states or values over time. </p>
 
 </div>
 </div>
@@ -194,6 +208,9 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Option to save computed gradients as non-historical variables. </p>
+<p>If set to true, computed gradients will be saved as non-historical variables. Non-historical variables typically represent instantaneous states or values. </p>
+
 </div>
 </div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
@@ -202,7 +219,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 5 2024 02:54:15 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Mar 6 2024 02:55:30 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
