@@ -83,6 +83,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d34/class_kratos_1_1_pfem_fluid_constitutive_law.html">Kratos::PfemFluidConstitutiveLaw</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This class contains the common infrastructure for the pfem fluid constitutive laws.  <a href="../../de/d34/class_kratos_1_1_pfem_fluid_constitutive_law.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A FIC-stabilized CutPFEM element for the weakly-compressible Navier-Stokes equations.  <a href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d84/class_kratos_1_1_calculate_wave_height_utility.html">Kratos::CalculateWaveHeightUtility</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function computes the wave height at a given point.  <a href="../../d2/d84/class_kratos_1_1_calculate_wave_height_utility.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -109,8 +112,74 @@ Classes</h2></td></tr>
 <tr class="memitem:gabfc573af129083e68a5c6d850398bef3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gabfc573af129083e68a5c6d850398bef3">Kratos::PfemFluidConstitutiveLaw::KRATOS_CLASS_POINTER_DEFINITION</a> (<a class="el" href="../../de/d34/class_kratos_1_1_pfem_fluid_constitutive_law.html">PfemFluidConstitutiveLaw</a>)</td></tr>
 <tr class="separator:gabfc573af129083e68a5c6d850398bef3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Type Definitions</h2></td></tr>
+<tr class="memitem:ga01c8b388251e5b7b9921aaccb9afe1dc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga01c8b388251e5b7b9921aaccb9afe1dc">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::BaseType</a> = <a class="el" href="../../dd/dff/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicElement</a>&lt; TDim &gt;</td></tr>
+<tr class="memdesc:ga01c8b388251e5b7b9921aaccb9afe1dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">base type:  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga01c8b388251e5b7b9921aaccb9afe1dc">More...</a><br /></td></tr>
+<tr class="separator:ga01c8b388251e5b7b9921aaccb9afe1dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga1bd947537a752a1d2ac5df12adf4849d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga1bd947537a752a1d2ac5df12adf4849d">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::NodeType</a> = <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a></td></tr>
+<tr class="memdesc:ga1bd947537a752a1d2ac5df12adf4849d"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d5/ddd/class_kratos_1_1_node.html" title="This class defines the node.">Node</a> type.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga1bd947537a752a1d2ac5df12adf4849d">More...</a><br /></td></tr>
+<tr class="separator:ga1bd947537a752a1d2ac5df12adf4849d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga39d80d31cee871bd71c42c1ffd4c6d03"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga39d80d31cee871bd71c42c1ffd4c6d03">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::GeometryType</a> = <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9f0d4e09e7535210e24f85b1888379df">NodeType</a> &gt;</td></tr>
+<tr class="memdesc:ga39d80d31cee871bd71c42c1ffd4c6d03"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html" title="Geometry base class.">Geometry</a> type (using with given NodeType)  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga39d80d31cee871bd71c42c1ffd4c6d03">More...</a><br /></td></tr>
+<tr class="separator:ga39d80d31cee871bd71c42c1ffd4c6d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace0f6ecc0324ec958e265850d6b44e1f"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gace0f6ecc0324ec958e265850d6b44e1f">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::NodesArrayType</a> = <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9f0d4e09e7535210e24f85b1888379df">NodeType</a> &gt;::<a class="el" href="../../db/d66/namespace_kratos.html#aeebe5416d846dedd3696f07e4aa44cb6">PointsArrayType</a></td></tr>
+<tr class="memdesc:gace0f6ecc0324ec958e265850d6b44e1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of nodes container type, redefined from GeometryType.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gace0f6ecc0324ec958e265850d6b44e1f">More...</a><br /></td></tr>
+<tr class="separator:gace0f6ecc0324ec958e265850d6b44e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4a7fa6aef309c58b1d6a447d0d2269b4"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga4a7fa6aef309c58b1d6a447d0d2269b4">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::VectorType</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a></td></tr>
+<tr class="memdesc:ga4a7fa6aef309c58b1d6a447d0d2269b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Vector type for local contributions to the linear system.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga4a7fa6aef309c58b1d6a447d0d2269b4">More...</a><br /></td></tr>
+<tr class="separator:ga4a7fa6aef309c58b1d6a447d0d2269b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae11cd8759472663f4c88183589a95132"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gae11cd8759472663f4c88183589a95132">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::MatrixType</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a></td></tr>
+<tr class="memdesc:gae11cd8759472663f4c88183589a95132"><td class="mdescLeft">&#160;</td><td class="mdescRight">Matrix type for local contributions to the linear system.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gae11cd8759472663f4c88183589a95132">More...</a><br /></td></tr>
+<tr class="separator:gae11cd8759472663f4c88183589a95132"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d298f5a8fa38cfb8dc71c16a9b256f6"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga2d298f5a8fa38cfb8dc71c16a9b256f6">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::IndexType</a> = ::size_t</td></tr>
+<tr class="separator:ga2d298f5a8fa38cfb8dc71c16a9b256f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac99f0229693bcaa282f900dd8fea65d8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gac99f0229693bcaa282f900dd8fea65d8">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::SizeType</a> = std::size_t</td></tr>
+<tr class="separator:gac99f0229693bcaa282f900dd8fea65d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga350e23c981c844447858cd8b4c0ee397"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga350e23c981c844447858cd8b4c0ee397">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::EquationIdVectorType</a> = std::vector&lt; std::size_t &gt;</td></tr>
+<tr class="separator:ga350e23c981c844447858cd8b4c0ee397"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga93375830a00ac0bc92c649ca736404c0"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga93375830a00ac0bc92c649ca736404c0">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::DofsVectorType</a> = std::vector&lt; <a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;::Pointer &gt;</td></tr>
+<tr class="separator:ga93375830a00ac0bc92c649ca736404c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84fe381fd610ddb37681604b9df777e5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga84fe381fd610ddb37681604b9df777e5">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::DofsArrayType</a> = <a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt; <a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a> &gt;</td></tr>
+<tr class="separator:ga84fe381fd610ddb37681604b9df777e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4d1bf1d20de4fd8c8af1550c6bae0c64"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga4d1bf1d20de4fd8c8af1550c6bae0c64">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::ShapeFunctionsType</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Kratos::Vector</a></td></tr>
+<tr class="memdesc:ga4d1bf1d20de4fd8c8af1550c6bae0c64"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for shape function values container.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga4d1bf1d20de4fd8c8af1550c6bae0c64">More...</a><br /></td></tr>
+<tr class="separator:ga4d1bf1d20de4fd8c8af1550c6bae0c64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaac713265a1a2713cb890c76a85e7a4bc"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaac713265a1a2713cb890c76a85e7a4bc">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::ShapeFunctionDerivativesType</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Kratos::Matrix</a></td></tr>
+<tr class="memdesc:gaac713265a1a2713cb890c76a85e7a4bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for a matrix containing the shape function gradients.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaac713265a1a2713cb890c76a85e7a4bc">More...</a><br /></td></tr>
+<tr class="separator:gaac713265a1a2713cb890c76a85e7a4bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga54ffb702c4d9d923b6e84f566d9cad21"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga54ffb702c4d9d923b6e84f566d9cad21">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::ShapeFunctionDerivativesArrayType</a> = <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">GeometryType::ShapeFunctionsGradientsType</a></td></tr>
+<tr class="memdesc:ga54ffb702c4d9d923b6e84f566d9cad21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Type for an array of shape function gradient matrices.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga54ffb702c4d9d923b6e84f566d9cad21">More...</a><br /></td></tr>
+<tr class="separator:ga54ffb702c4d9d923b6e84f566d9cad21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaee53ae06b5835e65f13a60719a932404"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaee53ae06b5835e65f13a60719a932404">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::PropertiesType</a> = typename BaseType::PropertiesType</td></tr>
+<tr class="separator:gaee53ae06b5835e65f13a60719a932404"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga526a2080873dc567816b4554ae5444d8"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga526a2080873dc567816b4554ae5444d8">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::pPropertiesType</a> = typename BaseType::PropertiesType::Pointer</td></tr>
+<tr class="separator:ga526a2080873dc567816b4554ae5444d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa486cdfdac23e522f227a81f32dc2f65"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaa486cdfdac23e522f227a81f32dc2f65">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::ElementalVariables</a> = typename BaseType::ElementalVariables</td></tr>
+<tr class="separator:gaa486cdfdac23e522f227a81f32dc2f65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab0e4acf00cb54ae31a58480fdb9f28fa"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gab0e4acf00cb54ae31a58480fdb9f28fa">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::NodeWeakPtrVectorType</a> = <a class="el" href="../../d4/dc2/class_kratos_1_1_global_pointers_vector.html">GlobalPointersVector</a>&lt; <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9f0d4e09e7535210e24f85b1888379df">NodeType</a> &gt;</td></tr>
+<tr class="separator:gab0e4acf00cb54ae31a58480fdb9f28fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa67dd4363a874c0dd24c3fdb610623b3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaa67dd4363a874c0dd24c3fdb610623b3">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::ConstitutiveLawType</a> = <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a></td></tr>
+<tr class="memdesc:gaa67dd4363a874c0dd24c3fdb610623b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference type definition for constitutive laws.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaa67dd4363a874c0dd24c3fdb610623b3">More...</a><br /></td></tr>
+<tr class="separator:gaa67dd4363a874c0dd24c3fdb610623b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac6e48067b73aaf8b254f46a05c2456d3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gac6e48067b73aaf8b254f46a05c2456d3">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::ConstitutiveLawPointerType</a> = ConstitutiveLawType::Pointer</td></tr>
+<tr class="memdesc:gac6e48067b73aaf8b254f46a05c2456d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer type for constitutive laws.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gac6e48067b73aaf8b254f46a05c2456d3">More...</a><br /></td></tr>
+<tr class="separator:gac6e48067b73aaf8b254f46a05c2456d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa32056a8631c24dfcec6e2192ffdd095"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaa32056a8631c24dfcec6e2192ffdd095">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::NumNodes</a> = TDim + 1</td></tr>
+<tr class="memdesc:gaa32056a8631c24dfcec6e2192ffdd095"><td class="mdescLeft">&#160;</td><td class="mdescRight">Number of nodes.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaa32056a8631c24dfcec6e2192ffdd095">More...</a><br /></td></tr>
+<tr class="separator:gaa32056a8631c24dfcec6e2192ffdd095"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga768bb601de733139463950ba6767c12e"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga768bb601de733139463950ba6767c12e">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::StrainSize</a> = TDim == 2 ? 3 : 6</td></tr>
+<tr class="memdesc:ga768bb601de733139463950ba6767c12e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Voigt size.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga768bb601de733139463950ba6767c12e">More...</a><br /></td></tr>
+<tr class="separator:ga768bb601de733139463950ba6767c12e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga839f2b8b6048e74b8aacf957b5d84b82"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga839f2b8b6048e74b8aacf957b5d84b82">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION</a> (<a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>)</td></tr>
+<tr class="memdesc:ga839f2b8b6048e74b8aacf957b5d84b82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html" title="A FIC-stabilized CutPFEM element for the weakly-compressible Navier-Stokes equations.">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga839f2b8b6048e74b8aacf957b5d84b82">More...</a><br /></td></tr>
+<tr class="separator:ga839f2b8b6048e74b8aacf957b5d84b82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Serialization</h2></td></tr>
 <tr class="memitem:gad3f5346f31d572dd2ab4fcd658de5bc4"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gad3f5346f31d572dd2ab4fcd658de5bc4">Kratos::PfemFluidConstitutiveLaw::Serializer</a></td></tr>
+<tr class="separator:gad3f5346f31d572dd2ab4fcd658de5bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Serialization</h2></td></tr>
+<tr class="memitem:gad3f5346f31d572dd2ab4fcd658de5bc4"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gad3f5346f31d572dd2ab4fcd658de5bc4">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::Serializer</a></td></tr>
 <tr class="separator:gad3f5346f31d572dd2ab4fcd658de5bc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Life Cycle</h2></td></tr>
@@ -181,7 +250,68 @@ Classes</h2></td></tr>
 <tr class="memdesc:ga2016c345df88b8ea183b589742e29f9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Value From <a class="el" href="../../d8/dea/class_kratos_1_1_table.html" title="This class represents the value of its variable depending to other variable.">Table</a> object For an table independent variable, this method returns the table dependent variable value. Note that the properties container must have a table relating the two variables.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga2016c345df88b8ea183b589742e29f9f">More...</a><br /></td></tr>
 <tr class="separator:ga2016c345df88b8ea183b589742e29f9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Life Cycle</h2></td></tr>
+<tr class="memitem:gaae46c1c0a24efdb0814c607e8daf046b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaae46c1c0a24efdb0814c607e8daf046b">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId=0)</td></tr>
+<tr class="memdesc:gaae46c1c0a24efdb0814c607e8daf046b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constuctor.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaae46c1c0a24efdb0814c607e8daf046b">More...</a><br /></td></tr>
+<tr class="separator:gaae46c1c0a24efdb0814c607e8daf046b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2c732a288981a6d8782fad4383fd3112"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga2c732a288981a6d8782fad4383fd3112">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> &amp;ThisNodes)</td></tr>
+<tr class="memdesc:ga2c732a288981a6d8782fad4383fd3112"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using an array of nodes.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga2c732a288981a6d8782fad4383fd3112">More...</a><br /></td></tr>
+<tr class="separator:ga2c732a288981a6d8782fad4383fd3112"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae330ce9f0b7db6f01f722511450ef39d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gae330ce9f0b7db6f01f722511450ef39d">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeometry)</td></tr>
+<tr class="memdesc:gae330ce9f0b7db6f01f722511450ef39d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor using a geometry object.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gae330ce9f0b7db6f01f722511450ef39d">More...</a><br /></td></tr>
+<tr class="separator:gae330ce9f0b7db6f01f722511450ef39d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabff99f3bad241690fa5eac7fb567e4c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gabff99f3bad241690fa5eac7fb567e4c7">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeometry, <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga2008d8c99489a0d443734eaae553c925">pPropertiesType</a> pProperties)</td></tr>
+<tr class="memdesc:gabff99f3bad241690fa5eac7fb567e4c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constuctor using geometry and properties.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gabff99f3bad241690fa5eac7fb567e4c7">More...</a><br /></td></tr>
+<tr class="separator:gabff99f3bad241690fa5eac7fb567e4c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga747b9fea1ec0bbceb197e6e3d2087836"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga747b9fea1ec0bbceb197e6e3d2087836">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> (<a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> const &amp;rOther)</td></tr>
+<tr class="memdesc:ga747b9fea1ec0bbceb197e6e3d2087836"><td class="mdescLeft">&#160;</td><td class="mdescRight">copy constructor  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga747b9fea1ec0bbceb197e6e3d2087836">More...</a><br /></td></tr>
+<tr class="separator:ga747b9fea1ec0bbceb197e6e3d2087836"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac3c4848660ef111d0151153d4127dec7"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gac3c4848660ef111d0151153d4127dec7">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::~TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> ()=default</td></tr>
+<tr class="memdesc:gac3c4848660ef111d0151153d4127dec7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gac3c4848660ef111d0151153d4127dec7">More...</a><br /></td></tr>
+<tr class="separator:gac3c4848660ef111d0151153d4127dec7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Operators</h2></td></tr>
+<tr class="memitem:gad7d27c371791fc980fc7636f28822cab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gad7d27c371791fc980fc7636f28822cab">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::operator=</a> (<a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> const &amp;rOther)=delete</td></tr>
+<tr class="memdesc:gad7d27c371791fc980fc7636f28822cab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gad7d27c371791fc980fc7636f28822cab">More...</a><br /></td></tr>
+<tr class="separator:gad7d27c371791fc980fc7636f28822cab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Operations</h2></td></tr>
+<tr class="memitem:ga15ca050ee7537507e24a4acc5d96c137"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga15ca050ee7537507e24a4acc5d96c137">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;ThisNodes, <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga2008d8c99489a0d443734eaae553c925">pPropertiesType</a> pProperties) const override</td></tr>
+<tr class="separator:ga15ca050ee7537507e24a4acc5d96c137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga6908dea46d5c8eabb7efc64ff6484e76"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga6908dea46d5c8eabb7efc64ff6484e76">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::Clone</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;ThisNodes) const override</td></tr>
+<tr class="separator:ga6908dea46d5c8eabb7efc64ff6484e76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Elemental Data</h2></td></tr>
+<tr class="memitem:ga4b9c2d07b1000d49af64c80c8cf2de4a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga4b9c2d07b1000d49af64c80c8cf2de4a">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::Check</a> (const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) const override</td></tr>
+<tr class="memdesc:ga4b9c2d07b1000d49af64c80c8cf2de4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks the input and that all required <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> variables have been registered.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga4b9c2d07b1000d49af64c80c8cf2de4a">More...</a><br /></td></tr>
+<tr class="separator:ga4b9c2d07b1000d49af64c80c8cf2de4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Input and output</h2></td></tr>
+<tr class="memitem:gaf82af467da10e39e72a57c3d1c1aaa20"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaf82af467da10e39e72a57c3d1c1aaa20">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::Info</a> () const override</td></tr>
+<tr class="memdesc:gaf82af467da10e39e72a57c3d1c1aaa20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn back information as a string.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaf82af467da10e39e72a57c3d1c1aaa20">More...</a><br /></td></tr>
+<tr class="separator:gaf82af467da10e39e72a57c3d1c1aaa20"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga25b5b6899b6ba773c9530c9a5e1f6dfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga25b5b6899b6ba773c9530c9a5e1f6dfd">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::PrintInfo</a> (std::ostream &amp;rOStream) const override</td></tr>
+<tr class="memdesc:ga25b5b6899b6ba773c9530c9a5e1f6dfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#ga25b5b6899b6ba773c9530c9a5e1f6dfd">More...</a><br /></td></tr>
+<tr class="separator:ga25b5b6899b6ba773c9530c9a5e1f6dfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Protected Operations</h2></td></tr>
+<tr class="memitem:gad0245e285e4d0ffea0b69c902e22fb74"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gad0245e285e4d0ffea0b69c902e22fb74">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::CalculateLocalMomentumEquations</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
+<tr class="separator:gad0245e285e4d0ffea0b69c902e22fb74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gabcb080b2d6b20dab43973e2455b90cb3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gabcb080b2d6b20dab43973e2455b90cb3">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::CalculateGeometryData</a> (<a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga2b35ca3781958dc5f877cff21d2dd496">ShapeFunctionDerivativesArrayType</a> &amp;rDN_DX, <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rNContainer, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rGaussWeights) override</td></tr>
+<tr class="memdesc:gabcb080b2d6b20dab43973e2455b90cb3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determine integration point weights and shape funcition derivatives from the element's geometry.  <a href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gabcb080b2d6b20dab43973e2455b90cb3">More...</a><br /></td></tr>
+<tr class="separator:gabcb080b2d6b20dab43973e2455b90cb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaa56f11f7576fa13970e095c4b9c1bb5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d5f/group___pfem_fluid_dynamics_application.html#gaa56f11f7576fa13970e095c4b9c1bb5b">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement&lt; TDim &gt;::CalculateGeometryData</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rGaussWeights) override</td></tr>
+<tr class="separator:gaa56f11f7576fa13970e095c4b9c1bb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Input and output</h2></td></tr>
+<tr class="memitem:ga3a388ada7f0d093d1fa401a9067e5428"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim&gt; </td></tr>
+<tr class="memitem:ga3a388ada7f0d093d1fa401a9067e5428"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#ga3a388ada7f0d093d1fa401a9067e5428">Kratos::operator&gt;&gt;</a> (std::istream &amp;rIStream, <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:ga3a388ada7f0d093d1fa401a9067e5428"><td class="mdescLeft">&#160;</td><td class="mdescRight">input stream function  <a href="../../d4/dbe/group___application_name_application.html#ga3a388ada7f0d093d1fa401a9067e5428">More...</a><br /></td></tr>
+<tr class="separator:ga3a388ada7f0d093d1fa401a9067e5428"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gac27fd2c57250496ed36ad5b6d30ca9b2"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim&gt; </td></tr>
+<tr class="memitem:gac27fd2c57250496ed36ad5b6d30ca9b2"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#gac27fd2c57250496ed36ad5b6d30ca9b2">Kratos::operator&lt;&lt;</a> (std::ostream &amp;rOStream, const <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:gac27fd2c57250496ed36ad5b6d30ca9b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">output stream function  <a href="../../d4/dbe/group___application_name_application.html#gac27fd2c57250496ed36ad5b6d30ca9b2">More...</a><br /></td></tr>
+<tr class="separator:gac27fd2c57250496ed36ad5b6d30ca9b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacdf0970df9f82a99bc5b3e8cf8362b9e"><td class="memTemplParams" colspan="2">template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </td></tr>
 <tr class="memitem:gacdf0970df9f82a99bc5b3e8cf8362b9e"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#gacdf0970df9f82a99bc5b3e8cf8362b9e">Kratos::operator&gt;&gt;</a> (std::istream &amp;rIStream, <a class="el" href="../../d0/de0/class_kratos_1_1_two_step_v_p_solver_settings.html">TwoStepVPSolverSettings</a>&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt; &amp;rThis)</td></tr>
 <tr class="memdesc:gacdf0970df9f82a99bc5b3e8cf8362b9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">input stream function  <a href="../../d4/dbe/group___application_name_application.html#gacdf0970df9f82a99bc5b3e8cf8362b9e">More...</a><br /></td></tr>
@@ -194,7 +324,7 @@ Classes</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <h2 class="groupheader">Typedef Documentation</h2>
 <a id="ga81692e9b3dba9f3e6fae7444defac3cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga81692e9b3dba9f3e6fae7444defac3cf">&#9670;&nbsp;</a></span>BaseType</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81692e9b3dba9f3e6fae7444defac3cf">&#9670;&nbsp;</a></span>BaseType <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,8 +337,316 @@ Classes</h2></td></tr>
 
 </div>
 </div>
+<a id="ga01c8b388251e5b7b9921aaccb9afe1dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga01c8b388251e5b7b9921aaccb9afe1dc">&#9670;&nbsp;</a></span>BaseType <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ad6372bb5f9c583d5a9ff15ac5b8ae176">BaseType</a> =  <a class="el" href="../../dd/dff/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicElement</a>&lt;TDim&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>base type: </p>
+
+</div>
+</div>
+<a id="gac6e48067b73aaf8b254f46a05c2456d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac6e48067b73aaf8b254f46a05c2456d3">&#9670;&nbsp;</a></span>ConstitutiveLawPointerType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d9/d3b/class_kratos_1_1_solid_element.html#a8d3497ccae37d3e28c700719f3e6da10">ConstitutiveLawPointerType</a> =  ConstitutiveLawType::Pointer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointer type for constitutive laws. </p>
+
+</div>
+</div>
+<a id="gaa67dd4363a874c0dd24c3fdb610623b3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa67dd4363a874c0dd24c3fdb610623b3">&#9670;&nbsp;</a></span>ConstitutiveLawType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d9/d3b/class_kratos_1_1_solid_element.html#a612038fa6ba77078fdcd15938643e7b8">ConstitutiveLawType</a> =  <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Reference type definition for constitutive laws. </p>
+
+</div>
+</div>
+<a id="ga84fe381fd610ddb37681604b9df777e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84fe381fd610ddb37681604b9df777e5">&#9670;&nbsp;</a></span>DofsArrayType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a452d3f80e96182fa94888b1205888fa6">DofsArrayType</a> =  <a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt;<a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&gt;, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga93375830a00ac0bc92c649ca736404c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93375830a00ac0bc92c649ca736404c0">&#9670;&nbsp;</a></span>DofsVectorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">DofsVectorType</a> =  std::vector&lt;<a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&gt;::Pointer&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaa486cdfdac23e522f227a81f32dc2f65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa486cdfdac23e522f227a81f32dc2f65">&#9670;&nbsp;</a></span>ElementalVariables</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga6b39d82c673bf1db4f07444c69999847">ElementalVariables</a> =  typename BaseType::ElementalVariables</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga350e23c981c844447858cd8b4c0ee397"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga350e23c981c844447858cd8b4c0ee397">&#9670;&nbsp;</a></span>EquationIdVectorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">EquationIdVectorType</a> =  std::vector&lt;std::size_t&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga39d80d31cee871bd71c42c1ffd4c6d03"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga39d80d31cee871bd71c42c1ffd4c6d03">&#9670;&nbsp;</a></span>GeometryType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> =  <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt;<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9f0d4e09e7535210e24f85b1888379df">NodeType</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html" title="Geometry base class.">Geometry</a> type (using with given NodeType) </p>
+
+</div>
+</div>
+<a id="ga2d298f5a8fa38cfb8dc71c16a9b256f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2d298f5a8fa38cfb8dc71c16a9b256f6">&#9670;&nbsp;</a></span>IndexType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> =  ::size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gae11cd8759472663f4c88183589a95132"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae11cd8759472663f4c88183589a95132">&#9670;&nbsp;</a></span>MatrixType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> =  <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Matrix type for local contributions to the linear system. </p>
+
+</div>
+</div>
+<a id="gace0f6ecc0324ec958e265850d6b44e1f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace0f6ecc0324ec958e265850d6b44e1f">&#9670;&nbsp;</a></span>NodesArrayType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> =  <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt;<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9f0d4e09e7535210e24f85b1888379df">NodeType</a>&gt;::<a class="el" href="../../db/d66/namespace_kratos.html#aeebe5416d846dedd3696f07e4aa44cb6">PointsArrayType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Definition of nodes container type, redefined from GeometryType. </p>
+
+</div>
+</div>
+<a id="ga1bd947537a752a1d2ac5df12adf4849d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1bd947537a752a1d2ac5df12adf4849d">&#9670;&nbsp;</a></span>NodeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9f0d4e09e7535210e24f85b1888379df">NodeType</a> =  <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p><a class="el" href="../../d5/ddd/class_kratos_1_1_node.html" title="This class defines the node.">Node</a> type. </p>
+
+</div>
+</div>
+<a id="gab0e4acf00cb54ae31a58480fdb9f28fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab0e4acf00cb54ae31a58480fdb9f28fa">&#9670;&nbsp;</a></span>NodeWeakPtrVectorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga0a202d7f10d3cfee1a2a30c6669be46b">NodeWeakPtrVectorType</a> =  <a class="el" href="../../d4/dc2/class_kratos_1_1_global_pointers_vector.html">GlobalPointersVector</a>&lt;<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9f0d4e09e7535210e24f85b1888379df">NodeType</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga526a2080873dc567816b4554ae5444d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga526a2080873dc567816b4554ae5444d8">&#9670;&nbsp;</a></span>pPropertiesType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga2008d8c99489a0d443734eaae553c925">pPropertiesType</a> =  typename BaseType::PropertiesType::Pointer</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="gaee53ae06b5835e65f13a60719a932404"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaee53ae06b5835e65f13a60719a932404">&#9670;&nbsp;</a></span>PropertiesType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6fc34b088a4dbbfe82a57b8a946e9be4">PropertiesType</a> =  typename BaseType::PropertiesType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga54ffb702c4d9d923b6e84f566d9cad21"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga54ffb702c4d9d923b6e84f566d9cad21">&#9670;&nbsp;</a></span>ShapeFunctionDerivativesArrayType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga2b35ca3781958dc5f877cff21d2dd496">ShapeFunctionDerivativesArrayType</a> =  <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">GeometryType::ShapeFunctionsGradientsType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type for an array of shape function gradient matrices. </p>
+
+</div>
+</div>
+<a id="gaac713265a1a2713cb890c76a85e7a4bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac713265a1a2713cb890c76a85e7a4bc">&#9670;&nbsp;</a></span>ShapeFunctionDerivativesType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gaed74f43553ae84bf52c6951a7d603004">ShapeFunctionDerivativesType</a> =  <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Kratos::Matrix</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type for a matrix containing the shape function gradients. </p>
+
+</div>
+</div>
+<a id="ga4d1bf1d20de4fd8c8af1550c6bae0c64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d1bf1d20de4fd8c8af1550c6bae0c64">&#9670;&nbsp;</a></span>ShapeFunctionsType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac9a5b1dc2e32e09a4f4346b9129e8a7f">ShapeFunctionsType</a> =  <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Kratos::Vector</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Type for shape function values container. </p>
+
+</div>
+</div>
 <a id="ga97ad5087187e0ab96aa0e13b02ebae11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga97ad5087187e0ab96aa0e13b02ebae11">&#9670;&nbsp;</a></span>SizeType</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97ad5087187e0ab96aa0e13b02ebae11">&#9670;&nbsp;</a></span>SizeType <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -218,6 +656,40 @@ Classes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="gac99f0229693bcaa282f900dd8fea65d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac99f0229693bcaa282f900dd8fea65d8">&#9670;&nbsp;</a></span>SizeType <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a> =  std::size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga4a7fa6aef309c58b1d6a447d0d2269b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4a7fa6aef309c58b1d6a447d0d2269b4">&#9670;&nbsp;</a></span>VectorType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> =  <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Vector type for local contributions to the linear system. </p>
 
 </div>
 </div>
@@ -273,6 +745,84 @@ Classes</h2></td></tr>
 
 </div>
 </div>
+<a id="gabcb080b2d6b20dab43973e2455b90cb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabcb080b2d6b20dab43973e2455b90cb3">&#9670;&nbsp;</a></span>CalculateGeometryData() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::CalculateGeometryData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga2b35ca3781958dc5f877cff21d2dd496">ShapeFunctionDerivativesArrayType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDN_DX</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rNContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rGaussWeights</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Determine integration point weights and shape funcition derivatives from the element's geometry. </p>
+
+<p>Reimplemented from <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gaecbc85885ac65acb6a9456c32152240c">Kratos::UpdatedLagrangianElement&lt; TDim &gt;</a>.</p>
+
+</div>
+</div>
+<a id="gaa56f11f7576fa13970e095c4b9c1bb5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa56f11f7576fa13970e095c4b9c1bb5b">&#9670;&nbsp;</a></span>CalculateGeometryData() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::CalculateGeometryData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rGaussWeights</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga3abd8b85f15991302d14829fbde0e648">Kratos::UpdatedLagrangianElement&lt; TDim &gt;</a>.</p>
+
+</div>
+</div>
 <a id="ga726587da0603213187ab0004b8ba36fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga726587da0603213187ab0004b8ba36fe">&#9670;&nbsp;</a></span>CalculateInGaussPoint()</h2>
 
@@ -321,6 +871,52 @@ Classes</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double obtained averaged variable </dd></dl>
+
+</div>
+</div>
+<a id="gad0245e285e4d0ffea0b69c902e22fb74"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad0245e285e4d0ffea0b69c902e22fb74">&#9670;&nbsp;</a></span>CalculateLocalMomentumEquations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::CalculateLocalMomentumEquations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rRightHandSideVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gafb88dc41f4be9ebfffd5a1f5272f7470">Kratos::TwoStepUpdatedLagrangianVPImplicitElement&lt; TDim &gt;</a>.</p>
 
 </div>
 </div>
@@ -402,8 +998,47 @@ Classes</h2></td></tr>
 
 </div>
 </div>
+<a id="ga4b9c2d07b1000d49af64c80c8cf2de4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4b9c2d07b1000d49af64c80c8cf2de4a">&#9670;&nbsp;</a></span>Check() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::Check </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks the input and that all required <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> variables have been registered. </p>
+<p>This function provides the place to perform checks on the completeness of the input. It is designed to be called only once (or anyway, not often) typically at the beginning of the calculations, so to verify that nothing is missing from the input or that no common error is found. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rCurrentProcessInfo</td><td>The <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html" title="ProcessInfo holds the current value of different solution parameters.">ProcessInfo</a> of the <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a> that contains this element. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>0 if no errors were found. </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga21794bcefb8bc7a518c6566a783dcb1b">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidElement&lt; TDim &gt;</a>.</p>
+
+</div>
+</div>
 <a id="ga7a806ede91b6b149304010b15cf836ca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7a806ede91b6b149304010b15cf836ca">&#9670;&nbsp;</a></span>Check()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7a806ede91b6b149304010b15cf836ca">&#9670;&nbsp;</a></span>Check() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -460,7 +1095,7 @@ Classes</h2></td></tr>
 </div>
 </div>
 <a id="ga3753472d2ecbd6a8d1fceb075d2f1b77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3753472d2ecbd6a8d1fceb075d2f1b77">&#9670;&nbsp;</a></span>Clone()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3753472d2ecbd6a8d1fceb075d2f1b77">&#9670;&nbsp;</a></span>Clone() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -487,6 +1122,88 @@ Classes</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a009dc65e1b67ef5efb466fda3d52853f">Kratos::ConstitutiveLaw</a>.</p>
 
 <p>Reimplemented in <a class="el" href="../../dd/d6a/class_kratos_1_1_rans_newtonian3_d_law.html#af874b4fc50bfb1b8078d3de5393cf5ab">Kratos::RansNewtonian3DLaw</a>, <a class="el" href="../../da/d05/class_kratos_1_1_rans_newtonian2_d_law.html#aa8c2908b3502d32480c46c4faf0442fd">Kratos::RansNewtonian2DLaw</a>, <a class="el" href="../../df/df5/class_kratos_1_1_newtonian_temperature_dependent3_d_law.html#a217f6cfe75351d35f5b067debb6165a1">Kratos::NewtonianTemperatureDependent3DLaw</a>, <a class="el" href="../../d9/d49/class_kratos_1_1_newtonian_temperature_dependent2_d_law.html#a27c681f6f8d7d9489f206acd169fa8e8">Kratos::NewtonianTemperatureDependent2DLaw</a>, <a class="el" href="../../dd/dec/class_kratos_1_1_mu_i_rheology_temperature_dependent3_d_law.html#a9e572d7d8b96b09f318a09dd04b62c0d">Kratos::MuIRheologyTemperatureDependent3DLaw</a>, <a class="el" href="../../d8/d98/class_kratos_1_1_mu_i_rheology_temperature_dependent2_d_law.html#a7f798cc5b7a40c0eacda8afc007cb34e">Kratos::MuIRheologyTemperatureDependent2DLaw</a>, <a class="el" href="../../d2/d48/class_kratos_1_1_frictional_viscoplastic_temperature_dependent3_d_law.html#acc1ab000e7035c260a9bbe4785346cb9">Kratos::FrictionalViscoplasticTemperatureDependent3DLaw</a>, <a class="el" href="../../db/dc9/class_kratos_1_1_frictional_viscoplastic_temperature_dependent2_d_law.html#a0c2b169516afaf28dff25f3ed7d82345">Kratos::FrictionalViscoplasticTemperatureDependent2DLaw</a>, <a class="el" href="../../d4/d79/class_kratos_1_1_bingham_temperature_dependent3_d_law.html#ad350b143df282a4e2f3902f1653c50d6">Kratos::BinghamTemperatureDependent3DLaw</a>, <a class="el" href="../../dd/dea/class_kratos_1_1_bingham_temperature_dependent2_d_law.html#a92028ad2248b0480ace438c95d4169b4">Kratos::BinghamTemperatureDependent2DLaw</a>, <a class="el" href="../../d7/d48/class_kratos_1_1_newtonian3_d_law.html#ae65a7cd57c56355b205c5a7fc91358f0">Kratos::Newtonian3DLaw</a>, <a class="el" href="../../df/d3c/class_kratos_1_1_newtonian2_d_law.html#a731ccbfbd7f6d86e3ec2cbe35d9768e4">Kratos::Newtonian2DLaw</a>, <a class="el" href="../../d1/da8/class_kratos_1_1_mu_i_rheology3_d_law.html#a5953f479361290ebdc2d19692c1257aa">Kratos::MuIRheology3DLaw</a>, <a class="el" href="../../d8/d26/class_kratos_1_1_mu_i_rheology2_d_law.html#a6819f26e0c9b6ae8b43ca93fa2ea9417">Kratos::MuIRheology2DLaw</a>, <a class="el" href="../../d4/d60/class_kratos_1_1_herschel_bulkley3_d_law.html#a176db65e0766c3a4621b7c13613542ca">Kratos::HerschelBulkley3DLaw</a>, <a class="el" href="../../d8/d54/class_kratos_1_1_herschel_bulkley2_d_law.html#a0ad34725be45b4c3f8bd4019be2b5130">Kratos::HerschelBulkley2DLaw</a>, <a class="el" href="../../d1/de8/class_kratos_1_1_frictional_viscoplastic3_d_law.html#acb9835274e2d0cacb832e92f587d957d">Kratos::FrictionalViscoplastic3DLaw</a>, and <a class="el" href="../../d9/d05/class_kratos_1_1_frictional_viscoplastic2_d_law.html#a0c05a039496a86356c4ec742c40d38b5">Kratos::FrictionalViscoplastic2DLaw</a>.</p>
+
+</div>
+</div>
+<a id="ga6908dea46d5c8eabb7efc64ff6484e76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6908dea46d5c8eabb7efc64ff6484e76">&#9670;&nbsp;</a></span>Clone() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Element::Pointer <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::Clone </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
+          <td class="paramname"><em>NewId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;&#160;</td>
+          <td class="paramname"><em>ThisNodes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga15ca050ee7537507e24a4acc5d96c137"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga15ca050ee7537507e24a4acc5d96c137">&#9670;&nbsp;</a></span>Create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Element::Pointer <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::Create </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
+          <td class="paramname"><em>NewId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;&#160;</td>
+          <td class="paramname"><em>ThisNodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga2008d8c99489a0d443734eaae553c925">pPropertiesType</a>&#160;</td>
+          <td class="paramname"><em>pProperties</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -738,7 +1455,7 @@ Classes</h2></td></tr>
 </div>
 </div>
 <a id="gab40cf14c081ad4f33863c647bd673a08"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab40cf14c081ad4f33863c647bd673a08">&#9670;&nbsp;</a></span>Info()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab40cf14c081ad4f33863c647bd673a08">&#9670;&nbsp;</a></span>Info() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -767,6 +1484,59 @@ Classes</h2></td></tr>
 
 </div>
 </div>
+<a id="gaf82af467da10e39e72a57c3d1c1aaa20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf82af467da10e39e72a57c3d1c1aaa20">&#9670;&nbsp;</a></span>Info() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::Info </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Turn back information as a string. </p>
+
+<p>Reimplemented from <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga9fc349d08d2834fbd3b0da5869f584fa">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidElement&lt; TDim &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ga839f2b8b6048e74b8aacf957b5d84b82"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga839f2b8b6048e74b8aacf957b5d84b82">&#9670;&nbsp;</a></span>KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Pointer definition of <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html" title="A FIC-stabilized CutPFEM element for the weakly-compressible Navier-Stokes equations.">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>. </p>
+
+</div>
+</div>
 <a id="gabfc573af129083e68a5c6d850398bef3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#gabfc573af129083e68a5c6d850398bef3">&#9670;&nbsp;</a></span>KRATOS_CLASS_POINTER_DEFINITION()</h2>
 
@@ -785,8 +1555,48 @@ Classes</h2></td></tr>
 
 </div>
 </div>
+<a id="gac27fd2c57250496ed36ad5b6d30ca9b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac27fd2c57250496ed36ad5b6d30ca9b2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; <a class="el" href="../../db/d66/namespace_kratos.html#a0d68cfea286551bb6b1bd34c9f353102">Kratos::operator</a>&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>rOStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>output stream function </p>
+
+</div>
+</div>
 <a id="gae025dc5cb594e42e59dc3c7dc4c7151d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae025dc5cb594e42e59dc3c7dc4c7151d">&#9670;&nbsp;</a></span>operator&lt;&lt;()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae025dc5cb594e42e59dc3c7dc4c7151d">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -825,8 +1635,78 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 
 </div>
 </div>
+<a id="gad7d27c371791fc980fc7636f28822cab"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad7d27c371791fc980fc7636f28822cab">&#9670;&nbsp;</a></span>operator=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&amp; <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../db/d66/namespace_kratos.html#a0d68cfea286551bb6b1bd34c9f353102">operator</a>= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>rOther</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assignment operator. </p>
+
+</div>
+</div>
+<a id="ga3a388ada7f0d093d1fa401a9067e5428"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3a388ada7f0d093d1fa401a9067e5428">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; <a class="el" href="../../db/d66/namespace_kratos.html#a0d68cfea286551bb6b1bd34c9f353102">Kratos::operator</a>&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>rIStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>input stream function </p>
+
+</div>
+</div>
 <a id="gacdf0970df9f82a99bc5b3e8cf8362b9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gacdf0970df9f82a99bc5b3e8cf8362b9e">&#9670;&nbsp;</a></span>operator&gt;&gt;()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gacdf0970df9f82a99bc5b3e8cf8362b9e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -935,7 +1815,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="gaa8691598ee0b27941dabf924a3a23815"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa8691598ee0b27941dabf924a3a23815">&#9670;&nbsp;</a></span>PrintInfo()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa8691598ee0b27941dabf924a3a23815">&#9670;&nbsp;</a></span>PrintInfo() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -961,6 +1841,224 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 <p>Print basic information about this constitutive law instance. </p>
 
 <p>Reimplemented from <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#aa04e30b5843921c2c39c6c8148a704ab">Kratos::ConstitutiveLaw</a>.</p>
+
+</div>
+</div>
+<a id="ga25b5b6899b6ba773c9530c9a5e1f6dfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga25b5b6899b6ba773c9530c9a5e1f6dfd">&#9670;&nbsp;</a></span>PrintInfo() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::PrintInfo </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>rOStream</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Print information about this object. </p>
+
+<p>Reimplemented from <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga29ad04ae86a1686e1bb31d9837d35c94">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidElement&lt; TDim &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ga2c732a288981a6d8782fad4383fd3112"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2c732a288981a6d8782fad4383fd3112">&#9670;&nbsp;</a></span>TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
+          <td class="paramname"><em>NewId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> &amp;&#160;</td>
+          <td class="paramname"><em>ThisNodes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor using an array of nodes. </p>
+
+</div>
+</div>
+<a id="gae330ce9f0b7db6f01f722511450ef39d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gae330ce9f0b7db6f01f722511450ef39d">&#9670;&nbsp;</a></span>TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
+          <td class="paramname"><em>NewId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GeometryType::Pointer&#160;</td>
+          <td class="paramname"><em>pGeometry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructor using a geometry object. </p>
+
+</div>
+</div>
+<a id="gabff99f3bad241690fa5eac7fb567e4c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gabff99f3bad241690fa5eac7fb567e4c7">&#9670;&nbsp;</a></span>TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
+          <td class="paramname"><em>NewId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">GeometryType::Pointer&#160;</td>
+          <td class="paramname"><em>pGeometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga2008d8c99489a0d443734eaae553c925">pPropertiesType</a>&#160;</td>
+          <td class="paramname"><em>pProperties</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constuctor using geometry and properties. </p>
+
+</div>
+</div>
+<a id="gaae46c1c0a24efdb0814c607e8daf046b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaae46c1c0a24efdb0814c607e8daf046b">&#9670;&nbsp;</a></span>TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
+          <td class="paramname"><em>NewId</em> = <code>0</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default constuctor. </p>
+
+</div>
+</div>
+<a id="ga747b9fea1ec0bbceb197e6e3d2087836"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga747b9fea1ec0bbceb197e6e3d2087836">&#9670;&nbsp;</a></span>TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::<a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt; const &amp;&#160;</td>
+          <td class="paramname"><em>rOther</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>copy constructor </p>
 
 </div>
 </div>
@@ -1023,9 +2121,91 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 
 </div>
 </div>
+<a id="gac3c4848660ef111d0151153d4127dec7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3c4848660ef111d0151153d4127dec7">&#9670;&nbsp;</a></span>~TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::~<a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Destructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="gaa32056a8631c24dfcec6e2192ffdd095"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa32056a8631c24dfcec6e2192ffdd095">&#9670;&nbsp;</a></span>NumNodes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a> <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::NumNodes = TDim + 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Number of nodes. </p>
+
+</div>
+</div>
+<a id="ga768bb601de733139463950ba6767c12e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga768bb601de733139463950ba6767c12e">&#9670;&nbsp;</a></span>StrainSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a> <a class="el" href="../../d1/d1a/class_kratos_1_1_two_step_updated_lagrangian_v_p_implicit_fluid_fic_cut_fem_element.html">Kratos::TwoStepUpdatedLagrangianVPImplicitFluidFicCutFemElement</a>&lt; TDim &gt;::StrainSize = TDim == 2 ? 3 : 6</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Voigt size. </p>
+
+</div>
+</div>
 <h2 class="groupheader">Friends</h2>
 <a id="gad3f5346f31d572dd2ab4fcd658de5bc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad3f5346f31d572dd2ab4fcd658de5bc4">&#9670;&nbsp;</a></span>Serializer</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3f5346f31d572dd2ab4fcd658de5bc4">&#9670;&nbsp;</a></span>Serializer <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1046,10 +2226,34 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 
 </div>
 </div>
+<a id="gad3f5346f31d572dd2ab4fcd658de5bc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad3f5346f31d572dd2ab4fcd658de5bc4">&#9670;&nbsp;</a></span>Serializer <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">friend class <a class="el" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 8 2024 02:52:59 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Mar 9 2024 02:49:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
