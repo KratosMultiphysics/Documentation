@@ -649,9 +649,9 @@ Protected Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ad93a9be9337b7c314b99b298b39d931e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#ad93a9be9337b7c314b99b298b39d931e">AddLHS</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html#a635d42392c9eb34962fe75376217c288">MatrixType</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#ab68ccb81d8189e53b90b97f889012b1d">ElementMatrixType</a> &amp;rUMatrix)</td></tr>
-<tr class="memdesc:ad93a9be9337b7c314b99b298b39d931e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the condition matrix to the global left hand side.  <a href="../../d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#ad93a9be9337b7c314b99b298b39d931e">More...</a><br /></td></tr>
-<tr class="separator:ad93a9be9337b7c314b99b298b39d931e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8330289ae583294ed939797685c9c4eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#a8330289ae583294ed939797685c9c4eb">AddLHS</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html#a635d42392c9eb34962fe75376217c288">MatrixType</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#ab68ccb81d8189e53b90b97f889012b1d">ElementMatrixType</a> &amp;rUUMatrix)</td></tr>
+<tr class="memdesc:a8330289ae583294ed939797685c9c4eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds the condition matrix to the global left hand side.  <a href="../../d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#a8330289ae583294ed939797685c9c4eb">More...</a><br /></td></tr>
+<tr class="separator:a8330289ae583294ed939797685c9c4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a971a97c4784a232ae3a8ae99e0bebf79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#a971a97c4784a232ae3a8ae99e0bebf79">CalculateAndAddRHS</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html#a96548b811bcec23a75386a175ea598f8">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html#a635d42392c9eb34962fe75376217c288">MatrixType</a> &amp;rStiffnessMatrix)</td></tr>
 <tr class="memdesc:a971a97c4784a232ae3a8ae99e0bebf79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates and adds terms to the RHS.  <a href="../../d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#a971a97c4784a232ae3a8ae99e0bebf79">More...</a><br /></td></tr>
 <tr class="separator:a971a97c4784a232ae3a8ae99e0bebf79"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1019,8 +1019,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad93a9be9337b7c314b99b298b39d931e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad93a9be9337b7c314b99b298b39d931e">&#9670;&nbsp;</a></span>AddLHS()</h2>
+<a id="a8330289ae583294ed939797685c9c4eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8330289ae583294ed939797685c9c4eb">&#9670;&nbsp;</a></span>AddLHS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1040,7 +1040,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../d6/d1a/class_kratos_1_1_u_pw_lysmer_absorbing_condition.html#ab68ccb81d8189e53b90b97f889012b1d">ElementMatrixType</a> &amp;&#160;</td>
-          <td class="paramname"><em>rUMatrix</em>&#160;</td>
+          <td class="paramname"><em>rUUMatrix</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1059,7 +1059,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rLeftHandSideMatrix</td><td>Global Left hand side </td></tr>
-    <tr><td class="paramname">rUMatrix</td><td>LHS displacement matrix of the current condition </td></tr>
+    <tr><td class="paramname">rUUMatrix</td><td>LHS displacement matrix of the current condition </td></tr>
   </table>
   </dd>
 </dl>
@@ -1938,7 +1938,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 13 2024 03:22:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Mar 14 2024 03:15:50 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

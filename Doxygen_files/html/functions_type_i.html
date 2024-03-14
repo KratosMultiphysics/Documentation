@@ -437,6 +437,7 @@ $(function() {
 , <a class="el" href="d5/da3/class_kratos_1_1_geo_cr_beam_element_linear2_d2_n.html#a28d5445540a4054fa5c5afe0f07659e0">Kratos::GeoCrBeamElementLinear2D2N</a>
 , <a class="el" href="da/d3e/class_kratos_1_1_geo_cr_beam_element_linear3_d2_n.html#ad52e1356940d0f467f1bc945f05227ce">Kratos::GeoCrBeamElementLinear3D2N</a>
 , <a class="el" href="dd/dea/class_kratos_1_1_geo_curved_beam_element.html#a5606009a4e43ad97dad7f67eb8275995">Kratos::GeoCurvedBeamElement&lt; TDim, TNumNodes &gt;</a>
+, <a class="el" href="d2/da0/class_kratos_1_1_geo_element_utilities.html#ade2dd10ca9280ae2392039808c6b2238">Kratos::GeoElementUtilities</a>
 , <a class="el" href="d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a5dbfa85e7d81c61ae69358a5f6721119">Kratos::GeoLinearTrussElement&lt; TDim, TNumNodes &gt;</a>
 , <a class="el" href="d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html#ac5b4734798963b550590844a514734fb">Kratos::GeoMechanicsMathUtilities&lt; TDataType &gt;</a>
 , <a class="el" href="d3/d62/class_kratos_1_1_geometrical_object.html#abbeb2b23f4923fc40a2a6fc2a5c0dd09">Kratos::GeometricalObject</a>
@@ -570,7 +571,9 @@ $(function() {
 , <a class="el" href="d6/d27/class_kratos_1_1_m_p_c_mortar_contact_condition.html#a2086b5f671713709daa72f2b87696772">Kratos::MPCMortarContactCondition&lt; TDim, TNumNodes, TNumNodesMaster &gt;</a>
 , <a class="el" href="df/d90/class_kratos_1_1_m_p_i_communicator.html#aa37d6237a9487be5d801a2013a784432">Kratos::MPICommunicator</a>
 , <a class="el" href="d4/d39/class_kratos_1_1_m_p_m_explicit_scheme.html#a4b33101f78d7d49f79b739d2ce13ec63">Kratos::MPMExplicitScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
+, <a class="el" href="dd/ddf/class_kratos_1_1_m_p_m_math_utilities.html#a4ec79eeebad1306e6868b7fe2a1dee15">Kratos::MPMMathUtilities&lt; TDataType &gt;</a>
 , <a class="el" href="dc/d01/class_kratos_1_1_m_p_m_stress_principal_invariants_utility.html#a66e80c20689beb87e573c3d132dcf7b9">Kratos::MPMStressPrincipalInvariantsUtility</a>
+, <a class="el" href="d5/d6e/class_kratos_1_1_m_p_m_vtk_output.html#aff15876543c8ae58611f5b72b8892cd3">Kratos::MPMVtkOutput</a>
 , <a class="el" href="d2/dd1/class_kratos_1_1_multiaxial_control_module_generalized2_d_utilities.html#a0e2a549d36cb06da70d65f580a00601e">Kratos::MultiaxialControlModuleGeneralized2DUtilities</a>
 , <a class="el" href="df/d05/class_kratos_1_1_multiscale_refining_process.html#a74a9877c044f8309de0742d0311f84e8">Kratos::MultiscaleRefiningProcess</a>
 , <a class="el" href="dc/d45/class_kratos_1_1_navier_slip_wall_law.html#a0dbb78937103e4e647f777f673350282">Kratos::NavierSlipWallLaw&lt; TDim, TNumNodes &gt;</a>
@@ -601,8 +604,6 @@ $(function() {
 , <a class="el" href="de/d29/class_kratos_1_1_paired_condition.html#a179357557efe1b9ef3b9a531ed436867">Kratos::PairedCondition</a>
 , <a class="el" href="db/dfa/class_kratos_1_1_parallel_rule_of_mixtures_law.html#af71083805de5df2fe314dfa47ce4c2c1">Kratos::ParallelRuleOfMixturesLaw&lt; TDim &gt;</a>
 , <a class="el" href="dd/da0/class_kratos_1_1_parameters.html#a9a15513de6342886144c02163f6df849">Kratos::Parameters</a>
-, <a class="el" href="d8/d6c/class_kratos_1_1_particle_mechanics_math_utilities.html#a1b6969eec8659cd68c914544e27d5d9d">Kratos::ParticleMechanicsMathUtilities&lt; TDataType &gt;</a>
-, <a class="el" href="da/de5/class_kratos_1_1_particle_vtk_output.html#a344610e4ce89cf92f03ac89a9fad8cf0">Kratos::ParticleVtkOutput</a>
 , <a class="el" href="d5/dff/group___contact_structural_mechanics_application.html#ga82ce8051e9f5dee0195575d663763920">Kratos::PenaltyFrictionlessMortarConvergenceCriteria&lt; TSparseSpace, TDenseSpace &gt;</a>
 , <a class="el" href="de/dac/class_kratos_1_1_penalty_method_frictional_mortar_contact_axisym_condition.html#abfc489154748b276b381d14c1963dae2">Kratos::PenaltyMethodFrictionalMortarContactAxisymCondition&lt; TNumNodes, TNormalVariation, TNumNodesMaster &gt;</a>
 , <a class="el" href="d9/d78/class_kratos_1_1_penalty_method_frictional_mortar_contact_condition.html#a02f572dcf75ba19a9925365ef8561b67">Kratos::PenaltyMethodFrictionalMortarContactCondition&lt; TDim, TNumNodes, TNormalVariation, TNumNodesMaster &gt;</a>
@@ -1623,7 +1624,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 13 2024 03:49:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Mar 14 2024 03:43:10 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

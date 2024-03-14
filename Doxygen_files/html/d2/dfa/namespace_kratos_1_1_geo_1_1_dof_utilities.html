@@ -98,27 +98,36 @@ Functions</h2></td></tr>
 <tr class="separator:adfac1e6fc2b79495c56938d19d2ea19a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab51eb1d7c20c9ff7c92bf433eb909010"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#ab51eb1d7c20c9ff7c92bf433eb909010">ExtractSecondTimeDerivativesOfUPwDofs</a> (const std::vector&lt; <a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; * &gt; &amp;rDofs, <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> BufferIndex)</td></tr>
 <tr class="separator:ab51eb1d7c20c9ff7c92bf433eb909010"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8930041bd0df6fac1f4258979a24a562"><td class="memTemplParams" colspan="2">template&lt;typename InputIt &gt; </td></tr>
-<tr class="memitem:a8930041bd0df6fac1f4258979a24a562"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#a8930041bd0df6fac1f4258979a24a562">ExtractDofsFromNodes</a> (InputIt NodePtrRangeBegin, InputIt NodePtrRangeEnd, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rDofVariable)</td></tr>
-<tr class="separator:a8930041bd0df6fac1f4258979a24a562"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f8ac509d16319174d54e8c25c607f7f"><td class="memTemplParams" colspan="2">template&lt;typename NodePtrRange &gt; </td></tr>
-<tr class="memitem:a8f8ac509d16319174d54e8c25c607f7f"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#a8f8ac509d16319174d54e8c25c607f7f">ExtractDofsFromNodes</a> (const NodePtrRange &amp;rNodePtrs, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rDofVariable)</td></tr>
-<tr class="separator:a8f8ac509d16319174d54e8c25c607f7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1874d0ac495fb927956e165dacdbfb97"><td class="memTemplParams" colspan="2">template&lt;typename InputIt , typename OutputIt &gt; </td></tr>
+<tr class="memitem:a1874d0ac495fb927956e165dacdbfb97"><td class="memTemplItemLeft" align="right" valign="top">OutputIt&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#a1874d0ac495fb927956e165dacdbfb97">ExtractDofsFromNodes</a> (InputIt NodeRangeBegin, InputIt NodeRangeEnd, OutputIt DofPtrRangeBegin, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rDofVariable)</td></tr>
+<tr class="separator:a1874d0ac495fb927956e165dacdbfb97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a459c414973e7cb23e7c876753ee97dd9"><td class="memTemplParams" colspan="2">template&lt;typename InputIt &gt; </td></tr>
+<tr class="memitem:a459c414973e7cb23e7c876753ee97dd9"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#a459c414973e7cb23e7c876753ee97dd9">ExtractDofsFromNodes</a> (InputIt NodeRangeBegin, InputIt NodeRangeEnd, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rDofVariable)</td></tr>
+<tr class="separator:a459c414973e7cb23e7c876753ee97dd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84cafd15722045435dd2629467a2ee70"><td class="memTemplParams" colspan="2">template&lt;typename NodeRange &gt; </td></tr>
+<tr class="memitem:a84cafd15722045435dd2629467a2ee70"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#a84cafd15722045435dd2629467a2ee70">ExtractDofsFromNodes</a> (const NodeRange &amp;rNodes, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rDofVariable)</td></tr>
+<tr class="separator:a84cafd15722045435dd2629467a2ee70"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17caaabd345901f407983b217185c4d7"><td class="memTemplParams" colspan="2">template&lt;typename DisplacementNodeRange , typename WaterPressureNodeRange &gt; </td></tr>
+<tr class="memitem:a17caaabd345901f407983b217185c4d7"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#a17caaabd345901f407983b217185c4d7">ExtractUPwDofsFromNodes</a> (const DisplacementNodeRange &amp;rDisplacementNodes, const WaterPressureNodeRange &amp;rWaterPressureNodes, std::size_t ModelDimension)</td></tr>
+<tr class="separator:a17caaabd345901f407983b217185c4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a255c1ebe9ecdfa1c17216818fe8594"><td class="memTemplParams" colspan="2">template&lt;typename NodeRange &gt; </td></tr>
+<tr class="memitem:a6a255c1ebe9ecdfa1c17216818fe8594"><td class="memTemplItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; * &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#a6a255c1ebe9ecdfa1c17216818fe8594">ExtractUPwDofsFromNodes</a> (const NodeRange &amp;rNodes, std::size_t ModelDimension)</td></tr>
+<tr class="separator:a6a255c1ebe9ecdfa1c17216818fe8594"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
-<a id="a8f8ac509d16319174d54e8c25c607f7f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f8ac509d16319174d54e8c25c607f7f">&#9670;&nbsp;</a></span>ExtractDofsFromNodes() <span class="overload">[1/2]</span></h2>
+<a id="a84cafd15722045435dd2629467a2ee70"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84cafd15722045435dd2629467a2ee70">&#9670;&nbsp;</a></span>ExtractDofsFromNodes() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;typename NodePtrRange &gt; </div>
+template&lt;typename NodeRange &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname">std::vector&lt;<a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&gt;*&gt; Kratos::Geo::DofUtilities::ExtractDofsFromNodes </td>
           <td>(</td>
-          <td class="paramtype">const NodePtrRange &amp;&#160;</td>
-          <td class="paramname"><em>rNodePtrs</em>, </td>
+          <td class="paramtype">const NodeRange &amp;&#160;</td>
+          <td class="paramname"><em>rNodes</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -136,8 +145,8 @@ template&lt;typename NodePtrRange &gt; </div>
 
 </div>
 </div>
-<a id="a8930041bd0df6fac1f4258979a24a562"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8930041bd0df6fac1f4258979a24a562">&#9670;&nbsp;</a></span>ExtractDofsFromNodes() <span class="overload">[2/2]</span></h2>
+<a id="a459c414973e7cb23e7c876753ee97dd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a459c414973e7cb23e7c876753ee97dd9">&#9670;&nbsp;</a></span>ExtractDofsFromNodes() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -148,13 +157,55 @@ template&lt;typename InputIt &gt; </div>
           <td class="memname">std::vector&lt;<a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&gt;*&gt; Kratos::Geo::DofUtilities::ExtractDofsFromNodes </td>
           <td>(</td>
           <td class="paramtype">InputIt&#160;</td>
-          <td class="paramname"><em>NodePtrRangeBegin</em>, </td>
+          <td class="paramname"><em>NodeRangeBegin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">InputIt&#160;</td>
-          <td class="paramname"><em>NodePtrRangeEnd</em>, </td>
+          <td class="paramname"><em>NodeRangeEnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rDofVariable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1874d0ac495fb927956e165dacdbfb97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1874d0ac495fb927956e165dacdbfb97">&#9670;&nbsp;</a></span>ExtractDofsFromNodes() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename InputIt , typename OutputIt &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">OutputIt Kratos::Geo::DofUtilities::ExtractDofsFromNodes </td>
+          <td>(</td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>NodeRangeBegin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">InputIt&#160;</td>
+          <td class="paramname"><em>NodeRangeEnd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">OutputIt&#160;</td>
+          <td class="paramname"><em>DofPtrRangeBegin</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -358,10 +409,76 @@ template&lt;typename InputIt &gt; </div>
 
 </div>
 </div>
+<a id="a17caaabd345901f407983b217185c4d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17caaabd345901f407983b217185c4d7">&#9670;&nbsp;</a></span>ExtractUPwDofsFromNodes() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename DisplacementNodeRange , typename WaterPressureNodeRange &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&gt;*&gt; Kratos::Geo::DofUtilities::ExtractUPwDofsFromNodes </td>
+          <td>(</td>
+          <td class="paramtype">const DisplacementNodeRange &amp;&#160;</td>
+          <td class="paramname"><em>rDisplacementNodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const WaterPressureNodeRange &amp;&#160;</td>
+          <td class="paramname"><em>rWaterPressureNodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>ModelDimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6a255c1ebe9ecdfa1c17216818fe8594"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a255c1ebe9ecdfa1c17216818fe8594">&#9670;&nbsp;</a></span>ExtractUPwDofsFromNodes() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename NodeRange &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../dc/d58/class_kratos_1_1_dof.html">Dof</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&gt;*&gt; Kratos::Geo::DofUtilities::ExtractUPwDofsFromNodes </td>
+          <td>(</td>
+          <td class="paramtype">const NodeRange &amp;&#160;</td>
+          <td class="paramname"><em>rNodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>ModelDimension</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 13 2024 03:48:19 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Mar 14 2024 03:41:57 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

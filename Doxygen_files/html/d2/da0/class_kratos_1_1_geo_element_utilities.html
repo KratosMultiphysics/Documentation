@@ -94,19 +94,16 @@ Collaboration diagram for Kratos::GeoElementUtilities:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a71654fab99890dafbe6db8fe87b79b99"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a71654fab99890dafbe6db8fe87b79b99">NodeType</a></td></tr>
-<tr class="separator:a71654fab99890dafbe6db8fe87b79b99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5a7bc26dd719bc529a476e945434c5f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a71654fab99890dafbe6db8fe87b79b99">NodeType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ae5a7bc26dd719bc529a476e945434c5f">GeometryType</a></td></tr>
-<tr class="separator:ae5a7bc26dd719bc529a476e945434c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade2dd10ca9280ae2392039808c6b2238"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ade2dd10ca9280ae2392039808c6b2238">IndexType</a> = std::size_t</td></tr>
+<tr class="separator:ade2dd10ca9280ae2392039808c6b2238"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af4b759bb259576186b4295e28cc13537"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#af4b759bb259576186b4295e28cc13537">GeometryType</a> = <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &gt;</td></tr>
+<tr class="separator:af4b759bb259576186b4295e28cc13537"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ba8d61297cf95709bd8d40b6e3ecb0a"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
 <tr class="memitem:a9ba8d61297cf95709bd8d40b6e3ecb0a"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a9ba8d61297cf95709bd8d40b6e3ecb0a">CalculateNuMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim, TDim *TNumNodes &gt; &amp;rNu, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;NContainer, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> GPoint)</td></tr>
 <tr class="separator:a9ba8d61297cf95709bd8d40b6e3ecb0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a92a8e96f0e7a953b864ba68a2a59157a"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
-<tr class="memitem:a92a8e96f0e7a953b864ba68a2a59157a"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a92a8e96f0e7a953b864ba68a2a59157a">CalculateNuElementMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>,(TDim+1), TNumNodes *(TDim+1)&gt; &amp;rNut, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;NContainer, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> GPoint)</td></tr>
-<tr class="separator:a92a8e96f0e7a953b864ba68a2a59157a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad28813c2a10c9f78a5197cfeb180d170"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
 <tr class="memitem:ad28813c2a10c9f78a5197cfeb180d170"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ad28813c2a10c9f78a5197cfeb180d170">InterpolateVariableWithComponents</a> (<a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim &gt; &amp;rVector, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;NContainer, const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim *TNumNodes &gt; &amp;VariableWithComponents, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> GPoint)</td></tr>
 <tr class="separator:ad28813c2a10c9f78a5197cfeb180d170"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,10 +115,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ada055f18fba0070b904d09da234100b7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ada055f18fba0070b904d09da234100b7">FillArray1dOutput</a> (<a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;rOutputValue, const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;ComputedValue)</td></tr>
 <tr class="separator:ada055f18fba0070b904d09da234100b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f55995d600f3cadcedfd0fff02c4928"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
-<tr class="memitem:a8f55995d600f3cadcedfd0fff02c4928"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a8f55995d600f3cadcedfd0fff02c4928">GetNodalVariableVector</a> (<a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim *TNumNodes &gt; &amp;rNodalVariableVector, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;Geom, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;<a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>, IndexType SolutionStepIndex=0)</td></tr>
+<tr class="memitem:a8f55995d600f3cadcedfd0fff02c4928"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a8f55995d600f3cadcedfd0fff02c4928">GetNodalVariableVector</a> (<a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim *TNumNodes &gt; &amp;rNodalVariableVector, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;Geom, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;<a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>, <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ade2dd10ca9280ae2392039808c6b2238">IndexType</a> SolutionStepIndex=0)</td></tr>
 <tr class="separator:a8f55995d600f3cadcedfd0fff02c4928"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca3df2a78a89d3150d1dd3e0c2aea214"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
-<tr class="memitem:aca3df2a78a89d3150d1dd3e0c2aea214"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#aca3df2a78a89d3150d1dd3e0c2aea214">GetNodalVariableMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rNodalVariableMatrix, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;rGeom, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;<a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>, IndexType SolutionStepIndex=0)</td></tr>
+<tr class="memitem:aca3df2a78a89d3150d1dd3e0c2aea214"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#aca3df2a78a89d3150d1dd3e0c2aea214">GetNodalVariableMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rNodalVariableMatrix, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;rGeom, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;<a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>, <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ade2dd10ca9280ae2392039808c6b2238">IndexType</a> SolutionStepIndex=0)</td></tr>
 <tr class="separator:aca3df2a78a89d3150d1dd3e0c2aea214"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a554fdab79d1928246e9698551ca88b90"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a554fdab79d1928246e9698551ca88b90">FillPermeabilityMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 2, 2 &gt; &amp;rPermeabilityMatrix, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6fc34b088a4dbbfe82a57b8a946e9be4">Element::PropertiesType</a> &amp;Prop)</td></tr>
 <tr class="separator:a554fdab79d1928246e9698551ca88b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,28 +131,27 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9e1ba47e380b77d5302cc77b1d4d1ff2"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim&gt; </td></tr>
 <tr class="memitem:a9e1ba47e380b77d5302cc77b1d4d1ff2"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a9e1ba47e380b77d5302cc77b1d4d1ff2">AssembleDensityMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim+1, TDim+1 &gt; &amp;DensityMatrix, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Density)</td></tr>
 <tr class="separator:a9e1ba47e380b77d5302cc77b1d4d1ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a871b2f25409c45efdafecf819ed40b06"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a871b2f25409c45efdafecf819ed40b06">AssembleDensityMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;DensityMatrix, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Density)</td></tr>
-<tr class="separator:a871b2f25409c45efdafecf819ed40b06"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f415c1f47b9a3fe58dc97396cd7b6d5"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
-<tr class="memitem:a9f415c1f47b9a3fe58dc97396cd7b6d5"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a9f415c1f47b9a3fe58dc97396cd7b6d5">AssembleUBlockMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim *TNumNodes, TDim *TNumNodes &gt; &amp;UBlockMatrix)</td></tr>
-<tr class="separator:a9f415c1f47b9a3fe58dc97396cd7b6d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae38e598d1322085ddacb75edfddf8b44"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ae38e598d1322085ddacb75edfddf8b44">AssembleUBlockMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;UBlockMatrix, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> TNumNodes, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> TDim)</td></tr>
-<tr class="separator:ae38e598d1322085ddacb75edfddf8b44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19f416cf78ee2e8aaf584f837f1ff3fe"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
-<tr class="memitem:a19f416cf78ee2e8aaf584f837f1ff3fe"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a19f416cf78ee2e8aaf584f837f1ff3fe">AssembleUPBlockMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim *TNumNodes, TNumNodes &gt; &amp;UPBlockMatrix)</td></tr>
-<tr class="separator:a19f416cf78ee2e8aaf584f837f1ff3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab96f2d0b8bb8bacb83645e4d1d32f392"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
-<tr class="memitem:ab96f2d0b8bb8bacb83645e4d1d32f392"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ab96f2d0b8bb8bacb83645e4d1d32f392">AssemblePUBlockMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes, TNumNodes *TDim &gt; &amp;PUBlockMatrix)</td></tr>
-<tr class="separator:ab96f2d0b8bb8bacb83645e4d1d32f392"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a96ce7d538a586caf2b11a898ce607644"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
-<tr class="memitem:a96ce7d538a586caf2b11a898ce607644"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a96ce7d538a586caf2b11a898ce607644">AssemblePBlockMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes, TNumNodes &gt; &amp;PBlockMatrix)</td></tr>
-<tr class="separator:a96ce7d538a586caf2b11a898ce607644"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac99a5d02868d10f91698af1092c1080"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
-<tr class="memitem:aac99a5d02868d10f91698af1092c1080"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#aac99a5d02868d10f91698af1092c1080">AssembleUBlockVector</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rRightHandSideVector, const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim *TNumNodes &gt; &amp;UBlockVector, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> OffsetDof=1)</td></tr>
-<tr class="separator:aac99a5d02868d10f91698af1092c1080"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00f1f70b1d89d53362550f684625fbe6"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
-<tr class="memitem:a00f1f70b1d89d53362550f684625fbe6"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a00f1f70b1d89d53362550f684625fbe6">AssemblePBlockVector</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rRightHandSideVector, const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes &gt; &amp;PBlockVector)</td></tr>
-<tr class="separator:a00f1f70b1d89d53362550f684625fbe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad9c21e71794fc1fcf48bd58b81eb1e5b"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
+<tr class="memitem:ad9c21e71794fc1fcf48bd58b81eb1e5b"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ad9c21e71794fc1fcf48bd58b81eb1e5b">AssembleDensityMatrix</a> (MatrixType &amp;DensityMatrix, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Density)</td></tr>
+<tr class="separator:ad9c21e71794fc1fcf48bd58b81eb1e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa236cf7501faae4cb16c3affbb0beb24"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType1 , typename MatrixType2 &gt; </td></tr>
+<tr class="memitem:aa236cf7501faae4cb16c3affbb0beb24"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#aa236cf7501faae4cb16c3affbb0beb24">AssembleUUBlockMatrix</a> (MatrixType1 &amp;rLeftHandSideMatrix, const MatrixType2 &amp;rUUBlockMatrix)</td></tr>
+<tr class="separator:aa236cf7501faae4cb16c3affbb0beb24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab050e985f2c36f0d6d1f9be655986d04"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType1 , typename MatrixType2 &gt; </td></tr>
+<tr class="memitem:ab050e985f2c36f0d6d1f9be655986d04"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ab050e985f2c36f0d6d1f9be655986d04">AssembleUPBlockMatrix</a> (MatrixType1 &amp;rLeftHandSideMatrix, const MatrixType2 &amp;rUPBlockMatrix)</td></tr>
+<tr class="separator:ab050e985f2c36f0d6d1f9be655986d04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a31daf38f1ae9fbbe432840f665af44b7"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType1 , typename MatrixType2 &gt; </td></tr>
+<tr class="memitem:a31daf38f1ae9fbbe432840f665af44b7"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a31daf38f1ae9fbbe432840f665af44b7">AssemblePUBlockMatrix</a> (MatrixType1 &amp;rLeftHandSideMatrix, const MatrixType2 &amp;rPUBlockMatrix)</td></tr>
+<tr class="separator:a31daf38f1ae9fbbe432840f665af44b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34342d1b33b9e23ef1593512ae3887b0"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType1 , typename MatrixType2 &gt; </td></tr>
+<tr class="memitem:a34342d1b33b9e23ef1593512ae3887b0"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a34342d1b33b9e23ef1593512ae3887b0">AssemblePPBlockMatrix</a> (MatrixType1 &amp;rLeftHandSideMatrix, const MatrixType2 &amp;rPPBlockMatrix)</td></tr>
+<tr class="separator:a34342d1b33b9e23ef1593512ae3887b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce663b675f50bdb0a6e6f9933ee5c0e"><td class="memTemplParams" colspan="2">template&lt;typename VectorType1 , typename VectorType2 &gt; </td></tr>
+<tr class="memitem:adce663b675f50bdb0a6e6f9933ee5c0e"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#adce663b675f50bdb0a6e6f9933ee5c0e">AssembleUBlockVector</a> (VectorType1 &amp;rRightHandSideVector, const VectorType2 &amp;rUBlockVector)</td></tr>
+<tr class="separator:adce663b675f50bdb0a6e6f9933ee5c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e5bf532d1b9d16b6aa95f70432e4411"><td class="memTemplParams" colspan="2">template&lt;typename VectorType1 , typename VectorType2 &gt; </td></tr>
+<tr class="memitem:a3e5bf532d1b9d16b6aa95f70432e4411"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a3e5bf532d1b9d16b6aa95f70432e4411">AssemblePBlockVector</a> (VectorType1 &amp;rRightHandSideVector, const VectorType2 &amp;rPBlockVector)</td></tr>
+<tr class="separator:a3e5bf532d1b9d16b6aa95f70432e4411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a219ad4d7ee1979e2279351ce9b1e9b0d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a219ad4d7ee1979e2279351ce9b1e9b0d">CalculateNewtonCotesLocalShapeFunctionsGradients</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 2, 2 &gt; &amp;DN_DeContainer)</td></tr>
 <tr class="separator:a219ad4d7ee1979e2279351ce9b1e9b0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9a1fac479d3829375f7e27714110da4"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ac9a1fac479d3829375f7e27714110da4">CalculateNewtonCotesLocalShapeFunctionsGradients</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3, 3 &gt; &amp;DN_DeContainer)</td></tr>
@@ -166,9 +162,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a0325254ae410e50c0dc129e5f3a85305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a29035481605a37d5cbf1fc2c100adb5c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a29035481605a37d5cbf1fc2c100adb5c">CalculateEquallyDistributedPointsLineGradientShapeFunctions3N</a> (<a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a9a9f40ce01f8a5e2fd995f462012ffd4">GeometryData::ShapeFunctionsGradientsType</a> &amp;DN_DeContainer)</td></tr>
 <tr class="separator:a29035481605a37d5cbf1fc2c100adb5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a34360c7b93683380df2741c38b17fc42"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a34360c7b93683380df2741c38b17fc42">CalculateRadius</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;N, const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ae5a7bc26dd719bc529a476e945434c5f">GeometryType</a> &amp;Geom)</td></tr>
+<tr class="memitem:a34360c7b93683380df2741c38b17fc42"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a34360c7b93683380df2741c38b17fc42">CalculateRadius</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;N, const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#af4b759bb259576186b4295e28cc13537">GeometryType</a> &amp;Geom)</td></tr>
 <tr class="separator:a34360c7b93683380df2741c38b17fc42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ce802b94f002f21a3563a8ddcb97070"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a0ce802b94f002f21a3563a8ddcb97070">CalculateAxisymmetricCircumference</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;N, const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ae5a7bc26dd719bc529a476e945434c5f">GeometryType</a> &amp;Geom)</td></tr>
+<tr class="memitem:a0ce802b94f002f21a3563a8ddcb97070"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a0ce802b94f002f21a3563a8ddcb97070">CalculateAxisymmetricCircumference</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;N, const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#af4b759bb259576186b4295e28cc13537">GeometryType</a> &amp;Geom)</td></tr>
 <tr class="separator:a0ce802b94f002f21a3563a8ddcb97070"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9eebab9ea0f634e6474d810812387b78"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a9eebab9ea0f634e6474d810812387b78">CalculateExtrapolationMatrixTriangle</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rExtrapolationMatrix, const <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">GeometryData::IntegrationMethod</a> &amp;rIntegrationMethod)</td></tr>
 <tr class="separator:a9eebab9ea0f634e6474d810812387b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -178,32 +174,32 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a8cabd827ec778fb209d46e6f147498c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dcbb536a6e2dca3636c1e38716b76c5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a3dcbb536a6e2dca3636c1e38716b76c5">CalculateExtrapolationMatrixHexa</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rExtrapolationMatrix, const <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">GeometryData::IntegrationMethod</a> &amp;rIntegrationMethod)</td></tr>
 <tr class="separator:a3dcbb536a6e2dca3636c1e38716b76c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a292e1520c789596d54907003aeb5fe54"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a292e1520c789596d54907003aeb5fe54">CalculateNodalHydraulicHeadFromWaterPressures</a> (const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ae5a7bc26dd719bc529a476e945434c5f">GeometryType</a> &amp;rGeom, const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;rProp)</td></tr>
+<tr class="memitem:a292e1520c789596d54907003aeb5fe54"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a292e1520c789596d54907003aeb5fe54">CalculateNodalHydraulicHeadFromWaterPressures</a> (const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#af4b759bb259576186b4295e28cc13537">GeometryType</a> &amp;rGeom, const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;rProp)</td></tr>
 <tr class="separator:a292e1520c789596d54907003aeb5fe54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ae5a7bc26dd719bc529a476e945434c5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5a7bc26dd719bc529a476e945434c5f">&#9670;&nbsp;</a></span>GeometryType</h2>
+<a id="af4b759bb259576186b4295e28cc13537"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af4b759bb259576186b4295e28cc13537">&#9670;&nbsp;</a></span>GeometryType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt;<a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a71654fab99890dafbe6db8fe87b79b99">NodeType</a>&gt; <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ae5a7bc26dd719bc529a476e945434c5f">Kratos::GeoElementUtilities::GeometryType</a></td>
+          <td class="memname">using <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#af4b759bb259576186b4295e28cc13537">Kratos::GeoElementUtilities::GeometryType</a> =  <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt;<a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a71654fab99890dafbe6db8fe87b79b99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a71654fab99890dafbe6db8fe87b79b99">&#9670;&nbsp;</a></span>NodeType</h2>
+<a id="ade2dd10ca9280ae2392039808c6b2238"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade2dd10ca9280ae2392039808c6b2238">&#9670;&nbsp;</a></span>IndexType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a71654fab99890dafbe6db8fe87b79b99">Kratos::GeoElementUtilities::NodeType</a></td>
+          <td class="memname">using <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ade2dd10ca9280ae2392039808c6b2238">Kratos::GeoElementUtilities::IndexType</a> =  std::size_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -249,11 +245,13 @@ template&lt;unsigned int TDim&gt; </div>
 
 </div>
 </div>
-<a id="a871b2f25409c45efdafecf819ed40b06"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a871b2f25409c45efdafecf819ed40b06">&#9670;&nbsp;</a></span>AssembleDensityMatrix() <span class="overload">[2/2]</span></h2>
+<a id="ad9c21e71794fc1fcf48bd58b81eb1e5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c21e71794fc1fcf48bd58b81eb1e5b">&#9670;&nbsp;</a></span>AssembleDensityMatrix() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatrixType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -261,7 +259,7 @@ template&lt;unsigned int TDim&gt; </div>
         <tr>
           <td class="memname">static void Kratos::GeoElementUtilities::AssembleDensityMatrix </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramtype">MatrixType &amp;&#160;</td>
           <td class="paramname"><em>DensityMatrix</em>, </td>
         </tr>
         <tr>
@@ -285,51 +283,13 @@ template&lt;unsigned int TDim&gt; </div>
 
 </div>
 </div>
-<a id="a96ce7d538a586caf2b11a898ce607644"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a96ce7d538a586caf2b11a898ce607644">&#9670;&nbsp;</a></span>AssemblePBlockMatrix()</h2>
+<a id="a3e5bf532d1b9d16b6aa95f70432e4411"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e5bf532d1b9d16b6aa95f70432e4411">&#9670;&nbsp;</a></span>AssemblePBlockVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Kratos::GeoElementUtilities::AssemblePBlockMatrix </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes, TNumNodes &gt; &amp;&#160;</td>
-          <td class="paramname"><em>PBlockMatrix</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a00f1f70b1d89d53362550f684625fbe6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a00f1f70b1d89d53362550f684625fbe6">&#9670;&nbsp;</a></span>AssemblePBlockVector()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+template&lt;typename VectorType1 , typename VectorType2 &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -337,14 +297,14 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="memname">static void Kratos::GeoElementUtilities::AssemblePBlockVector </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramtype">VectorType1 &amp;&#160;</td>
           <td class="paramname"><em>rRightHandSideVector</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes &gt; &amp;&#160;</td>
-          <td class="paramname"><em>PBlockVector</em>&#160;</td>
+          <td class="paramtype">const VectorType2 &amp;&#160;</td>
+          <td class="paramname"><em>rPBlockVector</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -361,13 +321,51 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="ab96f2d0b8bb8bacb83645e4d1d32f392"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab96f2d0b8bb8bacb83645e4d1d32f392">&#9670;&nbsp;</a></span>AssemblePUBlockMatrix()</h2>
+<a id="a34342d1b33b9e23ef1593512ae3887b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34342d1b33b9e23ef1593512ae3887b0">&#9670;&nbsp;</a></span>AssemblePPBlockMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+template&lt;typename MatrixType1 , typename MatrixType2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::GeoElementUtilities::AssemblePPBlockMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MatrixType1 &amp;&#160;</td>
+          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MatrixType2 &amp;&#160;</td>
+          <td class="paramname"><em>rPPBlockMatrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a31daf38f1ae9fbbe432840f665af44b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a31daf38f1ae9fbbe432840f665af44b7">&#9670;&nbsp;</a></span>AssemblePUBlockMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatrixType1 , typename MatrixType2 &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -375,14 +373,14 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="memname">static void Kratos::GeoElementUtilities::AssemblePUBlockMatrix </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramtype">MatrixType1 &amp;&#160;</td>
           <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes, TNumNodes *TDim &gt; &amp;&#160;</td>
-          <td class="paramname"><em>PUBlockMatrix</em>&#160;</td>
+          <td class="paramtype">const MatrixType2 &amp;&#160;</td>
+          <td class="paramname"><em>rPUBlockMatrix</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -399,99 +397,13 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="a9f415c1f47b9a3fe58dc97396cd7b6d5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f415c1f47b9a3fe58dc97396cd7b6d5">&#9670;&nbsp;</a></span>AssembleUBlockMatrix() <span class="overload">[1/2]</span></h2>
+<a id="adce663b675f50bdb0a6e6f9933ee5c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adce663b675f50bdb0a6e6f9933ee5c0e">&#9670;&nbsp;</a></span>AssembleUBlockVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Kratos::GeoElementUtilities::AssembleUBlockMatrix </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim *TNumNodes, TDim *TNumNodes &gt; &amp;&#160;</td>
-          <td class="paramname"><em>UBlockMatrix</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ae38e598d1322085ddacb75edfddf8b44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae38e598d1322085ddacb75edfddf8b44">&#9670;&nbsp;</a></span>AssembleUBlockMatrix() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Kratos::GeoElementUtilities::AssembleUBlockMatrix </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>UBlockMatrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
-          <td class="paramname"><em>TNumNodes</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
-          <td class="paramname"><em>TDim</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aac99a5d02868d10f91698af1092c1080"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac99a5d02868d10f91698af1092c1080">&#9670;&nbsp;</a></span>AssembleUBlockVector()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+template&lt;typename VectorType1 , typename VectorType2 &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -499,20 +411,14 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="memname">static void Kratos::GeoElementUtilities::AssembleUBlockVector </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramtype">VectorType1 &amp;&#160;</td>
           <td class="paramname"><em>rRightHandSideVector</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim *TNumNodes &gt; &amp;&#160;</td>
-          <td class="paramname"><em>UBlockVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
-          <td class="paramname"><em>OffsetDof</em> = <code>1</code>&#160;</td>
+          <td class="paramtype">const VectorType2 &amp;&#160;</td>
+          <td class="paramname"><em>rUBlockVector</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -529,13 +435,13 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="a19f416cf78ee2e8aaf584f837f1ff3fe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19f416cf78ee2e8aaf584f837f1ff3fe">&#9670;&nbsp;</a></span>AssembleUPBlockMatrix()</h2>
+<a id="ab050e985f2c36f0d6d1f9be655986d04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab050e985f2c36f0d6d1f9be655986d04">&#9670;&nbsp;</a></span>AssembleUPBlockMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+template&lt;typename MatrixType1 , typename MatrixType2 &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -543,14 +449,52 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="memname">static void Kratos::GeoElementUtilities::AssembleUPBlockMatrix </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramtype">MatrixType1 &amp;&#160;</td>
           <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim *TNumNodes, TNumNodes &gt; &amp;&#160;</td>
-          <td class="paramname"><em>UPBlockMatrix</em>&#160;</td>
+          <td class="paramtype">const MatrixType2 &amp;&#160;</td>
+          <td class="paramname"><em>rUPBlockMatrix</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa236cf7501faae4cb16c3affbb0beb24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa236cf7501faae4cb16c3affbb0beb24">&#9670;&nbsp;</a></span>AssembleUUBlockMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MatrixType1 , typename MatrixType2 &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::GeoElementUtilities::AssembleUUBlockMatrix </td>
+          <td>(</td>
+          <td class="paramtype">MatrixType1 &amp;&#160;</td>
+          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const MatrixType2 &amp;&#160;</td>
+          <td class="paramname"><em>rUUBlockMatrix</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -585,7 +529,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ae5a7bc26dd719bc529a476e945434c5f">GeometryType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#af4b759bb259576186b4295e28cc13537">GeometryType</a> &amp;&#160;</td>
           <td class="paramname"><em>Geom</em>&#160;</td>
         </tr>
         <tr>
@@ -890,7 +834,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="memname">static <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> Kratos::GeoElementUtilities::CalculateNodalHydraulicHeadFromWaterPressures </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ae5a7bc26dd719bc529a476e945434c5f">GeometryType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#af4b759bb259576186b4295e28cc13537">GeometryType</a> &amp;&#160;</td>
           <td class="paramname"><em>rGeom</em>, </td>
         </tr>
         <tr>
@@ -898,50 +842,6 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;&#160;</td>
           <td class="paramname"><em>rProp</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a92a8e96f0e7a953b864ba68a2a59157a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92a8e96f0e7a953b864ba68a2a59157a">&#9670;&nbsp;</a></span>CalculateNuElementMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Kratos::GeoElementUtilities::CalculateNuElementMatrix </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>,(TDim+1), TNumNodes *(TDim+1)&gt; &amp;&#160;</td>
-          <td class="paramname"><em>rNut</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>NContainer</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
-          <td class="paramname"><em>GPoint</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1020,7 +920,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ae5a7bc26dd719bc529a476e945434c5f">GeometryType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#af4b759bb259576186b4295e28cc13537">GeometryType</a> &amp;&#160;</td>
           <td class="paramname"><em>Geom</em>&#160;</td>
         </tr>
         <tr>
@@ -1222,7 +1122,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ade2dd10ca9280ae2392039808c6b2238">IndexType</a>&#160;</td>
           <td class="paramname"><em>SolutionStepIndex</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
@@ -1272,7 +1172,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">IndexType&#160;</td>
+          <td class="paramtype"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ade2dd10ca9280ae2392039808c6b2238">IndexType</a>&#160;</td>
           <td class="paramname"><em>SolutionStepIndex</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
@@ -1474,7 +1374,7 @@ template&lt;unsigned int TDof, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 13 2024 03:26:40 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Mar 14 2024 03:20:19 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

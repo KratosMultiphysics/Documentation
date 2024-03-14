@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KratosMultiphysics: /home/runner/work/Documentation/Documentation/master/applications/ParticleMechanicsApplication/custom_constitutive/hardening_laws/exponential_strain_softening_law.hpp Source File</title>
+<title>KratosMultiphysics: /home/runner/work/Documentation/Documentation/master/applications/MPMApplication/custom_constitutive/hardening_laws/exponential_strain_softening_law.hpp Source File</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -71,7 +71,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="../../dir_a6e4fee11f07c3b70486e88fe92cbbdc.html">applications</a></li><li class="navelem"><a class="el" href="../../dir_495c46c5189e28e141ddfcad8bf7a9d1.html">ParticleMechanicsApplication</a></li><li class="navelem"><a class="el" href="../../dir_b41eedea77d9ea267654de3902d74bac.html">custom_constitutive</a></li><li class="navelem"><a class="el" href="../../dir_d847ef7a2d216a7c075204b162d87d6f.html">hardening_laws</a></li>  </ul>
+<li class="navelem"><a class="el" href="../../dir_a6e4fee11f07c3b70486e88fe92cbbdc.html">applications</a></li><li class="navelem"><a class="el" href="../../dir_1662089d294dcb0a48a09c4425059441.html">MPMApplication</a></li><li class="navelem"><a class="el" href="../../dir_5777c995b617440b2501bba09cef31b5.html">custom_constitutive</a></li><li class="navelem"><a class="el" href="../../dir_af2197108a7f34f5cf21057f192b0d4a.html">hardening_laws</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -100,7 +100,7 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// External includes</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Project includes</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d95/particle__hardening__law_8hpp.html">custom_constitutive/hardening_laws/particle_hardening_law.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d35/mpm__hardening__law_8hpp.html">custom_constitutive/hardening_laws/mpm_hardening_law.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
@@ -111,8 +111,8 @@ $(function() {
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../de/db5/class_kratos_1_1_exponential_strain_softening_law.html">   51</a></span>&#160;<span class="keyword">class </span>KRATOS_API(PARTICLE_MECHANICS_APPLICATION) <a class="code" href="../../de/db5/class_kratos_1_1_exponential_strain_softening_law.html">ExponentialStrainSofteningLaw</a></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        : <span class="keyword">public</span> <a class="code" href="../../d3/d9a/class_kratos_1_1_particle_hardening_law.html">ParticleHardeningLaw</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../de/db5/class_kratos_1_1_exponential_strain_softening_law.html">   51</a></span>&#160;<span class="keyword">class </span>KRATOS_API(MPM_APPLICATION) <a class="code" href="../../de/db5/class_kratos_1_1_exponential_strain_softening_law.html">ExponentialStrainSofteningLaw</a></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        : <span class="keyword">public</span> <a class="code" href="../../d4/d70/class_kratos_1_1_m_p_m_hardening_law.html">MPMHardeningLaw</a></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
@@ -229,17 +229,17 @@ $(function() {
 <div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
 <div class="ttc" id="aclass_kratos_1_1_exponential_strain_softening_law_html"><div class="ttname"><a href="../../de/db5/class_kratos_1_1_exponential_strain_softening_law.html">Kratos::ExponentialStrainSofteningLaw</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> exponential_strain_softening_law.hpp:53</div></div>
 <div class="ttc" id="aclass_kratos_1_1_exponential_strain_softening_law_html_a33ef8e60ec075ca96ed63abf47072757"><div class="ttname"><a href="../../de/db5/class_kratos_1_1_exponential_strain_softening_law.html#a33ef8e60ec075ca96ed63abf47072757">Kratos::ExponentialStrainSofteningLaw::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(ExponentialStrainSofteningLaw)</div><div class="ttdoc">Pointer definition of ExponentialStrainSofteningLaw.</div></div>
-<div class="ttc" id="aclass_kratos_1_1_particle_hardening_law_html"><div class="ttname"><a href="../../d3/d9a/class_kratos_1_1_particle_hardening_law.html">Kratos::ParticleHardeningLaw</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> particle_hardening_law.hpp:58</div></div>
+<div class="ttc" id="aclass_kratos_1_1_m_p_m_hardening_law_html"><div class="ttname"><a href="../../d4/d70/class_kratos_1_1_m_p_m_hardening_law.html">Kratos::MPMHardeningLaw</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> mpm_hardening_law.hpp:58</div></div>
 <div class="ttc" id="aclass_kratos_1_1_properties_html"><div class="ttname"><a href="../../d7/d7a/class_kratos_1_1_properties.html">Kratos::Properties</a></div><div class="ttdoc">Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...</div><div class="ttdef"><b>Definition:</b> properties.h:69</div></div>
 <div class="ttc" id="aclass_kratos_1_1_serializer_html"><div class="ttname"><a href="../../dd/d32/class_kratos_1_1_serializer.html">Kratos::Serializer</a></div><div class="ttdoc">The serialization consists in storing the state of an object into a storage format like data file or ...</div><div class="ttdef"><b>Definition:</b> serializer.h:123</div></div>
 <div class="ttc" id="aclass_kratos_1_1_variable_html"><div class="ttname"><a href="../../d1/d66/class_kratos_1_1_variable.html">Kratos::Variable&lt; double &gt;</a></div></div>
+<div class="ttc" id="ampm__hardening__law_8hpp_html"><div class="ttname"><a href="../../db/d35/mpm__hardening__law_8hpp.html">mpm_hardening_law.hpp</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
 <div class="ttc" id="anamespaceode__solve_html_a0b266774af0a13d56a57cf1ada122768"><div class="ttname"><a href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">ode_solve.load</a></div><div class="ttdeci">def load(f)</div><div class="ttdef"><b>Definition:</b> ode_solve.py:307</div></div>
-<div class="ttc" id="aparticle__hardening__law_8hpp_html"><div class="ttname"><a href="../../d1/d95/particle__hardening__law_8hpp.html">particle_hardening_law.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 13 2024 02:15:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Mar 14 2024 02:06:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
