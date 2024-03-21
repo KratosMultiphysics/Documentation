@@ -90,7 +90,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::ModelPartUtils:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d80/class_kratos_1_1_model_part_utils__coll__graph.svg" width="298" height="382"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d80/class_kratos_1_1_model_part_utils__coll__graph.svg" width="298" height="411"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -131,6 +131,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aa18503577d4fc5fc4c1b3589f0b554d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abd27db973b3d4e66045d32bbac66a02b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_kratos_1_1_model_part_utils.html#abd27db973b3d4e66045d32bbac66a02b">CheckModelPartStatus</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const std::string &amp;rStatus)</td></tr>
 <tr class="separator:abd27db973b3d4e66045d32bbac66a02b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca492d2819b9173ed002f9bb8c8768ef"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_kratos_1_1_model_part_utils.html#aca492d2819b9173ed002f9bb8c8768ef">GenerateModelPart</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a0960956dac2688d5d72cdb874c450e1d">ModelPart::ConditionsContainerType</a> &amp;rOriginContainer, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rDestinationModelPart, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;rReferenceElement)</td></tr>
+<tr class="memdesc:aca492d2819b9173ed002f9bb8c8768ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate model part elements using the geometries of the conditions given in the origin container.  <a href="../../d9/d63/class_kratos_1_1_model_part_utils.html#aca492d2819b9173ed002f9bb8c8768ef">More...</a><br /></td></tr>
+<tr class="separator:aca492d2819b9173ed002f9bb8c8768ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class collecting a set of free-floating utility functions for querying and mutating <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> s. </p>
@@ -183,6 +186,58 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="aca492d2819b9173ed002f9bb8c8768ef"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca492d2819b9173ed002f9bb8c8768ef">&#9670;&nbsp;</a></span>GenerateModelPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::ModelPartUtils::GenerateModelPart </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a0960956dac2688d5d72cdb874c450e1d">ModelPart::ConditionsContainerType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rOriginContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDestinationModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;&#160;</td>
+          <td class="paramname"><em>rReferenceElement</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate model part elements using the geometries of the conditions given in the origin container. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rOriginContainer</td><td>Origin container with conditions. </td></tr>
+    <tr><td class="paramname">rDestinationModelPart</td><td>Destination model part. </td></tr>
+    <tr><td class="paramname">rReferenceElement</td><td>Reference element to be used for new element creation. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -501,7 +556,7 @@ template&lt;class TContainerType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 20 2024 02:57:28 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Mar 21 2024 03:00:40 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

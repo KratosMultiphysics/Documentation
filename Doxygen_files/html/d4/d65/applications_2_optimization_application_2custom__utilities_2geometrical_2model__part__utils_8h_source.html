@@ -138,19 +138,27 @@ $(function() {
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keyword">const</span> std::string&amp; rStatus);</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../da/d07/namespace_kratos_1_1_python.html#a97fdb35438d3870ca1e92b6a756f09e8">GenerateModelPart</a>(</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">ModelPart::ConditionsContainerType</a>&amp; rOriginContainer,</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rDestinationModelPart,</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>&amp; rReferenceElement);</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;};</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="ttc" id="aclass_kratos_1_1_element_html"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html">Kratos::Element</a></div><div class="ttdoc">Base class for all Elements.</div><div class="ttdef"><b>Definition:</b> element.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_utils_html_addc65fc97226e28e047d3e639f5a84db"><div class="ttname"><a href="../../d9/d63/class_kratos_1_1_model_part_utils.html#addc65fc97226e28e047d3e639f5a84db">Kratos::ModelPartUtils::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> model_part_utils.h:39</div></div>
+<div class="ttc" id="aclass_kratos_1_1_pointer_vector_set_html"><div class="ttname"><a href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">Kratos::PointerVectorSet</a></div><div class="ttdoc">A sorted associative container similar to an STL set, but uses a vector to store pointers to its data...</div><div class="ttdef"><b>Definition:</b> pointer_vector_set.h:72</div></div>
 <div class="ttc" id="adefine_8h_html"><div class="ttname"><a href="../../df/d67/define_8h.html">define.h</a></div></div>
 <div class="ttc" id="amodel__part_8h_html"><div class="ttname"><a href="../../dd/dfe/model__part_8h.html">model_part.h</a></div></div>
 <div class="ttc" id="anamespace_e_m_p_i_r_e___a_p_i__helpers_html_a172d46af2d7640efe8e8a8a67aa2600d"><div class="ttname"><a href="../../df/db9/namespace_e_m_p_i_r_e___a_p_i__helpers.html#a172d46af2d7640efe8e8a8a67aa2600d">EMPIRE_API_helpers::EchoLevel</a></div><div class="ttdeci">static int EchoLevel</div><div class="ttdef"><b>Definition:</b> co_sim_EMPIRE_API.h:42</div></div>
+<div class="ttc" id="anamespace_kratos_1_1_python_html_a97fdb35438d3870ca1e92b6a756f09e8"><div class="ttname"><a href="../../da/d07/namespace_kratos_1_1_python.html#a97fdb35438d3870ca1e92b6a756f09e8">Kratos::Python::GenerateModelPart</a></div><div class="ttdeci">void GenerateModelPart(FaceHeatUtilities &amp;FaceHeatUtilities, ModelPart &amp;origin_model_part, ModelPart &amp;destination_model_part, unsigned int domain_size)</div><div class="ttdef"><b>Definition:</b> add_custom_utilities_to_python.cpp:41</div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Mar 20 2024 02:54:02 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Mar 21 2024 02:57:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
