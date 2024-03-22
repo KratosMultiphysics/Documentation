@@ -310,6 +310,8 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dc5/class_kratos_1_1_fluid_element_utilities.html">Kratos::FluidElementUtilities&lt; TNumNodes &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxiliary and specialized functions for elements derived from <a class="el" href="../../dd/d83/class_kratos_1_1_fluid_element.html" title="Large Displacement Lagrangian Element for 3D and 2D geometries. (base class)">FluidElement</a>.  <a href="../../df/dc5/class_kratos_1_1_fluid_element_utilities.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d13/class_kratos_1_1_fluid_mesh_utilities.html">Kratos::FluidMeshUtilities</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/ded/class_kratos_1_1_fractional_step_settings.html">Kratos::FractionalStepSettings&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Helper class to define solution strategies for FS_Strategy.  <a href="../../d3/ded/class_kratos_1_1_fractional_step_settings.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -584,6 +586,18 @@ Friends</h2></td></tr>
 <tr class="memitem:ga52f774a9c43cad35d0cdfbdce60d51c4"><td class="memTemplParams" colspan="2">template&lt;class TDataType &gt; </td></tr>
 <tr class="memitem:ga52f774a9c43cad35d0cdfbdce60d51c4"><td class="memTemplItemLeft" align="right" valign="top">using&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga52f774a9c43cad35d0cdfbdce60d51c4">Kratos::FluidCalculationUtilities::ComponentDataType</a> = std::tuple&lt; TDataType &amp;, const TDataType &amp; &gt;</td></tr>
 <tr class="separator:ga52f774a9c43cad35d0cdfbdce60d51c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Type Definitions</h2></td></tr>
+<tr class="memitem:ga0e1f98597ab8de12febe1b4bfacc36cd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga0e1f98597ab8de12febe1b4bfacc36cd">Kratos::FluidMeshUtilities::SizeType</a> = std::size_t</td></tr>
+<tr class="separator:ga0e1f98597ab8de12febe1b4bfacc36cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4e5742078ede7a2d535e36f5877e9985"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga4e5742078ede7a2d535e36f5877e9985">Kratos::FluidMeshUtilities::IndexType</a> = std::size_t</td></tr>
+<tr class="separator:ga4e5742078ede7a2d535e36f5877e9985"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga05ea3c83bbffd60c9188598d3dea2483"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga05ea3c83bbffd60c9188598d3dea2483">Kratos::FluidMeshUtilities::NodeType</a> = <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a></td></tr>
+<tr class="separator:ga05ea3c83bbffd60c9188598d3dea2483"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf7790913975c841f5c87292976676fac"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gaf7790913975c841f5c87292976676fac">Kratos::FluidMeshUtilities::GeometryType</a> = <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga05ea3c83bbffd60c9188598d3dea2483">NodeType</a> &gt;</td></tr>
+<tr class="separator:gaf7790913975c841f5c87292976676fac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaea8b4b8f7cfbcaa752d2508f42b99272"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gaea8b4b8f7cfbcaa752d2508f42b99272">Kratos::FluidMeshUtilities::ConditionsConnectivityMapType</a> = std::unordered_map&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ab87bde09a9009899f9d0f20ae674f61a">DenseVector</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt;, std::vector&lt; Condition::Pointer &gt;, <a class="el" href="../../dc/d9b/struct_kratos_1_1_key_hasher_range.html">KeyHasherRange</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ab87bde09a9009899f9d0f20ae674f61a">DenseVector</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &gt;, <a class="el" href="../../d1/dea/struct_kratos_1_1_key_comparor_range.html">KeyComparorRange</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ab87bde09a9009899f9d0f20ae674f61a">DenseVector</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &gt; &gt;</td></tr>
+<tr class="separator:gaea8b4b8f7cfbcaa752d2508f42b99272"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type Definitions</h2></td></tr>
 <tr class="memitem:ga6eb80d012ecd48f5e52418f7b8ee5180"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga6eb80d012ecd48f5e52418f7b8ee5180">Kratos::PfemSolidConstitutiveLaw::BaseType</a></td></tr>
@@ -2475,6 +2489,14 @@ Friends</h2></td></tr>
 <tr class="memdesc:ga745421fa1cb4865b321b9dac27992bda"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates linear or logarithmic y_plus value.  <a href="../../d2/d72/group___fluid_dynamics_application.html#ga745421fa1cb4865b321b9dac27992bda">More...</a><br /></td></tr>
 <tr class="separator:ga745421fa1cb4865b321b9dac27992bda"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Static Operations</h2></td></tr>
+<tr class="memitem:ga237fd49cd536d44639cce182feac4ef8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga237fd49cd536d44639cce182feac4ef8">Kratos::FluidMeshUtilities::AllElementsAreSimplex</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
+<tr class="memdesc:ga237fd49cd536d44639cce182feac4ef8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if elements are simplex This function loops all the elements in the provided model part to check if all of them are simplex (simplicial complex), that is, linear triangles and tetrahedra.  <a href="../../d2/d72/group___fluid_dynamics_application.html#ga237fd49cd536d44639cce182feac4ef8">More...</a><br /></td></tr>
+<tr class="separator:ga237fd49cd536d44639cce182feac4ef8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga141ff5e84b067c8c8033217cf319c602"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga141ff5e84b067c8c8033217cf319c602">Kratos::FluidMeshUtilities::AssignNeighbourElementsToConditions</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> CheckRepeatedConditions=true)</td></tr>
+<tr class="memdesc:ga141ff5e84b067c8c8033217cf319c602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assigns the conditions' neigbour (parent) elements This function loops the fluid mesh conditions to assign their neighbour (parent) element Note that it also checks for repeated conditions, which are not allowed in fluid meshes Also note that this function assumes that elements' face geometries match the conditions' ones.  <a href="../../d2/d72/group___fluid_dynamics_application.html#ga141ff5e84b067c8c8033217cf319c602">More...</a><br /></td></tr>
+<tr class="separator:ga141ff5e84b067c8c8033217cf319c602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Life Cycle</h2></td></tr>
 <tr class="memitem:ga6c890b8117836847a9157bd04e0d2c59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga6c890b8117836847a9157bd04e0d2c59">Kratos::PfemSolidConstitutiveLaw::PfemSolidConstitutiveLaw</a> ()</td></tr>
 <tr class="memdesc:ga6c890b8117836847a9157bd04e0d2c59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor.  <a href="../../d2/d72/group___fluid_dynamics_application.html#ga6c890b8117836847a9157bd04e0d2c59">More...</a><br /></td></tr>
@@ -4066,6 +4088,20 @@ template&lt;class TDataType &gt; </div>
 
 </div>
 </div>
+<a id="gaea8b4b8f7cfbcaa752d2508f42b99272"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea8b4b8f7cfbcaa752d2508f42b99272">&#9670;&nbsp;</a></span>ConditionsConnectivityMapType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gaea8b4b8f7cfbcaa752d2508f42b99272">Kratos::FluidMeshUtilities::ConditionsConnectivityMapType</a> =  std::unordered_map&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ab87bde09a9009899f9d0f20ae674f61a">DenseVector</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&gt;, std::vector&lt;Condition::Pointer&gt;, <a class="el" href="../../dc/d9b/struct_kratos_1_1_key_hasher_range.html">KeyHasherRange</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ab87bde09a9009899f9d0f20ae674f61a">DenseVector</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&gt; &gt;, <a class="el" href="../../d1/dea/struct_kratos_1_1_key_comparor_range.html">KeyComparorRange</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ab87bde09a9009899f9d0f20ae674f61a">DenseVector</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&gt; &gt; &gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga410e70da9150d64a26017dd29a0cf218"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga410e70da9150d64a26017dd29a0cf218">&#9670;&nbsp;</a></span>ConstitutiveLawPointerType <span class="overload">[1/13]</span></h2>
 
@@ -5649,7 +5685,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga8aa4ad0ec796e2e4e64fff205d68ebaf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8aa4ad0ec796e2e4e64fff205d68ebaf">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[1/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8aa4ad0ec796e2e4e64fff205d68ebaf">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[1/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5667,7 +5703,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gafaff7ecab601115a615b828eece21470"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafaff7ecab601115a615b828eece21470">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[2/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gafaff7ecab601115a615b828eece21470">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[2/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5681,7 +5717,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gafcb6ce921b8b188e71071ccc19483914"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafcb6ce921b8b188e71071ccc19483914">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[3/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gafcb6ce921b8b188e71071ccc19483914">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[3/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5694,8 +5730,22 @@ template&lt;class TElementData &gt; </div>
 
 </div>
 </div>
+<a id="gaf7790913975c841f5c87292976676fac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf7790913975c841f5c87292976676fac">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[4/21]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gaf7790913975c841f5c87292976676fac">Kratos::FluidMeshUtilities::GeometryType</a> =  <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt;<a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga05ea3c83bbffd60c9188598d3dea2483">NodeType</a>&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gae1fe4cdcf6e0d53ddf61896db38718f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae1fe4cdcf6e0d53ddf61896db38718f3">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[4/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae1fe4cdcf6e0d53ddf61896db38718f3">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[5/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5713,7 +5763,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gae9d75c63e8c55462e987fe40d069e395"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae9d75c63e8c55462e987fe40d069e395">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[5/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9d75c63e8c55462e987fe40d069e395">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[6/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5731,7 +5781,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga497096b03ac0281fe0fcdfaa30af55a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga497096b03ac0281fe0fcdfaa30af55a2">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[6/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga497096b03ac0281fe0fcdfaa30af55a2">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[7/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5749,7 +5799,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga53fe4ee2f41e1492d987a1c1f5578a5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga53fe4ee2f41e1492d987a1c1f5578a5a">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[7/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga53fe4ee2f41e1492d987a1c1f5578a5a">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[8/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5767,7 +5817,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga9eeead3d0301d84a714cd087c472e032"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9eeead3d0301d84a714cd087c472e032">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[8/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9eeead3d0301d84a714cd087c472e032">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[9/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5785,7 +5835,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga3ee8aacd88643510fd6a1dfcaa0fc1a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3ee8aacd88643510fd6a1dfcaa0fc1a2">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[9/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3ee8aacd88643510fd6a1dfcaa0fc1a2">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[10/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5803,7 +5853,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga93eca84b551f2e3717abe87da479212b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga93eca84b551f2e3717abe87da479212b">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[10/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga93eca84b551f2e3717abe87da479212b">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[11/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5821,7 +5871,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga404a711f4fe97230ffc36e221d9f9c99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga404a711f4fe97230ffc36e221d9f9c99">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[11/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga404a711f4fe97230ffc36e221d9f9c99">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[12/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5839,7 +5889,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga094b3f78505dd1dabc1e6f510d330f30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga094b3f78505dd1dabc1e6f510d330f30">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[12/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga094b3f78505dd1dabc1e6f510d330f30">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[13/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5857,7 +5907,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga44fed474d55b90c4fab9c31627a514b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga44fed474d55b90c4fab9c31627a514b9">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[13/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga44fed474d55b90c4fab9c31627a514b9">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[14/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5875,7 +5925,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gabfc6f4e3a5ec534c3746c76a510e7ba0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabfc6f4e3a5ec534c3746c76a510e7ba0">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[14/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gabfc6f4e3a5ec534c3746c76a510e7ba0">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[15/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5893,7 +5943,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga0f0c99e0e1f3b0d8c05a7f1f95bc3b38"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0f0c99e0e1f3b0d8c05a7f1f95bc3b38">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[15/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f0c99e0e1f3b0d8c05a7f1f95bc3b38">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[16/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5911,7 +5961,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gac9bdf81197922e79e94f99f301e3d664"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac9bdf81197922e79e94f99f301e3d664">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[16/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9bdf81197922e79e94f99f301e3d664">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[17/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5929,7 +5979,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gadb31abd1bbf7a52710595214108442f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadb31abd1bbf7a52710595214108442f0">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[17/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gadb31abd1bbf7a52710595214108442f0">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[18/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5947,7 +5997,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gae7e7e12216f81fb0f7875fed87a159e9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae7e7e12216f81fb0f7875fed87a159e9">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[18/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae7e7e12216f81fb0f7875fed87a159e9">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[19/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5965,7 +6015,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga7e596b5ee1047c4999938b86b7445299"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7e596b5ee1047c4999938b86b7445299">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[19/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e596b5ee1047c4999938b86b7445299">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[20/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5983,7 +6033,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga56f1196c1cb89d97f0076f998303123f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga56f1196c1cb89d97f0076f998303123f">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[20/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56f1196c1cb89d97f0076f998303123f">&#9670;&nbsp;</a></span>GeometryType <span class="overload">[21/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -5997,7 +6047,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga3f7740f0fe15b9a7a8fb2aab5ca33804"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3f7740f0fe15b9a7a8fb2aab5ca33804">&#9670;&nbsp;</a></span>IndexType <span class="overload">[1/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f7740f0fe15b9a7a8fb2aab5ca33804">&#9670;&nbsp;</a></span>IndexType <span class="overload">[1/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6013,7 +6063,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga2866c8695db6c5cdd63ed9bc9d156ba4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2866c8695db6c5cdd63ed9bc9d156ba4">&#9670;&nbsp;</a></span>IndexType <span class="overload">[2/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2866c8695db6c5cdd63ed9bc9d156ba4">&#9670;&nbsp;</a></span>IndexType <span class="overload">[2/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6029,7 +6079,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga411b5cc5fa96ac97ab2de7a8b40cde2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga411b5cc5fa96ac97ab2de7a8b40cde2c">&#9670;&nbsp;</a></span>IndexType <span class="overload">[3/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga411b5cc5fa96ac97ab2de7a8b40cde2c">&#9670;&nbsp;</a></span>IndexType <span class="overload">[3/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6043,7 +6093,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga3f68b80872145a9165d2c446fbe0f660"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3f68b80872145a9165d2c446fbe0f660">&#9670;&nbsp;</a></span>IndexType <span class="overload">[4/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3f68b80872145a9165d2c446fbe0f660">&#9670;&nbsp;</a></span>IndexType <span class="overload">[4/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6056,8 +6106,22 @@ template&lt;unsigned int TDim&gt; </div>
 
 </div>
 </div>
+<a id="ga4e5742078ede7a2d535e36f5877e9985"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e5742078ede7a2d535e36f5877e9985">&#9670;&nbsp;</a></span>IndexType <span class="overload">[5/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga4e5742078ede7a2d535e36f5877e9985">Kratos::FluidMeshUtilities::IndexType</a> =  std::size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga4cde717d8a76b0b1fee1b24aaaff93df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4cde717d8a76b0b1fee1b24aaaff93df">&#9670;&nbsp;</a></span>IndexType <span class="overload">[5/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4cde717d8a76b0b1fee1b24aaaff93df">&#9670;&nbsp;</a></span>IndexType <span class="overload">[6/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6073,7 +6137,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga9976e41ea918fb1963685a79a2258726"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9976e41ea918fb1963685a79a2258726">&#9670;&nbsp;</a></span>IndexType <span class="overload">[6/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9976e41ea918fb1963685a79a2258726">&#9670;&nbsp;</a></span>IndexType <span class="overload">[7/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6089,7 +6153,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga5a83b9aecb8a02248d3fa006b1adf544"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5a83b9aecb8a02248d3fa006b1adf544">&#9670;&nbsp;</a></span>IndexType <span class="overload">[7/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5a83b9aecb8a02248d3fa006b1adf544">&#9670;&nbsp;</a></span>IndexType <span class="overload">[8/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6105,7 +6169,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga5c217771a00fef75527516b293ff15f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5c217771a00fef75527516b293ff15f7">&#9670;&nbsp;</a></span>IndexType <span class="overload">[8/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5c217771a00fef75527516b293ff15f7">&#9670;&nbsp;</a></span>IndexType <span class="overload">[9/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6121,7 +6185,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaf2ff74513e382ac78bfb736e0104b2af"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf2ff74513e382ac78bfb736e0104b2af">&#9670;&nbsp;</a></span>IndexType <span class="overload">[9/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf2ff74513e382ac78bfb736e0104b2af">&#9670;&nbsp;</a></span>IndexType <span class="overload">[10/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6137,7 +6201,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga274696502a1ac616acbb2567cb549b0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga274696502a1ac616acbb2567cb549b0f">&#9670;&nbsp;</a></span>IndexType <span class="overload">[10/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga274696502a1ac616acbb2567cb549b0f">&#9670;&nbsp;</a></span>IndexType <span class="overload">[11/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6153,7 +6217,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga00318a67903a85250d5e57152a814bc4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga00318a67903a85250d5e57152a814bc4">&#9670;&nbsp;</a></span>IndexType <span class="overload">[11/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga00318a67903a85250d5e57152a814bc4">&#9670;&nbsp;</a></span>IndexType <span class="overload">[12/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6169,7 +6233,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gace98c935cebdd80c2cdff640a9fd44b5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gace98c935cebdd80c2cdff640a9fd44b5">&#9670;&nbsp;</a></span>IndexType <span class="overload">[12/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gace98c935cebdd80c2cdff640a9fd44b5">&#9670;&nbsp;</a></span>IndexType <span class="overload">[13/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6185,7 +6249,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga180a17007e24318fa4a6eb02d4ca665b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga180a17007e24318fa4a6eb02d4ca665b">&#9670;&nbsp;</a></span>IndexType <span class="overload">[13/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga180a17007e24318fa4a6eb02d4ca665b">&#9670;&nbsp;</a></span>IndexType <span class="overload">[14/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6201,7 +6265,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga40fafbe2ce234d63cbc5759cac758915"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga40fafbe2ce234d63cbc5759cac758915">&#9670;&nbsp;</a></span>IndexType <span class="overload">[14/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40fafbe2ce234d63cbc5759cac758915">&#9670;&nbsp;</a></span>IndexType <span class="overload">[15/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6217,7 +6281,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga1ffea0cb53fdc89eb4e974510533dee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1ffea0cb53fdc89eb4e974510533dee6">&#9670;&nbsp;</a></span>IndexType <span class="overload">[15/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ffea0cb53fdc89eb4e974510533dee6">&#9670;&nbsp;</a></span>IndexType <span class="overload">[16/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6233,7 +6297,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga54b6804c1377f3665ec0c19d42105a1a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga54b6804c1377f3665ec0c19d42105a1a">&#9670;&nbsp;</a></span>IndexType <span class="overload">[16/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga54b6804c1377f3665ec0c19d42105a1a">&#9670;&nbsp;</a></span>IndexType <span class="overload">[17/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6249,7 +6313,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga8fd7503424348f883d933db1cd89e798"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8fd7503424348f883d933db1cd89e798">&#9670;&nbsp;</a></span>IndexType <span class="overload">[17/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8fd7503424348f883d933db1cd89e798">&#9670;&nbsp;</a></span>IndexType <span class="overload">[18/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6265,7 +6329,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga6102b52d83ef21ae9e2cedd4c3ace918"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6102b52d83ef21ae9e2cedd4c3ace918">&#9670;&nbsp;</a></span>IndexType <span class="overload">[18/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6102b52d83ef21ae9e2cedd4c3ace918">&#9670;&nbsp;</a></span>IndexType <span class="overload">[19/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6281,7 +6345,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gafe4fe3a85f1fac72b06bf782656205ff"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafe4fe3a85f1fac72b06bf782656205ff">&#9670;&nbsp;</a></span>IndexType <span class="overload">[19/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe4fe3a85f1fac72b06bf782656205ff">&#9670;&nbsp;</a></span>IndexType <span class="overload">[20/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6297,7 +6361,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gad25253d3283b739145dd252b6cef5e00"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad25253d3283b739145dd252b6cef5e00">&#9670;&nbsp;</a></span>IndexType <span class="overload">[20/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad25253d3283b739145dd252b6cef5e00">&#9670;&nbsp;</a></span>IndexType <span class="overload">[21/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6313,7 +6377,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gac7e19b94429f58bae9f4b9a08d6f486b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac7e19b94429f58bae9f4b9a08d6f486b">&#9670;&nbsp;</a></span>IndexType <span class="overload">[21/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7e19b94429f58bae9f4b9a08d6f486b">&#9670;&nbsp;</a></span>IndexType <span class="overload">[22/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6985,7 +7049,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gac065eb04c3d22cb884c7014b1d4e2284"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac065eb04c3d22cb884c7014b1d4e2284">&#9670;&nbsp;</a></span>NodeType <span class="overload">[1/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac065eb04c3d22cb884c7014b1d4e2284">&#9670;&nbsp;</a></span>NodeType <span class="overload">[1/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7003,7 +7067,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gabc0fa625c54a6a88f853c00acc198994"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabc0fa625c54a6a88f853c00acc198994">&#9670;&nbsp;</a></span>NodeType <span class="overload">[2/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc0fa625c54a6a88f853c00acc198994">&#9670;&nbsp;</a></span>NodeType <span class="overload">[2/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7017,7 +7081,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga14b593dd16a6772bda1c9b86eb7906f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga14b593dd16a6772bda1c9b86eb7906f0">&#9670;&nbsp;</a></span>NodeType <span class="overload">[3/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga14b593dd16a6772bda1c9b86eb7906f0">&#9670;&nbsp;</a></span>NodeType <span class="overload">[3/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7030,8 +7094,22 @@ template&lt;class TElementData &gt; </div>
 
 </div>
 </div>
+<a id="ga05ea3c83bbffd60c9188598d3dea2483"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga05ea3c83bbffd60c9188598d3dea2483">&#9670;&nbsp;</a></span>NodeType <span class="overload">[4/21]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga05ea3c83bbffd60c9188598d3dea2483">Kratos::FluidMeshUtilities::NodeType</a> =  <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ga008d6785ca52c3a5e754830d159bd6ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga008d6785ca52c3a5e754830d159bd6ef">&#9670;&nbsp;</a></span>NodeType <span class="overload">[4/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga008d6785ca52c3a5e754830d159bd6ef">&#9670;&nbsp;</a></span>NodeType <span class="overload">[5/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7049,7 +7127,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga85beef9fda6d5424c980556e26a40737"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga85beef9fda6d5424c980556e26a40737">&#9670;&nbsp;</a></span>NodeType <span class="overload">[5/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga85beef9fda6d5424c980556e26a40737">&#9670;&nbsp;</a></span>NodeType <span class="overload">[6/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7067,7 +7145,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaaffb3bdd02b9c845c0a68580bde25ef8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaffb3bdd02b9c845c0a68580bde25ef8">&#9670;&nbsp;</a></span>NodeType <span class="overload">[6/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaffb3bdd02b9c845c0a68580bde25ef8">&#9670;&nbsp;</a></span>NodeType <span class="overload">[7/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7085,7 +7163,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaa380526cd6d08b2ad4c777dbd34f456a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa380526cd6d08b2ad4c777dbd34f456a">&#9670;&nbsp;</a></span>NodeType <span class="overload">[7/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa380526cd6d08b2ad4c777dbd34f456a">&#9670;&nbsp;</a></span>NodeType <span class="overload">[8/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7103,7 +7181,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaec486c27fd34b3a8eefe641a98e0676a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaec486c27fd34b3a8eefe641a98e0676a">&#9670;&nbsp;</a></span>NodeType <span class="overload">[8/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaec486c27fd34b3a8eefe641a98e0676a">&#9670;&nbsp;</a></span>NodeType <span class="overload">[9/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7121,7 +7199,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga73a71275e7a9ea75e0bd4310b85510da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga73a71275e7a9ea75e0bd4310b85510da">&#9670;&nbsp;</a></span>NodeType <span class="overload">[9/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73a71275e7a9ea75e0bd4310b85510da">&#9670;&nbsp;</a></span>NodeType <span class="overload">[10/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7139,7 +7217,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga73eeabe0893d0e3e377fcbe3cc8466d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga73eeabe0893d0e3e377fcbe3cc8466d9">&#9670;&nbsp;</a></span>NodeType <span class="overload">[10/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73eeabe0893d0e3e377fcbe3cc8466d9">&#9670;&nbsp;</a></span>NodeType <span class="overload">[11/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7157,7 +7235,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga48485e38e93d807049a5b12c383f2ff2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga48485e38e93d807049a5b12c383f2ff2">&#9670;&nbsp;</a></span>NodeType <span class="overload">[11/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga48485e38e93d807049a5b12c383f2ff2">&#9670;&nbsp;</a></span>NodeType <span class="overload">[12/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7175,7 +7253,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga91723b67a480b7999864a39109b7b118"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga91723b67a480b7999864a39109b7b118">&#9670;&nbsp;</a></span>NodeType <span class="overload">[12/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91723b67a480b7999864a39109b7b118">&#9670;&nbsp;</a></span>NodeType <span class="overload">[13/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7193,7 +7271,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gabd6178c72f21a46ec152814779e333f4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabd6178c72f21a46ec152814779e333f4">&#9670;&nbsp;</a></span>NodeType <span class="overload">[13/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gabd6178c72f21a46ec152814779e333f4">&#9670;&nbsp;</a></span>NodeType <span class="overload">[14/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7211,7 +7289,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaa159ffad33eaf780faf60a10018cee03"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa159ffad33eaf780faf60a10018cee03">&#9670;&nbsp;</a></span>NodeType <span class="overload">[14/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa159ffad33eaf780faf60a10018cee03">&#9670;&nbsp;</a></span>NodeType <span class="overload">[15/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7229,7 +7307,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga7bc40f41865bf3494f095aa434eac99c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7bc40f41865bf3494f095aa434eac99c">&#9670;&nbsp;</a></span>NodeType <span class="overload">[15/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7bc40f41865bf3494f095aa434eac99c">&#9670;&nbsp;</a></span>NodeType <span class="overload">[16/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7247,7 +7325,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga903f40f4a8fd6b3cd5ea455b172a7c56"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga903f40f4a8fd6b3cd5ea455b172a7c56">&#9670;&nbsp;</a></span>NodeType <span class="overload">[16/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga903f40f4a8fd6b3cd5ea455b172a7c56">&#9670;&nbsp;</a></span>NodeType <span class="overload">[17/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7265,7 +7343,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga98ca8ff2387ce7a246a0b74abf6d5f40"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga98ca8ff2387ce7a246a0b74abf6d5f40">&#9670;&nbsp;</a></span>NodeType <span class="overload">[17/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga98ca8ff2387ce7a246a0b74abf6d5f40">&#9670;&nbsp;</a></span>NodeType <span class="overload">[18/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7283,7 +7361,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga04a008a40388e14f341eb2ae48a02e1f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga04a008a40388e14f341eb2ae48a02e1f">&#9670;&nbsp;</a></span>NodeType <span class="overload">[18/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga04a008a40388e14f341eb2ae48a02e1f">&#9670;&nbsp;</a></span>NodeType <span class="overload">[19/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7301,7 +7379,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga75717c553ee738c56bb6b3be3e2972b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga75717c553ee738c56bb6b3be3e2972b2">&#9670;&nbsp;</a></span>NodeType <span class="overload">[19/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga75717c553ee738c56bb6b3be3e2972b2">&#9670;&nbsp;</a></span>NodeType <span class="overload">[20/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -7319,7 +7397,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga50e81bf95cf3eca825e0587d915281d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga50e81bf95cf3eca825e0587d915281d3">&#9670;&nbsp;</a></span>NodeType <span class="overload">[20/20]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga50e81bf95cf3eca825e0587d915281d3">&#9670;&nbsp;</a></span>NodeType <span class="overload">[21/21]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8811,7 +8889,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gad6a223573dfa716ca2d33b9ce4eb3c25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad6a223573dfa716ca2d33b9ce4eb3c25">&#9670;&nbsp;</a></span>SizeType <span class="overload">[1/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad6a223573dfa716ca2d33b9ce4eb3c25">&#9670;&nbsp;</a></span>SizeType <span class="overload">[1/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8825,7 +8903,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga2e04959ec6b6da4a9331d0d7d89e87cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2e04959ec6b6da4a9331d0d7d89e87cf">&#9670;&nbsp;</a></span>SizeType <span class="overload">[2/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e04959ec6b6da4a9331d0d7d89e87cf">&#9670;&nbsp;</a></span>SizeType <span class="overload">[2/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8840,8 +8918,22 @@ template&lt;class TElementData &gt; </div>
 
 </div>
 </div>
+<a id="ga0e1f98597ab8de12febe1b4bfacc36cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0e1f98597ab8de12febe1b4bfacc36cd">&#9670;&nbsp;</a></span>SizeType <span class="overload">[3/22]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga0e1f98597ab8de12febe1b4bfacc36cd">Kratos::FluidMeshUtilities::SizeType</a> =  std::size_t</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="gafe6e327e6f0785cf7414a1b9eb9ea732"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafe6e327e6f0785cf7414a1b9eb9ea732">&#9670;&nbsp;</a></span>SizeType <span class="overload">[3/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gafe6e327e6f0785cf7414a1b9eb9ea732">&#9670;&nbsp;</a></span>SizeType <span class="overload">[4/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8855,7 +8947,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga5bbf093df3a60c9b2ad3f27eaf7d4f37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5bbf093df3a60c9b2ad3f27eaf7d4f37">&#9670;&nbsp;</a></span>SizeType <span class="overload">[4/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5bbf093df3a60c9b2ad3f27eaf7d4f37">&#9670;&nbsp;</a></span>SizeType <span class="overload">[5/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8871,7 +8963,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga99bd826573446a68d8f5cd4b49959155"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga99bd826573446a68d8f5cd4b49959155">&#9670;&nbsp;</a></span>SizeType <span class="overload">[5/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga99bd826573446a68d8f5cd4b49959155">&#9670;&nbsp;</a></span>SizeType <span class="overload">[6/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8887,7 +8979,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga56c618682aa9d20a5d7c722c940268a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga56c618682aa9d20a5d7c722c940268a2">&#9670;&nbsp;</a></span>SizeType <span class="overload">[6/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56c618682aa9d20a5d7c722c940268a2">&#9670;&nbsp;</a></span>SizeType <span class="overload">[7/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8903,7 +8995,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gac0f8aafdc6056397f1c594f2af712780"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac0f8aafdc6056397f1c594f2af712780">&#9670;&nbsp;</a></span>SizeType <span class="overload">[7/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac0f8aafdc6056397f1c594f2af712780">&#9670;&nbsp;</a></span>SizeType <span class="overload">[8/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8919,7 +9011,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gab00e4c189af284c5ce8e611262a50b0a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab00e4c189af284c5ce8e611262a50b0a">&#9670;&nbsp;</a></span>SizeType <span class="overload">[8/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab00e4c189af284c5ce8e611262a50b0a">&#9670;&nbsp;</a></span>SizeType <span class="overload">[9/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8935,7 +9027,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga18e775c913bb453718485d50c4ef6005"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga18e775c913bb453718485d50c4ef6005">&#9670;&nbsp;</a></span>SizeType <span class="overload">[9/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga18e775c913bb453718485d50c4ef6005">&#9670;&nbsp;</a></span>SizeType <span class="overload">[10/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8951,7 +9043,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga55baee1cf8aaf3fd3e30916d1cf7dd83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga55baee1cf8aaf3fd3e30916d1cf7dd83">&#9670;&nbsp;</a></span>SizeType <span class="overload">[10/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga55baee1cf8aaf3fd3e30916d1cf7dd83">&#9670;&nbsp;</a></span>SizeType <span class="overload">[11/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8967,7 +9059,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaa25a43947b07eaba9626985f7eded73c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa25a43947b07eaba9626985f7eded73c">&#9670;&nbsp;</a></span>SizeType <span class="overload">[11/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa25a43947b07eaba9626985f7eded73c">&#9670;&nbsp;</a></span>SizeType <span class="overload">[12/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8983,7 +9075,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga2bb08508de978d77d91dabec92c38636"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga2bb08508de978d77d91dabec92c38636">&#9670;&nbsp;</a></span>SizeType <span class="overload">[12/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2bb08508de978d77d91dabec92c38636">&#9670;&nbsp;</a></span>SizeType <span class="overload">[13/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -8999,7 +9091,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaf975ff2d3e3ab2fdde45188af80824e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf975ff2d3e3ab2fdde45188af80824e8">&#9670;&nbsp;</a></span>SizeType <span class="overload">[13/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf975ff2d3e3ab2fdde45188af80824e8">&#9670;&nbsp;</a></span>SizeType <span class="overload">[14/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9015,7 +9107,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga6eebd6a883195d51cd45a44d22765d8c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6eebd6a883195d51cd45a44d22765d8c">&#9670;&nbsp;</a></span>SizeType <span class="overload">[14/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6eebd6a883195d51cd45a44d22765d8c">&#9670;&nbsp;</a></span>SizeType <span class="overload">[15/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9031,7 +9123,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gae94b235266388f1e91f0c3b2bedae764"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae94b235266388f1e91f0c3b2bedae764">&#9670;&nbsp;</a></span>SizeType <span class="overload">[15/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae94b235266388f1e91f0c3b2bedae764">&#9670;&nbsp;</a></span>SizeType <span class="overload">[16/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9047,7 +9139,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gac9f4b378892ba6b23285692c0bba93a0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac9f4b378892ba6b23285692c0bba93a0">&#9670;&nbsp;</a></span>SizeType <span class="overload">[16/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac9f4b378892ba6b23285692c0bba93a0">&#9670;&nbsp;</a></span>SizeType <span class="overload">[17/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9063,7 +9155,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga23fd8818784e9ffd7b17f745db1cb56c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga23fd8818784e9ffd7b17f745db1cb56c">&#9670;&nbsp;</a></span>SizeType <span class="overload">[17/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23fd8818784e9ffd7b17f745db1cb56c">&#9670;&nbsp;</a></span>SizeType <span class="overload">[18/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9079,7 +9171,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga739534fc72e98849e9fe44b78cac52d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga739534fc72e98849e9fe44b78cac52d3">&#9670;&nbsp;</a></span>SizeType <span class="overload">[18/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga739534fc72e98849e9fe44b78cac52d3">&#9670;&nbsp;</a></span>SizeType <span class="overload">[19/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9095,7 +9187,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga659fe1b31b77409c976b2c83cb39c4a8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga659fe1b31b77409c976b2c83cb39c4a8">&#9670;&nbsp;</a></span>SizeType <span class="overload">[19/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga659fe1b31b77409c976b2c83cb39c4a8">&#9670;&nbsp;</a></span>SizeType <span class="overload">[20/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9111,7 +9203,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga14ab0c2359a0acd6414a228e20fd9cfb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga14ab0c2359a0acd6414a228e20fd9cfb">&#9670;&nbsp;</a></span>SizeType <span class="overload">[20/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga14ab0c2359a0acd6414a228e20fd9cfb">&#9670;&nbsp;</a></span>SizeType <span class="overload">[21/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -9125,7 +9217,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gac824a42999683ea37b0aec509ea44c68"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac824a42999683ea37b0aec509ea44c68">&#9670;&nbsp;</a></span>SizeType <span class="overload">[21/21]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac824a42999683ea37b0aec509ea44c68">&#9670;&nbsp;</a></span>SizeType <span class="overload">[22/22]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -10921,6 +11013,88 @@ template&lt;class TElementData &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ga237fd49cd536d44639cce182feac4ef8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga237fd49cd536d44639cce182feac4ef8">&#9670;&nbsp;</a></span>AllElementsAreSimplex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> Kratos::FluidMeshUtilities::AllElementsAreSimplex </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if elements are simplex This function loops all the elements in the provided model part to check if all of them are simplex (simplicial complex), that is, linear triangles and tetrahedra. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part to which the check is performed </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>true All elements are siplex </dd>
+<dd>
+false There are non-simplex elements </dd></dl>
+
+</div>
+</div>
+<a id="ga141ff5e84b067c8c8033217cf319c602"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga141ff5e84b067c8c8033217cf319c602">&#9670;&nbsp;</a></span>AssignNeighbourElementsToConditions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::FluidMeshUtilities::AssignNeighbourElementsToConditions </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td>
+          <td class="paramname"><em>CheckRepeatedConditions</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Assigns the conditions' neigbour (parent) elements This function loops the fluid mesh conditions to assign their neighbour (parent) element Note that it also checks for repeated conditions, which are not allowed in fluid meshes Also note that this function assumes that elements' face geometries match the conditions' ones. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part to which the parents are to be assigned </td></tr>
+    <tr><td class="paramname">CheckRepeatedConditions</td><td>Checks for repeated conditions </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -39960,7 +40134,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Mar 21 2024 02:58:56 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Mar 22 2024 02:53:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
