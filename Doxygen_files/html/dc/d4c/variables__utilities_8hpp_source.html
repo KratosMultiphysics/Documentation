@@ -101,22 +101,22 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d5/d4a/class_kratos_1_1_variables_utilities.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d5/d4a/class_kratos_1_1_variables_utilities.html">VariablesUtilities</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d5/d4a/class_kratos_1_1_variables_utilities.html">   23</a></span>&#160;<span class="keyword">class </span>KRATOS_API(GEO_MECHANICS_APPLICATION) <a class="code" href="../../d5/d4a/class_kratos_1_1_variables_utilities.html">VariablesUtilities</a></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> GeometryType, <span class="keyword">typename</span> OutputIt&gt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d5/d4a/class_kratos_1_1_variables_utilities.html#a0355f3262c90522c9620f5b37da2819f">   27</a></span>&#160;    <span class="keyword">static</span> OutputIt <a class="code" href="../../d5/d4a/class_kratos_1_1_variables_utilities.html#a0355f3262c90522c9620f5b37da2819f">GetNodalValues</a>(<span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">GeometryType</a>&amp; rGeometry,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                                   <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;double&gt;</a>&amp; rNodalVariable,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                                   OutputIt FirstOut)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keywordflow">return</span> std::transform(rGeometry.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#aa03b8b407f7f62801a40265f9f2941ea">begin</a>(), rGeometry.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ac0a1591030cbbdeac509954e99af980b">end</a>(), FirstOut,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                              [&amp;rNodalVariable](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code" href="../../d5/da1/structnode.html">node</a>) {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                  return node.FastGetSolutionStepValue(rNodalVariable);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                              });</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d5/d4a/class_kratos_1_1_variables_utilities.html#a0355f3262c90522c9620f5b37da2819f">   27</a></span>&#160;    <span class="keyword">static</span> OutputIt <a class="code" href="../../d5/d4a/class_kratos_1_1_variables_utilities.html#a0355f3262c90522c9620f5b37da2819f">GetNodalValues</a>(<span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">GeometryType</a>&amp; rGeometry, <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;double&gt;</a>&amp; rNodalVariable, OutputIt FirstOut)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span> std::transform(rGeometry.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#aa03b8b407f7f62801a40265f9f2941ea">begin</a>(), rGeometry.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ac0a1591030cbbdeac509954e99af980b">end</a>(), FirstOut, [&amp;rNodalVariable](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code" href="../../d5/da1/structnode.html">node</a>) {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            return node.FastGetSolutionStepValue(rNodalVariable);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        });</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;double&gt;</a>&amp; GetComponentFromVectorVariable(<span class="keyword">const</span> std::string&amp; rSourceVariableName,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                                                  <span class="keyword">const</span> std::string&amp; rComponent);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;};</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;} <span class="comment">// namespace Kratos</span></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_aa03b8b407f7f62801a40265f9f2941ea"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#aa03b8b407f7f62801a40265f9f2941ea">Kratos::Geometry::begin</a></div><div class="ttdeci">iterator begin()</div><div class="ttdef"><b>Definition:</b> geometry.h:465</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_ac0a1591030cbbdeac509954e99af980b"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#ac0a1591030cbbdeac509954e99af980b">Kratos::Geometry::end</a></div><div class="ttdeci">iterator end()</div><div class="ttdef"><b>Definition:</b> geometry.h:473</div></div>
@@ -129,7 +129,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Mar 22 2024 02:04:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Mar 23 2024 02:03:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
