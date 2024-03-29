@@ -1208,7 +1208,7 @@ var searchData=
   ['_7elinearplanestressfemdem_65594',['~LinearPlaneStressFEMDEM',['../d2/de9/class_kratos_1_1_linear_plane_stress_f_e_m_d_e_m.html#aebb91e32b2efb8d3cd563e0122026007',1,'Kratos::LinearPlaneStressFEMDEM']]],
   ['_7elinearrealfield_65595',['~LinearRealField',['../d7/d27/class_kratos_1_1_linear_real_field.html#a55487bf3e8597988eaaa1e059940f7c6',1,'Kratos::LinearRealField']]],
   ['_7elinearsolidelement_65596',['~LinearSolidElement',['../d6/d01/class_kratos_1_1_linear_solid_element.html#a6260c64c3c257bfedda57e24e6ce92b6',1,'Kratos::LinearSolidElement']]],
-  ['_7elinearsolver_65597',['~LinearSolver',['../d1/df6/class_kratos_1_1_linear_solver.html#ae9e071185e9cca135558773d21ddaaff',1,'Kratos::LinearSolver']]],
+  ['_7elinearsolver_65597',['~LinearSolver',['../d1/df6/class_kratos_1_1_linear_solver.html#a393e861f5dfb132bcd2369e7b4d30738',1,'Kratos::LinearSolver']]],
   ['_7elinearsolverfactory_65598',['~LinearSolverFactory',['../df/d36/class_kratos_1_1_linear_solver_factory.html#aa373ba050168580355052efddf3c4971',1,'Kratos::LinearSolverFactory']]],
   ['_7elinearstrainenergyoptresponse_65599',['~LinearStrainEnergyOptResponse',['../da/d62/class_kratos_1_1_linear_strain_energy_opt_response.html#a437a6ecd0f63e44236a12fea78f81172',1,'Kratos::LinearStrainEnergyOptResponse']]],
   ['_7elinearstrategy_65600',['~LinearStrategy',['../d9/d2f/class_kratos_1_1_linear_strategy.html#a2c64c14856617aa6d25831e2e1a36c48',1,'Kratos::LinearStrategy']]],
