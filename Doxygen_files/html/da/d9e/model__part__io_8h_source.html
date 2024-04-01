@@ -588,49 +588,47 @@ $(function() {
 <div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160; </div>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;    <span class="keywordtype">char</span> SkipWhiteSpaces();</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordtype">bool</span> IsWhiteSpace(<span class="keywordtype">char</span> <a class="code" href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#ab45a4283c7c6241bac04288dfdfbc7ff">C</a>);</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;    <span class="keywordtype">char</span> GetCharacter();</div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160; </div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keywordtype">char</span> GetCharacter();</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    <span class="keywordtype">void</span> CheckStatement(std::string <span class="keyword">const</span>&amp; rStatement, std::string <span class="keyword">const</span>&amp; rGivenWord) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160; </div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keywordtype">bool</span> CheckStatement(std::string <span class="keyword">const</span>&amp; rStatement, std::string <span class="keyword">const</span>&amp; rGivenWord);</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;    <span class="keywordtype">void</span> ResetInput();</div>
 <div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160; </div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keywordtype">void</span> ResetInput();</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> CreatePartition(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NumberOfThreads,<span class="keyword">const</span> <span class="keywordtype">int</span> NumberOfRows, <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">DenseVector&lt;unsigned int&gt;</a>&amp; partitions);</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160; </div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> CreatePartition(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> NumberOfThreads,<span class="keyword">const</span> <span class="keywordtype">int</span> NumberOfRows, <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">DenseVector&lt;unsigned int&gt;</a>&amp; partitions);</div>
 <div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
-<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160; </div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    <span class="keywordtype">void</span> ScanNodeBlock();</div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160; </div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160; </div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160; </div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160; </div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;    <span class="keywordtype">void</span> ScanNodeBlock();</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160; </div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160; </div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160; </div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160; </div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160; </div>
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160; </div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;}; <span class="comment">// Class ModelPartIO</span></div>
 <div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160; </div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;}; <span class="comment">// Class ModelPartIO</span></div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160; </div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160; </div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160; </div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160; </div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160; </div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160; </div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="comment">//   /// input stream function</span></div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="comment">//   inline std::istream&amp; operator &gt;&gt; (std::istream&amp; rIStream,</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="comment">//                  ModelPartIO&amp; rThis);</span></div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160; </div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="comment">//   /// output stream function</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="comment">//   inline std::ostream&amp; operator &lt;&lt; (std::ostream&amp; rOStream,</span></div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="comment">//                  const ModelPartIO&amp; rThis)</span></div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="comment">//     {</span></div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="comment">//       rThis.PrintInfo(rOStream);</span></div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;<span class="comment">//       rOStream &lt;&lt; std::endl;</span></div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;<span class="comment">//       rThis.PrintData(rOStream);</span></div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160; </div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;<span class="comment">//       return rOStream;</span></div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;<span class="comment">//     }</span></div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;<span class="comment">//   ///@}</span></div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160; </div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160; </div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160; </div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160; </div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160; </div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160; </div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="comment">//   /// input stream function</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="comment">//   inline std::istream&amp; operator &gt;&gt; (std::istream&amp; rIStream,</span></div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="comment">//                  ModelPartIO&amp; rThis);</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160; </div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="comment">//   /// output stream function</span></div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;<span class="comment">//   inline std::ostream&amp; operator &lt;&lt; (std::ostream&amp; rOStream,</span></div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="comment">//                  const ModelPartIO&amp; rThis)</span></div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="comment">//     {</span></div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="comment">//       rThis.PrintInfo(rOStream);</span></div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="comment">//       rOStream &lt;&lt; std::endl;</span></div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="comment">//       rThis.PrintData(rOStream);</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160; </div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;<span class="comment">//       return rOStream;</span></div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;<span class="comment">//     }</span></div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;<span class="comment">//   ///@}</span></div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160; </div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160; </div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="aclass_kratos_1_1_communicator_html"><div class="ttname"><a href="../../d3/da4/class_kratos_1_1_communicator.html">Kratos::Communicator</a></div><div class="ttdoc">The Commmunicator class manages communication for distributed ModelPart instances.</div><div class="ttdef"><b>Definition:</b> communicator.h:67</div></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></div><div class="ttdoc">Forward declaration.</div><div class="ttdef"><b>Definition:</b> flags.h:56</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_container_html"><div class="ttname"><a href="../../dc/d7d/class_kratos_1_1_geometry_container.html">Kratos::GeometryContainer&lt; GeometryType &gt;</a></div></div>
@@ -675,13 +673,12 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_html_a8b2d617fdb94b53f5f2bb88e1a7ebc18"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">Kratos::SizeType</a></div><div class="ttdeci">std::size_t SizeType</div><div class="ttdoc">The definition of the size type.</div><div class="ttdef"><b>Definition:</b> mortar_classes.h:43</div></div>
 <div class="ttc" id="anamespace_kratos_html_a90e70c6a56c31aba51ccff0ef5a95870a3e6dbe94c6751f1c65677e502a149653"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a90e70c6a56c31aba51ccff0ef5a95870a3e6dbe94c6751f1c65677e502a149653">Kratos::WriteConditions</a></div><div class="ttdeci">@ WriteConditions</div><div class="ttdef"><b>Definition:</b> gid_io.h:53</div></div>
 <div class="ttc" id="anamespace_kratos_html_aba5dbdf990a4567126376ad0aae1687e"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#aba5dbdf990a4567126376ad0aae1687e">Kratos::ElementsContainerType</a></div><div class="ttdeci">ModelPart::ElementsContainerType ElementsContainerType</div><div class="ttdef"><b>Definition:</b> clear_contact_conditions_mesher_process.hpp:43</div></div>
-<div class="ttc" id="anamespacegenerate__hyper__elastic__simo__taylor__neo__hookean_html_ab45a4283c7c6241bac04288dfdfbc7ff"><div class="ttname"><a href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#ab45a4283c7c6241bac04288dfdfbc7ff">generate_hyper_elastic_simo_taylor_neo_hookean.C</a></div><div class="ttdeci">int C</div><div class="ttdef"><b>Definition:</b> generate_hyper_elastic_simo_taylor_neo_hookean.py:27</div></div>
 <div class="ttc" id="anamespaceread__modelpart__from__json_html_ad28680524391f6d5acb64bbd0d2234b9"><div class="ttname"><a href="../../d5/d7b/namespaceread__modelpart__from__json.html#ad28680524391f6d5acb64bbd0d2234b9">read_modelpart_from_json.ReadModelPart</a></div><div class="ttdeci">def ReadModelPart(model_part, inputfile)</div><div class="ttdef"><b>Definition:</b> read_modelpart_from_json.py:3</div></div>
 <div class="ttc" id="astruct_kratos_1_1_i_o_1_1_partitioning_info_html"><div class="ttname"><a href="../../d8/d00/struct_kratos_1_1_i_o_1_1_partitioning_info.html">Kratos::IO::PartitioningInfo</a></div><div class="ttdef"><b>Definition:</b> io.h:103</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Mar 31 2024 02:56:50 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Apr 1 2024 03:01:55 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
