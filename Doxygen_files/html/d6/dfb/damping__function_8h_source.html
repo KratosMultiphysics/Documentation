@@ -89,68 +89,58 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//                   license: OptimizationApplication/license.txt</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//  Main authors:    Reza Najian Asl</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// System includes</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// Project includes</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d67/define_8h.html">includes/define.h</a>&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d2/daf/ublas__space_8h.html">spaces/ublas_space.h</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//                   Suneth Warnakulasuriya</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// System includes</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// Project includes</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d67/define_8h.html">includes/define.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Application includes</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/dfb/_topology_optimization_application_2custom__utilities_2filter__function_8h.html">filter_function.h</a>&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a> {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../de/d7b/class_kratos_1_1_damping_function.html">   34</a></span>&#160;<span class="keyword">class </span>KRATOS_API(OPTIMIZATION_APPLICATION) <a class="code" href="../../de/d7b/class_kratos_1_1_damping_function.html">DampingFunction</a></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../de/d7b/class_kratos_1_1_damping_function.html#acd2d28d4fdbbdda400476652316e9c98">   40</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">Array3DType</a> = <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../de/d7b/class_kratos_1_1_damping_function.html">   34</a></span>&#160;<span class="keyword">class </span>KRATOS_API(OPTIMIZATION_APPLICATION) <a class="code" href="../../de/d7b/class_kratos_1_1_damping_function.html">DampingFunction</a> : <span class="keyword">public</span> <a class="code" href="../../de/d20/class_kratos_1_1_filter_function.html">FilterFunction</a> {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../de/d7b/class_kratos_1_1_damping_function.html#a4c829f68a09427dc5851dff3d26cea30">   40</a></span>&#160;    <a class="code" href="../../de/d7b/class_kratos_1_1_damping_function.html#a4c829f68a09427dc5851dff3d26cea30">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code" href="../../de/d7b/class_kratos_1_1_damping_function.html">DampingFunction</a>);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../de/d7b/class_kratos_1_1_damping_function.html#a4c829f68a09427dc5851dff3d26cea30">   43</a></span>&#160;    <a class="code" href="../../de/d7b/class_kratos_1_1_damping_function.html#a4c829f68a09427dc5851dff3d26cea30">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code" href="../../de/d7b/class_kratos_1_1_damping_function.html">DampingFunction</a>);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="../../de/d7b/class_kratos_1_1_damping_function.html">DampingFunction</a>(<span class="keyword">const</span> std::string&amp; rKernelFunctionType);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">double</span> ComputeWeight(</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">Array3DType</a>&amp; ICoord,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">Array3DType</a>&amp; JCoord,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Radius) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <a class="code" href="../../de/d7b/class_kratos_1_1_damping_function.html">DampingFunction</a>(</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">const</span> std::string&amp; rKernelFunctionType,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> DampingDistanceMultiplier);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keywordtype">double</span> ComputeWeight(</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Radius,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Distance) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">double</span> mDampingDistanceMultiplier;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::function&lt;<a class="code" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> (<span class="keyword">const</span> <span class="keywordtype">double</span>, <span class="keyword">const</span> <span class="keywordtype">double</span>)&gt; mFilterFunctional;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    std::string mKernelFunctionType;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keywordtype">double</span> <span class="keyword">inline</span> GetDistance(</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">Array3DType</a>&amp; ICoord,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">Array3DType</a>&amp; JCoord) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}; <span class="comment">// Class DampingFunction</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="ttc" id="aclass_kratos_1_1_damping_function_html"><div class="ttname"><a href="../../de/d7b/class_kratos_1_1_damping_function.html">Kratos::DampingFunction</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> damping_function.h:35</div></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}; <span class="comment">// Class DampingFunction</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
+<div class="ttc" id="a_topology_optimization_application_2custom__utilities_2filter__function_8h_html"><div class="ttname"><a href="../../df/dfb/_topology_optimization_application_2custom__utilities_2filter__function_8h.html">filter_function.h</a></div></div>
+<div class="ttc" id="aclass_kratos_1_1_damping_function_html"><div class="ttname"><a href="../../de/d7b/class_kratos_1_1_damping_function.html">Kratos::DampingFunction</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> damping_function.h:34</div></div>
 <div class="ttc" id="aclass_kratos_1_1_damping_function_html_a4c829f68a09427dc5851dff3d26cea30"><div class="ttname"><a href="../../de/d7b/class_kratos_1_1_damping_function.html#a4c829f68a09427dc5851dff3d26cea30">Kratos::DampingFunction::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(DampingFunction)</div><div class="ttdoc">Pointer definition of DampingFunction.</div></div>
-<div class="ttc" id="aclass_kratos_1_1array__1d_html"><div class="ttname"><a href="../../d4/ddc/class_kratos_1_1array__1d.html">Kratos::array_1d&lt; double, 3 &gt;</a></div></div>
+<div class="ttc" id="aclass_kratos_1_1_filter_function_html"><div class="ttname"><a href="../../de/d20/class_kratos_1_1_filter_function.html">Kratos::FilterFunction</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> filter_function.h:34</div></div>
 <div class="ttc" id="adefine_8h_html"><div class="ttname"><a href="../../df/d67/define_8h.html">define.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
-<div class="ttc" id="anamespace_kratos_html_ac77084a57869cbecf89d3ee2c819c5d3"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">Kratos::double</a></div><div class="ttdeci">TABLE_NUMBER_ANGULAR_VELOCITY TABLE_NUMBER_MOMENT I33 BEAM_INERTIA_ROT_UNIT_LENGHT_Y KRATOS_DEFINE_APPLICATION_VARIABLE(DEM_APPLICATION, double, BEAM_INERTIA_ROT_UNIT_LENGHT_Z) typedef std double</div><div class="ttdef"><b>Definition:</b> DEM_application_variables.h:182</div></div>
-<div class="ttc" id="aublas__space_8h_html"><div class="ttname"><a href="../../d2/daf/ublas__space_8h.html">ublas_space.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 2 2024 02:19:02 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Apr 3 2024 02:16:13 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

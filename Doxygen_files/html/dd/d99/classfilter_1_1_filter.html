@@ -88,13 +88,13 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for filter.Filter:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d05/classfilter_1_1_filter__inherit__graph.svg" width="219" height="375"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d05/classfilter_1_1_filter__inherit__graph.svg" width="219" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for filter.Filter:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d99/classfilter_1_1_filter__coll__graph.svg" width="219" height="375"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d99/classfilter_1_1_filter__coll__graph.svg" width="219" height="390"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -132,6 +132,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a23205701f7dec5f9f8583bbd59da829a"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d99/classfilter_1_1_filter.html#a23205701f7dec5f9f8583bbd59da829a">Update</a> (self)</td></tr>
 <tr class="memdesc:a23205701f7dec5f9f8583bbd59da829a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the filter.  <a href="../../dd/d99/classfilter_1_1_filter.html#a23205701f7dec5f9f8583bbd59da829a">More...</a><br /></td></tr>
 <tr class="separator:a23205701f7dec5f9f8583bbd59da829a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7ad32cbcbaeeb74b483168e59a9f6e"><td class="memItemLeft" align="right" valign="top"> 'list[list[<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos.ModelPart</a>]]'&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d99/classfilter_1_1_filter.html#a4b7ad32cbcbaeeb74b483168e59a9f6e">GetBoundaryConditions</a> (self)</td></tr>
+<tr class="memdesc:a4b7ad32cbcbaeeb74b483168e59a9f6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns boundary conditions.  <a href="../../dd/d99/classfilter_1_1_filter.html#a4b7ad32cbcbaeeb74b483168e59a9f6e">More...</a><br /></td></tr>
+<tr class="separator:a4b7ad32cbcbaeeb74b483168e59a9f6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base filter class. </p>
@@ -312,6 +315,32 @@ Public Member Functions</h2></td></tr>
 </pre> 
 </div>
 </div>
+<a id="a4b7ad32cbcbaeeb74b483168e59a9f6e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7ad32cbcbaeeb74b483168e59a9f6e">&#9670;&nbsp;</a></span>GetBoundaryConditions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> 'list[list[<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos.ModelPart</a>]]' filter.Filter.GetBoundaryConditions </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns boundary conditions. </p>
+<pre class="fragment">    This returns a list of model parts where the filter is having fixed
+    boundary conditions for each component for the variable this filter
+    is being used.
+
+    Returns:
+        list[list[Kratos.ModelPart]]: list of fixed boundary condition model parts for each component.
+</pre> 
+</div>
+</div>
 <a id="a194991be651356e849a6bc15dcb5678d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a194991be651356e849a6bc15dcb5678d">&#9670;&nbsp;</a></span>GetComponentDataView()</h2>
 
@@ -466,7 +495,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 2 2024 03:03:50 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Apr 3 2024 03:01:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

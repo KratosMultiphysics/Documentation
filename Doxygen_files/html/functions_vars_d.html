@@ -197,8 +197,12 @@ $(function() {
 <li>damp_force_Z
 : <a class="el" href="db/d7e/classdem__vtk__output_1_1_vtk_output.html#a2b816f0a1a2f9585ec1aaba1d6fedf0a">dem_vtk_output.VtkOutput</a>
 </li>
+<li>damped_model_parts
+: <a class="el" href="d7/d36/classimplicit__filter_1_1_implicit_filter.html#af3d3f50b5ea204c44a3eb45ac4672676">implicit_filter.ImplicitFilter</a>
+</li>
 <li>damping
-: <a class="el" href="dd/dae/classsolver__wrappers_1_1sdof_1_1sdof__solver_1_1_s_do_f_solver.html#a4cab37604a4c151818304d8b3a2e9077">solver_wrappers.sdof.sdof_solver.SDoFSolver</a>
+: <a class="el" href="da/df1/classexplicit__filter_1_1_explicit_filter.html#a5d5060f74a03098474f983e20f96f181">explicit_filter.ExplicitFilter</a>
+, <a class="el" href="dd/dae/classsolver__wrappers_1_1sdof_1_1sdof__solver_1_1_s_do_f_solver.html#a4cab37604a4c151818304d8b3a2e9077">solver_wrappers.sdof.sdof_solver.SDoFSolver</a>
 </li>
 <li>damping_utility
 : <a class="el" href="d7/d29/classmodel__part__controller__factory_1_1_model_part_controller.html#ad84911f7e57b1222d4f8d5827552559c">model_part_controller_factory.ModelPartController</a>
@@ -245,6 +249,10 @@ $(function() {
 <li>data_dist
 : <a class="el" href="d3/df7/classcoupling__operations_1_1convert__distributed__values__to__point_1_1_convert_distributed_values_to_point.html#a8de1f68fcf2c3d521b5f1fe1b3c60c28">coupling_operations.convert_distributed_values_to_point.ConvertDistributedValuesToPoint</a>
 , <a class="el" href="dc/d46/classcoupling__operations_1_1distribute__point__values_1_1_distribute_point_values_operation.html#ab3c8f80fb1723ed3ef07ef348846bfa2">coupling_operations.distribute_point_values.DistributePointValuesOperation</a>
+</li>
+<li>data_location
+: <a class="el" href="da/df1/classexplicit__filter_1_1_explicit_filter.html#a7fb73b6e1a5db076ec70a5a13093dd4b">explicit_filter.ExplicitFilter</a>
+, <a class="el" href="d7/d36/classimplicit__filter_1_1_implicit_filter.html#a8edf2e4a8de9158a6674723b8c0c1b79">implicit_filter.ImplicitFilter</a>
 </li>
 <li>data_logger
 : <a class="el" href="db/d08/classalgorithms_1_1algorithm__bead__optimization_1_1_algorithm_bead_optimization.html#adff02bcbb90be32d1efec15c4df2f38f">algorithms.algorithm_bead_optimization.AlgorithmBeadOptimization</a>
@@ -1190,13 +1198,13 @@ $(function() {
 , <a class="el" href="dc/dd4/class_kratos_1_1_small_strain_u_m_a_t3_d_interface_law.html#a448567b8fcf95a345419bf8f7d85d5a9">Kratos::SmallStrainUMAT3DInterfaceLaw</a>
 , <a class="el" href="db/dcf/class_kratos_1_1_small_strain_u_m_a_t3_d_law.html#a15e42b024954d75e64f0b6458009e4e3">Kratos::SmallStrainUMAT3DLaw</a>
 , <a class="el" href="dd/d4e/struct_kratos_1_1_spatial_bounding_box_1_1_bounding_box_variables.html#a6438c8f70e41392700bb6131f8c486e3">Kratos::SpatialBoundingBox::BoundingBoxVariables</a>
+, <a class="el" href="de/dd7/class_kratos_1_1_spatial_containers_configure.html#a9dcfe9d49c3431403b412493c5b3061b">Kratos::SpatialContainersConfigure&lt; TDimension, TEntity &gt;</a>
 </li>
 <li>DIMENSION
 : <a class="el" href="de/dd7/class_kratos_1_1_spatial_containers_configure.html#ae56fc52302525ab1eb4c6ffaa5f10602">Kratos::SpatialContainersConfigure&lt; TDimension, TEntity &gt;</a>
 </li>
 <li>Dimension
-: <a class="el" href="de/dd7/class_kratos_1_1_spatial_containers_configure.html#a9dcfe9d49c3431403b412493c5b3061b">Kratos::SpatialContainersConfigure&lt; TDimension, TEntity &gt;</a>
-, <a class="el" href="db/d85/class_kratos_1_1_spatial_search.html#aff8efe32a8b5c9aa2cf132ad6e18afea">Kratos::SpatialSearch</a>
+: <a class="el" href="db/d85/class_kratos_1_1_spatial_search.html#aff8efe32a8b5c9aa2cf132ad6e18afea">Kratos::SpatialSearch</a>
 , <a class="el" href="d5/d7e/class_kratos_1_1_tetrahedron_gauss_legendre_integration_points1.html#a1f95b1528b088787d5c72a42e3331e17">Kratos::TetrahedronGaussLegendreIntegrationPoints1</a>
 , <a class="el" href="d7/dc5/class_kratos_1_1_tetrahedron_gauss_legendre_integration_points2.html#acb6241396ccde62a663adf616884dc15">Kratos::TetrahedronGaussLegendreIntegrationPoints2</a>
 , <a class="el" href="d8/d49/class_kratos_1_1_tetrahedron_gauss_legendre_integration_points3.html#ad32539c9fdc0d67b4679732d1e693567">Kratos::TetrahedronGaussLegendreIntegrationPoints3</a>
@@ -2083,7 +2091,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 2 2024 03:51:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Apr 3 2024 03:50:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

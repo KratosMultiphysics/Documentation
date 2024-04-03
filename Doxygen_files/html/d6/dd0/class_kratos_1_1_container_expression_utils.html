@@ -86,7 +86,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::ContainerExpressionUtils:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dda/class_kratos_1_1_container_expression_utils__coll__graph.svg" width="247" height="543"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../de/dda/class_kratos_1_1_container_expression_utils__coll__graph.svg" width="247" height="572"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -140,6 +140,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a8da6b74c82a4afaf2afb4db75ef11452"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dd0/class_kratos_1_1_container_expression_utils.html#a8da6b74c82a4afaf2afb4db75ef11452">ComputeNodalVariableProductWithEntityMatrix</a> (<a class="el" href="../../d7/d11/class_kratos_1_1_container_expression.html">ContainerExpression</a>&lt; <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &gt; &amp;rOutput, const <a class="el" href="../../d7/d11/class_kratos_1_1_container_expression.html">ContainerExpression</a>&lt; <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &gt; &amp;rNodalValues, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;rMatrixVariable, TContainerType &amp;rEntities)</td></tr>
 <tr class="memdesc:a8da6b74c82a4afaf2afb4db75ef11452"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes nodal and entity wise matrix multiplication.  <a href="../../d6/dd0/class_kratos_1_1_container_expression_utils.html#a8da6b74c82a4afaf2afb4db75ef11452">More...</a><br /></td></tr>
 <tr class="separator:a8da6b74c82a4afaf2afb4db75ef11452"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a701990ad9aa1afa65b5d5dad3e9b2416"><td class="memTemplParams" colspan="2">template&lt;class TContainerType &gt; </td></tr>
+<tr class="memitem:a701990ad9aa1afa65b5d5dad3e9b2416"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d7/d11/class_kratos_1_1_container_expression.html">ContainerExpression</a>&lt; TContainerType &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d6/dd0/class_kratos_1_1_container_expression_utils.html#a701990ad9aa1afa65b5d5dad3e9b2416">ExtractData</a> (<a class="el" href="../../d7/d11/class_kratos_1_1_container_expression.html">ContainerExpression</a>&lt; TContainerType &gt; &amp;rInputExpression, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rExtractionModelPart)</td></tr>
+<tr class="memdesc:a701990ad9aa1afa65b5d5dad3e9b2416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extracts data which belongs to given model part from the expression.  <a href="../../d6/dd0/class_kratos_1_1_container_expression_utils.html#a701990ad9aa1afa65b5d5dad3e9b2416">More...</a><br /></td></tr>
+<tr class="separator:a701990ad9aa1afa65b5d5dad3e9b2416"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a66d8fb7c052d7bff9ab9ba99845bf0fe"></a>
@@ -340,6 +344,61 @@ template&lt;class TContainerType &gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double Max L2 norm </dd></dl>
+
+</div>
+</div>
+<a id="a701990ad9aa1afa65b5d5dad3e9b2416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a701990ad9aa1afa65b5d5dad3e9b2416">&#9670;&nbsp;</a></span>ExtractData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TContainerType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/d11/class_kratos_1_1_container_expression.html">ContainerExpression</a>&lt; TContainerType &gt; Kratos::ContainerExpressionUtils::ExtractData </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d7/d11/class_kratos_1_1_container_expression.html">ContainerExpression</a>&lt; TContainerType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rInputExpression</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rExtractionModelPart</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Extracts data which belongs to given model part from the expression. </p>
+<p>This method extracts data which belongs to entities in rExtractionModelPart from the given rInput container expression.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TContainerType</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rInputExpression</td><td>Input expression. </td></tr>
+    <tr><td class="paramname">rExtractionModelPart</td><td>The model part where the entities are located to extract data. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>ContainerExpression&lt;ModelPart::NodesContainerType&gt; Output expression with extracted data. </dd></dl>
 
 </div>
 </div>
@@ -732,7 +791,7 @@ template&lt;class TContainerType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 2 2024 03:33:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Apr 3 2024 03:31:31 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

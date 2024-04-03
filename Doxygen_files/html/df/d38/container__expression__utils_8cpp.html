@@ -92,12 +92,14 @@ $(function() {
 <code>#include &quot;<a class="el" href="../../de/d6b/container__data__io_8h_source.html">expression/container_data_io.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d0/d97/container__expression_8h_source.html">expression/container_expression.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/d94/variable__expression__io_8h_source.html">expression/variable_expression_io.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d5/d6c/literal__expression__input_8h_source.html">expression/literal_expression_input.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../df/d67/define_8h_source.html">includes/define.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dd/dfe/model__part_8h_source.html">includes/model_part.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/d3c/atomic__utilities_8h_source.html">utilities/atomic_utilities.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../de/d07/parallel__utilities_8h_source.html">utilities/parallel_utilities.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d6/d05/reduction__utilities_8h_source.html">utilities/reduction_utilities.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/d8c/variable__utils_8h_source.html">utilities/variable_utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="../../d3/d22/model__part__utils_8h_source.html">utilities/model_part_utils.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d7/d79/optimization__application__variables_8h_source.html">optimization_application_variables.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d3/d9c/container__expression__utils_8h_source.html">container_expression_utils.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
@@ -189,7 +191,9 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <span class="keyword">template</span> <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">double</span> ContainerExpressionUtils::EntityMaxNormL2(<span class="keyword">const</span> ContainerExpression&lt;ContainerType&gt;&amp;);                                                                                                                        \</div>
 <div class="line">    template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> ContainerExpressionUtils::ProductWithEntityMatrix(ContainerExpression&lt;ContainerType&gt;&amp;, <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="../../de/da9/namespace_kratos_1_1_geometrical_transformation_utilities.html#a7c3b9a52c7004d968fe5d185778f03f7">UblasSpace&lt;double, CompressedMatrix, Vector&gt;::MatrixType</a>&amp;, <span class="keyword">const</span> ContainerExpression&lt;ContainerType&gt;&amp;);   \</div>
-<div class="line">    template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> ContainerExpressionUtils::ProductWithEntityMatrix(ContainerExpression&lt;ContainerType&gt;&amp;, <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp;, <span class="keyword">const</span> ContainerExpression&lt;ContainerType&gt;&amp;);</div>
+<div class="line">    template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> ContainerExpressionUtils::ProductWithEntityMatrix(ContainerExpression&lt;ContainerType&gt;&amp;, <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp;, <span class="keyword">const</span> ContainerExpression&lt;ContainerType&gt;&amp;);                                                              \</div>
+<div class="line">    template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) ContainerExpression&lt;ContainerType&gt; ContainerExpressionUtils::ExtractData(ContainerExpression&lt;ContainerType&gt;&amp;, <a class="code" href="../../d1/d64/namespace_c_sharp_kratos_wrapper.html#a2e2643eb858b6ec11ecf3d3872800ef9">ModelPart</a>&amp;);</div>
+<div class="ttc" id="anamespace_c_sharp_kratos_wrapper_html_a2e2643eb858b6ec11ecf3d3872800ef9"><div class="ttname"><a href="../../d1/d64/namespace_c_sharp_kratos_wrapper.html#a2e2643eb858b6ec11ecf3d3872800ef9">CSharpKratosWrapper::ModelPart</a></div><div class="ttdeci">Kratos::ModelPart ModelPart</div><div class="ttdef"><b>Definition:</b> kratos_wrapper.h:31</div></div>
 <div class="ttc" id="anamespace_kratos_1_1_geometrical_transformation_utilities_html_a7c3b9a52c7004d968fe5d185778f03f7"><div class="ttname"><a href="../../de/da9/namespace_kratos_1_1_geometrical_transformation_utilities.html#a7c3b9a52c7004d968fe5d185778f03f7">Kratos::GeometricalTransformationUtilities::MatrixType</a></div><div class="ttdeci">Matrix MatrixType</div><div class="ttdef"><b>Definition:</b> geometrical_transformation_utilities.h:55</div></div>
 <div class="ttc" id="anamespace_kratos_html_a546e4f1c8e62734795679d3b59448410"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Kratos::Matrix</a></div><div class="ttdeci">Internals::Matrix&lt; double, AMatrix::dynamic, AMatrix::dynamic &gt; Matrix</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:470</div></div>
 </div><!-- fragment -->
@@ -198,7 +202,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 2 2024 03:01:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Apr 3 2024 02:59:20 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

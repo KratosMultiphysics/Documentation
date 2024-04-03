@@ -713,8 +713,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a118916a1c8c127e6adf98ea5adbcf2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af717a075d1d21a9349ffe10172719898"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#af717a075d1d21a9349ffe10172719898">CalculateAndAddCompressibilityMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables)</td></tr>
 <tr class="separator:af717a075d1d21a9349ffe10172719898"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a714fc62b47081c68ab4e48871de4a4f1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a714fc62b47081c68ab4e48871de4a4f1">CalculateCompressibilityMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes, TNumNodes &gt; &amp;rPMatrix, const <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables) const</td></tr>
-<tr class="separator:a714fc62b47081c68ab4e48871de4a4f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5a6a5e057c6d2a1e637c61869c1d234"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#af5a6a5e057c6d2a1e637c61869c1d234">CalculateAndAddPermeabilityMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables)</td></tr>
 <tr class="separator:af5a6a5e057c6d2a1e637c61869c1d234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21098af99f630d15c069d1e1e9783ac7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a21098af99f630d15c069d1e1e9783ac7">CalculateAndAddRHS</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> GPoint)</td></tr>
@@ -1980,44 +1978,6 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes &gt; &amp;&#160;</td>
           <td class="paramname"><em>rPVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;&#160;</td>
-          <td class="paramname"><em>rVariables</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a714fc62b47081c68ab4e48871de4a4f1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a714fc62b47081c68ab4e48871de4a4f1">&#9670;&nbsp;</a></span>CalculateCompressibilityMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html">Kratos::UPwSmallStrainElement</a>&lt; TDim, TNumNodes &gt;::CalculateCompressibilityMatrix </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes, TNumNodes &gt; &amp;&#160;</td>
-          <td class="paramname"><em>rPMatrix</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3788,7 +3748,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 2 2024 03:28:33 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Apr 3 2024 03:26:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
