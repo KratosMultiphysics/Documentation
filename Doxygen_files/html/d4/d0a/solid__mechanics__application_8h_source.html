@@ -278,7 +278,7 @@ $(function() {
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
 <div class="line"><a name="l00242"></a><span class="lineno"><a class="line" href="../../df/d82/class_kratos_1_1_kratos_solid_mechanics_application.html#a619dba014755121edee15b23c39279d9">  242</a></span>&#160;   <span class="keywordtype">void</span> <a class="code" href="../../df/d82/class_kratos_1_1_kratos_solid_mechanics_application.html#a619dba014755121edee15b23c39279d9">PrintInfo</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="keyword">   </span>{</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;     rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>();</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;     rOStream &lt;&lt; Info();</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;     PrintData(rOStream);</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;   }</div>
 <div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
@@ -586,7 +586,7 @@ $(function() {
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160; </div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160; </div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160; </div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;   <a class="code" href="../../df/d82/class_kratos_1_1_kratos_solid_mechanics_application.html">KratosSolidMechanicsApplication</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../df/d82/class_kratos_1_1_kratos_solid_mechanics_application.html">KratosSolidMechanicsApplication</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;   <a class="code" href="../../df/d82/class_kratos_1_1_kratos_solid_mechanics_application.html">KratosSolidMechanicsApplication</a>&amp; operator=(<a class="code" href="../../df/d82/class_kratos_1_1_kratos_solid_mechanics_application.html">KratosSolidMechanicsApplication</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160; </div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;   <a class="code" href="../../df/d82/class_kratos_1_1_kratos_solid_mechanics_application.html">KratosSolidMechanicsApplication</a>(<a class="code" href="../../df/d82/class_kratos_1_1_kratos_solid_mechanics_application.html">KratosSolidMechanicsApplication</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160; </div>
@@ -604,8 +604,6 @@ $(function() {
 <div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160; </div>
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_SOLID_MECHANICS_APPLICATION_H_INCLUDED  defined</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="a_solid_mechanics_application_2custom__constitutive_2custom__flow__rules_2isotropic__damage__flow__rule_8hpp_html"><div class="ttname"><a href="../../da/d18/_solid_mechanics_application_2custom__constitutive_2custom__flow__rules_2isotropic__damage__flow__rule_8hpp.html">isotropic_damage_flow_rule.hpp</a></div></div>
 <div class="ttc" id="a_solid_mechanics_application_2custom__constitutive_2custom__hardening__laws_2exponential__damage__hardening__law_8hpp_html"><div class="ttname"><a href="../../d3/d33/_solid_mechanics_application_2custom__constitutive_2custom__hardening__laws_2exponential__damage__hardening__law_8hpp.html">exponential_damage_hardening_law.hpp</a></div></div>
 <div class="ttc" id="a_solid_mechanics_application_2custom__constitutive_2custom__hardening__laws_2modified__exponential__damage__hardening__law_8hpp_html"><div class="ttname"><a href="../../d7/d05/_solid_mechanics_application_2custom__constitutive_2custom__hardening__laws_2modified__exponential__damage__hardening__law_8hpp.html">modified_exponential_damage_hardening_law.hpp</a></div></div>
@@ -785,7 +783,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:29:06 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:25:38 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

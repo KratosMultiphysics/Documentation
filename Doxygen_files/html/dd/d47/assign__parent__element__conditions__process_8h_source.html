@@ -175,7 +175,7 @@ $(function() {
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keywordtype">void</span> Execute() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> ExecuteInitialize() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    <span class="keywordtype">void</span> ExecuteInitializeSolutionStep() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
@@ -211,7 +211,7 @@ $(function() {
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="../../da/d4a/class_kratos_1_1_assign_parent_element_conditions_process.html">AssignParentElementConditionsProcess</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../da/d4a/class_kratos_1_1_assign_parent_element_conditions_process.html">AssignParentElementConditionsProcess</a> <span class="keyword">const</span>&amp; rOther) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <a class="code" href="../../da/d4a/class_kratos_1_1_assign_parent_element_conditions_process.html">AssignParentElementConditionsProcess</a>&amp; operator=(<a class="code" href="../../da/d4a/class_kratos_1_1_assign_parent_element_conditions_process.html">AssignParentElementConditionsProcess</a> <span class="keyword">const</span>&amp; rOther) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    <span class="comment">//AssignParentElementConditionsProcess(AssignParentElementConditionsProcess const&amp; rOther);</span></div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
@@ -235,8 +235,6 @@ $(function() {
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
 <div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
 <div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_aa0e1370ca05eec621e0d0a0871ed689b"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a></div><div class="ttdeci">void ExecuteInitialize() override</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:37</div></div>
 <div class="ttc" id="aclass_kratos_1_1_assign_parent_element_conditions_process_html"><div class="ttname"><a href="../../da/d4a/class_kratos_1_1_assign_parent_element_conditions_process.html">Kratos::AssignParentElementConditionsProcess</a></div><div class="ttdoc">This process initializes the variables related with the ALM.</div><div class="ttdef"><b>Definition:</b> assign_parent_element_conditions_process.h:49</div></div>
 <div class="ttc" id="aclass_kratos_1_1_assign_parent_element_conditions_process_html_a20f5a11926cafc53843910fc0e307117"><div class="ttname"><a href="../../da/d4a/class_kratos_1_1_assign_parent_element_conditions_process.html#a20f5a11926cafc53843910fc0e307117">Kratos::AssignParentElementConditionsProcess::AssignParentElementConditionsProcess</a></div><div class="ttdeci">AssignParentElementConditionsProcess(ModelPart &amp;rConditionsModelPart, ModelPart &amp;rElementsModelPart)</div><div class="ttdoc">Constructor that takes the conditions and elements model parts.</div><div class="ttdef"><b>Definition:</b> assign_parent_element_conditions_process.h:87</div></div>
 <div class="ttc" id="aclass_kratos_1_1_assign_parent_element_conditions_process_html_a23df8a5f81a38675dc8f5c3da1326a5c"><div class="ttname"><a href="../../da/d4a/class_kratos_1_1_assign_parent_element_conditions_process.html#a23df8a5f81a38675dc8f5c3da1326a5c">Kratos::AssignParentElementConditionsProcess::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> assign_parent_element_conditions_process.h:203</div></div>
@@ -273,7 +271,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:07:30 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:05:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -791,7 +791,6 @@ $(function() {
 </li>
 <li>max_beta
 : <a class="el" href="db/d9b/class_kratos_1_1_helmholtz_material.html#aa1fb7d609c06282fe12ab1b6b11ce03f">Kratos::HelmholtzMaterial</a>
-, <a class="el" href="dd/d0d/class_kratos_1_1_helmholtz_thickness.html#abc85c3b9ae9f948d91621b5b765aaa92">Kratos::HelmholtzThickness</a>
 </li>
 <li>max_conduction_distance
 : <a class="el" href="d7/d17/classthermal__sphere__strategy_1_1_explicit_strategy.html#a301c2df9601ff05f7a6bc2cf6b344c97">thermal_sphere_strategy.ExplicitStrategy</a>
@@ -1736,6 +1735,7 @@ $(function() {
 : <a class="el" href="d1/de3/class_kratos_1_1_compute_initial_volume_process.html#a8eb76c3c068c92c111dc86a9b0da9120">Kratos::ComputeInitialVolumeProcess</a>
 , <a class="el" href="d2/de4/class_kratos_1_1_morton_divide_input_to_partitions_process.html#afc8d813fe305f6c0fdff774929507dab">Kratos::MortonDivideInputToPartitionsProcess</a>
 , <a class="el" href="de/d88/class_kratos_1_1_morton_partitioning_process.html#a12d61444fe79451cff4229e012e0899a">Kratos::MortonPartitioningProcess</a>
+, <a class="el" href="d7/d7b/class_kratos_1_1_periodic_interface_process.html#ac66425107a116777edcbc0c005aa4515">Kratos::PeriodicInterfaceProcess</a>
 , <a class="el" href="d3/daf/class_kratos_1_1_thermal_spheric_particle.html#ac86dfcf490ca85b89bd0765a0911a31f">Kratos::ThermalSphericParticle</a>
 , <a class="el" href="d9/db9/class_kratos_1_1_update_pressure_volume_process.html#abec0c2c4625ff975f3a3c226f138177f">Kratos::UpdatePressureVolumeProcess</a>
 </li>
@@ -2286,7 +2286,7 @@ $(function() {
 : <a class="el" href="d2/df6/classale__fluid__solver_1_1_ale_fluid_solver.html#afff3f050afc7475611a282859d5073ba">ale_fluid_solver.AleFluidSolver</a>
 </li>
 <li>mesh_motion_solver_type
-: <a class="el" href="d4/d35/classshape_1_1vertex__morphing__shape__control_1_1_vertex_morphing_shape_control.html#a77fcda5f19fd5eaaa38547eb80920f7c">shape.vertex_morphing_shape_control.VertexMorphingShapeControl</a>
+: <a class="el" href="dc/d9a/classvertex__morphing__shape__control_1_1_vertex_morphing_shape_control.html#a9d30b6f6894a49db4c3ca235d645a273">vertex_morphing_shape_control.VertexMorphingShapeControl</a>
 </li>
 <li>mesh_motion_solvers
 : <a class="el" href="d2/df6/classale__fluid__solver_1_1_ale_fluid_solver.html#a1ed74589e0edd3d76b40c85cbe8db7e6">ale_fluid_solver.AleFluidSolver</a>
@@ -2759,7 +2759,7 @@ $(function() {
 </li>
 <li>mGPTitle
 : <a class="el" href="d6/d7d/class_kratos_1_1_gid_gauss_points_container.html#a0e8cdb305567adaafdaf9fda3e71e7a7">Kratos::GidGaussPointsContainer</a>
-, <a class="el" href="d4/dc4/class_kratos_1_1_pfem_gid_gauss_points_container.html#a675af6ee0dc1b4035d8eac5cf1cf0cc6">Kratos::PfemGidGaussPointsContainer</a>
+, <a class="el" href="d4/dc4/class_kratos_1_1_pfem_gid_gauss_points_container.html#ab8636f709ce5ed6076aaf9585b68a2af">Kratos::PfemGidGaussPointsContainer</a>
 </li>
 <li>mGradientModelPartName
 : <a class="el" href="db/d71/class_kratos_1_1_edge_based_gradient_recovery_process.html#a14dd0456c5f78ecfc3c06febe7fcc1f0">Kratos::EdgeBasedGradientRecoveryProcess&lt; TDataType, TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
@@ -4504,8 +4504,6 @@ $(function() {
 </li>
 <li>model
 : <a class="el" href="d6/df0/classsearch__base__process_1_1_search_base_process.html#a1601a252632fb1097ab29c2d756cf260">search_base_process.SearchBaseProcess</a>
-, <a class="el" href="d5/df5/classshape_1_1shape__control_1_1_shape_control.html#a48a92228d265f3335e3d360cc47ead49">shape.shape_control.ShapeControl</a>
-, <a class="el" href="d4/d35/classshape_1_1vertex__morphing__shape__control_1_1_vertex_morphing_shape_control.html#abeb606641a6e584d9ba797a2c1bb2818">shape.vertex_morphing_shape_control.VertexMorphingShapeControl</a>
 , <a class="el" href="d4/d46/classshell__thickness__control_1_1_shell_thickness_control.html#a0b47d477fabd07f6c7e76b3d7d4166f3">shell_thickness_control.ShellThicknessControl</a>
 </li>
 <li>Model
@@ -4519,8 +4517,8 @@ $(function() {
 , <a class="el" href="d6/d46/classstructural__response_1_1_mass_response_function.html#a0a05d1f7313992610e6b8633068e6e54">structural_response.MassResponseFunction</a>
 , <a class="el" href="d0/de7/classswimming___d_e_m__analysis_1_1_swimming_d_e_m_analysis.html#a0274d64119d6a2e57a04af46bcd935c9">swimming_DEM_analysis.SwimmingDEMAnalysis</a>
 , <a class="el" href="d0/d80/classtemporal__statistics__process_1_1_temporal_statistics_process.html#a4865870f6d60a637e1655abc053eaab2">temporal_statistics_process.TemporalStatisticsProcess</a>
-, <a class="el" href="d2/d48/classthickness__control_1_1_thickness_control.html#afa0b2e5a9b3c8059a303d320992ccc7d">thickness_control.ThicknessControl</a>
 , <a class="el" href="de/db5/classtime__discretization__process_1_1_time_discretization_process.html#a6194559316e95436045594b154036024">time_discretization_process.TimeDiscretizationProcess</a>
+, <a class="el" href="dc/d9a/classvertex__morphing__shape__control_1_1_vertex_morphing_shape_control.html#a9a305a0f7859b6c2c8cfa94e3a49ea69">vertex_morphing_shape_control.VertexMorphingShapeControl</a>
 , <a class="el" href="d9/dcb/classvisualization__mesh__process_1_1_visualization_mesh_process.html#a89ea2b80ec665873505bfdae57380fd0">visualization_mesh_process.VisualizationMeshProcess</a>
 , <a class="el" href="d3/d99/classvolume__recovery__process_1_1_volume_recovery_process.html#ace80965436702425ba0c29657d6ae264">volume_recovery_process.VolumeRecoveryProcess</a>
 , <a class="el" href="d5/d81/classvolume__shaping__process_1_1_volume_shaping_process.html#a834cfb7ec6e1237f078bd1f3a8871492">volume_shaping_process.VolumeShapingProcess</a>
@@ -4720,7 +4718,6 @@ $(function() {
 , <a class="el" href="d1/dac/classset__parameter__field__process_1_1_set_parameter_field_process.html#aaf9bcfc2b6240db5e6d537fb3f0d27e8">set_parameter_field_process.SetParameterFieldProcess</a>
 , <a class="el" href="d8/d9e/classset__topography__process_1_1_set_topography_process.html#a74aa2a3e36ac5f2933253adea825a678">set_topography_process.SetTopographyProcess</a>
 , <a class="el" href="d3/d82/classset__up__pre__stressed__oriented__composite__materials_1_1_set_up_pre_stressed_oriented_composite_materials.html#aa1675592431f627c6ca37870b130228f">set_up_pre_stressed_oriented_composite_materials.SetUpPreStressedOrientedCompositeMaterials</a>
-, <a class="el" href="d4/d35/classshape_1_1vertex__morphing__shape__control_1_1_vertex_morphing_shape_control.html#af0b3a0307e5787a5d0e6b1ab9cb39258">shape.vertex_morphing_shape_control.VertexMorphingShapeControl</a>
 , <a class="el" href="d4/d46/classshell__thickness__control_1_1_shell_thickness_control.html#aaf374efa66ae518a276d39e582c0377a">shell_thickness_control.ShellThicknessControl</a>
 , <a class="el" href="d1/d4d/classskin__detection__process_1_1_skin_detection_process.html#a114ef9535b0f4ad328ea1be58aec3ede">skin_detection_process.SkinDetectionProcess</a>
 , <a class="el" href="da/d36/classsoil__sampler__utility_1_1_soil_sampler_utility.html#a8cc913460a45c817396a27719e66c242">soil_sampler_utility.SoilSamplerUtility</a>
@@ -4745,6 +4742,7 @@ $(function() {
 , <a class="el" href="da/dc7/classulf__strategy__python__inc_1_1_u_l_f_strategy_python_inc.html#a51e11901f49c92c310a0c20e91e86b77">ulf_strategy_python_inc.ULFStrategyPythonInc</a>
 , <a class="el" href="d7/d09/classulf__strategy__python__inc__rigid_1_1_u_l_f_strategy_python_inc.html#af5896fe8da29e0b25faec0973c5b33e2">ulf_strategy_python_inc_rigid.ULFStrategyPythonInc</a>
 , <a class="el" href="d7/d1b/classunv__output__process_1_1_unv_output_process.html#afbae7536a1a9d32167e3ea4fc9755827">unv_output_process.UnvOutputProcess</a>
+, <a class="el" href="dc/d9a/classvertex__morphing__shape__control_1_1_vertex_morphing_shape_control.html#a027aaf9af7518858a46da64c08e338a6">vertex_morphing_shape_control.VertexMorphingShapeControl</a>
 , <a class="el" href="d3/d99/classvolume__recovery__process_1_1_volume_recovery_process.html#ab2cbe6d8719000f13f33e6fb99229908">volume_recovery_process.VolumeRecoveryProcess</a>
 , <a class="el" href="d5/d81/classvolume__shaping__process_1_1_volume_shaping_process.html#a3bec8ae65fff74eaefd859940268858a">volume_shaping_process.VolumeShapingProcess</a>
 , <a class="el" href="d1/d89/classvtk__output__process_1_1_vtk_output_process.html#a69a98dc2f5fe574367588760555369bb">vtk_output_process.VtkOutputProcess</a>
@@ -4819,8 +4817,8 @@ $(function() {
 , <a class="el" href="d3/d27/classresponses_1_1geometric__centroid__deviation__response__function_1_1_geometric_centroid_deviation_response_function.html#aea6a5ca585466df9ed485a71816293b3">responses.geometric_centroid_deviation_response_function.GeometricCentroidDeviationResponseFunction</a>
 , <a class="el" href="d6/d45/classresponses_1_1linear__strain__energy__response__function_1_1_linear_strain_energy_response_function.html#a731d2928b7ddf8a0ddac35ddfccf9526">responses.linear_strain_energy_response_function.LinearStrainEnergyResponseFunction</a>
 , <a class="el" href="dc/d74/classresponses_1_1mass__response__function_1_1_mass_response_function.html#ac486e0614776e95cc6c558923683bdbc">responses.mass_response_function.MassResponseFunction</a>
-, <a class="el" href="d4/d35/classshape_1_1vertex__morphing__shape__control_1_1_vertex_morphing_shape_control.html#addab71f567cac2ef8f7531017e98261b">shape.vertex_morphing_shape_control.VertexMorphingShapeControl</a>
 , <a class="el" href="d4/d46/classshell__thickness__control_1_1_shell_thickness_control.html#aa9afb90e119c85051125b7f8b5d470e3">shell_thickness_control.ShellThicknessControl</a>
+, <a class="el" href="dc/d9a/classvertex__morphing__shape__control_1_1_vertex_morphing_shape_control.html#a5169ea2db71ebeb0a953ed908e84cae2">vertex_morphing_shape_control.VertexMorphingShapeControl</a>
 </li>
 <li>model_part_origin
 : <a class="el" href="d5/d0a/classpython__mapper_1_1_python_mapper.html#a9f493b6966a650cea48008b3a42ae376">python_mapper.PythonMapper</a>
@@ -6118,15 +6116,6 @@ $(function() {
 : <a class="el" href="d1/d39/struct_kratos_1_1_disp_newtonian_fluid3_d_law_1_1_material_response_variables.html#adde6dd1b45613066c094290b474f7b91">Kratos::DispNewtonianFluid3DLaw::MaterialResponseVariables</a>
 , <a class="el" href="db/d27/struct_kratos_1_1_hyper_elastic3_d_law_1_1_material_response_variables.html#a0209c919651b5c81adfbc5d13810e8b4">Kratos::HyperElastic3DLaw::MaterialResponseVariables</a>
 </li>
-<li>mpSMStrategies
-: <a class="el" href="d0/db1/class_kratos_1_1_implicit_vertex_morphing.html#a05d21d0d102daacfdd614b4887ecc6df">Kratos::ImplicitVertexMorphing</a>
-</li>
-<li>mpSMVMModelParts
-: <a class="el" href="d0/db1/class_kratos_1_1_implicit_vertex_morphing.html#acc3ad0f27a88fbcdc266aa4fead8aac9">Kratos::ImplicitVertexMorphing</a>
-</li>
-<li>mpSMVMModelPartsProperties
-: <a class="el" href="d0/db1/class_kratos_1_1_implicit_vertex_morphing.html#adda35233190c25f6a60b2370e4969f3b">Kratos::ImplicitVertexMorphing</a>
-</li>
 <li>mpSolutionStrategy
 : <a class="el" href="d3/d6d/class_kratos_1_1_spalart_allmaras_turbulence_model.html#ae4214e699bedde983d96d12b0f19727d">Kratos::SpalartAllmarasTurbulenceModel&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
 , <a class="el" href="dc/def/class_kratos_1_1_stokes_initialization_process.html#a3f61c6438b6273fd6f56b0ac3e491b89">Kratos::StokesInitializationProcess&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
@@ -6156,8 +6145,6 @@ $(function() {
 <li>mpStrategies
 : <a class="el" href="db/d9b/class_kratos_1_1_helmholtz_material.html#a215db8dfda95196ac94bc8726ac504f9">Kratos::HelmholtzMaterial</a>
 , <a class="el" href="df/d4b/class_kratos_1_1_helmholtz_partition.html#a5b293c59b62bac49d1914150f5692590">Kratos::HelmholtzPartition</a>
-, <a class="el" href="dd/d0d/class_kratos_1_1_helmholtz_thickness.html#a7d22c3268519480d46848aa50727184d">Kratos::HelmholtzThickness</a>
-, <a class="el" href="d0/db1/class_kratos_1_1_implicit_vertex_morphing.html#acfad2b65944b02aeb39c5896973d85e6">Kratos::ImplicitVertexMorphing</a>
 , <a class="el" href="dd/dff/class_kratos_1_1_stress_opt_response.html#a6e552e55d074460d59a3c0bfb68a6973">Kratos::StressOptResponse</a>
 </li>
 <li>mpStressVariable
@@ -6258,17 +6245,10 @@ $(function() {
 <li>mpVMModelParts
 : <a class="el" href="db/d9b/class_kratos_1_1_helmholtz_material.html#a7425c25761d44c48fb3f332af1c466b8">Kratos::HelmholtzMaterial</a>
 , <a class="el" href="df/d4b/class_kratos_1_1_helmholtz_partition.html#aac52dfe5e2e0f6e9c54d5bd640f05207">Kratos::HelmholtzPartition</a>
-, <a class="el" href="dd/d0d/class_kratos_1_1_helmholtz_thickness.html#a7f685f6c2da065ede73cd8ed5e446810">Kratos::HelmholtzThickness</a>
-, <a class="el" href="d0/db1/class_kratos_1_1_implicit_vertex_morphing.html#a3e3860ff31926d841e7fdaedada9b431">Kratos::ImplicitVertexMorphing</a>
 </li>
 <li>mpVMModelPartsProperties
 : <a class="el" href="db/d9b/class_kratos_1_1_helmholtz_material.html#ae13e72e10bce660d5abef3b87ecb8860">Kratos::HelmholtzMaterial</a>
 , <a class="el" href="df/d4b/class_kratos_1_1_helmholtz_partition.html#aac562a3d5deeb1adf359849d26fe0570">Kratos::HelmholtzPartition</a>
-, <a class="el" href="dd/d0d/class_kratos_1_1_helmholtz_thickness.html#ad7b12e93d044c208e7b0ddf8da801ecc">Kratos::HelmholtzThickness</a>
-, <a class="el" href="d0/db1/class_kratos_1_1_implicit_vertex_morphing.html#a32b00ce650d4e7e49b79bbaf1c07f09d">Kratos::ImplicitVertexMorphing</a>
-</li>
-<li>mpVMModelPartsTypes
-: <a class="el" href="d0/db1/class_kratos_1_1_implicit_vertex_morphing.html#a9422c73204a00da57d64b9fccefeefb2">Kratos::ImplicitVertexMorphing</a>
 </li>
 <li>mpVolumeSourceVar
 : <a class="el" href="dd/d7d/class_kratos_1_1_radiation_settings.html#a29a18ee2f9d123736575e3f7a505ced7">Kratos::RadiationSettings</a>
@@ -6713,8 +6693,6 @@ $(function() {
 , <a class="el" href="d4/ddc/class_kratos_1_1_level_set_convection_process.html#a8fac6974bf3228ba28f4a92247f1bf26">Kratos::LevelSetConvectionProcess&lt; TDim, TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
 , <a class="el" href="d5/d09/class_kratos_1_1_material_control.html#af23dfebc0ca2d5ab75ad6cb49c9c7b5a">Kratos::MaterialControl</a>
 , <a class="el" href="d8/d81/class_kratos_1_1_response.html#a0ec9d81a87ed6e0c80e197390948e6b2">Kratos::Response</a>
-, <a class="el" href="d5/de7/class_kratos_1_1_shape_control.html#a267aa080d7f168c39bbd8dac792d6f9d">Kratos::ShapeControl</a>
-, <a class="el" href="dd/d37/class_kratos_1_1_thickness_control.html#aa612448effec87d2382ca953abb0c286">Kratos::ThicknessControl</a>
 , <a class="el" href="d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a3da0948de2367a87cc710df1eaa72c6c">Kratos::VariationalDistanceCalculationProcess&lt; TDim, TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
 </li>
 <li>mrModelPart
@@ -7073,7 +7051,7 @@ $(function() {
 <li>mSize
 : <a class="el" href="db/d07/class_kratos_1_1_cluster_information.html#a895134bcda1259cc57747023dcff7206">Kratos::ClusterInformation</a>
 , <a class="el" href="d6/d7d/class_kratos_1_1_gid_gauss_points_container.html#a8151b016aa6bc4c5b7063c8fe90f306a">Kratos::GidGaussPointsContainer</a>
-, <a class="el" href="d4/dc4/class_kratos_1_1_pfem_gid_gauss_points_container.html#acb1251468284fff3f7ca0cfe90834688">Kratos::PfemGidGaussPointsContainer</a>
+, <a class="el" href="d4/dc4/class_kratos_1_1_pfem_gid_gauss_points_container.html#a09e7b0d2af9ed363c39f4170b71f070c">Kratos::PfemGidGaussPointsContainer</a>
 </li>
 <li>mSkinSphere
 : <a class="el" href="da/dca/class_kratos_1_1_spheric_continuum_particle.html#a2dce7ea34898a23c81df15966ba2a63d">Kratos::SphericContinuumParticle</a>
@@ -7293,6 +7271,9 @@ $(function() {
 , <a class="el" href="da/dc2/class_kratos_1_1_control_module_fem_dem_utilities.html#abe7b70fe6c74c408416c7822bb7ce96a">Kratos::ControlModuleFemDemUtilities</a>
 , <a class="el" href="de/dbe/class_kratos_1_1_control_module_process.html#a2f0efe1dad17ef0ddecb4f8db6af2c6e">Kratos::ControlModuleProcess</a>
 </li>
+<li>mStressLimit
+: <a class="el" href="d7/d7b/class_kratos_1_1_periodic_interface_process.html#a45fb8abe1016bbd4aa8603c58052158f">Kratos::PeriodicInterfaceProcess</a>
+</li>
 <li>mStressMatrix
 : <a class="el" href="d8/db3/class_kratos_1_1_non_associative_plasticity_model.html#a51c71205630f057af70b8239705a4500">Kratos::NonAssociativePlasticityModel&lt; TElasticityModel, TYieldSurface &gt;</a>
 </li>
@@ -7431,8 +7412,6 @@ $(function() {
 <li>mTechniqueSettings
 : <a class="el" href="db/d9b/class_kratos_1_1_helmholtz_material.html#aaedee2f4baa84b70c71d3390ca2855da">Kratos::HelmholtzMaterial</a>
 , <a class="el" href="df/d4b/class_kratos_1_1_helmholtz_partition.html#a757b76e84262c2df39cac6556ca93394">Kratos::HelmholtzPartition</a>
-, <a class="el" href="dd/d0d/class_kratos_1_1_helmholtz_thickness.html#acd1857f51ab48cc146feed4093472723">Kratos::HelmholtzThickness</a>
-, <a class="el" href="d0/db1/class_kratos_1_1_implicit_vertex_morphing.html#aa04575111fc69f0b8df251f4866f7cb6">Kratos::ImplicitVertexMorphing</a>
 </li>
 <li>mTemperature
 : <a class="el" href="d4/d50/class_kratos_1_1_dam_fix_temperature_condition_process.html#ab6ce6e54df1e923864db1f4700282848">Kratos::DamFixTemperatureConditionProcess</a>
@@ -8201,7 +8180,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 03:54:22 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 03:47:53 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

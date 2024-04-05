@@ -123,7 +123,7 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral"></span> </div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d1/d94/class_kratos_1_1_set_automated_initial_variable_process.html#a2068d391b61752aa65be2d5372f3765f">   52</a></span>&#160;<span class="stringliteral">    <a class="code" href="../../d1/d94/class_kratos_1_1_set_automated_initial_variable_process.html#a2068d391b61752aa65be2d5372f3765f">~SetAutomatedInitialVariableProcess</a>() </span><span class="keyword">override</span> = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> ExecuteInitialize() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> GetDefaultParameters() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
@@ -150,7 +150,7 @@ $(function() {
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../d1/d94/class_kratos_1_1_set_automated_initial_variable_process.html">SetAutomatedInitialVariableProcess</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../d1/d94/class_kratos_1_1_set_automated_initial_variable_process.html">SetAutomatedInitialVariableProcess</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <a class="code" href="../../d1/d94/class_kratos_1_1_set_automated_initial_variable_process.html">SetAutomatedInitialVariableProcess</a>&amp; operator=(<a class="code" href="../../d1/d94/class_kratos_1_1_set_automated_initial_variable_process.html">SetAutomatedInitialVariableProcess</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//SetAutomatedInitialVariableProcess(SetAutomatedInitialVariableProcess const&amp; rOther);</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
@@ -171,8 +171,6 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_aa0e1370ca05eec621e0d0a0871ed689b"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a></div><div class="ttdeci">void ExecuteInitialize() override</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:37</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
 <div class="ttc" id="aclass_kratos_1_1_parameters_html"><div class="ttname"><a href="../../dd/da0/class_kratos_1_1_parameters.html">Kratos::Parameters</a></div><div class="ttdoc">This class provides to Kratos a data structure for I/O based on the standard of JSON.</div><div class="ttdef"><b>Definition:</b> kratos_parameters.h:59</div></div>
 <div class="ttc" id="aclass_kratos_1_1_process_html"><div class="ttname"><a href="../../d2/d8c/class_kratos_1_1_process.html">Kratos::Process</a></div><div class="ttdoc">The base class for all processes in Kratos.</div><div class="ttdef"><b>Definition:</b> process.h:49</div></div>
@@ -191,7 +189,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:32:19 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:28:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

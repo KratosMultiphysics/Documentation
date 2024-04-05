@@ -817,7 +817,7 @@ $(function() {
 <div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160; </div>
 <div class="line"><a name="l00760"></a><span class="lineno"><a class="line" href="../../d7/db3/struct_kratos_1_1_mesher_utilities_1_1_meshing_parameters.html#a36297d7a4fb1029aaa0d1e2c6ee86e8c">  760</a></span>&#160;                  <span class="keywordtype">void</span> <a class="code" href="../../d7/db3/struct_kratos_1_1_mesher_utilities_1_1_meshing_parameters.html#a36297d7a4fb1029aaa0d1e2c6ee86e8c">SetInfoParameters</a>(MeshingInfoParameters::Pointer rInfo)</div>
 <div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                  {</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                        <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a> = rInfo;</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                        Info = rInfo;</div>
 <div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                  };</div>
 <div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160; </div>
 <div class="line"><a name="l00765"></a><span class="lineno"><a class="line" href="../../d7/db3/struct_kratos_1_1_mesher_utilities_1_1_meshing_parameters.html#a1a799eb2eb039c0781b232a0fae379c4">  765</a></span>&#160;                  <span class="keywordtype">void</span> <a class="code" href="../../d7/db3/struct_kratos_1_1_mesher_utilities_1_1_meshing_parameters.html#a1a799eb2eb039c0781b232a0fae379c4">SetRefiningParameters</a>(RefiningParameters::Pointer rRefine)</div>
@@ -880,7 +880,7 @@ $(function() {
 <div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160; </div>
 <div class="line"><a name="l00823"></a><span class="lineno"><a class="line" href="../../d7/db3/struct_kratos_1_1_mesher_utilities_1_1_meshing_parameters.html#a6641bf58e73f6ab00f8bcc6130101520">  823</a></span>&#160;                  MeshingInfoParameters::Pointer <a class="code" href="../../d7/db3/struct_kratos_1_1_mesher_utilities_1_1_meshing_parameters.html#a6641bf58e73f6ab00f8bcc6130101520">GetInfoParameters</a>()</div>
 <div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                  {</div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                        <span class="keywordflow">return</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>;</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                        <span class="keywordflow">return</span> Info;</div>
 <div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                  };</div>
 <div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
 <div class="line"><a name="l00828"></a><span class="lineno"><a class="line" href="../../d7/db3/struct_kratos_1_1_mesher_utilities_1_1_meshing_parameters.html#a964ae12c3097f502d0a6d8358034ddff">  828</a></span>&#160;                  TransferParametersType::Pointer <a class="code" href="../../d7/db3/struct_kratos_1_1_mesher_utilities_1_1_meshing_parameters.html#a964ae12c3097f502d0a6d8358034ddff">GetTransferParameters</a>()</div>
@@ -1591,7 +1591,7 @@ $(function() {
 <div class="line"><a name="l01589"></a><span class="lineno"> 1589</span>&#160; </div>
 <div class="line"><a name="l01593"></a><span class="lineno"> 1593</span>&#160; </div>
 <div class="line"><a name="l01597"></a><span class="lineno"> 1597</span>&#160; </div>
-<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;            <a class="code" href="../../d1/db1/class_kratos_1_1_mesher_utilities.html">MesherUtilities</a> &amp;<a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../d1/db1/class_kratos_1_1_mesher_utilities.html">MesherUtilities</a> <span class="keyword">const</span> &amp;rOther);</div>
+<div class="line"><a name="l01599"></a><span class="lineno"> 1599</span>&#160;            <a class="code" href="../../d1/db1/class_kratos_1_1_mesher_utilities.html">MesherUtilities</a> &amp;operator=(<a class="code" href="../../d1/db1/class_kratos_1_1_mesher_utilities.html">MesherUtilities</a> <span class="keyword">const</span> &amp;rOther);</div>
 <div class="line"><a name="l01600"></a><span class="lineno"> 1600</span>&#160; </div>
 <div class="line"><a name="l01604"></a><span class="lineno"> 1604</span>&#160; </div>
 <div class="line"><a name="l01608"></a><span class="lineno"> 1608</span>&#160; </div>
@@ -1620,8 +1620,6 @@ $(function() {
 <div class="line"><a name="l01648"></a><span class="lineno"> 1648</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
 <div class="line"><a name="l01649"></a><span class="lineno"> 1649</span>&#160; </div>
 <div class="line"><a name="l01650"></a><span class="lineno"> 1650</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_MESHER_UTILITIES_H_INCLUDED  defined</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aclass_kratos_1_1_condition_html"><div class="ttname"><a href="../../d1/d6e/class_kratos_1_1_condition.html">Kratos::Condition</a></div><div class="ttdoc">Base class for all Conditions.</div><div class="ttdef"><b>Definition:</b> condition.h:59</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html">Kratos::Element</a></div><div class="ttdoc">Base class for all Elements.</div><div class="ttdef"><b>Definition:</b> element.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></div><div class="ttdoc">Forward declaration.</div><div class="ttdef"><b>Definition:</b> flags.h:56</div></div>
@@ -1979,7 +1977,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:09:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:07:31 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

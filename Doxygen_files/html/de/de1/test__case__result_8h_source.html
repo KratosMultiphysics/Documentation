@@ -121,7 +121,7 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../db/d8e/class_kratos_1_1_testing_1_1_test_case_result.html">TestCaseResult</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../db/d8e/class_kratos_1_1_testing_1_1_test_case_result.html">TestCaseResult</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="../../db/d8e/class_kratos_1_1_testing_1_1_test_case_result.html">TestCaseResult</a>&amp; operator=(<a class="code" href="../../db/d8e/class_kratos_1_1_testing_1_1_test_case_result.html">TestCaseResult</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Reset();</div>
@@ -170,7 +170,7 @@ $(function() {
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keywordtype">bool</span> IsRun() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">virtual</span> std::string Info() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
@@ -219,8 +219,6 @@ $(function() {
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;}</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;}  <span class="comment">// namespace Kratos::Testing.</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aclass_kratos_1_1_testing_1_1_test_case_result_html"><div class="ttname"><a href="../../db/d8e/class_kratos_1_1_testing_1_1_test_case_result.html">Kratos::Testing::TestCaseResult</a></div><div class="ttdoc">The test case base class.</div><div class="ttdef"><b>Definition:</b> test_case_result.h:37</div></div>
 <div class="ttc" id="aclass_kratos_1_1_testing_1_1_test_case_result_html_a6c1fee7a692123494506fafea4fa4943"><div class="ttname"><a href="../../db/d8e/class_kratos_1_1_testing_1_1_test_case_result.html#a6c1fee7a692123494506fafea4fa4943">Kratos::Testing::TestCaseResult::PrintData</a></div><div class="ttdeci">virtual void PrintData(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> test_case_result.cpp:175</div></div>
 <div class="ttc" id="aclass_kratos_1_1_testing_1_1_test_case_result_html_a804ea0c8c008383c3f2b32153f1d4217"><div class="ttname"><a href="../../db/d8e/class_kratos_1_1_testing_1_1_test_case_result.html#a804ea0c8c008383c3f2b32153f1d4217">Kratos::Testing::TestCaseResult::PrintInfo</a></div><div class="ttdeci">virtual void PrintInfo(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> test_case_result.cpp:169</div></div>
@@ -230,7 +228,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 03:01:27 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:57:14 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -131,7 +131,7 @@ $(function() {
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keyword">virtual</span> ~<a class="code" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html">AxisymUpdatedLagrangianUwPElement</a>();</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html">AxisymUpdatedLagrangianUwPElement</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html">AxisymUpdatedLagrangianUwPElement</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <a class="code" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html">AxisymUpdatedLagrangianUwPElement</a>&amp; operator=(<a class="code" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html">AxisymUpdatedLagrangianUwPElement</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
@@ -142,96 +142,90 @@ $(function() {
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="comment">//************* GETTING METHODS</span></div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="comment">//************************************************************************************</span></div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="comment">//************************************************************************************</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"></span>     <span class="keywordtype">int</span> Check(<span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment"></span>     <span class="keywordtype">int</span> Check(<span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    <span class="comment">//GET:</span></div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> GetValueOnIntegrationPoints(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;double&gt;</a>&amp; rVariable, std::vector&lt;double&gt;&amp; rValues, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> GetValueOnIntegrationPoints(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;Vector&gt;</a>&amp; rVariable, std::vector&lt;Vector&gt;&amp; rValues, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> GetValueOnIntegrationPoints( <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;Matrix&gt;</a>&amp; rVariable, std::vector&lt;Matrix&gt;&amp; rValue, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">//************* STARTING - ENDING  METHODS</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordtype">void</span> GetDofList(<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">DofsVectorType</a>&amp; rElementalDofList, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//************* STARTING - ENDING  METHODS</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="keywordtype">void</span> GetDofList(<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">DofsVectorType</a>&amp; rElementalDofList, <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordtype">void</span> EquationIdVector(<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">EquationIdVectorType</a>&amp; rResult, <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="keywordtype">void</span> GetValuesVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rValues, <span class="keywordtype">int</span> Step = 0) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keywordtype">void</span> GetFirstDerivativesVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rValues, <span class="keywordtype">int</span> Step = 0) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="keywordtype">void</span> GetSecondDerivativesVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rValues, <span class="keywordtype">int</span> Step = 0) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="comment">    /**** </span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="comment">       the time step (requiered). It shall be somewhere else.</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="comment">    ****/</span>    </div>
-<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a739dc11b691e3cf600e0a14aec538fe1">  194</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a739dc11b691e3cf600e0a14aec538fe1">mTimeStep</a>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keywordtype">void</span> EquationIdVector(<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">EquationIdVectorType</a>&amp; rResult, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keywordtype">void</span> GetValuesVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rValues, <span class="keywordtype">int</span> Step = 0) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keywordtype">void</span> GetFirstDerivativesVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rValues, <span class="keywordtype">int</span> Step = 0) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> GetSecondDerivativesVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rValues, <span class="keywordtype">int</span> Step = 0) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="comment">    /**** </span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="comment">       the time step (requiered). It shall be somewhere else.</span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">    ****/</span>    </div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a739dc11b691e3cf600e0a14aec538fe1">  186</a></span>&#160;    <span class="keywordtype">double</span> <a class="code" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a739dc11b691e3cf600e0a14aec538fe1">mTimeStep</a>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> CalculateAndAddLHS(<a class="code" href="../../d7/d47/struct_kratos_1_1_solid_element_1_1_local_system_components.html">LocalSystemComponents</a>&amp; rLocalSystem,</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                                    <a class="code" href="../../d6/db9/struct_kratos_1_1_solid_element_1_1_element_data.html">ElementDataType</a>&amp; rVariables,</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                                    <span class="keywordtype">double</span>&amp; rIntegrationWeight) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> CalculateAndAddLHS(<a class="code" href="../../d7/d47/struct_kratos_1_1_solid_element_1_1_local_system_components.html">LocalSystemComponents</a>&amp; rLocalSystem,</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> CalculateAndAddRHS(<a class="code" href="../../d7/d47/struct_kratos_1_1_solid_element_1_1_local_system_components.html">LocalSystemComponents</a>&amp; rLocalSystem,</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                                    <a class="code" href="../../d6/db9/struct_kratos_1_1_solid_element_1_1_element_data.html">ElementDataType</a>&amp; rVariables,</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                                    <span class="keywordtype">double</span>&amp; rIntegrationWeight) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> CalculateAndAddRHS(<a class="code" href="../../d7/d47/struct_kratos_1_1_solid_element_1_1_local_system_components.html">LocalSystemComponents</a>&amp; rLocalSystem,</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                                    <a class="code" href="../../d6/db9/struct_kratos_1_1_solid_element_1_1_element_data.html">ElementDataType</a>&amp; rVariables,</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                                    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rVolumeForce,</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                                    <span class="keywordtype">double</span>&amp; rIntegrationWeight) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> InitializeElementData(<a class="code" href="../../d6/db9/struct_kratos_1_1_solid_element_1_1_element_data.html">ElementDataType</a> &amp; rVariables, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                                    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rVolumeForce,</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;                                    <span class="keywordtype">double</span>&amp; rIntegrationWeight) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> InitializeElementData(<a class="code" href="../../d6/db9/struct_kratos_1_1_solid_element_1_1_element_data.html">ElementDataType</a> &amp; rVariables, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    <span class="keywordtype">void</span> InitializeSystemMatrices(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">MatrixType</a>&amp; rLeftHandSideMatrix,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                                  <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">VectorType</a>&amp; rRightHandSideVector,</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                                  <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a>&amp; rCalculationFlags) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">void</span> InitializeSystemMatrices(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">MatrixType</a>&amp; rLeftHandSideMatrix,</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                                  <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">VectorType</a>&amp; rRightHandSideVector,</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                                  <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a>&amp; rCalculationFlags) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    <span class="comment">//on integration points:</span></div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="../../da/d07/namespace_kratos_1_1_python.html#a54334f8e2084f34bf0bd679f178cf8ff">CalculateOnIntegrationPoints</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;double&gt;</a>&amp; rVariable, std::vector&lt;double&gt;&amp; rOutput, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d07/namespace_kratos_1_1_python.html#a54334f8e2084f34bf0bd679f178cf8ff">CalculateOnIntegrationPoints</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;Vector&gt;</a>&amp; rVariable, std::vector&lt;Vector&gt;&amp; rOutput, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="comment">//on integration points:</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="comment"></span>    <span class="keywordtype">void</span> <a class="code" href="../../da/d07/namespace_kratos_1_1_python.html#a54334f8e2084f34bf0bd679f178cf8ff">CalculateOnIntegrationPoints</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;double&gt;</a>&amp; rVariable, std::vector&lt;double&gt;&amp; rOutput, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d07/namespace_kratos_1_1_python.html#a54334f8e2084f34bf0bd679f178cf8ff">CalculateOnIntegrationPoints</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;Vector&gt;</a>&amp; rVariable, std::vector&lt;Vector&gt;&amp; rOutput, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d07/namespace_kratos_1_1_python.html#a54334f8e2084f34bf0bd679f178cf8ff">CalculateOnIntegrationPoints</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;Matrix&gt;</a>&amp; rVariable, std::vector&lt;Matrix&gt;&amp; rOutput, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d07/namespace_kratos_1_1_python.html#a54334f8e2084f34bf0bd679f178cf8ff">CalculateOnIntegrationPoints</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;Matrix&gt;</a>&amp; rVariable, std::vector&lt;Matrix&gt;&amp; rOutput, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
 <div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
-<div class="line"><a name="l00284"></a><span class="lineno"><a class="line" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  284</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="comment">// A private default constructor necessary for serialization</span></div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno"><a class="line" href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  276</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    <span class="comment">// A private default constructor necessary for serialization</span></div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
 <div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;}; <span class="comment">// Class UpdatedLagrangianUwPElement</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_UPDATED_LAGRANGIAN_U_wP_ELEMENT_H_INCLUDED</span></div>
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;}; <span class="comment">// Class UpdatedLagrangianUwPElement</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_UPDATED_LAGRANGIAN_U_wP_ELEMENT_H_INCLUDED</span></div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
 <div class="ttc" id="aaxisymmetric__updated__lagrangian__element_8hpp_html"><div class="ttname"><a href="../../d9/db7/axisymmetric__updated__lagrangian__element_8hpp.html">axisymmetric_updated_lagrangian_element.hpp</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_uw_p_element_html"><div class="ttname"><a href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html">Kratos::AxisymUpdatedLagrangianUwPElement</a></div><div class="ttdoc">Axisymmetric Updated Lagrangian Large Displacement Lagrangian U-Pw Element.</div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_wP_element.hpp:43</div></div>
 <div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_uw_p_element_html_a018c005f6985d6a7da519bfd8a3b915c"><div class="ttname"><a href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a018c005f6985d6a7da519bfd8a3b915c">Kratos::AxisymUpdatedLagrangianUwPElement::StressMeasureType</a></div><div class="ttdeci">ConstitutiveLawType::StressMeasure StressMeasureType</div><div class="ttdoc">StressMeasure from constitutive laws.</div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_wP_element.hpp:53</div></div>
@@ -239,7 +233,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_uw_p_element_html_a3191549246940f91e08c0a738e23b7a9"><div class="ttname"><a href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a3191549246940f91e08c0a738e23b7a9">Kratos::AxisymUpdatedLagrangianUwPElement::ConstitutiveLawType</a></div><div class="ttdeci">ConstitutiveLaw ConstitutiveLawType</div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_wP_element.hpp:49</div></div>
 <div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_uw_p_element_html_a3351e33927a304302052c3d6bf762265"><div class="ttname"><a href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a3351e33927a304302052c3d6bf762265">Kratos::AxisymUpdatedLagrangianUwPElement::SizeType</a></div><div class="ttdeci">GeometryData::SizeType SizeType</div><div class="ttdoc">Type for size.</div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_wP_element.hpp:57</div></div>
 <div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_uw_p_element_html_a63bd94ee9ec7877d35d8e1461b16d698"><div class="ttname"><a href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a63bd94ee9ec7877d35d8e1461b16d698">Kratos::AxisymUpdatedLagrangianUwPElement::ElementDataType</a></div><div class="ttdeci">AxisymmetricUpdatedLagrangianElement::ElementDataType ElementDataType</div><div class="ttdoc">Type for element variables.</div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_wP_element.hpp:59</div></div>
-<div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_uw_p_element_html_a739dc11b691e3cf600e0a14aec538fe1"><div class="ttname"><a href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a739dc11b691e3cf600e0a14aec538fe1">Kratos::AxisymUpdatedLagrangianUwPElement::mTimeStep</a></div><div class="ttdeci">double mTimeStep</div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_wP_element.hpp:194</div></div>
+<div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_uw_p_element_html_a739dc11b691e3cf600e0a14aec538fe1"><div class="ttname"><a href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a739dc11b691e3cf600e0a14aec538fe1">Kratos::AxisymUpdatedLagrangianUwPElement::mTimeStep</a></div><div class="ttdeci">double mTimeStep</div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_wP_element.hpp:186</div></div>
 <div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_uw_p_element_html_a8a9bcf6d1110ee4c5f620285eb1b1df3"><div class="ttname"><a href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#a8a9bcf6d1110ee4c5f620285eb1b1df3">Kratos::AxisymUpdatedLagrangianUwPElement::IntegrationMethod</a></div><div class="ttdeci">GeometryData::IntegrationMethod IntegrationMethod</div><div class="ttdoc">Type definition for integration methods.</div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_wP_element.hpp:55</div></div>
 <div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_uw_p_element_html_ad7d4c16bc65135591ee663fe8f0ea559"><div class="ttname"><a href="../../d6/d90/class_kratos_1_1_axisym_updated_lagrangian_uw_p_element.html#ad7d4c16bc65135591ee663fe8f0ea559">Kratos::AxisymUpdatedLagrangianUwPElement::KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION(AxisymUpdatedLagrangianUwPElement)</div><div class="ttdoc">Counted pointer of LargeDisplacementUPElement.</div></div>
 <div class="ttc" id="aclass_kratos_1_1_axisymmetric_updated_lagrangian_element_html"><div class="ttname"><a href="../../d3/d12/class_kratos_1_1_axisymmetric_updated_lagrangian_element.html">Kratos::AxisymmetricUpdatedLagrangianElement</a></div><div class="ttdoc">Axisymmetric Updated Lagrangian Element 2D geometries.</div><div class="ttdef"><b>Definition:</b> axisymmetric_updated_lagrangian_element.hpp:47</div></div>
@@ -265,7 +259,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:22:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:18:55 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

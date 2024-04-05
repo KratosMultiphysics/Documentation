@@ -160,13 +160,13 @@ $(function() {
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> Execute() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">void</span> ExecuteInitialize() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> ExecuteBeforeSolutionLoop() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> ExecuteInitializeSolutionStep() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a9b0ed487cf0c161878c2e7e3cd79a50e">ExecuteFinalizeSolutionStep</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> ExecuteFinalizeSolutionStep() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> CheckDefaultsAndProcessSettings(<a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> &amp;rParameters);</div>
@@ -228,8 +228,6 @@ $(function() {
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;};  <span class="comment">// namespace Kratos.</span></div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_BUMP_TRANSIENT_POROSITY_SOLUTION_BODY_FORCE_PROCESS_H</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a9b0ed487cf0c161878c2e7e3cd79a50e"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a9b0ed487cf0c161878c2e7e3cd79a50e">ExecuteFinalizeSolutionStep</a></div><div class="ttdeci">void ExecuteFinalizeSolutionStep() override</div><div class="ttdoc">this function will be executed at every time step AFTER performing the solve phase</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:55</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_aa0e1370ca05eec621e0d0a0871ed689b"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a></div><div class="ttdeci">void ExecuteInitialize() override</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:37</div></div>
 <div class="ttc" id="aclass_kratos_1_1_bump_transient_porosity_solution_body_force_process_html"><div class="ttname"><a href="../../d1/db4/class_kratos_1_1_bump_transient_porosity_solution_body_force_process.html">Kratos::BumpTransientPorositySolutionBodyForceProcess</a></div><div class="ttdef"><b>Definition:</b> bump_transient_porosity_solution_body_force_process.h:56</div></div>
 <div class="ttc" id="aclass_kratos_1_1_bump_transient_porosity_solution_body_force_process_html_a0e336cfc1590b624d81b1e6b9f2c389d"><div class="ttname"><a href="../../d1/db4/class_kratos_1_1_bump_transient_porosity_solution_body_force_process.html#a0e336cfc1590b624d81b1e6b9f2c389d">Kratos::BumpTransientPorositySolutionBodyForceProcess::PrintInfo</a></div><div class="ttdeci">void PrintInfo(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> bump_transient_porosity_solution_body_force_process.h:165</div></div>
 <div class="ttc" id="aclass_kratos_1_1_bump_transient_porosity_solution_body_force_process_html_a0fce162f9303977c549845621c4af0d6"><div class="ttname"><a href="../../d1/db4/class_kratos_1_1_bump_transient_porosity_solution_body_force_process.html#a0fce162f9303977c549845621c4af0d6">Kratos::BumpTransientPorositySolutionBodyForceProcess::mDamKohlerNumber</a></div><div class="ttdeci">double mDamKohlerNumber</div><div class="ttdef"><b>Definition:</b> bump_transient_porosity_solution_body_force_process.h:102</div></div>
@@ -269,7 +267,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:38:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:35:07 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

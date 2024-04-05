@@ -142,7 +142,7 @@ $(function() {
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <span class="keywordtype">void</span> Execute() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keywordtype">void</span> ExecuteInitialize() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> GetDefaultParameters() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
@@ -198,7 +198,7 @@ $(function() {
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="../../d9/d2f/class_kratos_1_1_impose_rigid_movement_process.html">ImposeRigidMovementProcess</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../d9/d2f/class_kratos_1_1_impose_rigid_movement_process.html">ImposeRigidMovementProcess</a> <span class="keyword">const</span>&amp; rOther) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="../../d9/d2f/class_kratos_1_1_impose_rigid_movement_process.html">ImposeRigidMovementProcess</a>&amp; operator=(<a class="code" href="../../d9/d2f/class_kratos_1_1_impose_rigid_movement_process.html">ImposeRigidMovementProcess</a> <span class="keyword">const</span>&amp; rOther) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <span class="comment">//ImposeRigidMovementProcess(ImposeRigidMovementProcess const&amp; rOther);</span></div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
@@ -224,8 +224,6 @@ $(function() {
 <div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;}</div>
 <div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
 <div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;}</div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_aa0e1370ca05eec621e0d0a0871ed689b"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a></div><div class="ttdeci">void ExecuteInitialize() override</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:37</div></div>
 <div class="ttc" id="aclass_kratos_1_1_impose_rigid_movement_process_html"><div class="ttname"><a href="../../d9/d2f/class_kratos_1_1_impose_rigid_movement_process.html">Kratos::ImposeRigidMovementProcess</a></div><div class="ttdoc">This method assign linear kinematic constrains to a certain submodelpart.</div><div class="ttdef"><b>Definition:</b> impose_rigid_movement_process.h:48</div></div>
 <div class="ttc" id="aclass_kratos_1_1_impose_rigid_movement_process_html_a028e6e25e7c637b5a67b1bae839b7388"><div class="ttname"><a href="../../d9/d2f/class_kratos_1_1_impose_rigid_movement_process.html#a028e6e25e7c637b5a67b1bae839b7388">Kratos::ImposeRigidMovementProcess::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> impose_rigid_movement_process.h:155</div></div>
 <div class="ttc" id="aclass_kratos_1_1_impose_rigid_movement_process_html_a16e8319de7cdb1470938f7f0cfd72a8c"><div class="ttname"><a href="../../d9/d2f/class_kratos_1_1_impose_rigid_movement_process.html#a16e8319de7cdb1470938f7f0cfd72a8c">Kratos::ImposeRigidMovementProcess::Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> impose_rigid_movement_process.h:143</div></div>
@@ -250,7 +248,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:32:18 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:28:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

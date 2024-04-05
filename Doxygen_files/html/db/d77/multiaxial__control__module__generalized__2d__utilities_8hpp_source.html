@@ -151,13 +151,13 @@ $(function() {
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="comment">//***************************************************************************************************************</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">// Before DEM solution</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">virtual</span> <span class="keywordtype">void</span> ExecuteInitialize();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="comment">// Before DEM solution</span></div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">virtual</span> <span class="keywordtype">void</span> ExecuteInitializeSolutionStep();</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="comment">// After DEM solution</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a9b0ed487cf0c161878c2e7e3cd79a50e">ExecuteFinalizeSolutionStep</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">virtual</span> <span class="keywordtype">void</span> ExecuteFinalizeSolutionStep();</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="comment">//***************************************************************************************************************</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="comment">//***************************************************************************************************************</span></div>
@@ -259,7 +259,7 @@ $(function() {
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<a class="code" href="../../d2/dd1/class_kratos_1_1_multiaxial_control_module_generalized2_d_utilities.html">MultiaxialControlModuleGeneralized2DUtilities</a> &amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../d2/dd1/class_kratos_1_1_multiaxial_control_module_generalized2_d_utilities.html">MultiaxialControlModuleGeneralized2DUtilities</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<a class="code" href="../../d2/dd1/class_kratos_1_1_multiaxial_control_module_generalized2_d_utilities.html">MultiaxialControlModuleGeneralized2DUtilities</a> &amp; operator=(<a class="code" href="../../d2/dd1/class_kratos_1_1_multiaxial_control_module_generalized2_d_utilities.html">MultiaxialControlModuleGeneralized2DUtilities</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
@@ -269,9 +269,6 @@ $(function() {
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_MULTIAXIAL_CONTROL_MODULE_GENERALIZED_2D_UTILITIES</span></div>
 <div class="ttc" id="a_d_e_m__application__variables_8h_html"><div class="ttname"><a href="../../d9/d06/_d_e_m__application__variables_8h.html">DEM_application_variables.h</a></div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a9b0ed487cf0c161878c2e7e3cd79a50e"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a9b0ed487cf0c161878c2e7e3cd79a50e">ExecuteFinalizeSolutionStep</a></div><div class="ttdeci">void ExecuteFinalizeSolutionStep() override</div><div class="ttdoc">this function will be executed at every time step AFTER performing the solve phase</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:55</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_aa0e1370ca05eec621e0d0a0871ed689b"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a></div><div class="ttdeci">void ExecuteInitialize() override</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:37</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, 1 &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
 <div class="ttc" id="aclass_kratos_1_1_multiaxial_control_module_generalized2_d_utilities_html"><div class="ttname"><a href="../../d2/dd1/class_kratos_1_1_multiaxial_control_module_generalized2_d_utilities.html">Kratos::MultiaxialControlModuleGeneralized2DUtilities</a></div><div class="ttdef"><b>Definition:</b> multiaxial_control_module_generalized_2d_utilities.hpp:54</div></div>
@@ -331,7 +328,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:09:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:07:44 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

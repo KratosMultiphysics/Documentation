@@ -128,7 +128,7 @@ $(function() {
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">using</span> base_type::size;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">using</span> base_type::size1;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">using</span> base_type::size2;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">using</span> <a class="code" href="../../db/d66/namespace_kratos.html#a0d68cfea286551bb6b1bd34c9f353102">base_type::operator</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">using</span> base_type::operator();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
 <div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a80c7c48875c722ef0b8d73839e4b71eb">   52</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a80c7c48875c722ef0b8d73839e4b71eb">iterator</a> = AMatrix::RandomAccessIterator&lt;TDataType&gt;;</div>
 <div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#adae3aeb37d60a8f02c6d346381bf5790">   53</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#adae3aeb37d60a8f02c6d346381bf5790">const_iterator</a> = AMatrix::RandomAccessIterator&lt;const TDataType&gt;;</div>
@@ -173,14 +173,14 @@ $(function() {
 <div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a442b47d6d910848cf74e014c4f078dc6">   92</a></span>&#160;    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a442b47d6d910848cf74e014c4f078dc6">operator=</a>(</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        AMatrix::MatrixExpression&lt;TExpressionType, TCategory&gt; <span class="keyword">const</span>&amp; Other) {</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <a class="code" href="../../d5/d4d/group___kratos_core.html#gab957b416207ac826a58f2b9503cb0d38">KRATOS_DEBUG_ERROR_IF</a>(Other.expression().check_aliasing(<a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>(), <a class="code" href="../../d0/df1/namespacemesh__to__mdpa__converter.html#ab9fda76a6237087d0714e405167d0868">data</a>()+size())) &lt;&lt; <span class="stringliteral">&quot;Aliasing found in assigning Matrix&quot;</span>;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">base_type::operator=</a>(Other.expression());</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        base_type::operator=(Other.expression());</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TExpressionType&gt;</div>
 <div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a4d743baeafd5865d6015fe00a6afb7bf">  100</a></span>&#160;    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a4d743baeafd5865d6015fe00a6afb7bf">operator=</a>(</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        AMatrix::MatrixExpression&lt;TExpressionType, AMatrix::row_major_access&gt; <span class="keyword">const</span>&amp; Other) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">base_type::operator=</a>(Other.expression());</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        base_type::operator=(Other.expression());</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
@@ -191,12 +191,12 @@ $(function() {
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="comment">//}</span></div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
 <div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#adc6a74de062e0d4f01b08445334b0167">  112</a></span>&#160;    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#adc6a74de062e0d4f01b08445334b0167">operator=</a>(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> <span class="keyword">const</span>&amp; Other) {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">base_type::operator=</a>(Other);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        base_type::operator=(Other);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00117"></a><span class="lineno"><a class="line" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#ae7c50d1cade796036dc3af0535d5f8d3">  117</a></span>&#160;    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#ae7c50d1cade796036dc3af0535d5f8d3">operator=</a>(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp;&amp; Other) {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">base_type::operator=</a>(Other);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        base_type::operator=(Other);</div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <span class="keywordflow">return</span> *<span class="keyword">this</span>;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    }</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
@@ -852,7 +852,6 @@ $(function() {
 <div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160; </div>
 <div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160; </div>
 <div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160; </div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
 <div class="ttc" id="achecks_8h_html"><div class="ttname"><a href="../../d5/d16/checks_8h.html">checks.h</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix</a></div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:41</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html_a001b0827d9e9818e7c31aedaff2ba260"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a001b0827d9e9818e7c31aedaff2ba260">Kratos::Internals::Matrix::operator()</a></div><div class="ttdeci">TDataType &amp; operator()(std::size_t i)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:122</div></div>
@@ -962,7 +961,6 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_1_1_python_html_a9a95f95817001943961fed38ea90895a"><div class="ttname"><a href="../../da/d07/namespace_kratos_1_1_python.html#a9a95f95817001943961fed38ea90895a">Kratos::Python::Size</a></div><div class="ttdeci">TSpaceType::IndexType Size(TSpaceType &amp;dummy, typename TSpaceType::VectorType const &amp;rV)</div><div class="ttdef"><b>Definition:</b> add_strategies_to_python.cpp:111</div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
 <div class="ttc" id="anamespace_kratos_html_a0c30d2b162b4757f7012f7006a8f1628"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">Kratos::norm_2</a></div><div class="ttdeci">TExpressionType::data_type norm_2(AMatrix::MatrixExpression&lt; TExpressionType, TCategory &gt; const &amp;TheExpression)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:625</div></div>
-<div class="ttc" id="anamespace_kratos_html_a0d68cfea286551bb6b1bd34c9f353102"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a0d68cfea286551bb6b1bd34c9f353102">Kratos::operator</a></div><div class="ttdeci">Kratos::PeriodicInterfaceProcess Process operator(std::istream &amp;rIStream, PeriodicInterfaceProcess &amp;rThis)</div><div class="ttdoc">input stream function</div></div>
 <div class="ttc" id="anamespace_kratos_html_a0dd2d083f48d867f5e0271bdf91b036e"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a0dd2d083f48d867f5e0271bdf91b036e">Kratos::IdentityMatrix</a></div><div class="ttdeci">AMatrix::IdentityMatrix&lt; double &gt; IdentityMatrix</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:564</div></div>
 <div class="ttc" id="anamespace_kratos_html_a136f4811acf740e83cc661152b820829"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a136f4811acf740e83cc661152b820829">Kratos::norm_1</a></div><div class="ttdeci">TExpressionType::data_type norm_1(AMatrix::MatrixExpression&lt; TExpressionType, TCategory &gt; const &amp;TheExpression)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:613</div></div>
 <div class="ttc" id="anamespace_kratos_html_a38c13e22609ffc33d95b3c922ce9cceb"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a38c13e22609ffc33d95b3c922ce9cceb">Kratos::MatrixRow</a></div><div class="ttdeci">AMatrix::MatrixRow&lt; TExpressionType &gt; MatrixRow</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:492</div></div>
@@ -984,7 +982,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:55:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:51:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

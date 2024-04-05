@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="keywordtype">void</span> Record(<a class="code" href="../../dd/d19/class_kratos_1_1_spheric_particle.html">SphericParticle</a>* p_particle, <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; r_model_part) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;std::string <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;std::string Info() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
@@ -143,15 +143,13 @@ $(function() {
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;std::vector&lt;double&gt; mRadii;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;std::vector&lt;double&gt; mTimesOfCreation;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="../../db/d54/class_kratos_1_1_particles_history_watcher.html">ParticlesHistoryWatcher</a> &amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../db/d54/class_kratos_1_1_particles_history_watcher.html">ParticlesHistoryWatcher</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<a class="code" href="../../db/d54/class_kratos_1_1_particles_history_watcher.html">ParticlesHistoryWatcher</a> &amp; operator=(<a class="code" href="../../db/d54/class_kratos_1_1_particles_history_watcher.html">ParticlesHistoryWatcher</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;}; <span class="comment">// Class ParticlesHistoryWatcher</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// PARTICLES_HISTORY_WATCHER</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aanalytic__watcher_8h_html"><div class="ttname"><a href="../../d2/d88/analytic__watcher_8h.html">analytic_watcher.h</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_analytic_watcher_html"><div class="ttname"><a href="../../dc/d56/class_kratos_1_1_analytic_watcher.html">Kratos::AnalyticWatcher</a></div><div class="ttdef"><b>Definition:</b> analytic_watcher.h:23</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
@@ -166,7 +164,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:09:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:07:43 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

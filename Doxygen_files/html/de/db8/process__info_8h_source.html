@@ -156,7 +156,7 @@ $(function() {
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../db/deb/class_kratos_1_1_process_info.html#acc9afab7eb7d2443247653926228bb53">  108</a></span>&#160;    <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html#acc9afab7eb7d2443247653926228bb53">operator=</a>(<span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rOther)</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">BaseType::operator=</a>(rOther);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        BaseType::operator=(rOther);</div>
 <div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#ae89c24993ca32013a4bd971f899a6d8c">Flags::operator=</a>(rOther);</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        mIsTimeStep = rOther.mIsTimeStep;</div>
@@ -331,7 +331,7 @@ $(function() {
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
 <div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="../../db/deb/class_kratos_1_1_process_info.html#af94c99777cd288110189dfaf93b9a1c1">  303</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html#af94c99777cd288110189dfaf93b9a1c1">PrintInfo</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>();</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        rOStream &lt;&lt; Info();</div>
 <div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    }</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
 <div class="line"><a name="l00309"></a><span class="lineno"><a class="line" href="../../db/deb/class_kratos_1_1_process_info.html#af1376d8f75b538be86b728701d6c60ab">  309</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html#af1376d8f75b538be86b728701d6c60ab">PrintData</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
@@ -414,8 +414,6 @@ $(function() {
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_PROCESS_INFO_H_INCLUDED  defined</span></div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aclass_kratos_1_1_data_value_container_html"><div class="ttname"><a href="../../d7/dfa/class_kratos_1_1_data_value_container.html">Kratos::DataValueContainer</a></div><div class="ttdoc">Container for storing data values associated with variables.</div><div class="ttdef"><b>Definition:</b> data_value_container.h:63</div></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></div><div class="ttdoc">Forward declaration.</div><div class="ttdef"><b>Definition:</b> flags.h:56</div></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html_ae89c24993ca32013a4bd971f899a6d8c"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#ae89c24993ca32013a4bd971f899a6d8c">Kratos::Flags::operator=</a></div><div class="ttdeci">Flags &amp; operator=(Flags const &amp;rOther)</div><div class="ttdoc">Assignment operator.</div><div class="ttdef"><b>Definition:</b> flags.h:139</div></div>
@@ -459,7 +457,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:56:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:52:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

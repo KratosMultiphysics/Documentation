@@ -157,11 +157,11 @@ $(function() {
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordtype">void</span> ExecuteInitialize() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <span class="keywordtype">void</span> ExecuteInitializeSolutionStep() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a9b0ed487cf0c161878c2e7e3cd79a50e">ExecuteFinalizeSolutionStep</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keywordtype">void</span> ExecuteFinalizeSolutionStep() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> GetDefaultParameters() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
@@ -170,7 +170,7 @@ $(function() {
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        std::string <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        std::string Info() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
@@ -197,7 +197,7 @@ $(function() {
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        ApplyCompressibleNavierStokesBoundaryConditionsProcess&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(ApplyCompressibleNavierStokesBoundaryConditionsProcess <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;        ApplyCompressibleNavierStokesBoundaryConditionsProcess&amp; operator=(ApplyCompressibleNavierStokesBoundaryConditionsProcess <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
 <div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;        ApplyCompressibleNavierStokesBoundaryConditionsProcess(ApplyCompressibleNavierStokesBoundaryConditionsProcess <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
@@ -219,10 +219,6 @@ $(function() {
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
 <div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_APPLY_COMPRESSIBLE_NAVIER_STOKES_BOUNDARY_CONDITIONS_PROCESS_INCLUDED  defined</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a9b0ed487cf0c161878c2e7e3cd79a50e"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a9b0ed487cf0c161878c2e7e3cd79a50e">ExecuteFinalizeSolutionStep</a></div><div class="ttdeci">void ExecuteFinalizeSolutionStep() override</div><div class="ttdoc">this function will be executed at every time step AFTER performing the solve phase</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:55</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_aa0e1370ca05eec621e0d0a0871ed689b"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#aa0e1370ca05eec621e0d0a0871ed689b">ExecuteInitialize</a></div><div class="ttdeci">void ExecuteInitialize() override</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:37</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aclass_kratos_1_1_apply_compressible_navier_stokes_boundary_conditions_process_1_1_boundary_condition_utility_html"><div class="ttname"><a href="../../d1/dd0/class_kratos_1_1_apply_compressible_navier_stokes_boundary_conditions_process_1_1_boundary_condition_utility.html">Kratos::ApplyCompressibleNavierStokesBoundaryConditionsProcess::BoundaryConditionUtility</a></div><div class="ttdoc">This class validates and manages a variable to fix and the value to fix it to.</div><div class="ttdef"><b>Definition:</b> apply_compressible_navier_stokes_boundary_conditions_process.h:96</div></div>
 <div class="ttc" id="aclass_kratos_1_1_apply_compressible_navier_stokes_boundary_conditions_process_html"><div class="ttname"><a href="../../d7/d1e/class_kratos_1_1_apply_compressible_navier_stokes_boundary_conditions_process.html">Kratos::ApplyCompressibleNavierStokesBoundaryConditionsProcess</a></div><div class="ttdoc">This process applies diferent boundary conditions accoring to the mach regime. Parameters:</div><div class="ttdef"><b>Definition:</b> apply_compressible_navier_stokes_boundary_conditions_process.h:73</div></div>
 <div class="ttc" id="aclass_kratos_1_1_apply_compressible_navier_stokes_boundary_conditions_process_html_a52f707c49e4d2a71fa8d55b822fe4659"><div class="ttname"><a href="../../d7/d1e/class_kratos_1_1_apply_compressible_navier_stokes_boundary_conditions_process.html#a52f707c49e4d2a71fa8d55b822fe4659">Kratos::ApplyCompressibleNavierStokesBoundaryConditionsProcess::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(ApplyCompressibleNavierStokesBoundaryConditionsProcess)</div><div class="ttdoc">Pointer definition of ApplyCompressibleNavierStokesBoundaryConditionsProcess.</div></div>
@@ -247,7 +243,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:10:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:08:42 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

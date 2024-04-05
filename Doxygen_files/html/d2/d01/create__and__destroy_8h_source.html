@@ -375,7 +375,7 @@ $(function() {
 <div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>* pGetCurrentMaxNodeId();</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;    <span class="keywordtype">void</span> SetMaxNodeId(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
 <div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    <span class="keyword">virtual</span> std::string Info() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
@@ -402,7 +402,7 @@ $(function() {
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> ClearVariables(ModelPart::NodesContainerType::iterator node_it, <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt;<a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3 &gt;</a> &gt;&amp; rVariable);</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">void</span> ClearVariables(ParticleIterator particle_it, <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;double&gt;</a>&amp; rVariable);</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="../../dd/d52/class_kratos_1_1_particle_creator_destructor.html">ParticleCreatorDestructor</a> &amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../dd/d52/class_kratos_1_1_particle_creator_destructor.html">ParticleCreatorDestructor</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    <a class="code" href="../../dd/d52/class_kratos_1_1_particle_creator_destructor.html">ParticleCreatorDestructor</a> &amp; operator=(<a class="code" href="../../dd/d52/class_kratos_1_1_particle_creator_destructor.html">ParticleCreatorDestructor</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
 <div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;}; <span class="comment">// Class ParticleCreatorDestructor</span></div>
 <div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160; </div>
@@ -426,8 +426,6 @@ $(function() {
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
 <div class="ttc" id="a_d_e_m__application__variables_8h_html"><div class="ttname"><a href="../../d9/d06/_d_e_m__application__variables_8h.html">DEM_application_variables.h</a></div></div>
 <div class="ttc" id="a_d_e_m_application_2custom__utilities_2discrete__particle__configure_8h_html"><div class="ttname"><a href="../../dc/d81/_d_e_m_application_2custom__utilities_2discrete__particle__configure_8h.html">discrete_particle_configure.h</a></div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aanalytic__watcher_8h_html"><div class="ttname"><a href="../../d2/d88/analytic__watcher_8h.html">analytic_watcher.h</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_cluster3_d_html"><div class="ttname"><a href="../../df/d25/class_kratos_1_1_cluster3_d.html">Kratos::Cluster3D</a></div><div class="ttdef"><b>Definition:</b> cluster3D.h:29</div></div>
 <div class="ttc" id="aclass_kratos_1_1_discrete_particle_configure_html"><div class="ttname"><a href="../../dc/dff/class_kratos_1_1_discrete_particle_configure.html">Kratos::DiscreteParticleConfigure</a></div><div class="ttdef"><b>Definition:</b> discrete_particle_configure.h:46</div></div>
@@ -482,7 +480,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:09:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:07:43 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

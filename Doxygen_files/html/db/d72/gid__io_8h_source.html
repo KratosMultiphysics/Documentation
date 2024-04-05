@@ -526,7 +526,7 @@ $(function() {
 <div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160; </div>
 <div class="line"><a name="l00547"></a><span class="lineno"><a class="line" href="../../da/df6/class_kratos_1_1_gid_i_o.html#abe73ff4719d70bcff8b0f5c3f1ab5b1a">  547</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/df6/class_kratos_1_1_gid_i_o.html#abe73ff4719d70bcff8b0f5c3f1ab5b1a">PrintInfo</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>();</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        rOStream &lt;&lt; Info();</div>
 <div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    }</div>
 <div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160; </div>
 <div class="line"><a name="l00555"></a><span class="lineno"><a class="line" href="../../da/df6/class_kratos_1_1_gid_i_o.html#ad55962ba7f4a6d723af39e8be2d6d758">  555</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/df6/class_kratos_1_1_gid_i_o.html#ad55962ba7f4a6d723af39e8be2d6d758">PrintData</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
@@ -1379,7 +1379,7 @@ $(function() {
 <div class="line"><a name="l01528"></a><span class="lineno"><a class="line" href="../../da/df6/class_kratos_1_1_gid_i_o.html#a63970c6473a3b6ae37bcd92373a2dc99"> 1528</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../da/df6/class_kratos_1_1_gid_i_o.html#a63970c6473a3b6ae37bcd92373a2dc99">mResultFileOpen</a>;</div>
 <div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160; </div>
 <div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;    <a class="code" href="../../da/df6/class_kratos_1_1_gid_i_o.html">GidIO</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../da/df6/class_kratos_1_1_gid_i_o.html">GidIO</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l01534"></a><span class="lineno"> 1534</span>&#160;    <a class="code" href="../../da/df6/class_kratos_1_1_gid_i_o.html">GidIO</a>&amp; operator=(<a class="code" href="../../da/df6/class_kratos_1_1_gid_i_o.html">GidIO</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l01535"></a><span class="lineno"> 1535</span>&#160; </div>
 <div class="line"><a name="l01539"></a><span class="lineno"> 1539</span>&#160;    <a class="code" href="../../da/df6/class_kratos_1_1_gid_i_o.html">GidIO</a>(<a class="code" href="../../da/df6/class_kratos_1_1_gid_i_o.html">GidIO</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l01540"></a><span class="lineno"> 1540</span>&#160;}; <span class="comment">// Class GidIO</span></div>
@@ -1399,8 +1399,6 @@ $(function() {
 <div class="line"><a name="l01557"></a><span class="lineno"> 1557</span>&#160; </div>
 <div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160; </div>
 <div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_GID_OUTPUT_H_INCLUDED  defined</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></div><div class="ttdoc">Forward declaration.</div><div class="ttdef"><b>Definition:</b> flags.h:56</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a3bd412badaf6f2d8fcb56bbaa659346ca0d0622c5f503ffb1c2b8b5355665bf27"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a3bd412badaf6f2d8fcb56bbaa659346ca0d0622c5f503ffb1c2b8b5355665bf27">Kratos::GeometryData::KratosGeometryType::Kratos_Quadrilateral2D8</a></div><div class="ttdeci">@ Kratos_Quadrilateral2D8</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a3bd412badaf6f2d8fcb56bbaa659346ca12e43a54eb0ac55bea35f2094bbf0e74"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a3bd412badaf6f2d8fcb56bbaa659346ca12e43a54eb0ac55bea35f2094bbf0e74">Kratos::GeometryData::KratosGeometryType::Kratos_Tetrahedra3D10</a></div><div class="ttdeci">@ Kratos_Tetrahedra3D10</div></div>
@@ -1559,7 +1557,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:55:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:51:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

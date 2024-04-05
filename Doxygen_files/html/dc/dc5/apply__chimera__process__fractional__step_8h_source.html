@@ -129,11 +129,11 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../d0/db0/class_kratos_1_1_apply_chimera_process_fractional_step.html#a19281b1e8b7dbda25bb4613cb3c9680c">   81</a></span>&#160;    <a class="code" href="../../d0/db0/class_kratos_1_1_apply_chimera_process_fractional_step.html#a19281b1e8b7dbda25bb4613cb3c9680c">~ApplyChimeraProcessFractionalStep</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a9b0ed487cf0c161878c2e7e3cd79a50e">ExecuteFinalizeSolutionStep</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> ExecuteFinalizeSolutionStep() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::string <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    std::string Info() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
@@ -161,7 +161,7 @@ $(function() {
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d0/db0/class_kratos_1_1_apply_chimera_process_fractional_step.html">ApplyChimeraProcessFractionalStep</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../d0/db0/class_kratos_1_1_apply_chimera_process_fractional_step.html">ApplyChimeraProcessFractionalStep</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <a class="code" href="../../d0/db0/class_kratos_1_1_apply_chimera_process_fractional_step.html">ApplyChimeraProcessFractionalStep</a>&amp; operator=(<a class="code" href="../../d0/db0/class_kratos_1_1_apply_chimera_process_fractional_step.html">ApplyChimeraProcessFractionalStep</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;}; <span class="comment">// Class ApplyChimeraProcessFractionalStep</span></div>
@@ -169,9 +169,6 @@ $(function() {
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_APPLY_CHIMERA_FRACTIONALSTEP_H_INCLUDED</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a9b0ed487cf0c161878c2e7e3cd79a50e"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a9b0ed487cf0c161878c2e7e3cd79a50e">ExecuteFinalizeSolutionStep</a></div><div class="ttdeci">void ExecuteFinalizeSolutionStep() override</div><div class="ttdoc">this function will be executed at every time step AFTER performing the solve phase</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:55</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aapply__chimera__process_8h_html"><div class="ttname"><a href="../../d1/dab/apply__chimera__process_8h.html">apply_chimera_process.h</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_apply_chimera_html"><div class="ttname"><a href="../../d9/dbd/class_kratos_1_1_apply_chimera.html">Kratos::ApplyChimera</a></div><div class="ttdoc">This class contains methods applies the continuity between the patch and background using linear mast...</div><div class="ttdef"><b>Definition:</b> apply_chimera_process.h:69</div></div>
 <div class="ttc" id="aclass_kratos_1_1_apply_chimera_html_a61bcac40cf1928aa9da985f9970d488d"><div class="ttname"><a href="../../d9/dbd/class_kratos_1_1_apply_chimera.html#a61bcac40cf1928aa9da985f9970d488d">Kratos::ApplyChimera::MasterSlaveConstraintContainerType</a></div><div class="ttdeci">ModelPart::MasterSlaveConstraintContainerType MasterSlaveConstraintContainerType</div><div class="ttdef"><b>Definition:</b> apply_chimera_process.h:81</div></div>
@@ -194,7 +191,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:00:46 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 01:59:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

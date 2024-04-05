@@ -142,25 +142,25 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a809fa811d228fb9833bb2d7974dc645c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a809fa811d228fb9833bb2d7974dc645c">InitializeNonLinIteration</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;r_model_part, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a1d0be4b6bdec0f05a45716ad08d9df90">TSystemMatrixType</a> &amp;A, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a775ed6815b7e378fbdca3305f3ac758b">TSystemVectorType</a> &amp;Dx, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a775ed6815b7e378fbdca3305f3ac758b">TSystemVectorType</a> &amp;b) override</td></tr>
 <tr class="memdesc:a809fa811d228fb9833bb2d7974dc645c"><td class="mdescLeft">&#160;</td><td class="mdescRight">unction to be called when it is needed to initialize an iteration. It is designed to be called at the beginning of each non linear iteration  <a href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a809fa811d228fb9833bb2d7974dc645c">More...</a><br /></td></tr>
 <tr class="separator:a809fa811d228fb9833bb2d7974dc645c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a07615b612752d971e367b8e73976e7be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a07615b612752d971e367b8e73976e7be">InitializeNonLinearIteration</a> (Condition::Pointer rCurrentCondition, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) override</td></tr>
-<tr class="separator:a07615b612752d971e367b8e73976e7be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e671204cfcb5dd0115a04cb7ea637f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a9e671204cfcb5dd0115a04cb7ea637f3">InitializeNonLinearIteration</a> (Element::Pointer rCurrentElement, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) override</td></tr>
-<tr class="separator:a9e671204cfcb5dd0115a04cb7ea637f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2de78a77d1af282d4316c95f887c93be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a2de78a77d1af282d4316c95f887c93be">CalculateSystemContributions</a> (Element::Pointer rCurrentElement, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a9ea0fb441aacb2b782ab0d99d91246e5">LocalSystemMatrixType</a> &amp;LHS_Contribution, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a781d61fa0f9ce7a265393d1dba4866e9">LocalSystemVectorType</a> &amp;RHS_Contribution, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) override</td></tr>
-<tr class="memdesc:a2de78a77d1af282d4316c95f887c93be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute local contributions.  <a href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a2de78a77d1af282d4316c95f887c93be">More...</a><br /></td></tr>
-<tr class="separator:a2de78a77d1af282d4316c95f887c93be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a265efd366de0d5c4750720babcda1ced"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a265efd366de0d5c4750720babcda1ced">Calculate_RHS_Contribution</a> (Element::Pointer rCurrentElement, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a781d61fa0f9ce7a265393d1dba4866e9">LocalSystemVectorType</a> &amp;RHS_Contribution, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) override</td></tr>
-<tr class="separator:a265efd366de0d5c4750720babcda1ced"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae4e25fbd26bc24a252ea961bec92e1bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#ae4e25fbd26bc24a252ea961bec92e1bb">Condition_CalculateSystemContributions</a> (Condition::Pointer rCurrentCondition, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a9ea0fb441aacb2b782ab0d99d91246e5">LocalSystemMatrixType</a> &amp;LHS_Contribution, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a781d61fa0f9ce7a265393d1dba4866e9">LocalSystemVectorType</a> &amp;RHS_Contribution, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) override</td></tr>
-<tr class="separator:ae4e25fbd26bc24a252ea961bec92e1bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1317c07a04ffdd78a66fc5b4487461ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a1317c07a04ffdd78a66fc5b4487461ce">Condition_Calculate_RHS_Contribution</a> (Condition::Pointer rCurrentCondition, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a781d61fa0f9ce7a265393d1dba4866e9">LocalSystemVectorType</a> &amp;RHS_Contribution, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) override</td></tr>
-<tr class="separator:a1317c07a04ffdd78a66fc5b4487461ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae72692a045fd15e008a16707b67f04be"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#ae72692a045fd15e008a16707b67f04be">GetElementalDofList</a> (Element::Pointer rCurrentElement, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a> &amp;ElementalDofList, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) override</td></tr>
-<tr class="memdesc:ae72692a045fd15e008a16707b67f04be"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of Degrees of freedom to be assembled in the system for a given <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>.  <a href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#ae72692a045fd15e008a16707b67f04be">More...</a><br /></td></tr>
-<tr class="separator:ae72692a045fd15e008a16707b67f04be"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a17638e15e48b752eba55a8dbc76624a9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a17638e15e48b752eba55a8dbc76624a9">GetConditionDofList</a> (Condition::Pointer rCurrentCondition, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a> &amp;ConditionDofList, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) override</td></tr>
-<tr class="memdesc:a17638e15e48b752eba55a8dbc76624a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of Degrees of freedom to be assembled in the system for a Given <a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a>.  <a href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a17638e15e48b752eba55a8dbc76624a9">More...</a><br /></td></tr>
-<tr class="separator:a17638e15e48b752eba55a8dbc76624a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9c8749b300bc3f87a9464134e449ac1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#ae9c8749b300bc3f87a9464134e449ac1">InitializeNonLinearIteration</a> (Condition::Pointer rCurrentCondition, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
+<tr class="separator:ae9c8749b300bc3f87a9464134e449ac1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98bc763524f193851e1f6fa4b8a8d63f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a98bc763524f193851e1f6fa4b8a8d63f">InitializeNonLinearIteration</a> (Element::Pointer rCurrentElement, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
+<tr class="separator:a98bc763524f193851e1f6fa4b8a8d63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04271c86f5c19e15cd21881f9f70508c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a04271c86f5c19e15cd21881f9f70508c">CalculateSystemContributions</a> (Element::Pointer rCurrentElement, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a9ea0fb441aacb2b782ab0d99d91246e5">LocalSystemMatrixType</a> &amp;LHS_Contribution, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a781d61fa0f9ce7a265393d1dba4866e9">LocalSystemVectorType</a> &amp;RHS_Contribution, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
+<tr class="memdesc:a04271c86f5c19e15cd21881f9f70508c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute local contributions.  <a href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a04271c86f5c19e15cd21881f9f70508c">More...</a><br /></td></tr>
+<tr class="separator:a04271c86f5c19e15cd21881f9f70508c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad6a4b07f9d82f2902fc0041f60607e8d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#ad6a4b07f9d82f2902fc0041f60607e8d">Calculate_RHS_Contribution</a> (Element::Pointer rCurrentElement, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a781d61fa0f9ce7a265393d1dba4866e9">LocalSystemVectorType</a> &amp;RHS_Contribution, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
+<tr class="separator:ad6a4b07f9d82f2902fc0041f60607e8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a641bad9e6c18e84c574e9586b108539a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a641bad9e6c18e84c574e9586b108539a">Condition_CalculateSystemContributions</a> (Condition::Pointer rCurrentCondition, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a9ea0fb441aacb2b782ab0d99d91246e5">LocalSystemMatrixType</a> &amp;LHS_Contribution, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a781d61fa0f9ce7a265393d1dba4866e9">LocalSystemVectorType</a> &amp;RHS_Contribution, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
+<tr class="separator:a641bad9e6c18e84c574e9586b108539a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12d03f398b2b7f23be4ec4788849b5eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a12d03f398b2b7f23be4ec4788849b5eb">Condition_Calculate_RHS_Contribution</a> (Condition::Pointer rCurrentCondition, <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a781d61fa0f9ce7a265393d1dba4866e9">LocalSystemVectorType</a> &amp;RHS_Contribution, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
+<tr class="separator:a12d03f398b2b7f23be4ec4788849b5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3dee82c0febbd6dfabf592620c5c0d6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#af3dee82c0febbd6dfabf592620c5c0d6">GetElementalDofList</a> (Element::Pointer rCurrentElement, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a> &amp;ElementalDofList, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
+<tr class="memdesc:af3dee82c0febbd6dfabf592620c5c0d6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of Degrees of freedom to be assembled in the system for a given <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>.  <a href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#af3dee82c0febbd6dfabf592620c5c0d6">More...</a><br /></td></tr>
+<tr class="separator:af3dee82c0febbd6dfabf592620c5c0d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a712fbbe2b2a5dc6deebf2a95d0add689"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a712fbbe2b2a5dc6deebf2a95d0add689">GetConditionDofList</a> (Condition::Pointer rCurrentCondition, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a> &amp;ConditionDofList, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
+<tr class="memdesc:a712fbbe2b2a5dc6deebf2a95d0add689"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of Degrees of freedom to be assembled in the system for a Given <a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a>.  <a href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#a712fbbe2b2a5dc6deebf2a95d0add689">More...</a><br /></td></tr>
+<tr class="separator:a712fbbe2b2a5dc6deebf2a95d0add689"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2444f962533a855cb7e0ef1fffe09fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#aa2444f962533a855cb7e0ef1fffe09fb">Check</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;r_model_part) override</td></tr>
 <tr class="memdesc:aa2444f962533a855cb7e0ef1fffe09fb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check whether the scheme was configured correctly for the provided <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>.  <a href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html#aa2444f962533a855cb7e0ef1fffe09fb">More...</a><br /></td></tr>
 <tr class="separator:aa2444f962533a855cb7e0ef1fffe09fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -809,8 +809,8 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
  
 </div>
 </div>
-<a id="a265efd366de0d5c4750720babcda1ced"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a265efd366de0d5c4750720babcda1ced">&#9670;&nbsp;</a></span>Calculate_RHS_Contribution()</h2>
+<a id="ad6a4b07f9d82f2902fc0041f60607e8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6a4b07f9d82f2902fc0041f60607e8d">&#9670;&nbsp;</a></span>Calculate_RHS_Contribution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -821,7 +821,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::Calculate_RHS_Contribution </td>
+          <td class="memname">virtual void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::Calculate_RHS_Contribution </td>
           <td>(</td>
           <td class="paramtype">Element::Pointer&#160;</td>
           <td class="paramname"><em>rCurrentElement</em>, </td>
@@ -852,15 +852,15 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a2de78a77d1af282d4316c95f887c93be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2de78a77d1af282d4316c95f887c93be">&#9670;&nbsp;</a></span>CalculateSystemContributions()</h2>
+<a id="a04271c86f5c19e15cd21881f9f70508c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04271c86f5c19e15cd21881f9f70508c">&#9670;&nbsp;</a></span>CalculateSystemContributions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -871,7 +871,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::CalculateSystemContributions </td>
+          <td class="memname">virtual void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::CalculateSystemContributions </td>
           <td>(</td>
           <td class="paramtype">Element::Pointer&#160;</td>
           <td class="paramname"><em>rCurrentElement</em>, </td>
@@ -908,7 +908,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -990,8 +990,8 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 </div>
 </div>
-<a id="a1317c07a04ffdd78a66fc5b4487461ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1317c07a04ffdd78a66fc5b4487461ce">&#9670;&nbsp;</a></span>Condition_Calculate_RHS_Contribution()</h2>
+<a id="a12d03f398b2b7f23be4ec4788849b5eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12d03f398b2b7f23be4ec4788849b5eb">&#9670;&nbsp;</a></span>Condition_Calculate_RHS_Contribution()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1002,7 +1002,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::Condition_Calculate_RHS_Contribution </td>
+          <td class="memname">virtual void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::Condition_Calculate_RHS_Contribution </td>
           <td>(</td>
           <td class="paramtype">Condition::Pointer&#160;</td>
           <td class="paramname"><em>rCurrentCondition</em>, </td>
@@ -1033,15 +1033,15 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ae4e25fbd26bc24a252ea961bec92e1bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae4e25fbd26bc24a252ea961bec92e1bb">&#9670;&nbsp;</a></span>Condition_CalculateSystemContributions()</h2>
+<a id="a641bad9e6c18e84c574e9586b108539a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a641bad9e6c18e84c574e9586b108539a">&#9670;&nbsp;</a></span>Condition_CalculateSystemContributions()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1052,7 +1052,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::Condition_CalculateSystemContributions </td>
+          <td class="memname">virtual void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::Condition_CalculateSystemContributions </td>
           <td>(</td>
           <td class="paramtype">Condition::Pointer&#160;</td>
           <td class="paramname"><em>rCurrentCondition</em>, </td>
@@ -1089,7 +1089,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1150,8 +1150,8 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 </div>
 </div>
-<a id="a17638e15e48b752eba55a8dbc76624a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a17638e15e48b752eba55a8dbc76624a9">&#9670;&nbsp;</a></span>GetConditionDofList()</h2>
+<a id="a712fbbe2b2a5dc6deebf2a95d0add689"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a712fbbe2b2a5dc6deebf2a95d0add689">&#9670;&nbsp;</a></span>GetConditionDofList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1162,7 +1162,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::GetConditionDofList </td>
+          <td class="memname">virtual void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::GetConditionDofList </td>
           <td>(</td>
           <td class="paramtype">Condition::Pointer&#160;</td>
           <td class="paramname"><em>rCurrentCondition</em>, </td>
@@ -1187,7 +1187,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1196,8 +1196,8 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 </div>
 </div>
-<a id="ae72692a045fd15e008a16707b67f04be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae72692a045fd15e008a16707b67f04be">&#9670;&nbsp;</a></span>GetElementalDofList()</h2>
+<a id="af3dee82c0febbd6dfabf592620c5c0d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3dee82c0febbd6dfabf592620c5c0d6">&#9670;&nbsp;</a></span>GetElementalDofList()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1208,7 +1208,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::GetElementalDofList </td>
+          <td class="memname">virtual void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::GetElementalDofList </td>
           <td>(</td>
           <td class="paramtype">Element::Pointer&#160;</td>
           <td class="paramname"><em>rCurrentElement</em>, </td>
@@ -1233,7 +1233,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1308,8 +1308,8 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 </div>
 </div>
-<a id="a07615b612752d971e367b8e73976e7be"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a07615b612752d971e367b8e73976e7be">&#9670;&nbsp;</a></span>InitializeNonLinearIteration() <span class="overload">[1/2]</span></h2>
+<a id="ae9c8749b300bc3f87a9464134e449ac1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9c8749b300bc3f87a9464134e449ac1">&#9670;&nbsp;</a></span>InitializeNonLinearIteration() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1320,7 +1320,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::InitializeNonLinearIteration </td>
+          <td class="memname">virtual void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::InitializeNonLinearIteration </td>
           <td>(</td>
           <td class="paramtype">Condition::Pointer&#160;</td>
           <td class="paramname"><em>rCurrentCondition</em>, </td>
@@ -1339,15 +1339,15 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a9e671204cfcb5dd0115a04cb7ea637f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e671204cfcb5dd0115a04cb7ea637f3">&#9670;&nbsp;</a></span>InitializeNonLinearIteration() <span class="overload">[2/2]</span></h2>
+<a id="a98bc763524f193851e1f6fa4b8a8d63f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98bc763524f193851e1f6fa4b8a8d63f">&#9670;&nbsp;</a></span>InitializeNonLinearIteration() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1358,7 +1358,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::InitializeNonLinearIteration </td>
+          <td class="memname">virtual void <a class="el" href="../../d9/dc0/class_kratos_1_1_residual_based_bossak_scheme.html">Kratos::ResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::InitializeNonLinearIteration </td>
           <td>(</td>
           <td class="paramtype">Element::Pointer&#160;</td>
           <td class="paramname"><em>rCurrentElement</em>, </td>
@@ -1377,7 +1377,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1871,7 +1871,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 03:38:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 03:32:14 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

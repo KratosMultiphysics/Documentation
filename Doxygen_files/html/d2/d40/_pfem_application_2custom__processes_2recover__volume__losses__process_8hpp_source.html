@@ -353,7 +353,7 @@ $(function() {
 <div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>&lt;NumberOfElements; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
 <div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      {</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        ModelPart::ElementsContainerType::iterator i_elem = it_begin + <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">if</span>( i_elem-&gt;GetGeometry().Dimension() == 2 &amp;&amp; i_elem-&gt;Is(FLUID) )</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keywordflow">if</span>( i_elem-&gt;GetGeometry().WorkingSpaceDimension() == 2 &amp;&amp; i_elem-&gt;Is(FLUID) )</div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;          ModelPartVolume += i_elem-&gt;GetGeometry().Area();</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      }</div>
 <div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    }</div>
@@ -366,7 +366,7 @@ $(function() {
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>&lt;NumberOfElements; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;      {</div>
 <div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        ModelPart::ElementsContainerType::iterator i_elem = it_begin + <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordflow">if</span>( i_elem-&gt;GetGeometry().Dimension() == 3 &amp;&amp; i_elem-&gt;Is(FLUID) )</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keywordflow">if</span>( i_elem-&gt;GetGeometry().WorkingSpaceDimension() == 3 &amp;&amp; i_elem-&gt;Is(FLUID) )</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;          ModelPartVolume += i_elem-&gt;GetGeometry().Volume();</div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;      }</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;    }</div>
@@ -396,7 +396,7 @@ $(function() {
 <div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>&lt;NumberOfElements; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
 <div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      {</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;        ModelPart::ElementsContainerType::iterator i_elem = it_begin + <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="keywordflow">if</span>( i_elem-&gt;GetGeometry().Dimension() == 2 &amp;&amp; i_elem-&gt;Is(FREE_SURFACE) &amp;&amp; i_elem-&gt;Is(FLUID) )</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;        <span class="keywordflow">if</span>( i_elem-&gt;GetGeometry().WorkingSpaceDimension() == 2 &amp;&amp; i_elem-&gt;Is(FREE_SURFACE) &amp;&amp; i_elem-&gt;Is(FLUID) )</div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;          ModelPartVolume += i_elem-&gt;GetGeometry().Area();</div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;      }</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    }</div>
@@ -409,7 +409,7 @@ $(function() {
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>&lt;NumberOfElements; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;      {</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;        ModelPart::ElementsContainerType::iterator i_elem = it_begin + <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>;</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">if</span>( i_elem-&gt;GetGeometry().Dimension() == 3  &amp;&amp; i_elem-&gt;Is(FREE_SURFACE) &amp;&amp; i_elem-&gt;Is(FLUID) )</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;        <span class="keywordflow">if</span>( i_elem-&gt;GetGeometry().WorkingSpaceDimension() == 3  &amp;&amp; i_elem-&gt;Is(FREE_SURFACE) &amp;&amp; i_elem-&gt;Is(FLUID) )</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;          ModelPartVolume += i_elem-&gt;GetGeometry().Volume();</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;      }</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    }</div>
@@ -441,7 +441,7 @@ $(function() {
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;      {</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;        ModelPart::ElementsContainerType::iterator i_elem = it_begin + <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>;</div>
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;        <a class="code" href="../../df/d02/class_kratos_1_1_recover_volume_losses_process.html#a21e6a60457a32ab72bd067380feea567">GeometryType</a>&amp; rGeometry = i_elem-&gt;GetGeometry();</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keywordflow">if</span>( rGeometry.Dimension() == 2 &amp;&amp; i_elem-&gt;Is(FREE_SURFACE) &amp;&amp; i_elem-&gt;Is(FLUID) ){</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;        <span class="keywordflow">if</span>( rGeometry.WorkingSpaceDimension() == 2 &amp;&amp; i_elem-&gt;Is(FREE_SURFACE) &amp;&amp; i_elem-&gt;Is(FLUID) ){</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;          <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>=0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>&lt;rGeometry.size()-1; ++<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>)</div>
 <div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;          {</div>
 <div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;            <span class="keywordflow">if</span>(rGeometry[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>].<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a4f077303c44ee715718ed045077514ea">Is</a>(FREE_SURFACE)){</div>
@@ -472,7 +472,7 @@ $(function() {
 <div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        <a class="code" href="../../df/d02/class_kratos_1_1_recover_volume_losses_process.html#a21e6a60457a32ab72bd067380feea567">GeometryType</a>&amp; rGeometry = i_elem-&gt;GetGeometry();</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordflow">if</span>( rGeometry.Dimension() == 3 &amp;&amp; i_elem-&gt;Is(FREE_SURFACE) &amp;&amp; i_elem-&gt;Is(FLUID) ){</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordflow">if</span>( rGeometry.WorkingSpaceDimension() == 3 &amp;&amp; i_elem-&gt;Is(FREE_SURFACE) &amp;&amp; i_elem-&gt;Is(FLUID) ){</div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;          rGeometry.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a9101c4a5c041efd8564a57ce5f7d5cac">NodesInFaces</a>(lpofa);</div>
 <div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;          rGeometry.NumberNodesInFaces(lnofa);</div>
@@ -602,7 +602,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:18:43 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:15:28 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

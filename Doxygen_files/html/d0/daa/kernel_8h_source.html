@@ -141,7 +141,7 @@ $(function() {
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="../../d1/d04/namespacepython__interface.html#ace5eedafaec9510c3355f7be20794186">IsDistributedRun</a>();</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="keyword">virtual</span> std::string Info() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
@@ -177,7 +177,7 @@ $(function() {
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    <span class="keywordtype">void</span> RegisterKratosCore();</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="../../da/d35/class_kratos_1_1_kernel.html">Kernel</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../da/d35/class_kratos_1_1_kernel.html">Kernel</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    <a class="code" href="../../da/d35/class_kratos_1_1_kernel.html">Kernel</a>&amp; operator=(<a class="code" href="../../da/d35/class_kratos_1_1_kernel.html">Kernel</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160; </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;};  <span class="comment">// Class Kernel</span></div>
@@ -196,8 +196,6 @@ $(function() {
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="preprocessor">#endif  </span><span class="comment">// KRATOS_KERNEL_H_INCLUDED  defined</span></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aclass_kratos_1_1_kernel_html"><div class="ttname"><a href="../../da/d35/class_kratos_1_1_kernel.html">Kratos::Kernel</a></div><div class="ttdoc">Kernel is in charge of synchronization the whole system of Kratos itself and its application.</div><div class="ttdef"><b>Definition:</b> kernel.h:53</div></div>
 <div class="ttc" id="aclass_kratos_1_1_kernel_html_a2785e021f31ace2758e3a1b77103dbfe"><div class="ttname"><a href="../../da/d35/class_kratos_1_1_kernel.html#a2785e021f31ace2758e3a1b77103dbfe">Kratos::Kernel::Kernel</a></div><div class="ttdeci">Kernel(Kernel const &amp;rOther)</div><div class="ttdoc">Copy constructor.</div><div class="ttdef"><b>Definition:</b> kernel.h:79</div></div>
 <div class="ttc" id="aclass_kratos_1_1_kernel_html_aa196281d1b8e75ff6ea85599a76b4748"><div class="ttname"><a href="../../da/d35/class_kratos_1_1_kernel.html#aa196281d1b8e75ff6ea85599a76b4748">Kratos::Kernel::~Kernel</a></div><div class="ttdeci">virtual ~Kernel()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> kernel.h:82</div></div>
@@ -215,7 +213,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:55:53 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:51:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

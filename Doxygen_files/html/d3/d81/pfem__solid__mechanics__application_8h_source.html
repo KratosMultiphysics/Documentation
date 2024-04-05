@@ -224,7 +224,7 @@ $(function() {
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
 <div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="../../d9/de5/class_kratos_1_1_kratos_pfem_solid_mechanics_application.html#a27c42b692d41e828f549c7be57c15b1f">  187</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/de5/class_kratos_1_1_kratos_pfem_solid_mechanics_application.html#a27c42b692d41e828f549c7be57c15b1f">PrintInfo</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>();</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      rOStream &lt;&lt; Info();</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      PrintData(rOStream);</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    }</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
@@ -359,7 +359,7 @@ $(function() {
 <div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160; </div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <a class="code" href="../../d9/de5/class_kratos_1_1_kratos_pfem_solid_mechanics_application.html">KratosPfemSolidMechanicsApplication</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../d9/de5/class_kratos_1_1_kratos_pfem_solid_mechanics_application.html">KratosPfemSolidMechanicsApplication</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <a class="code" href="../../d9/de5/class_kratos_1_1_kratos_pfem_solid_mechanics_application.html">KratosPfemSolidMechanicsApplication</a>&amp; operator=(<a class="code" href="../../d9/de5/class_kratos_1_1_kratos_pfem_solid_mechanics_application.html">KratosPfemSolidMechanicsApplication</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <a class="code" href="../../d9/de5/class_kratos_1_1_kratos_pfem_solid_mechanics_application.html">KratosPfemSolidMechanicsApplication</a>(<a class="code" href="../../d9/de5/class_kratos_1_1_kratos_pfem_solid_mechanics_application.html">KratosPfemSolidMechanicsApplication</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
@@ -379,8 +379,6 @@ $(function() {
 <div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_PFEM_SOLID_MECHANICS_APPLICATION_H_INCLUDED  defined </span></div>
 <div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160; </div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="a_j2__explicit__plastic__flow__rule_8hpp_html"><div class="ttname"><a href="../../d5/d01/_j2__explicit__plastic__flow__rule_8hpp.html">J2_explicit_plastic_flow_rule.hpp</a></div></div>
 <div class="ttc" id="a_j2__yield__criterion_8hpp_html"><div class="ttname"><a href="../../d3/de9/_j2__yield__criterion_8hpp.html">J2_yield_criterion.hpp</a></div></div>
 <div class="ttc" id="a_pfem_solid_mechanics_application_2custom__constitutive_2custom__hardening__laws_2cam__clay__hardening__law_8hpp_html"><div class="ttname"><a href="../../d8/d5e/_pfem_solid_mechanics_application_2custom__constitutive_2custom__hardening__laws_2cam__clay__hardening__law_8hpp.html">cam_clay_hardening_law.hpp</a></div></div>
@@ -495,7 +493,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:22:18 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:19:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

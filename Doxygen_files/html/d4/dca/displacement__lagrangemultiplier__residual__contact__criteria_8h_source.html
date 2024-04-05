@@ -471,12 +471,12 @@ $(function() {
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160; </div>
 <div class="line"><a name="l00500"></a><span class="lineno"><a class="line" href="../../d5/dff/group___contact_structural_mechanics_application.html#ga5967f1244dafdacdbdc32dbf63f635a1">  500</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/dff/group___contact_structural_mechanics_application.html#ga5967f1244dafdacdbdc32dbf63f635a1">PrintInfo</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>();</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        rOStream &lt;&lt; Info();</div>
 <div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;    }</div>
 <div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160; </div>
 <div class="line"><a name="l00506"></a><span class="lineno"><a class="line" href="../../d5/dff/group___contact_structural_mechanics_application.html#ga988c3951f718bd86116697b6c8aae3b9">  506</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/dff/group___contact_structural_mechanics_application.html#ga988c3951f718bd86116697b6c8aae3b9">PrintData</a>(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>();</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        rOStream &lt;&lt; Info();</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    }</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;<span class="keyword">protected</span>:</div>
@@ -544,7 +544,6 @@ $(function() {
 <div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TSparseSpace, <span class="keyword">class</span> TDenseSpace&gt;</div>
 <div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;<span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a> DisplacementLagrangeMultiplierResidualContactCriteria&lt;TSparseSpace, TDenseSpace&gt;::INITIAL_RESIDUAL_IS_SET(<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a7e633a5159d1e064fb875282bef94ad0">Kratos::Flags::Create</a>(4));</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;}</div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="aclass_kratos_1_1_communicator_html_aeac30940c4529aa1f7d2af14a768b62b"><div class="ttname"><a href="../../d3/da4/class_kratos_1_1_communicator.html#aeac30940c4529aa1f7d2af14a768b62b">Kratos::Communicator::MyPID</a></div><div class="ttdeci">virtual int MyPID() const</div><div class="ttdef"><b>Definition:</b> communicator.cpp:91</div></div>
 <div class="ttc" id="aclass_kratos_1_1_contact_utilities_html_a568736a486eb02e57a7b7f4f851757f5"><div class="ttname"><a href="../../d0/d37/class_kratos_1_1_contact_utilities.html#a568736a486eb02e57a7b7f4f851757f5">Kratos::ContactUtilities::CheckModelPartHasRotationDoF</a></div><div class="ttdeci">static bool CheckModelPartHasRotationDoF(ModelPart &amp;rModelPart)</div><div class="ttdoc">This method checks that the modelpart has a rotation DoF.</div><div class="ttdef"><b>Definition:</b> contact_utilities.cpp:147</div></div>
 <div class="ttc" id="aclass_kratos_1_1_convergence_criteria_html"><div class="ttname"><a href="../../d3/d80/class_kratos_1_1_convergence_criteria.html">Kratos::ConvergenceCriteria</a></div><div class="ttdoc">This is the base class to define the different convergence criterion considered.</div><div class="ttdef"><b>Definition:</b> convergence_criteria.h:58</div></div>
@@ -616,7 +615,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:07:53 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:06:03 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

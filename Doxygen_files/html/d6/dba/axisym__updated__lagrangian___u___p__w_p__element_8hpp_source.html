@@ -128,7 +128,7 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;         <span class="keyword">virtual</span> ~<a class="code" href="../../d7/d70/class_kratos_1_1_axisym_updated_lagrangian_u_pw_p_element.html">AxisymUpdatedLagrangianUPwPElement</a>();</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;         <a class="code" href="../../d7/d70/class_kratos_1_1_axisym_updated_lagrangian_u_pw_p_element.html">AxisymUpdatedLagrangianUPwPElement</a>&amp; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a>(<a class="code" href="../../d7/d70/class_kratos_1_1_axisym_updated_lagrangian_u_pw_p_element.html">AxisymUpdatedLagrangianUPwPElement</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;         <a class="code" href="../../d7/d70/class_kratos_1_1_axisym_updated_lagrangian_u_pw_p_element.html">AxisymUpdatedLagrangianUPwPElement</a>&amp; operator=(<a class="code" href="../../d7/d70/class_kratos_1_1_axisym_updated_lagrangian_u_pw_p_element.html">AxisymUpdatedLagrangianUPwPElement</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
@@ -141,9 +141,9 @@ $(function() {
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;         <span class="comment">//************* STARTING - ENDING  METHODS</span></div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;         <span class="keywordtype">void</span> GetDofList(<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">DofsVectorType</a>&amp; rElementalDofList, <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;         <span class="keywordtype">void</span> GetDofList(<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">DofsVectorType</a>&amp; rElementalDofList, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;         <span class="keywordtype">void</span> EquationIdVector(<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">EquationIdVectorType</a>&amp; rResult, <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;         <span class="keywordtype">void</span> EquationIdVector(<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">EquationIdVectorType</a>&amp; rResult, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;         <span class="keywordtype">void</span> GetValuesVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rValues, <span class="keywordtype">int</span> Step = 0) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
@@ -154,7 +154,7 @@ $(function() {
 <div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
 <div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;         <span class="comment">//************************************************************************************</span></div>
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;         <span class="comment">//************************************************************************************</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"></span>         <span class="keywordtype">int</span> Check(<span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="comment"></span>         <span class="keywordtype">int</span> Check(<span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      <span class="keyword">protected</span>:</div>
@@ -277,7 +277,6 @@ $(function() {
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;} <span class="comment">// namespace Kratos</span></div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_UPDATED_LAGRANGIAN_U_P_wP_ELEMENT_H_INCLUDED</span></div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_a780697b42b9208ffe012aabd93cfbaad"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#a780697b42b9208ffe012aabd93cfbaad">operator=</a></div><div class="ttdeci">PeriodicInterfaceProcess &amp; operator=(const PeriodicInterfaceProcess &amp;)=delete</div></div>
 <div class="ttc" id="aaxisym__updated__lagrangian___u___pressure__element_8hpp_html"><div class="ttname"><a href="../../dc/d95/axisym__updated__lagrangian___u___pressure__element_8hpp.html">axisym_updated_lagrangian_U_Pressure_element.hpp</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_u_pressure_element_html"><div class="ttname"><a href="../../d0/d7c/class_kratos_1_1_axisym_updated_lagrangian_u_pressure_element.html">Kratos::AxisymUpdatedLagrangianUPressureElement</a></div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_Pressure_element.hpp:43</div></div>
 <div class="ttc" id="aclass_kratos_1_1_axisym_updated_lagrangian_u_pw_p_element_html"><div class="ttname"><a href="../../d7/d70/class_kratos_1_1_axisym_updated_lagrangian_u_pw_p_element.html">Kratos::AxisymUpdatedLagrangianUPwPElement</a></div><div class="ttdoc">Updated Lagrangian Large Displacement Lagrangian U-wP Element for 3D and 2D geometries....</div><div class="ttdef"><b>Definition:</b> axisym_updated_lagrangian_U_P_wP_element.hpp:42</div></div>
@@ -306,7 +305,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:22:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:18:54 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

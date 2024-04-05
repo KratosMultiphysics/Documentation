@@ -491,13 +491,13 @@ $(function() {
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;            root_ranges, distance_objective,</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            <a class="code" href="../../d2/dac/namespace_kratos_1_1_polynomial_utilities.html#ada7b27b463dccee8395fa9148933cefb">PolynomialUtilities::IntervalType</a>{-1,1});</div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160; </div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> <a class="code" href="../../d3/d55/namespaceshape.html">shape</a>;</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> shape;</div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; interval: root_ranges) {</div>
 <div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;            <span class="keywordtype">double</span> root = <a class="code" href="../../d2/dac/namespace_kratos_1_1_polynomial_utilities.html#ad9175727f75a72aa297c58ad761a459e">PolynomialUtilities::FindRoot</a>(distance_objective, interval);</div>
 <div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;            <span class="comment">// if point == line(root) we found our coordinate;</span></div>
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;            rResult[0] = root;</div>
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;            this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a55933ce2a5962b99d8604b0e0f024c15">ShapeFunctionsValues</a>(shape, rResult);</div>
-<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;            <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a> <a class="code" href="../../d2/df2/namespaceode__solve.html#aea7ae84efafeddd72467d0d424e4886f">d</a> = (<a class="code" href="../../d3/d55/namespaceshape.html">shape</a>[0]*r_p0 + <a class="code" href="../../d3/d55/namespaceshape.html">shape</a>[1]*r_p1 + <a class="code" href="../../d3/d55/namespaceshape.html">shape</a>[2]*r_p2) - rPoint;</div>
+<div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;            <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a> <a class="code" href="../../d2/df2/namespaceode__solve.html#aea7ae84efafeddd72467d0d424e4886f">d</a> = (shape[0]*r_p0 + shape[1]*r_p1 + shape[2]*r_p2) - rPoint;</div>
 <div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d2/df1/class_kratos_1_1_math_utils.html">MathUtils&lt;double&gt;::Dot3</a>(<a class="code" href="../../d2/df2/namespaceode__solve.html#aea7ae84efafeddd72467d0d424e4886f">d</a>, <a class="code" href="../../d2/df2/namespaceode__solve.html#aea7ae84efafeddd72467d0d424e4886f">d</a>) &lt; TOLERANCE) {</div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160;                <span class="keywordflow">return</span> rResult;</div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;            }</div>
@@ -851,14 +851,13 @@ $(function() {
 <div class="ttc" id="anamespaceode__solve_html_aea7ae84efafeddd72467d0d424e4886f"><div class="ttname"><a href="../../d2/df2/namespaceode__solve.html#aea7ae84efafeddd72467d0d424e4886f">ode_solve.d</a></div><div class="ttdeci">int d</div><div class="ttdef"><b>Definition:</b> ode_solve.py:397</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_a0dcc8fdbf3703c6395c0f78646371997"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a0dcc8fdbf3703c6395c0f78646371997">sensitivityMatrix.J</a></div><div class="ttdeci">J</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:58</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_a66f3c3a8f1f19530f87c9bd69c40d3ff"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">sensitivityMatrix.N</a></div><div class="ttdeci">N</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:29</div></div>
-<div class="ttc" id="anamespaceshape_html"><div class="ttname"><a href="../../d3/d55/namespaceshape.html">shape</a></div><div class="ttdef"><b>Definition:</b> __init__.py:1</div></div>
 <div class="ttc" id="anamespacetensors_html_a1bc7dff3e0374b81093b1605f4afdbef"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a1bc7dff3e0374b81093b1605f4afdbef">tensors::d1</a></div><div class="ttdeci">subroutine d1(DSTRAN, D, dtime, NDI, NSHR, NTENS)</div><div class="ttdef"><b>Definition:</b> TensorModule.f:594</div></div>
 <div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="apolynomial__utilities_8h_html"><div class="ttname"><a href="../../dc/daa/polynomial__utilities_8h.html">polynomial_utilities.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:46:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:42:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

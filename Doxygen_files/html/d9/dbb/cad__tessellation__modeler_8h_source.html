@@ -115,7 +115,7 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">class </span>KRATOS_API(KRATOS_CORE) CadTessellationModeler : <span class="keyword">public</span> Modeler {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../d9/dc0/smart__pointers_8h.html#a30182280dd39b76caf1dcd675463837f">KRATOS_CLASS_POINTER_DEFINITION</a>(CadTessellationModeler);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="../../d6/d3f/transfer__utility_8h.html#a95ed76edc983cae239b65f370953d216">KRATOS_CLASS_POINTER_DEFINITION</a>(CadTessellationModeler);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">typedef</span> std::size_t <a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a>;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
@@ -159,14 +159,14 @@ $(function() {
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> SetupModelPart() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::string <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::string Info()<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;CadTessellationModeler&quot;</span>;</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        rOStream &lt;&lt; <a class="code" href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        rOStream &lt;&lt; Info();</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keywordtype">void</span> PrintData(std::ostream&amp; rOStream)<span class="keyword"> const override</span></div>
@@ -230,7 +230,6 @@ $(function() {
 <div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
 <div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_CAD_TESSELLATION_MODELER_INCLUDED  defined</span></div>
 <div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;#endif</div>
-<div class="ttc" id="a_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp_html_ab0ebd0b14d6a7b3aa87c10ee124a035f"><div class="ttname"><a href="../../dd/d3c/_geo_mechanics_application_2custom__processes_2periodic__interface__process_8hpp.html#ab0ebd0b14d6a7b3aa87c10ee124a035f">Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> periodic_interface_process.hpp:93</div></div>
 <div class="ttc" id="abrep__curve__on__surface_8h_html"><div class="ttname"><a href="../../db/d64/brep__curve__on__surface_8h.html">brep_curve_on_surface.h</a></div></div>
 <div class="ttc" id="abrep__surface_8h_html"><div class="ttname"><a href="../../d2/db5/brep__surface_8h.html">brep_surface.h</a></div></div>
 <div class="ttc" id="acurve__tessellation_8h_html"><div class="ttname"><a href="../../d9/d07/curve__tessellation_8h.html">curve_tessellation.h</a></div></div>
@@ -244,12 +243,12 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_html_a9c6097d0b0a27d1cea94992b1087f56a"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">Kratos::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;rIStream, LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">input stream function</div></div>
 <div class="ttc" id="anamespace_kratos_html_acfc842a43d19dffc2d8105e5cbea17a9"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">Kratos::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;rOStream, const LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">output stream function</div><div class="ttdef"><b>Definition:</b> linear_master_slave_constraint.h:432</div></div>
 <div class="ttc" id="anamespacescript_html_ac15ac2b5f26090aaf005f81bbad3671a"><div class="ttname"><a href="../../df/d58/namespacescript.html#ac15ac2b5f26090aaf005f81bbad3671a">script.Model</a></div><div class="ttdeci">dictionary Model</div><div class="ttdoc">TODO replace this &quot;model&quot; for real one once available in kratos core.</div><div class="ttdef"><b>Definition:</b> script.py:94</div></div>
-<div class="ttc" id="asmart__pointers_8h_html_a30182280dd39b76caf1dcd675463837f"><div class="ttname"><a href="../../d9/dc0/smart__pointers_8h.html#a30182280dd39b76caf1dcd675463837f">KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">#define KRATOS_CLASS_POINTER_DEFINITION(a)</div><div class="ttdef"><b>Definition:</b> smart_pointers.h:69</div></div>
+<div class="ttc" id="atransfer__utility_8h_html_a95ed76edc983cae239b65f370953d216"><div class="ttname"><a href="../../d6/d3f/transfer__utility_8h.html#a95ed76edc983cae239b65f370953d216">KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(TransferUtility)</div></div>
 <div class="ttc" id="atriangle__gauss__legendre__integration__points_8h_html"><div class="ttname"><a href="../../d0/d72/triangle__gauss__legendre__integration__points_8h.html">triangle_gauss_legendre_integration_points.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 4 2024 02:56:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 5 2024 02:52:28 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
