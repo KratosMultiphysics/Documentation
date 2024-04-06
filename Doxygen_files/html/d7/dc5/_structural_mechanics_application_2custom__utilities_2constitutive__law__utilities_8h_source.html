@@ -265,8 +265,10 @@ $(function() {
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> YoungModulus,</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> PoissonRatio);</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;}; <span class="comment">// class ConstitutiveLawUtilities</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> CalculateShearModulus(<span class="keyword">const</span> <a class="code" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a>&amp; rProperties);</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;}; <span class="comment">// class ConstitutiveLawUtilities</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;} <span class="comment">// namespace Kratos</span></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_utilities_html_a053cb11597abadf0fb0dd7927911c0f1"><div class="ttname"><a href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#a053cb11597abadf0fb0dd7927911c0f1">Kratos::ConstitutiveLawUtilities::CalculateI1Invariant</a></div><div class="ttdeci">static void CalculateI1Invariant(const TVector &amp;rStressVector, double &amp;rI1)</div><div class="ttdoc">This method computes the first invariant from a given stress vector.</div><div class="ttdef"><b>Definition:</b> constitutive_law_utilities.h:156</div></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_utilities_html_a080bb74b927020c62243554cf0508570"><div class="ttname"><a href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#a080bb74b927020c62243554cf0508570">Kratos::ConstitutiveLawUtilities::GeometryType</a></div><div class="ttdeci">Geometry&lt; NodeType &gt; GeometryType</div><div class="ttdoc">Geometry definitions.</div><div class="ttdef"><b>Definition:</b> constitutive_law_utilities.h:93</div></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_utilities_html_a134c56c295e53dc0ba89d0e70d91a031"><div class="ttname"><a href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#a134c56c295e53dc0ba89d0e70d91a031">Kratos::ConstitutiveLawUtilities::BoundedMatrixVoigtType</a></div><div class="ttdeci">BoundedMatrix&lt; double, VoigtSize, VoigtSize &gt; BoundedMatrixVoigtType</div><div class="ttdoc">The definition of the bounded matrix type.</div><div class="ttdef"><b>Definition:</b> constitutive_law_utilities.h:87</div></div>
@@ -288,6 +290,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, AMatrix::dynamic &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_math_utils_html_a271606c628ee821aa79a0c918e2e8098"><div class="ttname"><a href="../../d2/df1/class_kratos_1_1_math_utils.html#a271606c628ee821aa79a0c918e2e8098">Kratos::MathUtils::Norm3</a></div><div class="ttdeci">static double Norm3(const TVectorType &amp;a)</div><div class="ttdoc">Calculates the norm of vector &quot;a&quot; which is assumed to be of size 3.</div><div class="ttdef"><b>Definition:</b> math_utils.h:691</div></div>
 <div class="ttc" id="aclass_kratos_1_1_node_html"><div class="ttname"><a href="../../d5/ddd/class_kratos_1_1_node.html">Kratos::Node</a></div><div class="ttdoc">This class defines the node.</div><div class="ttdef"><b>Definition:</b> node.h:65</div></div>
+<div class="ttc" id="aclass_kratos_1_1_properties_html"><div class="ttname"><a href="../../d7/d7a/class_kratos_1_1_properties.html">Kratos::Properties</a></div><div class="ttdoc">Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...</div><div class="ttdef"><b>Definition:</b> properties.h:69</div></div>
 <div class="ttc" id="aclass_kratos_1_1array__1d_html"><div class="ttname"><a href="../../d4/ddc/class_kratos_1_1array__1d.html">Kratos::array_1d&lt; double, VoigtSize &gt;</a></div></div>
 <div class="ttc" id="aconstitutive__law_8h_html"><div class="ttname"><a href="../../d6/ddf/constitutive__law_8h.html">constitutive_law.h</a></div></div>
 <div class="ttc" id="ageometry_8h_html"><div class="ttname"><a href="../../d4/d67/geometry_8h.html">geometry.h</a></div></div>
@@ -307,7 +310,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 5 2024 02:08:05 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Apr 6 2024 02:03:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

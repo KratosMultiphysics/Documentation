@@ -325,6 +325,8 @@ of finite element analysis".  <a href="../../d0/d15/class_kratos_1_1_constitutiv
 <tr class="separator:aac120e221438d61dcdf0960d3b13549c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b55cbb6c0499c4a7f76516a5337b570"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#a8b55cbb6c0499c4a7f76516a5337b570">CalculatePK2StressFromStrainPlaneStrain</a> (<a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#aee56f48cceb2ee12d42f4bdecb3d35de">ConstitutiveLaw::StressVectorType</a> &amp;rStressVector, const <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a3863d3601108e6ca5e94c8e3f9f4e035">ConstitutiveLaw::StrainVectorType</a> &amp;rStrainVector, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> YoungModulus, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> PoissonRatio)</td></tr>
 <tr class="separator:a8b55cbb6c0499c4a7f76516a5337b570"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afeb0f9bcd3f51359597cea6f91a88fe5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#afeb0f9bcd3f51359597cea6f91a88fe5">CalculateShearModulus</a> (const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;rProperties)</td></tr>
+<tr class="separator:afeb0f9bcd3f51359597cea6f91a88fe5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type definitions</h2></td></tr>
 <tr class="memitem:a5460113f317e3b75d55f9784e134830e"><td class="memItemLeft" align="right" valign="top">typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#a5460113f317e3b75d55f9784e134830e">IndexType</a></td></tr>
@@ -3509,7 +3511,7 @@ template&lt;SizeType TVoigtSize = 6&gt; </div>
 </div>
 </div>
 <a id="a9fed51d68ed73402640c215a57f82c11"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9fed51d68ed73402640c215a57f82c11">&#9670;&nbsp;</a></span>CalculateShearModulus()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fed51d68ed73402640c215a57f82c11">&#9670;&nbsp;</a></span>CalculateShearModulus() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -3548,6 +3550,40 @@ template&lt;SizeType TVoigtSize&gt; </div>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rValues</td><td><a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html" title="This class provides to Kratos a data structure for I/O based on the standard of JSON.">Parameters</a> of the constitutive law </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afeb0f9bcd3f51359597cea6f91a88fe5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afeb0f9bcd3f51359597cea6f91a88fe5">&#9670;&nbsp;</a></span>CalculateShearModulus() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;SizeType TVoigtSize&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> <a class="el" href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html">Kratos::ConstitutiveLawUtilities</a>&lt; TVoigtSize &gt;::CalculateShearModulus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;&#160;</td>
+          <td class="paramname"><em>rProperties</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>It calculates the shear modulus "G" </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rValues</td><td>The CL parameters </td></tr>
   </table>
   </dd>
 </dl>
@@ -4465,7 +4501,7 @@ template&lt;SizeType TVoigtSize = 6&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 5 2024 03:18:30 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Apr 6 2024 03:13:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
