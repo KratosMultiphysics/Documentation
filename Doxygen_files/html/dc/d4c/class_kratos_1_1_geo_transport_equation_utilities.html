@@ -87,7 +87,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::GeoTransportEquationUtilities:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/da6/class_kratos_1_1_geo_transport_equation_utilities__coll__graph.svg" width="244" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/da6/class_kratos_1_1_geo_transport_equation_utilities__coll__graph.svg" width="244" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -98,6 +98,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a57383e101e50eeede9db845593591104"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38b1b63825ae9d9211a70f7e3e9301f4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a38b1b63825ae9d9211a70f7e3e9301f4">CalculatePermeabilityMatrix</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rGradNpT, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> DynamicViscosityInverse, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rMaterialPermeabilityMatrix, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> RelativePermeability, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> PermeabilityUpdateFactor, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> IntegrationCoefficient)</td></tr>
 <tr class="separator:a38b1b63825ae9d9211a70f7e3e9301f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3c244ea9b3cdd7c1cd881e3432a61aa9"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </td></tr>
+<tr class="memitem:a3c244ea9b3cdd7c1cd881e3432a61aa9"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes *TDim, TNumNodes &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a3c244ea9b3cdd7c1cd881e3432a61aa9">CalculateCouplingMatrix</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rB, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rVoigtVector, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rNp, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> BiotCoefficient, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> BishopCoefficient, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> IntegrationCoefficient)</td></tr>
+<tr class="separator:a3c244ea9b3cdd7c1cd881e3432a61aa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d5e16888dc34bf2b0dbd202da3679d8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a6d5e16888dc34bf2b0dbd202da3679d8">CalculateCouplingMatrix</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rB, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rVoigtVector, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rNp, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> BiotCoefficient, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> BishopCoefficient, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> IntegrationCoefficient)</td></tr>
+<tr class="separator:a6d5e16888dc34bf2b0dbd202da3679d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aefd4ab4ca76f2dabdf4db6bdf701406f"><td class="memTemplParams" colspan="2">template&lt;unsigned int TNumNodes&gt; </td></tr>
 <tr class="memitem:aefd4ab4ca76f2dabdf4db6bdf701406f"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes, TNumNodes &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#aefd4ab4ca76f2dabdf4db6bdf701406f">CalculateCompressibilityMatrix</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rNp, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> BiotModulusInverse, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> IntegrationCoefficient)</td></tr>
 <tr class="separator:aefd4ab4ca76f2dabdf4db6bdf701406f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -169,6 +174,128 @@ template&lt;unsigned int TNumNodes&gt; </div>
           <td></td>
           <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
           <td class="paramname"><em>BiotModulusInverse</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>IntegrationCoefficient</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3c244ea9b3cdd7c1cd881e3432a61aa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3c244ea9b3cdd7c1cd881e3432a61aa9">&#9670;&nbsp;</a></span>CalculateCouplingMatrix() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes * TDim, TNumNodes&gt; Kratos::GeoTransportEquationUtilities::CalculateCouplingMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rVoigtVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rNp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>BiotCoefficient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>BishopCoefficient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>IntegrationCoefficient</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6d5e16888dc34bf2b0dbd202da3679d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d5e16888dc34bf2b0dbd202da3679d8">&#9670;&nbsp;</a></span>CalculateCouplingMatrix() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> Kratos::GeoTransportEquationUtilities::CalculateCouplingMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rVoigtVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rNp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>BiotCoefficient</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>BishopCoefficient</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -319,7 +446,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 9 2024 03:31:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Apr 10 2024 03:27:46 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

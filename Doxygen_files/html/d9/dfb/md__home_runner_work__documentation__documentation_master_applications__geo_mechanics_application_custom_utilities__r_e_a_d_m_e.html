@@ -77,22 +77,15 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1>Transport Equation utilities</h1>
 <p>Utilities are developed to calculate matrices and vectors in transport equations</p>
-<p><img src="https://github.com/KratosMultiphysics/Kratos/assets/56549273/296486b0-9e5e-408f-9839-aef8d8c7e720" alt="Image" class="inline"/></p>
-<h2>Permeability matrix (H)</h2>
-<p>The mathematical definition of the permeability matrix is: $$H = \int_\Omega (\nabla N_p)^T \frac{1}{\mu} k \nabla N_p d\Omega$$ where $\nabla N_p$ is the gradient of the pressure shape function, $\mu$ is the dynamic viscosity (material parameter) and $k$ is material permeability matrix. The k matrix allows one to take into account, for example, an anisotropic permeability.</p>
-<h2>Compressibility matrix (C)</h2>
-<p>The mathematical definition is: $$C = \int_\Omega N_{p}^T \frac{1}{Q} N_p d\Omega$$</p>
-<p>Where $\Omega$ is the domain, $N_p$ is the pressure shape function and $1/Q$ is the inverse Biot modulus.</p>
-<p>File <a class="el" href="../../d5/dee/transport__equation__utilities_8hpp.html">transport_equation_utilities.hpp</a> includes</p>
-<ul>
-<li>CalculatePermeabilityMatrix function</li>
-<li>CalculateCompressibilityMatrix function </li>
-</ul>
+<p>$$ \begin{bmatrix} M &amp; 0 \ 0 &amp; 0 \end{bmatrix} \begin{bmatrix} \ddot{u} \ \ddot{p} \end{bmatrix} + \begin{bmatrix} D &amp; 0 \ Q^T &amp; C \end{bmatrix} \begin{bmatrix} </p><div class="dotgraph">
+<div class="caption">
+{u} \</div>
+</div>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 9 2024 03:03:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Apr 10 2024 02:59:28 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
