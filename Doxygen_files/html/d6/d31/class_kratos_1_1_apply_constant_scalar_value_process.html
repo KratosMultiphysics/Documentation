@@ -76,14 +76,13 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="../../db/d93/class_kratos_1_1_apply_constant_scalar_value_process-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">Kratos::ApplyConstantScalarValueProcess Class Reference</div>  </div>
+<div class="title">Kratos::ApplyConstantScalarValueProcess Class Reference<div class="ingroups"><a class="el" href="../../d5/d4d/group___kratos_core.html">Kratos Core</a></div></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>The base class for all processes in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>.  
+<p>A class to apply a constant scalar value to nodes in a model part for a given variable.  
  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../de/d2f/apply__constant__scalarvalue__process_8h_source.html">apply_constant_scalarvalue_process.h</a>&gt;</code></p>
@@ -104,51 +103,41 @@ Collaboration diagram for Kratos::ApplyConstantScalarValueProcess:</div>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Type Definitions</div></td></tr>
 <tr class="memitem:a84bd8073750ed8b095e26258c601abbc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a84bd8073750ed8b095e26258c601abbc">KRATOS_DEFINE_LOCAL_FLAG</a> (VARIABLE_IS_FIXED)</td></tr>
+<tr class="memdesc:a84bd8073750ed8b095e26258c601abbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of the local flags.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a84bd8073750ed8b095e26258c601abbc">More...</a><br /></td></tr>
 <tr class="separator:a84bd8073750ed8b095e26258c601abbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a54169149ebf220be0c58ce45687de9a9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a54169149ebf220be0c58ce45687de9a9">KRATOS_CLASS_POINTER_DEFINITION</a> (<a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html">ApplyConstantScalarValueProcess</a>)</td></tr>
-<tr class="memdesc:a54169149ebf220be0c58ce45687de9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html" title="The base class for all processes in Kratos.">ApplyConstantScalarValueProcess</a>.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a54169149ebf220be0c58ce45687de9a9">More...</a><br /></td></tr>
+<tr class="memdesc:a54169149ebf220be0c58ce45687de9a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html" title="A class to apply a constant scalar value to nodes in a model part for a given variable.">ApplyConstantScalarValueProcess</a>.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a54169149ebf220be0c58ce45687de9a9">More...</a><br /></td></tr>
 <tr class="separator:a54169149ebf220be0c58ce45687de9a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Life Cycle</div></td></tr>
-<tr class="memitem:a77dd94f107b8c4c05625b3f3075bd812"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a77dd94f107b8c4c05625b3f3075bd812">ApplyConstantScalarValueProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;model_part, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> rParameters)</td></tr>
-<tr class="separator:a77dd94f107b8c4c05625b3f3075bd812"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a57801aa3db8c82d5d7aec331845e5795"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a57801aa3db8c82d5d7aec331845e5795">ApplyConstantScalarValueProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;model_part, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rVariable, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> double_value, std::size_t mesh_id, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> options)</td></tr>
-<tr class="separator:a57801aa3db8c82d5d7aec331845e5795"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd1ceedb118951bf12b13be64bf861d1"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#acd1ceedb118951bf12b13be64bf861d1">ApplyConstantScalarValueProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;model_part, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rVariable, const <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> int_value, std::size_t mesh_id, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> options)</td></tr>
-<tr class="separator:acd1ceedb118951bf12b13be64bf861d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a10750facf9728f6f6b70c707db284b2a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a10750facf9728f6f6b70c707db284b2a">ApplyConstantScalarValueProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;model_part, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> &gt; &amp;rVariable, const <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> bool_value, std::size_t mesh_id, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> options)</td></tr>
-<tr class="separator:a10750facf9728f6f6b70c707db284b2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a59a6263b37e0ef00b1cf75f2000ed5bd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a59a6263b37e0ef00b1cf75f2000ed5bd">~ApplyConstantScalarValueProcess</a> () override</td></tr>
-<tr class="memdesc:a59a6263b37e0ef00b1cf75f2000ed5bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a59a6263b37e0ef00b1cf75f2000ed5bd">More...</a><br /></td></tr>
-<tr class="separator:a59a6263b37e0ef00b1cf75f2000ed5bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac79dddedbd55388cde1651d7838da359"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#ac79dddedbd55388cde1651d7838da359">ApplyConstantScalarValueProcess</a> (<a class="el" href="../../d4/d95/class_kratos_1_1_model.html">Model</a> &amp;rModel, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters)</td></tr>
+<tr class="memdesc:ac79dddedbd55388cde1651d7838da359"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to apply a constant scalar value to nodes in a model part for a given variable.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#ac79dddedbd55388cde1651d7838da359">More...</a><br /></td></tr>
+<tr class="separator:ac79dddedbd55388cde1651d7838da359"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a64b6412b4eb5082b3333d473b36d8b85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a64b6412b4eb5082b3333d473b36d8b85">ApplyConstantScalarValueProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters)</td></tr>
+<tr class="memdesc:a64b6412b4eb5082b3333d473b36d8b85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to apply a constant scalar value to nodes in a model part for a given variable.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a64b6412b4eb5082b3333d473b36d8b85">More...</a><br /></td></tr>
+<tr class="separator:a64b6412b4eb5082b3333d473b36d8b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd53729fc78b520ff6681ea978c3448b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#abd53729fc78b520ff6681ea978c3448b">ApplyConstantScalarValueProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rVariable, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> DoubleValue, std::size_t MeshId, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> Options)</td></tr>
+<tr class="memdesc:abd53729fc78b520ff6681ea978c3448b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to apply a constant scalar value to nodes in a model part for a given double variable.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#abd53729fc78b520ff6681ea978c3448b">More...</a><br /></td></tr>
+<tr class="separator:abd53729fc78b520ff6681ea978c3448b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa51b14871ff42f8055eed80fbd144846"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#aa51b14871ff42f8055eed80fbd144846">ApplyConstantScalarValueProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rVariable, const <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> IntValue, std::size_t MeshId, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> options)</td></tr>
+<tr class="memdesc:aa51b14871ff42f8055eed80fbd144846"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to apply a constant scalar value to nodes in a model part for a given integer variable.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#aa51b14871ff42f8055eed80fbd144846">More...</a><br /></td></tr>
+<tr class="separator:aa51b14871ff42f8055eed80fbd144846"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50bb59310691c533d72879c78bf15c3a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a50bb59310691c533d72879c78bf15c3a">ApplyConstantScalarValueProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> &gt; &amp;rVariable, const <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> BoolValue, std::size_t MeshId, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> options)</td></tr>
+<tr class="memdesc:a50bb59310691c533d72879c78bf15c3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor to apply a constant scalar value to nodes in a model part for a given boolean variable.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a50bb59310691c533d72879c78bf15c3a">More...</a><br /></td></tr>
+<tr class="separator:a50bb59310691c533d72879c78bf15c3a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a596a42231bbd0d0e66f2b2f60ecdb737"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a596a42231bbd0d0e66f2b2f60ecdb737">~ApplyConstantScalarValueProcess</a> () override=default</td></tr>
+<tr class="memdesc:a596a42231bbd0d0e66f2b2f60ecdb737"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a596a42231bbd0d0e66f2b2f60ecdb737">More...</a><br /></td></tr>
+<tr class="separator:a596a42231bbd0d0e66f2b2f60ecdb737"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operators</div></td></tr>
 <tr class="memitem:a0d2b449f1c4fc227a069b2fc026afe1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a0d2b449f1c4fc227a069b2fc026afe1d">operator()</a> ()</td></tr>
 <tr class="memdesc:a0d2b449f1c4fc227a069b2fc026afe1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This operator is provided to call the process as a function and simply calls the Execute method.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a0d2b449f1c4fc227a069b2fc026afe1d">More...</a><br /></td></tr>
 <tr class="separator:a0d2b449f1c4fc227a069b2fc026afe1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Operations</div></td></tr>
+<tr class="memitem:a6d821a3e853b8ebe4b44ef310ff3a8da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a6d821a3e853b8ebe4b44ef310ff3a8da">ExecuteInitialize</a> () override</td></tr>
+<tr class="memdesc:a6d821a3e853b8ebe4b44ef310ff3a8da"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed for being called at the beginning of the computations right after reading the model and the groups.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a6d821a3e853b8ebe4b44ef310ff3a8da">More...</a><br /></td></tr>
+<tr class="separator:a6d821a3e853b8ebe4b44ef310ff3a8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fdddba7d84380f7d3a423f46dce9ae8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a3fdddba7d84380f7d3a423f46dce9ae8">GetDefaultParameters</a> () const override</td></tr>
 <tr class="memdesc:a3fdddba7d84380f7d3a423f46dce9ae8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method provides the defaults parameters to avoid conflicts between the different constructors.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a3fdddba7d84380f7d3a423f46dce9ae8">More...</a><br /></td></tr>
 <tr class="separator:a3fdddba7d84380f7d3a423f46dce9ae8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Operations</div></td></tr>
-<tr class="memitem:a2a071655ff53ba463807e0deabd0f086"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a2a071655ff53ba463807e0deabd0f086">Execute</a> () override</td></tr>
-<tr class="memdesc:a2a071655ff53ba463807e0deabd0f086"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute method is used to execute the <a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html" title="The base class for all processes in Kratos.">ApplyConstantScalarValueProcess</a> algorithms.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a2a071655ff53ba463807e0deabd0f086">More...</a><br /></td></tr>
-<tr class="separator:a2a071655ff53ba463807e0deabd0f086"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d821a3e853b8ebe4b44ef310ff3a8da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a6d821a3e853b8ebe4b44ef310ff3a8da">ExecuteInitialize</a> () override</td></tr>
-<tr class="separator:a6d821a3e853b8ebe4b44ef310ff3a8da"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd5306dbff38c6106bdb291e97a7ba7c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#acd5306dbff38c6106bdb291e97a7ba7c">ExecuteBeforeSolutionLoop</a> () override</td></tr>
-<tr class="separator:acd5306dbff38c6106bdb291e97a7ba7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40b624c31d28f4683ee2b7e62b7a1888"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a40b624c31d28f4683ee2b7e62b7a1888">ExecuteInitializeSolutionStep</a> () override</td></tr>
-<tr class="memdesc:a40b624c31d28f4683ee2b7e62b7a1888"><td class="mdescLeft">&#160;</td><td class="mdescRight">this function will be executed at every time step BEFORE performing the solve phase  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a40b624c31d28f4683ee2b7e62b7a1888">More...</a><br /></td></tr>
-<tr class="separator:a40b624c31d28f4683ee2b7e62b7a1888"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5ddf87c9a57dec2586f0fb723de71cfd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a5ddf87c9a57dec2586f0fb723de71cfd">ExecuteFinalizeSolutionStep</a> () override</td></tr>
-<tr class="memdesc:a5ddf87c9a57dec2586f0fb723de71cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">this function will be executed at every time step AFTER performing the solve phase  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a5ddf87c9a57dec2586f0fb723de71cfd">More...</a><br /></td></tr>
-<tr class="separator:a5ddf87c9a57dec2586f0fb723de71cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a270cbc1d08ea6cf21c1b71a3a0cd7f62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a270cbc1d08ea6cf21c1b71a3a0cd7f62">ExecuteBeforeOutputStep</a> () override</td></tr>
-<tr class="memdesc:a270cbc1d08ea6cf21c1b71a3a0cd7f62"><td class="mdescLeft">&#160;</td><td class="mdescRight">this function will be executed at every time step BEFORE writing the output  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a270cbc1d08ea6cf21c1b71a3a0cd7f62">More...</a><br /></td></tr>
-<tr class="separator:a270cbc1d08ea6cf21c1b71a3a0cd7f62"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7eee92835905a58233acd7000d0ed45e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a7eee92835905a58233acd7000d0ed45e">ExecuteAfterOutputStep</a> () override</td></tr>
-<tr class="memdesc:a7eee92835905a58233acd7000d0ed45e"><td class="mdescLeft">&#160;</td><td class="mdescRight">this function will be executed at every time step AFTER writing the output  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a7eee92835905a58233acd7000d0ed45e">More...</a><br /></td></tr>
-<tr class="separator:a7eee92835905a58233acd7000d0ed45e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdb17a0762db893c6b2b91beeb8962e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#afdb17a0762db893c6b2b91beeb8962e7">ExecuteFinalize</a> () override</td></tr>
-<tr class="separator:afdb17a0762db893c6b2b91beeb8962e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Input and output</div></td></tr>
 <tr class="memitem:aaac6fee0f533016bdfa8d2097461e303"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#aaac6fee0f533016bdfa8d2097461e303">Info</a> () const override</td></tr>
 <tr class="memdesc:aaac6fee0f533016bdfa8d2097461e303"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn back information as a string.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#aaac6fee0f533016bdfa8d2097461e303">More...</a><br /></td></tr>
@@ -177,6 +166,27 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3b90d7c62d21d85f6da9a6f5fc13c9f7 inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual Process::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a3b90d7c62d21d85f6da9a6f5fc13c9f7">Create</a> (<a class="el" href="../../d4/d95/class_kratos_1_1_model.html">Model</a> &amp;rModel, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters)</td></tr>
 <tr class="memdesc:a3b90d7c62d21d85f6da9a6f5fc13c9f7 inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates an pointer of the process.  <a href="../../d2/d8c/class_kratos_1_1_process.html#a3b90d7c62d21d85f6da9a6f5fc13c9f7">More...</a><br /></td></tr>
 <tr class="separator:a3b90d7c62d21d85f6da9a6f5fc13c9f7 inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0018d43efd5b5660b1e311f0ecda50f inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#ae0018d43efd5b5660b1e311f0ecda50f">Execute</a> ()</td></tr>
+<tr class="memdesc:ae0018d43efd5b5660b1e311f0ecda50f inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">Execute method is used to execute the <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html" title="The base class for all processes in Kratos.">Process</a> algorithms.  <a href="../../d2/d8c/class_kratos_1_1_process.html#ae0018d43efd5b5660b1e311f0ecda50f">More...</a><br /></td></tr>
+<tr class="separator:ae0018d43efd5b5660b1e311f0ecda50f inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a946090de988dfb0957a3cba34302982e inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a946090de988dfb0957a3cba34302982e">ExecuteBeforeSolutionLoop</a> ()</td></tr>
+<tr class="memdesc:a946090de988dfb0957a3cba34302982e inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed for being execute once before the solution loop but after all of the solvers where built.  <a href="../../d2/d8c/class_kratos_1_1_process.html#a946090de988dfb0957a3cba34302982e">More...</a><br /></td></tr>
+<tr class="separator:a946090de988dfb0957a3cba34302982e inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a691bc77a78aa6cc2de6fc127d235d0 inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a6a691bc77a78aa6cc2de6fc127d235d0">ExecuteInitializeSolutionStep</a> ()</td></tr>
+<tr class="memdesc:a6a691bc77a78aa6cc2de6fc127d235d0 inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be executed at every time step BEFORE performing the solve phase.  <a href="../../d2/d8c/class_kratos_1_1_process.html#a6a691bc77a78aa6cc2de6fc127d235d0">More...</a><br /></td></tr>
+<tr class="separator:a6a691bc77a78aa6cc2de6fc127d235d0 inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b80b29ad778c1c4b2fc28947f375c15 inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a3b80b29ad778c1c4b2fc28947f375c15">ExecuteFinalizeSolutionStep</a> ()</td></tr>
+<tr class="memdesc:a3b80b29ad778c1c4b2fc28947f375c15 inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be executed at every time step AFTER performing the solve phase.  <a href="../../d2/d8c/class_kratos_1_1_process.html#a3b80b29ad778c1c4b2fc28947f375c15">More...</a><br /></td></tr>
+<tr class="separator:a3b80b29ad778c1c4b2fc28947f375c15 inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac63ba0fc920cf537780557450634b1f6 inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#ac63ba0fc920cf537780557450634b1f6">ExecuteBeforeOutputStep</a> ()</td></tr>
+<tr class="memdesc:ac63ba0fc920cf537780557450634b1f6 inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be executed at every time step BEFORE writing the output.  <a href="../../d2/d8c/class_kratos_1_1_process.html#ac63ba0fc920cf537780557450634b1f6">More...</a><br /></td></tr>
+<tr class="separator:ac63ba0fc920cf537780557450634b1f6 inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac242aaa0b054a707500d11dbdd93d9b9 inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#ac242aaa0b054a707500d11dbdd93d9b9">ExecuteAfterOutputStep</a> ()</td></tr>
+<tr class="memdesc:ac242aaa0b054a707500d11dbdd93d9b9 inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function will be executed at every time step AFTER writing the output.  <a href="../../d2/d8c/class_kratos_1_1_process.html#ac242aaa0b054a707500d11dbdd93d9b9">More...</a><br /></td></tr>
+<tr class="separator:ac242aaa0b054a707500d11dbdd93d9b9 inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52fd4de6446e815737c5eddc12082293 inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a52fd4de6446e815737c5eddc12082293">ExecuteFinalize</a> ()</td></tr>
+<tr class="memdesc:a52fd4de6446e815737c5eddc12082293 inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed for being called at the end of the computations.  <a href="../../d2/d8c/class_kratos_1_1_process.html#a52fd4de6446e815737c5eddc12082293">More...</a><br /></td></tr>
+<tr class="separator:a52fd4de6446e815737c5eddc12082293 inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1052d504f1f9bd2cd3cb60f0577207ac inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a1052d504f1f9bd2cd3cb60f0577207ac">Check</a> ()</td></tr>
 <tr class="memdesc:a1052d504f1f9bd2cd3cb60f0577207ac inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed for being called after ExecuteInitialize ONCE to verify that the input is correct.  <a href="../../d2/d8c/class_kratos_1_1_process.html#a1052d504f1f9bd2cd3cb60f0577207ac">More...</a><br /></td></tr>
 <tr class="separator:a1052d504f1f9bd2cd3cb60f0577207ac inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -271,18 +281,24 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a9beefdfbf6ca2af6c3e095c4ee5c9089"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a9beefdfbf6ca2af6c3e095c4ee5c9089">mr_model_part</a></td></tr>
-<tr class="separator:a9beefdfbf6ca2af6c3e095c4ee5c9089"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65d1c4ac49a2e84f6f66387931f0f5e0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a65d1c4ac49a2e84f6f66387931f0f5e0">mvariable_name</a></td></tr>
-<tr class="separator:a65d1c4ac49a2e84f6f66387931f0f5e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6b58a1c0f2083af6d05b5f8d2ef5777"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#ab6b58a1c0f2083af6d05b5f8d2ef5777">mdouble_value</a></td></tr>
-<tr class="separator:ab6b58a1c0f2083af6d05b5f8d2ef5777"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a317cb371abf0b855317442a3180dbba6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a317cb371abf0b855317442a3180dbba6">mint_value</a></td></tr>
-<tr class="separator:a317cb371abf0b855317442a3180dbba6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9657b181e2d7436c5ddd3b95cc87e235"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a9657b181e2d7436c5ddd3b95cc87e235">mbool_value</a></td></tr>
-<tr class="separator:a9657b181e2d7436c5ddd3b95cc87e235"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae51f43a35e0d1ba1e10f8eb253753c28"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#ae51f43a35e0d1ba1e10f8eb253753c28">mmesh_id</a></td></tr>
-<tr class="separator:ae51f43a35e0d1ba1e10f8eb253753c28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Protected Member Variables</div></td></tr>
+<tr class="memitem:a0af720af83e4c4b112bf8ab210d7ac45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a0af720af83e4c4b112bf8ab210d7ac45">mrModelPart</a></td></tr>
+<tr class="separator:a0af720af83e4c4b112bf8ab210d7ac45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d80b5dc34ff5abb6109625243946028"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a3d80b5dc34ff5abb6109625243946028">mVariableName</a></td></tr>
+<tr class="memdesc:a3d80b5dc34ff5abb6109625243946028"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reference to the model part.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a3d80b5dc34ff5abb6109625243946028">More...</a><br /></td></tr>
+<tr class="separator:a3d80b5dc34ff5abb6109625243946028"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac0b9a807604dd8ad78cbe7f5ec83bf27"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#ac0b9a807604dd8ad78cbe7f5ec83bf27">mDoubleValue</a> = 0.0</td></tr>
+<tr class="memdesc:ac0b9a807604dd8ad78cbe7f5ec83bf27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the variable.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#ac0b9a807604dd8ad78cbe7f5ec83bf27">More...</a><br /></td></tr>
+<tr class="separator:ac0b9a807604dd8ad78cbe7f5ec83bf27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a435f9fe5a465a2a912e0f7649ac77d8f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a435f9fe5a465a2a912e0f7649ac77d8f">mIntValue</a> = 0</td></tr>
+<tr class="memdesc:a435f9fe5a465a2a912e0f7649ac77d8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Double value.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a435f9fe5a465a2a912e0f7649ac77d8f">More...</a><br /></td></tr>
+<tr class="separator:a435f9fe5a465a2a912e0f7649ac77d8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec8d3daea34d6c14eb8ac1ff540f0122"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#aec8d3daea34d6c14eb8ac1ff540f0122">mBoolValue</a> = false</td></tr>
+<tr class="memdesc:aec8d3daea34d6c14eb8ac1ff540f0122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Integer value.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#aec8d3daea34d6c14eb8ac1ff540f0122">More...</a><br /></td></tr>
+<tr class="separator:aec8d3daea34d6c14eb8ac1ff540f0122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85cdb476f44e44e2d40b836ac66d1f04"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a85cdb476f44e44e2d40b836ac66d1f04">mMeshId</a> = 0</td></tr>
+<tr class="memdesc:a85cdb476f44e44e2d40b836ac66d1f04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Boolean value.  <a href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html#a85cdb476f44e44e2d40b836ac66d1f04">More...</a><br /></td></tr>
+<tr class="separator:a85cdb476f44e44e2d40b836ac66d1f04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -346,29 +362,27 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a7e633a5159d1e064fb875282bef94ad0 inherit pub_static_methods_class_kratos_1_1_flags"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The base class for all processes in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>. </p>
-<p>This function applies a constant value (and fixity) to all of the nodes in a given mesh </p>
+<div class="textblock"><p>A class to apply a constant scalar value to nodes in a model part for a given variable. </p>
+<p>This function applies a constant value (and fixity) to all of the nodes in a given mesh</p>
+<dl class="section author"><dt>Author</dt><dd>Riccardo Rossi </dd></dl>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a77dd94f107b8c4c05625b3f3075bd812"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a77dd94f107b8c4c05625b3f3075bd812">&#9670;&nbsp;</a></span>ApplyConstantScalarValueProcess() <span class="overload">[1/4]</span></h2>
+<a id="ac79dddedbd55388cde1651d7838da359"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac79dddedbd55388cde1651d7838da359">&#9670;&nbsp;</a></span>ApplyConstantScalarValueProcess() <span class="overload">[1/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Kratos::ApplyConstantScalarValueProcess::ApplyConstantScalarValueProcess </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
-          <td class="paramname"><em>model_part</em>, </td>
+          <td class="paramtype"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html">Model</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModel</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td>
-          <td class="paramname"><em>rParameters</em>&#160;</td>
+          <td class="paramname"><em>ThisParameters</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -376,29 +390,67 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Constructor to apply a constant scalar value to nodes in a model part for a given variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModel</td><td>Reference to the model. </td></tr>
+    <tr><td class="paramname">rParameters</td><td><a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html" title="This class provides to Kratos a data structure for I/O based on the standard of JSON.">Parameters</a> containing information about the variable, value, mesh ID, and options. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a57801aa3db8c82d5d7aec331845e5795"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57801aa3db8c82d5d7aec331845e5795">&#9670;&nbsp;</a></span>ApplyConstantScalarValueProcess() <span class="overload">[2/4]</span></h2>
+<a id="a64b6412b4eb5082b3333d473b36d8b85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a64b6412b4eb5082b3333d473b36d8b85">&#9670;&nbsp;</a></span>ApplyConstantScalarValueProcess() <span class="overload">[2/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Kratos::ApplyConstantScalarValueProcess::ApplyConstantScalarValueProcess </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
-          <td class="paramname"><em>model_part</em>, </td>
+          <td class="paramname"><em>rModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td>
+          <td class="paramname"><em>ThisParameters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Constructor to apply a constant scalar value to nodes in a model part for a given variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>Reference to the model part. </td></tr>
+    <tr><td class="paramname">ThisParameters</td><td><a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html" title="This class provides to Kratos a data structure for I/O based on the standard of JSON.">Parameters</a> containing information about the variable, value, mesh ID, and options. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abd53729fc78b520ff6681ea978c3448b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd53729fc78b520ff6681ea978c3448b">&#9670;&nbsp;</a></span>ApplyConstantScalarValueProcess() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Kratos::ApplyConstantScalarValueProcess::ApplyConstantScalarValueProcess </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -410,19 +462,19 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
-          <td class="paramname"><em>double_value</em>, </td>
+          <td class="paramname"><em>DoubleValue</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>mesh_id</em>, </td>
+          <td class="paramname"><em>MeshId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a>&#160;</td>
-          <td class="paramname"><em>options</em>&#160;</td>
+          <td class="paramname"><em>Options</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -430,29 +482,33 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Constructor to apply a constant scalar value to nodes in a model part for a given double variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>Reference to the model part. </td></tr>
+    <tr><td class="paramname">rVariable</td><td>Reference to the double variable. </td></tr>
+    <tr><td class="paramname">DoubleValue</td><td>The double value to apply. </td></tr>
+    <tr><td class="paramname">MeshId</td><td>ID of the mesh. </td></tr>
+    <tr><td class="paramname">Options</td><td><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html" title="Forward declaration.">Flags</a> specifying additional options. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="acd1ceedb118951bf12b13be64bf861d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd1ceedb118951bf12b13be64bf861d1">&#9670;&nbsp;</a></span>ApplyConstantScalarValueProcess() <span class="overload">[3/4]</span></h2>
+<a id="aa51b14871ff42f8055eed80fbd144846"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa51b14871ff42f8055eed80fbd144846">&#9670;&nbsp;</a></span>ApplyConstantScalarValueProcess() <span class="overload">[4/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Kratos::ApplyConstantScalarValueProcess::ApplyConstantScalarValueProcess </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
-          <td class="paramname"><em>model_part</em>, </td>
+          <td class="paramname"><em>rModelPart</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -464,13 +520,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
-          <td class="paramname"><em>int_value</em>, </td>
+          <td class="paramname"><em>IntValue</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>mesh_id</em>, </td>
+          <td class="paramname"><em>MeshId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -484,29 +540,33 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Constructor to apply a constant scalar value to nodes in a model part for a given integer variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>Reference to the model part. </td></tr>
+    <tr><td class="paramname">rVariable</td><td>Reference to the integer variable. </td></tr>
+    <tr><td class="paramname">IntValue</td><td>The integer value to apply. </td></tr>
+    <tr><td class="paramname">MeshId</td><td>ID of the mesh. </td></tr>
+    <tr><td class="paramname">options</td><td><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html" title="Forward declaration.">Flags</a> specifying additional options. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a10750facf9728f6f6b70c707db284b2a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a10750facf9728f6f6b70c707db284b2a">&#9670;&nbsp;</a></span>ApplyConstantScalarValueProcess() <span class="overload">[4/4]</span></h2>
+<a id="a50bb59310691c533d72879c78bf15c3a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a50bb59310691c533d72879c78bf15c3a">&#9670;&nbsp;</a></span>ApplyConstantScalarValueProcess() <span class="overload">[5/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">Kratos::ApplyConstantScalarValueProcess::ApplyConstantScalarValueProcess </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
-          <td class="paramname"><em>model_part</em>, </td>
+          <td class="paramname"><em>rModelPart</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -518,13 +578,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td>
-          <td class="paramname"><em>bool_value</em>, </td>
+          <td class="paramname"><em>BoolValue</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::size_t&#160;</td>
-          <td class="paramname"><em>mesh_id</em>, </td>
+          <td class="paramname"><em>MeshId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -538,17 +598,24 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
+
+<p>Constructor to apply a constant scalar value to nodes in a model part for a given boolean variable. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>Reference to the model part. </td></tr>
+    <tr><td class="paramname">rVariable</td><td>Reference to the boolean variable. </td></tr>
+    <tr><td class="paramname">BoolValue</td><td>The boolean value to apply. </td></tr>
+    <tr><td class="paramname">MeshId</td><td>ID of the mesh. </td></tr>
+    <tr><td class="paramname">options</td><td><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html" title="Forward declaration.">Flags</a> specifying additional options. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<a id="a59a6263b37e0ef00b1cf75f2000ed5bd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59a6263b37e0ef00b1cf75f2000ed5bd">&#9670;&nbsp;</a></span>~ApplyConstantScalarValueProcess()</h2>
+<a id="a596a42231bbd0d0e66f2b2f60ecdb737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a596a42231bbd0d0e66f2b2f60ecdb737">&#9670;&nbsp;</a></span>~ApplyConstantScalarValueProcess()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -565,7 +632,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">default</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -575,178 +642,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a2a071655ff53ba463807e0deabd0f086"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2a071655ff53ba463807e0deabd0f086">&#9670;&nbsp;</a></span>Execute()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::ApplyConstantScalarValueProcess::Execute </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Execute method is used to execute the <a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html" title="The base class for all processes in Kratos.">ApplyConstantScalarValueProcess</a> algorithms. </p>
-
-<p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#ae0018d43efd5b5660b1e311f0ecda50f">Kratos::Process</a>.</p>
-
-</div>
-</div>
-<a id="a7eee92835905a58233acd7000d0ed45e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7eee92835905a58233acd7000d0ed45e">&#9670;&nbsp;</a></span>ExecuteAfterOutputStep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::ApplyConstantScalarValueProcess::ExecuteAfterOutputStep </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>this function will be executed at every time step AFTER writing the output </p>
-
-<p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#ac242aaa0b054a707500d11dbdd93d9b9">Kratos::Process</a>.</p>
-
-</div>
-</div>
-<a id="a270cbc1d08ea6cf21c1b71a3a0cd7f62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a270cbc1d08ea6cf21c1b71a3a0cd7f62">&#9670;&nbsp;</a></span>ExecuteBeforeOutputStep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::ApplyConstantScalarValueProcess::ExecuteBeforeOutputStep </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>this function will be executed at every time step BEFORE writing the output </p>
-
-<p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#ac63ba0fc920cf537780557450634b1f6">Kratos::Process</a>.</p>
-
-</div>
-</div>
-<a id="acd5306dbff38c6106bdb291e97a7ba7c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd5306dbff38c6106bdb291e97a7ba7c">&#9670;&nbsp;</a></span>ExecuteBeforeSolutionLoop()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::ApplyConstantScalarValueProcess::ExecuteBeforeSolutionLoop </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>this function is designed for being execute once before the solution loop but after all of the solvers where built </p>
-
-<p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a946090de988dfb0957a3cba34302982e">Kratos::Process</a>.</p>
-
-</div>
-</div>
-<a id="afdb17a0762db893c6b2b91beeb8962e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afdb17a0762db893c6b2b91beeb8962e7">&#9670;&nbsp;</a></span>ExecuteFinalize()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::ApplyConstantScalarValueProcess::ExecuteFinalize </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>this function is designed for being called at the end of the computations right after reading the model and the groups </p>
-
-<p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a52fd4de6446e815737c5eddc12082293">Kratos::Process</a>.</p>
-
-</div>
-</div>
-<a id="a5ddf87c9a57dec2586f0fb723de71cfd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5ddf87c9a57dec2586f0fb723de71cfd">&#9670;&nbsp;</a></span>ExecuteFinalizeSolutionStep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::ApplyConstantScalarValueProcess::ExecuteFinalizeSolutionStep </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>this function will be executed at every time step AFTER performing the solve phase </p>
-
-<p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a3b80b29ad778c1c4b2fc28947f375c15">Kratos::Process</a>.</p>
-
-</div>
-</div>
 <a id="a6d821a3e853b8ebe4b44ef310ff3a8da"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6d821a3e853b8ebe4b44ef310ff3a8da">&#9670;&nbsp;</a></span>ExecuteInitialize()</h2>
 
@@ -765,42 +660,14 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>this function is designed for being called at the beginning of the computations right after reading the model and the groups </p>
+
+<p>This function is designed for being called at the beginning of the computations right after reading the model and the groups. </p>
 
 <p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#aef0b38781366614a50ed49dd91a740dd">Kratos::Process</a>.</p>
-
-</div>
-</div>
-<a id="a40b624c31d28f4683ee2b7e62b7a1888"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a40b624c31d28f4683ee2b7e62b7a1888">&#9670;&nbsp;</a></span>ExecuteInitializeSolutionStep()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::ApplyConstantScalarValueProcess::ExecuteInitializeSolutionStep </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>this function will be executed at every time step BEFORE performing the solve phase </p>
-
-<p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a6a691bc77a78aa6cc2de6fc127d235d0">Kratos::Process</a>.</p>
 
 </div>
 </div>
@@ -822,7 +689,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -878,7 +745,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Pointer definition of <a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html" title="The base class for all processes in Kratos.">ApplyConstantScalarValueProcess</a>. </p>
+<p>Pointer definition of <a class="el" href="../../d6/d31/class_kratos_1_1_apply_constant_scalar_value_process.html" title="A class to apply a constant scalar value to nodes in a model part for a given variable.">ApplyConstantScalarValueProcess</a>. </p>
 
 </div>
 </div>
@@ -897,6 +764,8 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Definition of the local flags. </p>
 
 </div>
 </div>
@@ -988,8 +857,8 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a9657b181e2d7436c5ddd3b95cc87e235"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9657b181e2d7436c5ddd3b95cc87e235">&#9670;&nbsp;</a></span>mbool_value</h2>
+<a id="aec8d3daea34d6c14eb8ac1ff540f0122"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec8d3daea34d6c14eb8ac1ff540f0122">&#9670;&nbsp;</a></span>mBoolValue</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -998,7 +867,103 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> Kratos::ApplyConstantScalarValueProcess::mbool_value</td>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> Kratos::ApplyConstantScalarValueProcess::mBoolValue = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Integer value. </p>
+
+</div>
+</div>
+<a id="ac0b9a807604dd8ad78cbe7f5ec83bf27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac0b9a807604dd8ad78cbe7f5ec83bf27">&#9670;&nbsp;</a></span>mDoubleValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::ApplyConstantScalarValueProcess::mDoubleValue = 0.0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Name of the variable. </p>
+
+</div>
+</div>
+<a id="a435f9fe5a465a2a912e0f7649ac77d8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a435f9fe5a465a2a912e0f7649ac77d8f">&#9670;&nbsp;</a></span>mIntValue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> Kratos::ApplyConstantScalarValueProcess::mIntValue = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Double value. </p>
+
+</div>
+</div>
+<a id="a85cdb476f44e44e2d40b836ac66d1f04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85cdb476f44e44e2d40b836ac66d1f04">&#9670;&nbsp;</a></span>mMeshId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::size_t Kratos::ApplyConstantScalarValueProcess::mMeshId = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Boolean value. </p>
+
+</div>
+</div>
+<a id="a0af720af83e4c4b112bf8ab210d7ac45"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0af720af83e4c4b112bf8ab210d7ac45">&#9670;&nbsp;</a></span>mrModelPart</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; Kratos::ApplyConstantScalarValueProcess::mrModelPart</td>
         </tr>
       </table>
   </td>
@@ -1010,8 +975,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ab6b58a1c0f2083af6d05b5f8d2ef5777"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab6b58a1c0f2083af6d05b5f8d2ef5777">&#9670;&nbsp;</a></span>mdouble_value</h2>
+<a id="a3d80b5dc34ff5abb6109625243946028"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d80b5dc34ff5abb6109625243946028">&#9670;&nbsp;</a></span>mVariableName</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1020,7 +985,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::ApplyConstantScalarValueProcess::mdouble_value</td>
+          <td class="memname">std::string Kratos::ApplyConstantScalarValueProcess::mVariableName</td>
         </tr>
       </table>
   </td>
@@ -1030,103 +995,18 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a317cb371abf0b855317442a3180dbba6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a317cb371abf0b855317442a3180dbba6">&#9670;&nbsp;</a></span>mint_value</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> Kratos::ApplyConstantScalarValueProcess::mint_value</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>Reference to the model part. </p>
 
 </div>
 </div>
-<a id="ae51f43a35e0d1ba1e10f8eb253753c28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae51f43a35e0d1ba1e10f8eb253753c28">&#9670;&nbsp;</a></span>mmesh_id</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::size_t Kratos::ApplyConstantScalarValueProcess::mmesh_id</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9beefdfbf6ca2af6c3e095c4ee5c9089"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9beefdfbf6ca2af6c3e095c4ee5c9089">&#9670;&nbsp;</a></span>mr_model_part</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; Kratos::ApplyConstantScalarValueProcess::mr_model_part</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a65d1c4ac49a2e84f6f66387931f0f5e0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65d1c4ac49a2e84f6f66387931f0f5e0">&#9670;&nbsp;</a></span>mvariable_name</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string Kratos::ApplyConstantScalarValueProcess::mvariable_name</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/kratos/processes/<a class="el" href="../../de/d2f/apply__constant__scalarvalue__process_8h_source.html">apply_constant_scalarvalue_process.h</a></li>
+<li>/home/runner/work/Documentation/Documentation/master/kratos/processes/<a class="el" href="../../d0/da0/apply__constant__scalarvalue__process_8cpp.html">apply_constant_scalarvalue_process.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 17 2024 03:03:27 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Apr 18 2024 03:00:38 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

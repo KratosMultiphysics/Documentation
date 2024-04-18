@@ -3723,12 +3723,21 @@ Friends</h2></td></tr>
 <tr class="memitem:gabd8d5656550cfa6381c8133d59d593ad"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gabd8d5656550cfa6381c8133d59d593ad">Kratos::RomAuxiliaryUtilities::GetHRomConditionParentsIds</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const std::map&lt; std::string, std::map&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a>, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&gt; &amp;rHRomWeights)</td></tr>
 <tr class="memdesc:gabd8d5656550cfa6381c8133d59d593ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the decremented element ids(-1 to account for numpy indexing) of the missing HROM condition parents This function loops the HROM conditions in the HROM weights and searches for their parents in the provided model part. Once these are found, it is checked that they are not already added and returned. Note that this functions requires the NEIGHBOUR_ELEMENTS to be already computed.  <a href="../../d2/d72/group___fluid_dynamics_application.html#gabd8d5656550cfa6381c8133d59d593ad">More...</a><br /></td></tr>
 <tr class="separator:gabd8d5656550cfa6381c8133d59d593ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gafc8d8f9586786f72e921535c6828fa79"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gafc8d8f9586786f72e921535c6828fa79">Kratos::RomAuxiliaryUtilities::GetHRomConditionParentsIds</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt; &amp;rConditionIds)</td></tr>
+<tr class="memdesc:gafc8d8f9586786f72e921535c6828fa79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Finds the parent elements for specified condition IDs and decrements their IDs for zero-based indexing. This version executes a process to compute nodal element neighbours for the entire model part, ensuring that each condition's neighbours are up-to-date before retrieving parent element IDs.  <a href="../../d2/d72/group___fluid_dynamics_application.html#gafc8d8f9586786f72e921535c6828fa79">More...</a><br /></td></tr>
+<tr class="separator:gafc8d8f9586786f72e921535c6828fa79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga90a02124548c97da985085d1753f58b4"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga90a02124548c97da985085d1753f58b4">Kratos::RomAuxiliaryUtilities::GetNodalNeighbouringElementIdsNotInHRom</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rGivenModelPart, const std::map&lt; std::string, std::map&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a>, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&gt; &amp;rHRomWeights)</td></tr>
 <tr class="memdesc:ga90a02124548c97da985085d1753f58b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the decremented (-1 to account for numpy indexing) IDs of elements neighboring nodes in a given sub-model part but not present in HRom weights.  <a href="../../d2/d72/group___fluid_dynamics_application.html#ga90a02124548c97da985085d1753f58b4">More...</a><br /></td></tr>
 <tr class="separator:ga90a02124548c97da985085d1753f58b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7fcd344837a1fa8cdd3329325c855907"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga7fcd344837a1fa8cdd3329325c855907">Kratos::RomAuxiliaryUtilities::GetNodalNeighbouringElementIds</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rGivenModelPart)</td></tr>
 <tr class="memdesc:ga7fcd344837a1fa8cdd3329325c855907"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the decremented (-1 to account for numpy indexing) IDs of elements neighboring nodes in a given sub-model part.  <a href="../../d2/d72/group___fluid_dynamics_application.html#ga7fcd344837a1fa8cdd3329325c855907">More...</a><br /></td></tr>
 <tr class="separator:ga7fcd344837a1fa8cdd3329325c855907"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga5dae16f6ab5fe4b9763abb19121d9628"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga5dae16f6ab5fe4b9763abb19121d9628">Kratos::RomAuxiliaryUtilities::GetNodalNeighbouringElementIds</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt; &amp;rNodeIds, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> RetrieveSingleNeighbour)</td></tr>
+<tr class="memdesc:ga5dae16f6ab5fe4b9763abb19121d9628"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the IDs of elements neighboring specified nodes in a given model part.  <a href="../../d2/d72/group___fluid_dynamics_application.html#ga5dae16f6ab5fe4b9763abb19121d9628">More...</a><br /></td></tr>
+<tr class="separator:ga5dae16f6ab5fe4b9763abb19121d9628"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga7e7da6e4a5cdc5446b4379c117479604"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga7e7da6e4a5cdc5446b4379c117479604">Kratos::RomAuxiliaryUtilities::GetNodalNeighbouringConditionIds</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt; &amp;rNodeIds, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> retrieveSingleNeighbour)</td></tr>
+<tr class="memdesc:ga7e7da6e4a5cdc5446b4379c117479604"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the IDs of conditions neighboring specified nodes in a given model part.  <a href="../../d2/d72/group___fluid_dynamics_application.html#ga7e7da6e4a5cdc5446b4379c117479604">More...</a><br /></td></tr>
+<tr class="separator:ga7e7da6e4a5cdc5446b4379c117479604"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7022cb3b92976182596a0feeef3421f9"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga7022cb3b92976182596a0feeef3421f9">Kratos::RomAuxiliaryUtilities::GetConditionIdsNotInHRomModelPart</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPartWithConditionsToInclude, std::map&lt; std::string, std::map&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a>, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&gt; &amp;rHRomWeights)</td></tr>
 <tr class="memdesc:ga7022cb3b92976182596a0feeef3421f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Identifies condition decremented (-1 to account for numpy indexing) IDs from a given <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a> that are not in the HROM weights This function iterates through the conditions in the provided <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a>, checks if their IDs exist in the HROM weights, and includes them in a list if they are missing. The decremented (-1 to account for numpy indexing) IDs of the absent conditions are returned.  <a href="../../d2/d72/group___fluid_dynamics_application.html#ga7022cb3b92976182596a0feeef3421f9">More...</a><br /></td></tr>
 <tr class="separator:ga7022cb3b92976182596a0feeef3421f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -23228,7 +23237,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gabd8d5656550cfa6381c8133d59d593ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabd8d5656550cfa6381c8133d59d593ad">&#9670;&nbsp;</a></span>GetHRomConditionParentsIds()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gabd8d5656550cfa6381c8133d59d593ad">&#9670;&nbsp;</a></span>GetHRomConditionParentsIds() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -23270,6 +23279,52 @@ template&lt;unsigned int TDim&gt; </div>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>std::vector&lt;IndexType&gt; List containing the decremented element IDs (-1 to account for numpy indexing) of the missing parent elements </dd></dl>
+
+</div>
+</div>
+<a id="gafc8d8f9586786f72e921535c6828fa79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gafc8d8f9586786f72e921535c6828fa79">&#9670;&nbsp;</a></span>GetHRomConditionParentsIds() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt; Kratos::RomAuxiliaryUtilities::GetHRomConditionParentsIds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rConditionIds</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Finds the parent elements for specified condition IDs and decrements their IDs for zero-based indexing. This version executes a process to compute nodal element neighbours for the entire model part, ensuring that each condition's neighbours are up-to-date before retrieving parent element IDs. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td><a class="el" href="../../d4/d95/class_kratos_1_1_model.html" title="This class aims to manage different model parts across multi-physics simulations.">Model</a> part from which to find parent elements, which may be modified due to neighbour computation. </td></tr>
+    <tr><td class="paramname">rConditionIds</td><td>A vector containing condition IDs for which parents will be identified. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;IndexType&gt; List of unique element IDs decremented by one (for zero-based indexing), corresponding to the parent elements. </dd></dl>
 
 </div>
 </div>
@@ -23398,8 +23453,118 @@ template&lt;unsigned int TDim&gt; </div>
 
 </div>
 </div>
+<a id="ga7e7da6e4a5cdc5446b4379c117479604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7e7da6e4a5cdc5446b4379c117479604">&#9670;&nbsp;</a></span>GetNodalNeighbouringConditionIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt; Kratos::RomAuxiliaryUtilities::GetNodalNeighbouringConditionIds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rNodeIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td>
+          <td class="paramname"><em>retrieveSingleNeighbour</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve the IDs of conditions neighboring specified nodes in a given model part. </p>
+<p>This function iterates over a list of node IDs and collects the IDs of conditions that neighbor these nodes. The neighboring conditions are determined using the 'NEIGHBOUR_CONDITIONS' values attached to each node. The function ensures that each condition ID is unique, thus avoiding duplicates in the returned vector. It's important to note that this function assumes that the 'NEIGHBOUR_CONDITIONS' values are already computed for the nodes in the model part. The boolean flag 'retrieveSingleNeighbour' indicates whether to retrieve all neighboring conditions or only a single neighbor per node.</p>
+<p>The function is particularly useful in scenarios where it's necessary to find all conditions that are directly connected to a certain subset of nodes within a model part. This can be essential in ROM (Reduced Order Modelling) applications or any other application requiring localized information around a set of nodes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part which contains all the conditions. </td></tr>
+    <tr><td class="paramname">rNodeIds</td><td>A vector of node IDs for which neighboring conditions should be fetched. </td></tr>
+    <tr><td class="paramname">retrieveSingleNeighbour</td><td>Indicates whether to retrieve all neighbors or only a single neighbor per node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;IndexType&gt; A list of unique IDs of neighboring conditions. </dd></dl>
+
+</div>
+</div>
+<a id="ga5dae16f6ab5fe4b9763abb19121d9628"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5dae16f6ab5fe4b9763abb19121d9628">&#9670;&nbsp;</a></span>GetNodalNeighbouringElementIds() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt; Kratos::RomAuxiliaryUtilities::GetNodalNeighbouringElementIds </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gac7e19b94429f58bae9f4b9a08d6f486b">IndexType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rNodeIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td>
+          <td class="paramname"><em>RetrieveSingleNeighbour</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Retrieve the IDs of elements neighboring specified nodes in a given model part. </p>
+<p>This function iterates over a list of node IDs and collects the IDs of elements that neighbor these nodes. The neighboring elements are determined using the 'NEIGHBOUR_ELEMENTS' values attached to each node. The function ensures that each element ID is unique, thus avoiding duplicates in the returned vector. It's important to note that this function assumes that the 'NEIGHBOUR_ELEMENTS' values are already computed for the nodes in the model part. The boolean flag 'RetrieveSingleNeighbour' indicates whether to retrieve all neighboring elements or only a single neighbor per node.</p>
+<p>The function is particularly useful in scenarios where it's necessary to find all elements that are directly connected to a certain subset of nodes within a model part. This can be essential in ROM (Reduced Order Modelling) applications or any other application requiring localized information around a set of nodes.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part which contains all the elements. </td></tr>
+    <tr><td class="paramname">rNodeIds</td><td>A vector of node IDs for which neighboring elements should be fetched. </td></tr>
+    <tr><td class="paramname">RetrieveSingleNeighbour</td><td>Indicates whether to retrieve all neighbors or only a single neighbor per node. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;IndexType&gt; A list of unique IDs of neighboring elements. </dd></dl>
+
+</div>
+</div>
 <a id="ga7fcd344837a1fa8cdd3329325c855907"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7fcd344837a1fa8cdd3329325c855907">&#9670;&nbsp;</a></span>GetNodalNeighbouringElementIds()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7fcd344837a1fa8cdd3329325c855907">&#9670;&nbsp;</a></span>GetNodalNeighbouringElementIds() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -40134,7 +40299,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Apr 17 2024 03:01:55 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Apr 18 2024 02:59:04 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
