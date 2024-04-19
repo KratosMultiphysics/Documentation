@@ -1423,6 +1423,13 @@ Functions</h2></td></tr>
 <tr class="memitem:a0336ec5be093097f1d34f24f0b2bbc7e"><td class="memTemplParams" colspan="2">template&lt;class TDataType &gt; </td></tr>
 <tr class="memitem:a0336ec5be093097f1d34f24f0b2bbc7e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#a0336ec5be093097f1d34f24f0b2bbc7e">ModelPartHasNodalVariableOrNot</a> (<a class="el" href="../../d1/d07/class_kratos_1_1_python_1_1_variable_checker.html">VariableChecker</a> &amp;rChecker, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; const &amp;rThisVariable)</td></tr>
 <tr class="separator:a0336ec5be093097f1d34f24f0b2bbc7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acaa7cca489cb9e3079be5b71ad32002b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#acaa7cca489cb9e3079be5b71ad32002b">AddCustomSensorsToPython</a> (pybind11::module &amp;m)</td></tr>
+<tr class="separator:acaa7cca489cb9e3079be5b71ad32002b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac60af8a0a6a858473027284ddacea890"><td class="memTemplParams" colspan="2">template&lt;class TContainerType &gt; </td></tr>
+<tr class="memitem:ac60af8a0a6a858473027284ddacea890"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#ac60af8a0a6a858473027284ddacea890">AddSmoothClamper</a> (pybind11::module &amp;m, const std::string &amp;rName)</td></tr>
+<tr class="separator:ac60af8a0a6a858473027284ddacea890"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3dbca144fbe7008a2cbc53b3a1b0a956"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#a3dbca144fbe7008a2cbc53b3a1b0a956">PYBIND11_MODULE</a> (<a class="el" href="../../df/dfe/class_kratos_1_1_kratos_system_identification_application.html">KratosSystemIdentificationApplication</a>, m)</td></tr>
+<tr class="separator:a3dbca144fbe7008a2cbc53b3a1b0a956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedfbb5331389372b5c1ba8200f70424f"><td class="memTemplParams" colspan="2">template&lt;class TValueType , unsigned int TDim&gt; </td></tr>
 <tr class="memitem:aedfbb5331389372b5c1ba8200f70424f"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#aedfbb5331389372b5c1ba8200f70424f">AuxiliarUpdateInterfaceValues</a> (<a class="el" href="../../d8/d72/class_kratos_1_1_trilinos_partitioned_f_s_i_utilities.html">TrilinosPartitionedFSIUtilities</a>&lt; <a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#acdcf12347d7b279029d8c620de8ac791">TrilinosSparseSpaceType</a>, TValueType, TDim &gt; &amp;dummy, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TValueType &gt; &amp;rSolutionVariable, <a class="el" href="../../d3/d13/class_kratos_1_1_auxiliary_vector_wrapper.html">AuxiliaryVectorWrapper</a> &amp;rCorrectedGuess)</td></tr>
 <tr class="separator:aedfbb5331389372b5c1ba8200f70424f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -3668,6 +3675,24 @@ template&lt;class TDataType &gt; </div>
 
 </div>
 </div>
+<a id="acaa7cca489cb9e3079be5b71ad32002b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acaa7cca489cb9e3079be5b71ad32002b">&#9670;&nbsp;</a></span>AddCustomSensorsToPython()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::Python::AddCustomSensorsToPython </td>
+          <td>(</td>
+          <td class="paramtype">pybind11::module &amp;&#160;</td>
+          <td class="paramname"><em>m</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa1e5939a8ff16f74e81d0709258d0172"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa1e5939a8ff16f74e81d0709258d0172">&#9670;&nbsp;</a></span>AddCustomSolversToPython()</h2>
 
@@ -5146,6 +5171,36 @@ template&lt;class TContainerType , typename... args&gt; </div>
           <td class="paramtype">pybind11::module &amp;&#160;</td>
           <td class="paramname"><em>m</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac60af8a0a6a858473027284ddacea890"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac60af8a0a6a858473027284ddacea890">&#9670;&nbsp;</a></span>AddSmoothClamper()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TContainerType &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::Python::AddSmoothClamper </td>
+          <td>(</td>
+          <td class="paramtype">pybind11::module &amp;&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>rName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -14882,7 +14937,7 @@ template&lt;class TContainerType , class TVariableType &gt; </div>
 </div>
 </div>
 <a id="adbcda404f0019e7c24f554117c55d2ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adbcda404f0019e7c24f554117c55d2ba">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adbcda404f0019e7c24f554117c55d2ba">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -14910,7 +14965,7 @@ template&lt;class TContainerType , class TVariableType &gt; </div>
 </div>
 </div>
 <a id="af3d0475878d5d550641c058808d381f9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3d0475878d5d550641c058808d381f9">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af3d0475878d5d550641c058808d381f9">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -14938,7 +14993,7 @@ template&lt;class TContainerType , class TVariableType &gt; </div>
 </div>
 </div>
 <a id="a0bec1d3f18d6c6de62118575d84e3919"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0bec1d3f18d6c6de62118575d84e3919">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a0bec1d3f18d6c6de62118575d84e3919">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -14966,7 +15021,7 @@ template&lt;class TContainerType , class TVariableType &gt; </div>
 </div>
 </div>
 <a id="a490446c53f187def5251d094821df690"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a490446c53f187def5251d094821df690">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a490446c53f187def5251d094821df690">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -14994,7 +15049,7 @@ template&lt;class TContainerType , class TVariableType &gt; </div>
 </div>
 </div>
 <a id="aabc86642143ceabc67a4893583892980"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aabc86642143ceabc67a4893583892980">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#aabc86642143ceabc67a4893583892980">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[5/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -15003,6 +15058,34 @@ template&lt;class TContainerType , class TVariableType &gt; </div>
           <td class="memname">Kratos::Python::PYBIND11_MODULE </td>
           <td>(</td>
           <td class="paramtype">KratosMPI&#160;</td>
+          <td class="paramname">, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">m&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3dbca144fbe7008a2cbc53b3a1b0a956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3dbca144fbe7008a2cbc53b3a1b0a956">&#9670;&nbsp;</a></span>PYBIND11_MODULE() <span class="overload">[6/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Kratos::Python::PYBIND11_MODULE </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../df/dfe/class_kratos_1_1_kratos_system_identification_application.html">KratosSystemIdentificationApplication</a>&#160;</td>
           <td class="paramname">, </td>
         </tr>
         <tr>
@@ -18447,7 +18530,7 @@ template&lt;class TValue &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 18 2024 03:47:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 19 2024 03:50:58 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

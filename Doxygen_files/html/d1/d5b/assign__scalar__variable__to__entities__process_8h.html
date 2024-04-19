@@ -82,10 +82,9 @@ $(function() {
 <div class="title">assign_scalar_variable_to_entities_process.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../dd/dfe/model__part_8h_source.html">includes/model_part.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="../../dc/d51/model_8h_source.html">containers/model.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../db/d71/kratos__parameters_8h_source.html">includes/kratos_parameters.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/d42/process_8h_source.html">processes/process.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="../../db/d8c/variable__utils_8h_source.html">utilities/variable_utils.h</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for assign_scalar_variable_to_entities_process.h:</div>
 <div class="dyncontent">
@@ -103,7 +102,10 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d49/class_kratos_1_1_assign_scalar_variable_to_entities_process.html">Kratos::AssignScalarVariableToEntitiesProcess&lt; TEntity &gt;</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0f/struct_kratos_1_1_assign_scalar_variable_to_entities_process_settings.html">Kratos::AssignScalarVariableToEntitiesProcessSettings</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This struct is used in order to identify when using the historical and non historical variables.  <a href="../../df/d0f/struct_kratos_1_1_assign_scalar_variable_to_entities_process_settings.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d49/class_kratos_1_1_assign_scalar_variable_to_entities_process.html">Kratos::AssignScalarVariableToEntitiesProcess&lt; TEntity, THistorical &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">The base class for assigning a value to scalar variables or <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html" title="Short class definition.">array_1d</a> components processes in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>.  <a href="../../df/d49/class_kratos_1_1_assign_scalar_variable_to_entities_process.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -116,19 +118,19 @@ Namespaces</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Input and output</div></td></tr>
-<tr class="memitem:gaa95b48a2ae03e7a9d41a310070f36ecc"><td class="memTemplParams" colspan="2">template&lt;class TEntity &gt; </td></tr>
-<tr class="memitem:gaa95b48a2ae03e7a9d41a310070f36ecc"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#gaa95b48a2ae03e7a9d41a310070f36ecc">Kratos::operator&gt;&gt;</a> (std::istream &amp;rIStream, AssignScalarVariableToEntitiesProcess&lt; TEntity &gt; &amp;rThis)</td></tr>
-<tr class="memdesc:gaa95b48a2ae03e7a9d41a310070f36ecc"><td class="mdescLeft">&#160;</td><td class="mdescRight">input stream function  <a href="../../d4/dbe/group___application_name_application.html#gaa95b48a2ae03e7a9d41a310070f36ecc">More...</a><br /></td></tr>
-<tr class="separator:gaa95b48a2ae03e7a9d41a310070f36ecc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf5b0d2f7ca8cc9770f755b38d165d205"><td class="memTemplParams" colspan="2">template&lt;class TEntity &gt; </td></tr>
-<tr class="memitem:gaf5b0d2f7ca8cc9770f755b38d165d205"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#gaf5b0d2f7ca8cc9770f755b38d165d205">Kratos::operator&lt;&lt;</a> (std::ostream &amp;rOStream, const AssignScalarVariableToEntitiesProcess&lt; TEntity &gt; &amp;rThis)</td></tr>
-<tr class="memdesc:gaf5b0d2f7ca8cc9770f755b38d165d205"><td class="mdescLeft">&#160;</td><td class="mdescRight">output stream function  <a href="../../d4/dbe/group___application_name_application.html#gaf5b0d2f7ca8cc9770f755b38d165d205">More...</a><br /></td></tr>
-<tr class="separator:gaf5b0d2f7ca8cc9770f755b38d165d205"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gadeb59e18fc3d0576e296f88a083ed923"><td class="memTemplParams" colspan="2">template&lt;class TEntity , bool THistorical&gt; </td></tr>
+<tr class="memitem:gadeb59e18fc3d0576e296f88a083ed923"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#gadeb59e18fc3d0576e296f88a083ed923">Kratos::operator&gt;&gt;</a> (std::istream &amp;rIStream, AssignScalarVariableToEntitiesProcess&lt; TEntity, THistorical &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:gadeb59e18fc3d0576e296f88a083ed923"><td class="mdescLeft">&#160;</td><td class="mdescRight">input stream function  <a href="../../d4/dbe/group___application_name_application.html#gadeb59e18fc3d0576e296f88a083ed923">More...</a><br /></td></tr>
+<tr class="separator:gadeb59e18fc3d0576e296f88a083ed923"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaca16143f11934f1abc07ae9170722d41"><td class="memTemplParams" colspan="2">template&lt;class TEntity , bool THistorical&gt; </td></tr>
+<tr class="memitem:gaca16143f11934f1abc07ae9170722d41"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#gaca16143f11934f1abc07ae9170722d41">Kratos::operator&lt;&lt;</a> (std::ostream &amp;rOStream, const AssignScalarVariableToEntitiesProcess&lt; TEntity, THistorical &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:gaca16143f11934f1abc07ae9170722d41"><td class="mdescLeft">&#160;</td><td class="mdescRight">output stream function  <a href="../../d4/dbe/group___application_name_application.html#gaca16143f11934f1abc07ae9170722d41">More...</a><br /></td></tr>
+<tr class="separator:gaca16143f11934f1abc07ae9170722d41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 18 2024 02:57:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 19 2024 03:00:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
