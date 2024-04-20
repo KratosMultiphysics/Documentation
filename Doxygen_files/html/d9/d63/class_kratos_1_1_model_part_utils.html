@@ -90,7 +90,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::ModelPartUtils:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d80/class_kratos_1_1_model_part_utils__coll__graph.svg" width="178" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d80/class_kratos_1_1_model_part_utils__coll__graph.svg" width="272" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -112,10 +112,74 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:afc06270c6d782c640a178b884b3a6af3"><td class="memTemplItemLeft" align="right" valign="top">static auto &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_kratos_1_1_model_part_utils.html#afc06270c6d782c640a178b884b3a6af3">GetContainer</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
 <tr class="memdesc:afc06270c6d782c640a178b884b3a6af3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Templated interface to get nodes, elements and conditions from a <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>.  <a href="../../d9/d63/class_kratos_1_1_model_part_utils.html#afc06270c6d782c640a178b884b3a6af3">More...</a><br /></td></tr>
 <tr class="separator:afc06270c6d782c640a178b884b3a6af3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aceec364bcef92b81046645bbfc04ccb8"><td class="memTemplParams" colspan="2">template&lt;class TIteratorType &gt; </td></tr>
+<tr class="memitem:aceec364bcef92b81046645bbfc04ccb8"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_kratos_1_1_model_part_utils.html#aceec364bcef92b81046645bbfc04ccb8">AddNodesFromOrderedContainer</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rTargetModelPart, TIteratorType iNodesBegin, TIteratorType iNodesEnd)</td></tr>
+<tr class="memdesc:aceec364bcef92b81046645bbfc04ccb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add nodes to <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a> from an ordered container.  <a href="../../d9/d63/class_kratos_1_1_model_part_utils.html#aceec364bcef92b81046645bbfc04ccb8">More...</a><br /></td></tr>
+<tr class="separator:aceec364bcef92b81046645bbfc04ccb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class collecting a set of free-floating utility functions for querying and mutating <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> s. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="aceec364bcef92b81046645bbfc04ccb8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aceec364bcef92b81046645bbfc04ccb8">&#9670;&nbsp;</a></span>AddNodesFromOrderedContainer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TIteratorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::ModelPartUtils::AddNodesFromOrderedContainer </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rTargetModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TIteratorType&#160;</td>
+          <td class="paramname"><em>iNodesBegin</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TIteratorType&#160;</td>
+          <td class="paramname"><em>iNodesEnd</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Add nodes to <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a> from an ordered container. </p>
+<p>By assuming that the input is ordered (by increasing Id), the nodes can be added more efficiently. Note that the function makes no check of the ordering, it is the responsability of the caller to ensure that it is correct. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TIteratorType</td><td>Iterator type for the nodes to add. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rTargetModelPart</td><td><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a> the nodes will be added to. </td></tr>
+    <tr><td class="paramname">iNodesBegin</td><td>First element of the container of nodes to be added to rTargetModelPart. </td></tr>
+    <tr><td class="paramname">iNodesEnd</td><td>End position for the container of nodes to be added to rTargetModelPart. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="acfd29350e4ca3f0916f02504f9188fc0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acfd29350e4ca3f0916f02504f9188fc0">&#9670;&nbsp;</a></span>GetContainer() <span class="overload">[1/4]</span></h2>
 
@@ -242,7 +306,7 @@ template&lt;class TContainerType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Apr 19 2024 03:03:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Apr 20 2024 03:03:10 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
