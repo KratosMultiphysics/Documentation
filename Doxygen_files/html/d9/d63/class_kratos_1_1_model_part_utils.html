@@ -90,7 +90,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::ModelPartUtils:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d80/class_kratos_1_1_model_part_utils__coll__graph.svg" width="272" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d80/class_kratos_1_1_model_part_utils__coll__graph.svg" width="294" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -116,6 +116,22 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aceec364bcef92b81046645bbfc04ccb8"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_kratos_1_1_model_part_utils.html#aceec364bcef92b81046645bbfc04ccb8">AddNodesFromOrderedContainer</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rTargetModelPart, TIteratorType iNodesBegin, TIteratorType iNodesEnd)</td></tr>
 <tr class="memdesc:aceec364bcef92b81046645bbfc04ccb8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add nodes to <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a> from an ordered container.  <a href="../../d9/d63/class_kratos_1_1_model_part_utils.html#aceec364bcef92b81046645bbfc04ccb8">More...</a><br /></td></tr>
 <tr class="separator:aceec364bcef92b81046645bbfc04ccb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a899857e80759d83beaa058ee41c80905"><td class="memTemplParams" colspan="2">template&lt;class TEntity &gt; </td></tr>
+<tr class="memitem:a899857e80759d83beaa058ee41c80905"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_kratos_1_1_model_part_utils.html#a899857e80759d83beaa058ee41c80905">GenerateEntitiesFromConnectivities</a> (const TEntity &amp;rPrototypeEntity, const std::vector&lt; std::vector&lt; std::size_t &gt;&gt; &amp;rEntitiesConnectivities, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &amp;rThisNodes, <a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt; TEntity, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>, std::less&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, std::equal_to&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, typename TEntity::Pointer, std::vector&lt; typename TEntity::Pointer &gt;&gt; &amp;rThisEntities, const Properties::Pointer pProperties=nullptr)</td></tr>
+<tr class="memdesc:a899857e80759d83beaa058ee41c80905"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates entities (e.g., Elements or Conditions) based on provided connectivities and adds them to a specified container, with an option to use default properties.  <a href="../../d9/d63/class_kratos_1_1_model_part_utils.html#a899857e80759d83beaa058ee41c80905">More...</a><br /></td></tr>
+<tr class="separator:a899857e80759d83beaa058ee41c80905"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b3382b9192c1ec438978c60683f770"><td class="memTemplParams" colspan="2">template&lt;class TEntity &gt; </td></tr>
+<tr class="memitem:ad7b3382b9192c1ec438978c60683f770"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_kratos_1_1_model_part_utils.html#ad7b3382b9192c1ec438978c60683f770">GenerateEntitiesFromConnectivities</a> (const std::string &amp;rEntityName, const std::vector&lt; std::vector&lt; std::size_t &gt;&gt; &amp;rEntitiesConnectivities, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &amp;rThisNodes, <a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt; TEntity, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>, std::less&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, std::equal_to&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, typename TEntity::Pointer, std::vector&lt; typename TEntity::Pointer &gt;&gt; &amp;rThisEntities, const Properties::Pointer pProperties=nullptr)</td></tr>
+<tr class="memdesc:ad7b3382b9192c1ec438978c60683f770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates entities (e.g., Elements or Conditions) based on provided connectivities and adds them to a specified container, with an option to use default properties.  <a href="../../d9/d63/class_kratos_1_1_model_part_utils.html#ad7b3382b9192c1ec438978c60683f770">More...</a><br /></td></tr>
+<tr class="separator:ad7b3382b9192c1ec438978c60683f770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9fb9ca70dc9dad26e0d49f030f6e8dc"><td class="memTemplParams" colspan="2">template&lt;class TEntity &gt; </td></tr>
+<tr class="memitem:ac9fb9ca70dc9dad26e0d49f030f6e8dc"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_kratos_1_1_model_part_utils.html#ac9fb9ca70dc9dad26e0d49f030f6e8dc">GenerateEntitiesFromConnectivities</a> (const TEntity &amp;rPrototypeEntity, const std::vector&lt; std::size_t &gt; &amp;rEntitiesIds, const std::vector&lt; std::size_t &gt; &amp;rPropertiesIds, const std::vector&lt; std::vector&lt; std::size_t &gt;&gt; &amp;rEntitiesConnectivities, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &amp;rThisNodes, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a12a74dba0e9369a68f2d130ccc324039">ModelPart::PropertiesContainerType</a> &amp;rThisProperties, <a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt; TEntity, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>, std::less&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, std::equal_to&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, typename TEntity::Pointer, std::vector&lt; typename TEntity::Pointer &gt;&gt; &amp;rThisEntities)</td></tr>
+<tr class="memdesc:ac9fb9ca70dc9dad26e0d49f030f6e8dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates entities (Elements or Conditions) based on the provided connectivities and adds them to a specified container.  <a href="../../d9/d63/class_kratos_1_1_model_part_utils.html#ac9fb9ca70dc9dad26e0d49f030f6e8dc">More...</a><br /></td></tr>
+<tr class="separator:ac9fb9ca70dc9dad26e0d49f030f6e8dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a44867958f0bb6c38b0d8affdcb3325a6"><td class="memTemplParams" colspan="2">template&lt;class TEntity &gt; </td></tr>
+<tr class="memitem:a44867958f0bb6c38b0d8affdcb3325a6"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d63/class_kratos_1_1_model_part_utils.html#a44867958f0bb6c38b0d8affdcb3325a6">GenerateEntitiesFromConnectivities</a> (const std::string &amp;rEntityName, const std::vector&lt; std::size_t &gt; &amp;rEntitiesIds, const std::vector&lt; std::size_t &gt; &amp;rPropertiesIds, const std::vector&lt; std::vector&lt; std::size_t &gt;&gt; &amp;rEntitiesConnectivities, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &amp;rThisNodes, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a12a74dba0e9369a68f2d130ccc324039">ModelPart::PropertiesContainerType</a> &amp;rThisProperties, <a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt; TEntity, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>, std::less&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, std::equal_to&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, typename TEntity::Pointer, std::vector&lt; typename TEntity::Pointer &gt;&gt; &amp;rThisEntities)</td></tr>
+<tr class="memdesc:a44867958f0bb6c38b0d8affdcb3325a6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates entities (Elements or Conditions) based on the provided connectivities and adds them to a specified container.  <a href="../../d9/d63/class_kratos_1_1_model_part_utils.html#a44867958f0bb6c38b0d8affdcb3325a6">More...</a><br /></td></tr>
+<tr class="separator:a44867958f0bb6c38b0d8affdcb3325a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Class collecting a set of free-floating utility functions for querying and mutating <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> s. </p>
@@ -174,6 +190,354 @@ template&lt;class TIteratorType &gt; </div>
     <tr><td class="paramname">rTargetModelPart</td><td><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a> the nodes will be added to. </td></tr>
     <tr><td class="paramname">iNodesBegin</td><td>First element of the container of nodes to be added to rTargetModelPart. </td></tr>
     <tr><td class="paramname">iNodesEnd</td><td>End position for the container of nodes to be added to rTargetModelPart. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a44867958f0bb6c38b0d8affdcb3325a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a44867958f0bb6c38b0d8affdcb3325a6">&#9670;&nbsp;</a></span>GenerateEntitiesFromConnectivities() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TEntity &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::ModelPartUtils::GenerateEntitiesFromConnectivities </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>rEntityName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rEntitiesIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rPropertiesIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::size_t &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rEntitiesConnectivities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisNodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a12a74dba0e9369a68f2d130ccc324039">ModelPart::PropertiesContainerType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisProperties</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt; TEntity, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>, std::less&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, std::equal_to&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, typename TEntity::Pointer, std::vector&lt; typename TEntity::Pointer &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThisEntities</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates entities (Elements or Conditions) based on the provided connectivities and adds them to a specified container. </p>
+<p>This function creates entities of type TEntity (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> or <a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html" title="Base class for all Conditions.">Condition</a>) based on their connectivity information. It looks up the specified entities and properties by their IDs in the provided containers and constructs new entities accordingly. The new entities are then added to the specified container. It checks if the specified entity type is registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> and if the necessary nodes and properties are available. Throws an error if any requirement is not met. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TEntity</td><td>The type of the entities to be generated (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> or <a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html" title="Base class for all Conditions.">Condition</a>). Must be a type registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rEntityName</td><td>The name of the entity type to generate. Must be registered in <a class="el" href="../../de/d8b/class_kratos_1_1_kratos_components.html" title="KratosComponents class encapsulates a lookup table for a family of classes in a generic way.">KratosComponents</a>. </td></tr>
+    <tr><td class="paramname">rEntitiesIds</td><td>A vector of IDs for the new entities to be created. </td></tr>
+    <tr><td class="paramname">rPropertiesIds</td><td>A vector of IDs for the properties to be associated with the new entities. </td></tr>
+    <tr><td class="paramname">rEntitiesConnectivities</td><td>A vector of vectors, each sub-vector provides the node IDs for the connectivity of one entity. </td></tr>
+    <tr><td class="paramname">rThisNodes</td><td>A reference to the container of nodes available in the current model part. </td></tr>
+    <tr><td class="paramname">rThisProperties</td><td>A reference to the container of properties available in the current model part. </td></tr>
+    <tr><td class="paramname">rThisEntities</td><td>A reference to the container where the new entities will be added. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>If the specified entity type is not registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>, if any of the specified nodes do not exist, or if any of the specified properties do not exist. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad7b3382b9192c1ec438978c60683f770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7b3382b9192c1ec438978c60683f770">&#9670;&nbsp;</a></span>GenerateEntitiesFromConnectivities() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TEntity &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::ModelPartUtils::GenerateEntitiesFromConnectivities </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>rEntityName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::size_t &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rEntitiesConnectivities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisNodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt; TEntity, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>, std::less&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, std::equal_to&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, typename TEntity::Pointer, std::vector&lt; typename TEntity::Pointer &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThisEntities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Properties::Pointer&#160;</td>
+          <td class="paramname"><em>pProperties</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates entities (e.g., Elements or Conditions) based on provided connectivities and adds them to a specified container, with an option to use default properties. </p>
+<p>This function is designed to create entities of a specific type (denoted by TEntity) based on their node connectivities. It facilitates the construction of these entities by looking up nodes in the provided nodes container and either using a specified <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html" title="Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...">Properties</a> object or defaulting to a provided one if not explicitly specified for each entity. The generated entities are then added to the specified container. The function ensures that the entity type is registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> and that all specified nodes are available. It allows specifying a common <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html" title="Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...">Properties</a> object to be used for all entities, which can be particularly useful when all entities share the same physical properties. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TEntity</td><td>The type of entities to be generated (typically <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> or <a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html" title="Base class for all Conditions.">Condition</a>). Must be a type registered with <a class="el" href="../../de/d8b/class_kratos_1_1_kratos_components.html" title="KratosComponents class encapsulates a lookup table for a family of classes in a generic way.">KratosComponents</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rEntityName</td><td>Name of the entity type to generate, which must be registered in <a class="el" href="../../de/d8b/class_kratos_1_1_kratos_components.html" title="KratosComponents class encapsulates a lookup table for a family of classes in a generic way.">KratosComponents</a>. </td></tr>
+    <tr><td class="paramname">rEntitiesConnectivities</td><td>A vector of vectors, where each sub-vector contains the node IDs defining the connectivity for one entity. </td></tr>
+    <tr><td class="paramname">rThisNodes</td><td>Reference to the container holding the nodes available in the current model part. </td></tr>
+    <tr><td class="paramname">rThisEntities</td><td>Reference to the container where the new entities will be stored. </td></tr>
+    <tr><td class="paramname">pProperties</td><td>Optional pointer to a <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html" title="Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...">Properties</a> object to be used for all created entities. If not provided (nullptr), the function will use the first <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html" title="Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...">Properties</a> object found in rThisProperties for all entities. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>If the specified entity type is not registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>, or if any of the specified nodes do not exist. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac9fb9ca70dc9dad26e0d49f030f6e8dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9fb9ca70dc9dad26e0d49f030f6e8dc">&#9670;&nbsp;</a></span>GenerateEntitiesFromConnectivities() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TEntity &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::ModelPartUtils::GenerateEntitiesFromConnectivities </td>
+          <td>(</td>
+          <td class="paramtype">const TEntity &amp;&#160;</td>
+          <td class="paramname"><em>rPrototypeEntity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rEntitiesIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::size_t &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rPropertiesIds</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::size_t &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rEntitiesConnectivities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisNodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a12a74dba0e9369a68f2d130ccc324039">ModelPart::PropertiesContainerType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisProperties</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt; TEntity, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>, std::less&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, std::equal_to&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, typename TEntity::Pointer, std::vector&lt; typename TEntity::Pointer &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThisEntities</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates entities (Elements or Conditions) based on the provided connectivities and adds them to a specified container. </p>
+<p>This function creates entities of type TEntity (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> or <a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html" title="Base class for all Conditions.">Condition</a>) based on their connectivity information. It looks up the specified entities and properties by their IDs in the provided containers and constructs new entities accordingly. The new entities are then added to the specified container. It checks if the specified entity type is registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> and if the necessary nodes and properties are available. Throws an error if any requirement is not met. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TEntity</td><td>The type of the entities to be generated (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> or <a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html" title="Base class for all Conditions.">Condition</a>). Must be a type registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rPrototypeEntity</td><td>The prototype entity to be cloned. This entity will be used to create new entities based on the provided connectivities. </td></tr>
+    <tr><td class="paramname">rEntitiesIds</td><td>A vector of IDs for the new entities to be created. </td></tr>
+    <tr><td class="paramname">rPropertiesIds</td><td>A vector of IDs for the properties to be associated with the new entities. </td></tr>
+    <tr><td class="paramname">rEntitiesConnectivities</td><td>A vector of vectors, each sub-vector provides the node IDs for the connectivity of one entity. </td></tr>
+    <tr><td class="paramname">rThisNodes</td><td>A reference to the container of nodes available in the current model part. </td></tr>
+    <tr><td class="paramname">rThisProperties</td><td>A reference to the container of properties available in the current model part. </td></tr>
+    <tr><td class="paramname">rThisEntities</td><td>A reference to the container where the new entities will be added. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>If the specified entity type is not registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>, if any of the specified nodes do not exist, or if any of the specified properties do not exist. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a899857e80759d83beaa058ee41c80905"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a899857e80759d83beaa058ee41c80905">&#9670;&nbsp;</a></span>GenerateEntitiesFromConnectivities() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TEntity &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::ModelPartUtils::GenerateEntitiesFromConnectivities </td>
+          <td>(</td>
+          <td class="paramtype">const TEntity &amp;&#160;</td>
+          <td class="paramname"><em>rPrototypeEntity</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; std::vector&lt; std::size_t &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rEntitiesConnectivities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#aaa333c3cf58397b76565318e30248e87">ModelPart::NodesContainerType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisNodes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet</a>&lt; TEntity, <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>, std::less&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, std::equal_to&lt; typename <a class="el" href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">IndexedObject::result_type</a> &gt;, typename TEntity::Pointer, std::vector&lt; typename TEntity::Pointer &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThisEntities</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Properties::Pointer&#160;</td>
+          <td class="paramname"><em>pProperties</em> = <code>nullptr</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generates entities (e.g., Elements or Conditions) based on provided connectivities and adds them to a specified container, with an option to use default properties. </p>
+<p>This function is designed to create entities of a specific type (denoted by TEntity) based on their node connectivities. It facilitates the construction of these entities by looking up nodes in the provided nodes container and either using a specified <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html" title="Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...">Properties</a> object or defaulting to a provided one if not explicitly specified for each entity. The generated entities are then added to the specified container. The function ensures that the entity type is registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> and that all specified nodes are available. It allows specifying a common <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html" title="Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...">Properties</a> object to be used for all entities, which can be particularly useful when all entities share the same physical properties. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TEntity</td><td>The type of entities to be generated (typically <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> or <a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html" title="Base class for all Conditions.">Condition</a>). Must be a type registered with <a class="el" href="../../de/d8b/class_kratos_1_1_kratos_components.html" title="KratosComponents class encapsulates a lookup table for a family of classes in a generic way.">KratosComponents</a>. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rPrototypeEntity</td><td>The prototype entity to be cloned. This entity will be used to create new entities based on the provided connectivities. </td></tr>
+    <tr><td class="paramname">rEntitiesConnectivities</td><td>A vector of vectors, where each sub-vector contains the node IDs defining the connectivity for one entity. </td></tr>
+    <tr><td class="paramname">rThisNodes</td><td>Reference to the container holding the nodes available in the current model part. </td></tr>
+    <tr><td class="paramname">rThisEntities</td><td>Reference to the container where the new entities will be stored. </td></tr>
+    <tr><td class="paramname">pProperties</td><td>Optional pointer to a <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html" title="Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...">Properties</a> object to be used for all created entities. If not provided (nullptr), the function will use the first <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html" title="Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...">Properties</a> object found in rThisProperties for all entities. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">std::runtime_error</td><td>If the specified entity type is not registered in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>, or if any of the specified nodes do not exist. </td></tr>
   </table>
   </dd>
 </dl>
@@ -306,7 +670,7 @@ template&lt;class TContainerType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Apr 23 2024 03:05:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Apr 24 2024 03:05:38 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
