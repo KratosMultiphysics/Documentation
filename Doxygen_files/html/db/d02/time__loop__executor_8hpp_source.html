@@ -152,60 +152,61 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            mStrategyWrapper-&gt;CloneTimeStep();</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            NewEndState = RunCycleLoop(NewEndState);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            mStrategyWrapper-&gt;AccumulateTotalDisplacementField();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            mStrategyWrapper-&gt;FinalizeSolutionStep();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            mStrategyWrapper-&gt;OutputProcess();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            result.emplace_back(NewEndState);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="../../d3/d92/struct_kratos_1_1_time_step_end_state.html">TimeStepEndState</a> RunCycle(<span class="keywordtype">double</span> PreviousTime)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="comment">// Setting the time and time increment may be needed for the processes</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> time_increment = mTimeIncrementor-&gt;GetIncrement();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        mStrategyWrapper-&gt;SetTimeIncrement(time_increment);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a35077deb07e9f9b945be0a7e778028ea">end_time</a> = PreviousTime + time_increment;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        mStrategyWrapper-&gt;SetEndTime(<a class="code" href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a35077deb07e9f9b945be0a7e778028ea">end_time</a>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">auto</span> end_state = mTimeStepExecutor-&gt;Run(<a class="code" href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a35077deb07e9f9b945be0a7e778028ea">end_time</a>);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        mTimeIncrementor-&gt;PostTimeStepExecution(end_state);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        UpdateProgress(<a class="code" href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a35077deb07e9f9b945be0a7e778028ea">end_time</a>);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> end_state;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    TimeStepEndState RunCycleLoop(<span class="keyword">const</span> TimeStepEndState&amp; previous_state)</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">auto</span> cycle_number = 0;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">auto</span> end_state    = previous_state;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keywordflow">while</span> (mTimeIncrementor-&gt;WantRetryStep(cycle_number, end_state) &amp;&amp; !IsCancelled()) {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span> (cycle_number &gt; 0) mStrategyWrapper-&gt;RestorePositionsAndDOFVectorToStartOfStep();</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            end_state = RunCycle(previous_state.time);</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            ++cycle_number;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        end_state.num_of_cycles = cycle_number;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="keywordflow">return</span> end_state;</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keywordtype">bool</span> IsCancelled()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mCancelDelegate &amp;&amp; mCancelDelegate(); }</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> UpdateProgress(<span class="keywordtype">double</span> Time)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordflow">if</span> (mProgressDelegate) {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            mProgressDelegate(Time);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    }</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    std::unique_ptr&lt;TimeIncrementor&gt;  mTimeIncrementor;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::function&lt;<a class="code" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>()&gt;             mCancelDelegate;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    std::function&lt;void(<span class="keywordtype">double</span>)&gt;       mProgressDelegate;</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    std::unique_ptr&lt;TimeStepExecutor&gt; mTimeStepExecutor = std::make_unique&lt;TimeStepExecutor&gt;();</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    std::shared_ptr&lt;StrategyWrapper&gt;  mStrategyWrapper;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;};</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            mStrategyWrapper-&gt;ComputeIncrementalDisplacementField();</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            mStrategyWrapper-&gt;FinalizeSolutionStep();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            mStrategyWrapper-&gt;OutputProcess();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            result.emplace_back(NewEndState);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="../../d3/d92/struct_kratos_1_1_time_step_end_state.html">TimeStepEndState</a> RunCycle(<span class="keywordtype">double</span> PreviousTime)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="comment">// Setting the time and time increment may be needed for the processes</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> time_increment = mTimeIncrementor-&gt;GetIncrement();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        mStrategyWrapper-&gt;SetTimeIncrement(time_increment);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a35077deb07e9f9b945be0a7e778028ea">end_time</a> = PreviousTime + time_increment;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        mStrategyWrapper-&gt;SetEndTime(<a class="code" href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a35077deb07e9f9b945be0a7e778028ea">end_time</a>);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">auto</span> end_state = mTimeStepExecutor-&gt;Run(<a class="code" href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a35077deb07e9f9b945be0a7e778028ea">end_time</a>);</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        mTimeIncrementor-&gt;PostTimeStepExecution(end_state);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        UpdateProgress(<a class="code" href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a35077deb07e9f9b945be0a7e778028ea">end_time</a>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> end_state;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    TimeStepEndState RunCycleLoop(<span class="keyword">const</span> TimeStepEndState&amp; previous_state)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">auto</span> cycle_number = 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <span class="keyword">auto</span> end_state    = previous_state;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="keywordflow">while</span> (mTimeIncrementor-&gt;WantRetryStep(cycle_number, end_state) &amp;&amp; !IsCancelled()) {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">if</span> (cycle_number &gt; 0) mStrategyWrapper-&gt;RestorePositionsAndDOFVectorToStartOfStep();</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            end_state = RunCycle(previous_state.time);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            ++cycle_number;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        end_state.num_of_cycles = cycle_number;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordflow">return</span> end_state;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keywordtype">bool</span> IsCancelled()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> mCancelDelegate &amp;&amp; mCancelDelegate(); }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;    <span class="keywordtype">void</span> UpdateProgress(<span class="keywordtype">double</span> Time)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keywordflow">if</span> (mProgressDelegate) {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            mProgressDelegate(Time);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    std::unique_ptr&lt;TimeIncrementor&gt;  mTimeIncrementor;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    std::function&lt;<a class="code" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>()&gt;             mCancelDelegate;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    std::function&lt;void(<span class="keywordtype">double</span>)&gt;       mProgressDelegate;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    std::unique_ptr&lt;TimeStepExecutor&gt; mTimeStepExecutor = std::make_unique&lt;TimeStepExecutor&gt;();</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    std::shared_ptr&lt;StrategyWrapper&gt;  mStrategyWrapper;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;};</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// namespace Kratos</span></div>
 <div class="ttc" id="aclass_kratos_1_1_scoped_output_file_access_html"><div class="ttname"><a href="../../de/df0/class_kratos_1_1_scoped_output_file_access.html">Kratos::ScopedOutputFileAccess</a></div><div class="ttdef"><b>Definition:</b> scoped_output_file_access.h:21</div></div>
 <div class="ttc" id="aclass_kratos_1_1_time_loop_executor_html"><div class="ttname"><a href="../../db/d67/class_kratos_1_1_time_loop_executor.html">Kratos::TimeLoopExecutor</a></div><div class="ttdef"><b>Definition:</b> time_loop_executor.hpp:33</div></div>
 <div class="ttc" id="aclass_kratos_1_1_time_loop_executor_html_a14b7eca42cc00b515a7b0b3430379897"><div class="ttname"><a href="../../db/d67/class_kratos_1_1_time_loop_executor.html#a14b7eca42cc00b515a7b0b3430379897">Kratos::TimeLoopExecutor::Run</a></div><div class="ttdeci">std::vector&lt; TimeStepEndState &gt; Run(const TimeStepEndState &amp;EndState) override</div><div class="ttdef"><b>Definition:</b> time_loop_executor.hpp:61</div></div>
@@ -228,7 +229,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Apr 25 2024 02:14:33 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Apr 26 2024 02:13:32 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
