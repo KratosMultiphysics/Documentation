@@ -145,114 +145,128 @@ $(function() {
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginModelPart,</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rHRomComputingModelPart);</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> SetHRomComputingModelPartWithNeighbours(</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> HRomWeights,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginModelPart,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rHRomComputingModelPart);</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> SetHRomVolumetricVisualizationModelPart(</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginModelPart,</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rHRomVisualizationModelPart);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetHRomConditionParentsIds(</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keyword">const</span> std::map&lt;std::string, std::map&lt;IndexType, double&gt;&gt;&amp; rHRomWeights);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetHRomConditionParentsIds(</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keyword">const</span> std::vector&lt;IndexType&gt;&amp; rConditionIds);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetNodalNeighbouringElementIdsNotInHRom(</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> SetHRomComputingModelPartWithLists(</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">const</span> std::vector&lt;int&gt;&amp; elementIds,</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keyword">const</span> std::vector&lt;int&gt;&amp; conditionIds,</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginModelPart,</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rHRomComputingModelPart);</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> SetHRomComputingModelPartWithNeighbours(</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> HRomWeights,</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginModelPart,</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rHRomComputingModelPart);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> SetHRomVolumetricVisualizationModelPart(</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginModelPart,</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rHRomVisualizationModelPart);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetHRomConditionParentsIds(</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keyword">const</span> std::map&lt;std::string, std::map&lt;IndexType, double&gt;&gt;&amp; rHRomWeights);</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetHRomConditionParentsIds(</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rGivenModelPart,</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keyword">const</span> std::map&lt;std::string, std::map&lt;IndexType, double&gt;&gt;&amp; rHRomWeights);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        <span class="keyword">const</span> std::vector&lt;IndexType&gt;&amp; rConditionIds);</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetNodalNeighbouringElementIds(</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rGivenModelPart);</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetNodalNeighbouringElementIds(</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keyword">const</span> std::vector&lt;IndexType&gt;&amp; rNodeIds,</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordtype">bool</span> RetrieveSingleNeighbour);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetNodalNeighbouringConditionIds(</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="keyword">const</span> std::vector&lt;IndexType&gt;&amp; rNodeIds,</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordtype">bool</span> retrieveSingleNeighbour);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetConditionIdsNotInHRomModelPart(</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPartWithConditionsToInclude,</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        std::map&lt;std::string, std::map&lt;IndexType, double&gt;&gt;&amp; rHRomWeights);</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetElementIdsNotInHRomModelPart(</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPartWithElementsToInclude,</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        std::map&lt;std::string, std::map&lt;IndexType, double&gt;&gt;&amp; rHRomWeights);</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetHRomMinimumConditionsIds(</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keyword">const</span> std::map&lt;IndexType, double&gt;&amp; rHRomConditionWeights);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetElementIdsInModelPart(</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    );</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetConditionIdsInModelPart(</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    );</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> ProjectRomSolutionIncrementToNodes(</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;rRomVariableNames,</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart);</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetPhiElemental(</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> &amp;rPhiElemental,</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a>&amp; rDofs,</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Element::GeometryType</a>&amp; rGeom,</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keyword">const</span> std::unordered_map&lt;Kratos::VariableData::KeyType, Matrix::size_type&gt;&amp; rVarToRowMapping);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetPsiElemental(</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> &amp;rPsiElemental,</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a>&amp; rDofs,</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Element::GeometryType</a>&amp; rGeom,</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        <span class="keyword">const</span> std::unordered_map&lt;Kratos::VariableData::KeyType, Matrix::size_type&gt;&amp; rVarToRowMapping);</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetJPhiElemental(</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> &amp;rJPhiElemental,</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a>&amp; rDofs,</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> &amp;rJPhi);</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetNodalNeighbouringElementIdsNotInHRom(</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rGivenModelPart,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">const</span> std::map&lt;std::string, std::map&lt;IndexType, double&gt;&gt;&amp; rHRomWeights);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetNodalNeighbouringElementIds(</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rGivenModelPart);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetNodalNeighbouringElementIds(</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keyword">const</span> std::vector&lt;IndexType&gt;&amp; rNodeIds,</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordtype">bool</span> RetrieveSingleNeighbour);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetNodalNeighbouringConditionIds(</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">const</span> std::vector&lt;IndexType&gt;&amp; rNodeIds,</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keywordtype">bool</span> retrieveSingleNeighbour);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetConditionIdsNotInHRomModelPart(</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPartWithConditionsToInclude,</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        std::map&lt;std::string, std::map&lt;IndexType, double&gt;&gt;&amp; rHRomWeights);</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetElementIdsNotInHRomModelPart(</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPartWithElementsToInclude,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        std::map&lt;std::string, std::map&lt;IndexType, double&gt;&gt;&amp; rHRomWeights);</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetHRomMinimumConditionsIds(</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keyword">const</span> std::map&lt;IndexType, double&gt;&amp; rHRomConditionWeights);</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetElementIdsInModelPart(</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    );</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    <span class="keyword">static</span> std::vector&lt;IndexType&gt; GetConditionIdsInModelPart(</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    );</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> ProjectRomSolutionIncrementToNodes(</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keyword">const</span> std::vector&lt;std::string&gt; &amp;rRomVariableNames,</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetPhiElemental(</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> &amp;rPhiElemental,</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a>&amp; rDofs,</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Element::GeometryType</a>&amp; rGeom,</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <span class="keyword">const</span> std::unordered_map&lt;Kratos::VariableData::KeyType, Matrix::size_type&gt;&amp; rVarToRowMapping);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetPsiElemental(</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> &amp;rPsiElemental,</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a>&amp; rDofs,</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Element::GeometryType</a>&amp; rGeom,</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="keyword">const</span> std::unordered_map&lt;Kratos::VariableData::KeyType, Matrix::size_type&gt;&amp; rVarToRowMapping);</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> RecursiveHRomModelPartCreation(</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d2/d72/group___fluid_dynamics_application.html#gaa966d6be6a9c34f3b99db8a068d33466">NodesPointerSetType</a>&amp; rNodesSet,</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="keyword">const</span> std::vector&lt;Element::Pointer&gt;&amp; rElementsVector,</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keyword">const</span> std::vector&lt;Condition::Pointer&gt;&amp; rConditionsVector,</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginModelPart,</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rDestinationModelPart);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160; </div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> RecursiveHRomMinimumConditionIds(</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keyword">const</span> std::map&lt;IndexType, double&gt;&amp; rHRomConditionWeights,</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        std::vector&lt;IndexType&gt;&amp; rMinimumConditionsIds);</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetJPhiElemental(</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> &amp;rJPhiElemental,</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Element::DofsVectorType</a>&amp; rDofs,</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> &amp;rJPhi);</div>
 <div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> RecursiveVisualizationSubModelPartCreation(</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginSubModelPart,</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rDestinationModelPart);</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;};</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_ROM_AUXILIARY_UTILITIES_H</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> RecursiveHRomModelPartCreation(</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d2/d72/group___fluid_dynamics_application.html#gaa966d6be6a9c34f3b99db8a068d33466">NodesPointerSetType</a>&amp; rNodesSet,</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        <span class="keyword">const</span> std::vector&lt;Element::Pointer&gt;&amp; rElementsVector,</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;        <span class="keyword">const</span> std::vector&lt;Condition::Pointer&gt;&amp; rConditionsVector,</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginModelPart,</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rDestinationModelPart);</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> RecursiveHRomModelPartCreationVector(</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        <span class="keyword">const</span> std::vector&lt;IndexType&gt;&amp; rNodeIds,</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        <span class="keyword">const</span> std::vector&lt;IndexType&gt;&amp; rElementIds,</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        <span class="keyword">const</span> std::vector&lt;IndexType&gt;&amp; rConditionIds,</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginModelPart,</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rDestinationModelPart);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> RecursiveHRomMinimumConditionIds(</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        <span class="keyword">const</span> std::map&lt;IndexType, double&gt;&amp; rHRomConditionWeights,</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        std::vector&lt;IndexType&gt;&amp; rMinimumConditionsIds);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> RecursiveVisualizationSubModelPartCreation(</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rOriginSubModelPart,</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rDestinationModelPart);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;};</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_ROM_AUXILIARY_UTILITIES_H</span></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_a83ae9b09dd7a0ed7ab3bc1baa6429df5"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Kratos::Element::DofsVectorType</a></div><div class="ttdeci">std::vector&lt; DofType::Pointer &gt; DofsVectorType</div><div class="ttdef"><b>Definition:</b> element.h:100</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, AMatrix::dynamic &gt;</a></div></div>
@@ -280,7 +294,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 29 2024 02:26:31 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Apr 30 2024 02:24:20 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

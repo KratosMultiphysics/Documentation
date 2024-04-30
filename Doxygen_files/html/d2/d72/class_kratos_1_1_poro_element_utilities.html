@@ -199,8 +199,53 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a0962616859401500ac2e345ff76ec084"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeb8a070b08c256be618bd0e88c999156"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/class_kratos_1_1_poro_element_utilities.html#aeb8a070b08c256be618bd0e88c999156">Calculate3DExtrapolationMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 8, 8 &gt; &amp;rExtrapolationMatrix)</td></tr>
 <tr class="separator:aeb8a070b08c256be618bd0e88c999156"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf450d21054acfb2205faeede78971b9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/class_kratos_1_1_poro_element_utilities.html#abf450d21054acfb2205faeede78971b9">AddInitialStresses</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStressVector, <a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;geometry)</td></tr>
+<tr class="separator:abf450d21054acfb2205faeede78971b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="abf450d21054acfb2205faeede78971b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf450d21054acfb2205faeede78971b9">&#9670;&nbsp;</a></span>AddInitialStresses()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::PoroElementUtilities::AddInitialStresses </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rStressVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>rValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;&#160;</td>
+          <td class="paramname"><em>geometry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>AddInitialStresses Utility to impose the initial stresses already computed It checks the dimension and interpolates the contribution of each node to the corresponding GP </p>
+
+</div>
+</div>
 <a id="a7efa0624d9824a67dfcb06ab8671b683"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7efa0624d9824a67dfcb06ab8671b683">&#9670;&nbsp;</a></span>AssemblePBlockMatrix()</h2>
 
@@ -2254,7 +2299,7 @@ template&lt;class TVectorType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 29 2024 03:39:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Apr 30 2024 03:36:38 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

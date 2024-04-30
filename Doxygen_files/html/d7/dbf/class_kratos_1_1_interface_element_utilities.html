@@ -143,8 +143,98 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a5e66736dda98f6d826bbffeb75a88e9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1022230ca6f5f918a54f79d9058d1055"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbf/class_kratos_1_1_interface_element_utilities.html#a1022230ca6f5f918a54f79d9058d1055">CalculateLinkPermeabilityMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3, 3 &gt; &amp;rPermeabilityMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;JointWidth)</td></tr>
 <tr class="separator:a1022230ca6f5f918a54f79d9058d1055"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca46226353cd881732025c8bab19375a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbf/class_kratos_1_1_interface_element_utilities.html#aca46226353cd881732025c8bab19375a">AddInitialInterfaceStresses2D</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStressVector, <a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;geometry)</td></tr>
+<tr class="separator:aca46226353cd881732025c8bab19375a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaef035d4577f4f18486d1ce3eddee453"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbf/class_kratos_1_1_interface_element_utilities.html#aaef035d4577f4f18486d1ce3eddee453">AddInitialInterfaceStresses3D</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStressVector, <a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;geometry)</td></tr>
+<tr class="separator:aaef035d4577f4f18486d1ce3eddee453"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20e405d1400d963abe13d0eda3a15ff3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dbf/class_kratos_1_1_interface_element_utilities.html#a20e405d1400d963abe13d0eda3a15ff3">ObtainRotationMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 6, 6 &gt; &amp;RotationMatrixInterface, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;Geom)</td></tr>
+<tr class="separator:a20e405d1400d963abe13d0eda3a15ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aca46226353cd881732025c8bab19375a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca46226353cd881732025c8bab19375a">&#9670;&nbsp;</a></span>AddInitialInterfaceStresses2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::InterfaceElementUtilities::AddInitialInterfaceStresses2D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rStressVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>rValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;&#160;</td>
+          <td class="paramname"><em>geometry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaef035d4577f4f18486d1ce3eddee453"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaef035d4577f4f18486d1ce3eddee453">&#9670;&nbsp;</a></span>AddInitialInterfaceStresses3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::InterfaceElementUtilities::AddInitialInterfaceStresses3D </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rStressVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>rValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;&#160;</td>
+          <td class="paramname"><em>geometry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a5e66736dda98f6d826bbffeb75a88e9d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e66736dda98f6d826bbffeb75a88e9d">&#9670;&nbsp;</a></span>CalculateLinkPermeabilityMatrix() <span class="overload">[1/4]</span></h2>
 
@@ -1107,13 +1197,49 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a20e405d1400d963abe13d0eda3a15ff3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20e405d1400d963abe13d0eda3a15ff3">&#9670;&nbsp;</a></span>ObtainRotationMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void Kratos::InterfaceElementUtilities::ObtainRotationMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 6, 6 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>RotationMatrixInterface</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a> &amp;&#160;</td>
+          <td class="paramname"><em>Geom</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_utilities/<a class="el" href="../../d5/dce/_geo_mechanics_application_2custom__utilities_2interface__element__utilities_8hpp_source.html">interface_element_utilities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 29 2024 03:32:10 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Apr 30 2024 03:29:06 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -100,88 +100,89 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// Application includes</span></div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d59/elastic__cohesive__3_d__law_8hpp.html">custom_constitutive/interface_element_laws/elastic_cohesive_3D_law.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../df/d97/poromechanics__application__variables_8h.html">poromechanics_application_variables.h</a>&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">   26</a></span>&#160;<span class="keyword">class </span>KRATOS_API(POROMECHANICS_APPLICATION) <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">ElasticCohesive2DLaw</a> : <span class="keyword">public</span> <a class="code" href="../../dc/d77/class_kratos_1_1_elastic_cohesive3_d_law.html">ElasticCohesive3DLaw</a></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a8f02aab2e69da80dfe7d6b988007ee71">   31</a></span>&#160;    <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a8f02aab2e69da80dfe7d6b988007ee71">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">ElasticCohesive2DLaw</a>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">// Default Constructor</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#adb4be6c5424620608e06dcbbbaf17fe0">   36</a></span>&#160;    <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#adb4be6c5424620608e06dcbbbaf17fe0">ElasticCohesive2DLaw</a>()</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a117f6f7962118b3fbbb77a802e629ebc">   40</a></span>&#160;    ConstitutiveLaw::Pointer <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a117f6f7962118b3fbbb77a802e629ebc">Clone</a>()<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> Kratos::make_shared&lt;ElasticCohesive2DLaw&gt;(<a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">ElasticCohesive2DLaw</a>(*<span class="keyword">this</span>));</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">// Copy Constructor</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a6fbdadc8d5bc7bcb5882becdb2159211">   46</a></span>&#160;    <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a6fbdadc8d5bc7bcb5882becdb2159211">ElasticCohesive2DLaw</a> (<span class="keyword">const</span> <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">ElasticCohesive2DLaw</a>&amp; rOther) : <a class="code" href="../../dc/d77/class_kratos_1_1_elastic_cohesive3_d_law.html">ElasticCohesive3DLaw</a>(rOther)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">// Destructor</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a03ec8a2b88f09443e532d3520d0ac65b">   51</a></span>&#160;    <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a03ec8a2b88f09443e532d3520d0ac65b">~ElasticCohesive2DLaw</a>()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordtype">void</span> GetLawFeatures(Features&amp; rFeatures) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="comment">// Member Variables</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> ComputeConstitutiveMatrix(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; rConstitutiveMatrix,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                                    ConstitutiveLawVariables&amp; rVariables,</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                    <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&amp; rValues) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="keywordtype">void</span> ComputeStressVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rStressVector,</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                                ConstitutiveLawVariables&amp; rVariables,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&amp; rValues) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="comment">// Serialization</span></div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#ad3f5346f31d572dd2ab4fcd658de5bc4">   81</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>( rSerializer, <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a> )</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>( rSerializer, <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a> )</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}; <span class="comment">// Class ElasticCohesive2DLaw</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_ELASTIC_COHESIVE_2D_LAW_H_INCLUDED  defined</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;custom_utilities/interface_element_utilities.hpp&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">   27</a></span>&#160;<span class="keyword">class </span>KRATOS_API(POROMECHANICS_APPLICATION) <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">ElasticCohesive2DLaw</a> : <span class="keyword">public</span> <a class="code" href="../../dc/d77/class_kratos_1_1_elastic_cohesive3_d_law.html">ElasticCohesive3DLaw</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;{</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a8f02aab2e69da80dfe7d6b988007ee71">   32</a></span>&#160;    <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a8f02aab2e69da80dfe7d6b988007ee71">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">ElasticCohesive2DLaw</a>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="comment">// Default Constructor</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#adb4be6c5424620608e06dcbbbaf17fe0">   37</a></span>&#160;    <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#adb4be6c5424620608e06dcbbbaf17fe0">ElasticCohesive2DLaw</a>()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a117f6f7962118b3fbbb77a802e629ebc">   41</a></span>&#160;    ConstitutiveLaw::Pointer <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a117f6f7962118b3fbbb77a802e629ebc">Clone</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">return</span> Kratos::make_shared&lt;ElasticCohesive2DLaw&gt;(<a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">ElasticCohesive2DLaw</a>(*<span class="keyword">this</span>));</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">// Copy Constructor</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a6fbdadc8d5bc7bcb5882becdb2159211">   47</a></span>&#160;    <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a6fbdadc8d5bc7bcb5882becdb2159211">ElasticCohesive2DLaw</a> (<span class="keyword">const</span> <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">ElasticCohesive2DLaw</a>&amp; rOther) : <a class="code" href="../../dc/d77/class_kratos_1_1_elastic_cohesive3_d_law.html">ElasticCohesive3DLaw</a>(rOther)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="comment">// Destructor</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a03ec8a2b88f09443e532d3520d0ac65b">   52</a></span>&#160;    <a class="code" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a03ec8a2b88f09443e532d3520d0ac65b">~ElasticCohesive2DLaw</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keywordtype">void</span> GetLawFeatures(Features&amp; rFeatures) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="comment">// Member Variables</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordtype">void</span> ComputeConstitutiveMatrix(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; rConstitutiveMatrix,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                                    ConstitutiveLawVariables&amp; rVariables,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                                    <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&amp; rValues) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> ComputeStressVector(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rStressVector,</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                                ConstitutiveLawVariables&amp; rVariables,</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                                <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&amp; rValues) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">// Serialization</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#ad3f5346f31d572dd2ab4fcd658de5bc4">   82</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>( rSerializer, <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a> )</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>( rSerializer, <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a> )</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}; <span class="comment">// Class ElasticCohesive2DLaw</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_ELASTIC_COHESIVE_2D_LAW_H_INCLUDED  defined</span></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html">Kratos::ConstitutiveLaw</a></div><div class="ttdef"><b>Definition:</b> constitutive_law.h:47</div></div>
-<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">Kratos::ElasticCohesive2DLaw</a></div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:27</div></div>
-<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html_a03ec8a2b88f09443e532d3520d0ac65b"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a03ec8a2b88f09443e532d3520d0ac65b">Kratos::ElasticCohesive2DLaw::~ElasticCohesive2DLaw</a></div><div class="ttdeci">~ElasticCohesive2DLaw() override</div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:51</div></div>
-<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html_a117f6f7962118b3fbbb77a802e629ebc"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a117f6f7962118b3fbbb77a802e629ebc">Kratos::ElasticCohesive2DLaw::Clone</a></div><div class="ttdeci">ConstitutiveLaw::Pointer Clone() const override</div><div class="ttdoc">Clone function (has to be implemented by any derived class)</div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:40</div></div>
-<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html_a6fbdadc8d5bc7bcb5882becdb2159211"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a6fbdadc8d5bc7bcb5882becdb2159211">Kratos::ElasticCohesive2DLaw::ElasticCohesive2DLaw</a></div><div class="ttdeci">ElasticCohesive2DLaw(const ElasticCohesive2DLaw &amp;rOther)</div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:46</div></div>
+<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html">Kratos::ElasticCohesive2DLaw</a></div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:28</div></div>
+<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html_a03ec8a2b88f09443e532d3520d0ac65b"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a03ec8a2b88f09443e532d3520d0ac65b">Kratos::ElasticCohesive2DLaw::~ElasticCohesive2DLaw</a></div><div class="ttdeci">~ElasticCohesive2DLaw() override</div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:52</div></div>
+<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html_a117f6f7962118b3fbbb77a802e629ebc"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a117f6f7962118b3fbbb77a802e629ebc">Kratos::ElasticCohesive2DLaw::Clone</a></div><div class="ttdeci">ConstitutiveLaw::Pointer Clone() const override</div><div class="ttdoc">Clone function (has to be implemented by any derived class)</div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:41</div></div>
+<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html_a6fbdadc8d5bc7bcb5882becdb2159211"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a6fbdadc8d5bc7bcb5882becdb2159211">Kratos::ElasticCohesive2DLaw::ElasticCohesive2DLaw</a></div><div class="ttdeci">ElasticCohesive2DLaw(const ElasticCohesive2DLaw &amp;rOther)</div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:47</div></div>
 <div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html_a8f02aab2e69da80dfe7d6b988007ee71"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#a8f02aab2e69da80dfe7d6b988007ee71">Kratos::ElasticCohesive2DLaw::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(ElasticCohesive2DLaw)</div></div>
-<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html_adb4be6c5424620608e06dcbbbaf17fe0"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#adb4be6c5424620608e06dcbbbaf17fe0">Kratos::ElasticCohesive2DLaw::ElasticCohesive2DLaw</a></div><div class="ttdeci">ElasticCohesive2DLaw()</div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:36</div></div>
-<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive3_d_law_html"><div class="ttname"><a href="../../dc/d77/class_kratos_1_1_elastic_cohesive3_d_law.html">Kratos::ElasticCohesive3DLaw</a></div><div class="ttdef"><b>Definition:</b> elastic_cohesive_3D_law.hpp:31</div></div>
+<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive2_d_law_html_adb4be6c5424620608e06dcbbbaf17fe0"><div class="ttname"><a href="../../d7/dde/class_kratos_1_1_elastic_cohesive2_d_law.html#adb4be6c5424620608e06dcbbbaf17fe0">Kratos::ElasticCohesive2DLaw::ElasticCohesive2DLaw</a></div><div class="ttdeci">ElasticCohesive2DLaw()</div><div class="ttdef"><b>Definition:</b> elastic_cohesive_2D_law.hpp:37</div></div>
+<div class="ttc" id="aclass_kratos_1_1_elastic_cohesive3_d_law_html"><div class="ttname"><a href="../../dc/d77/class_kratos_1_1_elastic_cohesive3_d_law.html">Kratos::ElasticCohesive3DLaw</a></div><div class="ttdef"><b>Definition:</b> elastic_cohesive_3D_law.hpp:32</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, AMatrix::dynamic &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_parameters_html"><div class="ttname"><a href="../../dd/da0/class_kratos_1_1_parameters.html">Kratos::Parameters</a></div><div class="ttdoc">This class provides to Kratos a data structure for I/O based on the standard of JSON.</div><div class="ttdef"><b>Definition:</b> kratos_parameters.h:59</div></div>
 <div class="ttc" id="aclass_kratos_1_1_serializer_html"><div class="ttname"><a href="../../dd/d32/class_kratos_1_1_serializer.html">Kratos::Serializer</a></div><div class="ttdoc">The serialization consists in storing the state of an object into a storage format like data file or ...</div><div class="ttdef"><b>Definition:</b> serializer.h:123</div></div>
@@ -195,7 +196,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 29 2024 02:24:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Apr 30 2024 02:22:13 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
