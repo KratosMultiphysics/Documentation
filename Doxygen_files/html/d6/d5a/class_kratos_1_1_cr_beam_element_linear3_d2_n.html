@@ -119,6 +119,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af39fc89dc9726ea395e6a740bb8e394b"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5a/class_kratos_1_1_cr_beam_element_linear3_d2_n.html#af39fc89dc9726ea395e6a740bb8e394b">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;ThisNodes, PropertiesType::Pointer pProperties) const override</td></tr>
 <tr class="memdesc:af39fc89dc9726ea395e6a740bb8e394b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new element.  <a href="../../d6/d5a/class_kratos_1_1_cr_beam_element_linear3_d2_n.html#af39fc89dc9726ea395e6a740bb8e394b">More...</a><br /></td></tr>
 <tr class="separator:af39fc89dc9726ea395e6a740bb8e394b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad20eb444cd0d83fbc48b3c6ffe143710"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5a/class_kratos_1_1_cr_beam_element_linear3_d2_n.html#ad20eb444cd0d83fbc48b3c6ffe143710">Check</a> (const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) const override</td></tr>
+<tr class="separator:ad20eb444cd0d83fbc48b3c6ffe143710"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3904b24ed0a7e3f7e218dfca4d00efef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5a/class_kratos_1_1_cr_beam_element_linear3_d2_n.html#a3904b24ed0a7e3f7e218dfca4d00efef">CalculateLocalSystem</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="separator:a3904b24ed0a7e3f7e218dfca4d00efef"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9cb607e12c036863266d3331b149e5f6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d5a/class_kratos_1_1_cr_beam_element_linear3_d2_n.html#a9cb607e12c036863266d3331b149e5f6">CalculateRightHandSide</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
@@ -203,8 +205,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a7b4cb61ee55a8afc9d033c61fed49a68 inherit pub_methods_class_kratos_1_1_cr_beam_element3_d2_n"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#a7b4cb61ee55a8afc9d033c61fed49a68">AssembleSmallInBigMatrix</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rSmallMatrix, <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, <a class="el" href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#af3b00c3c1cb56427590f868363ec6ec9">msElementSize</a>, <a class="el" href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#af3b00c3c1cb56427590f868363ec6ec9">msElementSize</a> &gt; &amp;rBigMatrix) const</td></tr>
 <tr class="memdesc:a7b4cb61ee55a8afc9d033c61fed49a68 inherit pub_methods_class_kratos_1_1_cr_beam_element3_d2_n"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is used to assemble single transformation matrix in the big global rotation matrix.  <a href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#a7b4cb61ee55a8afc9d033c61fed49a68">More...</a><br /></td></tr>
 <tr class="separator:a7b4cb61ee55a8afc9d033c61fed49a68 inherit pub_methods_class_kratos_1_1_cr_beam_element3_d2_n"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a62de38bcfb68eb3515e64b52282907fe inherit pub_methods_class_kratos_1_1_cr_beam_element3_d2_n"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#a62de38bcfb68eb3515e64b52282907fe">Check</a> (const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) const override</td></tr>
-<tr class="separator:a62de38bcfb68eb3515e64b52282907fe inherit pub_methods_class_kratos_1_1_cr_beam_element3_d2_n"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e8e7b5bb3073195f907aad7efe49106 inherit pub_methods_class_kratos_1_1_cr_beam_element3_d2_n"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#a1e8e7b5bb3073195f907aad7efe49106">CalculatePsi</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> I, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> A_eff) const</td></tr>
 <tr class="memdesc:a1e8e7b5bb3073195f907aad7efe49106 inherit pub_methods_class_kratos_1_1_cr_beam_element3_d2_n"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates reduction values in case of shear-deformable structures.  <a href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#a1e8e7b5bb3073195f907aad7efe49106">More...</a><br /></td></tr>
 <tr class="separator:a1e8e7b5bb3073195f907aad7efe49106 inherit pub_methods_class_kratos_1_1_cr_beam_element3_d2_n"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1198,6 +1198,40 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ad20eb444cd0d83fbc48b3c6ffe143710"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad20eb444cd0d83fbc48b3c6ffe143710">&#9670;&nbsp;</a></span>Check()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> Kratos::CrBeamElementLinear3D2N::Check </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>This method provides the place to perform checks on the completeness of the input and the compatibility with the problem options as well as the contitutive laws selected It is designed to be called only once (or anyway, not often) typically at the beginning of the calculations, so to verify that nothing is missing from the input or that no common error is found. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rCurrentProcessInfo</td><td>this method is: MANDATORY </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#a62de38bcfb68eb3515e64b52282907fe">Kratos::CrBeamElement3D2N</a>.</p>
+
+</div>
+</div>
 <a id="abb6d0bd8e4e56136d4d86e0a74a99e21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abb6d0bd8e4e56136d4d86e0a74a99e21">&#9670;&nbsp;</a></span>Create() <span class="overload">[1/2]</span></h2>
 
@@ -1356,7 +1390,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 2 2024 03:45:31 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri May 3 2024 03:46:52 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
