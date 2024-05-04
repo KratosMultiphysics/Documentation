@@ -173,9 +173,6 @@ $(function() {
 , <a class="el" href="d0/dc2/struct_kratos_1_1_find_nodal_h_settings.html#a5b347ad385945ed14aa85931a8526a1e">Kratos::FindNodalHSettings</a>
 , <a class="el" href="d2/d69/struct_kratos_1_1_mortar_utilities_settings.html#abd2bc8103adf12a2648d106d3b481d12">Kratos::MortarUtilitiesSettings</a>
 </li>
-<li>scalar_fields
-: <a class="el" href="d5/dc9/classmaterial_1_1material__control_1_1_material_control.html#a0500fe55874647617f039db25e18b882">material.material_control.MaterialControl</a>
-</li>
 <li>scalar_output
 : <a class="el" href="d5/dee/classfsi__coupling__interface_1_1_f_s_i_coupling_interface.html#aeda9666f6424b753be72db528c1b7af0">fsi_coupling_interface.FSICouplingInterface</a>
 </li>
@@ -489,7 +486,6 @@ $(function() {
 , <a class="el" href="d4/dbf/classmanage__selected__elements__process_1_1_manage_selected_elements_process.html#a64010536f87e233efe87a611386d5a3b">manage_selected_elements_process.ManageSelectedElementsProcess</a>
 , <a class="el" href="d8/dab/classmapping_1_1in__plane__vertex__morphing__mapper_1_1_in_plane_vertex_morphing_mapper.html#a957dacbc3df174bdb5f9238e1c3e444a">mapping.in_plane_vertex_morphing_mapper.InPlaneVertexMorphingMapper</a>
 , <a class="el" href="da/d8e/classmapping_1_1sliding__vertex__morphing__mapper_1_1_sliding_vertex_morphing_mapper.html#a4ae101939d3d7cfa3602d450db6b31cb">mapping.sliding_vertex_morphing_mapper.SlidingVertexMorphingMapper</a>
-, <a class="el" href="d5/dc9/classmaterial_1_1material__control_1_1_material_control.html#ae59e356942553a8e0a0700a6f4fa83f8">material.material_control.MaterialControl</a>
 , <a class="el" href="de/d5e/classmeshing__domain_1_1_meshing_domain.html#ab9c808d0baf1eb7552cf9722c0f6b973">meshing_domain.MeshingDomain</a>
 , <a class="el" href="d6/dc8/classmeshing__strategy_1_1_meshing_strategy.html#ad2acae66cac0bfc2a8157db965f4e459">meshing_strategy.MeshingStrategy</a>
 , <a class="el" href="d0/d5d/classmmg__process_1_1_mmg_process.html#a7da3df2bb3f2d8405bef57aa512830f9">mmg_process.MmgProcess</a>
@@ -680,8 +676,11 @@ $(function() {
 , <a class="el" href="d0/daf/classresponse__functions_1_1plane__based__packaging_1_1_plane_based_packaging.html#af45adb50a8a838bdfa313f6bc798025e">response_functions.plane_based_packaging.PlaneBasedPackaging</a>
 , <a class="el" href="dc/d96/classresponse__functions_1_1surface__normal__shape__change_1_1_surface_normal_shape_change.html#aa87bfd4d20f3c4a6f9b285872c439ba5">response_functions.surface_normal_shape_change.SurfaceNormalShapeChange</a>
 </li>
-<li>SIMP_pow_fac
-: <a class="el" href="db/d9b/class_kratos_1_1_helmholtz_material.html#a11773f5eb1f432987ac33787b8ae8638">Kratos::HelmholtzMaterial</a>
+<li>simp_physical_phi
+: <a class="el" href="d0/d1e/classsimp__control_1_1_simp_control.html#a7c1ed5e847386b8bb84bf6bc0717403b">simp_control.SimpControl</a>
+</li>
+<li>simp_power_fac
+: <a class="el" href="d0/d1e/classsimp__control_1_1_simp_control.html#ae367fd3fc9d7e520ddef61606ac99ea0">simp_control.SimpControl</a>
 </li>
 <li>simplify
 : <a class="el" href="d6/d1c/classsymbolic__generation_1_1compressible__navier__stokes_1_1compressible__navier__stokes__symbo8d1e79fcf766b8f7273ae2ffa3718a5d.html#ade5c1095b9d53bae5f5a24492eeba1e5">symbolic_generation.compressible_navier_stokes.compressible_navier_stokes_symbolic_generator.CompressibleNavierStokesSymbolicGenerator</a>
@@ -1613,7 +1612,7 @@ $(function() {
 </li>
 <li>StressVector
 : <a class="el" href="d6/d86/struct_kratos_1_1_associative_plastic_damage_model_1_1_plastic_damage_parameters.html#a483016178cf55882f0d3d29e7276c87a">Kratos::AssociativePlasticDamageModel&lt; TYieldSurfaceType &gt;::PlasticDamageParameters</a>
-, <a class="el" href="de/d9f/struct_kratos_1_1_base_solid_element_1_1_constitutive_variables.html#a3537d70d97946ac148da9d9b66a5afbf">Kratos::BaseSolidElement::ConstitutiveVariables</a>
+, <a class="el" href="de/d9f/struct_kratos_1_1_base_solid_element_1_1_constitutive_variables.html#aa83a375d78201be3696abe6ce06fa611">Kratos::BaseSolidElement::ConstitutiveVariables</a>
 , <a class="el" href="d1/d89/struct_kratos_1_1_beam_element_1_1_element_data.html#a0eec3b10af050671eac31dab2ac21460">Kratos::BeamElement::ElementData</a>
 , <a class="el" href="de/d18/struct_kratos_1_1_contact_domain_condition_1_1_condition_variables.html#a8c9827ecf32fedd6fb1805aed14d3e06">Kratos::ContactDomainCondition::ConditionVariables</a>
 , <a class="el" href="d2/d47/struct_kratos_1_1_coupling_nitsche_condition_1_1_constitutive_variables.html#aba9bc058347836d14bef8363ef249994">Kratos::CouplingNitscheCondition::ConstitutiveVariables</a>
@@ -1831,7 +1830,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 3 2024 03:55:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat May 4 2024 03:48:50 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
