@@ -101,8 +101,8 @@ Collaboration diagram for Kratos::AxisymmetricStressState:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa35969b15b289bcfa2ce2abbc7dfbb32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#aa35969b15b289bcfa2ce2abbc7dfbb32">CalculateIntegrationCoefficient</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &gt;::<a class="el" href="../../db/d66/namespace_kratos.html#aff48dcf86c39e6b2df8d40e213feed9c">IntegrationPointType</a> &amp;rIntegrationPoint, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> DetJ, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &gt; &amp;rGeometry) const override</td></tr>
 <tr class="separator:aa35969b15b289bcfa2ce2abbc7dfbb32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac2557eb61527777c61c5874aeb99cabe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#ac2557eb61527777c61c5874aeb99cabe">CalculateBMatrix</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rGradNpT, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rNp, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &gt; &amp;rGeometry) const override</td></tr>
-<tr class="separator:ac2557eb61527777c61c5874aeb99cabe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a575f83e23b9ca66580132fc0edc19b89"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#a575f83e23b9ca66580132fc0edc19b89">CalculateBMatrix</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rDN_DX, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rN, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &gt; &amp;rGeometry) const override</td></tr>
+<tr class="separator:a575f83e23b9ca66580132fc0edc19b89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5a04544f6011e8b5139b18b63fb0ec8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#ad5a04544f6011e8b5139b18b63fb0ec8">CalculateGreenLagrangeStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rDeformationGradient) const override</td></tr>
 <tr class="separator:ad5a04544f6011e8b5139b18b63fb0ec8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12415bab8aa714bccd16068db828b81b"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">StressStatePolicy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#a12415bab8aa714bccd16068db828b81b">Clone</a> () const override</td></tr>
@@ -112,8 +112,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3af49e9ae1ebb0c84e0bfa1f27dcce83 inherit pub_methods_class_kratos_1_1_stress_state_policy"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac2557eb61527777c61c5874aeb99cabe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2557eb61527777c61c5874aeb99cabe">&#9670;&nbsp;</a></span>CalculateBMatrix()</h2>
+<a id="a575f83e23b9ca66580132fc0edc19b89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a575f83e23b9ca66580132fc0edc19b89">&#9670;&nbsp;</a></span>CalculateBMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -125,13 +125,13 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> Kratos::AxisymmetricStressState::CalculateBMatrix </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
-          <td class="paramname"><em>rGradNpT</em>, </td>
+          <td class="paramname"><em>rDN_DX</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>rNp</em>, </td>
+          <td class="paramname"><em>rN</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -152,7 +152,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#af69336d8e425ecbd15c012f0bdf04f44">Kratos::StressStatePolicy</a>.</p>
+<p>Implements <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a32280b74dceb12864485271ff39028cd">Kratos::StressStatePolicy</a>.</p>
 
 </div>
 </div>
@@ -262,7 +262,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 6 2024 03:27:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue May 7 2024 03:27:56 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
