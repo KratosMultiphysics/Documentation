@@ -254,6 +254,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3928a1dd71a0d1e4d154fc40f3998dc6"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d20/class_kratos_1_1_trilinos_space.html#a3928a1dd71a0d1e4d154fc40f3998dc6">IsDistributed</a> ()</td></tr>
 <tr class="memdesc:a3928a1dd71a0d1e4d154fc40f3998dc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns if we are in a distributed system.  <a href="../../d2/d20/class_kratos_1_1_trilinos_space.html#a3928a1dd71a0d1e4d154fc40f3998dc6">More...</a><br /></td></tr>
 <tr class="separator:a3928a1dd71a0d1e4d154fc40f3998dc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48ca7bc243f19ab6204246840825a713"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d20/class_kratos_1_1_trilinos_space.html#a48ca7bc243f19ab6204246840825a713">FastestDirectSolverList</a> ()</td></tr>
+<tr class="memdesc:a48ca7bc243f19ab6204246840825a713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of the fastest direct solvers.  <a href="../../d2/d20/class_kratos_1_1_trilinos_space.html#a48ca7bc243f19ab6204246840825a713">More...</a><br /></td></tr>
+<tr class="separator:a48ca7bc243f19ab6204246840825a713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0d96ff1ad735dc20b5917cd854f813b5"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d20/class_kratos_1_1_trilinos_space.html#a0d96ff1ad735dc20b5917cd854f813b5">GetValue</a> (const <a class="el" href="../../d2/d20/class_kratos_1_1_trilinos_space.html#a1a751ce38dec0a9f89bb7fce5ff1f1a2">VectorType</a> &amp;rX, const std::size_t I)</td></tr>
 <tr class="memdesc:a0d96ff1ad735dc20b5917cd854f813b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns a value from a given vector according to a given index.  <a href="../../d2/d20/class_kratos_1_1_trilinos_space.html#a0d96ff1ad735dc20b5917cd854f813b5">More...</a><br /></td></tr>
 <tr class="separator:a0d96ff1ad735dc20b5917cd854f813b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1395,6 +1398,36 @@ template&lt;class TMatrixType , class TVectorType &gt; </div>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a48ca7bc243f19ab6204246840825a713"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48ca7bc243f19ab6204246840825a713">&#9670;&nbsp;</a></span>FastestDirectSolverList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TMatrixType , class TVectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::vector&lt;std::string&gt; <a class="el" href="../../d2/d20/class_kratos_1_1_trilinos_space.html">Kratos::TrilinosSpace</a>&lt; TMatrixType, TVectorType &gt;::FastestDirectSolverList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a list of the fastest direct solvers. </p>
+<p>This function returns a vector of strings representing the names of the fastest direct solvers. The order of the solvers in the list may need to be updated and reordered depending on the size of the equation system. </p><dl class="section return"><dt>Returns</dt><dd>A vector of strings containing the names of the fastest direct solvers. </dd></dl>
 
 </div>
 </div>
@@ -3219,7 +3252,7 @@ template&lt;class VectorType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 7 2024 03:52:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed May 8 2024 03:29:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
