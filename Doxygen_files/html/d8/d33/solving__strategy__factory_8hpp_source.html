@@ -160,35 +160,43 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            result-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#aa85d6dbbe55cbd3354aaa96d351ef694">SetEchoLevel</a>(<a class="code" href="../../df/d58/namespacescript.html#a2201e2e84e85608e2a8986b959851d50">echo_level</a>);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span> result;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rSolverSettings[strategy_type].GetString() == <span class="stringliteral">&quot;line_search&quot;</span>) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keyword">const</span> std::vector&lt;std::string&gt; strategy_entries = {<span class="stringliteral">&quot;max_iteration&quot;</span>,</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                                               <span class="stringliteral">&quot;compute_reactions&quot;</span>,</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                                               <span class="stringliteral">&quot;max_line_search_iterations&quot;</span>,</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                                               <span class="stringliteral">&quot;first_alpha_value&quot;</span>,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                                               <span class="stringliteral">&quot;second_alpha_value&quot;</span>,</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                               <span class="stringliteral">&quot;min_alpha&quot;</span>,</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                                               <span class="stringliteral">&quot;max_alpha&quot;</span>,</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                                               <span class="stringliteral">&quot;line_search_tolerance&quot;</span>,</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                               <span class="stringliteral">&quot;move_mesh_flag&quot;</span>,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                                               <span class="stringliteral">&quot;reform_dofs_at_each_step&quot;</span>,</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                                                               <span class="stringliteral">&quot;echo_level&quot;</span>};</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <span class="keyword">auto</span> strategy_parameters = <a class="code" href="../../d1/d14/class_kratos_1_1_parameters_utilities.html#ac96bd06173b574cf9748b504b1bfa0df">ParametersUtilities::CopyOptionalParameters</a>(</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                rSolverSettings, strategy_entries);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="keyword">auto</span> result = <a class="code" href="../../db/d66/namespace_kratos.html#a427d97af1a4f77a1d49b4ee3a136df74">std::make_unique</a>&lt;<a class="code" href="../../de/d22/class_kratos_1_1_line_search_strategy.html">LineSearchStrategy</a>&lt;TSparseSpace,</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    TDenseSpace,</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    TLinearSolver&gt;&gt;(rModelPart,</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                    scheme,</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                    <a class="code" href="../../df/d58/namespacescript.html#ac0ae889341652d4b75618b7e875fdd1e">solver</a>,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                    criteria,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                    strategy_parameters);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;};</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keyword">const</span> std::vector&lt;std::string&gt; strategy_entries = {<span class="stringliteral">&quot;compute_reactions&quot;</span>,</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                                                               <span class="stringliteral">&quot;max_line_search_iterations&quot;</span>,</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                                               <span class="stringliteral">&quot;first_alpha_value&quot;</span>,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                                                               <span class="stringliteral">&quot;second_alpha_value&quot;</span>,</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                                                               <span class="stringliteral">&quot;min_alpha&quot;</span>,</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                                                               <span class="stringliteral">&quot;max_alpha&quot;</span>,</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                                                               <span class="stringliteral">&quot;line_search_tolerance&quot;</span>,</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                                               <span class="stringliteral">&quot;move_mesh_flag&quot;</span>,</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                                               <span class="stringliteral">&quot;reform_dofs_at_each_step&quot;</span>,</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                                                               <span class="stringliteral">&quot;echo_level&quot;</span>};</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keyword">auto</span> strategy_parameters = <a class="code" href="../../d1/d14/class_kratos_1_1_parameters_utilities.html#ac96bd06173b574cf9748b504b1bfa0df">ParametersUtilities::CopyOptionalParameters</a>(</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                rSolverSettings, strategy_entries);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            <span class="comment">// For residual-based Newton-Raphson strategies (and derived ones), the Kratos Core uses</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="comment">// the value of &quot;max_iteration&quot;. In the GeoMechanicsApplication, we use the value of</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="comment">// &quot;max_iterations&quot; (note the extra &#39;s&#39; at the end). This is inconsistent, and to</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="comment">// overcome it we use a similar approach as in our Python scripts:</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">if</span> (rSolverSettings.<a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html#abede40fdbf08acfde2cf996db8fcd248">Has</a>(<span class="stringliteral">&quot;max_iterations&quot;</span>)) {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                strategy_parameters.AddValue(<span class="stringliteral">&quot;max_iteration&quot;</span>, rSolverSettings[<span class="stringliteral">&quot;max_iterations&quot;</span>]);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keyword">auto</span> result = <a class="code" href="../../db/d66/namespace_kratos.html#a427d97af1a4f77a1d49b4ee3a136df74">std::make_unique</a>&lt;<a class="code" href="../../de/d22/class_kratos_1_1_line_search_strategy.html">LineSearchStrategy</a>&lt;TSparseSpace,</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    TDenseSpace,</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                    TLinearSolver&gt;&gt;(rModelPart,</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                    scheme,</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                                    <a class="code" href="../../df/d58/namespacescript.html#ac0ae889341652d4b75618b7e875fdd1e">solver</a>,</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                                    criteria,</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                                    strategy_parameters);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        }</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">nullptr</span>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;};</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;}</div>
 <div class="ttc" id="abuilder__and__solver__factory_8hpp_html"><div class="ttname"><a href="../../d2/dbe/builder__and__solver__factory_8hpp.html">builder_and_solver_factory.hpp</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_builder_and_solver_factory_html_a6053949881a90ca75969c0fa905b1673"><div class="ttname"><a href="../../d5/d9b/class_kratos_1_1_builder_and_solver_factory.html#a6053949881a90ca75969c0fa905b1673">Kratos::BuilderAndSolverFactory::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; BuilderAndSolverType &gt; Create(const Parameters &amp;rSolverSettings, typename TLinearSolver::Pointer pNewLinearSystemSolver)</div><div class="ttdef"><b>Definition:</b> builder_and_solver_factory.hpp:28</div></div>
 <div class="ttc" id="aclass_kratos_1_1_convergence_criteria_factory_html_a74da961b610c2895f30186cd6c896604"><div class="ttname"><a href="../../df/d15/class_kratos_1_1_convergence_criteria_factory.html#a74da961b610c2895f30186cd6c896604">Kratos::ConvergenceCriteriaFactory::Create</a></div><div class="ttdeci">static std::shared_ptr&lt; ConvergenceCriteriaType &gt; Create(const Parameters &amp;rSolverSettings)</div><div class="ttdef"><b>Definition:</b> convergence_criteria_factory.hpp:28</div></div>
@@ -222,7 +230,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed May 8 2024 01:54:40 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu May 9 2024 02:18:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
