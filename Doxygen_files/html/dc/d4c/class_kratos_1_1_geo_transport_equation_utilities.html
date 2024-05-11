@@ -87,7 +87,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::GeoTransportEquationUtilities:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/da6/class_kratos_1_1_geo_transport_equation_utilities__coll__graph.svg" width="244" height="206"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d0/da6/class_kratos_1_1_geo_transport_equation_utilities__coll__graph.svg" width="244" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -108,6 +108,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aefd4ab4ca76f2dabdf4db6bdf701406f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38254c751eaafd6c91eaaae1f271ea4a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a38254c751eaafd6c91eaaae1f271ea4a">CalculateCompressibilityMatrix</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rNp, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> BiotModulusInverse, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> IntegrationCoefficient)</td></tr>
 <tr class="separator:a38254c751eaafd6c91eaaae1f271ea4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e7cca3741f4c620f4afb3df5454bf24"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a1e7cca3741f4c620f4afb3df5454bf24">CalculateSoilDensity</a> (<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> DegreeOfSaturation, const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;rProp)</td></tr>
+<tr class="separator:a1e7cca3741f4c620f4afb3df5454bf24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51edfea309b9e34df4cd5e91a73f9b0c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a51edfea309b9e34df4cd5e91a73f9b0c">CalculateSoilDensities</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rDegreesSaturation, const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;rProp)</td></tr>
+<tr class="separator:a51edfea309b9e34df4cd5e91a73f9b0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d146415383b2374104b621e47bfa7a0"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a2d146415383b2374104b621e47bfa7a0">CalculateDegreesSaturation</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rPressureSolution, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rNContainer, const std::vector&lt; RetentionLaw::Pointer &gt; &amp;rRetentionLawVector, const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;rProp, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
+<tr class="separator:a2d146415383b2374104b621e47bfa7a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="aefd4ab4ca76f2dabdf4db6bdf701406f"></a>
@@ -318,6 +324,60 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
+<a id="a2d146415383b2374104b621e47bfa7a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d146415383b2374104b621e47bfa7a0">&#9670;&nbsp;</a></span>CalculateDegreesSaturation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> Kratos::GeoTransportEquationUtilities::CalculateDegreesSaturation </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rPressureSolution</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rNContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; RetentionLaw::Pointer &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rRetentionLawVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;&#160;</td>
+          <td class="paramname"><em>rProp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a57383e101e50eeede9db845593591104"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a57383e101e50eeede9db845593591104">&#9670;&nbsp;</a></span>CalculatePermeabilityMatrix() <span class="overload">[1/2]</span></h2>
 
@@ -440,13 +500,85 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
+<a id="a51edfea309b9e34df4cd5e91a73f9b0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51edfea309b9e34df4cd5e91a73f9b0c">&#9670;&nbsp;</a></span>CalculateSoilDensities()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> Kratos::GeoTransportEquationUtilities::CalculateSoilDensities </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDegreesSaturation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;&#160;</td>
+          <td class="paramname"><em>rProp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1e7cca3741f4c620f4afb3df5454bf24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e7cca3741f4c620f4afb3df5454bf24">&#9670;&nbsp;</a></span>CalculateSoilDensity()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::GeoTransportEquationUtilities::CalculateSoilDensity </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>DegreeOfSaturation</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;&#160;</td>
+          <td class="paramname"><em>rProp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_utilities/<a class="el" href="../../d5/dee/transport__equation__utilities_8hpp_source.html">transport_equation_utilities.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 10 2024 03:34:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat May 11 2024 03:30:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
