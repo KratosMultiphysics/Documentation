@@ -84,7 +84,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This utilitiy condenses given degrees of freedom from any element stiffness matrix to model e.g. hinges.  
+<p>This utility condenses given degrees of freedom from any element stiffness matrix to model e.g. hinges.  
  <a href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../df/d27/_geo_mechanics_application_2custom__utilities_2static__condensation__utility_8h_source.html">static_condensation_utility.h</a>&gt;</code></p>
@@ -97,73 +97,73 @@ Collaboration diagram for Kratos::GeoStaticCondensationUtility:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a517ea5befe13170494a6f8e2e5a0f5b9"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a></td></tr>
-<tr class="separator:a517ea5befe13170494a6f8e2e5a0f5b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acdc4826e225f2153a3661934b0a36274"><td class="memItemLeft" align="right" valign="top">typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#acdc4826e225f2153a3661934b0a36274">SizeType</a></td></tr>
-<tr class="separator:acdc4826e225f2153a3661934b0a36274"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a606cd76011d2d2ba90384c335d206816"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a></td></tr>
-<tr class="separator:a606cd76011d2d2ba90384c335d206816"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf36336052968e4f5c1b44920c022e9c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a></td></tr>
+<tr class="separator:adf36336052968e4f5c1b44920c022e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abcb2ff6dac299c06e15dda68f549f020"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abcb2ff6dac299c06e15dda68f549f020">SizeType</a> = std::size_t</td></tr>
+<tr class="separator:abcb2ff6dac299c06e15dda68f549f020"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af00322c13a1c1e4105ed9bcacd927a7e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a></td></tr>
+<tr class="separator:af00322c13a1c1e4105ed9bcacd927a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ab0fca9d7d3125d652df5a3d74ffaa3aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#ab0fca9d7d3125d652df5a3d74ffaa3aa">CondenseLeftHandSide</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;rTheElement, <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;rLeftHandSideMatrix, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rDofList)</td></tr>
+<tr class="memitem:ab0fca9d7d3125d652df5a3d74ffaa3aa"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#ab0fca9d7d3125d652df5a3d74ffaa3aa">CondenseLeftHandSide</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;rTheElement, <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;rLeftHandSideMatrix, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rDofList)</td></tr>
 <tr class="memdesc:ab0fca9d7d3125d652df5a3d74ffaa3aa"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is the main operation of this utility. It sorts the reference matrix w.r.t. the given dofs and condenses the reference matrix by using the following inputs:  <a href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#ab0fca9d7d3125d652df5a3d74ffaa3aa">More...</a><br /></td></tr>
 <tr class="separator:ab0fca9d7d3125d652df5a3d74ffaa3aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f70851c5a89850dc21be4f1aacdbf4b"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a9f70851c5a89850dc21be4f1aacdbf4b">CalculateSchurComplements</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;rTheElement, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;rLeftHandSideMatrix, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rDofList)</td></tr>
+<tr class="memitem:a9f70851c5a89850dc21be4f1aacdbf4b"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a9f70851c5a89850dc21be4f1aacdbf4b">CalculateSchurComplements</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;rTheElement, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;rLeftHandSideMatrix, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rDofList)</td></tr>
 <tr class="memdesc:a9f70851c5a89850dc21be4f1aacdbf4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the 4 schur-complements linking the dofs to be condensed to the dofs to remain by using the following inputs:  <a href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a9f70851c5a89850dc21be4f1aacdbf4b">More...</a><br /></td></tr>
 <tr class="separator:a9f70851c5a89850dc21be4f1aacdbf4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aebcc1c9e1c7a0b5223f16ca1fae4a54c"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#aebcc1c9e1c7a0b5223f16ca1fae4a54c">CreateRemainingDofList</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;rTheElement, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rDofList)</td></tr>
+<tr class="memitem:aebcc1c9e1c7a0b5223f16ca1fae4a54c"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#aebcc1c9e1c7a0b5223f16ca1fae4a54c">CreateRemainingDofList</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;rTheElement, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rDofList)</td></tr>
 <tr class="memdesc:aebcc1c9e1c7a0b5223f16ca1fae4a54c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function creates a list containing all dofs to remain by using the following inputs:  <a href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#aebcc1c9e1c7a0b5223f16ca1fae4a54c">More...</a><br /></td></tr>
 <tr class="separator:aebcc1c9e1c7a0b5223f16ca1fae4a54c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abca2cdb01ccf4f268fd5b09e25031462"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abca2cdb01ccf4f268fd5b09e25031462">FillSchurComplements</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;Submatrix, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;rLeftHandSideMatrix, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rVecA, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rVecB, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#acdc4826e225f2153a3661934b0a36274">SizeType</a> &amp;rSizeA, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#acdc4826e225f2153a3661934b0a36274">SizeType</a> &amp;rSizeB)</td></tr>
+<tr class="memitem:abca2cdb01ccf4f268fd5b09e25031462"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abca2cdb01ccf4f268fd5b09e25031462">FillSchurComplements</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;Submatrix, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;rLeftHandSideMatrix, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rVecA, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rVecB, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abcb2ff6dac299c06e15dda68f549f020">SizeType</a> &amp;rSizeA, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abcb2ff6dac299c06e15dda68f549f020">SizeType</a> &amp;rSizeB)</td></tr>
 <tr class="memdesc:abca2cdb01ccf4f268fd5b09e25031462"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function creates the single schur-complements, called by CalculateSchurComplements, by using the following inputs:  <a href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abca2cdb01ccf4f268fd5b09e25031462">More...</a><br /></td></tr>
 <tr class="separator:abca2cdb01ccf4f268fd5b09e25031462"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8555d3dff4e9e6ec4a9bb5cb0595963d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a8555d3dff4e9e6ec4a9bb5cb0595963d">ConvertingCondensation</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;rTheElement, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rLocalizedDofVector, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rValues, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rDofList, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;rLeftHandSideMatrix)</td></tr>
+<tr class="memitem:a8555d3dff4e9e6ec4a9bb5cb0595963d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a8555d3dff4e9e6ec4a9bb5cb0595963d">ConvertingCondensation</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;rTheElement, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rLocalizedDofVector, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rValues, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rDofList, const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;rLeftHandSideMatrix)</td></tr>
 <tr class="memdesc:a8555d3dff4e9e6ec4a9bb5cb0595963d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function re-calculates the condensed degree of freedom in relation to the remaining dofs by using the following inputs:  <a href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a8555d3dff4e9e6ec4a9bb5cb0595963d">More...</a><br /></td></tr>
 <tr class="separator:a8555d3dff4e9e6ec4a9bb5cb0595963d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b48a1cc239d308e30ad66d817185e1b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#acdc4826e225f2153a3661934b0a36274">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a5b48a1cc239d308e30ad66d817185e1b">GetNumDofsElement</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;rTheElement)</td></tr>
+<tr class="memitem:a5b48a1cc239d308e30ad66d817185e1b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abcb2ff6dac299c06e15dda68f549f020">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a5b48a1cc239d308e30ad66d817185e1b">GetNumDofsElement</a> (<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;rTheElement)</td></tr>
 <tr class="memdesc:a5b48a1cc239d308e30ad66d817185e1b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the number of dofs of the respective element by using the following input:  <a href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a5b48a1cc239d308e30ad66d817185e1b">More...</a><br /></td></tr>
 <tr class="separator:a5b48a1cc239d308e30ad66d817185e1b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This utilitiy condenses given degrees of freedom from any element stiffness matrix to model e.g. hinges. </p>
+<div class="textblock"><p>This utility condenses given degrees of freedom from any element stiffness matrix to model e.g. hinges. </p>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a517ea5befe13170494a6f8e2e5a0f5b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a517ea5befe13170494a6f8e2e5a0f5b9">&#9670;&nbsp;</a></span>ElementType</h2>
+<a id="adf36336052968e4f5c1b44920c022e9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf36336052968e4f5c1b44920c022e9c">&#9670;&nbsp;</a></span>ElementType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">Kratos::GeoStaticCondensationUtility::ElementType</a></td>
+          <td class="memname">using <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">Kratos::GeoStaticCondensationUtility::ElementType</a> =  <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a606cd76011d2d2ba90384c335d206816"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a606cd76011d2d2ba90384c335d206816">&#9670;&nbsp;</a></span>MatrixType</h2>
+<a id="af00322c13a1c1e4105ed9bcacd927a7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af00322c13a1c1e4105ed9bcacd927a7e">&#9670;&nbsp;</a></span>MatrixType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">Kratos::GeoStaticCondensationUtility::MatrixType</a></td>
+          <td class="memname">using <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">Kratos::GeoStaticCondensationUtility::MatrixType</a> =  <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="acdc4826e225f2153a3661934b0a36274"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acdc4826e225f2153a3661934b0a36274">&#9670;&nbsp;</a></span>SizeType</h2>
+<a id="abcb2ff6dac299c06e15dda68f549f020"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abcb2ff6dac299c06e15dda68f549f020">&#9670;&nbsp;</a></span>SizeType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef std::size_t <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#acdc4826e225f2153a3661934b0a36274">Kratos::GeoStaticCondensationUtility::SizeType</a></td>
+          <td class="memname">using <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abcb2ff6dac299c06e15dda68f549f020">Kratos::GeoStaticCondensationUtility::SizeType</a> =  std::size_t</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -181,15 +181,15 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::vector&lt;<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a>&gt; Kratos::GeoStaticCondensationUtility::CalculateSchurComplements </td>
+          <td class="memname">static std::vector&lt;<a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a>&gt; Kratos::GeoStaticCondensationUtility::CalculateSchurComplements </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;&#160;</td>
           <td class="paramname"><em>rTheElement</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;&#160;</td>
           <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
         </tr>
         <tr>
@@ -235,13 +235,13 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static void Kratos::GeoStaticCondensationUtility::CondenseLeftHandSide </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;&#160;</td>
           <td class="paramname"><em>rTheElement</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;&#160;</td>
           <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
         </tr>
         <tr>
@@ -287,7 +287,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static void Kratos::GeoStaticCondensationUtility::ConvertingCondensation </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;&#160;</td>
           <td class="paramname"><em>rTheElement</em>, </td>
         </tr>
         <tr>
@@ -311,7 +311,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;&#160;</td>
           <td class="paramname"><em>rLeftHandSideMatrix</em>&#160;</td>
         </tr>
         <tr>
@@ -350,7 +350,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static std::vector&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&gt; Kratos::GeoStaticCondensationUtility::CreateRemainingDofList </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;&#160;</td>
           <td class="paramname"><em>rTheElement</em>, </td>
         </tr>
         <tr>
@@ -395,13 +395,13 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">static void Kratos::GeoStaticCondensationUtility::FillSchurComplements </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;&#160;</td>
           <td class="paramname"><em>Submatrix</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a606cd76011d2d2ba90384c335d206816">MatrixType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#af00322c13a1c1e4105ed9bcacd927a7e">MatrixType</a> &amp;&#160;</td>
           <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
         </tr>
         <tr>
@@ -419,13 +419,13 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#acdc4826e225f2153a3661934b0a36274">SizeType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abcb2ff6dac299c06e15dda68f549f020">SizeType</a> &amp;&#160;</td>
           <td class="paramname"><em>rSizeA</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#acdc4826e225f2153a3661934b0a36274">SizeType</a> &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abcb2ff6dac299c06e15dda68f549f020">SizeType</a> &amp;&#160;</td>
           <td class="paramname"><em>rSizeB</em>&#160;</td>
         </tr>
         <tr>
@@ -466,9 +466,9 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#acdc4826e225f2153a3661934b0a36274">SizeType</a> Kratos::GeoStaticCondensationUtility::GetNumDofsElement </td>
+          <td class="memname">static <a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#abcb2ff6dac299c06e15dda68f549f020">SizeType</a> Kratos::GeoStaticCondensationUtility::GetNumDofsElement </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#a517ea5befe13170494a6f8e2e5a0f5b9">ElementType</a> &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="../../dd/ddb/class_kratos_1_1_geo_static_condensation_utility.html#adf36336052968e4f5c1b44920c022e9c">ElementType</a> &amp;&#160;</td>
           <td class="paramname"><em>rTheElement</em></td><td>)</td>
           <td></td>
         </tr>
@@ -496,7 +496,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 13 2024 03:34:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue May 14 2024 03:31:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
