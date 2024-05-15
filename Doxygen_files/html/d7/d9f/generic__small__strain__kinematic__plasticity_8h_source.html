@@ -289,39 +289,41 @@ $(function() {
 <div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160; </div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160; </div>
 <div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordtype">void</span> CalculateTangentTensor(<a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues);</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160; </div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160; </div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;    <span class="comment">// Serialization</span></div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;    <span class="keywordtype">void</span> CalculateTangentTensor(</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        <a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues,</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rPlasticStrain);</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
 <div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160; </div>
-<div class="line"><a name="l00449"></a><span class="lineno"><a class="line" href="../../d9/dfc/class_kratos_1_1_generic_small_strain_kinematic_plasticity.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  449</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;    <span class="comment">// Serialization</span></div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160; </div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a> &amp;rSerializer)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a>)</div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;PlasticDissipation&quot;</span>, mPlasticDissipation);</div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;Threshold&quot;</span>, mThreshold);</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;PlasticStrain&quot;</span>, mPlasticStrain);</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;PreviousStressVector&quot;</span>, mPreviousStressVector);</div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;BackStressVector&quot;</span>, mBackStressVector);</div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    }</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160; </div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a> &amp;rSerializer)<span class="keyword"> override</span></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a>)</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;PlasticDissipation&quot;</span>, mPlasticDissipation);</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;Threshold&quot;</span>, mThreshold);</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;PlasticStrain&quot;</span>, mPlasticStrain);</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;PreviousStressVector&quot;</span>, mPreviousStressVector);</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;BackStressVector&quot;</span>, mBackStressVector);</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;    }</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno"><a class="line" href="../../d9/dfc/class_kratos_1_1_generic_small_strain_kinematic_plasticity.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  451</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a> &amp;rSerializer)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a>)</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;PlasticDissipation&quot;</span>, mPlasticDissipation);</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;Threshold&quot;</span>, mThreshold);</div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;PlasticStrain&quot;</span>, mPlasticStrain);</div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;PreviousStressVector&quot;</span>, mPreviousStressVector);</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;BackStressVector&quot;</span>, mBackStressVector);</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;    }</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a> &amp;rSerializer)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a>)</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;PlasticDissipation&quot;</span>, mPlasticDissipation);</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;Threshold&quot;</span>, mThreshold);</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;PlasticStrain&quot;</span>, mPlasticStrain);</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;PreviousStressVector&quot;</span>, mPreviousStressVector);</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;BackStressVector&quot;</span>, mBackStressVector);</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    }</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;}; <span class="comment">// Class GenericYieldSurface</span></div>
 <div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160; </div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;}; <span class="comment">// Class GenericYieldSurface</span></div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160; </div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;} <span class="comment">// namespace Kratos</span></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html">Kratos::ConstitutiveLaw</a></div><div class="ttdef"><b>Definition:</b> constitutive_law.h:47</div></div>
 <div class="ttc" id="aclass_kratos_1_1_generic_small_strain_kinematic_plasticity_html"><div class="ttname"><a href="../../d9/dfc/class_kratos_1_1_generic_small_strain_kinematic_plasticity.html">Kratos::GenericSmallStrainKinematicPlasticity</a></div><div class="ttdoc">This class is the base class which define all the constitutive laws for kinematic plasticity in small...</div><div class="ttdef"><b>Definition:</b> generic_small_strain_kinematic_plasticity.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1_generic_small_strain_kinematic_plasticity_html_a0c2fa0ec1f8d1282babb6c1b84b36c79"><div class="ttname"><a href="../../d9/dfc/class_kratos_1_1_generic_small_strain_kinematic_plasticity.html#a0c2fa0ec1f8d1282babb6c1b84b36c79">Kratos::GenericSmallStrainKinematicPlasticity::GeometryType</a></div><div class="ttdeci">Geometry&lt; NodeType &gt; GeometryType</div><div class="ttdoc">The geometry definition.</div><div class="ttdef"><b>Definition:</b> generic_small_strain_kinematic_plasticity.h:87</div></div>
@@ -370,7 +372,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 14 2024 02:06:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed May 15 2024 02:10:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

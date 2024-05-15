@@ -147,56 +147,48 @@ $(function() {
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        )</div>
 <div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    {</div>
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, VoigtSize&gt;</a> first_vector, second_vector, third_vector;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <a class="code" href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#a280c09cab7e3fc4e2c446455d2e6c996">AdvancedConstitutiveLawUtilities&lt;VoigtSize&gt;::CalculateFirstVector</a>(first_vector);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <a class="code" href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#a15d60eefc280e32568b363bde99fc5c8">AdvancedConstitutiveLawUtilities&lt;VoigtSize&gt;::CalculateSecondVector</a>(rDeviator, <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3456607dee707db6e8a705d66c14a0a8">J2</a>, second_vector);</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#a65ce1b9b82d0d71f80cad64d51f9366a">AdvancedConstitutiveLawUtilities&lt;VoigtSize&gt;::CalculateThirdVector</a>(rDeviator, <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3456607dee707db6e8a705d66c14a0a8">J2</a>, third_vector);</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> c1 = 0.0;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> c2 = std::sqrt(3.0);</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> c3 = 0.0;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(rGFlux) = c1 * first_vector + c2 * second_vector + c3 * third_vector;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a8fbd3e8c9b3da2efa77ed5f46e94b1a1">  135</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a8fbd3e8c9b3da2efa77ed5f46e94b1a1">Check</a>(<span class="keyword">const</span> <a class="code" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a>&amp; rMaterialProperties)</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    {</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    }</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        <a class="code" href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#a15d60eefc280e32568b363bde99fc5c8">AdvancedConstitutiveLawUtilities&lt;VoigtSize&gt;::CalculateSecondVector</a>(rDeviator, <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3456607dee707db6e8a705d66c14a0a8">J2</a>, second_vector);</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> c2 = std::sqrt(3.0);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(rGFlux) = c2 * second_vector;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno"><a class="line" href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a8fbd3e8c9b3da2efa77ed5f46e94b1a1">  129</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a8fbd3e8c9b3da2efa77ed5f46e94b1a1">Check</a>(<span class="keyword">const</span> <a class="code" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a>&amp; rMaterialProperties)</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;<span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;}; <span class="comment">// Class GenericYieldSurface</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;}; <span class="comment">// Class GenericYieldSurface</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="aclass_kratos_1_1_advanced_constitutive_law_utilities_html_a15d60eefc280e32568b363bde99fc5c8"><div class="ttname"><a href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#a15d60eefc280e32568b363bde99fc5c8">Kratos::AdvancedConstitutiveLawUtilities::CalculateSecondVector</a></div><div class="ttdeci">static void CalculateSecondVector(const BoundedVectorType &amp;rDeviator, const double J2, BoundedVectorType &amp;rSecondVector)</div><div class="ttdoc">This method computes the first vector to be used in the derivative of the yield surface.</div><div class="ttdef"><b>Definition:</b> advanced_constitutive_law_utilities.cpp:100</div></div>
-<div class="ttc" id="aclass_kratos_1_1_advanced_constitutive_law_utilities_html_a280c09cab7e3fc4e2c446455d2e6c996"><div class="ttname"><a href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#a280c09cab7e3fc4e2c446455d2e6c996">Kratos::AdvancedConstitutiveLawUtilities::CalculateFirstVector</a></div><div class="ttdeci">static void CalculateFirstVector(BoundedVectorType &amp;rFirstVector)</div><div class="ttdoc">This method computes the first vector to be used in the derivative of the yield surface.</div><div class="ttdef"><b>Definition:</b> advanced_constitutive_law_utilities.cpp:80</div></div>
-<div class="ttc" id="aclass_kratos_1_1_advanced_constitutive_law_utilities_html_a65ce1b9b82d0d71f80cad64d51f9366a"><div class="ttname"><a href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#a65ce1b9b82d0d71f80cad64d51f9366a">Kratos::AdvancedConstitutiveLawUtilities::CalculateThirdVector</a></div><div class="ttdeci">static void CalculateThirdVector(const BoundedVectorType &amp;rDeviator, const double J2, BoundedVectorType &amp;rThirdVector)</div><div class="ttdoc">This method computes the third vector to be used in the derivative of the yield surface.</div><div class="ttdef"><b>Definition:</b> advanced_constitutive_law_utilities.cpp:131</div></div>
 <div class="ttc" id="aclass_kratos_1_1_properties_html"><div class="ttname"><a href="../../d7/d7a/class_kratos_1_1_properties.html">Kratos::Properties</a></div><div class="ttdoc">Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...</div><div class="ttdef"><b>Definition:</b> properties.h:69</div></div>
 <div class="ttc" id="aclass_kratos_1_1_von_mises_plastic_potential_html"><div class="ttname"><a href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html">Kratos::VonMisesPlasticPotential</a></div><div class="ttdoc">This class defines a plastic potential following the theory of Von Mises.</div><div class="ttdef"><b>Definition:</b> von_mises_plastic_potential.h:54</div></div>
 <div class="ttc" id="aclass_kratos_1_1_von_mises_plastic_potential_html_a00b5a0e09bed8763bc553a19276dc593"><div class="ttname"><a href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a00b5a0e09bed8763bc553a19276dc593">Kratos::VonMisesPlasticPotential::VonMisesPlasticPotential</a></div><div class="ttdeci">VonMisesPlasticPotential()</div><div class="ttdoc">Initialization constructor.</div><div class="ttdef"><b>Definition:</b> von_mises_plastic_potential.h:73</div></div>
@@ -205,7 +197,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_von_mises_plastic_potential_html_a3be6a4f526cbcebf41d25287f11fb764"><div class="ttname"><a href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a3be6a4f526cbcebf41d25287f11fb764">Kratos::VonMisesPlasticPotential::VonMisesPlasticPotential</a></div><div class="ttdeci">VonMisesPlasticPotential(VonMisesPlasticPotential const &amp;rOther)</div><div class="ttdoc">Copy constructor.</div><div class="ttdef"><b>Definition:</b> von_mises_plastic_potential.h:78</div></div>
 <div class="ttc" id="aclass_kratos_1_1_von_mises_plastic_potential_html_a42c0e7bb6579a0eba531791e6ab1a9e5"><div class="ttname"><a href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a42c0e7bb6579a0eba531791e6ab1a9e5">Kratos::VonMisesPlasticPotential::VoigtSize</a></div><div class="ttdeci">static constexpr SizeType VoigtSize</div><div class="ttdoc">The define the Voigt size.</div><div class="ttdef"><b>Definition:</b> von_mises_plastic_potential.h:63</div></div>
 <div class="ttc" id="aclass_kratos_1_1_von_mises_plastic_potential_html_a50070bda2170838ca84e6a29c072fb03"><div class="ttname"><a href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a50070bda2170838ca84e6a29c072fb03">Kratos::VonMisesPlasticPotential::operator=</a></div><div class="ttdeci">VonMisesPlasticPotential &amp; operator=(VonMisesPlasticPotential const &amp;rOther)</div><div class="ttdoc">Assignment operator.</div><div class="ttdef"><b>Definition:</b> von_mises_plastic_potential.h:83</div></div>
-<div class="ttc" id="aclass_kratos_1_1_von_mises_plastic_potential_html_a8fbd3e8c9b3da2efa77ed5f46e94b1a1"><div class="ttname"><a href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a8fbd3e8c9b3da2efa77ed5f46e94b1a1">Kratos::VonMisesPlasticPotential::Check</a></div><div class="ttdeci">static int Check(const Properties &amp;rMaterialProperties)</div><div class="ttdoc">This method defines the check to be performed in the plastic potential.</div><div class="ttdef"><b>Definition:</b> von_mises_plastic_potential.h:135</div></div>
+<div class="ttc" id="aclass_kratos_1_1_von_mises_plastic_potential_html_a8fbd3e8c9b3da2efa77ed5f46e94b1a1"><div class="ttname"><a href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#a8fbd3e8c9b3da2efa77ed5f46e94b1a1">Kratos::VonMisesPlasticPotential::Check</a></div><div class="ttdeci">static int Check(const Properties &amp;rMaterialProperties)</div><div class="ttdoc">This method defines the check to be performed in the plastic potential.</div><div class="ttdef"><b>Definition:</b> von_mises_plastic_potential.h:129</div></div>
 <div class="ttc" id="aclass_kratos_1_1_von_mises_plastic_potential_html_ad862566916804893f92b9f0ef7d39001"><div class="ttname"><a href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#ad862566916804893f92b9f0ef7d39001">Kratos::VonMisesPlasticPotential::CalculatePlasticPotentialDerivative</a></div><div class="ttdeci">static void CalculatePlasticPotentialDerivative(const array_1d&lt; double, VoigtSize &gt; &amp;rPredictiveStressVector, const array_1d&lt; double, VoigtSize &gt; &amp;rDeviator, const double J2, array_1d&lt; double, VoigtSize &gt; &amp;rGFlux, ConstitutiveLaw::Parameters &amp;rValues)</div><div class="ttdoc">This script calculates the derivatives of the plastic potential according to NAYAK-ZIENKIEWICZ paper ...</div><div class="ttdef"><b>Definition:</b> von_mises_plastic_potential.h:110</div></div>
 <div class="ttc" id="aclass_kratos_1_1_von_mises_plastic_potential_html_af8efc08154b2836ba8c7066d01be55c9"><div class="ttname"><a href="../../da/d94/class_kratos_1_1_von_mises_plastic_potential.html#af8efc08154b2836ba8c7066d01be55c9">Kratos::VonMisesPlasticPotential::Dimension</a></div><div class="ttdeci">static constexpr SizeType Dimension</div><div class="ttdoc">We define the dimension.</div><div class="ttdef"><b>Definition:</b> von_mises_plastic_potential.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1array__1d_html"><div class="ttname"><a href="../../d4/ddc/class_kratos_1_1array__1d.html">Kratos::array_1d&lt; double, VoigtSize &gt;</a></div></div>
@@ -218,7 +210,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 14 2024 02:06:46 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed May 15 2024 02:10:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

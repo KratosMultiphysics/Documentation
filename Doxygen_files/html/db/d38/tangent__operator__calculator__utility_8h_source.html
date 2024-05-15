@@ -423,311 +423,335 @@ $(function() {
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a9cda3bc56bbb9a54614439387a7ea026">CalculateTangentTensorSmallDeformationNotProvidedStrain</a>(rValues, pConstitutiveLaw, rStressMeasure, ConsiderPertubationThreshold, ApproximationOrder);</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    }</div>
 <div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160; </div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160; </div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160; </div>
+<div class="line"><a name="l00412"></a><span class="lineno"><a class="line" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a2315f3724aca577d83379aa18bbca4dc">  412</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a2315f3724aca577d83379aa18bbca4dc">CalculateSecantTensor</a>(<a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a>&amp; rValues)</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    {</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;r_strain = rValues.<a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html#a5db123e9f0d0da55d514ff25193afa88">GetStrainVector</a>();</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;r_stress = rValues.<a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html#aa652f4c4671197e0f68468bfdd971899">GetStressVector</a>();</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> <a class="code" href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#aacc6438db45da46ee1878c90493fcca0">strain_size</a> = r_strain.size();</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keyword">auto</span> &amp;r_D = rValues.<a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html#a97687222367bfc63de47be7d4899d705">GetConstitutiveMatrix</a>();</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#aacc6438db45da46ee1878c90493fcca0">strain_size</a>; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> &lt; <a class="code" href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#aacc6438db45da46ee1878c90493fcca0">strain_size</a>; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>++)</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                r_D(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>) = r_stress[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>] / r_strain[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>];</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    }</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
-<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160; </div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160; </div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CalculatePerturbation(</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rStrainVector,</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a> Component,</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;        <span class="keywordtype">double</span>&amp; rPerturbation</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;        )</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;    {</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keywordtype">double</span> perturbation_1, perturbation_2;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;        <span class="keywordflow">if</span> (std::abs(rStrainVector[Component]) &gt; <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a9d479886614593be486e870f4d62998b">tolerance</a>) {</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            perturbation_1 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac05e680bcc1569142f46cc80aece4ffd">PerturbationCoefficient1</a> * rStrainVector[Component];</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            <span class="keywordtype">double</span> min_strain_component;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            GetMinAbsValue(rStrainVector, min_strain_component);</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            perturbation_1 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac05e680bcc1569142f46cc80aece4ffd">PerturbationCoefficient1</a> * min_strain_component;</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        }</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        <span class="keywordtype">double</span> max_strain_component;</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        GetMaxAbsValue(rStrainVector, max_strain_component);</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        perturbation_2 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a8e54dc01599c05f4935a8893a87793d6">PerturbationCoefficient2</a> * max_strain_component;</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        rPerturbation = <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::max</a>(perturbation_1, perturbation_2);</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;    }</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160; </div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CalculatePerturbationFiniteDeformation(</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rDeformationGradient,</div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentI,</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentJ,</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;        <span class="keywordtype">double</span>&amp; rPerturbation</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;        )</div>
-<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;    {</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        <span class="keywordtype">double</span> perturbation_1, perturbation_2;</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        <span class="keywordflow">if</span> (std::abs(rDeformationGradient(ComponentI, ComponentJ)) &gt; <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a9d479886614593be486e870f4d62998b">tolerance</a>) {</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;            perturbation_1 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac05e680bcc1569142f46cc80aece4ffd">PerturbationCoefficient1</a> * rDeformationGradient(ComponentI, ComponentJ);</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;            <span class="keywordtype">double</span> min_strain_component;</div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;            GetMinAbsValue(rDeformationGradient, min_strain_component);</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;            perturbation_1 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac05e680bcc1569142f46cc80aece4ffd">PerturbationCoefficient1</a> * min_strain_component;</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        }</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;        <span class="keywordtype">double</span> max_strain_component;</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;        GetMaxAbsValue(rDeformationGradient, max_strain_component);</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;        perturbation_2 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a8e54dc01599c05f4935a8893a87793d6">PerturbationCoefficient2</a> * max_strain_component;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        rPerturbation = <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::max</a>(perturbation_1, perturbation_2);</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;    }</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160; </div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> PerturbateStrainVector(</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rPerturbedStrainVector,</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rStrainVectorGP,</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Perturbation,</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> Component</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        )</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;    {</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(rPerturbedStrainVector) = rStrainVectorGP;</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        rPerturbedStrainVector[Component] += Perturbation;</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    }</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160; </div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> PerturbateDeformationGradient(</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rPerturbedDeformationGradient,</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rDeformationGradientGP,</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Perturbation,</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentI,</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentJ</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        )</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;    {</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> aux_perturbation_matrix = <a class="code" href="../../db/d66/namespace_kratos.html#a0dd2d083f48d867f5e0271bdf91b036e">IdentityMatrix</a>(rDeformationGradientGP.size1());</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <span class="keywordflow">if</span> (ComponentI == ComponentJ) {</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;            aux_perturbation_matrix(ComponentI, ComponentJ) += Perturbation;</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;            aux_perturbation_matrix(ComponentI, ComponentJ) += 0.5 * Perturbation;</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;            aux_perturbation_matrix(ComponentJ, ComponentI) += 0.5 * Perturbation;</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        }</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(rPerturbedDeformationGradient) = <a class="code" href="../../db/d66/namespace_kratos.html#a63ea2d1c3abad6c974480d8ca9eb7bba">prod</a>(aux_perturbation_matrix, rDeformationGradientGP);</div>
-<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;    }</div>
-<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160; </div>
-<div class="line"><a name="l00557"></a><span class="lineno">  557</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> IntegratePerturbedStrain(</div>
-<div class="line"><a name="l00558"></a><span class="lineno">  558</span>&#160;        ConstitutiveLaw::Parameters&amp; rValues,</div>
-<div class="line"><a name="l00559"></a><span class="lineno">  559</span>&#160;        ConstitutiveLaw* pConstitutiveLaw,</div>
-<div class="line"><a name="l00560"></a><span class="lineno">  560</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6">ConstitutiveLaw::StressMeasure</a>&amp; rStressMeasure = <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6a8be355c5ac52ce3507ab17e0fcdadf04">ConstitutiveLaw::StressMeasure_Cauchy</a></div>
-<div class="line"><a name="l00561"></a><span class="lineno">  561</span>&#160;        )</div>
-<div class="line"><a name="l00562"></a><span class="lineno">  562</span>&#160;    {</div>
-<div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160;        Flags&amp; cl_options = rValues.GetOptions();</div>
-<div class="line"><a name="l00564"></a><span class="lineno">  564</span>&#160; </div>
-<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;        <span class="comment">// In order to avoid recursivity...</span></div>
-<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> flag_back_up_1 = cl_options.Is(ConstitutiveLaw::COMPUTE_CONSTITUTIVE_TENSOR);</div>
-<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> flag_back_up_2 = cl_options.Is(ConstitutiveLaw::COMPUTE_STRESS);</div>
-<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160; </div>
-<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        cl_options.Set(ConstitutiveLaw::COMPUTE_CONSTITUTIVE_TENSOR, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        cl_options.Set(ConstitutiveLaw::COMPUTE_STRESS, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160; </div>
-<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;        pConstitutiveLaw-&gt;CalculateMaterialResponse(rValues, rStressMeasure);</div>
-<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160; </div>
-<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        cl_options.Set(ConstitutiveLaw::COMPUTE_CONSTITUTIVE_TENSOR, flag_back_up_1);</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;        cl_options.Set(ConstitutiveLaw::COMPUTE_STRESS, flag_back_up_2);</div>
-<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;    }</div>
-<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160; </div>
-<div class="line"><a name="l00583"></a><span class="lineno">  583</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetMaxAbsValue(</div>
-<div class="line"><a name="l00584"></a><span class="lineno">  584</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rArrayValues,</div>
-<div class="line"><a name="l00585"></a><span class="lineno">  585</span>&#160;        <span class="keywordtype">double</span>&amp; rMaxValue</div>
-<div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;        )</div>
-<div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;    {</div>
-<div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">dimension</a> = rArrayValues.size();</div>
-<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160; </div>
-<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        <span class="keywordtype">double</span> aux = 0.0;</div>
-<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">dimension</a>; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
-<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;            <span class="keywordflow">if</span> (std::abs(rArrayValues[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]) &gt; aux) {</div>
-<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                aux = std::abs(rArrayValues[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]);</div>
-<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;            }</div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        }</div>
+<div class="line"><a name="l00428"></a><span class="lineno"><a class="line" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aa23d97aacebfb0dfd5b10a701a4b9140">  428</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aa23d97aacebfb0dfd5b10a701a4b9140">CalculateOrthogonalSecantTensor</a>(<a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a>&amp; rValues)</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;    {</div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;r_strain = rValues.<a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html#a5db123e9f0d0da55d514ff25193afa88">GetStrainVector</a>();</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> &amp;r_stress = rValues.<a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html#aa652f4c4671197e0f68468bfdd971899">GetStressVector</a>();</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> <a class="code" href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#aacc6438db45da46ee1878c90493fcca0">strain_size</a> = r_strain.size();</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;        <span class="keyword">auto</span> &amp;r_D = rValues.<a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html#a97687222367bfc63de47be7d4899d705">GetConstitutiveMatrix</a>();</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#aacc6438db45da46ee1878c90493fcca0">strain_size</a>; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> &lt; <a class="code" href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#aacc6438db45da46ee1878c90493fcca0">strain_size</a>; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>++)</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;                r_D(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>) = -r_strain[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>] / r_stress[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>];</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;    }</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160; </div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160; </div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160; </div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160; </div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160; </div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160; </div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160; </div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160; </div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160; </div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160; </div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160; </div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CalculatePerturbation(</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; rStrainVector,</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a> Component,</div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;        <span class="keywordtype">double</span>&amp; rPerturbation</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;        )</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;    {</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;        <span class="keywordtype">double</span> perturbation_1, perturbation_2;</div>
+<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;        <span class="keywordflow">if</span> (std::abs(rStrainVector[Component]) &gt; <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a9d479886614593be486e870f4d62998b">tolerance</a>) {</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;            perturbation_1 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac05e680bcc1569142f46cc80aece4ffd">PerturbationCoefficient1</a> * rStrainVector[Component];</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;            <span class="keywordtype">double</span> min_strain_component;</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;            GetMinAbsValue(rStrainVector, min_strain_component);</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;            perturbation_1 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac05e680bcc1569142f46cc80aece4ffd">PerturbationCoefficient1</a> * min_strain_component;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;        }</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="keywordtype">double</span> max_strain_component;</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        GetMaxAbsValue(rStrainVector, max_strain_component);</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        perturbation_2 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a8e54dc01599c05f4935a8893a87793d6">PerturbationCoefficient2</a> * max_strain_component;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        rPerturbation = <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::max</a>(perturbation_1, perturbation_2);</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;    }</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CalculatePerturbationFiniteDeformation(</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rDeformationGradient,</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentI,</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentJ,</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        <span class="keywordtype">double</span>&amp; rPerturbation</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;        )</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;    {</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;        <span class="keywordtype">double</span> perturbation_1, perturbation_2;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;        <span class="keywordflow">if</span> (std::abs(rDeformationGradient(ComponentI, ComponentJ)) &gt; <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a9d479886614593be486e870f4d62998b">tolerance</a>) {</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;            perturbation_1 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac05e680bcc1569142f46cc80aece4ffd">PerturbationCoefficient1</a> * rDeformationGradient(ComponentI, ComponentJ);</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;            <span class="keywordtype">double</span> min_strain_component;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;            GetMinAbsValue(rDeformationGradient, min_strain_component);</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;            perturbation_1 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac05e680bcc1569142f46cc80aece4ffd">PerturbationCoefficient1</a> * min_strain_component;</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;        }</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;        <span class="keywordtype">double</span> max_strain_component;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;        GetMaxAbsValue(rDeformationGradient, max_strain_component);</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;        perturbation_2 = <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a8e54dc01599c05f4935a8893a87793d6">PerturbationCoefficient2</a> * max_strain_component;</div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;        rPerturbation = <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::max</a>(perturbation_1, perturbation_2);</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;    }</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160; </div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> PerturbateStrainVector(</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rPerturbedStrainVector,</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rStrainVectorGP,</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Perturbation,</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> Component</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;        )</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;    {</div>
+<div class="line"><a name="l00553"></a><span class="lineno">  553</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(rPerturbedStrainVector) = rStrainVectorGP;</div>
+<div class="line"><a name="l00554"></a><span class="lineno">  554</span>&#160;        rPerturbedStrainVector[Component] += Perturbation;</div>
+<div class="line"><a name="l00555"></a><span class="lineno">  555</span>&#160;    }</div>
+<div class="line"><a name="l00556"></a><span class="lineno">  556</span>&#160; </div>
+<div class="line"><a name="l00565"></a><span class="lineno">  565</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> PerturbateDeformationGradient(</div>
+<div class="line"><a name="l00566"></a><span class="lineno">  566</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rPerturbedDeformationGradient,</div>
+<div class="line"><a name="l00567"></a><span class="lineno">  567</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rDeformationGradientGP,</div>
+<div class="line"><a name="l00568"></a><span class="lineno">  568</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Perturbation,</div>
+<div class="line"><a name="l00569"></a><span class="lineno">  569</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentI,</div>
+<div class="line"><a name="l00570"></a><span class="lineno">  570</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentJ</div>
+<div class="line"><a name="l00571"></a><span class="lineno">  571</span>&#160;        )</div>
+<div class="line"><a name="l00572"></a><span class="lineno">  572</span>&#160;    {</div>
+<div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> aux_perturbation_matrix = <a class="code" href="../../db/d66/namespace_kratos.html#a0dd2d083f48d867f5e0271bdf91b036e">IdentityMatrix</a>(rDeformationGradientGP.size1());</div>
+<div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        <span class="keywordflow">if</span> (ComponentI == ComponentJ) {</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;            aux_perturbation_matrix(ComponentI, ComponentJ) += Perturbation;</div>
+<div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;            aux_perturbation_matrix(ComponentI, ComponentJ) += 0.5 * Perturbation;</div>
+<div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;            aux_perturbation_matrix(ComponentJ, ComponentI) += 0.5 * Perturbation;</div>
+<div class="line"><a name="l00579"></a><span class="lineno">  579</span>&#160;        }</div>
+<div class="line"><a name="l00580"></a><span class="lineno">  580</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(rPerturbedDeformationGradient) = <a class="code" href="../../db/d66/namespace_kratos.html#a63ea2d1c3abad6c974480d8ca9eb7bba">prod</a>(aux_perturbation_matrix, rDeformationGradientGP);</div>
+<div class="line"><a name="l00581"></a><span class="lineno">  581</span>&#160;    }</div>
+<div class="line"><a name="l00582"></a><span class="lineno">  582</span>&#160; </div>
+<div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> IntegratePerturbedStrain(</div>
+<div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;        ConstitutiveLaw::Parameters&amp; rValues,</div>
+<div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;        ConstitutiveLaw* pConstitutiveLaw,</div>
+<div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6">ConstitutiveLaw::StressMeasure</a>&amp; rStressMeasure = <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6a8be355c5ac52ce3507ab17e0fcdadf04">ConstitutiveLaw::StressMeasure_Cauchy</a></div>
+<div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;        )</div>
+<div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160;    {</div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;        Flags&amp; cl_options = rValues.GetOptions();</div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160; </div>
-<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        rMaxValue = aux;</div>
-<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;    }</div>
-<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160; </div>
-<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetMaxAbsValue(</div>
-<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rMatrixValues,</div>
-<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        <span class="keywordtype">double</span>&amp; rMaxValue</div>
-<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;        )</div>
-<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;    {</div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        <span class="comment">// Sizes of the matrix</span></div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> size1 = rMatrixValues.size1();</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> size2 = rMatrixValues.size2();</div>
-<div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
-<div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        <span class="comment">// The deformation gradient is an identity matrix for zero deformation</span></div>
-<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> working_matrix = rMatrixValues - <a class="code" href="../../db/d66/namespace_kratos.html#a0dd2d083f48d867f5e0271bdf91b036e">IdentityMatrix</a>(size1);</div>
-<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160; </div>
-<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        <span class="keywordtype">double</span> aux = 0.0;</div>
-<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; size1; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
-<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> &lt; size2; ++<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>) {</div>
-<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;                <span class="keywordflow">if</span> (std::abs(working_matrix(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>)) &gt; aux) {</div>
-<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160;                    aux = std::abs(working_matrix(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>));</div>
-<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;                }</div>
-<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;            }</div>
-<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;        }</div>
-<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160; </div>
-<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;        rMaxValue = aux;</div>
-<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;    }</div>
+<div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160;        <span class="comment">// In order to avoid recursivity...</span></div>
+<div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> flag_back_up_1 = cl_options.Is(ConstitutiveLaw::COMPUTE_CONSTITUTIVE_TENSOR);</div>
+<div class="line"><a name="l00599"></a><span class="lineno">  599</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> flag_back_up_2 = cl_options.Is(ConstitutiveLaw::COMPUTE_STRESS);</div>
+<div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160; </div>
+<div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;        cl_options.Set(ConstitutiveLaw::COMPUTE_CONSTITUTIVE_TENSOR, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;        cl_options.Set(ConstitutiveLaw::COMPUTE_STRESS, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160; </div>
+<div class="line"><a name="l00604"></a><span class="lineno">  604</span>&#160;        pConstitutiveLaw-&gt;CalculateMaterialResponse(rValues, rStressMeasure);</div>
+<div class="line"><a name="l00605"></a><span class="lineno">  605</span>&#160; </div>
+<div class="line"><a name="l00606"></a><span class="lineno">  606</span>&#160;        cl_options.Set(ConstitutiveLaw::COMPUTE_CONSTITUTIVE_TENSOR, flag_back_up_1);</div>
+<div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        cl_options.Set(ConstitutiveLaw::COMPUTE_STRESS, flag_back_up_2);</div>
+<div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160;    }</div>
+<div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160; </div>
+<div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetMaxAbsValue(</div>
+<div class="line"><a name="l00616"></a><span class="lineno">  616</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rArrayValues,</div>
+<div class="line"><a name="l00617"></a><span class="lineno">  617</span>&#160;        <span class="keywordtype">double</span>&amp; rMaxValue</div>
+<div class="line"><a name="l00618"></a><span class="lineno">  618</span>&#160;        )</div>
+<div class="line"><a name="l00619"></a><span class="lineno">  619</span>&#160;    {</div>
+<div class="line"><a name="l00620"></a><span class="lineno">  620</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">dimension</a> = rArrayValues.size();</div>
+<div class="line"><a name="l00621"></a><span class="lineno">  621</span>&#160; </div>
+<div class="line"><a name="l00622"></a><span class="lineno">  622</span>&#160;        <span class="keywordtype">double</span> aux = 0.0;</div>
+<div class="line"><a name="l00623"></a><span class="lineno">  623</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">dimension</a>; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
+<div class="line"><a name="l00624"></a><span class="lineno">  624</span>&#160;            <span class="keywordflow">if</span> (std::abs(rArrayValues[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]) &gt; aux) {</div>
+<div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;                aux = std::abs(rArrayValues[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]);</div>
+<div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;            }</div>
+<div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160;        }</div>
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160; </div>
-<div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetMinAbsValue(</div>
-<div class="line"><a name="l00635"></a><span class="lineno">  635</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rArrayValues,</div>
-<div class="line"><a name="l00636"></a><span class="lineno">  636</span>&#160;        <span class="keywordtype">double</span>&amp; rMinValue</div>
-<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;        )</div>
-<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;    {</div>
-<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">dimension</a> = rArrayValues.size();</div>
-<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160; </div>
-<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;        <span class="keywordtype">double</span> aux = <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::numeric_limits&lt;double&gt;::max</a>();</div>
-<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">dimension</a>; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
-<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;            <span class="keywordflow">if</span> (std::abs(rArrayValues[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]) &lt; aux) {</div>
-<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;                aux = std::abs(rArrayValues[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]);</div>
-<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;            }</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        }</div>
-<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160; </div>
-<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;        rMinValue = aux;</div>
-<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;    }</div>
-<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160; </div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetMinAbsValue(</div>
-<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rMatrixValues,</div>
-<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        <span class="keywordtype">double</span>&amp; rMinValue</div>
-<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        )</div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;    {</div>
-<div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;       <span class="comment">// Sizes of the matrix</span></div>
-<div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> size1 = rMatrixValues.size1();</div>
-<div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> size2 = rMatrixValues.size2();</div>
-<div class="line"><a name="l00664"></a><span class="lineno">  664</span>&#160; </div>
-<div class="line"><a name="l00665"></a><span class="lineno">  665</span>&#160;        <span class="comment">// The deformation gradient is an identity matrix for zero deformation</span></div>
-<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> working_matrix = rMatrixValues - <a class="code" href="../../db/d66/namespace_kratos.html#a0dd2d083f48d867f5e0271bdf91b036e">IdentityMatrix</a>(size1);</div>
-<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160; </div>
-<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;        <span class="keywordtype">double</span> aux = <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::numeric_limits&lt;double&gt;::max</a>();</div>
-<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; size1; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
-<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> &lt; size2; ++<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>) {</div>
-<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;                <span class="keywordflow">if</span> (std::abs(working_matrix(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>)) &lt; aux) {</div>
-<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;                    aux = std::abs(working_matrix(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>));</div>
-<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                }</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;            }</div>
-<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        }</div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160; </div>
-<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;        rMinValue = aux;</div>
-<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;    }</div>
+<div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        rMaxValue = aux;</div>
+<div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;    }</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160; </div>
+<div class="line"><a name="l00637"></a><span class="lineno">  637</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetMaxAbsValue(</div>
+<div class="line"><a name="l00638"></a><span class="lineno">  638</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rMatrixValues,</div>
+<div class="line"><a name="l00639"></a><span class="lineno">  639</span>&#160;        <span class="keywordtype">double</span>&amp; rMaxValue</div>
+<div class="line"><a name="l00640"></a><span class="lineno">  640</span>&#160;        )</div>
+<div class="line"><a name="l00641"></a><span class="lineno">  641</span>&#160;    {</div>
+<div class="line"><a name="l00642"></a><span class="lineno">  642</span>&#160;        <span class="comment">// Sizes of the matrix</span></div>
+<div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> size1 = rMatrixValues.size1();</div>
+<div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> size2 = rMatrixValues.size2();</div>
+<div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160; </div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;        <span class="comment">// The deformation gradient is an identity matrix for zero deformation</span></div>
+<div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> working_matrix = rMatrixValues - <a class="code" href="../../db/d66/namespace_kratos.html#a0dd2d083f48d867f5e0271bdf91b036e">IdentityMatrix</a>(size1);</div>
+<div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160; </div>
+<div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160;        <span class="keywordtype">double</span> aux = 0.0;</div>
+<div class="line"><a name="l00650"></a><span class="lineno">  650</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; size1; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
+<div class="line"><a name="l00651"></a><span class="lineno">  651</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> &lt; size2; ++<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>) {</div>
+<div class="line"><a name="l00652"></a><span class="lineno">  652</span>&#160;                <span class="keywordflow">if</span> (std::abs(working_matrix(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>)) &gt; aux) {</div>
+<div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;                    aux = std::abs(working_matrix(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>));</div>
+<div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;                }</div>
+<div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;            }</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        }</div>
+<div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160; </div>
+<div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        rMaxValue = aux;</div>
+<div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;    }</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160; </div>
+<div class="line"><a name="l00666"></a><span class="lineno">  666</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetMinAbsValue(</div>
+<div class="line"><a name="l00667"></a><span class="lineno">  667</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rArrayValues,</div>
+<div class="line"><a name="l00668"></a><span class="lineno">  668</span>&#160;        <span class="keywordtype">double</span>&amp; rMinValue</div>
+<div class="line"><a name="l00669"></a><span class="lineno">  669</span>&#160;        )</div>
+<div class="line"><a name="l00670"></a><span class="lineno">  670</span>&#160;    {</div>
+<div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">dimension</a> = rArrayValues.size();</div>
+<div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160; </div>
+<div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;        <span class="keywordtype">double</span> aux = <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::numeric_limits&lt;double&gt;::max</a>();</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">dimension</a>; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
+<div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;            <span class="keywordflow">if</span> (std::abs(rArrayValues[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]) &lt; aux) {</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;                aux = std::abs(rArrayValues[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]);</div>
+<div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;            }</div>
+<div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;        }</div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160; </div>
-<div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CalculateComponentsToTangentTensorFirstOrder(</div>
-<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rTangentTensor,</div>
-<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rVectorStrain,</div>
-<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rDeltaStress,</div>
-<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> Component</div>
-<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;        )</div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;    {</div>
-<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> perturbation = rVectorStrain[Component];</div>
-<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> voigt_size = rDeltaStress.size();</div>
-<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a> = 0; <a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a> &lt; voigt_size; ++<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>) {</div>
-<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;            rTangentTensor(<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>, Component) = rDeltaStress[<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>] / perturbation;</div>
-<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        }</div>
-<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160;    }</div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160; </div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CalculateComponentsToTangentTensorSecondOrder(</div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rTangentTensor,</div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rVectorStrainPlus,</div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rVectorStrainMinus,</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rStressPlus,</div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rStressMinus,</div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> Component</div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;        )</div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    {</div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> perturbation = (rVectorStrainPlus[Component] - rVectorStrainMinus[Component]);</div>
-<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> voigt_size = rStressPlus.size();</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a> = 0; <a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a> &lt; voigt_size; ++<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>) {</div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;            rTangentTensor(<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>, Component) = (rStressPlus[<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>] - rStressMinus[<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>]) / perturbation;</div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        }</div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;    }</div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160; </div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> CalculateVoigtIndex(</div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> VoigtSize,</div>
-<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentI,</div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentJ</div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;        )</div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;    {</div>
-<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;        <span class="keywordflow">if</span> (VoigtSize == 6) {</div>
-<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;            <span class="keywordflow">switch</span>(ComponentI) {</div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;                <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;                            <span class="keywordflow">return</span> 3;</div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;                        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;                            <span class="keywordflow">return</span> 5;</div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;                        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;                    }</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;                            <span class="keywordflow">return</span> 3;</div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;                            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;                        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;                            <span class="keywordflow">return</span> 4;</div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;                        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;                    }</div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;                <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;                            <span class="keywordflow">return</span> 5;</div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;                            <span class="keywordflow">return</span> 4;</div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;                        <span class="keywordflow">case</span> 2:</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;                            <span class="keywordflow">return</span> 2;</div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;                        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;                    }</div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;            }</div>
-<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;            <span class="keywordflow">switch</span>(ComponentI) {</div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160;        rMinValue = aux;</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;    }</div>
+<div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160; </div>
+<div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> GetMinAbsValue(</div>
+<div class="line"><a name="l00689"></a><span class="lineno">  689</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rMatrixValues,</div>
+<div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;        <span class="keywordtype">double</span>&amp; rMinValue</div>
+<div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        )</div>
+<div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160;    {</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;       <span class="comment">// Sizes of the matrix</span></div>
+<div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> size1 = rMatrixValues.size1();</div>
+<div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> size2 = rMatrixValues.size2();</div>
+<div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160; </div>
+<div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;        <span class="comment">// The deformation gradient is an identity matrix for zero deformation</span></div>
+<div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> working_matrix = rMatrixValues - <a class="code" href="../../db/d66/namespace_kratos.html#a0dd2d083f48d867f5e0271bdf91b036e">IdentityMatrix</a>(size1);</div>
+<div class="line"><a name="l00699"></a><span class="lineno">  699</span>&#160; </div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;        <span class="keywordtype">double</span> aux = <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::numeric_limits&lt;double&gt;::max</a>();</div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; size1; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a> &lt; size2; ++<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>) {</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;                <span class="keywordflow">if</span> (std::abs(working_matrix(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>)) &lt; aux) {</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;                    aux = std::abs(working_matrix(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>, <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>));</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;                }</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;            }</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;        }</div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160; </div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;        rMinValue = aux;</div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    }</div>
+<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160; </div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CalculateComponentsToTangentTensorFirstOrder(</div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rTangentTensor,</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rVectorStrain,</div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rDeltaStress,</div>
+<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> Component</div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        )</div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;    {</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> perturbation = rVectorStrain[Component];</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> voigt_size = rDeltaStress.size();</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a> = 0; <a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a> &lt; voigt_size; ++<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>) {</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;            rTangentTensor(<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>, Component) = rDeltaStress[<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>] / perturbation;</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;        }</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;    }</div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160; </div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CalculateComponentsToTangentTensorSecondOrder(</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; rTangentTensor,</div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rVectorStrainPlus,</div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rVectorStrainMinus,</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rStressPlus,</div>
+<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rStressMinus,</div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> Component</div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        )</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;    {</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> perturbation = (rVectorStrainPlus[Component] - rVectorStrainMinus[Component]);</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> voigt_size = rStressPlus.size();</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> <a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a> = 0; <a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a> &lt; voigt_size; ++<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>) {</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;            rTangentTensor(<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>, Component) = (rStressPlus[<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>] - rStressMinus[<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>]) / perturbation;</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;        }</div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;    }</div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160; </div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> CalculateVoigtIndex(</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aedae1ab6c8397cbed5d34528a0678af0">SizeType</a> VoigtSize,</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentI,</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">IndexType</a> ComponentJ</div>
+<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;        )</div>
+<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;    {</div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;        <span class="keywordflow">if</span> (VoigtSize == 6) {</div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;            <span class="keywordflow">switch</span>(ComponentI) {</div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;                            <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;                        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;                            <span class="keywordflow">return</span> 5;</div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;                        <span class="keywordflow">default</span>:</div>
 <div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                            <span class="keywordflow">return</span> 2;</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                    }</div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;                <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;                            <span class="keywordflow">return</span> 2;</div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
-<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;                            <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;                        <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;                    }</div>
-<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;            }</div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;        }</div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;    }</div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160; </div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160; </div>
-<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160; </div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160; </div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160; </div>
-<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160; </div>
-<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160; </div>
-<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160; </div>
-<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160; </div>
-<div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160; </div>
-<div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160; </div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160; </div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160; </div>
-<div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160; </div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160; </div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160;    <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac9199ea51676da32c223e1a0e657f852">TangentOperatorCalculatorUtility</a> &amp;operator=(<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac9199ea51676da32c223e1a0e657f852">TangentOperatorCalculatorUtility</a> <span class="keyword">const</span> &amp;rOther);</div>
-<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160;};</div>
-<div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;                    }</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;                            <span class="keywordflow">return</span> 3;</div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;                            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;                        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;                            <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;                        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160;                    }</div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;                <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;                            <span class="keywordflow">return</span> 5;</div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;                            <span class="keywordflow">return</span> 4;</div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;                        <span class="keywordflow">case</span> 2:</div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;                            <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;                        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;                    }</div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00806"></a><span class="lineno">  806</span>&#160;                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;            }</div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160;            <span class="keywordflow">switch</span>(ComponentI) {</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;                <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
+<div class="line"><a name="l00812"></a><span class="lineno">  812</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;                            <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;                        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;                    }</div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;                <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;                    <span class="keywordflow">switch</span>(ComponentJ) {</div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;                        <span class="keywordflow">case</span> 0:</div>
+<div class="line"><a name="l00822"></a><span class="lineno">  822</span>&#160;                            <span class="keywordflow">return</span> 2;</div>
+<div class="line"><a name="l00823"></a><span class="lineno">  823</span>&#160;                        <span class="keywordflow">case</span> 1:</div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160;                            <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00825"></a><span class="lineno">  825</span>&#160;                        <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00826"></a><span class="lineno">  826</span>&#160;                            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160;                    }</div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;                    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;            }</div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160;        }</div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;    }</div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160; </div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160; </div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160; </div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160; </div>
+<div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160; </div>
+<div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160; </div>
+<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160; </div>
+<div class="line"><a name="l00861"></a><span class="lineno">  861</span>&#160; </div>
+<div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160; </div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160; </div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160; </div>
+<div class="line"><a name="l00878"></a><span class="lineno">  878</span>&#160; </div>
+<div class="line"><a name="l00882"></a><span class="lineno">  882</span>&#160; </div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160; </div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160; </div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;    <a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac9199ea51676da32c223e1a0e657f852">TangentOperatorCalculatorUtility</a> &amp;operator=(<a class="code" href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac9199ea51676da32c223e1a0e657f852">TangentOperatorCalculatorUtility</a> <span class="keyword">const</span> &amp;rOther);</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160;};</div>
+<div class="line"><a name="l00894"></a><span class="lineno">  894</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html">Kratos::ConstitutiveLaw</a></div><div class="ttdef"><b>Definition:</b> constitutive_law.h:47</div></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html_a4aa7ede3775eade83e2fae640f6ebcb6"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6">Kratos::ConstitutiveLaw::StressMeasure</a></div><div class="ttdeci">StressMeasure</div><div class="ttdef"><b>Definition:</b> constitutive_law.h:69</div></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html_a4aa7ede3775eade83e2fae640f6ebcb6a8be355c5ac52ce3507ab17e0fcdadf04"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6a8be355c5ac52ce3507ab17e0fcdadf04">Kratos::ConstitutiveLaw::StressMeasure_Cauchy</a></div><div class="ttdeci">@ StressMeasure_Cauchy</div><div class="ttdef"><b>Definition:</b> constitutive_law.h:73</div></div>
@@ -739,11 +763,13 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html">Kratos::TangentOperatorCalculatorUtility</a></div><div class="ttdoc">An algorithm that derives numerically the constitutive tangent tensor at one GP.</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:57</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_a04caec28d6738325432af3993ce276b1"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a04caec28d6738325432af3993ce276b1">Kratos::TangentOperatorCalculatorUtility::CalculateTangentTensorFiniteDeformation</a></div><div class="ttdeci">static void CalculateTangentTensorFiniteDeformation(ConstitutiveLaw::Parameters &amp;rValues, ConstitutiveLaw *pConstitutiveLaw, const ConstitutiveLaw::StressMeasure &amp;rStressMeasure=ConstitutiveLaw::StressMeasure_PK2, const bool ConsiderPertubationThreshold=true, const IndexType ApproximationOrder=2)</div><div class="ttdoc">Main method that computes the tangent tensor (for finite deformation problems)</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:397</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_a0700b59b2090a0e00850dc7adf70e642"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a0700b59b2090a0e00850dc7adf70e642">Kratos::TangentOperatorCalculatorUtility::CalculateTangentTensorSmallDeformationProvidedStrain</a></div><div class="ttdeci">static void CalculateTangentTensorSmallDeformationProvidedStrain(ConstitutiveLaw::Parameters &amp;rValues, ConstitutiveLaw *pConstitutiveLaw, const ConstitutiveLaw::StressMeasure &amp;rStressMeasure=ConstitutiveLaw::StressMeasure_Cauchy, const bool ConsiderPertubationThreshold=true, const IndexType ApproximationOrder=2)</div><div class="ttdoc">Main method that computes the tangent tensor (provided strain)</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:132</div></div>
+<div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_a2315f3724aca577d83379aa18bbca4dc"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a2315f3724aca577d83379aa18bbca4dc">Kratos::TangentOperatorCalculatorUtility::CalculateSecantTensor</a></div><div class="ttdeci">static void CalculateSecantTensor(ConstitutiveLaw::Parameters &amp;rValues)</div><div class="ttdoc">This method computes the secant tensor as dS/dE with respect to the origin.</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:412</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_a67672d8ec0a74abe76e51255b0da9ca7"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a67672d8ec0a74abe76e51255b0da9ca7">Kratos::TangentOperatorCalculatorUtility::CalculateTangentTensor</a></div><div class="ttdeci">static void CalculateTangentTensor(ConstitutiveLaw::Parameters &amp;rValues, ConstitutiveLaw *pConstitutiveLaw, const ConstitutiveLaw::StressMeasure &amp;rStressMeasure=ConstitutiveLaw::StressMeasure_Cauchy, const bool ConsiderPertubationThreshold=true, const IndexType ApproximationOrder=2)</div><div class="ttdoc">Main method that computes the tangent tensor.</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:107</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_a6f080b6053431e81f64bd1cc86ae556a"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a6f080b6053431e81f64bd1cc86ae556a">Kratos::TangentOperatorCalculatorUtility::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdoc">Definition of index type.</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:69</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_a8e54dc01599c05f4935a8893a87793d6"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a8e54dc01599c05f4935a8893a87793d6">Kratos::TangentOperatorCalculatorUtility::PerturbationCoefficient2</a></div><div class="ttdeci">static constexpr double PerturbationCoefficient2</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:76</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_a9cda3bc56bbb9a54614439387a7ea026"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a9cda3bc56bbb9a54614439387a7ea026">Kratos::TangentOperatorCalculatorUtility::CalculateTangentTensorSmallDeformationNotProvidedStrain</a></div><div class="ttdeci">static void CalculateTangentTensorSmallDeformationNotProvidedStrain(ConstitutiveLaw::Parameters &amp;rValues, ConstitutiveLaw *pConstitutiveLaw, const ConstitutiveLaw::StressMeasure &amp;rStressMeasure=ConstitutiveLaw::StressMeasure_Cauchy, const bool ConsiderPertubationThreshold=true, const IndexType ApproximationOrder=2)</div><div class="ttdoc">Main method that computes the tangent tensor (not provided strain)</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:272</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_a9d479886614593be486e870f4d62998b"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#a9d479886614593be486e870f4d62998b">Kratos::TangentOperatorCalculatorUtility::tolerance</a></div><div class="ttdeci">static constexpr double tolerance</div><div class="ttdoc">Definition of the zero tolerance.</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:72</div></div>
+<div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_aa23d97aacebfb0dfd5b10a701a4b9140"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#aa23d97aacebfb0dfd5b10a701a4b9140">Kratos::TangentOperatorCalculatorUtility::CalculateOrthogonalSecantTensor</a></div><div class="ttdeci">static void CalculateOrthogonalSecantTensor(ConstitutiveLaw::Parameters &amp;rValues)</div><div class="ttdoc">This method computes the secant tensor as dS/dE with respect to the origin.</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:428</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_ab4d11653f71391fd2c6ebd9567b777f2"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ab4d11653f71391fd2c6ebd9567b777f2">Kratos::TangentOperatorCalculatorUtility::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(TangentOperatorCalculatorUtility)</div><div class="ttdoc">Pointer definition of TangentOperatorCalculatorUtility.</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_ac05e680bcc1569142f46cc80aece4ffd"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac05e680bcc1569142f46cc80aece4ffd">Kratos::TangentOperatorCalculatorUtility::PerturbationCoefficient1</a></div><div class="ttdeci">static constexpr double PerturbationCoefficient1</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:75</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tangent_operator_calculator_utility_html_ac9199ea51676da32c223e1a0e657f852"><div class="ttname"><a href="../../d5/d4b/class_kratos_1_1_tangent_operator_calculator_utility.html#ac9199ea51676da32c223e1a0e657f852">Kratos::TangentOperatorCalculatorUtility::TangentOperatorCalculatorUtility</a></div><div class="ttdeci">TangentOperatorCalculatorUtility()</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> tangent_operator_calculator_utility.h:86</div></div>
@@ -765,6 +791,7 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_html_ab15e733333d61f7c78e9c1ba2d5a8626"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">Kratos::row</a></div><div class="ttdeci">AMatrix::MatrixRow&lt; const TExpressionType &gt; row(AMatrix::MatrixExpression&lt; TExpressionType, TCategory &gt; const &amp;TheExpression, std::size_t RowIndex)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:649</div></div>
 <div class="ttc" id="anamespace_kratos_html_abe689ad156630b755bfd4a6b92ded2c0"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#abe689ad156630b755bfd4a6b92ded2c0">Kratos::trans</a></div><div class="ttdeci">AMatrix::TransposeMatrix&lt; const T &gt; trans(const T &amp;TheMatrix)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:486</div></div>
 <div class="ttc" id="anamespace_kratos_html_ac77084a57869cbecf89d3ee2c819c5d3"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">Kratos::double</a></div><div class="ttdeci">TABLE_NUMBER_ANGULAR_VELOCITY TABLE_NUMBER_MOMENT I33 BEAM_INERTIA_ROT_UNIT_LENGHT_Y KRATOS_DEFINE_APPLICATION_VARIABLE(DEM_APPLICATION, double, BEAM_INERTIA_ROT_UNIT_LENGHT_Z) typedef std double</div><div class="ttdef"><b>Definition:</b> DEM_application_variables.h:182</div></div>
+<div class="ttc" id="anamespacegenerate__hyper__elastic__simo__taylor__neo__hookean_html_aacc6438db45da46ee1878c90493fcca0"><div class="ttname"><a href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#aacc6438db45da46ee1878c90493fcca0">generate_hyper_elastic_simo_taylor_neo_hookean.strain_size</a></div><div class="ttdeci">int strain_size</div><div class="ttdef"><b>Definition:</b> generate_hyper_elastic_simo_taylor_neo_hookean.py:16</div></div>
 <div class="ttc" id="anamespaceisotropic__damage__automatic__differentiation_html_a3d30b20e72b60cc184b00182233472ba"><div class="ttname"><a href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">isotropic_damage_automatic_differentiation.dimension</a></div><div class="ttdeci">int dimension</div><div class="ttdef"><b>Definition:</b> isotropic_damage_automatic_differentiation.py:123</div></div>
 <div class="ttc" id="anamespacequadrature_html_aae897447319c4634b1dcef7634fe5876"><div class="ttname"><a href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">quadrature.j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> quadrature.py:648</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
@@ -780,7 +807,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 14 2024 02:06:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed May 15 2024 02:10:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
