@@ -759,12 +759,13 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:abfb5c7c35c23be58534d57ab4b557f17"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf0faa3fbce421850a17a14bee42e637"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#acf0faa3fbce421850a17a14bee42e637">InitializeProperties</a> (<a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables)</td></tr>
 <tr class="separator:acf0faa3fbce421850a17a14bee42e637"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0a588a968bea6073e8f53c1ed1d481a3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a0a588a968bea6073e8f53c1ed1d481a3">CalculateFluidPressure</a> (const <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables) const</td></tr>
-<tr class="separator:a0a588a968bea6073e8f53c1ed1d481a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5031d35e834f3896307a9df26a024e99"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a5031d35e834f3896307a9df26a024e99">CalculateFluidFluxes</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rPermeabilityUpdateFactors, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
 <tr class="separator:a5031d35e834f3896307a9df26a024e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12caa02d5ec4c6ead11267bb24c8cc84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a12caa02d5ec4c6ead11267bb24c8cc84">CalculateRetentionResponse</a> (<a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables, <a class="el" href="../../d4/de9/class_kratos_1_1_retention_law_1_1_parameters.html">RetentionLaw::Parameters</a> &amp;rRetentionParameters, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> GPoint)</td></tr>
 <tr class="separator:a12caa02d5ec4c6ead11267bb24c8cc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbd458a752f71a9562a0293ed9f4dbfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#acbd458a752f71a9562a0293ed9f4dbfc">CalculateAnyOfMaterialResponse</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;rDeformationGradients, <a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rConstitutiveParameters, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rNuContainer, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">GeometryType::ShapeFunctionsGradientsType</a> &amp;rDNu_DXContainer, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rStrainVectors, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rStressVectors, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;rConstitutiveMatrices)</td></tr>
+<tr class="memdesc:acbd458a752f71a9562a0293ed9f4dbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the constitutive matrices, stresses and strains depending on the constitutive parameters. Note that depending on the settings in the rConstitutiveParameters the function could calculate the stress, the constitutive matrix, the strains, or a combination. In our elements we generally always calculate the constitutive matrix and sometimes the stress.  <a href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#acbd458a752f71a9562a0293ed9f4dbfc">More...</a><br /></td></tr>
+<tr class="separator:acbd458a752f71a9562a0293ed9f4dbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afa6f32ba3a884cbafbc9738a9250d2af"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#afa6f32ba3a884cbafbc9738a9250d2af">CalculateExtrapolationMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes, TNumNodes &gt; &amp;rExtrapolationMatrix)</td></tr>
 <tr class="separator:afa6f32ba3a884cbafbc9738a9250d2af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8770e53835d4cd452b3dbcd3d2eebd3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#af8770e53835d4cd452b3dbcd3d2eebd3">ResetHydraulicDischarge</a> ()</td></tr>
@@ -1826,6 +1827,76 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
+<a id="acbd458a752f71a9562a0293ed9f4dbfc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbd458a752f71a9562a0293ed9f4dbfc">&#9670;&nbsp;</a></span>CalculateAnyOfMaterialResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html">Kratos::UPwSmallStrainElement</a>&lt; TDim, TNumNodes &gt;::CalculateAnyOfMaterialResponse </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rDeformationGradients</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>rConstitutiveParameters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rNuContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">GeometryType::ShapeFunctionsGradientsType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDNu_DXContainer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rStrainVectors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rStressVectors</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rConstitutiveMatrices</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function calculates the constitutive matrices, stresses and strains depending on the constitutive parameters. Note that depending on the settings in the rConstitutiveParameters the function could calculate the stress, the constitutive matrix, the strains, or a combination. In our elements we generally always calculate the constitutive matrix and sometimes the stress. </p>
+
+</div>
+</div>
 <a id="ab91af0b063d5da9df1dee28d72ce8d4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab91af0b063d5da9df1dee28d72ce8d4c">&#9670;&nbsp;</a></span>CalculateBiotCoefficient()</h2>
 
@@ -2305,34 +2376,6 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
           <td></td>
           <td>)</td>
           <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a0a588a968bea6073e8f53c1ed1d481a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0a588a968bea6073e8f53c1ed1d481a3">&#9670;&nbsp;</a></span>CalculateFluidPressure()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html">Kratos::UPwSmallStrainElement</a>&lt; TDim, TNumNodes &gt;::CalculateFluidPressure </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;&#160;</td>
-          <td class="paramname"><em>rVariables</em></td><td>)</td>
-          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2995,7 +3038,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../dd/df7/class_kratos_1_1_u_pw_base_element.html#a9959c31f27044353bd254811c55870a6">Kratos::UPwBaseElement&lt; TDim, TNumNodes &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>, <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; 3, 4 &gt;</a>, <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; 2, 4 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; TDim, TNumNodes &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 2, 9 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 2, 8 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 2, 6 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 3, 27 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 2, 15 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 2, 10 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 3, 10 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 3, 20 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 3, 4 &gt;</a>, <a class="el" href="../../d3/d71/class_kratos_1_1_u_pw_updated_lagrangian_element.html#a77307211ff9fe6e89c5e3e0bd329e9d5">Kratos::UPwUpdatedLagrangianElement&lt; 2, 4 &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; TDim, TNumNodes &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; 3, 4 &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; 2, 4 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 9 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 8 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 6 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 27 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 15 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 10 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 10 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 20 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 4 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 4 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 9 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 8 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 6 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 27 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 15 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 10 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 10 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 20 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 4 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 4 &gt;</a>, <a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#a5301ac99cc737a849dac6772948eee1e">Kratos::DrainedUPwSmallStrainElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#a5301ac99cc737a849dac6772948eee1e">Kratos::DrainedUPwSmallStrainElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#a5301ac99cc737a849dac6772948eee1e">Kratos::DrainedUPwSmallStrainElement&lt; 3, 4 &gt;</a>, and <a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#a5301ac99cc737a849dac6772948eee1e">Kratos::DrainedUPwSmallStrainElement&lt; 2, 4 &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>, <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; 3, 4 &gt;</a>, <a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a6a45c40a1859a66dc28ec1b3b860e019">Kratos::UndrainedUPwSmallStrainElement&lt; 2, 4 &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; TDim, TNumNodes &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; 3, 4 &gt;</a>, <a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#aaddfe1797924f5f8a633263135144336">Kratos::UPwSmallStrainFICElement&lt; 2, 4 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 9 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 8 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 6 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 27 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 15 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 10 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 10 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 20 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 3, 4 &gt;</a>, <a class="el" href="../../dd/da7/class_kratos_1_1_transient_pw_element.html#a9f5ccb45fe01acba519ed7f55dac343f">Kratos::TransientPwElement&lt; 2, 4 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 9 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 8 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 6 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 27 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 15 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 10 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 10 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 20 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 3, 4 &gt;</a>, <a class="el" href="../../da/d80/class_kratos_1_1_steady_state_pw_element.html#a7c915b2b2cb15191342ee92f28402733">Kratos::SteadyStatePwElement&lt; 2, 4 &gt;</a>, <a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#a5301ac99cc737a849dac6772948eee1e">Kratos::DrainedUPwSmallStrainElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#a5301ac99cc737a849dac6772948eee1e">Kratos::DrainedUPwSmallStrainElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#a5301ac99cc737a849dac6772948eee1e">Kratos::DrainedUPwSmallStrainElement&lt; 3, 4 &gt;</a>, and <a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#a5301ac99cc737a849dac6772948eee1e">Kratos::DrainedUPwSmallStrainElement&lt; 2, 4 &gt;</a>.</p>
 
 </div>
 </div>
@@ -3870,7 +3913,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 16 2024 03:33:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri May 17 2024 03:31:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

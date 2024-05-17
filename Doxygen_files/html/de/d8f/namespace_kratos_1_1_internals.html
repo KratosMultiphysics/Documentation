@@ -91,6 +91,17 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d89/class_kratos_1_1_internals_1_1_cartesian_mesh_colors.html">CartesianMeshColors</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d51/class_kratos_1_1_internals_1_1_cartesian_ray.html">CartesianRay</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A cartesian ray to be used in ray casting operations.  <a href="../../d2/d51/class_kratos_1_1_internals_1_1_cartesian_ray.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/def/class_kratos_1_1_internals_1_1_skin_intersection.html">SkinIntersection</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d93/class_kratos_1_1_internals_1_1_base_registered_component.html">BaseRegisteredComponent</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d35/class_kratos_1_1_internals_1_1_registered_component.html">RegisteredComponent</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d40/struct_kratos_1_1_internals_1_1_m_p_i_data_type.html">MPIDataType</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d0c/struct_kratos_1_1_internals_1_1_m_p_i_data_type_3_01int_01_4.html">MPIDataType&lt; int &gt;</a></td></tr>
@@ -182,6 +193,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a8f5cdadfa594dbcc1f774fadf1e402d2"><td class="memTemplParams" colspan="2">template&lt;size_t TDim, size_t TNumNodes&gt; </td></tr>
 <tr class="memitem:a8f5cdadfa594dbcc1f774fadf1e402d2"><td class="memTemplItemLeft" align="right" valign="top">ModifiedShapeFunctions::Pointer&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/d8f/namespace_kratos_1_1_internals.html#a8f5cdadfa594dbcc1f774fadf1e402d2">GetShapeFunctionCalculator</a> (const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;rElement, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rDistance)</td></tr>
 <tr class="separator:a8f5cdadfa594dbcc1f774fadf1e402d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Input and output</div></td></tr>
+<tr class="memitem:ga9c282065777ce819b1c41f8fc8b5854d"><td class="memTemplParams" colspan="2">template&lt;typename TGeometryType &gt; </td></tr>
+<tr class="memitem:ga9c282065777ce819b1c41f8fc8b5854d"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d4d/group___kratos_core.html#ga9c282065777ce819b1c41f8fc8b5854d">operator&gt;&gt;</a> (std::istream &amp;rIStream, <a class="el" href="../../d2/d51/class_kratos_1_1_internals_1_1_cartesian_ray.html">CartesianRay</a>&lt; TGeometryType &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:ga9c282065777ce819b1c41f8fc8b5854d"><td class="mdescLeft">&#160;</td><td class="mdescRight">input stream function  <a href="../../d5/d4d/group___kratos_core.html#ga9c282065777ce819b1c41f8fc8b5854d">More...</a><br /></td></tr>
+<tr class="separator:ga9c282065777ce819b1c41f8fc8b5854d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3da19a906530000d5ca8f4955be26e34"><td class="memTemplParams" colspan="2">template&lt;typename TGeometryType &gt; </td></tr>
+<tr class="memitem:ga3da19a906530000d5ca8f4955be26e34"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d4d/group___kratos_core.html#ga3da19a906530000d5ca8f4955be26e34">operator&lt;&lt;</a> (std::ostream &amp;rOStream, const <a class="el" href="../../d2/d51/class_kratos_1_1_internals_1_1_cartesian_ray.html">CartesianRay</a>&lt; TGeometryType &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:ga3da19a906530000d5ca8f4955be26e34"><td class="mdescLeft">&#160;</td><td class="mdescRight">output stream function  <a href="../../d5/d4d/group___kratos_core.html#ga3da19a906530000d5ca8f4955be26e34">More...</a><br /></td></tr>
+<tr class="separator:ga3da19a906530000d5ca8f4955be26e34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a8f5cdadfa594dbcc1f774fadf1e402d2"></a>
@@ -538,7 +558,7 @@ template&lt;typename TDataType , std::size_t TSize1, std::size_t TSize2&gt; </di
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 16 2024 03:55:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri May 17 2024 03:52:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
