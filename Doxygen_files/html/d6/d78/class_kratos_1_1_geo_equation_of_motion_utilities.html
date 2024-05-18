@@ -87,7 +87,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::GeoEquationOfMotionUtilities:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d29/class_kratos_1_1_geo_equation_of_motion_utilities__coll__graph.svg" width="278" height="132"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d29/class_kratos_1_1_geo_equation_of_motion_utilities__coll__graph.svg" width="278" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -99,6 +99,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a8491f60cb15b1bca79518717d8c40a36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab01d52f6a26819112176bc1bb57fce07"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d78/class_kratos_1_1_geo_equation_of_motion_utilities.html#ab01d52f6a26819112176bc1bb57fce07">CalculateDampingMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> RayleighAlpha, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> RayleighBeta, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rMassMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rStiffnessMatrix)</td></tr>
 <tr class="separator:ab01d52f6a26819112176bc1bb57fce07"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2aba80621f0860149eac31b5ef7b299"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d78/class_kratos_1_1_geo_equation_of_motion_utilities.html#ae2aba80621f0860149eac31b5ef7b299">CalculateStiffnessMatrixGPoint</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rB, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rConstitutiveMatrix, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> IntegrationCoefficient)</td></tr>
+<tr class="separator:ae2aba80621f0860149eac31b5ef7b299"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af20f163c6d5988a61e38582befab5922"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d78/class_kratos_1_1_geo_equation_of_motion_utilities.html#af20f163c6d5988a61e38582befab5922">CalculateStiffnessMatrix</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;rBs, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;rConstitutiveMatrices, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rIntegrationCoefficients)</td></tr>
+<tr class="separator:af20f163c6d5988a61e38582befab5922"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ab01d52f6a26819112176bc1bb57fce07"></a>
@@ -245,6 +249,90 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="af20f163c6d5988a61e38582befab5922"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af20f163c6d5988a61e38582befab5922">&#9670;&nbsp;</a></span>CalculateStiffnessMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> Kratos::GeoEquationOfMotionUtilities::CalculateStiffnessMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rBs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rConstitutiveMatrices</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rIntegrationCoefficients</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae2aba80621f0860149eac31b5ef7b299"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2aba80621f0860149eac31b5ef7b299">&#9670;&nbsp;</a></span>CalculateStiffnessMatrixGPoint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> Kratos::GeoEquationOfMotionUtilities::CalculateStiffnessMatrixGPoint </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rConstitutiveMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>IntegrationCoefficient</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_utilities/<a class="el" href="../../db/dbc/equation__of__motion__utilities_8h_source.html">equation_of_motion_utilities.h</a></li>
 <li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_utilities/<a class="el" href="../../dd/d26/equation__of__motion__utilities_8cpp.html">equation_of_motion_utilities.cpp</a></li>
@@ -252,7 +340,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 17 2024 03:32:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat May 18 2024 03:31:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

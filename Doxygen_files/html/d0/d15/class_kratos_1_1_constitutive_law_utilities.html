@@ -142,6 +142,8 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aeaed1db48ec04d70c317f68f94dc0ffe"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#aeaed1db48ec04d70c317f68f94dc0ffe">GetStateVariableIndex</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rThisVariable)</td></tr>
 <tr class="separator:aeaed1db48ec04d70c317f68f94dc0ffe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea4bfe0d5d7d2ec8aff8bc076b90cd62"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#aea4bfe0d5d7d2ec8aff8bc076b90cd62">SetConstitutiveParameters</a> (<a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rConstitutiveParameters, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStrainVector, <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rConstitutiveMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rGradNpT, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rF, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> detF)</td></tr>
+<tr class="separator:aea4bfe0d5d7d2ec8aff8bc076b90cd62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operations</div></td></tr>
 <tr class="memitem:a9ae1414aa0c107b37d512aa0dbe6e8ba"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#a9ae1414aa0c107b37d512aa0dbe6e8ba">CalculateElasticMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rConstitutiveMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> E, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> nu)</td></tr>
 <tr class="memdesc:a9ae1414aa0c107b37d512aa0dbe6e8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method computes the elastic ConstitutiveMatrix.  <a href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html#a9ae1414aa0c107b37d512aa0dbe6e8ba">More...</a><br /></td></tr>
@@ -4414,6 +4416,74 @@ template&lt;SizeType TVoigtSize&gt; </div>
 
 </div>
 </div>
+<a id="aea4bfe0d5d7d2ec8aff8bc076b90cd62"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea4bfe0d5d7d2ec8aff8bc076b90cd62">&#9670;&nbsp;</a></span>SetConstitutiveParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;SizeType TVoigtSize = 6&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/d15/class_kratos_1_1_constitutive_law_utilities.html">Kratos::ConstitutiveLawUtilities</a>&lt; TVoigtSize &gt;::SetConstitutiveParameters </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>rConstitutiveParameters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rStrainVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rConstitutiveMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rGradNpT</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rF</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>detF</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="aacc4af7aa296a98b10e7878e09c0209a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aacc4af7aa296a98b10e7878e09c0209a">&#9670;&nbsp;</a></span>Dimension</h2>
@@ -4501,7 +4571,7 @@ template&lt;SizeType TVoigtSize = 6&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 17 2024 03:24:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat May 18 2024 03:23:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

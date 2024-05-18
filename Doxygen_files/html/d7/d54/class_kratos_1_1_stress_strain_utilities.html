@@ -87,7 +87,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::StressStrainUtilities:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/db9/class_kratos_1_1_stress_strain_utilities__coll__graph.svg" width="256" height="250"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../db/db9/class_kratos_1_1_stress_strain_utilities__coll__graph.svg" width="256" height="279"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -111,8 +111,48 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:adcd9ceffb869309ec0fef04c5ef266f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad569b16ba95c48766b41524cc5592a74"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d54/class_kratos_1_1_stress_strain_utilities.html#ad569b16ba95c48766b41524cc5592a74">CalculateGreenLagrangeStrainTensor</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rDeformationGradient)</td></tr>
 <tr class="separator:ad569b16ba95c48766b41524cc5592a74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a495abe1c46adcbb75fc72159f6dd65a2"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d54/class_kratos_1_1_stress_strain_utilities.html#a495abe1c46adcbb75fc72159f6dd65a2">CalculateCauchyStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rB, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rDisplacements)</td></tr>
+<tr class="separator:a495abe1c46adcbb75fc72159f6dd65a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60f69f7fe07289b2bbfa95991cf96501"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d54/class_kratos_1_1_stress_strain_utilities.html#a60f69f7fe07289b2bbfa95991cf96501">CalculateStrains</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;rDeformationGradients, const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;rBs, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rDisplacements, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> UseHenckyStrain, std::size_t VoigtSize)</td></tr>
+<tr class="separator:a60f69f7fe07289b2bbfa95991cf96501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a495abe1c46adcbb75fc72159f6dd65a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a495abe1c46adcbb75fc72159f6dd65a2">&#9670;&nbsp;</a></span>CalculateCauchyStrain()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> Kratos::StressStrainUtilities::CalculateCauchyStrain </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rB</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDisplacements</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad569b16ba95c48766b41524cc5592a74"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad569b16ba95c48766b41524cc5592a74">&#9670;&nbsp;</a></span>CalculateGreenLagrangeStrainTensor()</h2>
 
@@ -311,6 +351,60 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a60f69f7fe07289b2bbfa95991cf96501"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60f69f7fe07289b2bbfa95991cf96501">&#9670;&nbsp;</a></span>CalculateStrains()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; Kratos::StressStrainUtilities::CalculateStrains </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rDeformationGradients</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rBs</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDisplacements</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td>
+          <td class="paramname"><em>UseHenckyStrain</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>VoigtSize</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af026171eb7d2d39629717e5d833eba0b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af026171eb7d2d39629717e5d833eba0b">&#9670;&nbsp;</a></span>CalculateTrace()</h2>
 
@@ -396,7 +490,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri May 17 2024 03:32:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat May 18 2024 03:31:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
