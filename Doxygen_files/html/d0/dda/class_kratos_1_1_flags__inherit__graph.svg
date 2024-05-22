@@ -3357,12 +3357,13 @@ var sectionId = 'dynsection-0';
 <g id="node19" class="node">
 <title>Node54</title>
 <g id="a_node19"><a xlink:href="../../d5/d30/class_kratos_1_1_elasto_plastic_mohr_coulomb_cohesive3_d_law.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="red" points="2777,-627.5 2777,-1058.5 2968,-1058.5 2968,-627.5 2777,-627.5"/>
-<text text-anchor="start" x="2785" y="-1046.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::ElastoPlasticMohr</text>
-<text text-anchor="middle" x="2872.5" y="-1035.5" font-family="Helvetica,sans-Serif" font-size="10.00">CoulombCohesive3DLaw</text>
-<polyline fill="none" stroke="red" points="2777,-1028.5 2968,-1028.5 "/>
-<text text-anchor="start" x="2785" y="-1016.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mPlasticStrainVector</text>
-<text text-anchor="start" x="2785" y="-1005.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mOldPlasticStrainVector</text>
+<polygon fill="none" stroke="red" points="2777,-616.5 2777,-1069.5 2968,-1069.5 2968,-616.5 2777,-616.5"/>
+<text text-anchor="start" x="2785" y="-1057.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::ElastoPlasticMohr</text>
+<text text-anchor="middle" x="2872.5" y="-1046.5" font-family="Helvetica,sans-Serif" font-size="10.00">CoulombCohesive3DLaw</text>
+<polyline fill="none" stroke="red" points="2777,-1039.5 2968,-1039.5 "/>
+<text text-anchor="start" x="2785" y="-1027.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mPlasticStrainVector</text>
+<text text-anchor="start" x="2785" y="-1016.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mOldPlasticStrainVector</text>
+<text text-anchor="start" x="2785" y="-1005.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mSlipTendency</text>
 <polyline fill="none" stroke="red" points="2777,-998.5 2968,-998.5 "/>
 <text text-anchor="start" x="2785" y="-986.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_POINTER</text>
 <text text-anchor="start" x="2785" y="-975.5" font-family="Helvetica,sans-Serif" font-size="10.00">_DEFINITION()</text>
@@ -3381,29 +3382,30 @@ var sectionId = 'dynsection-0';
 <text text-anchor="start" x="2785" y="-832.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ FinalizeMaterialResponse</text>
 <text text-anchor="start" x="2785" y="-821.5" font-family="Helvetica,sans-Serif" font-size="10.00">Cauchy()</text>
 <text text-anchor="start" x="2785" y="-810.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetValue()</text>
-<text text-anchor="start" x="2785" y="-799.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
-<text text-anchor="start" x="2785" y="-788.5" font-family="Helvetica,sans-Serif" font-size="10.00"># InitializeConstitutiveLaw</text>
-<text text-anchor="start" x="2785" y="-777.5" font-family="Helvetica,sans-Serif" font-size="10.00">Variables()</text>
-<text text-anchor="start" x="2785" y="-766.5" font-family="Helvetica,sans-Serif" font-size="10.00"># InitializeElastoPlasticConstitutive</text>
-<text text-anchor="start" x="2785" y="-755.5" font-family="Helvetica,sans-Serif" font-size="10.00">LawVariables()</text>
-<text text-anchor="start" x="2785" y="-744.5" font-family="Helvetica,sans-Serif" font-size="10.00"># ComputeYieldFunction()</text>
-<text text-anchor="start" x="2785" y="-733.5" font-family="Helvetica,sans-Serif" font-size="10.00"># GetShearResultantStressVector()</text>
-<text text-anchor="start" x="2785" y="-722.5" font-family="Helvetica,sans-Serif" font-size="10.00"># ReturnMapping()</text>
-<text text-anchor="start" x="2785" y="-711.5" font-family="Helvetica,sans-Serif" font-size="10.00"># DerivativesPlasticPotential</text>
-<text text-anchor="start" x="2785" y="-700.5" font-family="Helvetica,sans-Serif" font-size="10.00">Surface()</text>
-<text text-anchor="start" x="2785" y="-689.5" font-family="Helvetica,sans-Serif" font-size="10.00"># DerivativesYieldSurface()</text>
-<text text-anchor="start" x="2785" y="-678.5" font-family="Helvetica,sans-Serif" font-size="10.00"># StressVectorInstersection</text>
-<text text-anchor="start" x="2785" y="-667.5" font-family="Helvetica,sans-Serif" font-size="10.00">YieldSurfaces()</text>
-<text text-anchor="start" x="2785" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00"># ConstitutiveMatrixInstersection</text>
-<text text-anchor="start" x="2785" y="-645.5" font-family="Helvetica,sans-Serif" font-size="10.00">YieldSurfaces()</text>
-<text text-anchor="start" x="2785" y="-634.5" font-family="Helvetica,sans-Serif" font-size="10.00"># GetElasticConstitutiveMatrix()</text>
+<text text-anchor="start" x="2785" y="-799.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetValue()</text>
+<text text-anchor="start" x="2785" y="-788.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ SetValue()</text>
+<text text-anchor="start" x="2785" y="-777.5" font-family="Helvetica,sans-Serif" font-size="10.00"># InitializeConstitutiveLaw</text>
+<text text-anchor="start" x="2785" y="-766.5" font-family="Helvetica,sans-Serif" font-size="10.00">Variables()</text>
+<text text-anchor="start" x="2785" y="-755.5" font-family="Helvetica,sans-Serif" font-size="10.00"># InitializeElastoPlasticConstitutive</text>
+<text text-anchor="start" x="2785" y="-744.5" font-family="Helvetica,sans-Serif" font-size="10.00">LawVariables()</text>
+<text text-anchor="start" x="2785" y="-733.5" font-family="Helvetica,sans-Serif" font-size="10.00"># ComputeYieldFunction()</text>
+<text text-anchor="start" x="2785" y="-722.5" font-family="Helvetica,sans-Serif" font-size="10.00"># GetShearResultantStressVector()</text>
+<text text-anchor="start" x="2785" y="-711.5" font-family="Helvetica,sans-Serif" font-size="10.00"># ReturnMapping()</text>
+<text text-anchor="start" x="2785" y="-700.5" font-family="Helvetica,sans-Serif" font-size="10.00"># DerivativesPlasticPotential</text>
+<text text-anchor="start" x="2785" y="-689.5" font-family="Helvetica,sans-Serif" font-size="10.00">Surface()</text>
+<text text-anchor="start" x="2785" y="-678.5" font-family="Helvetica,sans-Serif" font-size="10.00"># DerivativesYieldSurface()</text>
+<text text-anchor="start" x="2785" y="-667.5" font-family="Helvetica,sans-Serif" font-size="10.00"># StressVectorInstersection</text>
+<text text-anchor="start" x="2785" y="-656.5" font-family="Helvetica,sans-Serif" font-size="10.00">YieldSurfaces()</text>
+<text text-anchor="start" x="2785" y="-645.5" font-family="Helvetica,sans-Serif" font-size="10.00"># ConstitutiveMatrixInstersection</text>
+<text text-anchor="start" x="2785" y="-634.5" font-family="Helvetica,sans-Serif" font-size="10.00">YieldSurfaces()</text>
+<text text-anchor="start" x="2785" y="-623.5" font-family="Helvetica,sans-Serif" font-size="10.00"># GetElasticConstitutiveMatrix()</text>
 </a>
 </g>
 </g>
 <!-- Node5&#45;&gt;Node54 -->
 <g id="edge19" class="edge">
 <title>Node5&#45;&gt;Node54</title>
-<path fill="none" stroke="midnightblue" d="M1951.68,-3021.08C1925.36,-2601.64 1910.23,-1896.63 2087.5,-1722 2195.3,-1615.8 2656.76,-1789.13 2767.5,-1686 2935.27,-1529.76 2937.87,-1252.32 2914.11,-1058.77"/>
+<path fill="none" stroke="midnightblue" d="M1951.68,-3021.08C1925.36,-2601.64 1910.23,-1896.63 2087.5,-1722 2195.3,-1615.8 2656.76,-1789.13 2767.5,-1686 2932.17,-1532.65 2937.72,-1262.53 2915.4,-1069.58"/>
 <polygon fill="none" stroke="midnightblue" points="1948.2,-3021.49 1952.32,-3031.25 1955.19,-3021.04 1948.2,-3021.49"/>
 </g>
 <!-- Node56 -->

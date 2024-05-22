@@ -104,6 +104,8 @@ Collaboration diagram for Kratos::UPlSmallStrainInterfaceElement&lt; TDim, TNumN
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d00/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_extrapolation_variables.html">ExtrapolationVariables</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d69/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_interface_element_variables.html">InterfaceElementVariables</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d20/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_s_f_grad_aux_variables.html">SFGradAuxVariables</a></td></tr>
@@ -643,8 +645,8 @@ Public Member Functions</h2></td></tr>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:a222433cba9bebea8228e1320990ed55a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a222433cba9bebea8228e1320990ed55a">CalculateInitialGap</a> (const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> &amp;Geom)</td></tr>
 <tr class="separator:a222433cba9bebea8228e1320990ed55a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2725982d4fd0c7684084ece2d039eadb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a2725982d4fd0c7684084ece2d039eadb">ExtrapolateGPValues</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;JointWidthContainer)</td></tr>
-<tr class="separator:a2725982d4fd0c7684084ece2d039eadb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a705d3c8ed828f9a75303aaaaabe3112a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a705d3c8ed828f9a75303aaaaabe3112a">ExtrapolateGPValues</a> (const <a class="el" href="../../d2/d00/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_extrapolation_variables.html">ExtrapolationVariables</a> &amp;MyExtrapolationVariables)</td></tr>
+<tr class="separator:a705d3c8ed828f9a75303aaaaabe3112a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0131f395ab361dbe0788be6d9d7344b9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a0131f395ab361dbe0788be6d9d7344b9">CalculateStiffnessMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rStiffnessMatrix, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="memdesc:a0131f395ab361dbe0788be6d9d7344b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">The vector containing the imposed z strains (for 2.5D element: 2D geom with 3D CL)  <a href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a0131f395ab361dbe0788be6d9d7344b9">More...</a><br /></td></tr>
 <tr class="separator:a0131f395ab361dbe0788be6d9d7344b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -702,12 +704,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:a1e6971038da8a1088cf7b9e29c7261a1"><td class="memTemplParams" colspan="2">template&lt;class TValueType &gt; </td></tr>
 <tr class="memitem:a1e6971038da8a1088cf7b9e29c7261a1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a1e6971038da8a1088cf7b9e29c7261a1">InterpolateOutputValues</a> (std::vector&lt; TValueType &gt; &amp;rOutput, const std::vector&lt; TValueType &gt; &amp;GPValues)</td></tr>
 <tr class="separator:a1e6971038da8a1088cf7b9e29c7261a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38a1a38055417998ec5033c7128db037"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a38a1a38055417998ec5033c7128db037">ExtrapolateGPValues</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;JointWidthContainer)</td></tr>
-<tr class="separator:a38a1a38055417998ec5033c7128db037"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3223b76b29f2c0fa4e96b1a6e8d2d333"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a3223b76b29f2c0fa4e96b1a6e8d2d333">ExtrapolateGPValues</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;JointWidthContainer)</td></tr>
-<tr class="separator:a3223b76b29f2c0fa4e96b1a6e8d2d333"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3dfdf3dc017eb28cb565026e9ec6ecd2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a3dfdf3dc017eb28cb565026e9ec6ecd2">ExtrapolateGPValues</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;JointWidthContainer)</td></tr>
-<tr class="separator:a3dfdf3dc017eb28cb565026e9ec6ecd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53c00979fc3429ce9e6ad36629dd2fb4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a53c00979fc3429ce9e6ad36629dd2fb4">ExtrapolateGPValues</a> (const <a class="el" href="../../d2/d00/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_extrapolation_variables.html">ExtrapolationVariables</a> &amp;MyExtrapolationVariables)</td></tr>
+<tr class="separator:a53c00979fc3429ce9e6ad36629dd2fb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72c342dc56d2f0013050304e33237971"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a72c342dc56d2f0013050304e33237971">ExtrapolateGPValues</a> (const <a class="el" href="../../d2/d00/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_extrapolation_variables.html">ExtrapolationVariables</a> &amp;MyExtrapolationVariables)</td></tr>
+<tr class="separator:a72c342dc56d2f0013050304e33237971"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a422d3376e291104f65aa9e5036f91fa5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a422d3376e291104f65aa9e5036f91fa5">ExtrapolateGPValues</a> (const <a class="el" href="../../d2/d00/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_extrapolation_variables.html">ExtrapolationVariables</a> &amp;MyExtrapolationVariables)</td></tr>
+<tr class="separator:a422d3376e291104f65aa9e5036f91fa5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4d5624d7a43599b060c9c6bc794fd93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#ab4d5624d7a43599b060c9c6bc794fd93">CalculateInitialGap</a> (const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> &amp;Geom)</td></tr>
 <tr class="separator:ab4d5624d7a43599b060c9c6bc794fd93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95ea00d77289d83b8e2977e1c61e4327"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html#a95ea00d77289d83b8e2977e1c61e4327">CalculateInitialGap</a> (const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> &amp;Geom)</td></tr>
@@ -2893,8 +2895,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="a38a1a38055417998ec5033c7128db037"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38a1a38055417998ec5033c7128db037">&#9670;&nbsp;</a></span>ExtrapolateGPValues() <span class="overload">[1/4]</span></h2>
+<a id="a53c00979fc3429ce9e6ad36629dd2fb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53c00979fc3429ce9e6ad36629dd2fb4">&#9670;&nbsp;</a></span>ExtrapolateGPValues() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2905,8 +2907,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html">Kratos::UPlSmallStrainInterfaceElement</a>&lt; 2, 4 &gt;::ExtrapolateGPValues </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>JointWidthContainer</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d00/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_extrapolation_variables.html">ExtrapolationVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>MyExtrapolationVariables</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2919,8 +2921,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="a3223b76b29f2c0fa4e96b1a6e8d2d333"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3223b76b29f2c0fa4e96b1a6e8d2d333">&#9670;&nbsp;</a></span>ExtrapolateGPValues() <span class="overload">[2/4]</span></h2>
+<a id="a72c342dc56d2f0013050304e33237971"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72c342dc56d2f0013050304e33237971">&#9670;&nbsp;</a></span>ExtrapolateGPValues() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2931,8 +2933,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html">Kratos::UPlSmallStrainInterfaceElement</a>&lt; 3, 6 &gt;::ExtrapolateGPValues </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>JointWidthContainer</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d00/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_extrapolation_variables.html">ExtrapolationVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>MyExtrapolationVariables</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2945,8 +2947,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="a3dfdf3dc017eb28cb565026e9ec6ecd2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dfdf3dc017eb28cb565026e9ec6ecd2">&#9670;&nbsp;</a></span>ExtrapolateGPValues() <span class="overload">[3/4]</span></h2>
+<a id="a422d3376e291104f65aa9e5036f91fa5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a422d3376e291104f65aa9e5036f91fa5">&#9670;&nbsp;</a></span>ExtrapolateGPValues() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2957,8 +2959,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html">Kratos::UPlSmallStrainInterfaceElement</a>&lt; 3, 8 &gt;::ExtrapolateGPValues </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>JointWidthContainer</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d00/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_extrapolation_variables.html">ExtrapolationVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>MyExtrapolationVariables</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -2971,8 +2973,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="a2725982d4fd0c7684084ece2d039eadb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2725982d4fd0c7684084ece2d039eadb">&#9670;&nbsp;</a></span>ExtrapolateGPValues() <span class="overload">[4/4]</span></h2>
+<a id="a705d3c8ed828f9a75303aaaaabe3112a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a705d3c8ed828f9a75303aaaaabe3112a">&#9670;&nbsp;</a></span>ExtrapolateGPValues() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2985,8 +2987,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
         <tr>
           <td class="memname">void <a class="el" href="../../d4/da7/class_kratos_1_1_u_pl_small_strain_interface_element.html">Kratos::UPlSmallStrainInterfaceElement</a>&lt; TDim, TNumNodes &gt;::ExtrapolateGPValues </td>
           <td>(</td>
-          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>JointWidthContainer</em></td><td>)</td>
+          <td class="paramtype">const <a class="el" href="../../d2/d00/struct_kratos_1_1_u_pl_small_strain_interface_element_1_1_extrapolation_variables.html">ExtrapolationVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>MyExtrapolationVariables</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -3519,7 +3521,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 21 2024 03:38:06 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed May 22 2024 03:40:25 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
