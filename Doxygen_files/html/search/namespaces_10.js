@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['quadrature_44467',['quadrature',['../d7/d2b/namespacequadrature.html',1,'']]]
+  ['quadrature_44472',['quadrature',['../d7/d2b/namespacequadrature.html',1,'']]]
 ];

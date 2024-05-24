@@ -258,6 +258,12 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:a3bbea10a23b8838a8a506e1e7ebaf444"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a3bbea10a23b8838a8a506e1e7ebaf444">mKeepSystemConstantDuringIterations</a></td></tr>
 <tr class="memdesc:a3bbea10a23b8838a8a506e1e7ebaf444"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag to set as initialized the strategy.  <a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a3bbea10a23b8838a8a506e1e7ebaf444">More...</a><br /></td></tr>
 <tr class="separator:a3bbea10a23b8838a8a506e1e7ebaf444"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e3942d0264e8d94a81216bb091fd30b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a9e3942d0264e8d94a81216bb091fd30b">mNonconvergedSolutionsMatrix</a></td></tr>
+<tr class="memdesc:a9e3942d0264e8d94a81216bb091fd30b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This matrix stores the non-converged solutions.  <a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a9e3942d0264e8d94a81216bb091fd30b">More...</a><br /></td></tr>
+<tr class="separator:a9e3942d0264e8d94a81216bb091fd30b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa15093a8ac69aa5f8d8435d1ce882282"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#aa15093a8ac69aa5f8d8435d1ce882282">mStoreNonconvergedSolutionsFlag</a> = false</td></tr>
+<tr class="memdesc:aa15093a8ac69aa5f8d8435d1ce882282"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flag indicating whether to store non-converged solutions.  <a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#aa15093a8ac69aa5f8d8435d1ce882282">More...</a><br /></td></tr>
+<tr class="separator:aa15093a8ac69aa5f8d8435d1ce882282"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_kratos_1_1_implicit_solving_strategy"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_kratos_1_1_implicit_solving_strategy')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html">Kratos::ImplicitSolvingStrategy&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a></td></tr>
 <tr class="memitem:a1c630f770285d5c29e29587ac0cd71c5 inherit pro_attribs_class_kratos_1_1_implicit_solving_strategy"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a1c630f770285d5c29e29587ac0cd71c5">mRebuildLevel</a></td></tr>
 <tr class="separator:a1c630f770285d5c29e29587ac0cd71c5 inherit pro_attribs_class_kratos_1_1_implicit_solving_strategy"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -400,6 +406,15 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ad607c9d8196b7cfd56d1a1844eb4213c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#ad607c9d8196b7cfd56d1a1844eb4213c">FinalizeSolutionStep</a> () override</td></tr>
 <tr class="memdesc:ad607c9d8196b7cfd56d1a1844eb4213c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs all the required operations that should be done (for each step) after solving the solution step.  <a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#ad607c9d8196b7cfd56d1a1844eb4213c">More...</a><br /></td></tr>
 <tr class="separator:ad607c9d8196b7cfd56d1a1844eb4213c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af371c55ba8eaa860f47d82cbbbfb074c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#af371c55ba8eaa860f47d82cbbbfb074c">GetCurrentSolution</a> (<a class="el" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a1e702737e398b7958d229c1871650f54">DofsArrayType</a> &amp;rDofSet, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;this_solution)</td></tr>
+<tr class="memdesc:af371c55ba8eaa860f47d82cbbbfb074c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the current solution vector.  <a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#af371c55ba8eaa860f47d82cbbbfb074c">More...</a><br /></td></tr>
+<tr class="separator:af371c55ba8eaa860f47d82cbbbfb074c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6bf4a8d382df092691e93a756d2a73e"><td class="memItemLeft" align="right" valign="top">std::tuple&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>, <a class="el" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a1e702737e398b7958d229c1871650f54">DofsArrayType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#ab6bf4a8d382df092691e93a756d2a73e">GetNonconvergedSolutions</a> ()</td></tr>
+<tr class="memdesc:ab6bf4a8d382df092691e93a756d2a73e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the matrix of non-converged solutions and the DOF set.  <a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#ab6bf4a8d382df092691e93a756d2a73e">More...</a><br /></td></tr>
+<tr class="separator:ab6bf4a8d382df092691e93a756d2a73e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f6e307e8cbeaed35b5d57646272f56b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a9f6e307e8cbeaed35b5d57646272f56b">SetUpNonconvergedSolutionsFlag</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> state)</td></tr>
+<tr class="memdesc:a9f6e307e8cbeaed35b5d57646272f56b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state for storing non-converged solutions.  <a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a9f6e307e8cbeaed35b5d57646272f56b">More...</a><br /></td></tr>
+<tr class="separator:a9f6e307e8cbeaed35b5d57646272f56b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8d10b3b709f71e1ce245d01499446d40"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a8d10b3b709f71e1ce245d01499446d40">SolveSolutionStep</a> () override</td></tr>
 <tr class="memdesc:a8d10b3b709f71e1ce245d01499446d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Solves the current step. This function returns true if a solution has been found, false otherwise.  <a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a8d10b3b709f71e1ce245d01499446d40">More...</a><br /></td></tr>
 <tr class="separator:a8d10b3b709f71e1ce245d01499446d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1709,6 +1724,54 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 
 </div>
 </div>
+<a id="af371c55ba8eaa860f47d82cbbbfb074c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af371c55ba8eaa860f47d82cbbbfb074c">&#9670;&nbsp;</a></span>GetCurrentSolution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html">Kratos::ResidualBasedNewtonRaphsonStrategy</a>&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;::GetCurrentSolution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a1e702737e398b7958d229c1871650f54">DofsArrayType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDofSet</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>this_solution</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the current solution vector. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rDofSet</td><td>The set of degrees of freedom (DOFs) </td></tr>
+    <tr><td class="paramname">this_solution</td><td>The vector that will be filled with the current solution values</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method retrieves the current solution values for the provided DOF set. The provided solution vector will be resized to match the size of the DOF set if necessary, and will be filled with the solution values corresponding to each DOF. Each value is accessed using the equation ID associated with each DOF. </p>
+
+</div>
+</div>
 <a id="a7f006d3e2d57631467da9349066ae085"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f006d3e2d57631467da9349066ae085">&#9670;&nbsp;</a></span>GetDefaultParameters()</h2>
 
@@ -1830,6 +1893,37 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 
 <p>This method gets the flag mMaxIterationNumber. </p>
 <dl class="section return"><dt>Returns</dt><dd>mMaxIterationNumber: This is the maximum number of on linear iterations </dd></dl>
+
+</div>
+</div>
+<a id="ab6bf4a8d382df092691e93a756d2a73e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6bf4a8d382df092691e93a756d2a73e">&#9670;&nbsp;</a></span>GetNonconvergedSolutions()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::tuple&lt;<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>, <a class="el" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a1e702737e398b7958d229c1871650f54">DofsArrayType</a>&gt; <a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html">Kratos::ResidualBasedNewtonRaphsonStrategy</a>&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;::GetNonconvergedSolutions </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gets the matrix of non-converged solutions and the DOF set. </p>
+<dl class="section return"><dt>Returns</dt><dd>A tuple containing the matrix of non-converged solutions and the DOF set</dd></dl>
+<p>This method returns a tuple where the first element is a matrix of non-converged solutions and the second element is the corresponding DOF set. </p>
 
 </div>
 </div>
@@ -2638,6 +2732,43 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 
 </div>
 </div>
+<a id="a9f6e307e8cbeaed35b5d57646272f56b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f6e307e8cbeaed35b5d57646272f56b">&#9670;&nbsp;</a></span>SetUpNonconvergedSolutionsFlag()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html">Kratos::ResidualBasedNewtonRaphsonStrategy</a>&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;::SetUpNonconvergedSolutionsFlag </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td>
+          <td class="paramname"><em>state</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the state for storing non-converged solutions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">state</td><td>The state to set for storing non-converged solutions (true to enable, false to disable).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>This method enables or disables the storage of non-converged solutions at each iteration by setting the appropriate flag. When the flag is set to true, non-converged solutions will be stored. </p>
+
+</div>
+</div>
 <a id="a8d3bb2cc3bbeba5831eeda938c874f65"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d3bb2cc3bbeba5831eeda938c874f65">&#9670;&nbsp;</a></span>SetUseOldStiffnessInFirstIterationFlag()</h2>
 
@@ -2912,6 +3043,33 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 
 </div>
 </div>
+<a id="a9e3942d0264e8d94a81216bb091fd30b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e3942d0264e8d94a81216bb091fd30b">&#9670;&nbsp;</a></span>mNonconvergedSolutionsMatrix</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> <a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html">Kratos::ResidualBasedNewtonRaphsonStrategy</a>&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;::mNonconvergedSolutionsMatrix</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This matrix stores the non-converged solutions. </p>
+<p>The matrix is structured such that each column represents the solution vector at a specific non-converged iteration. </p>
+
+</div>
+</div>
 <a id="a778797ba96196d18c966a5e1e5c8d8ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a778797ba96196d18c966a5e1e5c8d8ee">&#9670;&nbsp;</a></span>mpA</h2>
 
@@ -3097,6 +3255,33 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 
 </div>
 </div>
+<a id="aa15093a8ac69aa5f8d8435d1ce882282"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa15093a8ac69aa5f8d8435d1ce882282">&#9670;&nbsp;</a></span>mStoreNonconvergedSolutionsFlag</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> <a class="el" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html">Kratos::ResidualBasedNewtonRaphsonStrategy</a>&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;::mStoreNonconvergedSolutionsFlag = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Flag indicating whether to store non-converged solutions. </p>
+<p>Only when set to true (by calling the SetUpNonconvergedSolutionsGathering method) will the non-converged solutions at each iteration be stored. </p>
+
+</div>
+</div>
 <a id="a0fafc881c3332cbc902ae12186be3fbd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0fafc881c3332cbc902ae12186be3fbd">&#9670;&nbsp;</a></span>mUseOldStiffnessInFirstIteration</h2>
 
@@ -3130,7 +3315,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 23 2024 03:08:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri May 24 2024 03:08:54 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
