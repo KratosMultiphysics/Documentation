@@ -124,6 +124,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d40/class_kratos_1_1_monolithic_wall_condition.html">Kratos::MonolithicWallCondition&lt; TDim, TNumNodes &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a wall condition for the monolithic formulation.  <a href="../../db/d40/class_kratos_1_1_monolithic_wall_condition.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d04/class_kratos_1_1_navier_stokes_p2_p1_continuous_wall_condition.html">Kratos::NavierStokesP2P1ContinuousWallCondition&lt; TDim, TWallModel &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a wall condition for the Navier-Stokes (and Stokes) monolithic formulations This condition is intended to be used in combination with Navier-Stokes (or Stokes) P2-P1 (continuous pressure monolithic formulations. It supports the Neumann BC contribution as well as the addition of a wall law contribution through the TWallModel template argument. Such TWallModel must be a class implementing the wall model RHS and LHS Gauss point contributions (as example see @NavierSlipWallLaw). Current condition also has optional features that help numerical stability such as the outlet inflow energy correction or the spurious tangential velocity correction for pure slip boundaries. TODO: Implement the drag calculation (this requires implementing the viscous stress from the parent) TODO: Implement the slip boundaries spurious velocity correction (this requires implementing the viscous stress from the parent) TODO: Implement the wall contributions (this requires Lobatto quadratures and also I/O considerations if current ApplyWallLawProcess is used)  <a href="../../d7/d04/class_kratos_1_1_navier_stokes_p2_p1_continuous_wall_condition.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dfc/class_kratos_1_1_navier_stokes_wall_condition.html">Kratos::NavierStokesWallCondition&lt; TDim, TNumNodes, TWallModel &gt;</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implements a wall condition for the Navier-Stokes (and Stokes) monolithic formulations This condition is intended to be used in combination with Navier-Stokes (or Stokes) monolithic formulations. It supports the Neumann BC contribution as well as the addition of a wall law contribution through the TWallModel template argument. Such TWallModel must be a class implementing the wall model RHS and LHS Gauss point contributions (as example see @NavierSlipWallLaw). Current condition also has optional features that help numerical stability such as the outlet inflow energy correction or the spurious tangential velocity correction for pure slip boundaries.  <a href="../../d3/dfc/class_kratos_1_1_navier_stokes_wall_condition.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,6 +192,8 @@ Classes</h2></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A stabilized element for the incompressible Navier-Stokes equations.  <a href="../../d0/dfa/class_kratos_1_1_fractional_step_discontinuous.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d45/class_kratos_1_1_herschel_bulkley_fluid.html">Kratos::HerschelBulkleyFluid&lt; TBaseElement, TShapeFunctionValues, TShapeFunctionGradients &gt;</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d97/class_kratos_1_1_incompressible_navier_stokes_p2_p1_continuous.html">Kratos::IncompressibleNavierStokesP2P1Continuous&lt; TDim &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d51/class_kratos_1_1_q_s_v_m_s.html">Kratos::QSVMS&lt; TElementData &gt;</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1718,6 +1723,14 @@ Friends</h2></td></tr>
 <tr class="memitem:ga56da2c1e866583777d51540f2a7ce7bf"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#ga56da2c1e866583777d51540f2a7ce7bf">Kratos::operator&lt;&lt;</a> (std::ostream &amp;rOStream, const <a class="el" href="../../db/d40/class_kratos_1_1_monolithic_wall_condition.html">MonolithicWallCondition</a>&lt; TDim, TNumNodes &gt; &amp;rThis)</td></tr>
 <tr class="memdesc:ga56da2c1e866583777d51540f2a7ce7bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">output stream function  <a href="../../d4/dbe/group___application_name_application.html#ga56da2c1e866583777d51540f2a7ce7bf">More...</a><br /></td></tr>
 <tr class="separator:ga56da2c1e866583777d51540f2a7ce7bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9aa69831914d5b5573fa364a9f89cbe2"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </td></tr>
+<tr class="memitem:ga9aa69831914d5b5573fa364a9f89cbe2"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#ga9aa69831914d5b5573fa364a9f89cbe2">Kratos::operator&gt;&gt;</a> (std::istream &amp;rIStream, <a class="el" href="../../d7/d04/class_kratos_1_1_navier_stokes_p2_p1_continuous_wall_condition.html">NavierStokesP2P1ContinuousWallCondition</a>&lt; TDim, TWallModel &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:ga9aa69831914d5b5573fa364a9f89cbe2"><td class="mdescLeft">&#160;</td><td class="mdescRight">input stream function  <a href="../../d4/dbe/group___application_name_application.html#ga9aa69831914d5b5573fa364a9f89cbe2">More...</a><br /></td></tr>
+<tr class="separator:ga9aa69831914d5b5573fa364a9f89cbe2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2e45cced520d8f9cabbb1c3ca6e98752"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </td></tr>
+<tr class="memitem:ga2e45cced520d8f9cabbb1c3ca6e98752"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#ga2e45cced520d8f9cabbb1c3ca6e98752">Kratos::operator&lt;&lt;</a> (std::ostream &amp;rOStream, const <a class="el" href="../../d7/d04/class_kratos_1_1_navier_stokes_p2_p1_continuous_wall_condition.html">NavierStokesP2P1ContinuousWallCondition</a>&lt; TDim, TWallModel &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:ga2e45cced520d8f9cabbb1c3ca6e98752"><td class="mdescLeft">&#160;</td><td class="mdescRight">output stream function  <a href="../../d4/dbe/group___application_name_application.html#ga2e45cced520d8f9cabbb1c3ca6e98752">More...</a><br /></td></tr>
+<tr class="separator:ga2e45cced520d8f9cabbb1c3ca6e98752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga694ae9a2e2b9fca9ad0eee64a5b54f23"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </td></tr>
 <tr class="memitem:ga694ae9a2e2b9fca9ad0eee64a5b54f23"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#ga694ae9a2e2b9fca9ad0eee64a5b54f23">Kratos::operator&gt;&gt;</a> (std::istream &amp;rIStream, <a class="el" href="../../d3/dfc/class_kratos_1_1_navier_stokes_wall_condition.html">NavierStokesWallCondition</a>&lt; TDim, TNumNodes, TWallModel &gt; &amp;rThis)</td></tr>
 <tr class="memdesc:ga694ae9a2e2b9fca9ad0eee64a5b54f23"><td class="mdescLeft">&#160;</td><td class="mdescRight">input stream function  <a href="../../d4/dbe/group___application_name_application.html#ga694ae9a2e2b9fca9ad0eee64a5b54f23">More...</a><br /></td></tr>
@@ -1877,6 +1890,14 @@ Friends</h2></td></tr>
 <tr class="memitem:ga276a5037f94d7b7b3499a60fb9e602cd"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#ga276a5037f94d7b7b3499a60fb9e602cd">Kratos::operator&lt;&lt;</a> (std::ostream &amp;rOStream, const <a class="el" href="../../da/d45/class_kratos_1_1_herschel_bulkley_fluid.html">HerschelBulkleyFluid</a>&lt; TBaseElement &gt; &amp;rThis)</td></tr>
 <tr class="memdesc:ga276a5037f94d7b7b3499a60fb9e602cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">output stream function  <a href="../../d4/dbe/group___application_name_application.html#ga276a5037f94d7b7b3499a60fb9e602cd">More...</a><br /></td></tr>
 <tr class="separator:ga276a5037f94d7b7b3499a60fb9e602cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gace59f3f1e405fd5dc91a771e1a388797"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim&gt; </td></tr>
+<tr class="memitem:gace59f3f1e405fd5dc91a771e1a388797"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#gace59f3f1e405fd5dc91a771e1a388797">Kratos::operator&gt;&gt;</a> (std::istream &amp;rIStream, <a class="el" href="../../db/d97/class_kratos_1_1_incompressible_navier_stokes_p2_p1_continuous.html">IncompressibleNavierStokesP2P1Continuous</a>&lt; TDim &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:gace59f3f1e405fd5dc91a771e1a388797"><td class="mdescLeft">&#160;</td><td class="mdescRight">input stream function  <a href="../../d4/dbe/group___application_name_application.html#gace59f3f1e405fd5dc91a771e1a388797">More...</a><br /></td></tr>
+<tr class="separator:gace59f3f1e405fd5dc91a771e1a388797"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2a2eaa95651074035c38eae47dbf3f5b"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim&gt; </td></tr>
+<tr class="memitem:ga2a2eaa95651074035c38eae47dbf3f5b"><td class="memTemplItemLeft" align="right" valign="top">std::ostream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#ga2a2eaa95651074035c38eae47dbf3f5b">Kratos::operator&lt;&lt;</a> (std::ostream &amp;rOStream, const <a class="el" href="../../db/d97/class_kratos_1_1_incompressible_navier_stokes_p2_p1_continuous.html">IncompressibleNavierStokesP2P1Continuous</a>&lt; TDim &gt; &amp;rThis)</td></tr>
+<tr class="memdesc:ga2a2eaa95651074035c38eae47dbf3f5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">output stream function  <a href="../../d4/dbe/group___application_name_application.html#ga2a2eaa95651074035c38eae47dbf3f5b">More...</a><br /></td></tr>
+<tr class="separator:ga2a2eaa95651074035c38eae47dbf3f5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gabd9d9e710549b67c352822e4bb6c313c"><td class="memTemplParams" colspan="2">template&lt;class TElementData &gt; </td></tr>
 <tr class="memitem:gabd9d9e710549b67c352822e4bb6c313c"><td class="memTemplItemLeft" align="right" valign="top">std::istream &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d4/dbe/group___application_name_application.html#gabd9d9e710549b67c352822e4bb6c313c">Kratos::operator&gt;&gt;</a> (std::istream &amp;rIStream, <a class="el" href="../../d4/d51/class_kratos_1_1_q_s_v_m_s.html">QSVMS</a>&lt; TElementData &gt; &amp;rThis)</td></tr>
 <tr class="memdesc:gabd9d9e710549b67c352822e4bb6c313c"><td class="mdescLeft">&#160;</td><td class="mdescRight">input stream function  <a href="../../d4/dbe/group___application_name_application.html#gabd9d9e710549b67c352822e4bb6c313c">More...</a><br /></td></tr>
@@ -2448,6 +2469,9 @@ Friends</h2></td></tr>
 <tr class="memitem:gafd5afc8057f4f5000336366b9d409b5f"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gafd5afc8057f4f5000336366b9d409b5f">Kratos::FluidAuxiliaryUtilities::FindMaximumEdgeLength</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> CalculateNodalNeighbours=true)</td></tr>
 <tr class="memdesc:gafd5afc8057f4f5000336366b9d409b5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the maximum edge length This function finds and returns the maximum edge length in the given model part from the nodal neighbours.  <a href="../../d2/d72/group___fluid_dynamics_application.html#gafd5afc8057f4f5000336366b9d409b5f">More...</a><br /></td></tr>
 <tr class="separator:gafd5afc8057f4f5000336366b9d409b5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaf53d0b4253039a0f2307ac7566047176"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#gaf53d0b4253039a0f2307ac7566047176">Kratos::FluidAuxiliaryUtilities::PostprocessP2P1ContinuousPressure</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
+<tr class="memdesc:gaf53d0b4253039a0f2307ac7566047176"><td class="mdescLeft">&#160;</td><td class="mdescRight">Postprocess the midpoint nodes pressure in P2P1 elements This function takes the edges' midpoint nodes in P2P1 elements and postprocess the pressure, which is assumed to be stored in PRESSURE historical variable, from the edges' endpoint values. Note that the nodal flag VISITED is used to mark the nodes which pressure has been already set.  <a href="../../d2/d72/group___fluid_dynamics_application.html#gaf53d0b4253039a0f2307ac7566047176">More...</a><br /></td></tr>
+<tr class="separator:gaf53d0b4253039a0f2307ac7566047176"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Static Operations</h2></td></tr>
 <tr class="memitem:ga259d63ce6c8d993ecdc412cc5cde2835"><td class="memTemplParams" colspan="2">template&lt;class... TRefVariableValuePairArgs&gt; </td></tr>
@@ -27214,7 +27238,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga18ae3e8883c7f169210298bd13eceeae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga18ae3e8883c7f169210298bd13eceeae">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga18ae3e8883c7f169210298bd13eceeae">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[1/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27252,7 +27276,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga11cf18cc2a9ddb0c19c60371dc231080"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga11cf18cc2a9ddb0c19c60371dc231080">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11cf18cc2a9ddb0c19c60371dc231080">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[2/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27292,7 +27316,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gadd39002311cda364fa47af07ebdd4f01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd39002311cda364fa47af07ebdd4f01">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd39002311cda364fa47af07ebdd4f01">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[3/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27332,7 +27356,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga33a7498cd7ec6ab27aa1a76d8911c517"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga33a7498cd7ec6ab27aa1a76d8911c517">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga33a7498cd7ec6ab27aa1a76d8911c517">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[4/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27372,7 +27396,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga66d440928d79c4566343cfee6e3c4b10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga66d440928d79c4566343cfee6e3c4b10">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[5/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66d440928d79c4566343cfee6e3c4b10">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[5/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27410,7 +27434,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga97da6c0a096e04dda830dce809cf4120"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga97da6c0a096e04dda830dce809cf4120">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[6/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97da6c0a096e04dda830dce809cf4120">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[6/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27450,7 +27474,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gab26dde7ceac230a87f8d8d21b92a68eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab26dde7ceac230a87f8d8d21b92a68eb">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[7/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab26dde7ceac230a87f8d8d21b92a68eb">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[7/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27490,7 +27514,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 </div>
 </div>
 <a id="ga52cb2262cd423a8c1bcc8ba66aecae10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga52cb2262cd423a8c1bcc8ba66aecae10">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[8/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga52cb2262cd423a8c1bcc8ba66aecae10">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[8/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27530,7 +27554,7 @@ template&lt;class TBaseElement &gt; </div>
 </div>
 </div>
 <a id="gaca5a334bc4c081b4332dfc5a3e2a4298"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaca5a334bc4c081b4332dfc5a3e2a4298">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaca5a334bc4c081b4332dfc5a3e2a4298">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[9/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27568,7 +27592,7 @@ template&lt;class TBaseElement &gt; </div>
 </div>
 </div>
 <a id="ga770c8d3f04e2d179708090585e2147da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga770c8d3f04e2d179708090585e2147da">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga770c8d3f04e2d179708090585e2147da">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[10/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27608,7 +27632,7 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
 </div>
 </div>
 <a id="ga747e10f18414828d163e6e52699d295b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga747e10f18414828d163e6e52699d295b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[11/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga747e10f18414828d163e6e52699d295b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[11/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27648,7 +27672,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga621f48b54516deeef1ad292b6a06dc32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga621f48b54516deeef1ad292b6a06dc32">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[12/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga621f48b54516deeef1ad292b6a06dc32">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[12/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27686,7 +27710,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gad2d1addf717b81b4b2d61f5da076ae80"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad2d1addf717b81b4b2d61f5da076ae80">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[13/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2d1addf717b81b4b2d61f5da076ae80">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[13/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27726,7 +27750,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaf172ec06e7c271bb9dbb36e05bf88da1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf172ec06e7c271bb9dbb36e05bf88da1">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[14/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf172ec06e7c271bb9dbb36e05bf88da1">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[14/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27766,7 +27790,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga10bf9b23ebdb16ccd717c47cf6f42192"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga10bf9b23ebdb16ccd717c47cf6f42192">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[15/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga10bf9b23ebdb16ccd717c47cf6f42192">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[15/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27804,7 +27828,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga23c2e6e064fc7b3fdc7ca6cfa82acd24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga23c2e6e064fc7b3fdc7ca6cfa82acd24">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[16/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga23c2e6e064fc7b3fdc7ca6cfa82acd24">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[16/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27844,7 +27868,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gabcec93fd0690729bded0a70b1002ac93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabcec93fd0690729bded0a70b1002ac93">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[17/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gabcec93fd0690729bded0a70b1002ac93">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[17/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27884,7 +27908,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga1066c586b59bd11c6b6b71d25ce2b8b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1066c586b59bd11c6b6b71d25ce2b8b9">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[18/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1066c586b59bd11c6b6b71d25ce2b8b9">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[18/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27924,7 +27948,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga1497a8f9b8cd0923b056277f075db9d2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1497a8f9b8cd0923b056277f075db9d2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[19/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1497a8f9b8cd0923b056277f075db9d2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[19/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -27964,7 +27988,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gac7f9c317a6e53cfa8b85f6f51640bee2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac7f9c317a6e53cfa8b85f6f51640bee2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[20/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac7f9c317a6e53cfa8b85f6f51640bee2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[20/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28004,7 +28028,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga9d6bfb6f4dc5e007e5d5583c20e9cf41"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9d6bfb6f4dc5e007e5d5583c20e9cf41">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[21/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9d6bfb6f4dc5e007e5d5583c20e9cf41">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[21/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28044,7 +28068,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gaa7896ce2d6387ff8201d90ddbcdd6444"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa7896ce2d6387ff8201d90ddbcdd6444">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[22/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa7896ce2d6387ff8201d90ddbcdd6444">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[22/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28084,7 +28108,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga87c8e8ab7b2731612e231853191e2304"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga87c8e8ab7b2731612e231853191e2304">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[23/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga87c8e8ab7b2731612e231853191e2304">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[23/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28124,7 +28148,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga11c9e2c598ec3b4640e412e5d96ca5bc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga11c9e2c598ec3b4640e412e5d96ca5bc">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[24/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga11c9e2c598ec3b4640e412e5d96ca5bc">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[24/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28164,7 +28188,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga0f6cba661311e26216b2cbe59427df39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0f6cba661311e26216b2cbe59427df39">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[25/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f6cba661311e26216b2cbe59427df39">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[25/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28204,7 +28228,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga7795b4e435b565be916b89fccd76156d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7795b4e435b565be916b89fccd76156d">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[26/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7795b4e435b565be916b89fccd76156d">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[26/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28244,7 +28268,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="ga30c3874d7ca74a8005e477cc97b7914b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga30c3874d7ca74a8005e477cc97b7914b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[27/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga30c3874d7ca74a8005e477cc97b7914b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[27/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28284,7 +28308,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="ga9a6e36ca8a0d23430ddeafc59dec670e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9a6e36ca8a0d23430ddeafc59dec670e">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[28/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a6e36ca8a0d23430ddeafc59dec670e">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[28/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28324,7 +28348,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="ga159f134823d9d49dcd3658ff12713c7b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga159f134823d9d49dcd3658ff12713c7b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[29/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga159f134823d9d49dcd3658ff12713c7b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[29/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28364,7 +28388,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gaf3df4cb45bccf0c2abefab3c32dbe372"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf3df4cb45bccf0c2abefab3c32dbe372">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[30/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf3df4cb45bccf0c2abefab3c32dbe372">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[30/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28404,7 +28428,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga686e4658368b287e5db923917135ea54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga686e4658368b287e5db923917135ea54">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[31/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga686e4658368b287e5db923917135ea54">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[31/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28444,7 +28468,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga276a5037f94d7b7b3499a60fb9e602cd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga276a5037f94d7b7b3499a60fb9e602cd">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[32/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga276a5037f94d7b7b3499a60fb9e602cd">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[32/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28483,8 +28507,48 @@ template&lt;class TBaseElement &gt; </div>
 
 </div>
 </div>
+<a id="ga2a2eaa95651074035c38eae47dbf3f5b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2a2eaa95651074035c38eae47dbf3f5b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[33/84]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; Kratos::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>rOStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d97/class_kratos_1_1_incompressible_navier_stokes_p2_p1_continuous.html">IncompressibleNavierStokesP2P1Continuous</a>&lt; TDim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>output stream function </p>
+
+</div>
+</div>
 <a id="gaea0e3f5b1b30f9d84f3b543ea02b0f39"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaea0e3f5b1b30f9d84f3b543ea02b0f39">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[33/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaea0e3f5b1b30f9d84f3b543ea02b0f39">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[34/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28522,7 +28586,7 @@ template&lt;class TBaseElement &gt; </div>
 </div>
 </div>
 <a id="ga0f70697f08d26660afce93c48d6856f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0f70697f08d26660afce93c48d6856f0">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[34/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f70697f08d26660afce93c48d6856f0">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[35/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28562,7 +28626,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga83eba103ef01064a53a57e5cccb53727"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga83eba103ef01064a53a57e5cccb53727">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[35/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga83eba103ef01064a53a57e5cccb53727">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[36/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28602,7 +28666,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gad5a01137b109381bdeecd7bffe2f3559"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad5a01137b109381bdeecd7bffe2f3559">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[36/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad5a01137b109381bdeecd7bffe2f3559">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[37/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28642,7 +28706,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga56da2c1e866583777d51540f2a7ce7bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga56da2c1e866583777d51540f2a7ce7bf">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[37/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga56da2c1e866583777d51540f2a7ce7bf">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[38/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28681,8 +28745,48 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
+<a id="ga2e45cced520d8f9cabbb1c3ca6e98752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga2e45cced520d8f9cabbb1c3ca6e98752">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[39/84]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::ostream&amp; Kratos::operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">std::ostream &amp;&#160;</td>
+          <td class="paramname"><em>rOStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d7/d04/class_kratos_1_1_navier_stokes_p2_p1_continuous_wall_condition.html">NavierStokesP2P1ContinuousWallCondition</a>&lt; TDim, TWallModel &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>output stream function </p>
+
+</div>
+</div>
 <a id="ga098baedc34e1354ddae3f94be8c2e78d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga098baedc34e1354ddae3f94be8c2e78d">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[38/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga098baedc34e1354ddae3f94be8c2e78d">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[40/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28722,7 +28826,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="ga73b8f4e7f8fe26a8dfd017d57ff3cc70"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga73b8f4e7f8fe26a8dfd017d57ff3cc70">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[39/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga73b8f4e7f8fe26a8dfd017d57ff3cc70">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[41/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28760,7 +28864,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="gadd377a3777f32b2434e4516459ba821d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadd377a3777f32b2434e4516459ba821d">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[40/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gadd377a3777f32b2434e4516459ba821d">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[42/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28798,7 +28902,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="ga5f3455056ed833403119bf7c92ea63fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5f3455056ed833403119bf7c92ea63fa">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[41/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f3455056ed833403119bf7c92ea63fa">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[43/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28836,7 +28940,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="ga80ce5e005e6f8c94080f7e52f2fa4a2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga80ce5e005e6f8c94080f7e52f2fa4a2c">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[42/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga80ce5e005e6f8c94080f7e52f2fa4a2c">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[44/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28876,7 +28980,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga66944774e7655ad94d8ce7f7d00389e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga66944774e7655ad94d8ce7f7d00389e1">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[43/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga66944774e7655ad94d8ce7f7d00389e1">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[45/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28916,7 +29020,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga0efa7b04fce0384014a4ddf7d57c100f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0efa7b04fce0384014a4ddf7d57c100f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[44/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0efa7b04fce0384014a4ddf7d57c100f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[46/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28956,7 +29060,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga0a3656c058ea978ae15ce8d62efaadca"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0a3656c058ea978ae15ce8d62efaadca">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[45/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0a3656c058ea978ae15ce8d62efaadca">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[47/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -28994,7 +29098,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gad534733a3c0da32144e54f3e0eefd1a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad534733a3c0da32144e54f3e0eefd1a5">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[46/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad534733a3c0da32144e54f3e0eefd1a5">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[48/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29032,7 +29136,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga5fadddf5763307e2386c83ebce187a63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5fadddf5763307e2386c83ebce187a63">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[47/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5fadddf5763307e2386c83ebce187a63">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[49/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29072,7 +29176,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="gaf3b0e291a75da16ab018b115f5111702"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaf3b0e291a75da16ab018b115f5111702">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[48/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf3b0e291a75da16ab018b115f5111702">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[50/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29110,7 +29214,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="gad457ffd49e5ecfaec965feab5a1029d6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad457ffd49e5ecfaec965feab5a1029d6">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[49/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad457ffd49e5ecfaec965feab5a1029d6">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[51/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29150,7 +29254,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="ga5178bbda7e214e4aedc278439a96a56c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5178bbda7e214e4aedc278439a96a56c">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[50/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5178bbda7e214e4aedc278439a96a56c">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[52/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29190,7 +29294,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gafeafd10e5b1c287db21de229d6088c9b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafeafd10e5b1c287db21de229d6088c9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[51/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gafeafd10e5b1c287db21de229d6088c9b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[53/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29228,7 +29332,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gabc54aba40c0624f47098c55062b29364"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabc54aba40c0624f47098c55062b29364">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[52/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gabc54aba40c0624f47098c55062b29364">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[54/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29266,7 +29370,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga8a18b1fdaf8cb2d25b037a9cfc81eb88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8a18b1fdaf8cb2d25b037a9cfc81eb88">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[53/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8a18b1fdaf8cb2d25b037a9cfc81eb88">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[55/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29304,7 +29408,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga21b1336e3a14f4193fade5874b0e06df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga21b1336e3a14f4193fade5874b0e06df">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[54/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga21b1336e3a14f4193fade5874b0e06df">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[56/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29344,7 +29448,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="ga5f81a4b3900b88e4145cd72c98eff37a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5f81a4b3900b88e4145cd72c98eff37a">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[55/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f81a4b3900b88e4145cd72c98eff37a">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[57/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29384,7 +29488,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gabf77a4cf05b19c9da328928c9fc7092b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabf77a4cf05b19c9da328928c9fc7092b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[56/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gabf77a4cf05b19c9da328928c9fc7092b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[58/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29424,7 +29528,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga8bc826b6318fefa64276789c0570103b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8bc826b6318fefa64276789c0570103b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[57/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8bc826b6318fefa64276789c0570103b">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[59/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29464,7 +29568,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga433473130954255d5406d9fec4006358"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga433473130954255d5406d9fec4006358">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[58/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga433473130954255d5406d9fec4006358">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[60/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29504,7 +29608,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga7d1038a5d62259c98951ab57316f133a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7d1038a5d62259c98951ab57316f133a">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[59/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7d1038a5d62259c98951ab57316f133a">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[61/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29544,7 +29648,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gae04283cce1e79c4a194ef25569024edc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae04283cce1e79c4a194ef25569024edc">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[60/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae04283cce1e79c4a194ef25569024edc">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[62/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29584,7 +29688,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga3b17328ddf14401fb867d492febe95c2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3b17328ddf14401fb867d492febe95c2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[61/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3b17328ddf14401fb867d492febe95c2">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[63/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29624,7 +29728,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="gae71470087dcfe652e3667ff86e08a935"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae71470087dcfe652e3667ff86e08a935">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[62/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae71470087dcfe652e3667ff86e08a935">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[64/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29664,7 +29768,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="gae9dc9510c9632795981d7660b5e761da"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae9dc9510c9632795981d7660b5e761da">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[63/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae9dc9510c9632795981d7660b5e761da">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[65/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29704,7 +29808,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga29f361fe87c3c94abec9d1bc3bd2ece6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga29f361fe87c3c94abec9d1bc3bd2ece6">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[64/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga29f361fe87c3c94abec9d1bc3bd2ece6">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[66/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29744,7 +29848,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gae6db8a36405fd6eab17662b1a77c8e8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gae6db8a36405fd6eab17662b1a77c8e8f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[65/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gae6db8a36405fd6eab17662b1a77c8e8f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[67/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29784,7 +29888,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga92fb2a7fb2f79f338559487e67a5bc0c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga92fb2a7fb2f79f338559487e67a5bc0c">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[66/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga92fb2a7fb2f79f338559487e67a5bc0c">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[68/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29824,7 +29928,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga5e1762b024fb816e4db37745277c566f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5e1762b024fb816e4db37745277c566f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[67/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5e1762b024fb816e4db37745277c566f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[69/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29864,7 +29968,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gab73c0af54775512c8ec2a9e5c8831801"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab73c0af54775512c8ec2a9e5c8831801">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[68/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab73c0af54775512c8ec2a9e5c8831801">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[70/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29904,7 +30008,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga9a7754591ba94d65286bf0c673f17a9a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9a7754591ba94d65286bf0c673f17a9a">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[69/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9a7754591ba94d65286bf0c673f17a9a">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[71/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29944,7 +30048,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gad757de49824a95180b91b4bb3f466052"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad757de49824a95180b91b4bb3f466052">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[70/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad757de49824a95180b91b4bb3f466052">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[72/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -29984,7 +30088,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga0294f1c3d9802fd387e8795a320280f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0294f1c3d9802fd387e8795a320280f7">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[71/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0294f1c3d9802fd387e8795a320280f7">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[73/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30024,7 +30128,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga68dd05f0590de554044b2506f3f7a044"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga68dd05f0590de554044b2506f3f7a044">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[72/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga68dd05f0590de554044b2506f3f7a044">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[74/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30064,7 +30168,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga82df6e2bd8f70336a12363d1c476cd84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga82df6e2bd8f70336a12363d1c476cd84">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[73/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga82df6e2bd8f70336a12363d1c476cd84">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[75/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30104,7 +30208,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga41891a78af87a0919baa17ae3716f0f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga41891a78af87a0919baa17ae3716f0f6">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[74/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga41891a78af87a0919baa17ae3716f0f6">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[76/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30144,7 +30248,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga9454d1e04a024d772bbcdb1b62f0c691"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9454d1e04a024d772bbcdb1b62f0c691">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[75/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9454d1e04a024d772bbcdb1b62f0c691">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[77/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30184,7 +30288,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gad2f65ea7b4f97332497447d45e91428f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad2f65ea7b4f97332497447d45e91428f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[76/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad2f65ea7b4f97332497447d45e91428f">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[78/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30224,7 +30328,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga917c88ae2d05eb301e868209ed928a76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga917c88ae2d05eb301e868209ed928a76">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[77/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga917c88ae2d05eb301e868209ed928a76">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[79/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30264,7 +30368,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gad9a18152e933da90ccc03f16c65a92f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad9a18152e933da90ccc03f16c65a92f0">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[78/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad9a18152e933da90ccc03f16c65a92f0">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[80/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30304,7 +30408,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga60f49121859d5db009af4e60f8366de5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga60f49121859d5db009af4e60f8366de5">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[79/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga60f49121859d5db009af4e60f8366de5">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[81/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30344,7 +30448,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga5f54518e765f9a3e457d738b449f4205"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5f54518e765f9a3e457d738b449f4205">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[80/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5f54518e765f9a3e457d738b449f4205">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[82/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30384,7 +30488,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga0326d52db76e111c79d238537a5c1045"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0326d52db76e111c79d238537a5c1045">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[81/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0326d52db76e111c79d238537a5c1045">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[83/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30424,7 +30528,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gaded233c471642981541182c6c68c07e8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaded233c471642981541182c6c68c07e8">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[82/82]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaded233c471642981541182c6c68c07e8">&#9670;&nbsp;</a></span>operator&lt;&lt;() <span class="overload">[84/84]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30462,7 +30566,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gad9f6e837e2287c98a17af838474320de"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad9f6e837e2287c98a17af838474320de">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[1/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad9f6e837e2287c98a17af838474320de">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[1/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30502,7 +30606,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gad6ce48a6711ca97f4f0ed9d3aca6e956"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad6ce48a6711ca97f4f0ed9d3aca6e956">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[2/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad6ce48a6711ca97f4f0ed9d3aca6e956">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[2/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30542,7 +30646,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gadc77d4029c29beb6bab44ac5f3df3d73"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gadc77d4029c29beb6bab44ac5f3df3d73">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[3/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gadc77d4029c29beb6bab44ac5f3df3d73">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[3/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30582,7 +30686,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga4a12e18754bd9eac9eead7043f5efae4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4a12e18754bd9eac9eead7043f5efae4">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[4/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4a12e18754bd9eac9eead7043f5efae4">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[4/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30622,7 +30726,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga0f377e7e6b7c1938f84a7de45ad8e433"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga0f377e7e6b7c1938f84a7de45ad8e433">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[5/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga0f377e7e6b7c1938f84a7de45ad8e433">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[5/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30662,7 +30766,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 </div>
 </div>
 <a id="ga91079ed3320f1bf1cf04e3bde9590155"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga91079ed3320f1bf1cf04e3bde9590155">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[6/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga91079ed3320f1bf1cf04e3bde9590155">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[6/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30702,7 +30806,7 @@ template&lt;class TBaseElement &gt; </div>
 </div>
 </div>
 <a id="gac93415c83261cb46e985f6019223baf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac93415c83261cb46e985f6019223baf1">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[7/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac93415c83261cb46e985f6019223baf1">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[7/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30742,7 +30846,7 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
 </div>
 </div>
 <a id="ga1ba200c033f12cd3a66462fbf4547a93"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1ba200c033f12cd3a66462fbf4547a93">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[8/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1ba200c033f12cd3a66462fbf4547a93">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[8/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30782,7 +30886,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga4e0810fa62174d9adfae3612e4b69a01"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4e0810fa62174d9adfae3612e4b69a01">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[9/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4e0810fa62174d9adfae3612e4b69a01">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[9/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30822,7 +30926,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga70632e539bf2b264ec1a0c5ffe06938c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga70632e539bf2b264ec1a0c5ffe06938c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[10/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga70632e539bf2b264ec1a0c5ffe06938c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[10/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30860,7 +30964,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga77dee50b6e90b5fbd6f6af8ff2628ad2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga77dee50b6e90b5fbd6f6af8ff2628ad2">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[11/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga77dee50b6e90b5fbd6f6af8ff2628ad2">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[11/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30900,7 +31004,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gad766c72a4a9f00e98600f36dd6ff8c62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad766c72a4a9f00e98600f36dd6ff8c62">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[12/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad766c72a4a9f00e98600f36dd6ff8c62">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[12/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30940,7 +31044,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga4c5aa33ea01ec6a91c9c6f620c06a1fa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4c5aa33ea01ec6a91c9c6f620c06a1fa">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[13/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4c5aa33ea01ec6a91c9c6f620c06a1fa">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[13/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -30980,7 +31084,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga834a0a0243ea4adb78a7e84d781344e1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga834a0a0243ea4adb78a7e84d781344e1">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[14/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga834a0a0243ea4adb78a7e84d781344e1">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[14/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31020,7 +31124,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga792e98f78fc5e15f02c556e65c658685"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga792e98f78fc5e15f02c556e65c658685">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[15/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga792e98f78fc5e15f02c556e65c658685">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[15/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31060,7 +31164,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga8f8c05d5d571b3809eccc026da894e79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8f8c05d5d571b3809eccc026da894e79">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[16/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8f8c05d5d571b3809eccc026da894e79">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[16/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31100,7 +31204,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gab3183574121cc1c1e98a51b6b5e65186"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab3183574121cc1c1e98a51b6b5e65186">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[17/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3183574121cc1c1e98a51b6b5e65186">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[17/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31140,7 +31244,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gada536854750501731adfa8395d4b90a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gada536854750501731adfa8395d4b90a2">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[18/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gada536854750501731adfa8395d4b90a2">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[18/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31180,7 +31284,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga461e7e6b85d23e24acc61166c5131c24"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga461e7e6b85d23e24acc61166c5131c24">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[19/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga461e7e6b85d23e24acc61166c5131c24">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[19/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31220,7 +31324,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga1e2b9df911b802c041d65a5bd4a3320d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1e2b9df911b802c041d65a5bd4a3320d">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[20/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e2b9df911b802c041d65a5bd4a3320d">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[20/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31260,7 +31364,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaaa7edc20e785810e6014badb3f745e10"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaa7edc20e785810e6014badb3f745e10">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[21/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa7edc20e785810e6014badb3f745e10">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[21/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31300,7 +31404,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="ga5abbc2a933c8f0bbef95cc82c1bb9d4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5abbc2a933c8f0bbef95cc82c1bb9d4e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[22/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5abbc2a933c8f0bbef95cc82c1bb9d4e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[22/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31340,7 +31444,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="ga718af11bb1655e5e4ec27367fa1a73ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga718af11bb1655e5e4ec27367fa1a73ad">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[23/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga718af11bb1655e5e4ec27367fa1a73ad">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[23/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31380,7 +31484,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="gab26763e98f4ae66f9f8b88f96cd004d8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab26763e98f4ae66f9f8b88f96cd004d8">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[24/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab26763e98f4ae66f9f8b88f96cd004d8">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[24/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31420,7 +31524,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga7618a30d34d49ef2371f38de92927a37"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga7618a30d34d49ef2371f38de92927a37">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[25/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga7618a30d34d49ef2371f38de92927a37">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[25/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31460,7 +31564,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga104af000902580fbd495be5169ed0f8f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga104af000902580fbd495be5169ed0f8f">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[26/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga104af000902580fbd495be5169ed0f8f">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[26/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31500,7 +31604,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gaac5ca06b3ae456b0f08f7ff584304ecc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaac5ca06b3ae456b0f08f7ff584304ecc">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[27/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaac5ca06b3ae456b0f08f7ff584304ecc">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[27/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31539,8 +31643,48 @@ template&lt;class TBaseElement &gt; </div>
 
 </div>
 </div>
+<a id="gace59f3f1e405fd5dc91a771e1a388797"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gace59f3f1e405fd5dc91a771e1a388797">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[28/77]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; Kratos::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>rIStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d97/class_kratos_1_1_incompressible_navier_stokes_p2_p1_continuous.html">IncompressibleNavierStokesP2P1Continuous</a>&lt; TDim &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>input stream function </p>
+
+</div>
+</div>
 <a id="gac62605a2f8784ea864f7047b6b356c57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac62605a2f8784ea864f7047b6b356c57">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[28/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac62605a2f8784ea864f7047b6b356c57">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[29/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31578,7 +31722,7 @@ template&lt;class TBaseElement &gt; </div>
 </div>
 </div>
 <a id="ga8b445032b8eba264f58c1390b08adc8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga8b445032b8eba264f58c1390b08adc8a">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[29/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga8b445032b8eba264f58c1390b08adc8a">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[30/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31618,7 +31762,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gab3403b9efacb89f34c9bec012ad86991"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab3403b9efacb89f34c9bec012ad86991">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[30/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab3403b9efacb89f34c9bec012ad86991">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[31/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31658,7 +31802,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga750146cc8b4d33be0b60a41940d1bf3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga750146cc8b4d33be0b60a41940d1bf3e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[31/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga750146cc8b4d33be0b60a41940d1bf3e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[32/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31698,7 +31842,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga9fe8856c090207bc8354818c369c5f54"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9fe8856c090207bc8354818c369c5f54">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[32/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9fe8856c090207bc8354818c369c5f54">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[33/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31737,8 +31881,48 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
+<a id="ga9aa69831914d5b5573fa364a9f89cbe2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9aa69831914d5b5573fa364a9f89cbe2">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[34/77]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::istream&amp; Kratos::operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">std::istream &amp;&#160;</td>
+          <td class="paramname"><em>rIStream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/d04/class_kratos_1_1_navier_stokes_p2_p1_continuous_wall_condition.html">NavierStokesP2P1ContinuousWallCondition</a>&lt; TDim, TWallModel &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rThis</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>input stream function </p>
+
+</div>
+</div>
 <a id="ga694ae9a2e2b9fca9ad0eee64a5b54f23"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga694ae9a2e2b9fca9ad0eee64a5b54f23">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[33/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga694ae9a2e2b9fca9ad0eee64a5b54f23">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[35/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31778,7 +31962,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="ga470851c31b0b68403efe83dc504139b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga470851c31b0b68403efe83dc504139b2">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[34/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga470851c31b0b68403efe83dc504139b2">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[36/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31816,7 +32000,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="ga48ddd89e11b42a33838c547923cbc20e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga48ddd89e11b42a33838c547923cbc20e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[35/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga48ddd89e11b42a33838c547923cbc20e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[37/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31854,7 +32038,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="ga4d961379c3767160ad0e1f808d954a78"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga4d961379c3767160ad0e1f808d954a78">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[36/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4d961379c3767160ad0e1f808d954a78">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[38/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31892,7 +32076,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="ga9aa5f7499451aec39d3efa7f4315e507"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga9aa5f7499451aec39d3efa7f4315e507">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[37/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9aa5f7499451aec39d3efa7f4315e507">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[39/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31932,7 +32116,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gabd9d9e710549b67c352822e4bb6c313c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gabd9d9e710549b67c352822e4bb6c313c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[38/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gabd9d9e710549b67c352822e4bb6c313c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[40/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -31972,7 +32156,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga414237de5f1b72164fc924010d073c0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga414237de5f1b72164fc924010d073c0d">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[39/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga414237de5f1b72164fc924010d073c0d">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[41/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32012,7 +32196,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gac1341a7f717d109d2e5b0197ee9c1384"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac1341a7f717d109d2e5b0197ee9c1384">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[40/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac1341a7f717d109d2e5b0197ee9c1384">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[42/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32052,7 +32236,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="ga97d10fd1e825946c1f1740d07b0f11d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga97d10fd1e825946c1f1740d07b0f11d4">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[41/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga97d10fd1e825946c1f1740d07b0f11d4">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[43/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32090,7 +32274,7 @@ template&lt;class TDenseSpace , class TSparseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="gac66c181a119f05465e6070182825fe2e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac66c181a119f05465e6070182825fe2e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[42/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac66c181a119f05465e6070182825fe2e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[44/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32130,7 +32314,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="gab99347df21a55f221494120064ee2782"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab99347df21a55f221494120064ee2782">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[43/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab99347df21a55f221494120064ee2782">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[45/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32170,7 +32354,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga469e184f4dbf5fe8a1ac6e9ea14e6d1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga469e184f4dbf5fe8a1ac6e9ea14e6d1c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[44/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga469e184f4dbf5fe8a1ac6e9ea14e6d1c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[46/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32208,7 +32392,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gade642027d4bedad3475c5028f283bd60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gade642027d4bedad3475c5028f283bd60">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[45/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gade642027d4bedad3475c5028f283bd60">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[47/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32246,7 +32430,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga091c6df051c130f03caa816c0ae6de2d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga091c6df051c130f03caa816c0ae6de2d">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[46/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga091c6df051c130f03caa816c0ae6de2d">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[48/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32284,7 +32468,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga1e99e2e64f284ed391e4a371cd2e0213"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1e99e2e64f284ed391e4a371cd2e0213">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[47/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1e99e2e64f284ed391e4a371cd2e0213">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[49/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32324,7 +32508,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="gac3b2dcc6c7a1c1b9dfe90bd85e4311ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac3b2dcc6c7a1c1b9dfe90bd85e4311ce">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[48/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3b2dcc6c7a1c1b9dfe90bd85e4311ce">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[50/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32364,7 +32548,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga27b26970a2e25c44f900fb2ce0fab61a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga27b26970a2e25c44f900fb2ce0fab61a">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[49/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga27b26970a2e25c44f900fb2ce0fab61a">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[51/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32404,7 +32588,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="ga6e064cb12bcf06b5238752b37bf9b647"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6e064cb12bcf06b5238752b37bf9b647">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[50/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6e064cb12bcf06b5238752b37bf9b647">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[52/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32444,7 +32628,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga1f5b0a69f3c4df7518318fbae19add63"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1f5b0a69f3c4df7518318fbae19add63">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[51/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1f5b0a69f3c4df7518318fbae19add63">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[53/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32484,7 +32668,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaa5f75c8b765142b6bb6462d7903d6c77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa5f75c8b765142b6bb6462d7903d6c77">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[52/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa5f75c8b765142b6bb6462d7903d6c77">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[54/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32524,7 +32708,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga1d9bb993ca8c5eef39a0471710fd2587"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1d9bb993ca8c5eef39a0471710fd2587">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[53/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1d9bb993ca8c5eef39a0471710fd2587">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[55/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32564,7 +32748,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga5ed1df1f8f100251156d1dfbe3806e5a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5ed1df1f8f100251156d1dfbe3806e5a">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[54/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5ed1df1f8f100251156d1dfbe3806e5a">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[56/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32604,7 +32788,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div>
 </div>
 <a id="gac8712b622e9740173f4d30138148d02c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gac8712b622e9740173f4d30138148d02c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[55/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gac8712b622e9740173f4d30138148d02c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[57/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32644,7 +32828,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes, class TWallModel &gt; </d
 </div>
 </div>
 <a id="gad8c6a17a027bfb55733d6e45a1bdd006"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad8c6a17a027bfb55733d6e45a1bdd006">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[56/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad8c6a17a027bfb55733d6e45a1bdd006">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[58/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32682,7 +32866,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga550d7004ef4765ba6a294d58f02f1d82"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga550d7004ef4765ba6a294d58f02f1d82">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[57/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga550d7004ef4765ba6a294d58f02f1d82">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[59/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32722,7 +32906,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga603e3dac7279ec95bb54bef6a60aa3e3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga603e3dac7279ec95bb54bef6a60aa3e3">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[58/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga603e3dac7279ec95bb54bef6a60aa3e3">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[60/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32762,7 +32946,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga1c0a29f9a11404980d2d27b8bd95b864"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1c0a29f9a11404980d2d27b8bd95b864">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[59/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1c0a29f9a11404980d2d27b8bd95b864">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[61/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32802,7 +32986,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga40d17e8ee0db63b9f4c10e4643f10ab8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga40d17e8ee0db63b9f4c10e4643f10ab8">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[60/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga40d17e8ee0db63b9f4c10e4643f10ab8">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[62/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32842,7 +33026,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga78a89c53025b68de1a02389cdf2b01fb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga78a89c53025b68de1a02389cdf2b01fb">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[61/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga78a89c53025b68de1a02389cdf2b01fb">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[63/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32882,7 +33066,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gafd38bf9e4d048b5ac33f160e7f182494"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafd38bf9e4d048b5ac33f160e7f182494">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[62/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gafd38bf9e4d048b5ac33f160e7f182494">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[64/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32922,7 +33106,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga84e89e52479f1ccd693dc00021d8e42c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga84e89e52479f1ccd693dc00021d8e42c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[63/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84e89e52479f1ccd693dc00021d8e42c">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[65/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -32962,7 +33146,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga3d32fa7feb91371a11ed1f4fe86b53ea"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga3d32fa7feb91371a11ed1f4fe86b53ea">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[64/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga3d32fa7feb91371a11ed1f4fe86b53ea">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[66/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33002,7 +33186,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gab260725384935aee7dd60f64dff5d776"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab260725384935aee7dd60f64dff5d776">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[65/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab260725384935aee7dd60f64dff5d776">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[67/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33042,7 +33226,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga6adb1d842184afaf3d1a7793d66d39a2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga6adb1d842184afaf3d1a7793d66d39a2">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[66/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga6adb1d842184afaf3d1a7793d66d39a2">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[68/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33082,7 +33266,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga892dee4b4a7033efe75267fadc7d7098"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga892dee4b4a7033efe75267fadc7d7098">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[67/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga892dee4b4a7033efe75267fadc7d7098">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[69/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33122,7 +33306,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gad07de48a59b98a35e1cf464418e04ded"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad07de48a59b98a35e1cf464418e04ded">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[68/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gad07de48a59b98a35e1cf464418e04ded">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[70/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33162,7 +33346,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="gaa4e91737891b3a2ba94bf313be1408c3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaa4e91737891b3a2ba94bf313be1408c3">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[69/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaa4e91737891b3a2ba94bf313be1408c3">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[71/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33202,7 +33386,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga79f48bb388b1a3ec7d453c3875255a8e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga79f48bb388b1a3ec7d453c3875255a8e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[70/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga79f48bb388b1a3ec7d453c3875255a8e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[72/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33242,7 +33426,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga638fd8bb5664d7dcf0b912087a3f0e30"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga638fd8bb5664d7dcf0b912087a3f0e30">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[71/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga638fd8bb5664d7dcf0b912087a3f0e30">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[73/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33282,7 +33466,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div>
 </div>
 <a id="ga1a512454232e8d5145cd265de178d019"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga1a512454232e8d5145cd265de178d019">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[72/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga1a512454232e8d5145cd265de178d019">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[74/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33322,7 +33506,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="gab8ddccf85906f6ad3061154c35b3f28b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gab8ddccf85906f6ad3061154c35b3f28b">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[73/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gab8ddccf85906f6ad3061154c35b3f28b">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[75/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33362,7 +33546,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div>
 </div>
 <a id="ga39180cc00ea8c00701e22eb6196cfbbb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga39180cc00ea8c00701e22eb6196cfbbb">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[74/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga39180cc00ea8c00701e22eb6196cfbbb">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[76/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33402,7 +33586,7 @@ template&lt;class TElementData &gt; </div>
 </div>
 </div>
 <a id="gaaa0318fd7a5049e5479efdae07a2473e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gaaa0318fd7a5049e5479efdae07a2473e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[75/75]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaa0318fd7a5049e5479efdae07a2473e">&#9670;&nbsp;</a></span>operator&gt;&gt;() <span class="overload">[77/77]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -33475,6 +33659,40 @@ template&lt;class TElementData &gt; </div>
 </div><div class="memdoc">
 
 <p>Copy constructor. </p>
+
+</div>
+</div>
+<a id="gaf53d0b4253039a0f2307ac7566047176"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaf53d0b4253039a0f2307ac7566047176">&#9670;&nbsp;</a></span>PostprocessP2P1ContinuousPressure()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::FluidAuxiliaryUtilities::PostprocessP2P1ContinuousPressure </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Postprocess the midpoint nodes pressure in P2P1 elements This function takes the edges' midpoint nodes in P2P1 elements and postprocess the pressure, which is assumed to be stored in PRESSURE historical variable, from the edges' endpoint values. Note that the nodal flag VISITED is used to mark the nodes which pressure has been already set. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part to which the pressure is to be postprocessed </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -40361,7 +40579,7 @@ template&lt;unsigned int TDim&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 27 2024 03:08:27 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue May 28 2024 03:10:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

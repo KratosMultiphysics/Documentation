@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['thermal_20dem_20application_78052',['Thermal DEM Application',['../d0/d35/md__home_runner_work__documentation__documentation_master_applications__thermal_d_e_m_application__r_e_a_d_m_e.html',1,'']]],
-  ['todo_20list_78053',['Todo List',['../dd/da0/todo.html',1,'']]],
-  ['trilinos_20application_78054',['Trilinos Application',['../d7/d2c/md__home_runner_work__documentation__documentation_master_applications__trilinos_application__r_e_a_d_m_e.html',1,'']]]
+  ['shallow_20water_20application_78151',['Shallow water application',['../d3/d61/md__home_runner_work__documentation__documentation_master_applications__shallow_water_application__r_e_a_d_m_e.html',1,'']]],
+  ['shapeoptimizationapplication_78152',['ShapeOptimizationApplication',['../d5/dc0/md__home_runner_work__documentation__documentation_master_applications__shape_optimization_application__r_e_a_d_m_e.html',1,'']]],
+  ['solid_20mechanics_20application_78153',['Solid Mechanics Application',['../d2/dc7/md__home_runner_work__documentation__documentation_master_applications__solid_mechanics_application__r_e_a_d_m_e.html',1,'']]],
+  ['statistics_20application_78154',['Statistics Application',['../d7/dd8/md__home_runner_work__documentation__documentation_master_applications__statistics_application__r_e_a_d_m_e.html',1,'']]],
+  ['structural_20mechanics_20application_78155',['Structural Mechanics Application',['../df/dd5/md__home_runner_work__documentation__documentation_master_applications__structural_mechanics_application__r_e_a_d_m_e.html',1,'']]]
 ];
