@@ -77,6 +77,8 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
+<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="../../df/dbb/class_kratos_1_1_stress_state_policy-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Kratos::StressStatePolicy Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
@@ -87,13 +89,13 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for Kratos::StressStatePolicy:</div>
 <div class="dyncontent">
-<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d3/de7/class_kratos_1_1_stress_state_policy__inherit__graph.svg" width="100%" height="548"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d3/de7/class_kratos_1_1_stress_state_policy__inherit__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for Kratos::StressStatePolicy:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d4/d48/class_kratos_1_1_stress_state_policy__coll__graph.svg" width="260" height="147"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d4/d48/class_kratos_1_1_stress_state_policy__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <table class="memberdecls">
@@ -109,6 +111,30 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:acd8dca1c25250439d2a994e80b5dea65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad640b90a046455ea66c63157d3c4de12"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr&lt; <a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">StressStatePolicy</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#ad640b90a046455ea66c63157d3c4de12">Clone</a> () const =0</td></tr>
 <tr class="separator:ad640b90a046455ea66c63157d3c4de12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8521169e8e9877193a60518b905fc41"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#ae8521169e8e9877193a60518b905fc41">GetVoigtVector</a> () const =0</td></tr>
+<tr class="separator:ae8521169e8e9877193a60518b905fc41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44a7b4966cf74231a67a27f9eb221c6"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#aa44a7b4966cf74231a67a27f9eb221c6">GetVoigtSize</a> () const =0</td></tr>
+<tr class="separator:aa44a7b4966cf74231a67a27f9eb221c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85e123b2e799a6f8031a09df1d689a1c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a85e123b2e799a6f8031a09df1d689a1c">GetStressTensorSize</a> () const =0</td></tr>
+<tr class="separator:a85e123b2e799a6f8031a09df1d689a1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:a7e36bba0d38ad97f54be2044f6f17813"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a7e36bba0d38ad97f54be2044f6f17813">GetVoigtSize2D</a> ()</td></tr>
+<tr class="separator:a7e36bba0d38ad97f54be2044f6f17813"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9bd21a2e5357d7585c2155bb58c0d659"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a9bd21a2e5357d7585c2155bb58c0d659">GetVoigtSize3D</a> ()</td></tr>
+<tr class="separator:a9bd21a2e5357d7585c2155bb58c0d659"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3e83d1c24e7acf7879e2273bdb11eb4"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#ad3e83d1c24e7acf7879e2273bdb11eb4">GetStressTensorSize2D</a> ()</td></tr>
+<tr class="separator:ad3e83d1c24e7acf7879e2273bdb11eb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acf1740b20f9fd4f68ef6efacea9c8e3b"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#acf1740b20f9fd4f68ef6efacea9c8e3b">GetStressTensorSize3D</a> ()</td></tr>
+<tr class="separator:acf1740b20f9fd4f68ef6efacea9c8e3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:a75e1306e7ec7d78b7659005b702dc839"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a75e1306e7ec7d78b7659005b702dc839">VoigtVector2D</a> = StressStatePolicy::DefineVoigtVector(2)</td></tr>
+<tr class="separator:a75e1306e7ec7d78b7659005b702dc839"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3e59e84441f78d6ee1704d9fdd81c5f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#af3e59e84441f78d6ee1704d9fdd81c5f">VoigtVector3D</a> = StressStatePolicy::DefineVoigtVector(3)</td></tr>
+<tr class="separator:af3e59e84441f78d6ee1704d9fdd81c5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3af49e9ae1ebb0c84e0bfa1f27dcce83"></a>
@@ -280,13 +306,240 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a id="a85e123b2e799a6f8031a09df1d689a1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a85e123b2e799a6f8031a09df1d689a1c">&#9670;&nbsp;</a></span>GetStressTensorSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a> Kratos::StressStatePolicy::GetStressTensorSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../dc/d87/class_kratos_1_1_three_dimensional_stress_state.html#a9a398c03297233890f5457442ad19f7d">Kratos::ThreeDimensionalStressState</a>, <a class="el" href="../../da/d2d/class_kratos_1_1_plane_strain_stress_state.html#a075ad4d4a1c987d73f4baad249a831ad">Kratos::PlaneStrainStressState</a>, and <a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#ae69a446c25957f17adf5a77f7d895477">Kratos::AxisymmetricStressState</a>.</p>
+
+</div>
+</div>
+<a id="ad3e83d1c24e7acf7879e2273bdb11eb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3e83d1c24e7acf7879e2273bdb11eb4">&#9670;&nbsp;</a></span>GetStressTensorSize2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a> Kratos::StressStatePolicy::GetStressTensorSize2D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="acf1740b20f9fd4f68ef6efacea9c8e3b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf1740b20f9fd4f68ef6efacea9c8e3b">&#9670;&nbsp;</a></span>GetStressTensorSize3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a> Kratos::StressStatePolicy::GetStressTensorSize3D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa44a7b4966cf74231a67a27f9eb221c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa44a7b4966cf74231a67a27f9eb221c6">&#9670;&nbsp;</a></span>GetVoigtSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a> Kratos::StressStatePolicy::GetVoigtSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../dc/d87/class_kratos_1_1_three_dimensional_stress_state.html#a4bf38f43e8c0f386738970cf43358071">Kratos::ThreeDimensionalStressState</a>, <a class="el" href="../../da/d2d/class_kratos_1_1_plane_strain_stress_state.html#a0fc9686cc6a229c2c37eaaaed58bf874">Kratos::PlaneStrainStressState</a>, and <a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#a20962d8eb985da19e01155297c3eedaa">Kratos::AxisymmetricStressState</a>.</p>
+
+</div>
+</div>
+<a id="a7e36bba0d38ad97f54be2044f6f17813"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7e36bba0d38ad97f54be2044f6f17813">&#9670;&nbsp;</a></span>GetVoigtSize2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a> Kratos::StressStatePolicy::GetVoigtSize2D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9bd21a2e5357d7585c2155bb58c0d659"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9bd21a2e5357d7585c2155bb58c0d659">&#9670;&nbsp;</a></span>GetVoigtSize3D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a> Kratos::StressStatePolicy::GetVoigtSize3D </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae8521169e8e9877193a60518b905fc41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8521169e8e9877193a60518b905fc41">&#9670;&nbsp;</a></span>GetVoigtVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; Kratos::StressStatePolicy::GetVoigtVector </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="../../dc/d87/class_kratos_1_1_three_dimensional_stress_state.html#a8367864083d3e7d0384476767abbe3a0">Kratos::ThreeDimensionalStressState</a>, <a class="el" href="../../da/d2d/class_kratos_1_1_plane_strain_stress_state.html#af908768ab95089bf6c1732f37b311031">Kratos::PlaneStrainStressState</a>, and <a class="el" href="../../d1/d83/class_kratos_1_1_axisymmetric_stress_state.html#a570662f43f9de4339124ba9f3f714617">Kratos::AxisymmetricStressState</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a75e1306e7ec7d78b7659005b702dc839"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a75e1306e7ec7d78b7659005b702dc839">&#9670;&nbsp;</a></span>VoigtVector2D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> Kratos::StressStatePolicy::VoigtVector2D = StressStatePolicy::DefineVoigtVector(2)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af3e59e84441f78d6ee1704d9fdd81c5f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3e59e84441f78d6ee1704d9fdd81c5f">&#9670;&nbsp;</a></span>VoigtVector3D</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> Kratos::StressStatePolicy::VoigtVector3D = StressStatePolicy::DefineVoigtVector(3)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_elements/<a class="el" href="../../d8/dd1/stress__state__policy_8h_source.html">stress_state_policy.h</a></li>
+<li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_elements/<a class="el" href="../../d8/d88/stress__state__policy_8cpp.html">stress_state_policy.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 28 2024 03:39:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed May 29 2024 03:38:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

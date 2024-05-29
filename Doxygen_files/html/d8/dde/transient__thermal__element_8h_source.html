@@ -169,8 +169,8 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        </div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> integration_coefficients = CalculateIntegrationCoefficients(det_J_container);</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> conductivity_matrix =</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            CalculateConductivityMatrix(dN_dX_container, integration_coefficients, rCurrentProcessInfo);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> capacity_matrix = CalculateCapacityMatrix(integration_coefficients, rCurrentProcessInfo);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            CalculateConductivityMatrix(dN_dX_container, integration_coefficients);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> capacity_matrix = CalculateCapacityMatrix(integration_coefficients);</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        AddContributionsToLhsMatrix(rLeftHandSideMatrix, conductivity_matrix, capacity_matrix,</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                                    rCurrentProcessInfo[DT_TEMPERATURE_COEFFICIENT]);</div>
@@ -347,101 +347,99 @@ $(function() {
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt; CalculateConductivityMatrix(</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">GeometryType::ShapeFunctionsGradientsType</a>&amp; rShapeFunctionGradients,</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp;                                    rIntegrationCoefficients,</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <span class="keyword">const</span> ProcessInfo&amp;                               rCurrentProcessInfo)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> law = CreateThermalLaw();</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> constitutive_matrix = law-&gt;CalculateThermalDispersionMatrix(GetProperties(), rCurrentProcessInfo);</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keyword">auto</span> result = BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt;{<a class="code" href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">ZeroMatrix</a>{TNumNodes, TNumNodes}};</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> integration_point_index = 0;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;             integration_point_index &lt; GetGeometry().IntegrationPointsNumber(GetIntegrationMethod());</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;             ++integration_point_index) {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            BoundedMatrix&lt;double, TDim, TNumNodes&gt; <a class="code" href="../../d7/d1c/namespace_peclet_test.html#a1ad6f3317c56f82fd316a61aa344c28d">Temp</a> =</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                <a class="code" href="../../db/d66/namespace_kratos.html#a63ea2d1c3abad6c974480d8ca9eb7bba">prod</a>(constitutive_matrix, <a class="code" href="../../db/d66/namespace_kratos.html#abe689ad156630b755bfd4a6b92ded2c0">trans</a>(rShapeFunctionGradients[integration_point_index]));</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            result += <a class="code" href="../../db/d66/namespace_kratos.html#a63ea2d1c3abad6c974480d8ca9eb7bba">prod</a>(rShapeFunctionGradients[integration_point_index], <a class="code" href="../../d7/d1c/namespace_peclet_test.html#a1ad6f3317c56f82fd316a61aa344c28d">Temp</a>) *</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                      rIntegrationCoefficients[integration_point_index];</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;        }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    }</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt; CalculateCapacityMatrix(<span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rIntegrationCoefficients,</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                                                                        <span class="keyword">const</span> ProcessInfo&amp; rCurrentProcessInfo)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp;              r_properties = GetProperties();</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        RetentionLaw::Parameters <a class="code" href="../../d6/dfc/namespacefluid__chimera__analysis.html#a478ba81a91db4a67740637b0d16012ce">parameters</a>(r_properties, rCurrentProcessInfo);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keyword">auto</span>                     retention_law = <a class="code" href="../../d9/d8b/class_kratos_1_1_retention_law_factory.html#a973318f473570077106b7160107c7bc2">RetentionLawFactory::Clone</a>(r_properties);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span>             saturation    = retention_law-&gt;CalculateSaturation(<a class="code" href="../../d6/dfc/namespacefluid__chimera__analysis.html#a478ba81a91db4a67740637b0d16012ce">parameters</a>);</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> c_water = r_properties[POROSITY] * saturation * r_properties[DENSITY_WATER] *</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                             r_properties[SPECIFIC_HEAT_CAPACITY_WATER];</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> c_solid = (1.0 - r_properties[POROSITY]) * r_properties[DENSITY_SOLID] *</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                             r_properties[SPECIFIC_HEAT_CAPACITY_SOLID];</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keyword">auto</span> result = BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt;{<a class="code" href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">ZeroMatrix</a>{TNumNodes, TNumNodes}};</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_N_container = GetGeometry().ShapeFunctionsValues(GetIntegrationMethod());</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> integration_point_index = 0;</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;             integration_point_index &lt; GetGeometry().IntegrationPointsNumber(GetIntegrationMethod());</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;             ++integration_point_index) {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a> = <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>{<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>(r_N_container, integration_point_index)};</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            result += (c_water + c_solid) * <a class="code" href="../../db/d66/namespace_kratos.html#a89823cae8c60a522d1b54a8beaba33d9">outer_prod</a>(<a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>, <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) * rIntegrationCoefficients[integration_point_index];</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    }</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    array_1d&lt;double, TNumNodes&gt; GetNodalValuesOf(<span class="keyword">const</span> Variable&lt;double&gt;&amp; rNodalVariable)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keyword">auto</span>        result     = array_1d&lt;double, TNumNodes&gt;{};</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_geometry = GetGeometry();</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        std::transform(r_geometry.begin(), r_geometry.end(), result.begin(), [&amp;rNodalVariable](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code" href="../../d5/da1/structnode.html">node</a>) {</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            return node.FastGetSolutionStepValue(rNodalVariable);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        });</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    }</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    std::unique_ptr&lt;GeoThermalLaw&gt; CreateThermalLaw()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        <span class="keyword">const</span> std::size_t number_of_dimensions = GetGeometry().LocalSpaceDimension();</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        std::unique_ptr&lt;GeoThermalLaw&gt; law;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">if</span> (GetProperties().<a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ae00c89a2ab9fa248081a81fe28a50ae3">Has</a>(THERMAL_LAW_NAME)) {</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <span class="keyword">const</span> std::string&amp; rThermalLawName = GetProperties()[THERMAL_LAW_NAME];</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">if</span> (rThermalLawName == <span class="stringliteral">&quot;GeoThermalDispersionLaw&quot;</span>) {</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                law = std::make_unique&lt;GeoThermalDispersionLaw&gt;(number_of_dimensions);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;            } </div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rThermalLawName == <span class="stringliteral">&quot;GeoThermalFilterLaw&quot;</span>) {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                law = std::make_unique&lt;GeoThermalFilterLaw&gt;();</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            } </div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                <a class="code" href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a> &lt;&lt; <span class="stringliteral">&quot;Undefined THERMAL_LAW_NAME! &quot;</span> &lt;&lt; rThermalLawName &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        } </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            law = std::make_unique&lt;GeoThermalDispersionLaw&gt;(number_of_dimensions);</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        }</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <span class="keywordflow">return</span> law;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    }</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;    [[nodiscard]] DofsVectorType GetDofs()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#a1874d0ac495fb927956e165dacdbfb97">Geo::DofUtilities::ExtractDofsFromNodes</a>(GetGeometry(), TEMPERATURE);</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp;                                    rIntegrationCoefficients)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> law = CreateThermalLaw();</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> constitutive_matrix = law-&gt;CalculateThermalDispersionMatrix(GetProperties());</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keyword">auto</span> result = BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt;{<a class="code" href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">ZeroMatrix</a>{TNumNodes, TNumNodes}};</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> integration_point_index = 0;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;             integration_point_index &lt; GetGeometry().IntegrationPointsNumber(GetIntegrationMethod());</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;             ++integration_point_index) {</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            BoundedMatrix&lt;double, TDim, TNumNodes&gt; <a class="code" href="../../d7/d1c/namespace_peclet_test.html#a1ad6f3317c56f82fd316a61aa344c28d">Temp</a> =</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                <a class="code" href="../../db/d66/namespace_kratos.html#a63ea2d1c3abad6c974480d8ca9eb7bba">prod</a>(constitutive_matrix, <a class="code" href="../../db/d66/namespace_kratos.html#abe689ad156630b755bfd4a6b92ded2c0">trans</a>(rShapeFunctionGradients[integration_point_index]));</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            result += <a class="code" href="../../db/d66/namespace_kratos.html#a63ea2d1c3abad6c974480d8ca9eb7bba">prod</a>(rShapeFunctionGradients[integration_point_index], <a class="code" href="../../d7/d1c/namespace_peclet_test.html#a1ad6f3317c56f82fd316a61aa344c28d">Temp</a>) *</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                      rIntegrationCoefficients[integration_point_index];</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt; CalculateCapacityMatrix(<span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; rIntegrationCoefficients)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp;              r_properties = GetProperties();</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        RetentionLaw::Parameters <a class="code" href="../../d6/dfc/namespacefluid__chimera__analysis.html#a478ba81a91db4a67740637b0d16012ce">parameters</a>(r_properties);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keyword">auto</span>                     retention_law = <a class="code" href="../../d9/d8b/class_kratos_1_1_retention_law_factory.html#a973318f473570077106b7160107c7bc2">RetentionLawFactory::Clone</a>(r_properties);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span>             saturation    = retention_law-&gt;CalculateSaturation(<a class="code" href="../../d6/dfc/namespacefluid__chimera__analysis.html#a478ba81a91db4a67740637b0d16012ce">parameters</a>);</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> c_water = r_properties[POROSITY] * saturation * r_properties[DENSITY_WATER] *</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                             r_properties[SPECIFIC_HEAT_CAPACITY_WATER];</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> c_solid = (1.0 - r_properties[POROSITY]) * r_properties[DENSITY_SOLID] *</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                             r_properties[SPECIFIC_HEAT_CAPACITY_SOLID];</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keyword">auto</span> result = BoundedMatrix&lt;double, TNumNodes, TNumNodes&gt;{<a class="code" href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">ZeroMatrix</a>{TNumNodes, TNumNodes}};</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_N_container = GetGeometry().ShapeFunctionsValues(GetIntegrationMethod());</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> integration_point_index = 0;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;             integration_point_index &lt; GetGeometry().IntegrationPointsNumber(GetIntegrationMethod());</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;             ++integration_point_index) {</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a> = <a class="code" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>{<a class="code" href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">row</a>(r_N_container, integration_point_index)};</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            result += (c_water + c_solid) * <a class="code" href="../../db/d66/namespace_kratos.html#a89823cae8c60a522d1b54a8beaba33d9">outer_prod</a>(<a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>, <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) * rIntegrationCoefficients[integration_point_index];</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;        }</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    }</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    array_1d&lt;double, TNumNodes&gt; GetNodalValuesOf(<span class="keyword">const</span> Variable&lt;double&gt;&amp; rNodalVariable)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keyword">auto</span>        result     = array_1d&lt;double, TNumNodes&gt;{};</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_geometry = GetGeometry();</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        std::transform(r_geometry.begin(), r_geometry.end(), result.begin(), [&amp;rNodalVariable](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; <a class="code" href="../../d5/da1/structnode.html">node</a>) {</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            return node.FastGetSolutionStepValue(rNodalVariable);</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        });</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    std::unique_ptr&lt;GeoThermalLaw&gt; CreateThermalLaw()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keyword">const</span> std::size_t number_of_dimensions = GetGeometry().LocalSpaceDimension();</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        std::unique_ptr&lt;GeoThermalLaw&gt; law;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        </div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        <span class="keywordflow">if</span> (GetProperties().<a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ae00c89a2ab9fa248081a81fe28a50ae3">Has</a>(THERMAL_LAW_NAME)) {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keyword">const</span> std::string&amp; rThermalLawName = GetProperties()[THERMAL_LAW_NAME];</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <span class="keywordflow">if</span> (rThermalLawName == <span class="stringliteral">&quot;GeoThermalDispersionLaw&quot;</span>) {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                law = std::make_unique&lt;GeoThermalDispersionLaw&gt;(number_of_dimensions);</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            } </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (rThermalLawName == <span class="stringliteral">&quot;GeoThermalFilterLaw&quot;</span>) {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                law = std::make_unique&lt;GeoThermalFilterLaw&gt;();</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            } </div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                <a class="code" href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a> &lt;&lt; <span class="stringliteral">&quot;Undefined THERMAL_LAW_NAME! &quot;</span> &lt;&lt; rThermalLawName &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        } </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;            law = std::make_unique&lt;GeoThermalDispersionLaw&gt;(number_of_dimensions);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">return</span> law;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;    [[nodiscard]] DofsVectorType GetDofs()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d2/dfa/namespace_kratos_1_1_geo_1_1_dof_utilities.html#a1874d0ac495fb927956e165dacdbfb97">Geo::DofUtilities::ExtractDofsFromNodes</a>(GetGeometry(), TEMPERATURE);</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    }</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
+<div class="line"><a name="l00348"></a><span class="lineno"><a class="line" href="../../d6/da0/class_kratos_1_1_transient_thermal_element.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  348</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno"><a class="line" href="../../d6/da0/class_kratos_1_1_transient_thermal_element.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  350</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160; </div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>)</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>)</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    }</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;};</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160; </div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>)</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>)</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    }</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;};</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;} <span class="comment">// namespace Kratos</span></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html">Kratos::Element</a></div><div class="ttdoc">Base class for all Elements.</div><div class="ttdef"><b>Definition:</b> element.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_a83ae9b09dd7a0ed7ab3bc1baa6429df5"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Kratos::Element::DofsVectorType</a></div><div class="ttdeci">std::vector&lt; DofType::Pointer &gt; DofsVectorType</div><div class="ttdef"><b>Definition:</b> element.h:100</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_ae71a1a55ae484b69ec9ec5f18919e324"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Kratos::Element::EquationIdVectorType</a></div><div class="ttdeci">std::vector&lt; std::size_t &gt; EquationIdVectorType</div><div class="ttdef"><b>Definition:</b> element.h:98</div></div>
@@ -507,7 +505,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 28 2024 02:19:55 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed May 29 2024 02:20:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

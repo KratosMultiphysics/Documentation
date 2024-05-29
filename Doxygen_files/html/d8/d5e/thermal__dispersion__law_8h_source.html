@@ -111,7 +111,7 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="../../d1/da0/class_kratos_1_1_geo_thermal_dispersion_law.html">GeoThermalDispersionLaw</a>(<a class="code" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a> NumberOfDimensions);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> CalculateThermalDispersionMatrix(<span class="keyword">const</span> <a class="code" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a>&amp; rProp, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rProcessInfo) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    [[nodiscard]] <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> CalculateThermalDispersionMatrix(<span class="keyword">const</span> <a class="code" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a>&amp; rProp) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    std::size_t mNumberOfDimensions = 2;</div>
@@ -134,7 +134,6 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_geo_thermal_dispersion_law_html_ae38f53bf8871eff600e932c38872536a"><div class="ttname"><a href="../../d1/da0/class_kratos_1_1_geo_thermal_dispersion_law.html#ae38f53bf8871eff600e932c38872536a">Kratos::GeoThermalDispersionLaw::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(GeoThermalDispersionLaw)</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geo_thermal_law_html"><div class="ttname"><a href="../../dd/d0b/class_kratos_1_1_geo_thermal_law.html">Kratos::GeoThermalLaw</a></div><div class="ttdef"><b>Definition:</b> thermal_law.h:24</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, AMatrix::dynamic &gt;</a></div></div>
-<div class="ttc" id="aclass_kratos_1_1_process_info_html"><div class="ttname"><a href="../../db/deb/class_kratos_1_1_process_info.html">Kratos::ProcessInfo</a></div><div class="ttdoc">ProcessInfo holds the current value of different solution parameters.</div><div class="ttdef"><b>Definition:</b> process_info.h:59</div></div>
 <div class="ttc" id="aclass_kratos_1_1_properties_html"><div class="ttname"><a href="../../d7/d7a/class_kratos_1_1_properties.html">Kratos::Properties</a></div><div class="ttdoc">Properties encapsulates data shared by different Elements or Conditions. It can store any type of dat...</div><div class="ttdef"><b>Definition:</b> properties.h:69</div></div>
 <div class="ttc" id="aclass_kratos_1_1_serializer_html"><div class="ttname"><a href="../../dd/d32/class_kratos_1_1_serializer.html">Kratos::Serializer</a></div><div class="ttdoc">The serialization consists in storing the state of an object into a storage format like data file or ...</div><div class="ttdef"><b>Definition:</b> serializer.h:123</div></div>
 <div class="ttc" id="aclass_kratos_1_1_serializer_html_a0a850102ec5368a32f2c3596f581a4ec"><div class="ttname"><a href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">Kratos::Serializer::load</a></div><div class="ttdeci">void load(std::string const &amp;rTag, TDataType &amp;rObject)</div><div class="ttdef"><b>Definition:</b> serializer.h:207</div></div>
@@ -146,7 +145,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue May 28 2024 02:19:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed May 29 2024 02:20:20 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
