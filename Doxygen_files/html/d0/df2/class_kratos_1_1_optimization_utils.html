@@ -130,8 +130,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ba5bc9eee6be8f299cdd3d89b7db930"><td class="memTemplParams" colspan="2">template&lt;class TDataType &gt; </td></tr>
 <tr class="memitem:a9ba5bc9eee6be8f299cdd3d89b7db930"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../d0/df2/class_kratos_1_1_optimization_utils.html#a7db3762607609bbdd411c99070e80929">IndexType</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/df2/class_kratos_1_1_optimization_utils.html#a9ba5bc9eee6be8f299cdd3d89b7db930">GetVariableDimension</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;rVariable, const <a class="el" href="../../d0/df2/class_kratos_1_1_optimization_utils.html#a7db3762607609bbdd411c99070e80929">IndexType</a> DomainSize)</td></tr>
 <tr class="separator:a9ba5bc9eee6be8f299cdd3d89b7db930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4fbb6f7e5d0e3c3ba14ee1eddcc3a447"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df2/class_kratos_1_1_optimization_utils.html#a4fbb6f7e5d0e3c3ba14ee1eddcc3a447">CopySolutionStepVariablesList</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rDestinationModelPart, const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rOriginModelPart)</td></tr>
-<tr class="separator:a4fbb6f7e5d0e3c3ba14ee1eddcc3a447"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:add1f762576d017d8ce320f3c05f27305"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df2/class_kratos_1_1_optimization_utils.html#add1f762576d017d8ce320f3c05f27305">SetSolutionStepVariablesList</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rDestinationModelPart, const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rOriginModelPart)</td></tr>
+<tr class="separator:add1f762576d017d8ce320f3c05f27305"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a84129e151f86fe4664961d8d10d2fd2b"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df2/class_kratos_1_1_optimization_utils.html#a84129e151f86fe4664961d8d10d2fd2b">IsSolutionStepVariablesListASubSet</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rMainSetModelPart, const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rSubSetModelPart)</td></tr>
 <tr class="separator:a84129e151f86fe4664961d8d10d2fd2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac76b4b69578f83fe9d08ff9fe9d99359"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; std::vector&lt; <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> * &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/df2/class_kratos_1_1_optimization_utils.html#ac76b4b69578f83fe9d08ff9fe9d99359">GetComponentWiseModelParts</a> (<a class="el" href="../../d4/d95/class_kratos_1_1_model.html">Model</a> &amp;rModel, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> Settings)</td></tr>
@@ -153,42 +153,6 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a4fbb6f7e5d0e3c3ba14ee1eddcc3a447"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4fbb6f7e5d0e3c3ba14ee1eddcc3a447">&#9670;&nbsp;</a></span>CopySolutionStepVariablesList()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::OptimizationUtils::CopySolutionStepVariablesList </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
-          <td class="paramname"><em>rDestinationModelPart</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
-          <td class="paramname"><em>rOriginModelPart</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="aabffb2754ae97dd4d9e97d22bd2aa8ef"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aabffb2754ae97dd4d9e97d22bd2aa8ef">&#9670;&nbsp;</a></span>CreateEntitySpecificPropertiesForContainer()</h2>
 
@@ -523,6 +487,42 @@ template&lt;class TContainerType , class TDataType &gt; </div>
 
 </div>
 </div>
+<a id="add1f762576d017d8ce320f3c05f27305"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add1f762576d017d8ce320f3c05f27305">&#9670;&nbsp;</a></span>SetSolutionStepVariablesList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::OptimizationUtils::SetSolutionStepVariablesList </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDestinationModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rOriginModelPart</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/applications/OptimizationApplication/custom_utilities/<a class="el" href="../../d8/dc1/optimization__utils_8h_source.html">optimization_utils.h</a></li>
 <li>/home/runner/work/Documentation/Documentation/master/applications/OptimizationApplication/custom_utilities/<a class="el" href="../../d8/d17/optimization__utils_8cpp.html">optimization_utils.cpp</a></li>
@@ -530,7 +530,7 @@ template&lt;class TContainerType , class TDataType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 30 2024 03:41:22 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri May 31 2024 03:39:59 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -720,6 +720,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a7063ea4c38429b44d3ed5b759ce7770c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b9186464d398bdb2818859541a6dc00"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a0b9186464d398bdb2818859541a6dc00">CalculateRelativePermeabilityValues</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rFluidPressures) const</td></tr>
 <tr class="separator:a0b9186464d398bdb2818859541a6dc00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae37e5212912e5a2bbeafe27521e7187e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#ae37e5212912e5a2bbeafe27521e7187e">CalculateBishopCoefficients</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rFluidPressures) const</td></tr>
+<tr class="separator:ae37e5212912e5a2bbeafe27521e7187e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a893c4e976a7df1a974139cfae47c0476"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a893c4e976a7df1a974139cfae47c0476">CalculateAndAddPermeabilityFlow</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables)</td></tr>
 <tr class="separator:a893c4e976a7df1a974139cfae47c0476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7483fbc1fb05ae585277246a8b800191"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a7483fbc1fb05ae585277246a8b800191">CalculatePermeabilityFlow</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes, TNumNodes &gt; &amp;rPMatrix, <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TNumNodes &gt; &amp;rPVector, const <a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables) const</td></tr>
@@ -744,12 +746,10 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:acf0faa3fbce421850a17a14bee42e637"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5031d35e834f3896307a9df26a024e99"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a5031d35e834f3896307a9df26a024e99">CalculateFluidFluxes</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rPermeabilityUpdateFactors, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
 <tr class="separator:a5031d35e834f3896307a9df26a024e99"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12caa02d5ec4c6ead11267bb24c8cc84"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a12caa02d5ec4c6ead11267bb24c8cc84">CalculateRetentionResponse</a> (<a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;rVariables, <a class="el" href="../../d4/de9/class_kratos_1_1_retention_law_1_1_parameters.html">RetentionLaw::Parameters</a> &amp;rRetentionParameters, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> GPoint)</td></tr>
-<tr class="separator:a12caa02d5ec4c6ead11267bb24c8cc84"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a041ac6d1be6625d625b067fb4a385668"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a041ac6d1be6625d625b067fb4a385668">CalculateDegreesOfSaturation</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rFluidPressures)</td></tr>
-<tr class="separator:a041ac6d1be6625d625b067fb4a385668"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a24e624de2e7b39ab86920a08c2b128ed"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a24e624de2e7b39ab86920a08c2b128ed">CalculateDerivativesOfSaturation</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rFluidPressures)</td></tr>
-<tr class="separator:a24e624de2e7b39ab86920a08c2b128ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19295b1433d6757e9bde69d0111a202e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a19295b1433d6757e9bde69d0111a202e">CalculateDegreesOfSaturation</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rFluidPressures) const</td></tr>
+<tr class="separator:a19295b1433d6757e9bde69d0111a202e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8a4890b4b3a98c2e19e3bb5d3dff9b13"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a8a4890b4b3a98c2e19e3bb5d3dff9b13">CalculateDerivativesOfSaturation</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rFluidPressures) const</td></tr>
+<tr class="separator:a8a4890b4b3a98c2e19e3bb5d3dff9b13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbd458a752f71a9562a0293ed9f4dbfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#acbd458a752f71a9562a0293ed9f4dbfc">CalculateAnyOfMaterialResponse</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;rDeformationGradients, <a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rConstitutiveParameters, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rNuContainer, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">GeometryType::ShapeFunctionsGradientsType</a> &amp;rDNu_DXContainer, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rStrainVectors, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rStressVectors, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt; &amp;rConstitutiveMatrices)</td></tr>
 <tr class="memdesc:acbd458a752f71a9562a0293ed9f4dbfc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the constitutive matrices, stresses and strains depending on the constitutive parameters. Note that depending on the settings in the rConstitutiveParameters the function could calculate the stress, the constitutive matrix, the strains, or a combination. In our elements we generally always calculate the constitutive matrix and sometimes the stress.  <a href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#acbd458a752f71a9562a0293ed9f4dbfc">More...</a><br /></td></tr>
 <tr class="separator:acbd458a752f71a9562a0293ed9f4dbfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1839,6 +1839,34 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
+<a id="ae37e5212912e5a2bbeafe27521e7187e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae37e5212912e5a2bbeafe27521e7187e">&#9670;&nbsp;</a></span>CalculateBishopCoefficients()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html">Kratos::UPwSmallStrainElement</a>&lt; TDim, TNumNodes &gt;::CalculateBishopCoefficients </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rFluidPressures</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a26de32098825c8edc0f3531c95b026bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a26de32098825c8edc0f3531c95b026bc">&#9670;&nbsp;</a></span>CalculateBMatrices()</h2>
 
@@ -2011,8 +2039,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="a041ac6d1be6625d625b067fb4a385668"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a041ac6d1be6625d625b067fb4a385668">&#9670;&nbsp;</a></span>CalculateDegreesOfSaturation()</h2>
+<a id="a19295b1433d6757e9bde69d0111a202e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19295b1433d6757e9bde69d0111a202e">&#9670;&nbsp;</a></span>CalculateDegreesOfSaturation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2027,7 +2055,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>rFluidPressures</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2039,8 +2067,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="a24e624de2e7b39ab86920a08c2b128ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a24e624de2e7b39ab86920a08c2b128ed">&#9670;&nbsp;</a></span>CalculateDerivativesOfSaturation()</h2>
+<a id="a8a4890b4b3a98c2e19e3bb5d3dff9b13"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8a4890b4b3a98c2e19e3bb5d3dff9b13">&#9670;&nbsp;</a></span>CalculateDerivativesOfSaturation()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2055,7 +2083,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
           <td>(</td>
           <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>rFluidPressures</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -2715,50 +2743,6 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
           <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>rFluidPressures</em></td><td>)</td>
           <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a12caa02d5ec4c6ead11267bb24c8cc84"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12caa02d5ec4c6ead11267bb24c8cc84">&#9670;&nbsp;</a></span>CalculateRetentionResponse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html">Kratos::UPwSmallStrainElement</a>&lt; TDim, TNumNodes &gt;::CalculateRetentionResponse </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d0/d4d/struct_kratos_1_1_u_pw_small_strain_element_1_1_element_variables.html">ElementVariables</a> &amp;&#160;</td>
-          <td class="paramname"><em>rVariables</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d4/de9/class_kratos_1_1_retention_law_1_1_parameters.html">RetentionLaw::Parameters</a> &amp;&#160;</td>
-          <td class="paramname"><em>rRetentionParameters</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
-          <td class="paramname"><em>GPoint</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -3577,7 +3561,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu May 30 2024 03:38:03 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri May 31 2024 03:36:42 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
