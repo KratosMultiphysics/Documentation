@@ -228,7 +228,7 @@ $(function() {
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="comment">// Apply Tolerances (only in non zero BB cases)</span></div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = std::numeric_limits&lt;double&gt;::epsilon();</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">norm_2</a>(max_point) &gt; epsilon &amp;&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">norm_2</a>(min_point) &gt; epsilon) {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">norm_2</a>(max_point - min_point) &gt; epsilon) {</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>&lt;3; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                max_point[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>] += Tolerance;</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                min_point[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>] -= Tolerance;</div>
@@ -994,7 +994,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 4 2024 03:07:19 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jun 5 2024 03:07:21 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
