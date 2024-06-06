@@ -206,72 +206,76 @@ $(function() {
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> RemoveItem(std::string <span class="keyword">const</span>&amp; ItemName);</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">static</span> std::size_t size();</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> SetCurrentSource(std::string <span class="keyword">const</span> &amp; rCurrentSource);</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> HasItem(std::string <span class="keyword">const</span>&amp; rItemFullName);</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> HasValue(std::string <span class="keyword">const</span>&amp; rItemFullName);</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> HasItems(std::string <span class="keyword">const</span>&amp; rItemFullName);</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keyword">static</span> std::string GetCurrentSource();</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    std::string Info() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    <span class="keyword">static</span> std::size_t size();</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> HasItem(std::string <span class="keyword">const</span>&amp; rItemFullName);</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> HasValue(std::string <span class="keyword">const</span>&amp; rItemFullName);</div>
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;    <span class="keywordtype">void</span> PrintData(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    std::string ToJson(std::string <span class="keyword">const</span>&amp; Indentation) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> HasItems(std::string <span class="keyword">const</span>&amp; rItemFullName);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    std::string Info() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;    <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> PrintData(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>* mspRootRegistryItem;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    std::string ToJson(std::string <span class="keyword">const</span>&amp; Indentation) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160; </div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>&amp; GetRootRegistryItem();</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>* mspRootRegistryItem;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160; </div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
 <div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        <span class="keyword">static</span> std::vector&lt;std::string&gt; SplitFullName(std::string <span class="keyword">const</span>&amp; FullName);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;    <a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a>&amp; operator=(<a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        <span class="keyword">static</span> <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>&amp; GetRootRegistryItem();</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        <span class="keyword">static</span> std::vector&lt;std::string&gt; SplitFullName(std::string <span class="keyword">const</span>&amp; FullName);</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <a class="code" href="../../d1/d04/namespacepython__interface.html#a29ebcd63095c187a0595f6dc6b1c9602">Registry</a>(<a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a> <span class="keyword">const</span>&amp; rOther);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;}; <span class="comment">// Class Registry</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a>&amp; operator=(<a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a> <span class="keyword">const</span>&amp; rOther);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga430973c42174d4c55df7252c1d66c9c2">  246</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    std::istream&amp; rIStream,</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;    <a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a>&amp; rThis);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gab791f7387cf0719ea1cde1ed54a89059">  251</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    std::ostream&amp; rOStream,</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a>&amp; rThis)</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;{</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    rThis.<a class="code" href="../../d2/d93/class_kratos_1_1_registry.html#a7a107b78139f3f10376c55fe9d52d1a3">PrintInfo</a>(rOStream);</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;    rOStream &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    rThis.<a class="code" href="../../d2/d93/class_kratos_1_1_registry.html#ad238057a6faaa5e881cb417a233b84a2">PrintData</a>(rOStream);</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    <a class="code" href="../../d1/d04/namespacepython__interface.html#a29ebcd63095c187a0595f6dc6b1c9602">Registry</a>(<a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a> <span class="keyword">const</span>&amp; rOther);</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}; <span class="comment">// Class Registry</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga430973c42174d4c55df7252c1d66c9c2">  258</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    std::istream&amp; rIStream,</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a>&amp; rThis);</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gab791f7387cf0719ea1cde1ed54a89059">  263</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    std::ostream&amp; rOStream,</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d2/d93/class_kratos_1_1_registry.html">Registry</a>&amp; rThis)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;{</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    rThis.<a class="code" href="../../d2/d93/class_kratos_1_1_registry.html#a7a107b78139f3f10376c55fe9d52d1a3">PrintInfo</a>(rOStream);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    rOStream &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;    rThis.<a class="code" href="../../d2/d93/class_kratos_1_1_registry.html#ad238057a6faaa5e881cb417a233b84a2">PrintData</a>(rOStream);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;}</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="aclass_kratos_1_1_parallel_utilities_html_a7146ed97f94385f428655095e623c945"><div class="ttname"><a href="../../d3/da8/class_kratos_1_1_parallel_utilities.html#a7146ed97f94385f428655095e623c945">Kratos::ParallelUtilities::GetGlobalLock</a></div><div class="ttdeci">static LockObject &amp; GetGlobalLock()</div><div class="ttdoc">Returns the global lock Global lock that can be used for critical sections.</div><div class="ttdef"><b>Definition:</b> parallel_utilities.cpp:125</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_html"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html">Kratos::Registry</a></div><div class="ttdoc">Kratos base registry This class is intended to act as global registry Each time the AddItem method is...</div><div class="ttdef"><b>Definition:</b> registry.h:42</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_html_a063b31333f910e9c8cd414d2a7784141"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#a063b31333f910e9c8cd414d2a7784141">Kratos::Registry::Registry</a></div><div class="ttdeci">Registry()</div><div class="ttdoc">Default constructor.</div><div class="ttdef"><b>Definition:</b> registry.h:55</div></div>
@@ -281,16 +285,16 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_registry_html_a4df705eec40df6077d7e0f3658d2f8e8"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#a4df705eec40df6077d7e0f3658d2f8e8">Kratos::Registry::~Registry</a></div><div class="ttdeci">~Registry()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> registry.h:58</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_html_a69bc2d8bae3139dec9e5dd121215f0b6"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#a69bc2d8bae3139dec9e5dd121215f0b6">Kratos::Registry::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(Registry)</div><div class="ttdoc">Pointer definition of Registry.</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_html_a717cc88878d7a7c56de0bbf10601f888"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#a717cc88878d7a7c56de0bbf10601f888">Kratos::Registry::GetValue</a></div><div class="ttdeci">static TDataType const  &amp; GetValue(std::string const &amp;rItemFullName)</div><div class="ttdef"><b>Definition:</b> registry.h:141</div></div>
-<div class="ttc" id="aclass_kratos_1_1_registry_html_a7a107b78139f3f10376c55fe9d52d1a3"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#a7a107b78139f3f10376c55fe9d52d1a3">Kratos::Registry::PrintInfo</a></div><div class="ttdeci">void PrintInfo(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> registry.cpp:124</div></div>
+<div class="ttc" id="aclass_kratos_1_1_registry_html_a7a107b78139f3f10376c55fe9d52d1a3"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#a7a107b78139f3f10376c55fe9d52d1a3">Kratos::Registry::PrintInfo</a></div><div class="ttdeci">void PrintInfo(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> registry.cpp:148</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_html_a9e0e7faecc9b95dc31fabc5259c8b1e2"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#a9e0e7faecc9b95dc31fabc5259c8b1e2">Kratos::Registry::begin</a></div><div class="ttdeci">static auto begin()</div><div class="ttdef"><b>Definition:</b> registry.h:118</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_html_aa973cdd5c33b2b1955efe25abe9dfdf9"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#aa973cdd5c33b2b1955efe25abe9dfdf9">Kratos::Registry::GetValueAs</a></div><div class="ttdeci">static std::enable_if&lt; std::is_base_of&lt; TDataType, TCastType &gt;::value, TCastType &gt;::type const GetValueAs(std::string const &amp;rItemFullName)</div><div class="ttdef"><b>Definition:</b> registry.h:147</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_html_aa9f96d820be739e9221350cef018c1a6"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#aa9f96d820be739e9221350cef018c1a6">Kratos::Registry::cend</a></div><div class="ttdeci">static auto const cend()</div><div class="ttdef"><b>Definition:</b> registry.h:133</div></div>
-<div class="ttc" id="aclass_kratos_1_1_registry_html_ad238057a6faaa5e881cb417a233b84a2"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#ad238057a6faaa5e881cb417a233b84a2">Kratos::Registry::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> registry.cpp:129</div></div>
+<div class="ttc" id="aclass_kratos_1_1_registry_html_ad238057a6faaa5e881cb417a233b84a2"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#ad238057a6faaa5e881cb417a233b84a2">Kratos::Registry::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> registry.cpp:153</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_html_ae33815184dea15ad9d257a4263d602be"><div class="ttname"><a href="../../d2/d93/class_kratos_1_1_registry.html#ae33815184dea15ad9d257a4263d602be">Kratos::Registry::AddItem</a></div><div class="ttdeci">static RegistryItem &amp; AddItem(std::string const &amp;rItemFullName, TArgumentsList &amp;&amp;... Arguments)</div><div class="ttdef"><b>Definition:</b> registry.h:70</div></div>
-<div class="ttc" id="aclass_kratos_1_1_registry_item_html"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html">Kratos::RegistryItem</a></div><div class="ttdoc">The registry item to be stored by Registry class. It is the base class for some more specific ones.</div><div class="ttdef"><b>Definition:</b> registry_item.h:44</div></div>
-<div class="ttc" id="aclass_kratos_1_1_registry_item_html_a771395fea2eb6c4b037d574fc9e96c65"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#a771395fea2eb6c4b037d574fc9e96c65">Kratos::RegistryItem::GetItem</a></div><div class="ttdeci">RegistryItem const  &amp; GetItem(std::string const &amp;rItemName) const</div><div class="ttdef"><b>Definition:</b> registry_item.cpp:154</div></div>
-<div class="ttc" id="aclass_kratos_1_1_registry_item_html_a7baba436ff3bab8eff7bcf6a1aa56248"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#a7baba436ff3bab8eff7bcf6a1aa56248">Kratos::RegistryItem::HasItem</a></div><div class="ttdeci">bool HasItem(std::string const &amp;rItemName) const</div><div class="ttdef"><b>Definition:</b> registry_item.cpp:134</div></div>
-<div class="ttc" id="aclass_kratos_1_1_registry_item_html_ad1d6bb7b1c878afb33cce9ee5f5da117"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#ad1d6bb7b1c878afb33cce9ee5f5da117">Kratos::RegistryItem::AddItem</a></div><div class="ttdeci">RegistryItem &amp; AddItem(std::string const &amp;ItemName, TArgumentsList &amp;&amp;... Arguments)</div><div class="ttdef"><b>Definition:</b> registry_item.h:195</div></div>
+<div class="ttc" id="aclass_kratos_1_1_registry_item_html"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html">Kratos::RegistryItem</a></div><div class="ttdoc">The registry item to be stored by Registry class. It is the base class for some more specific ones.</div><div class="ttdef"><b>Definition:</b> registry_item.h:49</div></div>
+<div class="ttc" id="aclass_kratos_1_1_registry_item_html_a771395fea2eb6c4b037d574fc9e96c65"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#a771395fea2eb6c4b037d574fc9e96c65">Kratos::RegistryItem::GetItem</a></div><div class="ttdeci">RegistryItem const  &amp; GetItem(std::string const &amp;rItemName) const</div><div class="ttdef"><b>Definition:</b> registry_item.cpp:162</div></div>
+<div class="ttc" id="aclass_kratos_1_1_registry_item_html_a7baba436ff3bab8eff7bcf6a1aa56248"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#a7baba436ff3bab8eff7bcf6a1aa56248">Kratos::RegistryItem::HasItem</a></div><div class="ttdeci">bool HasItem(std::string const &amp;rItemName) const</div><div class="ttdef"><b>Definition:</b> registry_item.cpp:142</div></div>
+<div class="ttc" id="aclass_kratos_1_1_registry_item_html_ad1d6bb7b1c878afb33cce9ee5f5da117"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#ad1d6bb7b1c878afb33cce9ee5f5da117">Kratos::RegistryItem::AddItem</a></div><div class="ttdeci">RegistryItem &amp; AddItem(std::string const &amp;ItemName, TArgumentsList &amp;&amp;... Arguments)</div><div class="ttdef"><b>Definition:</b> registry_item.h:200</div></div>
 <div class="ttc" id="adefine_8h_html_a5eac541f5e39bf0360a12f51f0248513"><div class="ttname"><a href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a></div><div class="ttdeci">#define KRATOS_CATCH(MoreInfo)</div><div class="ttdef"><b>Definition:</b> define.h:110</div></div>
 <div class="ttc" id="adefine_8h_html_ab9c29d6a0d19ff26bbc4e45e3181fb3f"><div class="ttname"><a href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div><div class="ttdeci">#define KRATOS_TRY</div><div class="ttdef"><b>Definition:</b> define.h:109</div></div>
 <div class="ttc" id="agroup___kratos_core_html_ga376e02451bc7cc3a5fd77b57f0549e6b"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a></div><div class="ttdeci">#define KRATOS_ERROR</div><div class="ttdef"><b>Definition:</b> exception.h:161</div></div>
@@ -309,7 +313,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 5 2024 03:01:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 6 2024 03:01:20 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

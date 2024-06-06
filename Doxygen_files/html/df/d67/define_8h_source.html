@@ -777,122 +777,152 @@ $(function() {
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_GEOMETRY</span></div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_GEOMETRY</span></div>
 <div class="line"><a name="l00698"></a><span class="lineno">  698</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00699"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a84851f233d4d0bb7499e9257b27f27be">  699</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_GEOMETRY(name, reference) \</span></div>
-<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;<span class="preprocessor">    KratosComponents&lt;Geometry&lt;Node&gt;&gt;::Add(name, reference); \</span></div>
-<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;<span class="preprocessor">    Serializer::Register(name, reference);</span></div>
-<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160; </div>
-<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_ELEMENT</span></div>
-<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_ELEMENT</span></div>
-<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00706"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a5edc9557a39cdbcbe68f4a5d44437c3b">  706</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_ELEMENT(name, reference) \</span></div>
-<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;<span class="preprocessor">    KratosComponents&lt;Element &gt;::Add(name, reference); \</span></div>
-<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="preprocessor">    Serializer::Register(name, reference);</span></div>
-<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160; </div>
-<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_CONDITION</span></div>
-<div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_CONDITION</span></div>
-<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00713"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ad9a58e7d546ae0d07817c2f206de73c3">  713</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_CONDITION(name, reference) \</span></div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;<span class="preprocessor">    KratosComponents&lt;Condition &gt;::Add(name, reference); \</span></div>
-<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;<span class="preprocessor">    Serializer::Register(name, reference);</span></div>
-<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160; </div>
-<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_CONSTRAINT</span></div>
-<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_CONSTRAINT</span></div>
-<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00720"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#af004455aa37b6810cbed299c12019ec7">  720</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_CONSTRAINT(name, reference) \</span></div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="preprocessor">    KratosComponents&lt;MasterSlaveConstraint &gt;::Add(name, reference); \</span></div>
-<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="preprocessor">    Serializer::Register(name, reference);</span></div>
-<div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160; </div>
-<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_MODELER</span></div>
-<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_MODELER</span></div>
-<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00727"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a94b3ee6be861f9d5ef1b1c243e7789d9">  727</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_MODELER(name, reference) \</span></div>
-<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;<span class="preprocessor">    KratosComponents&lt;Modeler&gt;::Add(name, reference); \</span></div>
-<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;<span class="preprocessor">    Serializer::Register(name, reference);</span></div>
-<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160; </div>
-<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_CONSTITUTIVE_LAW</span></div>
-<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_CONSTITUTIVE_LAW</span></div>
-<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00734"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#afb65f857f992ed253713f46df74a2a6c">  734</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_CONSTITUTIVE_LAW(name, reference) \</span></div>
-<div class="line"><a name="l00735"></a><span class="lineno">  735</span>&#160;<span class="preprocessor">    KratosComponents&lt;ConstitutiveLaw &gt;::Add(name, reference); \</span></div>
-<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="preprocessor">    Serializer::Register(name, reference);</span></div>
-<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160; </div>
-<div class="line"><a name="l00738"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ab4a2eb75a1039ebf901ca82d13863e0d">  738</a></span>&#160;<span class="preprocessor">#define KRATOS_DEPRECATED [[deprecated]]</span></div>
-<div class="line"><a name="l00739"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a97729ce48a557cc143734a9e3e5167d1">  739</a></span>&#160;<span class="preprocessor">#define KRATOS_DEPRECATED_MESSAGE(deprecated_message) [[deprecated(deprecated_message)]]</span></div>
-<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160; </div>
-<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;<span class="comment">// The following block defines the macro KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING</span></div>
-<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;<span class="comment">// If written in a file, for the following lines of code the compiler will not print warnings of type &#39;deprecated function&#39;.</span></div>
-<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;<span class="comment">// The scope ends where KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING is called.</span></div>
-<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="comment">// NOTE!! this macro is not intended for extensive use, it&#39;s just for temporary use in methods exported to Python which</span></div>
-<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="comment">// are still calling a C++ deprecated function.</span></div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;<span class="preprocessor">#define KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(x) _Pragma(#x)</span></div>
-<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;<span class="preprocessor">#define KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
-<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="preprocessor">KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(clang diagnostic push) \</span></div>
-<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;<span class="preprocessor">KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span>)</div>
-<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;<span class="preprocessor">#elif defined(__GNUG__) &amp;&amp; !defined(__INTEL_COMPILER)</span></div>
-<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;<span class="preprocessor">#define KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(x) _Pragma(#x)</span></div>
-<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;<span class="preprocessor">#define KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
-<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;<span class="preprocessor">KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(GCC diagnostic push) \</span></div>
-<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160;<span class="preprocessor">KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(GCC diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span>)</div>
-<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER)</span></div>
-<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="preprocessor">#define KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
-<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="preprocessor">__pragma(warning(push))\</span></div>
-<div class="line"><a name="l00759"></a><span class="lineno">  759</span>&#160;<span class="preprocessor">__pragma(warning(disable: 4996))</span></div>
-<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00761"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a2b4f9c63cd0522b67b8028e1b69b19a2">  761</a></span>&#160;<span class="preprocessor">#define KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING </span><span class="comment">// not implemented for other compilers, hence does nothing</span></div>
-<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160; </div>
-<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;<span class="comment">// The following block defines the macro KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING which ends the scope for</span></div>
-<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;<span class="comment">// ignoring the warnings of type &#39;deprecated function&#39;.</span></div>
-<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
-<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160;<span class="preprocessor">#define KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
-<div class="line"><a name="l00768"></a><span class="lineno">  768</span>&#160;<span class="preprocessor">_Pragma(&quot;clang diagnostic pop&quot;</span>)</div>
-<div class="line"><a name="l00769"></a><span class="lineno">  769</span>&#160;<span class="preprocessor">#elif defined(__GNUG__) &amp;&amp; !defined(__INTEL_COMPILER)</span></div>
-<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160;<span class="preprocessor">#define KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
-<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;<span class="preprocessor">_Pragma(&quot;GCC diagnostic pop&quot;</span>)</div>
-<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER)</span></div>
-<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;<span class="preprocessor">#define KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
-<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;<span class="preprocessor">__pragma(warning(pop))</span></div>
-<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00776"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a22e22bf2748e4eb46142a6130289711c">  776</a></span>&#160;<span class="preprocessor">#define KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING </span><span class="comment">// not implemented for other compilers, hence does nothing</span></div>
-<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160; </div>
-<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160; </div>
-<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;{</div>
-<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160; </div>
-<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;<span class="preprocessor">#if defined(_MSC_VER)</span></div>
-<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;<span class="preprocessor">#pragma warning (disable: 4355)</span></div>
-<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;<span class="preprocessor">#pragma warning (disable: 4503)</span></div>
-<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;<span class="preprocessor">#pragma warning (disable: 4786)</span></div>
-<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160; </div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;<span class="comment">//Exception handling</span></div>
-<div class="line"><a name="l00792"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#abd8588de3ad83fd2890b61dfe90e0e8b">  792</a></span>&#160;<span class="preprocessor">#define KRATOS_TYPE_NAME_OF(name) name##Type</span></div>
-<div class="line"><a name="l00793"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ad6345fa70961203ba29014b5b1fee91f">  793</a></span>&#160;<span class="preprocessor">#define KRATOS_NOT_EXCLUDED(filename) !defined(KRATOS_##filename##_EXCLUDED)</span></div>
-<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160; </div>
-<div class="line"><a name="l00795"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#afb82dcf7ce6f14426172b80255f36760">  795</a></span>&#160;<span class="preprocessor">#define KRATOS_DECLEAR_TYPE  namespace KratosComponents{ typedef</span></div>
-<div class="line"><a name="l00796"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a200eb250a7bfe01da18e8a2a431e8c38">  796</a></span>&#160;<span class="preprocessor">#define KRATOS_FOR_COMPONENT_NAMED(name) KRATOS_TYPE_NAME_OF(name);}</span></div>
-<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160; </div>
-<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;<span class="comment">// Kratos variable registering</span></div>
-<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;<span class="comment">/* #define KRATOS_REGISTER_VARIABLE_WITH_ZERO(type, name, zero) const Variable&lt;type &gt; name(#name, __LINE__, zero) */</span></div>
-<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="comment">/* #define KRATOS_REGISTER_VARIABLE(type, name) const Variable&lt;type &gt; name(#name, __LINE__) */</span></div>
-<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160; </div>
-<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="comment">/* #define KRATOS_REGISTER_LINEAR_SOLVER_BEGIN \ */</span></div>
-<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="comment">/* template&lt;class TFunction&gt; ApplyToLinearSolver(String Name){ */</span></div>
-<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160; </div>
-<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="comment">//Print Trace if defined</span></div>
-<div class="line"><a name="l00806"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a6135b00508a42f0e8f91d1369644cbc1">  806</a></span>&#160;<span class="preprocessor">#define KRATOS_WATCH(variable) std::cout &lt;&lt; #variable &lt;&lt; &quot; : &quot;</span> &lt;&lt; variable &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00807"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a54fa1b81aca676fe91e9b11e25232c10">  807</a></span>&#160;<span class="preprocessor">#define KRATOS_WATCH_CERR(variable) std::cerr &lt;&lt; #variable &lt;&lt; &quot; : &quot;</span> &lt;&lt; variable &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00808"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ad4e0bb938c8e2bd34fd787f8583ec58f">  808</a></span>&#160;<span class="preprocessor">#define KRATOS_WATCH_MPI(variable, mpi_data_comm) std::cout &lt;&lt; &quot;RANK &quot;</span> &lt;&lt; mpi_data_comm.Rank() &lt;&lt; &quot;/&quot; &lt;&lt; mpi_data_comm.Size()  &lt;&lt; &quot;    &quot;; KRATOS_WATCH(variable);</div>
+<div class="line"><a name="l00699"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a84851f233d4d0bb7499e9257b27f27be">  699</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_GEOMETRY(name, reference)                                                                   \</span></div>
+<div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;<span class="preprocessor">    KratosComponents&lt;Geometry&lt;Node&gt;&gt;::Add(name, reference);                                                         \</span></div>
+<div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;<span class="preprocessor">    if(!Registry::HasItem(&quot;geometries.&quot;</span>+Registry::GetCurrentSource()+&quot;.&quot;+name) &amp;&amp;                                   \</div>
+<div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;       !Registry::HasItem(&quot;components.&quot;+std::string(name))){                                                                     \</div>
+<div class="line"><a name="l00703"></a><span class="lineno">  703</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;geometries.&quot;+Registry::GetCurrentSource()+&quot;.&quot;+name);                       \</div>
+<div class="line"><a name="l00704"></a><span class="lineno">  704</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;components.&quot;+std::string(name));                                                        \</div>
+<div class="line"><a name="l00705"></a><span class="lineno">  705</span>&#160;    }                                                                                                               \</div>
+<div class="line"><a name="l00706"></a><span class="lineno">  706</span>&#160;    Serializer::Register(name, reference);</div>
+<div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160; </div>
+<div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_ELEMENT</span></div>
+<div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_ELEMENT</span></div>
+<div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00711"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a5edc9557a39cdbcbe68f4a5d44437c3b">  711</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_ELEMENT(name, reference)                                                                    \</span></div>
+<div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160;<span class="preprocessor">    KratosComponents&lt;Element&gt;::Add(name, reference);                                                                \</span></div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;<span class="preprocessor">    if(!Registry::HasItem(&quot;elements.&quot;</span>+Registry::GetCurrentSource()+&quot;.&quot;+name) &amp;&amp;                                     \</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;       !Registry::HasItem(&quot;components.&quot;+std::string(name))){                                                                    \</div>
+<div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;elements.&quot;+Registry::GetCurrentSource()+&quot;.&quot;+name);                         \</div>
+<div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;components.&quot;+std::string(name));                                                        \</div>
+<div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;    }                                                                                                               \</div>
+<div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;    Serializer::Register(name, reference);</div>
+<div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160; </div>
+<div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_CONDITION</span></div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_CONDITION</span></div>
+<div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00723"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ad9a58e7d546ae0d07817c2f206de73c3">  723</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_CONDITION(name, reference)                                                                  \</span></div>
+<div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;<span class="preprocessor">    KratosComponents&lt;Condition&gt;::Add(name, reference);                                                              \</span></div>
+<div class="line"><a name="l00725"></a><span class="lineno">  725</span>&#160;<span class="preprocessor">    if(!Registry::HasItem(&quot;conditions.&quot;</span>+Registry::GetCurrentSource()+&quot;.&quot;+name) &amp;&amp;                                   \</div>
+<div class="line"><a name="l00726"></a><span class="lineno">  726</span>&#160;       !Registry::HasItem(&quot;components.&quot;+std::string(name))){                                                                     \</div>
+<div class="line"><a name="l00727"></a><span class="lineno">  727</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;conditions.&quot;+Registry::GetCurrentSource()+&quot;.&quot;+name);                       \</div>
+<div class="line"><a name="l00728"></a><span class="lineno">  728</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;components.&quot;+std::string(name));                                                        \</div>
+<div class="line"><a name="l00729"></a><span class="lineno">  729</span>&#160;    }                                                                                                               \</div>
+<div class="line"><a name="l00730"></a><span class="lineno">  730</span>&#160;    Serializer::Register(name, reference);</div>
+<div class="line"><a name="l00731"></a><span class="lineno">  731</span>&#160; </div>
+<div class="line"><a name="l00732"></a><span class="lineno">  732</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_CONSTRAINT</span></div>
+<div class="line"><a name="l00733"></a><span class="lineno">  733</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_CONSTRAINT</span></div>
+<div class="line"><a name="l00734"></a><span class="lineno">  734</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00735"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#af004455aa37b6810cbed299c12019ec7">  735</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_CONSTRAINT(name, reference)                                                                 \</span></div>
+<div class="line"><a name="l00736"></a><span class="lineno">  736</span>&#160;<span class="preprocessor">    KratosComponents&lt;MasterSlaveConstraint&gt;::Add(name, reference);                                                  \</span></div>
+<div class="line"><a name="l00737"></a><span class="lineno">  737</span>&#160;<span class="preprocessor">    if(!Registry::HasItem(&quot;constraints.&quot;</span>+Registry::GetCurrentSource()+&quot;.&quot;+name) &amp;&amp;                                  \</div>
+<div class="line"><a name="l00738"></a><span class="lineno">  738</span>&#160;       !Registry::HasItem(&quot;components.&quot;+std::string(name))){                                                                     \</div>
+<div class="line"><a name="l00739"></a><span class="lineno">  739</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;constraints.&quot;+Registry::GetCurrentSource()+&quot;.&quot;+name);                      \</div>
+<div class="line"><a name="l00740"></a><span class="lineno">  740</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;components.&quot;+std::string(name));                                                        \</div>
+<div class="line"><a name="l00741"></a><span class="lineno">  741</span>&#160;    }                                                                                                               \</div>
+<div class="line"><a name="l00742"></a><span class="lineno">  742</span>&#160;    Serializer::Register(name, reference);</div>
+<div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160; </div>
+<div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_MODELER</span></div>
+<div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_MODELER</span></div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00747"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a94b3ee6be861f9d5ef1b1c243e7789d9">  747</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_MODELER(name, reference)                                                                    \</span></div>
+<div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160;<span class="preprocessor">    KratosComponents&lt;Modeler&gt;::Add(name, reference);                                                                \</span></div>
+<div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;<span class="preprocessor">    if(!Registry::HasItem(&quot;modelers.&quot;</span>+Registry::GetCurrentSource()+&quot;.&quot;+name) &amp;&amp;                                     \</div>
+<div class="line"><a name="l00750"></a><span class="lineno">  750</span>&#160;       !Registry::HasItem(&quot;components.&quot;+std::string(name))){                                                                     \</div>
+<div class="line"><a name="l00751"></a><span class="lineno">  751</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;modelers.&quot;+Registry::GetCurrentSource()+&quot;.&quot;+name);                         \</div>
+<div class="line"><a name="l00752"></a><span class="lineno">  752</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;components.&quot;+std::string(name));                                                        \</div>
+<div class="line"><a name="l00753"></a><span class="lineno">  753</span>&#160;    }                                                                                                               \</div>
+<div class="line"><a name="l00754"></a><span class="lineno">  754</span>&#160;    Serializer::Register(name, reference);</div>
+<div class="line"><a name="l00755"></a><span class="lineno">  755</span>&#160; </div>
+<div class="line"><a name="l00756"></a><span class="lineno">  756</span>&#160;<span class="preprocessor">#ifdef KRATOS_REGISTER_CONSTITUTIVE_LAW</span></div>
+<div class="line"><a name="l00757"></a><span class="lineno">  757</span>&#160;<span class="preprocessor">#undef KRATOS_REGISTER_CONSTITUTIVE_LAW</span></div>
+<div class="line"><a name="l00758"></a><span class="lineno">  758</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00759"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#afb65f857f992ed253713f46df74a2a6c">  759</a></span>&#160;<span class="preprocessor">#define KRATOS_REGISTER_CONSTITUTIVE_LAW(name, reference)                                                           \</span></div>
+<div class="line"><a name="l00760"></a><span class="lineno">  760</span>&#160;<span class="preprocessor">    KratosComponents&lt;ConstitutiveLaw&gt;::Add(name, reference);                                                        \</span></div>
+<div class="line"><a name="l00761"></a><span class="lineno">  761</span>&#160;<span class="preprocessor">    if(!Registry::HasItem(&quot;constitutive_laws.&quot;</span>+Registry::GetCurrentSource()+&quot;.&quot;+name) &amp;&amp;                            \</div>
+<div class="line"><a name="l00762"></a><span class="lineno">  762</span>&#160;       !Registry::HasItem(&quot;components.&quot;+std::string(name))){                                                                     \</div>
+<div class="line"><a name="l00763"></a><span class="lineno">  763</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;constitutive_laws.&quot;+Registry::GetCurrentSource()+&quot;.&quot;+name);                \</div>
+<div class="line"><a name="l00764"></a><span class="lineno">  764</span>&#160;        Registry::AddItem&lt;RegistryItem&gt;(&quot;components.&quot;+std::string(name));                                                        \</div>
+<div class="line"><a name="l00765"></a><span class="lineno">  765</span>&#160;    }                                                                                                               \</div>
+<div class="line"><a name="l00766"></a><span class="lineno">  766</span>&#160;    Serializer::Register(name, reference);</div>
+<div class="line"><a name="l00767"></a><span class="lineno">  767</span>&#160; </div>
+<div class="line"><a name="l00768"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ab4a2eb75a1039ebf901ca82d13863e0d">  768</a></span>&#160;<span class="preprocessor">#define KRATOS_DEPRECATED [[deprecated]]</span></div>
+<div class="line"><a name="l00769"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a97729ce48a557cc143734a9e3e5167d1">  769</a></span>&#160;<span class="preprocessor">#define KRATOS_DEPRECATED_MESSAGE(deprecated_message) [[deprecated(deprecated_message)]]</span></div>
+<div class="line"><a name="l00770"></a><span class="lineno">  770</span>&#160; </div>
+<div class="line"><a name="l00771"></a><span class="lineno">  771</span>&#160;<span class="comment">// The following block defines the macro KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING</span></div>
+<div class="line"><a name="l00772"></a><span class="lineno">  772</span>&#160;<span class="comment">// If written in a file, for the following lines of code the compiler will not print warnings of type &#39;deprecated function&#39;.</span></div>
+<div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160;<span class="comment">// The scope ends where KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING is called.</span></div>
+<div class="line"><a name="l00774"></a><span class="lineno">  774</span>&#160;<span class="comment">// NOTE!! this macro is not intended for extensive use, it&#39;s just for temporary use in methods exported to Python which</span></div>
+<div class="line"><a name="l00775"></a><span class="lineno">  775</span>&#160;<span class="comment">// are still calling a C++ deprecated function.</span></div>
+<div class="line"><a name="l00776"></a><span class="lineno">  776</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><a name="l00777"></a><span class="lineno">  777</span>&#160;<span class="preprocessor">#define KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(x) _Pragma(#x)</span></div>
+<div class="line"><a name="l00778"></a><span class="lineno">  778</span>&#160;<span class="preprocessor">#define KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
+<div class="line"><a name="l00779"></a><span class="lineno">  779</span>&#160;<span class="preprocessor">KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(clang diagnostic push) \</span></div>
+<div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;<span class="preprocessor">KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(clang diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span>)</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;<span class="preprocessor">#elif defined(__GNUG__) &amp;&amp; !defined(__INTEL_COMPILER)</span></div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;<span class="preprocessor">#define KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(x) _Pragma(#x)</span></div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;<span class="preprocessor">#define KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
+<div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160;<span class="preprocessor">KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(GCC diagnostic push) \</span></div>
+<div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;<span class="preprocessor">KRATOS_PRAGMA_INSIDE_MACRO_DEFINITION(GCC diagnostic ignored &quot;-Wdeprecated-declarations&quot;</span>)</div>
+<div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER)</span></div>
+<div class="line"><a name="l00787"></a><span class="lineno">  787</span>&#160;<span class="preprocessor">#define KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
+<div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160;<span class="preprocessor">__pragma(warning(push))\</span></div>
+<div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160;<span class="preprocessor">__pragma(warning(disable: 4996))</span></div>
+<div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00791"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a2b4f9c63cd0522b67b8028e1b69b19a2">  791</a></span>&#160;<span class="preprocessor">#define KRATOS_START_IGNORING_DEPRECATED_FUNCTION_WARNING </span><span class="comment">// not implemented for other compilers, hence does nothing</span></div>
+<div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160; </div>
+<div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;<span class="comment">// The following block defines the macro KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING which ends the scope for</span></div>
+<div class="line"><a name="l00795"></a><span class="lineno">  795</span>&#160;<span class="comment">// ignoring the warnings of type &#39;deprecated function&#39;.</span></div>
+<div class="line"><a name="l00796"></a><span class="lineno">  796</span>&#160;<span class="preprocessor">#if defined(__clang__)</span></div>
+<div class="line"><a name="l00797"></a><span class="lineno">  797</span>&#160;<span class="preprocessor">#define KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
+<div class="line"><a name="l00798"></a><span class="lineno">  798</span>&#160;<span class="preprocessor">_Pragma(&quot;clang diagnostic pop&quot;</span>)</div>
+<div class="line"><a name="l00799"></a><span class="lineno">  799</span>&#160;<span class="preprocessor">#elif defined(__GNUG__) &amp;&amp; !defined(__INTEL_COMPILER)</span></div>
+<div class="line"><a name="l00800"></a><span class="lineno">  800</span>&#160;<span class="preprocessor">#define KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
+<div class="line"><a name="l00801"></a><span class="lineno">  801</span>&#160;<span class="preprocessor">_Pragma(&quot;GCC diagnostic pop&quot;</span>)</div>
+<div class="line"><a name="l00802"></a><span class="lineno">  802</span>&#160;<span class="preprocessor">#elif defined(_MSC_VER)</span></div>
+<div class="line"><a name="l00803"></a><span class="lineno">  803</span>&#160;<span class="preprocessor">#define KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING \</span></div>
+<div class="line"><a name="l00804"></a><span class="lineno">  804</span>&#160;<span class="preprocessor">__pragma(warning(pop))</span></div>
+<div class="line"><a name="l00805"></a><span class="lineno">  805</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00806"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a22e22bf2748e4eb46142a6130289711c">  806</a></span>&#160;<span class="preprocessor">#define KRATOS_STOP_IGNORING_DEPRECATED_FUNCTION_WARNING </span><span class="comment">// not implemented for other compilers, hence does nothing</span></div>
+<div class="line"><a name="l00807"></a><span class="lineno">  807</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160; </div>
 <div class="line"><a name="l00809"></a><span class="lineno">  809</span>&#160; </div>
-<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;}  <span class="comment">/* namespace Kratos.*/</span></div>
-<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160; </div>
-<div class="line"><a name="l00812"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">  812</a></span>&#160;<span class="preprocessor">#define KRATOS_SERIALIZE_SAVE_BASE_CLASS(Serializer, BaseType) \</span></div>
-<div class="line"><a name="l00813"></a><span class="lineno">  813</span>&#160;<span class="preprocessor">    Serializer.save_base(&quot;BaseClass&quot;</span>,*static_cast&lt;const BaseType *&gt;(this));</div>
+<div class="line"><a name="l00810"></a><span class="lineno">  810</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
+<div class="line"><a name="l00811"></a><span class="lineno">  811</span>&#160;{</div>
 <div class="line"><a name="l00814"></a><span class="lineno">  814</span>&#160; </div>
-<div class="line"><a name="l00815"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">  815</a></span>&#160;<span class="preprocessor">#define KRATOS_SERIALIZE_LOAD_BASE_CLASS(Serializer, BaseType) \</span></div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;<span class="preprocessor">    Serializer.load_base(&quot;BaseClass&quot;</span>,*static_cast&lt;BaseType *&gt;(this));</div>
+<div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;<span class="preprocessor">#if defined(_MSC_VER)</span></div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;<span class="preprocessor">#pragma warning (disable: 4355)</span></div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;<span class="preprocessor">#pragma warning (disable: 4503)</span></div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;<span class="preprocessor">#pragma warning (disable: 4786)</span></div>
+<div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160; </div>
+<div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;<span class="comment">//Exception handling</span></div>
+<div class="line"><a name="l00822"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#abd8588de3ad83fd2890b61dfe90e0e8b">  822</a></span>&#160;<span class="preprocessor">#define KRATOS_TYPE_NAME_OF(name) name##Type</span></div>
+<div class="line"><a name="l00823"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ad6345fa70961203ba29014b5b1fee91f">  823</a></span>&#160;<span class="preprocessor">#define KRATOS_NOT_EXCLUDED(filename) !defined(KRATOS_##filename##_EXCLUDED)</span></div>
+<div class="line"><a name="l00824"></a><span class="lineno">  824</span>&#160; </div>
+<div class="line"><a name="l00825"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#afb82dcf7ce6f14426172b80255f36760">  825</a></span>&#160;<span class="preprocessor">#define KRATOS_DECLEAR_TYPE  namespace KratosComponents{ typedef</span></div>
+<div class="line"><a name="l00826"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a200eb250a7bfe01da18e8a2a431e8c38">  826</a></span>&#160;<span class="preprocessor">#define KRATOS_FOR_COMPONENT_NAMED(name) KRATOS_TYPE_NAME_OF(name);}</span></div>
+<div class="line"><a name="l00827"></a><span class="lineno">  827</span>&#160; </div>
+<div class="line"><a name="l00828"></a><span class="lineno">  828</span>&#160;<span class="comment">// Kratos variable registering</span></div>
+<div class="line"><a name="l00829"></a><span class="lineno">  829</span>&#160;<span class="comment">/* #define KRATOS_REGISTER_VARIABLE_WITH_ZERO(type, name, zero) const Variable&lt;type &gt; name(#name, __LINE__, zero) */</span></div>
+<div class="line"><a name="l00830"></a><span class="lineno">  830</span>&#160;<span class="comment">/* #define KRATOS_REGISTER_VARIABLE(type, name) const Variable&lt;type &gt; name(#name, __LINE__) */</span></div>
+<div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160; </div>
+<div class="line"><a name="l00832"></a><span class="lineno">  832</span>&#160;<span class="comment">/* #define KRATOS_REGISTER_LINEAR_SOLVER_BEGIN \ */</span></div>
+<div class="line"><a name="l00833"></a><span class="lineno">  833</span>&#160;<span class="comment">/* template&lt;class TFunction&gt; ApplyToLinearSolver(String Name){ */</span></div>
+<div class="line"><a name="l00834"></a><span class="lineno">  834</span>&#160; </div>
+<div class="line"><a name="l00835"></a><span class="lineno">  835</span>&#160;<span class="comment">//Print Trace if defined</span></div>
+<div class="line"><a name="l00836"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a6135b00508a42f0e8f91d1369644cbc1">  836</a></span>&#160;<span class="preprocessor">#define KRATOS_WATCH(variable) std::cout &lt;&lt; #variable &lt;&lt; &quot; : &quot;</span> &lt;&lt; variable &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00837"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a54fa1b81aca676fe91e9b11e25232c10">  837</a></span>&#160;<span class="preprocessor">#define KRATOS_WATCH_CERR(variable) std::cerr &lt;&lt; #variable &lt;&lt; &quot; : &quot;</span> &lt;&lt; variable &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00838"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ad4e0bb938c8e2bd34fd787f8583ec58f">  838</a></span>&#160;<span class="preprocessor">#define KRATOS_WATCH_MPI(variable, mpi_data_comm) std::cout &lt;&lt; &quot;RANK &quot;</span> &lt;&lt; mpi_data_comm.Rank() &lt;&lt; &quot;/&quot; &lt;&lt; mpi_data_comm.Size()  &lt;&lt; &quot;    &quot;; KRATOS_WATCH(variable);</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160; </div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;}  <span class="comment">/* namespace Kratos.*/</span></div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160; </div>
+<div class="line"><a name="l00842"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">  842</a></span>&#160;<span class="preprocessor">#define KRATOS_SERIALIZE_SAVE_BASE_CLASS(Serializer, BaseType) \</span></div>
+<div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;<span class="preprocessor">    Serializer.save_base(&quot;BaseClass&quot;</span>,*static_cast&lt;const BaseType *&gt;(this));</div>
+<div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160; </div>
+<div class="line"><a name="l00845"></a><span class="lineno"><a class="line" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">  845</a></span>&#160;<span class="preprocessor">#define KRATOS_SERIALIZE_LOAD_BASE_CLASS(Serializer, BaseType) \</span></div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;<span class="preprocessor">    Serializer.load_base(&quot;BaseClass&quot;</span>,*static_cast&lt;BaseType *&gt;(this));</div>
 <div class="ttc" id="aexception_8h_html"><div class="ttname"><a href="../../dd/d2d/exception_8h.html">exception.h</a></div></div>
 <div class="ttc" id="akratos__export__api_8h_html"><div class="ttname"><a href="../../dc/d25/kratos__export__api_8h.html">kratos_export_api.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
@@ -900,7 +930,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 5 2024 03:01:18 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 6 2024 03:00:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

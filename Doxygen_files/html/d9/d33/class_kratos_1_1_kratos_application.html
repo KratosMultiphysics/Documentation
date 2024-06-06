@@ -114,6 +114,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a21600fc4493c31ba552f992d94da34c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b31fb2ed07193c42d00ad330d550de3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d33/class_kratos_1_1_kratos_application.html#a0b31fb2ed07193c42d00ad330d550de3">RegisterKratosCore</a> ()</td></tr>
 <tr class="separator:a0b31fb2ed07193c42d00ad330d550de3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682febc4f64d78910ee23c6781e5103e"><td class="memTemplParams" colspan="2">template&lt;class TComponentsContainer &gt; </td></tr>
+<tr class="memitem:a682febc4f64d78910ee23c6781e5103e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d9/d33/class_kratos_1_1_kratos_application.html#a682febc4f64d78910ee23c6781e5103e">DeregisterComponent</a> (std::string const &amp;rComponentName)</td></tr>
+<tr class="separator:a682febc4f64d78910ee23c6781e5103e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45e99d2743c15a536a1347b820676504"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d33/class_kratos_1_1_kratos_application.html#a45e99d2743c15a536a1347b820676504">DeregisterCommonComponents</a> ()</td></tr>
+<tr class="memdesc:a45e99d2743c15a536a1347b820676504"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is used to unregister common components of the application.  <a href="../../d9/d33/class_kratos_1_1_kratos_application.html#a45e99d2743c15a536a1347b820676504">More...</a><br /></td></tr>
+<tr class="separator:a45e99d2743c15a536a1347b820676504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3581d7c183fd63832a9f24a0ad78f889"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d33/class_kratos_1_1_kratos_application.html#a3581d7c183fd63832a9f24a0ad78f889">DeregisterApplication</a> ()</td></tr>
+<tr class="memdesc:a3581d7c183fd63832a9f24a0ad78f889"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method is used to unregister specific application components.  <a href="../../d9/d33/class_kratos_1_1_kratos_application.html#a3581d7c183fd63832a9f24a0ad78f889">More...</a><br /></td></tr>
+<tr class="separator:a3581d7c183fd63832a9f24a0ad78f889"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50585e3958a12d5f0915260766e16457"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d33/class_kratos_1_1_kratos_application.html#a50585e3958a12d5f0915260766e16457">RegisterVariables</a> ()</td></tr>
 <tr class="separator:a50585e3958a12d5f0915260766e16457"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a724579ae3c20b86ff29b87e44bb699d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d33/class_kratos_1_1_kratos_application.html#a724579ae3c20b86ff29b87e44bb699d8">RegisterDeprecatedVariables</a> ()</td></tr>
@@ -564,6 +573,81 @@ Riccardo Rossi </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a3581d7c183fd63832a9f24a0ad78f889"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3581d7c183fd63832a9f24a0ad78f889">&#9670;&nbsp;</a></span>DeregisterApplication()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::KratosApplication::DeregisterApplication </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method is used to unregister specific application components. </p>
+<p>This method is used to unregister specific application components. </p>
+
+</div>
+</div>
+<a id="a45e99d2743c15a536a1347b820676504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e99d2743c15a536a1347b820676504">&#9670;&nbsp;</a></span>DeregisterCommonComponents()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::KratosApplication::DeregisterCommonComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method is used to unregister common components of the application. </p>
+<p>This method is used to unregister common components of the application. The list of unregistered components are the ones exposed in the common <a class="el" href="../../de/d8b/class_kratos_1_1_kratos_components.html" title="KratosComponents class encapsulates a lookup table for a family of classes in a generic way.">KratosComponents</a> interface:</p><ul>
+<li>Geometries</li>
+<li>Elements</li>
+<li>Conditions</li>
+<li>MasterSlaveConstraints</li>
+<li>Modelers</li>
+<li>ConstitutiveLaws </li>
+</ul>
+
+</div>
+</div>
+<a id="a682febc4f64d78910ee23c6781e5103e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682febc4f64d78910ee23c6781e5103e">&#9670;&nbsp;</a></span>DeregisterComponent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TComponentsContainer &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::KratosApplication::DeregisterComponent </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>rComponentName</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a2d0f91a99fb503fc4fe26ea9a1380f23"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2d0f91a99fb503fc4fe26ea9a1380f23">&#9670;&nbsp;</a></span>GetComponents() <span class="overload">[1/10]</span></h2>
 
@@ -3873,7 +3957,7 @@ Riccardo Rossi </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 5 2024 03:11:43 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 6 2024 03:11:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

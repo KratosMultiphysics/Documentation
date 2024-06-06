@@ -147,6 +147,10 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:aa973cdd5c33b2b1955efe25abe9dfdf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae3fc76b5b66dd201bb41997e2fa5abdc"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d93/class_kratos_1_1_registry.html#ae3fc76b5b66dd201bb41997e2fa5abdc">RemoveItem</a> (std::string const &amp;ItemName)</td></tr>
 <tr class="separator:ae3fc76b5b66dd201bb41997e2fa5abdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a049478200c4578f3da21b1c454eccff5"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d93/class_kratos_1_1_registry.html#a049478200c4578f3da21b1c454eccff5">SetCurrentSource</a> (std::string const &amp;rCurrentSource)</td></tr>
+<tr class="separator:a049478200c4578f3da21b1c454eccff5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993e7644eb2632bd4c34bc2feff8b876"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d93/class_kratos_1_1_registry.html#a993e7644eb2632bd4c34bc2feff8b876">GetCurrentSource</a> ()</td></tr>
+<tr class="separator:a993e7644eb2632bd4c34bc2feff8b876"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Inquiry</div></td></tr>
 <tr class="memitem:ab2caa08ca1dd8bfbb44c11c29f527e1f"><td class="memItemLeft" align="right" valign="top">static std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d93/class_kratos_1_1_registry.html#ab2caa08ca1dd8bfbb44c11c29f527e1f">size</a> ()</td></tr>
 <tr class="separator:ab2caa08ca1dd8bfbb44c11c29f527e1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -350,6 +354,37 @@ template&lt;typename TItemType , class... TArgumentsList&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a993e7644eb2632bd4c34bc2feff8b876"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993e7644eb2632bd4c34bc2feff8b876">&#9670;&nbsp;</a></span>GetCurrentSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Kratos::Registry::GetCurrentSource </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Gets the current source of the registry This function is used to keep track of which application is adding items to the registry </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">return</td><td>The current source of the registry </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -646,6 +681,38 @@ template&lt;typename... Types&gt; </div>
 
 </div>
 </div>
+<a id="a049478200c4578f3da21b1c454eccff5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a049478200c4578f3da21b1c454eccff5">&#9670;&nbsp;</a></span>SetCurrentSource()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::Registry::SetCurrentSource </td>
+          <td>(</td>
+          <td class="paramtype">std::string const &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentSource</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Sets the current source of the registry This function is used to keep track of which application is adding items to the registry </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rCurrentSource</td><td>The current source of the registry </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ab2caa08ca1dd8bfbb44c11c29f527e1f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab2caa08ca1dd8bfbb44c11c29f527e1f">&#9670;&nbsp;</a></span>size()</h2>
 
@@ -696,7 +763,7 @@ template&lt;typename... Types&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 5 2024 03:11:44 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 6 2024 03:11:13 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
