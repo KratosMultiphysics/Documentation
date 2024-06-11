@@ -111,7 +111,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6e34af846560a9bb218cfbffd969f28a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#a6e34af846560a9bb218cfbffd969f28a">Reset</a> ()</td></tr>
 <tr class="memdesc:a6e34af846560a9bb218cfbffd969f28a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method clears the database of modelparts.  <a href="../../d4/d95/class_kratos_1_1_model.html#a6e34af846560a9bb218cfbffd969f28a">More...</a><br /></td></tr>
 <tr class="separator:a6e34af846560a9bb218cfbffd969f28a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1359691ec5ec74edcc8e5e8e7a171ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#aa1359691ec5ec74edcc8e5e8e7a171ca">CreateModelPart</a> (const std::string &amp;ModelPartName, <a class="el" href="../../d4/d95/class_kratos_1_1_model.html#a4e6c5686e3c3d0950e7bca0177756d99">IndexType</a> NewBufferSize=1)</td></tr>
+<tr class="memitem:aa1359691ec5ec74edcc8e5e8e7a171ca"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#aa1359691ec5ec74edcc8e5e8e7a171ca">CreateModelPart</a> (const std::string &amp;ModelPartName, <a class="el" href="../../d4/d95/class_kratos_1_1_model.html#adef7b4cc9e60c851d4e4f02861c316c1">IndexType</a> NewBufferSize=1)</td></tr>
 <tr class="memdesc:aa1359691ec5ec74edcc8e5e8e7a171ca"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates a new model part contained in the current <a class="el" href="../../d4/d95/class_kratos_1_1_model.html" title="This class aims to manage different model parts across multi-physics simulations.">Model</a> with a given name and buffer size.  <a href="../../d4/d95/class_kratos_1_1_model.html#aa1359691ec5ec74edcc8e5e8e7a171ca">More...</a><br /></td></tr>
 <tr class="separator:aa1359691ec5ec74edcc8e5e8e7a171ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb3f64632c1df5bf95d83e27652308d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#abb3f64632c1df5bf95d83e27652308d2">DeleteModelPart</a> (const std::string &amp;ModelPartName)</td></tr>
@@ -132,6 +132,13 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3d83cfeeccf309a462c4aa561ce8985d"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#a3d83cfeeccf309a462c4aa561ce8985d">GetModelPartNames</a> () const</td></tr>
 <tr class="memdesc:a3d83cfeeccf309a462c4aa561ce8985d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This returns a vector containing a list of model parts names contained on the model.  <a href="../../d4/d95/class_kratos_1_1_model.html#a3d83cfeeccf309a462c4aa561ce8985d">More...</a><br /></td></tr>
 <tr class="separator:a3d83cfeeccf309a462c4aa561ce8985d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Access</div></td></tr>
+<tr class="memitem:a79e3b365a13b0962ebe63cda0559d88e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/dfa/class_kratos_1_1_data_value_container.html">DataValueContainer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#a79e3b365a13b0962ebe63cda0559d88e">GetDataValueContainer</a> ()</td></tr>
+<tr class="memdesc:a79e3b365a13b0962ebe63cda0559d88e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the data value container of the model.  <a href="../../d4/d95/class_kratos_1_1_model.html#a79e3b365a13b0962ebe63cda0559d88e">More...</a><br /></td></tr>
+<tr class="separator:a79e3b365a13b0962ebe63cda0559d88e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8996027a5cf79d5d6415e15b64fd0d90"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../d7/dfa/class_kratos_1_1_data_value_container.html">DataValueContainer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#a8996027a5cf79d5d6415e15b64fd0d90">GetDataValueContainer</a> () const</td></tr>
+<tr class="memdesc:a8996027a5cf79d5d6415e15b64fd0d90"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the data value container of the model.  <a href="../../d4/d95/class_kratos_1_1_model.html#a8996027a5cf79d5d6415e15b64fd0d90">More...</a><br /></td></tr>
+<tr class="separator:a8996027a5cf79d5d6415e15b64fd0d90"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Input and output</div></td></tr>
 <tr class="memitem:a6bdff4289326053866c7e78b3cb4b31c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#a6bdff4289326053866c7e78b3cb4b31c">Info</a> () const</td></tr>
 <tr class="memdesc:a6bdff4289326053866c7e78b3cb4b31c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn back information as a string.  <a href="../../d4/d95/class_kratos_1_1_model.html#a6bdff4289326053866c7e78b3cb4b31c">More...</a><br /></td></tr>
@@ -144,9 +151,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae2f16c4c5e34d8af48919793e852b859"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type Definitions</h2></td></tr>
-<tr class="memitem:a4e6c5686e3c3d0950e7bca0177756d99"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a416d8906620f25068b408e648557ac46">ModelPart::IndexType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#a4e6c5686e3c3d0950e7bca0177756d99">IndexType</a></td></tr>
-<tr class="memdesc:a4e6c5686e3c3d0950e7bca0177756d99"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of the index type.  <a href="../../d4/d95/class_kratos_1_1_model.html#a4e6c5686e3c3d0950e7bca0177756d99">More...</a><br /></td></tr>
-<tr class="separator:a4e6c5686e3c3d0950e7bca0177756d99"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adef7b4cc9e60c851d4e4f02861c316c1"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#adef7b4cc9e60c851d4e4f02861c316c1">IndexType</a> = <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a416d8906620f25068b408e648557ac46">ModelPart::IndexType</a></td></tr>
+<tr class="memdesc:adef7b4cc9e60c851d4e4f02861c316c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of the index type.  <a href="../../d4/d95/class_kratos_1_1_model.html#adef7b4cc9e60c851d4e4f02861c316c1">More...</a><br /></td></tr>
+<tr class="separator:adef7b4cc9e60c851d4e4f02861c316c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff31d8f02e4ad392ed6c11796d4401b4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html#aff31d8f02e4ad392ed6c11796d4401b4">KRATOS_CLASS_POINTER_DEFINITION</a> (<a class="el" href="../../d4/d95/class_kratos_1_1_model.html">Model</a>)</td></tr>
 <tr class="memdesc:aff31d8f02e4ad392ed6c11796d4401b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d4/d95/class_kratos_1_1_model.html" title="This class aims to manage different model parts across multi-physics simulations.">Model</a>.  <a href="../../d4/d95/class_kratos_1_1_model.html#aff31d8f02e4ad392ed6c11796d4401b4">More...</a><br /></td></tr>
 <tr class="separator:aff31d8f02e4ad392ed6c11796d4401b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -159,14 +166,14 @@ Public Member Functions</h2></td></tr>
 <div class="textblock"><p>This class aims to manage different model parts across multi-physics simulations. </p>
 <p>The class behaves as a manager of the different model parts. It uses unordered_maps of the variables and the model parts for that purpose </p><dl class="section author"><dt>Author</dt><dd>Riccardo Rossi </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a4e6c5686e3c3d0950e7bca0177756d99"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e6c5686e3c3d0950e7bca0177756d99">&#9670;&nbsp;</a></span>IndexType</h2>
+<a id="adef7b4cc9e60c851d4e4f02861c316c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adef7b4cc9e60c851d4e4f02861c316c1">&#9670;&nbsp;</a></span>IndexType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a416d8906620f25068b408e648557ac46">ModelPart::IndexType</a> <a class="el" href="../../d4/d95/class_kratos_1_1_model.html#a4e6c5686e3c3d0950e7bca0177756d99">Kratos::Model::IndexType</a></td>
+          <td class="memname">using <a class="el" href="../../d4/d95/class_kratos_1_1_model.html#adef7b4cc9e60c851d4e4f02861c316c1">Kratos::Model::IndexType</a> =  <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html#a416d8906620f25068b408e648557ac46">ModelPart::IndexType</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -317,6 +324,46 @@ Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a id="a79e3b365a13b0962ebe63cda0559d88e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79e3b365a13b0962ebe63cda0559d88e">&#9670;&nbsp;</a></span>GetDataValueContainer() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/dfa/class_kratos_1_1_data_value_container.html">DataValueContainer</a> &amp; Kratos::Model::GetDataValueContainer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns the data value container of the model. </p>
+<p>This method is used to access the data value container of the model. </p><dl class="section return"><dt>Returns</dt><dd>The data value container of the model </dd></dl>
+
+</div>
+</div>
+<a id="a8996027a5cf79d5d6415e15b64fd0d90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8996027a5cf79d5d6415e15b64fd0d90">&#9670;&nbsp;</a></span>GetDataValueContainer() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../d7/dfa/class_kratos_1_1_data_value_container.html">DataValueContainer</a> &amp; Kratos::Model::GetDataValueContainer </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This method returns the data value container of the model. </p>
+<p>This method is used to access the data value container of the model. </p><dl class="section return"><dt>Returns</dt><dd>The data value container of the model </dd></dl>
 
 </div>
 </div>
@@ -613,7 +660,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 10 2024 03:14:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jun 11 2024 03:13:13 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

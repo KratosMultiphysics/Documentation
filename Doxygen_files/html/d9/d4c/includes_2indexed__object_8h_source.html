@@ -232,9 +232,24 @@ $(function() {
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160; </div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;}</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
+<div class="line"><a name="l00264"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga1988b2a98fff65a23fd987d75d3096fc">  264</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/d66/namespace_kratos.html#a333eacfcccd77819c61f0a859e974041">operator&lt;</a>(</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>&amp; rFirst,</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>&amp; rSecond)</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;{</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    <span class="keywordflow">return</span> rFirst.<a class="code" href="../../da/d1e/class_kratos_1_1_indexed_object.html#ad84e1ad025ee57f147ed710a080ddf3b">Id</a>() &lt; rSecond.<a class="code" href="../../da/d1e/class_kratos_1_1_indexed_object.html#ad84e1ad025ee57f147ed710a080ddf3b">Id</a>();</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;}</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga41deb606b3f362e0d4a5bf51ea6906b5">  271</a></span>&#160;<span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="../../db/d66/namespace_kratos.html#a44de11b0ae8050ce96a1dbb5eb9bd97b">operator==</a>(</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>&amp; rFirst,</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../da/d1e/class_kratos_1_1_indexed_object.html">IndexedObject</a>&amp; rSecond)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;{</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    <span class="keywordflow">return</span> rFirst.<a class="code" href="../../da/d1e/class_kratos_1_1_indexed_object.html#ad84e1ad025ee57f147ed710a080ddf3b">Id</a>() == rSecond.<a class="code" href="../../da/d1e/class_kratos_1_1_indexed_object.html#ad84e1ad025ee57f147ed710a080ddf3b">Id</a>();</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;}</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160; </div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160; </div>
 <div class="ttc" id="aclass_kratos_1_1_indexed_object_html"><div class="ttname"><a href="../../da/d1e/class_kratos_1_1_indexed_object.html">Kratos::IndexedObject</a></div><div class="ttdoc">This object defines an indexed object.</div><div class="ttdef"><b>Definition:</b> indexed_object.h:54</div></div>
 <div class="ttc" id="aclass_kratos_1_1_indexed_object_html_a03ae366b23bb6d08d9a9697994a1d703"><div class="ttname"><a href="../../da/d1e/class_kratos_1_1_indexed_object.html#a03ae366b23bb6d08d9a9697994a1d703">Kratos::IndexedObject::result_type</a></div><div class="ttdeci">std::size_t result_type</div><div class="ttdoc">The definition of the result_type.</div><div class="ttdef"><b>Definition:</b> indexed_object.h:66</div></div>
 <div class="ttc" id="aclass_kratos_1_1_indexed_object_html_a05f4790fa8402f4a80ad1022bdab350f"><div class="ttname"><a href="../../da/d1e/class_kratos_1_1_indexed_object.html#a05f4790fa8402f4a80ad1022bdab350f">Kratos::IndexedObject::PrintInfo</a></div><div class="ttdeci">virtual void PrintInfo(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> indexed_object.h:146</div></div>
@@ -257,6 +272,8 @@ $(function() {
 <div class="ttc" id="adefine_8h_html"><div class="ttname"><a href="../../df/d67/define_8h.html">define.h</a></div></div>
 <div class="ttc" id="agroup___kratos_core_html_ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">Kratos::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdoc">The definition of the index type.</div><div class="ttdef"><b>Definition:</b> key_hash.h:35</div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
+<div class="ttc" id="anamespace_kratos_html_a333eacfcccd77819c61f0a859e974041"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a333eacfcccd77819c61f0a859e974041">Kratos::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(Dof&lt; TDataType &gt; const &amp;First, Dof&lt; TDataType &gt; const &amp;Second)</div><div class="ttdoc">Less than operator.</div><div class="ttdef"><b>Definition:</b> dof.h:584</div></div>
+<div class="ttc" id="anamespace_kratos_html_a44de11b0ae8050ce96a1dbb5eb9bd97b"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a44de11b0ae8050ce96a1dbb5eb9bd97b">Kratos::operator==</a></div><div class="ttdeci">bool operator==(const Flags &amp;Left, const Flags &amp;Right)</div><div class="ttdef"><b>Definition:</b> flags.cpp:45</div></div>
 <div class="ttc" id="anamespace_kratos_html_a9c6097d0b0a27d1cea94992b1087f56a"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">Kratos::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;rIStream, LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">input stream function</div></div>
 <div class="ttc" id="anamespace_kratos_html_acfc842a43d19dffc2d8105e5cbea17a9"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">Kratos::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;rOStream, const LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">output stream function</div><div class="ttdef"><b>Definition:</b> linear_master_slave_constraint.h:432</div></div>
 <div class="ttc" id="anamespaceode__solve_html_a0b266774af0a13d56a57cf1ada122768"><div class="ttname"><a href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">ode_solve.load</a></div><div class="ttdeci">def load(f)</div><div class="ttdef"><b>Definition:</b> ode_solve.py:307</div></div>
@@ -264,7 +281,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jun 10 2024 03:04:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jun 11 2024 03:03:14 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
