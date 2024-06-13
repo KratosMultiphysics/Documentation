@@ -498,8 +498,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:af7d1dffa016bc3e41af0bb031e6c6e33"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/ddd/class_kratos_1_1_updated_lagrangian_u_pw_diff_order_element.html#af7d1dffa016bc3e41af0bb031e6c6e33">CalculateAll</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> CalculateStiffnessMatrixFlag, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> CalculateResidualVectorFlag) override</td></tr>
 <tr class="memdesc:af7d1dffa016bc3e41af0bb031e6c6e33"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions calculates both the RHS and the LHS.  <a href="../../d1/ddd/class_kratos_1_1_updated_lagrangian_u_pw_diff_order_element.html#af7d1dffa016bc3e41af0bb031e6c6e33">More...</a><br /></td></tr>
 <tr class="separator:af7d1dffa016bc3e41af0bb031e6c6e33"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0edbb851a5853a421ea418a7c8b6b192"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/ddd/class_kratos_1_1_updated_lagrangian_u_pw_diff_order_element.html#a0edbb851a5853a421ea418a7c8b6b192">CalculateAndAddGeometricStiffnessMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../d1/ddd/class_kratos_1_1_updated_lagrangian_u_pw_diff_order_element.html#a318f86686190fb3b109eff1fd1d38805">ElementVariables</a> &amp;rVariables, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> GPoint)</td></tr>
-<tr class="separator:a0edbb851a5853a421ea418a7c8b6b192"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3749418b8b1a53406d39ec7d89855f4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/ddd/class_kratos_1_1_updated_lagrangian_u_pw_diff_order_element.html#af3749418b8b1a53406d39ec7d89855f4">GetOptionalPermeabilityUpdateFactors</a> (const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;) const override</td></tr>
+<tr class="separator:af3749418b8b1a53406d39ec7d89855f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_kratos_1_1_small_strain_u_pw_diff_order_element"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_kratos_1_1_small_strain_u_pw_diff_order_element')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d4/dfa/class_kratos_1_1_small_strain_u_pw_diff_order_element.html">Kratos::SmallStrainUPwDiffOrderElement</a></td></tr>
 <tr class="memitem:a8ae3024b46e89f21abfe6dd6f95f0bdd inherit pro_methods_class_kratos_1_1_small_strain_u_pw_diff_order_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfa/class_kratos_1_1_small_strain_u_pw_diff_order_element.html#a8ae3024b46e89f21abfe6dd6f95f0bdd">CalculateMaterialStiffnessMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rStiffnessMatrix, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
 <tr class="separator:a8ae3024b46e89f21abfe6dd6f95f0bdd inherit pro_methods_class_kratos_1_1_small_strain_u_pw_diff_order_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1157,48 +1157,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0edbb851a5853a421ea418a7c8b6b192"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0edbb851a5853a421ea418a7c8b6b192">&#9670;&nbsp;</a></span>CalculateAndAddGeometricStiffnessMatrix()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::UpdatedLagrangianUPwDiffOrderElement::CalculateAndAddGeometricStiffnessMatrix </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;&#160;</td>
-          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d1/ddd/class_kratos_1_1_updated_lagrangian_u_pw_diff_order_element.html#a318f86686190fb3b109eff1fd1d38805">ElementVariables</a> &amp;&#160;</td>
-          <td class="paramname"><em>rVariables</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
-          <td class="paramname"><em>GPoint</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a775e7a005cce620f42a27a3948d216bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a775e7a005cce620f42a27a3948d216bb">&#9670;&nbsp;</a></span>CalculateDerivativesOnInitialConfiguration()</h2>
 
@@ -1489,6 +1447,34 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="af3749418b8b1a53406d39ec7d89855f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3749418b8b1a53406d39ec7d89855f4">&#9670;&nbsp;</a></span>GetOptionalPermeabilityUpdateFactors()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; Kratos::UpdatedLagrangianUPwDiffOrderElement::GetOptionalPermeabilityUpdateFactors </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../d4/dfa/class_kratos_1_1_small_strain_u_pw_diff_order_element.html#ac8cdf55d9ffac22101118d5281efd160">Kratos::SmallStrainUPwDiffOrderElement</a>.</p>
+
+</div>
+</div>
 <a id="a81d78e7f1647edd6f667e3012b542002"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81d78e7f1647edd6f667e3012b542002">&#9670;&nbsp;</a></span>Info()</h2>
 
@@ -1671,7 +1657,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 12 2024 03:40:18 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 13 2024 03:40:56 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

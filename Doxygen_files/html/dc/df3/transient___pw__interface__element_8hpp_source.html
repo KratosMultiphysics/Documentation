@@ -241,7 +241,7 @@ $(function() {
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> CalculateAndAddFluidBodyFlow(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">VectorType</a>&amp;                      rRightHandSideVector,</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                                      <span class="keyword">const</span> <a class="code" href="../../d6/df6/class_kratos_1_1_transient_pw_interface_element.html#a46b48f274365d5570b8fe0ead5ed3f68">InterfaceElementVariables</a>&amp; rVariables) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> GetNumberOfDOF() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    std::size_t GetNumberOfDOF() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;    [[nodiscard]] <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">DofsVectorType</a> GetDofs() <span class="keyword">const</span>;</div>
@@ -289,7 +289,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_transient_pw_interface_element_html_a9844e4c6a77f19c216f4d2a04bec1176"><div class="ttname"><a href="../../d6/df6/class_kratos_1_1_transient_pw_interface_element.html#a9844e4c6a77f19c216f4d2a04bec1176">Kratos::TransientPwInterfaceElement::operator=</a></div><div class="ttdeci">TransientPwInterfaceElement &amp; operator=(TransientPwInterfaceElement &amp;&amp;)=delete</div></div>
 <div class="ttc" id="aclass_kratos_1_1_transient_pw_interface_element_html_ab7d1f4648ce220f00b725b933506ea97"><div class="ttname"><a href="../../d6/df6/class_kratos_1_1_transient_pw_interface_element.html#ab7d1f4648ce220f00b725b933506ea97">Kratos::TransientPwInterfaceElement::KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION(TransientPwInterfaceElement)</div></div>
 <div class="ttc" id="aclass_kratos_1_1_transient_pw_interface_element_html_aba4e863b3a4b134c117d2d4f929d5a4e"><div class="ttname"><a href="../../d6/df6/class_kratos_1_1_transient_pw_interface_element.html#aba4e863b3a4b134c117d2d4f929d5a4e">Kratos::TransientPwInterfaceElement::TransientPwInterfaceElement</a></div><div class="ttdeci">TransientPwInterfaceElement(IndexType NewId, GeometryType::Pointer pGeometry, std::unique_ptr&lt; StressStatePolicy &gt; pStressStatePolicy)</div><div class="ttdoc">Constructor using Geometry.</div><div class="ttdef"><b>Definition:</b> transient_Pw_interface_element.hpp:67</div></div>
-<div class="ttc" id="aclass_kratos_1_1_u_pw_small_strain_interface_element_html"><div class="ttname"><a href="../../da/de1/class_kratos_1_1_u_pw_small_strain_interface_element.html">Kratos::UPwSmallStrainInterfaceElement</a></div><div class="ttdef"><b>Definition:</b> U_Pw_small_strain_interface_element.hpp:30</div></div>
+<div class="ttc" id="aclass_kratos_1_1_u_pw_small_strain_interface_element_html"><div class="ttname"><a href="../../da/de1/class_kratos_1_1_u_pw_small_strain_interface_element.html">Kratos::UPwSmallStrainInterfaceElement</a></div><div class="ttdef"><b>Definition:</b> U_Pw_small_strain_interface_element.hpp:29</div></div>
 <div class="ttc" id="aclass_kratos_1_1_variable_html"><div class="ttname"><a href="../../d1/d66/class_kratos_1_1_variable.html">Kratos::Variable</a></div><div class="ttdoc">Variable class contains all information needed to store and retrive data from a data container.</div><div class="ttdef"><b>Definition:</b> variable.h:63</div></div>
 <div class="ttc" id="aclass_kratos_1_1array__1d_html"><div class="ttname"><a href="../../d4/ddc/class_kratos_1_1array__1d.html">Kratos::array_1d&lt; double, 3 &gt;</a></div></div>
 <div class="ttc" id="adefine_8h_html_a534cb8a7eac3e4cf5d2c482b87b505a4"><div class="ttname"><a href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a></div><div class="ttdeci">#define KRATOS_SERIALIZE_SAVE_BASE_CLASS(Serializer, BaseType)</div><div class="ttdef"><b>Definition:</b> define.h:842</div></div>
@@ -306,7 +306,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jun 12 2024 02:21:39 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Jun 13 2024 02:21:07 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
