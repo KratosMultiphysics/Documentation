@@ -123,8 +123,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7aa11a8785309e355b672cdabb0df4fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6292bd0c1e87fe50364b30a40a12dcfa"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6f/classalgorithms_1_1standardized__rgp__constraint_1_1_standardized_r_g_p_constraint.html#a6292bd0c1e87fe50364b30a40a12dcfa">CalculateStandardizedValue</a> (self, KratosOA.CollectiveExpression control_field, bool save_value=True)</td></tr>
 <tr class="separator:a6292bd0c1e87fe50364b30a40a12dcfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab83a2d98e1e6ee51edd825f28f57c5b6"><td class="memItemLeft" align="right" valign="top">KratosOA.CollectiveExpression&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6f/classalgorithms_1_1standardized__rgp__constraint_1_1_standardized_r_g_p_constraint.html#ab83a2d98e1e6ee51edd825f28f57c5b6">CalculateStandardizedGradient</a> (self, bool save_field=True)</td></tr>
-<tr class="separator:ab83a2d98e1e6ee51edd825f28f57c5b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2509b75037f382ee2c2ef3c083fe8327"><td class="memItemLeft" align="right" valign="top">KratosOA.CollectiveExpression&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6f/classalgorithms_1_1standardized__rgp__constraint_1_1_standardized_r_g_p_constraint.html#a2509b75037f382ee2c2ef3c083fe8327">CalculateStandardizedGradient</a> (self)</td></tr>
+<tr class="separator:a2509b75037f382ee2c2ef3c083fe8327"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad43d31af4bbca03ece135ccaa64b727"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6f/classalgorithms_1_1standardized__rgp__constraint_1_1_standardized_r_g_p_constraint.html#aad43d31af4bbca03ece135ccaa64b727">GetValue</a> (self, int step_index=0)</td></tr>
 <tr class="separator:aad43d31af4bbca03ece135ccaa64b727"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a85eb2c751de29e0d799cc8be577d1c7f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d6f/classalgorithms_1_1standardized__rgp__constraint_1_1_standardized_r_g_p_constraint.html#a85eb2c751de29e0d799cc8be577d1c7f">GetStandardizedValue</a> (self, int step_index=0)</td></tr>
@@ -171,7 +171,7 @@ Supported contraint types:
 
 The reference value for the constraint either can be the "initial_value" or a specified value.
 
-It can be used only with relaxed_gradient_projection_algorithm. The class contains neccessary functions to compute critical zones. 
+It can be used only with relaxed_gradient_projection_algorithm. The class contains neccessary functions to compute critical zones.
 </pre> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a60935150d6b0c631d3e8076684a498a9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a60935150d6b0c631d3e8076684a498a9">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -220,8 +220,8 @@ It can be used only with relaxed_gradient_projection_algorithm. The class contai
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab83a2d98e1e6ee51edd825f28f57c5b6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab83a2d98e1e6ee51edd825f28f57c5b6">&#9670;&nbsp;</a></span>CalculateStandardizedGradient()</h2>
+<a id="a2509b75037f382ee2c2ef3c083fe8327"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2509b75037f382ee2c2ef3c083fe8327">&#9670;&nbsp;</a></span>CalculateStandardizedGradient()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -230,18 +230,8 @@ It can be used only with relaxed_gradient_projection_algorithm. The class contai
           <td class="memname"> KratosOA.CollectiveExpression algorithms.standardized_rgp_constraint.StandardizedRGPConstraint.CalculateStandardizedGradient </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>self</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">bool &#160;</td>
-          <td class="paramname"><em>save_field</em> = <code>True</code>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -783,7 +773,7 @@ It can be used only with relaxed_gradient_projection_algorithm. The class contai
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 18 2024 03:13:04 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jun 19 2024 03:13:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
