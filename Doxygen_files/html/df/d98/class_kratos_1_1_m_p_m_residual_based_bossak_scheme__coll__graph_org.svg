@@ -29,7 +29,7 @@
 <text text-anchor="start" x="1031.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">* TSystemVectorType</text>
 <text text-anchor="start" x="1031.5" y="-29.5" font-family="Helvetica,sans-Serif" font-size="10.00">* LocalSystemVectorType</text>
 <text text-anchor="start" x="1031.5" y="-18.5" font-family="Helvetica,sans-Serif" font-size="10.00">* LocalSystemMatrixType</text>
-<text text-anchor="start" x="1031.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 23 more...</text>
+<text text-anchor="start" x="1031.5" y="-7.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 26 more...</text>
 </a>
 </g>
 </g>
@@ -850,65 +850,63 @@
 <g id="node12" class="node">
 <title>Node12</title>
 <g id="a_node12"><a xlink:href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="1281.5,-1574 1281.5,-2137 1466.5,-2137 1466.5,-1574 1281.5,-1574"/>
-<text text-anchor="start" x="1289.5" y="-2125" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::MPMBoundaryRotation</text>
-<text text-anchor="start" x="1289.5" y="-2114" font-family="Helvetica,sans-Serif" font-size="10.00">Utility&lt; LocalSystemMatrixType,</text>
-<text text-anchor="middle" x="1374" y="-2103" font-family="Helvetica,sans-Serif" font-size="10.00"> LocalSystemVectorType &gt;</text>
-<polyline fill="none" stroke="black" points="1281.5,-2096 1466.5,-2096 "/>
-<text text-anchor="middle" x="1374" y="-2084" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="1281.5,-2077 1466.5,-2077 "/>
-<text text-anchor="start" x="1289.5" y="-2065" font-family="Helvetica,sans-Serif" font-size="10.00">+ MPMBoundaryRotationUtility()</text>
-<text text-anchor="start" x="1289.5" y="-2054" font-family="Helvetica,sans-Serif" font-size="10.00">+ ~MPMBoundaryRotationUtility()</text>
-<text text-anchor="start" x="1289.5" y="-2043" font-family="Helvetica,sans-Serif" font-size="10.00">+ operator=()</text>
-<text text-anchor="start" x="1289.5" y="-2032" font-family="Helvetica,sans-Serif" font-size="10.00">+ Rotate()</text>
-<text text-anchor="start" x="1289.5" y="-2021" font-family="Helvetica,sans-Serif" font-size="10.00">+ RotateRHS()</text>
-<text text-anchor="start" x="1289.5" y="-2010" font-family="Helvetica,sans-Serif" font-size="10.00">+ ApplySlipCondition()</text>
+<polygon fill="none" stroke="black" points="1281.5,-1585 1281.5,-2126 1466.5,-2126 1466.5,-1585 1281.5,-1585"/>
+<text text-anchor="start" x="1289.5" y="-2114" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::MPMBoundaryRotation</text>
+<text text-anchor="start" x="1289.5" y="-2103" font-family="Helvetica,sans-Serif" font-size="10.00">Utility&lt; LocalSystemMatrixType,</text>
+<text text-anchor="middle" x="1374" y="-2092" font-family="Helvetica,sans-Serif" font-size="10.00"> LocalSystemVectorType &gt;</text>
+<polyline fill="none" stroke="black" points="1281.5,-2085 1466.5,-2085 "/>
+<text text-anchor="middle" x="1374" y="-2073" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="1281.5,-2066 1466.5,-2066 "/>
+<text text-anchor="start" x="1289.5" y="-2054" font-family="Helvetica,sans-Serif" font-size="10.00">+ MPMBoundaryRotationUtility()</text>
+<text text-anchor="start" x="1289.5" y="-2043" font-family="Helvetica,sans-Serif" font-size="10.00">+ ~MPMBoundaryRotationUtility()</text>
+<text text-anchor="start" x="1289.5" y="-2032" font-family="Helvetica,sans-Serif" font-size="10.00">+ operator=()</text>
+<text text-anchor="start" x="1289.5" y="-2021" font-family="Helvetica,sans-Serif" font-size="10.00">+ Rotate()</text>
+<text text-anchor="start" x="1289.5" y="-2010" font-family="Helvetica,sans-Serif" font-size="10.00">+ RotateRHS()</text>
 <text text-anchor="start" x="1289.5" y="-1999" font-family="Helvetica,sans-Serif" font-size="10.00">+ ApplySlipCondition()</text>
-<text text-anchor="start" x="1289.5" y="-1988" font-family="Helvetica,sans-Serif" font-size="10.00">+ ElementApplySlipCondition()</text>
+<text text-anchor="start" x="1289.5" y="-1988" font-family="Helvetica,sans-Serif" font-size="10.00">+ ApplySlipCondition()</text>
 <text text-anchor="start" x="1289.5" y="-1977" font-family="Helvetica,sans-Serif" font-size="10.00">+ ElementApplySlipCondition()</text>
-<text text-anchor="start" x="1289.5" y="-1966" font-family="Helvetica,sans-Serif" font-size="10.00">+ ConditionApplySlipCondition()</text>
+<text text-anchor="start" x="1289.5" y="-1966" font-family="Helvetica,sans-Serif" font-size="10.00">+ ElementApplySlipCondition()</text>
 <text text-anchor="start" x="1289.5" y="-1955" font-family="Helvetica,sans-Serif" font-size="10.00">+ ConditionApplySlipCondition()</text>
-<text text-anchor="start" x="1289.5" y="-1944" font-family="Helvetica,sans-Serif" font-size="10.00">+ IsPenalty()</text>
-<text text-anchor="start" x="1289.5" y="-1933" font-family="Helvetica,sans-Serif" font-size="10.00">+ RotateDisplacements()</text>
-<text text-anchor="start" x="1289.5" y="-1922" font-family="Helvetica,sans-Serif" font-size="10.00">+ RotateVelocities()</text>
-<text text-anchor="start" x="1289.5" y="-1911" font-family="Helvetica,sans-Serif" font-size="10.00">+ RecoverDisplacements()</text>
-<text text-anchor="start" x="1289.5" y="-1900" font-family="Helvetica,sans-Serif" font-size="10.00">+ RecoverVelocities()</text>
-<text text-anchor="start" x="1289.5" y="-1889" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateReactionForces()</text>
-<text text-anchor="start" x="1289.5" y="-1878" font-family="Helvetica,sans-Serif" font-size="10.00">+ Info()</text>
-<text text-anchor="start" x="1289.5" y="-1867" font-family="Helvetica,sans-Serif" font-size="10.00">+ PrintInfo()</text>
-<text text-anchor="start" x="1289.5" y="-1856" font-family="Helvetica,sans-Serif" font-size="10.00">+ PrintData()</text>
-<text text-anchor="start" x="1289.5" y="-1845" font-family="Helvetica,sans-Serif" font-size="10.00">* NodeType</text>
-<text text-anchor="start" x="1289.5" y="-1834" font-family="Helvetica,sans-Serif" font-size="10.00">* GeometryType</text>
-<text text-anchor="start" x="1289.5" y="-1823" font-family="Helvetica,sans-Serif" font-size="10.00">* KRATOS_CLASS_POINTER</text>
-<text text-anchor="start" x="1289.5" y="-1812" font-family="Helvetica,sans-Serif" font-size="10.00">_DEFINITION()</text>
-<text text-anchor="start" x="1289.5" y="-1801" font-family="Helvetica,sans-Serif" font-size="10.00">* mrFlagVariable</text>
-<text text-anchor="start" x="1289.5" y="-1790" font-family="Helvetica,sans-Serif" font-size="10.00">* MPMBoundaryRotationUtility()</text>
-<text text-anchor="start" x="1289.5" y="-1779" font-family="Helvetica,sans-Serif" font-size="10.00">* ~MPMBoundaryRotationUtility()</text>
-<text text-anchor="start" x="1289.5" y="-1768" font-family="Helvetica,sans-Serif" font-size="10.00">* operator=()</text>
-<text text-anchor="start" x="1289.5" y="-1757" font-family="Helvetica,sans-Serif" font-size="10.00">* Rotate()</text>
-<text text-anchor="start" x="1289.5" y="-1746" font-family="Helvetica,sans-Serif" font-size="10.00">* RotateRHS()</text>
-<text text-anchor="start" x="1289.5" y="-1735" font-family="Helvetica,sans-Serif" font-size="10.00">* ApplySlipCondition()</text>
+<text text-anchor="start" x="1289.5" y="-1944" font-family="Helvetica,sans-Serif" font-size="10.00">+ ConditionApplySlipCondition()</text>
+<text text-anchor="start" x="1289.5" y="-1933" font-family="Helvetica,sans-Serif" font-size="10.00">+ IsPenalty()</text>
+<text text-anchor="start" x="1289.5" y="-1922" font-family="Helvetica,sans-Serif" font-size="10.00">+ IsPenalty()</text>
+<text text-anchor="start" x="1289.5" y="-1911" font-family="Helvetica,sans-Serif" font-size="10.00">and 7 more...</text>
+<text text-anchor="start" x="1289.5" y="-1900" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetSlidingState()</text>
+<text text-anchor="start" x="1289.5" y="-1889" font-family="Helvetica,sans-Serif" font-size="10.00">+ Info()</text>
+<text text-anchor="start" x="1289.5" y="-1878" font-family="Helvetica,sans-Serif" font-size="10.00">+ PrintInfo()</text>
+<text text-anchor="start" x="1289.5" y="-1867" font-family="Helvetica,sans-Serif" font-size="10.00">+ PrintData()</text>
+<text text-anchor="start" x="1289.5" y="-1856" font-family="Helvetica,sans-Serif" font-size="10.00">* NodeType</text>
+<text text-anchor="start" x="1289.5" y="-1845" font-family="Helvetica,sans-Serif" font-size="10.00">* GeometryType</text>
+<text text-anchor="start" x="1289.5" y="-1834" font-family="Helvetica,sans-Serif" font-size="10.00">* KRATOS_CLASS_POINTER</text>
+<text text-anchor="start" x="1289.5" y="-1823" font-family="Helvetica,sans-Serif" font-size="10.00">_DEFINITION()</text>
+<text text-anchor="start" x="1289.5" y="-1812" font-family="Helvetica,sans-Serif" font-size="10.00">* SLIDING</text>
+<text text-anchor="start" x="1289.5" y="-1801" font-family="Helvetica,sans-Serif" font-size="10.00">* STICK</text>
+<text text-anchor="start" x="1289.5" y="-1790" font-family="Helvetica,sans-Serif" font-size="10.00">* mrFlagVariable</text>
+<text text-anchor="start" x="1289.5" y="-1779" font-family="Helvetica,sans-Serif" font-size="10.00">* MPMBoundaryRotationUtility()</text>
+<text text-anchor="start" x="1289.5" y="-1768" font-family="Helvetica,sans-Serif" font-size="10.00">* ~MPMBoundaryRotationUtility()</text>
+<text text-anchor="start" x="1289.5" y="-1757" font-family="Helvetica,sans-Serif" font-size="10.00">* operator=()</text>
+<text text-anchor="start" x="1289.5" y="-1746" font-family="Helvetica,sans-Serif" font-size="10.00">* Rotate()</text>
+<text text-anchor="start" x="1289.5" y="-1735" font-family="Helvetica,sans-Serif" font-size="10.00">* RotateRHS()</text>
 <text text-anchor="start" x="1289.5" y="-1724" font-family="Helvetica,sans-Serif" font-size="10.00">* ApplySlipCondition()</text>
-<text text-anchor="start" x="1289.5" y="-1713" font-family="Helvetica,sans-Serif" font-size="10.00">* ElementApplySlipCondition()</text>
+<text text-anchor="start" x="1289.5" y="-1713" font-family="Helvetica,sans-Serif" font-size="10.00">* ApplySlipCondition()</text>
 <text text-anchor="start" x="1289.5" y="-1702" font-family="Helvetica,sans-Serif" font-size="10.00">* ElementApplySlipCondition()</text>
-<text text-anchor="start" x="1289.5" y="-1691" font-family="Helvetica,sans-Serif" font-size="10.00">* ConditionApplySlipCondition()</text>
+<text text-anchor="start" x="1289.5" y="-1691" font-family="Helvetica,sans-Serif" font-size="10.00">* ElementApplySlipCondition()</text>
 <text text-anchor="start" x="1289.5" y="-1680" font-family="Helvetica,sans-Serif" font-size="10.00">* ConditionApplySlipCondition()</text>
-<text text-anchor="start" x="1289.5" y="-1669" font-family="Helvetica,sans-Serif" font-size="10.00">* IsPenalty()</text>
-<text text-anchor="start" x="1289.5" y="-1658" font-family="Helvetica,sans-Serif" font-size="10.00">* RotateDisplacements()</text>
-<text text-anchor="start" x="1289.5" y="-1647" font-family="Helvetica,sans-Serif" font-size="10.00">* RotateVelocities()</text>
-<text text-anchor="start" x="1289.5" y="-1636" font-family="Helvetica,sans-Serif" font-size="10.00">* RecoverDisplacements()</text>
-<text text-anchor="start" x="1289.5" y="-1625" font-family="Helvetica,sans-Serif" font-size="10.00">* RecoverVelocities()</text>
-<text text-anchor="start" x="1289.5" y="-1614" font-family="Helvetica,sans-Serif" font-size="10.00">* CalculateReactionForces()</text>
-<text text-anchor="start" x="1289.5" y="-1603" font-family="Helvetica,sans-Serif" font-size="10.00">* Info()</text>
-<text text-anchor="start" x="1289.5" y="-1592" font-family="Helvetica,sans-Serif" font-size="10.00">* PrintInfo()</text>
-<text text-anchor="start" x="1289.5" y="-1581" font-family="Helvetica,sans-Serif" font-size="10.00">* PrintData()</text>
+<text text-anchor="start" x="1289.5" y="-1669" font-family="Helvetica,sans-Serif" font-size="10.00">* ConditionApplySlipCondition()</text>
+<text text-anchor="start" x="1289.5" y="-1658" font-family="Helvetica,sans-Serif" font-size="10.00">* IsPenalty()</text>
+<text text-anchor="start" x="1289.5" y="-1647" font-family="Helvetica,sans-Serif" font-size="10.00">* IsPenalty()</text>
+<text text-anchor="start" x="1289.5" y="-1636" font-family="Helvetica,sans-Serif" font-size="10.00">and 7 more...</text>
+<text text-anchor="start" x="1289.5" y="-1625" font-family="Helvetica,sans-Serif" font-size="10.00">* GetSlidingState()</text>
+<text text-anchor="start" x="1289.5" y="-1614" font-family="Helvetica,sans-Serif" font-size="10.00">* Info()</text>
+<text text-anchor="start" x="1289.5" y="-1603" font-family="Helvetica,sans-Serif" font-size="10.00">* PrintInfo()</text>
+<text text-anchor="start" x="1289.5" y="-1592" font-family="Helvetica,sans-Serif" font-size="10.00">* PrintData()</text>
 </a>
 </g>
 </g>
 <!-- Node12&#45;&gt;Node1 -->
 <g id="edge11" class="edge">
 <title>Node12&#45;&gt;Node1</title>
-<path fill="none" stroke="#404040" d="M1379.33,-1573.68C1378.28,-1246.16 1353.76,-691.64 1220,-237 1216.1,-223.75 1210.24,-210.85 1203.21,-198.58"/>
+<path fill="none" stroke="#404040" d="M1379.36,-1584.92C1378.83,-1258.97 1355.3,-696.88 1220,-237 1216.1,-223.75 1210.24,-210.85 1203.21,-198.58"/>
 <polygon fill="none" stroke="#404040" points="1202.99,-198.22 1196.46,-195.17 1196.76,-187.96 1203.29,-191.01 1202.99,-198.22"/>
 <text text-anchor="middle" x="1255" y="-211" font-family="Helvetica,sans-Serif" font-size="10.00"> #mRotationTool</text>
 </g>
@@ -1006,7 +1004,7 @@
 <!-- Node13&#45;&gt;Node12 -->
 <g id="edge12" class="edge">
 <title>Node13&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M1397.4,-3511.05C1391.45,-3090.81 1382.92,-2487.12 1377.97,-2137.04"/>
+<path fill="none" stroke="midnightblue" d="M1397.4,-3510.95C1391.39,-3086.26 1382.74,-2474.29 1377.81,-2126.01"/>
 <polygon fill="none" stroke="midnightblue" points="1393.9,-3511.31 1397.54,-3521.26 1400.9,-3511.21 1393.9,-3511.31"/>
 </g>
 </g>

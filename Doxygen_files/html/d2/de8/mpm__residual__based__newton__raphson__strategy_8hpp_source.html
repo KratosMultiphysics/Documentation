@@ -275,88 +275,137 @@ $(function() {
 <div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keywordflow">while</span> (is_converged == <span class="keyword">false</span> &amp;&amp;</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            iteration_number++ &lt; this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a3c6890ad48b8f698af268ca7505c5166">mMaxIterationNumber</a>)</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="comment">// Setting the number of iteration</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>().<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a78674e1f2609ef421e202c8b206b59ae">GetProcessInfo</a>()[NL_ITERATION_NUMBER] = iteration_number;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            p_scheme-&gt;InitializeNonLinIteration(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            is_converged = this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#abce783a15cf1e4f094ad8301582668d1">mpConvergenceCriteria</a>-&gt;PreCriteria(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), r_dof_set, rA, rDx, rb);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="comment">// Call the linear system solver to find the correction rDx. It is not called if there is no system to solve</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#aceeb8477b38225ca40028dc9149f85d9">SparseSpaceType::Size</a>(rDx) != 0)</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            {</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a1c630f770285d5c29e29587ac0cd71c5">BaseType::mRebuildLevel</a> &gt; 1 || <a class="code" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a284f78dd0f199a881426e0c3deda1103">BaseType::mStiffnessMatrixIsBuilt</a> == <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;                {</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                    <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt;= 3) &lt;&lt; <span class="stringliteral">&quot;Iteration Number: &quot;</span> &lt;&lt; iteration_number &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                    <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#aabe65a585b7db1712f7fa9503ba9da03">GetKeepSystemConstantDuringIterations</a>() == <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    {</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                        TSparseSpace::SetToZero(rA);</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                        TSparseSpace::SetToZero(rDx);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;                        TSparseSpace::SetToZero(rb);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            SolveSolutionStepIteration(p_scheme, p_builder_and_solver, rA, rDx, rb,</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                                                                       r_dof_set, iteration_number, is_converged);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        }</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="comment">// Plot a warning if the maximum number of iterations is exceeded</span></div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">if</span> (iteration_number &gt;= this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a3c6890ad48b8f698af268ca7505c5166">mMaxIterationNumber</a> &amp;&amp; <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>().GetCommunicator().MyPID() == 0)</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        {</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 1) this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a7ae20571f6f0b7461bed3f26ea5231ca">MaxIterationsExceeded</a>();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160; </div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;        <span class="comment">// recompute first timestep if friction is active</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> recompute_first_timestep = <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>().<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a78674e1f2609ef421e202c8b206b59ae">GetProcessInfo</a>()[FRICTION_ACTIVE];</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> is_initial_loop = (<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>().<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a78674e1f2609ef421e202c8b206b59ae">GetProcessInfo</a>()[STEP] ==  1);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">if</span> (is_initial_loop &amp;&amp; recompute_first_timestep){</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>().<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a78674e1f2609ef421e202c8b206b59ae">GetProcessInfo</a>()[INITIAL_LOOP_COMPLETE] = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160; </div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt;= 3) &lt;&lt; <span class="stringliteral">&quot;Build and Solve&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                        p_builder_and_solver-&gt;BuildAndSolve(p_scheme, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                    }</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                    {</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                        TSparseSpace::SetToZero(rDx);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                        TSparseSpace::SetToZero(rb);</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="comment">// Transfer STICK_FORCE into a &#39;previous&#39; timestep</span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="comment">// [since friction algorithm requires values of normal forces at the &#39;previous&#39; timestep]</span></div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordflow">for</span> (<a class="code" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &amp;curr_node : <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>().Nodes()){</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                curr_node.FastGetSolutionStepValue(STICK_FORCE, 1) = curr_node.FastGetSolutionStepValue(STICK_FORCE, 0);</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            }</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            is_converged=<span class="keyword">false</span>;</div>
 <div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt;= 3) &lt;&lt; <span class="stringliteral">&quot;Build RHS and Solve&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                        p_builder_and_solver-&gt;BuildRHSAndSolve(p_scheme, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                    }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                {</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    TSparseSpace::SetToZero(rDx);</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                    TSparseSpace::SetToZero(rb);</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                    <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt;= 3) &lt;&lt; <span class="stringliteral">&quot;Build RHS and Solve&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                    p_builder_and_solver-&gt;BuildRHSAndSolve(p_scheme, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                }</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;            }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            {</div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <a class="code" href="../../df/da3/group___kratos.html#gaf2d3eee3fed19a5f703dac58f332862e">KRATOS_WARNING</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;ATTENTION: no free DOFs!! &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            }</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;            <span class="comment">// Updating the results stored in the database</span></div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            r_dof_set = p_builder_and_solver-&gt;GetDofSet();</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            p_scheme-&gt;Update(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), r_dof_set, rA, rDx, rb);</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            p_scheme-&gt;FinalizeNonLinIteration(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="comment">// Move the mesh if needed</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ad2dda17b2c24e571bfdd05e9db418986">BaseType::MoveMeshFlag</a>() == <span class="keyword">true</span>) <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ae47d4f347663bee752497979623fb569">BaseType::MoveMesh</a>();</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            <span class="comment">// If converged</span></div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">if</span> (is_converged == <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            {</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#abce783a15cf1e4f094ad8301582668d1">mpConvergenceCriteria</a>-&gt;GetActualizeRHSflag() == <span class="keyword">true</span>)</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                    TSparseSpace::SetToZero(rb);</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                    p_builder_and_solver-&gt;BuildRHS(p_scheme, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rb);</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                }</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                is_converged = this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#abce783a15cf1e4f094ad8301582668d1">mpConvergenceCriteria</a>-&gt;PostCriteria(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), r_dof_set, rA, rDx, rb);</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            }</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        }</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="comment">// Plot a warning if the maximum number of iterations is exceeded</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="keywordflow">if</span> (iteration_number &gt;= this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a3c6890ad48b8f698af268ca7505c5166">mMaxIterationNumber</a> &amp;&amp; <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>().GetCommunicator().MyPID() == 0)</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        {</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 1) this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a7ae20571f6f0b7461bed3f26ea5231ca">MaxIterationsExceeded</a>();</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        }</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">return</span> is_converged;</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    }</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160; </div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;}; <span class="comment">/* Class MPMResidualBasedNewtonRaphsonStrategy */</span></div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <a class="code" href="../../df/da3/group___kratos.html#ga1aa4c61e78fd7fa7e4972ed28500bd6d">KRATOS_INFO</a>(<span class="stringliteral">&quot;&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;\n&quot;</span>;</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            <a class="code" href="../../df/da3/group___kratos.html#ga1aa4c61e78fd7fa7e4972ed28500bd6d">KRATOS_INFO</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;Running another Newton-Rhapson loop for friction&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="comment">// Reset iteration_number and run another loop</span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            iteration_number = 1;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">while</span> (is_converged == <span class="keyword">false</span> &amp;&amp;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                   iteration_number++ &lt; this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a3c6890ad48b8f698af268ca7505c5166">mMaxIterationNumber</a>)</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;            {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                SolveSolutionStepIteration(p_scheme, p_builder_and_solver, rA, rDx, rb,</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                                           r_dof_set, iteration_number, is_converged);</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;            <span class="comment">// Plot a warning if the maximum number of iterations is exceeded</span></div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            <span class="keywordflow">if</span> (iteration_number &gt;= this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a3c6890ad48b8f698af268ca7505c5166">mMaxIterationNumber</a> &amp;&amp; <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>().GetCommunicator().MyPID() == 0)</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;            {</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 1) this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a7ae20571f6f0b7461bed3f26ea5231ca">MaxIterationsExceeded</a>();</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            }</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;        <span class="keywordflow">return</span> is_converged;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    }</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">inline</span> SolveSolutionStepIteration(<span class="keyword">typename</span> TSchemeType::Pointer p_scheme,</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                                    <span class="keyword">typename</span> TBuilderAndSolverType::Pointer p_builder_and_solver,</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                                    <a class="code" href="../../d1/d62/class_kratos_1_1_m_p_m_residual_based_newton_raphson_strategy.html#a4753aa2d6cd52016f267de1fbd504752">TSystemMatrixType</a>&amp; rA,</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                                    <a class="code" href="../../d1/d62/class_kratos_1_1_m_p_m_residual_based_newton_raphson_strategy.html#a022d402d741954cad0ee0357006121da">TSystemVectorType</a>&amp; rDx,</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                                    <a class="code" href="../../d1/d62/class_kratos_1_1_m_p_m_residual_based_newton_raphson_strategy.html#a022d402d741954cad0ee0357006121da">TSystemVectorType</a>&amp; rb,</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                                    <a class="code" href="../../d1/d62/class_kratos_1_1_m_p_m_residual_based_newton_raphson_strategy.html#a049839ff594cee216347e2a94d584f25">DofsArrayType</a>&amp; r_dof_set,</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                                    <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iteration_number,</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                                    <span class="keywordtype">bool</span>&amp; is_converged)</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    { <span class="comment">// Setting the number of iteration</span></div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>().<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a78674e1f2609ef421e202c8b206b59ae">GetProcessInfo</a>()[NL_ITERATION_NUMBER] = iteration_number;</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;        p_scheme-&gt;InitializeNonLinIteration(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        is_converged = this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#abce783a15cf1e4f094ad8301582668d1">mpConvergenceCriteria</a>-&gt;PreCriteria(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), r_dof_set, rA, rDx, rb);</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="comment">// Call the linear system solver to find the correction rDx. It is not called if there is no system to solve</span></div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#aceeb8477b38225ca40028dc9149f85d9">SparseSpaceType::Size</a>(rDx) != 0)</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        {</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a1c630f770285d5c29e29587ac0cd71c5">BaseType::mRebuildLevel</a> &gt; 1 || <a class="code" href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a284f78dd0f199a881426e0c3deda1103">BaseType::mStiffnessMatrixIsBuilt</a> == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;            {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt;= 3) &lt;&lt; <span class="stringliteral">&quot;Iteration Number: &quot;</span> &lt;&lt; iteration_number &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#aabe65a585b7db1712f7fa9503ba9da03">GetKeepSystemConstantDuringIterations</a>() == <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                {</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                    TSparseSpace::SetToZero(rA);</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                    TSparseSpace::SetToZero(rDx);</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    TSparseSpace::SetToZero(rb);</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;} <span class="comment">/* namespace Kratos.*/</span></div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* KRATOS_MPM_RESIDUAL_BASED_NEWTON_RAPHSON_STRATEGY  defined */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt;= 3) &lt;&lt; <span class="stringliteral">&quot;Build and Solve&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                    p_builder_and_solver-&gt;BuildAndSolve(p_scheme, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                }</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                {</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                    TSparseSpace::SetToZero(rDx);</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                    TSparseSpace::SetToZero(rb);</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                    <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt;= 3) &lt;&lt; <span class="stringliteral">&quot;Build RHS and Solve&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                    p_builder_and_solver-&gt;BuildRHSAndSolve(p_scheme, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                }</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            }</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                TSparseSpace::SetToZero(rDx);</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                TSparseSpace::SetToZero(rb);</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160; </div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt;= 3) &lt;&lt; <span class="stringliteral">&quot;Build RHS and Solve&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                p_builder_and_solver-&gt;BuildRHSAndSolve(p_scheme, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        }</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <a class="code" href="../../df/da3/group___kratos.html#gaf2d3eee3fed19a5f703dac58f332862e">KRATOS_WARNING</a>(<span class="stringliteral">&quot;MPMNewtonRaphsonStrategy&quot;</span>) &lt;&lt; <span class="stringliteral">&quot;ATTENTION: no free DOFs!! &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;        }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="comment">// Updating the results stored in the database</span></div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        r_dof_set = p_builder_and_solver-&gt;GetDofSet();</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160; </div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        p_scheme-&gt;Update(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), r_dof_set, rA, rDx, rb);</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        p_scheme-&gt;FinalizeNonLinIteration(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rA, rDx, rb);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160; </div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="comment">// Move the mesh if needed</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ad2dda17b2c24e571bfdd05e9db418986">BaseType::MoveMeshFlag</a>() == <span class="keyword">true</span>) <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ae47d4f347663bee752497979623fb569">BaseType::MoveMesh</a>();</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        <span class="comment">// If converged</span></div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <span class="keywordflow">if</span> (is_converged == <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            <span class="keywordflow">if</span> (this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#abce783a15cf1e4f094ad8301582668d1">mpConvergenceCriteria</a>-&gt;GetActualizeRHSflag() == <span class="keyword">true</span>)</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                TSparseSpace::SetToZero(rb);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                p_builder_and_solver-&gt;BuildRHS(p_scheme, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), rb);</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160; </div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            }</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160; </div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            is_converged = this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#abce783a15cf1e4f094ad8301582668d1">mpConvergenceCriteria</a>-&gt;PostCriteria(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>(), r_dof_set, rA, rDx, rb);</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;}; <span class="comment">/* Class MPMResidualBasedNewtonRaphsonStrategy */</span></div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160; </div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;} <span class="comment">/* namespace Kratos.*/</span></div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* KRATOS_MPM_RESIDUAL_BASED_NEWTON_RAPHSON_STRATEGY  defined */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="aclass_kratos_1_1_convergence_criteria_html"><div class="ttname"><a href="../../d3/d80/class_kratos_1_1_convergence_criteria.html">Kratos::ConvergenceCriteria</a></div><div class="ttdoc">This is the base class to define the different convergence criterion considered.</div><div class="ttdef"><b>Definition:</b> convergence_criteria.h:58</div></div>
 <div class="ttc" id="aclass_kratos_1_1_implicit_solving_strategy_html"><div class="ttname"><a href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html">Kratos::ImplicitSolvingStrategy</a></div><div class="ttdoc">Implicit solving strategy base class This is the base class from which we will derive all the implici...</div><div class="ttdef"><b>Definition:</b> implicit_solving_strategy.h:61</div></div>
 <div class="ttc" id="aclass_kratos_1_1_implicit_solving_strategy_html_a103a76ae24ff7ca4978aee3b6fa775e9"><div class="ttname"><a href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a103a76ae24ff7ca4978aee3b6fa775e9">Kratos::ImplicitSolvingStrategy::TSchemeType</a></div><div class="ttdeci">Scheme&lt; TSparseSpace, TDenseSpace &gt; TSchemeType</div><div class="ttdef"><b>Definition:</b> implicit_solving_strategy.h:82</div></div>
@@ -385,6 +434,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_m_p_m_residual_based_newton_raphson_strategy_html_af895b3410ca18cd054689e06b3a35e70"><div class="ttname"><a href="../../d1/d62/class_kratos_1_1_m_p_m_residual_based_newton_raphson_strategy.html#af895b3410ca18cd054689e06b3a35e70">Kratos::MPMResidualBasedNewtonRaphsonStrategy::BaseType</a></div><div class="ttdeci">ImplicitSolvingStrategy&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt; BaseType</div><div class="ttdef"><b>Definition:</b> mpm_residual_based_newton_raphson_strategy.hpp:77</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html_a78674e1f2609ef421e202c8b206b59ae"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html#a78674e1f2609ef421e202c8b206b59ae">Kratos::ModelPart::GetProcessInfo</a></div><div class="ttdeci">ProcessInfo &amp; GetProcessInfo()</div><div class="ttdef"><b>Definition:</b> model_part.h:1746</div></div>
+<div class="ttc" id="aclass_kratos_1_1_node_html"><div class="ttname"><a href="../../d5/ddd/class_kratos_1_1_node.html">Kratos::Node</a></div><div class="ttdoc">This class defines the node.</div><div class="ttdef"><b>Definition:</b> node.h:65</div></div>
 <div class="ttc" id="aclass_kratos_1_1_pointer_vector_set_html"><div class="ttname"><a href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">Kratos::PointerVectorSet</a></div><div class="ttdoc">A sorted associative container similar to an STL set, but uses a vector to store pointers to its data...</div><div class="ttdef"><b>Definition:</b> pointer_vector_set.h:72</div></div>
 <div class="ttc" id="aclass_kratos_1_1_residual_based_newton_raphson_strategy_html"><div class="ttname"><a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html">Kratos::ResidualBasedNewtonRaphsonStrategy</a></div><div class="ttdoc">This is the base Newton Raphson strategy.</div><div class="ttdef"><b>Definition:</b> residualbased_newton_raphson_strategy.h:66</div></div>
 <div class="ttc" id="aclass_kratos_1_1_residual_based_newton_raphson_strategy_html_a1be92c602f6fec55824fec1a6deb82e7"><div class="ttname"><a href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a1be92c602f6fec55824fec1a6deb82e7">Kratos::ResidualBasedNewtonRaphsonStrategy::GetBuilderAndSolver</a></div><div class="ttdeci">TBuilderAndSolverType::Pointer GetBuilderAndSolver()</div><div class="ttdoc">Get method for the builder and solver.</div><div class="ttdef"><b>Definition:</b> residualbased_newton_raphson_strategy.h:493</div></div>
@@ -419,7 +469,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 28 2024 02:25:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Jun 29 2024 02:22:35 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

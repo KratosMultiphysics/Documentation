@@ -232,9 +232,18 @@ $(function() {
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">// Stabilization typedef</span></div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a1f9a41293ca1dd98ac7f5f718800942f">KRATOS_DEFINE_APPLICATION_VARIABLE</a>(MPM_APPLICATION, <span class="keywordtype">int</span>, STABILIZATION_TYPE)</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;}</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_MPM_APPLICATION_VARIABLES_H_INCLUDED  defined</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160; </div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">// For friction</span></div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a82bf8588b8c013fac41d424ab3d3fcb4">KRATOS_DEFINE_3D_APPLICATION_VARIABLE_WITH_COMPONENTS</a>( MPM_APPLICATION, STICK_FORCE )</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a1f9a41293ca1dd98ac7f5f718800942f">KRATOS_DEFINE_APPLICATION_VARIABLE</a>(MPM_APPLICATION, <span class="keywordtype">int</span>, FRICTION_STATE)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a1f9a41293ca1dd98ac7f5f718800942f">KRATOS_DEFINE_APPLICATION_VARIABLE</a>(MPM_APPLICATION, <span class="keywordtype">double</span>, TANGENTIAL_PENALTY_FACTOR)</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a1f9a41293ca1dd98ac7f5f718800942f">KRATOS_DEFINE_APPLICATION_VARIABLE</a>(MPM_APPLICATION, <span class="keywordtype">bool</span>, FRICTION_ACTIVE)</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a1f9a41293ca1dd98ac7f5f718800942f">KRATOS_DEFINE_APPLICATION_VARIABLE</a>(MPM_APPLICATION, <span class="keywordtype">bool</span>, FRICTION_ASSIGNED)</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a1f9a41293ca1dd98ac7f5f718800942f">KRATOS_DEFINE_APPLICATION_VARIABLE</a>(MPM_APPLICATION, <span class="keywordtype">bool</span>, HAS_INITIAL_MOMENTUM)</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a1f9a41293ca1dd98ac7f5f718800942f">KRATOS_DEFINE_APPLICATION_VARIABLE</a>(MPM_APPLICATION, <span class="keywordtype">bool</span>, INITIAL_LOOP_COMPLETE)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_MPM_APPLICATION_VARIABLES_H_INCLUDED  defined</span></div>
 <div class="ttc" id="aconstitutive__law_8h_html"><div class="ttname"><a href="../../d6/ddf/constitutive__law_8h.html">constitutive_law.h</a></div></div>
 <div class="ttc" id="adefine_8h_html"><div class="ttname"><a href="../../df/d67/define_8h.html">define.h</a></div></div>
 <div class="ttc" id="adeprecated__variables_8h_html"><div class="ttname"><a href="../../d1/d1a/deprecated__variables_8h.html">deprecated_variables.h</a></div></div>
@@ -249,7 +258,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jun 28 2024 02:25:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Jun 29 2024 02:22:35 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
