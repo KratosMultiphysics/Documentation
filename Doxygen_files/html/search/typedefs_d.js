@@ -1,8 +1,8 @@
 var searchData=
 [
   ['nanoparticlepointertype_76276',['NanoParticlePointerType',['../dd/dfb/class_kratos_1_1_bentonite___force___based___inlet.html#af982dfacf831a4d06fd0652722fa5a0f',1,'Kratos::Bentonite_Force_Based_Inlet']]],
-  ['nearestelementmappertype_76277',['NearestElementMapperType',['../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#afcc28dc3b95a79a1874c82c60717fc76',1,'Kratos::Projection3D2DMapper']]],
-  ['nearestneighbormappertype_76278',['NearestNeighborMapperType',['../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a6511a0bd436842c54b8e7b5f1c31864c',1,'Kratos::Projection3D2DMapper']]],
+  ['nearestelementmappertype_76277',['NearestElementMapperType',['../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#abfe0daa7c93e24fc7f80ed9e020ba120',1,'Kratos::Projection3D2DMapper']]],
+  ['nearestneighbormappertype_76278',['NearestNeighborMapperType',['../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a8bdb3ff47b93432731ddd1b5953f9f0e',1,'Kratos::Projection3D2DMapper']]],
   ['neighbourelementsarraytype_76279',['NeighbourElementsArrayType',['../dd/d4d/class_kratos_1_1_neighbours.html#aa47d176d0561c2b932a8d845d0a8de40',1,'Kratos::Neighbours']]],
   ['neighbourindicescontainertype_76280',['NeighbourIndicesContainerType',['../df/d90/class_kratos_1_1_m_p_i_communicator.html#ab5fa441f0a3debbdf0b71740fa7a0308',1,'Kratos::MPICommunicator::NeighbourIndicesContainerType()'],['../d3/da4/class_kratos_1_1_communicator.html#ab278d60b03ae1c9aa199a0b5e7a78b82',1,'Kratos::Communicator::NeighbourIndicesContainerType()']]],
   ['neighbourmaptype_76281',['NeighbourMapType',['../d8/de0/class_kratos_1_1_find_global_nodal_entity_neighbours_process.html#a8bcbbbbe8394060be4e066a3ce342607',1,'Kratos::FindGlobalNodalEntityNeighboursProcess']]],

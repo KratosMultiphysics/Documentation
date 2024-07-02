@@ -157,7 +157,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a59dbe291f07cd8eaef6898cf83bdee50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operations</div></td></tr>
 <tr class="memitem:ad96726ecf16ce8141950703bcef34529"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ad96726ecf16ce8141950703bcef34529">UpdateInterface</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a> MappingOptions, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> SearchRadius) override</td></tr>
-<tr class="memdesc:ad96726ecf16ce8141950703bcef34529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the mapping-system after the geometry/mesh has changed After changes in the topology (e.g. remeshing or sliding interfaces) the relations for the mapping have to be recomputed. This means that the search has to be conducted again and the mapping-system has to be rebuilt, hence this is expensive.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ad96726ecf16ce8141950703bcef34529">More...</a><br /></td></tr>
+<tr class="memdesc:ad96726ecf16ce8141950703bcef34529"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the mapping-system after the geometry/mesh has changed.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ad96726ecf16ce8141950703bcef34529">More...</a><br /></td></tr>
 <tr class="separator:ad96726ecf16ce8141950703bcef34529"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb256a17ffa9dcc4712b79afc9692a4b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#ae3cadb85dfeb94c5a226b4bbfed11d2b">MapperUniquePointerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#afb256a17ffa9dcc4712b79afc9692a4b">Clone</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPartOrigin, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPartDestination, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> JsonParameters) const override</td></tr>
 <tr class="memdesc:afb256a17ffa9dcc4712b79afc9692a4b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cloning the <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html" title="Base Class for all Mappers.">Mapper</a> returns a clone of the current <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html" title="Base Class for all Mappers.">Mapper</a> pure virtual, has to be implemented in every derived mapper, used in the creation of the Mappers.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#afb256a17ffa9dcc4712b79afc9692a4b">More...</a><br /></td></tr>
@@ -242,27 +242,27 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad3ff5db94eab095e2072ed9986db4c87 inherit pub_methods_class_kratos_1_1_mapper"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type Definitions</h2></td></tr>
-<tr class="memitem:a3cc1d11329b5f27a2f2caef606877ab8"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html">InterpolativeMapperBase</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a3cc1d11329b5f27a2f2caef606877ab8">BaseType</a></td></tr>
-<tr class="memdesc:a3cc1d11329b5f27a2f2caef606877ab8"><td class="mdescLeft">&#160;</td><td class="mdescRight">BaseType definitions.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a3cc1d11329b5f27a2f2caef606877ab8">More...</a><br /></td></tr>
-<tr class="separator:a3cc1d11329b5f27a2f2caef606877ab8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac048fd5c645f947d68e12e85d17be71f"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../db/d66/namespace_kratos.html#a3af372ea08f0c45365786d82a166d8a3">Kratos::unique_ptr</a>&lt; <a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#acc64907f703aeced4924d59de5a38a9a">BaseType</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ac048fd5c645f947d68e12e85d17be71f">BaseMapperUniquePointerType</a></td></tr>
-<tr class="separator:ac048fd5c645f947d68e12e85d17be71f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3088ecb39eb00378d9935e015be50a7"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#a0952109bcb33d3b627855000de2975d5">BaseType::TMappingMatrixType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#aa3088ecb39eb00378d9935e015be50a7">TMappingMatrixType</a></td></tr>
-<tr class="separator:aa3088ecb39eb00378d9935e015be50a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8fed3a96d7c08da0604fa699bbc48cd1"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#ae3cadb85dfeb94c5a226b4bbfed11d2b">BaseType::MapperUniquePointerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a8fed3a96d7c08da0604fa699bbc48cd1">MapperUniquePointerType</a></td></tr>
-<tr class="separator:a8fed3a96d7c08da0604fa699bbc48cd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5c2c957a36512a6c6a7dd7dcca2418b"><td class="memItemLeft" align="right" valign="top">typedef TMapperBackend::InterfaceCommunicatorType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ae5c2c957a36512a6c6a7dd7dcca2418b">InterfaceCommunicatorType</a></td></tr>
-<tr class="memdesc:ae5c2c957a36512a6c6a7dd7dcca2418b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface definitions.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ae5c2c957a36512a6c6a7dd7dcca2418b">More...</a><br /></td></tr>
-<tr class="separator:ae5c2c957a36512a6c6a7dd7dcca2418b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e8a4820de5243a4e9229d1fcce2a072"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../dc/d72/class_kratos_1_1_interface_communicator.html#a6a2a31b5b90d6d688dce37431c521de4">InterfaceCommunicator::MapperInterfaceInfoUniquePointerType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a2e8a4820de5243a4e9229d1fcce2a072">MapperInterfaceInfoUniquePointerType</a></td></tr>
-<tr class="separator:a2e8a4820de5243a4e9229d1fcce2a072"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6511a0bd436842c54b8e7b5f1c31864c"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d2/d14/class_kratos_1_1_nearest_neighbor_mapper.html">NearestNeighborMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a6511a0bd436842c54b8e7b5f1c31864c">NearestNeighborMapperType</a></td></tr>
-<tr class="memdesc:a6511a0bd436842c54b8e7b5f1c31864c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Other mappers definition.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a6511a0bd436842c54b8e7b5f1c31864c">More...</a><br /></td></tr>
-<tr class="separator:a6511a0bd436842c54b8e7b5f1c31864c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afcc28dc3b95a79a1874c82c60717fc76"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d2/d01/class_kratos_1_1_nearest_element_mapper.html">NearestElementMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#afcc28dc3b95a79a1874c82c60717fc76">NearestElementMapperType</a></td></tr>
-<tr class="separator:afcc28dc3b95a79a1874c82c60717fc76"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac457bfc87476d67fa0316309016098ed"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../dd/d1e/class_kratos_1_1_barycentric_mapper.html">BarycentricMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ac457bfc87476d67fa0316309016098ed">BarycentricMapperType</a></td></tr>
-<tr class="separator:ac457bfc87476d67fa0316309016098ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2ecd2292a20177f347f2f5c7c833c5"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a2a2ecd2292a20177f347f2f5c7c833c5">BaseType</a> = <a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html">InterpolativeMapperBase</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;</td></tr>
+<tr class="memdesc:a2a2ecd2292a20177f347f2f5c7c833c5"><td class="mdescLeft">&#160;</td><td class="mdescRight">BaseType definitions.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a2a2ecd2292a20177f347f2f5c7c833c5">More...</a><br /></td></tr>
+<tr class="separator:a2a2ecd2292a20177f347f2f5c7c833c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb6e5025d3043a99c7183f711e3edcf"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#acbb6e5025d3043a99c7183f711e3edcf">BaseMapperUniquePointerType</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a3af372ea08f0c45365786d82a166d8a3">Kratos::unique_ptr</a>&lt; <a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#acc64907f703aeced4924d59de5a38a9a">BaseType</a> &gt;</td></tr>
+<tr class="separator:acbb6e5025d3043a99c7183f711e3edcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a56fb7ba85703203e474822b3698eb3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a4a56fb7ba85703203e474822b3698eb3">TMappingMatrixType</a> = typename <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#a0952109bcb33d3b627855000de2975d5">BaseType::TMappingMatrixType</a></td></tr>
+<tr class="separator:a4a56fb7ba85703203e474822b3698eb3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d80e9eb7a72c0936c22b0e0cc9cb18e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a8d80e9eb7a72c0936c22b0e0cc9cb18e">MapperUniquePointerType</a> = typename <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#ae3cadb85dfeb94c5a226b4bbfed11d2b">BaseType::MapperUniquePointerType</a></td></tr>
+<tr class="separator:a8d80e9eb7a72c0936c22b0e0cc9cb18e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e7b3b82fcc93a3d02b32e2230f6e043"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a9e7b3b82fcc93a3d02b32e2230f6e043">InterfaceCommunicatorType</a> = typename TMapperBackend::InterfaceCommunicatorType</td></tr>
+<tr class="memdesc:a9e7b3b82fcc93a3d02b32e2230f6e043"><td class="mdescLeft">&#160;</td><td class="mdescRight">Interface definitions.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a9e7b3b82fcc93a3d02b32e2230f6e043">More...</a><br /></td></tr>
+<tr class="separator:a9e7b3b82fcc93a3d02b32e2230f6e043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5ebd849f007c1f1cb88cbd41d7055da"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ae5ebd849f007c1f1cb88cbd41d7055da">MapperInterfaceInfoUniquePointerType</a> = typename InterfaceCommunicatorType::MapperInterfaceInfoUniquePointerType</td></tr>
+<tr class="separator:ae5ebd849f007c1f1cb88cbd41d7055da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bdb3ff47b93432731ddd1b5953f9f0e"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a8bdb3ff47b93432731ddd1b5953f9f0e">NearestNeighborMapperType</a> = <a class="el" href="../../d2/d14/class_kratos_1_1_nearest_neighbor_mapper.html">NearestNeighborMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;</td></tr>
+<tr class="memdesc:a8bdb3ff47b93432731ddd1b5953f9f0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Other mappers definition.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a8bdb3ff47b93432731ddd1b5953f9f0e">More...</a><br /></td></tr>
+<tr class="separator:a8bdb3ff47b93432731ddd1b5953f9f0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfe0daa7c93e24fc7f80ed9e020ba120"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#abfe0daa7c93e24fc7f80ed9e020ba120">NearestElementMapperType</a> = <a class="el" href="../../d2/d01/class_kratos_1_1_nearest_element_mapper.html">NearestElementMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;</td></tr>
+<tr class="separator:abfe0daa7c93e24fc7f80ed9e020ba120"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab171ad335206ff7f39ecbe7d894cc29c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ab171ad335206ff7f39ecbe7d894cc29c">BarycentricMapperType</a> = <a class="el" href="../../dd/d1e/class_kratos_1_1_barycentric_mapper.html">BarycentricMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;</td></tr>
+<tr class="separator:ab171ad335206ff7f39ecbe7d894cc29c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0224ead0f885a1ae96813dc19bdb66f4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a0224ead0f885a1ae96813dc19bdb66f4">KRATOS_CLASS_POINTER_DEFINITION</a> (<a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Projection3D2DMapper</a>)</td></tr>
 <tr class="memdesc:a0224ead0f885a1ae96813dc19bdb66f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html" title="This mapper simplifies the mapping between two model parts thanks to the projection over a reference ...">Projection3D2DMapper</a>.  <a href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a0224ead0f885a1ae96813dc19bdb66f4">More...</a><br /></td></tr>
 <tr class="separator:a0224ead0f885a1ae96813dc19bdb66f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -297,8 +297,8 @@ class Kratos::Projection3D2DMapper&lt; TSparseSpace, TDenseSpace, TMapperBackend
 <p>This mapper simplifies the mapping between two model parts thanks to the projection over a reference plane. </p>
 <dl class="section author"><dt>Author</dt><dd>Vicente Mataix Ferrandiz </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="ac457bfc87476d67fa0316309016098ed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac457bfc87476d67fa0316309016098ed">&#9670;&nbsp;</a></span>BarycentricMapperType</h2>
+<a id="ab171ad335206ff7f39ecbe7d894cc29c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab171ad335206ff7f39ecbe7d894cc29c">&#9670;&nbsp;</a></span>BarycentricMapperType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -306,15 +306,15 @@ class Kratos::Projection3D2DMapper&lt; TSparseSpace, TDenseSpace, TMapperBackend
 template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../dd/d1e/class_kratos_1_1_barycentric_mapper.html">BarycentricMapper</a>&lt;TSparseSpace, TDenseSpace, TMapperBackend&gt; <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ac457bfc87476d67fa0316309016098ed">BarycentricMapperType</a></td>
+          <td class="memname">using <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ab171ad335206ff7f39ecbe7d894cc29c">BarycentricMapperType</a> =  <a class="el" href="../../dd/d1e/class_kratos_1_1_barycentric_mapper.html">BarycentricMapper</a>&lt;TSparseSpace, TDenseSpace, TMapperBackend&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="ac048fd5c645f947d68e12e85d17be71f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac048fd5c645f947d68e12e85d17be71f">&#9670;&nbsp;</a></span>BaseMapperUniquePointerType</h2>
+<a id="acbb6e5025d3043a99c7183f711e3edcf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbb6e5025d3043a99c7183f711e3edcf">&#9670;&nbsp;</a></span>BaseMapperUniquePointerType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -322,15 +322,15 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../db/d66/namespace_kratos.html#a3af372ea08f0c45365786d82a166d8a3">Kratos::unique_ptr</a>&lt;<a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#acc64907f703aeced4924d59de5a38a9a">BaseType</a>&gt; <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#ac048fd5c645f947d68e12e85d17be71f">BaseMapperUniquePointerType</a></td>
+          <td class="memname">using <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#acbb6e5025d3043a99c7183f711e3edcf">BaseMapperUniquePointerType</a> =  <a class="el" href="../../db/d66/namespace_kratos.html#a3af372ea08f0c45365786d82a166d8a3">Kratos::unique_ptr</a>&lt;<a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#acc64907f703aeced4924d59de5a38a9a">BaseType</a>&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a3cc1d11329b5f27a2f2caef606877ab8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cc1d11329b5f27a2f2caef606877ab8">&#9670;&nbsp;</a></span>BaseType</h2>
+<a id="a2a2ecd2292a20177f347f2f5c7c833c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2ecd2292a20177f347f2f5c7c833c5">&#9670;&nbsp;</a></span>BaseType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -338,7 +338,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html">InterpolativeMapperBase</a>&lt;TSparseSpace, TDenseSpace, TMapperBackend&gt; <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#acc64907f703aeced4924d59de5a38a9a">BaseType</a></td>
+          <td class="memname">using <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#acc64907f703aeced4924d59de5a38a9a">BaseType</a> =  <a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html">InterpolativeMapperBase</a>&lt;TSparseSpace, TDenseSpace, TMapperBackend&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -347,8 +347,8 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 
 </div>
 </div>
-<a id="ae5c2c957a36512a6c6a7dd7dcca2418b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5c2c957a36512a6c6a7dd7dcca2418b">&#9670;&nbsp;</a></span>InterfaceCommunicatorType</h2>
+<a id="a9e7b3b82fcc93a3d02b32e2230f6e043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e7b3b82fcc93a3d02b32e2230f6e043">&#9670;&nbsp;</a></span>InterfaceCommunicatorType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -356,7 +356,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef TMapperBackend::InterfaceCommunicatorType <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#a43047db2ccba727f9f15f58a511fe0bf">InterfaceCommunicatorType</a></td>
+          <td class="memname">using <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#a43047db2ccba727f9f15f58a511fe0bf">InterfaceCommunicatorType</a> =  typename TMapperBackend::InterfaceCommunicatorType</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -365,8 +365,8 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 
 </div>
 </div>
-<a id="a2e8a4820de5243a4e9229d1fcce2a072"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e8a4820de5243a4e9229d1fcce2a072">&#9670;&nbsp;</a></span>MapperInterfaceInfoUniquePointerType</h2>
+<a id="ae5ebd849f007c1f1cb88cbd41d7055da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5ebd849f007c1f1cb88cbd41d7055da">&#9670;&nbsp;</a></span>MapperInterfaceInfoUniquePointerType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -374,15 +374,15 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../dc/d72/class_kratos_1_1_interface_communicator.html#a6a2a31b5b90d6d688dce37431c521de4">InterfaceCommunicator::MapperInterfaceInfoUniquePointerType</a> <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#acdb2c0b3cf21a3bcb5d10c94e9ba3e0c">MapperInterfaceInfoUniquePointerType</a></td>
+          <td class="memname">using <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d2/d83/class_kratos_1_1_interpolative_mapper_base.html#acdb2c0b3cf21a3bcb5d10c94e9ba3e0c">MapperInterfaceInfoUniquePointerType</a> =  typename InterfaceCommunicatorType::MapperInterfaceInfoUniquePointerType</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a8fed3a96d7c08da0604fa699bbc48cd1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8fed3a96d7c08da0604fa699bbc48cd1">&#9670;&nbsp;</a></span>MapperUniquePointerType</h2>
+<a id="a8d80e9eb7a72c0936c22b0e0cc9cb18e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d80e9eb7a72c0936c22b0e0cc9cb18e">&#9670;&nbsp;</a></span>MapperUniquePointerType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -390,15 +390,15 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#ae3cadb85dfeb94c5a226b4bbfed11d2b">BaseType::MapperUniquePointerType</a> <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#ae3cadb85dfeb94c5a226b4bbfed11d2b">MapperUniquePointerType</a></td>
+          <td class="memname">using <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#ae3cadb85dfeb94c5a226b4bbfed11d2b">MapperUniquePointerType</a> =  typename <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#ae3cadb85dfeb94c5a226b4bbfed11d2b">BaseType::MapperUniquePointerType</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="afcc28dc3b95a79a1874c82c60717fc76"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afcc28dc3b95a79a1874c82c60717fc76">&#9670;&nbsp;</a></span>NearestElementMapperType</h2>
+<a id="abfe0daa7c93e24fc7f80ed9e020ba120"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfe0daa7c93e24fc7f80ed9e020ba120">&#9670;&nbsp;</a></span>NearestElementMapperType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -406,15 +406,15 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../d2/d01/class_kratos_1_1_nearest_element_mapper.html">NearestElementMapper</a>&lt;TSparseSpace, TDenseSpace, TMapperBackend&gt; <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#afcc28dc3b95a79a1874c82c60717fc76">NearestElementMapperType</a></td>
+          <td class="memname">using <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#abfe0daa7c93e24fc7f80ed9e020ba120">NearestElementMapperType</a> =  <a class="el" href="../../d2/d01/class_kratos_1_1_nearest_element_mapper.html">NearestElementMapper</a>&lt;TSparseSpace, TDenseSpace, TMapperBackend&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 </div>
 </div>
-<a id="a6511a0bd436842c54b8e7b5f1c31864c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6511a0bd436842c54b8e7b5f1c31864c">&#9670;&nbsp;</a></span>NearestNeighborMapperType</h2>
+<a id="a8bdb3ff47b93432731ddd1b5953f9f0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bdb3ff47b93432731ddd1b5953f9f0e">&#9670;&nbsp;</a></span>NearestNeighborMapperType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -422,7 +422,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../d2/d14/class_kratos_1_1_nearest_neighbor_mapper.html">NearestNeighborMapper</a>&lt;TSparseSpace, TDenseSpace, TMapperBackend&gt; <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a6511a0bd436842c54b8e7b5f1c31864c">NearestNeighborMapperType</a></td>
+          <td class="memname">using <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html#a8bdb3ff47b93432731ddd1b5953f9f0e">NearestNeighborMapperType</a> =  <a class="el" href="../../d2/d14/class_kratos_1_1_nearest_neighbor_mapper.html">NearestNeighborMapper</a>&lt;TSparseSpace, TDenseSpace, TMapperBackend&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -431,8 +431,8 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 
 </div>
 </div>
-<a id="aa3088ecb39eb00378d9935e015be50a7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3088ecb39eb00378d9935e015be50a7">&#9670;&nbsp;</a></span>TMappingMatrixType</h2>
+<a id="a4a56fb7ba85703203e474822b3698eb3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a56fb7ba85703203e474822b3698eb3">&#9670;&nbsp;</a></span>TMappingMatrixType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -440,7 +440,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">typedef <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#a0952109bcb33d3b627855000de2975d5">BaseType::TMappingMatrixType</a> <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#a0952109bcb33d3b627855000de2975d5">TMappingMatrixType</a></td>
+          <td class="memname">using <a class="el" href="../../d6/d31/class_kratos_1_1_projection3_d2_d_mapper.html">Kratos::Projection3D2DMapper</a>&lt; TSparseSpace, TDenseSpace, TMapperBackend &gt;::<a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#a0952109bcb33d3b627855000de2975d5">TMappingMatrixType</a> =  typename <a class="el" href="../../d7/dc8/class_kratos_1_1_mapper.html#a0952109bcb33d3b627855000de2975d5">BaseType::TMappingMatrixType</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -854,8 +854,8 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 </table>
 </div><div class="memdoc">
 
-<p>Updates the mapping-system after the geometry/mesh has changed After changes in the topology (e.g. remeshing or sliding interfaces) the relations for the mapping have to be recomputed. This means that the search has to be conducted again and the mapping-system has to be rebuilt, hence this is expensive. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Updates the mapping-system after the geometry/mesh has changed. </p>
+<p>After changes in the topology (e.g. remeshing or sliding interfaces) the relations for the mapping have to be recomputed. This means that the search has to be conducted again and the mapping-system has to be rebuilt, hence this is expensive </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">MappingOptions</td><td>flags used to specify how the update has to be done </td></tr>
     <tr><td class="paramname">SearchRadius</td><td>search radius used for the search </td></tr>
@@ -873,7 +873,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TMapperBackend &gt; <
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 1 2024 03:46:06 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jul 2 2024 03:41:39 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
