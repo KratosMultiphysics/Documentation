@@ -174,6 +174,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a988ae5804b5a110312e220a7e979c067"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html" title="Short class definition.">VariationalDistanceCalculationProcess</a>.  <a href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a988ae5804b5a110312e220a7e979c067">More...</a><br /></td></tr>
 <tr class="separator:a988ae5804b5a110312e220a7e979c067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Life Cycle</div></td></tr>
+<tr class="memitem:ab8af89d13c4485bfa568908dc79795a8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#ab8af89d13c4485bfa568908dc79795a8">VariationalDistanceCalculationProcess</a> (<a class="el" href="../../d4/d95/class_kratos_1_1_model.html">Model</a> &amp;rModel, typename TLinearSolver::Pointer pLinearSolver, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters)</td></tr>
+<tr class="memdesc:ab8af89d13c4485bfa568908dc79795a8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Variational Distance Calculation <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html" title="The base class for all processes in Kratos.">Process</a> object This process recomputes the distance function mantaining the zero of the existing distance distribution, stored in DISTANCE For this reason the DISTANCE should be initialized to values distinct from zero in at least some portions of the domain Alternatively, the DISTANCE shall be fixed to zero at least on some nodes, and the process will compute a positive distance respecting that zero.  <a href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#ab8af89d13c4485bfa568908dc79795a8">More...</a><br /></td></tr>
+<tr class="separator:ab8af89d13c4485bfa568908dc79795a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af81a802e9a3d1b02cc580692ceed2a73"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#af81a802e9a3d1b02cc580692ceed2a73">VariationalDistanceCalculationProcess</a> (<a class="el" href="../../d4/d95/class_kratos_1_1_model.html">Model</a> &amp;rModel, typename TLinearSolver::Pointer pLinearSolver, <a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a3bbd797fb6996a4c281dbb196f9ebb4f">BuilderSolverPointerType</a> pBuilderAndSolver, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters)</td></tr>
+<tr class="memdesc:af81a802e9a3d1b02cc580692ceed2a73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Variational Distance Calculation <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html" title="The base class for all processes in Kratos.">Process</a> object This process recomputes the distance function mantaining the zero of the existing distance distribution, stored in DISTANCE For this reason the DISTANCE should be initialized to values distinct from zero in at least some portions of the domain Alternatively, the DISTANCE shall be fixed to zero at least on some nodes, and the process will compute a positive distance respecting that zero Note that this constructor with custom builder and solver is to be used in the trilinos version, since the trilinos builder and solver needs additional data (the EpetraComm).  <a href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#af81a802e9a3d1b02cc580692ceed2a73">More...</a><br /></td></tr>
+<tr class="separator:af81a802e9a3d1b02cc580692ceed2a73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4984181db964c1f38289b9cec9e1d84b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a4984181db964c1f38289b9cec9e1d84b">VariationalDistanceCalculationProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rBaseModelPart, typename TLinearSolver::Pointer pLinearSolver, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> MaxIterations=10, <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> Options=CALCULATE_EXACT_DISTANCES_TO_PLANE.AsFalse(), std::string AuxPartName=&quot;RedistanceCalculationPart&quot;, double Coefficient1=0.01, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Coefficient2=0.1)</td></tr>
 <tr class="separator:a4984181db964c1f38289b9cec9e1d84b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a2620461227080882f99765fddeacd9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a6a2620461227080882f99765fddeacd9">VariationalDistanceCalculationProcess</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rBaseModelPart, typename TLinearSolver::Pointer pLinearSolver, <a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a3bbd797fb6996a4c281dbb196f9ebb4f">BuilderSolverPointerType</a> pBuilderAndSolver, unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> MaxIterations=10, <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> Options=CALCULATE_EXACT_DISTANCES_TO_PLANE.AsFalse(), std::string AuxPartName=&quot;RedistanceCalculationPart&quot;, double Coefficient1=0.01, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Coefficient2=0.1)</td></tr>
@@ -192,6 +198,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad665f6a662c0988ad6e8783661ad2383"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#ad665f6a662c0988ad6e8783661ad2383">Clear</a> () override</td></tr>
 <tr class="memdesc:ad665f6a662c0988ad6e8783661ad2383"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method clears the assignation of the conditions.  <a href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#ad665f6a662c0988ad6e8783661ad2383">More...</a><br /></td></tr>
 <tr class="separator:ad665f6a662c0988ad6e8783661ad2383"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1543221929cf484baa826a72a94ce15a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a1543221929cf484baa826a72a94ce15a">GetDefaultParameters</a> () const override</td></tr>
+<tr class="memdesc:a1543221929cf484baa826a72a94ce15a"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method provides the defaults parameters to avoid conflicts between the different constructors.  <a href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a1543221929cf484baa826a72a94ce15a">More...</a><br /></td></tr>
+<tr class="separator:a1543221929cf484baa826a72a94ce15a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Input and output</div></td></tr>
 <tr class="memitem:a2e47de4e67ef451408b6c9cb9a6de3b6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a2e47de4e67ef451408b6c9cb9a6de3b6">Info</a> () const override</td></tr>
 <tr class="memdesc:a2e47de4e67ef451408b6c9cb9a6de3b6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn back information as a string.  <a href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a2e47de4e67ef451408b6c9cb9a6de3b6">More...</a><br /></td></tr>
@@ -244,9 +253,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a1052d504f1f9bd2cd3cb60f0577207ac inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#a1052d504f1f9bd2cd3cb60f0577207ac">Check</a> ()</td></tr>
 <tr class="memdesc:a1052d504f1f9bd2cd3cb60f0577207ac inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed for being called after ExecuteInitialize ONCE to verify that the input is correct.  <a href="../../d2/d8c/class_kratos_1_1_process.html#a1052d504f1f9bd2cd3cb60f0577207ac">More...</a><br /></td></tr>
 <tr class="separator:a1052d504f1f9bd2cd3cb60f0577207ac inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab767d34b49140a9ad100674e38e30338 inherit pub_methods_class_kratos_1_1_process"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#ab767d34b49140a9ad100674e38e30338">GetDefaultParameters</a> () const</td></tr>
-<tr class="memdesc:ab767d34b49140a9ad100674e38e30338 inherit pub_methods_class_kratos_1_1_process"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method provides the defaults parameters to avoid conflicts between the different constructors.  <a href="../../d2/d8c/class_kratos_1_1_process.html#ab767d34b49140a9ad100674e38e30338">More...</a><br /></td></tr>
-<tr class="separator:ab767d34b49140a9ad100674e38e30338 inherit pub_methods_class_kratos_1_1_process"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_kratos_1_1_flags"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_kratos_1_1_flags')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></td></tr>
 <tr class="memitem:ae89c24993ca32013a4bd971f899a6d8c inherit pub_methods_class_kratos_1_1_flags"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#ae89c24993ca32013a4bd971f899a6d8c">operator=</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> const &amp;rOther)</td></tr>
 <tr class="memdesc:ae89c24993ca32013a4bd971f899a6d8c inherit pub_methods_class_kratos_1_1_flags"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator.  <a href="../../d9/d4f/class_kratos_1_1_flags.html#ae89c24993ca32013a4bd971f899a6d8c">More...</a><br /></td></tr>
@@ -441,8 +447,136 @@ template&lt;unsigned int TDim, class TSparseSpace , class TDenseSpace , class TL
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab8af89d13c4485bfa568908dc79795a8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8af89d13c4485bfa568908dc79795a8">&#9670;&nbsp;</a></span>VariationalDistanceCalculationProcess() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html">Kratos::VariationalDistanceCalculationProcess</a>&lt; TDim, TSparseSpace, TDenseSpace, TLinearSolver &gt;::<a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html">VariationalDistanceCalculationProcess</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html">Model</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename TLinearSolver::Pointer&#160;</td>
+          <td class="paramname"><em>pLinearSolver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td>
+          <td class="paramname"><em>ThisParameters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new Variational Distance Calculation <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html" title="The base class for all processes in Kratos.">Process</a> object This process recomputes the distance function mantaining the zero of the existing distance distribution, stored in DISTANCE For this reason the DISTANCE should be initialized to values distinct from zero in at least some portions of the domain Alternatively, the DISTANCE shall be fixed to zero at least on some nodes, and the process will compute a positive distance respecting that zero. </p>
+<p>This process recomputed the distance function mantaining the zero of the existing distance distribution for this reason the DISTANCE should be initialized to values distinct from zero in at least some portions of the domain alternatively, the DISTANCE shall be fixed to zero at least on some nodes, and the process will compute a positive distance respecting that zero </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">base_model_parr</td><td>- is the model part on the top of which the calculation will be performed </td></tr>
+    <tr><td class="paramname">plinear_solver</td><td>- linear solver to be used internally @max_iterations - maximum number of iteration to be employed in the nonlinear optimization process.<ul>
+<li>can also be set to 0 if a (very) rough approximation is enough</li>
+</ul>
+</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>EXAMPLE OF USAGE FROM PYTHON:</p>
+<p>class distance_linear_solver_settings: solver_type = "AMGCL" tolerance = 1E-3 max_iteration = 200 scaling = False krylov_type = "CG" smoother_type = "SPAI0" verbosity = 0</p>
+<p>import linear_solver_factory distance_linear_solver = linear_solver_factory.ConstructSolver(distance_linear_solver_settings)</p>
+<p>max_iterations=1 distance_calculator = VariationalDistanceCalculationProcess2D(fluid_model_part, distance_linear_solver, max_iterations) distance_calculator.Execute() </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModel</td><td>The model container </td></tr>
+    <tr><td class="paramname">pLinearSolver</td><td>Pointer to the linear solver to be used internally </td></tr>
+    <tr><td class="paramname">ThisParameters</td><td><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html" title="The base class for all processes in Kratos.">Process</a> settings to be validated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af81a802e9a3d1b02cc580692ceed2a73"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af81a802e9a3d1b02cc580692ceed2a73">&#9670;&nbsp;</a></span>VariationalDistanceCalculationProcess() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html">Kratos::VariationalDistanceCalculationProcess</a>&lt; TDim, TSparseSpace, TDenseSpace, TLinearSolver &gt;::<a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html">VariationalDistanceCalculationProcess</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d95/class_kratos_1_1_model.html">Model</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename TLinearSolver::Pointer&#160;</td>
+          <td class="paramname"><em>pLinearSolver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html#a3bbd797fb6996a4c281dbb196f9ebb4f">BuilderSolverPointerType</a>&#160;</td>
+          <td class="paramname"><em>pBuilderAndSolver</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td>
+          <td class="paramname"><em>ThisParameters</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Construct a new Variational Distance Calculation <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html" title="The base class for all processes in Kratos.">Process</a> object This process recomputes the distance function mantaining the zero of the existing distance distribution, stored in DISTANCE For this reason the DISTANCE should be initialized to values distinct from zero in at least some portions of the domain Alternatively, the DISTANCE shall be fixed to zero at least on some nodes, and the process will compute a positive distance respecting that zero Note that this constructor with custom builder and solver is to be used in the trilinos version, since the trilinos builder and solver needs additional data (the EpetraComm). </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModel</td><td>The model container </td></tr>
+    <tr><td class="paramname">pLinearSolver</td><td>Pointer to the linear solver to be used internally </td></tr>
+    <tr><td class="paramname">pBuilderAndSolver</td><td>Pointer to the custom linear and solver to be used internally </td></tr>
+    <tr><td class="paramname">ThisParameters</td><td><a class="el" href="../../d2/d8c/class_kratos_1_1_process.html" title="The base class for all processes in Kratos.">Process</a> settings to be validated </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a4984181db964c1f38289b9cec9e1d84b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4984181db964c1f38289b9cec9e1d84b">&#9670;&nbsp;</a></span>VariationalDistanceCalculationProcess() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a4984181db964c1f38289b9cec9e1d84b">&#9670;&nbsp;</a></span>VariationalDistanceCalculationProcess() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -506,25 +640,11 @@ template&lt;unsigned int TDim, class TSparseSpace , class TDenseSpace , class TL
   </tr>
 </table>
 </div><div class="memdoc">
-<p>This process recomputed the distance function mantaining the zero of the existing distance distribution for this reason the DISTANCE should be initialized to values distinct from zero in at least some portions of the domain alternatively, the DISTANCE shall be fixed to zero at least on some nodes, and the process will compute a positive distance respecting that zero </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">base_model_parr</td><td>- is the model part on the top of which the calculation will be performed </td></tr>
-    <tr><td class="paramname">plinear_solver</td><td>- linear solver to be used internally @max_iterations - maximum number of iteration to be employed in the nonlinear optimization process.<ul>
-<li>can also be set to 0 if a (very) rough approximation is enough</li>
-</ul>
-</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>EXAMPLE OF USAGE FROM PYTHON:</p>
-<p>class distance_linear_solver_settings: solver_type = "AMGCL" tolerance = 1E-3 max_iteration = 200 scaling = False krylov_type = "CG" smoother_type = "SPAI0" verbosity = 0</p>
-<p>import linear_solver_factory distance_linear_solver = linear_solver_factory.ConstructSolver(distance_linear_solver_settings)</p>
-<p>max_iterations=1 distance_calculator = VariationalDistanceCalculationProcess2D(fluid_model_part, distance_linear_solver, max_iterations) distance_calculator.Execute() </p>
 
 </div>
 </div>
 <a id="a6a2620461227080882f99765fddeacd9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6a2620461227080882f99765fddeacd9">&#9670;&nbsp;</a></span>VariationalDistanceCalculationProcess() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a2620461227080882f99765fddeacd9">&#9670;&nbsp;</a></span>VariationalDistanceCalculationProcess() <span class="overload">[4/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -698,6 +818,37 @@ template&lt;unsigned int TDim, class TSparseSpace , class TDenseSpace , class TL
 <p>Execute method is used to execute the <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html" title="The base class for all processes in Kratos.">Process</a> algorithms. </p>
 
 <p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#ae0018d43efd5b5660b1e311f0ecda50f">Kratos::Process</a>.</p>
+
+</div>
+</div>
+<a id="a1543221929cf484baa826a72a94ce15a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1543221929cf484baa826a72a94ce15a">&#9670;&nbsp;</a></span>GetDefaultParameters()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> <a class="el" href="../../d7/deb/class_kratos_1_1_variational_distance_calculation_process.html">Kratos::VariationalDistanceCalculationProcess</a>&lt; TDim, TSparseSpace, TDenseSpace, TLinearSolver &gt;::GetDefaultParameters </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method provides the defaults parameters to avoid conflicts between the different constructors. </p>
+
+<p>Reimplemented from <a class="el" href="../../d2/d8c/class_kratos_1_1_process.html#ab767d34b49140a9ad100674e38e30338">Kratos::Process</a>.</p>
 
 </div>
 </div>
@@ -1211,7 +1362,7 @@ template&lt;unsigned int TDim, class TSparseSpace , class TDenseSpace , class TL
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 03:14:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 03:11:59 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

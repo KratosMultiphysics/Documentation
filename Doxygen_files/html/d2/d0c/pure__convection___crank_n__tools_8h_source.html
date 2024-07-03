@@ -586,7 +586,7 @@ $(function() {
 <div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;        <span class="keywordtype">double</span> c2 = 2.00;</div>
 <div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="../../d7/d92/namespacegenerate__droplet__dynamics.html#ac8d873ef8d1bb86618fd5272e9290b0e">h</a> = sqrt(2.00*Volume);</div>
 <div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;        <span class="keywordtype">double</span> norm_u =<a class="code" href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">norm_2</a>(<a class="code" href="../../db/df4/namespacepure__conduction.html#ae09a2606ce877131c3666ac38c7d5525">vel</a>);</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordflow">if</span>(norm_u &gt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15)</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;        <span class="keywordflow">if</span>(norm_u &gt; 1e-15)</div>
 <div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d7/d92/namespacegenerate__droplet__dynamics.html#ac8d873ef8d1bb86618fd5272e9290b0e">h</a> / (  c2*norm_u );</div>
 <div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;        <span class="keywordflow">return</span> 0.0;</div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    }</div>
@@ -598,7 +598,7 @@ $(function() {
 <div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;        <span class="keywordtype">double</span> c2 = 2.00;</div>
 <div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="../../d7/d92/namespacegenerate__droplet__dynamics.html#ac8d873ef8d1bb86618fd5272e9290b0e">h</a> =  pow(6.00*Volume,0.3333333);</div>
 <div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;        <span class="keywordtype">double</span> norm_u =<a class="code" href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">norm_2</a>(<a class="code" href="../../db/df4/namespacepure__conduction.html#ae09a2606ce877131c3666ac38c7d5525">vel</a>);</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        <span class="keywordflow">if</span>(norm_u &gt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15)</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;        <span class="keywordflow">if</span>(norm_u &gt; 1e-15)</div>
 <div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="../../d7/d92/namespacegenerate__droplet__dynamics.html#ac8d873ef8d1bb86618fd5272e9290b0e">h</a> / ( c2*norm_u );</div>
 <div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;        <span class="keywordflow">return</span> 0.0;</div>
 <div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;    }</div>
@@ -669,12 +669,11 @@ $(function() {
 <div class="ttc" id="anamespacesensitivity_matrix_html_a276ae82595c6ebe2f05987c7af893337"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a276ae82595c6ebe2f05987c7af893337">sensitivityMatrix.A</a></div><div class="ttdeci">A</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:70</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_a66f3c3a8f1f19530f87c9bd69c40d3ff"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">sensitivityMatrix.N</a></div><div class="ttdeci">N</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:29</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="../../d1/d77/node_8h.html">node.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:19:31 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:18:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

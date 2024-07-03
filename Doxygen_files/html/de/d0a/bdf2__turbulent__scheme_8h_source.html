@@ -595,8 +595,8 @@ $(function() {
 <div class="line"><a name="l00607"></a><span class="lineno">  607</span>&#160;        }</div>
 <div class="line"><a name="l00608"></a><span class="lineno">  608</span>&#160; </div>
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160;        <span class="comment">// Newton-Raphson parameters</span></div>
-<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> RelTol = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-4 * rModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#aca62b3b2f90d6bf6c042b27e2bda2851">NumberOfNodes</a>();</div>
-<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AbsTol = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-6 * rModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#aca62b3b2f90d6bf6c042b27e2bda2851">NumberOfNodes</a>();</div>
+<div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> RelTol = 1e-4 * rModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#aca62b3b2f90d6bf6c042b27e2bda2851">NumberOfNodes</a>();</div>
+<div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AbsTol = 1e-6 * rModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#aca62b3b2f90d6bf6c042b27e2bda2851">NumberOfNodes</a>();</div>
 <div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> MaxIter = 100;</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160; </div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;        <span class="comment">// iteration variables</span></div>
@@ -661,12 +661,12 @@ $(function() {
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;                AbsMassErr += fabs(rMassRHS);</div>
 <div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;            }</div>
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160; </div>
-<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            <span class="keywordflow">if</span>(AbsMomErr &gt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-10)</div>
+<div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;            <span class="keywordflow">if</span>(AbsMomErr &gt; 1e-10)</div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;                RelMomErr /= AbsMomErr;</div>
 <div class="line"><a name="l00678"></a><span class="lineno">  678</span>&#160;            <span class="keywordflow">else</span> <span class="comment">// If residual is close to zero, force absolute convergence to avoid division by zero errors</span></div>
 <div class="line"><a name="l00679"></a><span class="lineno">  679</span>&#160;                RelMomErr = 1000.0;</div>
 <div class="line"><a name="l00680"></a><span class="lineno">  680</span>&#160; </div>
-<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;            <span class="keywordflow">if</span>(AbsMassErr &gt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-10)</div>
+<div class="line"><a name="l00681"></a><span class="lineno">  681</span>&#160;            <span class="keywordflow">if</span>(AbsMassErr &gt; 1e-10)</div>
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;                RelMassErr /= AbsMassErr;</div>
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160;            <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;                RelMassErr = 1000.0;</div>
@@ -1001,14 +1001,13 @@ $(function() {
 <div class="ttc" id="anamespaceode__solve_html_af41b115f7d3a8f9529eb671ad53e1d25"><div class="ttname"><a href="../../d2/df2/namespaceode__solve.html#af41b115f7d3a8f9529eb671ad53e1d25">ode_solve.n</a></div><div class="ttdeci">int n</div><div class="ttdoc">manufactured solution and derivatives (u=0 at z=0 dudz=0 at z=domain_height)</div><div class="ttdef"><b>Definition:</b> ode_solve.py:402</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_a276ae82595c6ebe2f05987c7af893337"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a276ae82595c6ebe2f05987c7af893337">sensitivityMatrix.A</a></div><div class="ttdeci">A</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:70</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="apointer__vector__set_8h_html"><div class="ttname"><a href="../../d4/d35/pointer__vector__set_8h.html">pointer_vector_set.h</a></div></div>
 <div class="ttc" id="aprocess_8h_html"><div class="ttname"><a href="../../da/d42/process_8h.html">process.h</a></div></div>
 <div class="ttc" id="ascheme_8h_html"><div class="ttname"><a href="../../d2/d64/scheme_8h.html">scheme.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:21:32 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:20:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

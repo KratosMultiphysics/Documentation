@@ -196,7 +196,7 @@ $(function() {
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                </div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="comment">//get a relevant norm</span></div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a> <a class="code" href="../../d2/df2/namespaceode__solve.html#af41b115f7d3a8f9529eb671ad53e1d25">n</a> = <a class="code" href="../../db/d66/namespace_kratos.html#a63ea2d1c3abad6c974480d8ca9eb7bba">prod</a>(<a class="code" href="../../db/d66/namespace_kratos.html#abe689ad156630b755bfd4a6b92ded2c0">trans</a>(DN_DX),elemental_distances);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <a class="code" href="../../d2/df2/namespaceode__solve.html#af41b115f7d3a8f9529eb671ad53e1d25">n</a>/=(<a class="code" href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">norm_2</a>(<a class="code" href="../../d2/df2/namespaceode__solve.html#af41b115f7d3a8f9529eb671ad53e1d25">n</a>)+1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-30);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                <a class="code" href="../../d2/df2/namespaceode__solve.html#af41b115f7d3a8f9529eb671ad53e1d25">n</a>/=(<a class="code" href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">norm_2</a>(<a class="code" href="../../d2/df2/namespaceode__solve.html#af41b115f7d3a8f9529eb671ad53e1d25">n</a>)+1e-30);</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                <span class="comment">//</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="keyword">auto</span> geom = it-&gt;GetGeometry();</div>
@@ -239,7 +239,7 @@ $(function() {
 <div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                   </div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                </div>
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a> x0 = geom[kutta_id].Coordinates();</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordtype">double</span> dkutta = -1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-3;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordtype">double</span> dkutta = -1e-3;</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; i&lt;static_cast&lt;int&gt;(geom.size()); ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                {</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    <span class="keywordflow">if</span>(kutta_id != <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
@@ -389,12 +389,11 @@ $(function() {
 <div class="ttc" id="anamespaceode__solve_html_af41b115f7d3a8f9529eb671ad53e1d25"><div class="ttname"><a href="../../d2/df2/namespaceode__solve.html#af41b115f7d3a8f9529eb671ad53e1d25">ode_solve.n</a></div><div class="ttdeci">int n</div><div class="ttdoc">manufactured solution and derivatives (u=0 at z=0 dudz=0 at z=domain_height)</div><div class="ttdef"><b>Definition:</b> ode_solve.py:402</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_a66f3c3a8f1f19530f87c9bd69c40d3ff"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">sensitivityMatrix.N</a></div><div class="ttdeci">N</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:29</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="aprocess_8h_html"><div class="ttname"><a href="../../da/d42/process_8h.html">process.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:13:53 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:12:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

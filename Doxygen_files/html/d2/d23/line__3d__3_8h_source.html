@@ -441,7 +441,7 @@ $(function() {
 <div class="line"><a name="l00625"></a><span class="lineno">  625</span>&#160;        <span class="comment">// the point is on the line, the local coordinate is our result.</span></div>
 <div class="line"><a name="l00626"></a><span class="lineno">  626</span>&#160;        rResult.<a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html#a3bf4ed11c2ff3e69ed3e47eef3482159">clear</a>();</div>
 <div class="line"><a name="l00627"></a><span class="lineno">  627</span>&#160; </div>
-<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        constexpr <span class="keywordtype">double</span> TOLERANCE = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12;</div>
+<div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        constexpr <span class="keywordtype">double</span> TOLERANCE = 1e-12;</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160; </div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_p0 = this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#af2cce5940da9a3d3cb6c4f16fb8d8a25">GetPoint</a>(0);</div>
 <div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_p1 = this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#af2cce5940da9a3d3cb6c4f16fb8d8a25">GetPoint</a>(1);</div>
@@ -588,10 +588,10 @@ $(function() {
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160; </div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> it_gp = 0; it_gp &lt; integration_points_number; it_gp++ )</div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;        {</div>
-<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            <span class="keywordtype">double</span> <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> = <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ad186709ed81b9bd6c9846ac6781de1be">IntegrationPoints</a>[it_gp].X();</div>
-<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 0 ) = 0.5 * ( <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> - 1 ) * <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>;</div>
-<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 2 ) = 1.0 - <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> * <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>;</div>
-<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 1 ) = 0.5 * ( 1 + <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> ) * <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>;</div>
+<div class="line"><a name="l00845"></a><span class="lineno">  845</span>&#160;            <span class="keywordtype">double</span> e = <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ad186709ed81b9bd6c9846ac6781de1be">IntegrationPoints</a>[it_gp].X();</div>
+<div class="line"><a name="l00846"></a><span class="lineno">  846</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 0 ) = 0.5 * ( e - 1 ) * e;</div>
+<div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 2 ) = 1.0 - e * e;</div>
+<div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 1 ) = 0.5 * ( 1 + e ) * e;</div>
 <div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        }</div>
 <div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160; </div>
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>;</div>
@@ -608,10 +608,10 @@ $(function() {
 <div class="line"><a name="l00862"></a><span class="lineno">  862</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> it_gp = 0; it_gp &lt; <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ad186709ed81b9bd6c9846ac6781de1be">IntegrationPoints</a>.size(); it_gp++ )</div>
 <div class="line"><a name="l00863"></a><span class="lineno">  863</span>&#160;        {</div>
 <div class="line"><a name="l00864"></a><span class="lineno">  864</span>&#160;            <a class="code" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> aux_mat = <a class="code" href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">ZeroMatrix</a>(3,1);</div>
-<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> = <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ad186709ed81b9bd6c9846ac6781de1be">IntegrationPoints</a>[it_gp].X();</div>
-<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;            aux_mat(0,0) = <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> - 0.5;</div>
-<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;            aux_mat(2,0) = -2.0 * <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>;</div>
-<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;            aux_mat(1,0) = <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> + 0.5;</div>
+<div class="line"><a name="l00865"></a><span class="lineno">  865</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> e = <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ad186709ed81b9bd6c9846ac6781de1be">IntegrationPoints</a>[it_gp].X();</div>
+<div class="line"><a name="l00866"></a><span class="lineno">  866</span>&#160;            aux_mat(0,0) = e - 0.5;</div>
+<div class="line"><a name="l00867"></a><span class="lineno">  867</span>&#160;            aux_mat(2,0) = -2.0 * e;</div>
+<div class="line"><a name="l00868"></a><span class="lineno">  868</span>&#160;            aux_mat(1,0) = e + 0.5;</div>
 <div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;            DN_De[it_gp] = aux_mat;</div>
 <div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        }</div>
 <div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160; </div>
@@ -852,12 +852,11 @@ $(function() {
 <div class="ttc" id="anamespacesensitivity_matrix_html_a0dcc8fdbf3703c6395c0f78646371997"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a0dcc8fdbf3703c6395c0f78646371997">sensitivityMatrix.J</a></div><div class="ttdeci">J</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:58</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_a66f3c3a8f1f19530f87c9bd69c40d3ff"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">sensitivityMatrix.N</a></div><div class="ttdeci">N</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:29</div></div>
 <div class="ttc" id="anamespacetensors_html_a1bc7dff3e0374b81093b1605f4afdbef"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a1bc7dff3e0374b81093b1605f4afdbef">tensors::d1</a></div><div class="ttdeci">subroutine d1(DSTRAN, D, dtime, NDI, NSHR, NTENS)</div><div class="ttdef"><b>Definition:</b> TensorModule.f:594</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="apolynomial__utilities_8h_html"><div class="ttname"><a href="../../dc/daa/polynomial__utilities_8h.html">polynomial_utilities.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:55:10 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:53:40 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

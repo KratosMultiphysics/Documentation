@@ -734,7 +734,7 @@ $(function() {
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;        <span class="comment">// final group limit is extended by a small amount. epsilon in numeric</span></div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        <span class="comment">// limits cannot be used since testing also need to have the same</span></div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        <span class="comment">// extending value in python. Therefore hard coded value is used</span></div>
-<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        group_limits[group_limits.size() - 1] += 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-16;</div>
+<div class="line"><a name="l00660"></a><span class="lineno">  660</span>&#160;        group_limits[group_limits.size() - 1] += 1e-16;</div>
 <div class="line"><a name="l00661"></a><span class="lineno">  661</span>&#160;        group_limits.push_back(<a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::numeric_limits&lt;double&gt;::max</a>());</div>
 <div class="line"><a name="l00662"></a><span class="lineno">  662</span>&#160; </div>
 <div class="line"><a name="l00663"></a><span class="lineno">  663</span>&#160;        group_limits.shrink_to_fit();</div>
@@ -820,7 +820,7 @@ $(function() {
 <div class="line"><a name="l00743"></a><span class="lineno">  743</span>&#160;        }</div>
 <div class="line"><a name="l00744"></a><span class="lineno">  744</span>&#160; </div>
 <div class="line"><a name="l00745"></a><span class="lineno">  745</span>&#160;        <span class="comment">// reversing group limit is extention</span></div>
-<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        group_limits[group_limits.size() - 2] -= 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-16;</div>
+<div class="line"><a name="l00746"></a><span class="lineno">  746</span>&#160;        group_limits[group_limits.size() - 2] -= 1e-16;</div>
 <div class="line"><a name="l00747"></a><span class="lineno">  747</span>&#160;        group_limits[group_limits.size() - 1] = max_value;</div>
 <div class="line"><a name="l00748"></a><span class="lineno">  748</span>&#160; </div>
 <div class="line"><a name="l00749"></a><span class="lineno">  749</span>&#160;        <span class="keywordflow">return</span> std::make_tuple&lt;</div>
@@ -941,11 +941,10 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_html_ac77084a57869cbecf89d3ee2c819c5d3"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">Kratos::double</a></div><div class="ttdeci">TABLE_NUMBER_ANGULAR_VELOCITY TABLE_NUMBER_MOMENT I33 BEAM_INERTIA_ROT_UNIT_LENGHT_Y KRATOS_DEFINE_APPLICATION_VARIABLE(DEM_APPLICATION, double, BEAM_INERTIA_ROT_UNIT_LENGHT_Z) typedef std double</div><div class="ttdef"><b>Definition:</b> DEM_application_variables.h:182</div></div>
 <div class="ttc" id="anamespacescript_html_a4c8b91e6a3f0063a0c59c274a04e8526"><div class="ttname"><a href="../../df/d58/namespacescript.html#a4c8b91e6a3f0063a0c59c274a04e8526">script.current_id</a></div><div class="ttdeci">int current_id</div><div class="ttdoc">Output settings end ####.</div><div class="ttdef"><b>Definition:</b> script.py:194</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:37:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:36:16 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

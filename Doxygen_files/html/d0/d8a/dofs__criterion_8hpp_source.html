@@ -235,7 +235,7 @@ $(function() {
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;      }</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;      <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;      {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">if</span>( this-&gt;<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a4f077303c44ee715718ed045077514ea">Is</a>(LocalFlagType::INCREMENTAL) &amp;&amp; ratio == 1.0  &amp;&amp; ReferenceNorm &lt;= mRatioTolerance * 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-2)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;        <span class="keywordflow">if</span>( this-&gt;<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a4f077303c44ee715718ed045077514ea">Is</a>(LocalFlagType::INCREMENTAL) &amp;&amp; ratio == 1.0  &amp;&amp; ReferenceNorm &lt;= mRatioTolerance * 1e-2)</div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        {</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;          <span class="keywordflow">if</span> (rModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a3be3b39e5cd9032763c2b3fd0d28dc7f">GetCommunicator</a>().<a class="code" href="../../d3/da4/class_kratos_1_1_communicator.html#aeac30940c4529aa1f7d2af14a768b62b">MyPID</a>() == 0)</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;          {</div>
@@ -358,7 +358,7 @@ $(function() {
 <div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160; </div>
 <div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;    }</div>
 <div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    rReferenceNorm = std::sqrt(rReferenceNorm+1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-20); <span class="comment">//to avoid 0</span></div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    rReferenceNorm = std::sqrt(rReferenceNorm+1e-20); <span class="comment">//to avoid 0</span></div>
 <div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
 <div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">return</span> size;</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
@@ -438,7 +438,7 @@ $(function() {
 <div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;    }</div>
 <div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
 <div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;    rCorrectionNorm = std::sqrt(rCorrectionNorm);</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    rReferenceNorm  = std::sqrt(rReferenceNorm+1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-20); <span class="comment">//to avoid 0</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;    rReferenceNorm  = std::sqrt(rReferenceNorm+1e-20); <span class="comment">//to avoid 0</span></div>
 <div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
 <div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;    <span class="keywordflow">return</span> size;</div>
 <div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
@@ -539,11 +539,10 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_1_1_python_html_a9a95f95817001943961fed38ea90895a"><div class="ttname"><a href="../../da/d07/namespace_kratos_1_1_python.html#a9a95f95817001943961fed38ea90895a">Kratos::Python::Size</a></div><div class="ttdeci">TSpaceType::IndexType Size(TSpaceType &amp;dummy, typename TSpaceType::VectorType const &amp;rV)</div><div class="ttdef"><b>Definition:</b> add_strategies_to_python.cpp:111</div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
 <div class="ttc" id="anamespacerotating__cone_html_ab33bd86f7a31ca0d8e2b3e69609e3476"><div class="ttname"><a href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">rotating_cone.temp</a></div><div class="ttdeci">float temp</div><div class="ttdef"><b>Definition:</b> rotating_cone.py:85</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:34:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:33:25 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

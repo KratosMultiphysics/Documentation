@@ -252,7 +252,7 @@ $(function() {
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        }</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="comment">// Check the weighting factors and modify them for the case that their sum is unequal to one</span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span>(std::abs(test_sum_weight_facs - 1.0) &gt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <span class="keywordflow">if</span>(std::abs(test_sum_weight_facs - 1.0) &gt; 1e-12)</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        {</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            <span class="keywordflow">for</span>(std::size_t <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; mWeightingFactors.size(); <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                mWeightingFactors[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>] /= test_sum_weight_facs;</div>
@@ -460,12 +460,11 @@ $(function() {
 <div class="ttc" id="anamespaceface__heat_html_a2d3728c99da702b52ed000a0da5857aa"><div class="ttname"><a href="../../d6/dd7/namespaceface__heat.html#a2d3728c99da702b52ed000a0da5857aa">face_heat.domain_size</a></div><div class="ttdeci">int domain_size</div><div class="ttdef"><b>Definition:</b> face_heat.py:4</div></div>
 <div class="ttc" id="anamespaceface__heat_html_ab6da0d32b7fcf219eef3ad82012a91c9"><div class="ttname"><a href="../../d6/dd7/namespaceface__heat.html#ab6da0d32b7fcf219eef3ad82012a91c9">face_heat.model_part</a></div><div class="ttdeci">model_part</div><div class="ttdef"><b>Definition:</b> face_heat.py:14</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="avariable__utils_8h_html"><div class="ttname"><a href="../../db/d8c/variable__utils_8h.html">variable_utils.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:46:46 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:45:20 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

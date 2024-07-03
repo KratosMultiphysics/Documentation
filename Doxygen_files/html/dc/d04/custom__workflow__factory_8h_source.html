@@ -93,26 +93,28 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">class </span>KratosGeoSettlement;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d25/kratos__export__api_8h.html">includes/kratos_export_api.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="../../df/d9f/class_kratos_1_1_custom_workflow_factory.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../df/d9f/class_kratos_1_1_custom_workflow_factory.html">CustomWorkflowFactory</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../dc/d9b/class_kratos_1_1_kratos_geo_settlement.html">KratosGeoSettlement</a>* <a class="code" href="../../df/d9f/class_kratos_1_1_custom_workflow_factory.html#a9f0eefe814c69a11fdcffb1a923555e7">CreateKratosGeoSettlement</a>();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="ttc" id="aclass_kratos_1_1_custom_workflow_factory_html"><div class="ttname"><a href="../../df/d9f/class_kratos_1_1_custom_workflow_factory.html">Kratos::CustomWorkflowFactory</a></div><div class="ttdef"><b>Definition:</b> custom_workflow_factory.h:21</div></div>
-<div class="ttc" id="aclass_kratos_1_1_custom_workflow_factory_html_a9f0eefe814c69a11fdcffb1a923555e7"><div class="ttname"><a href="../../df/d9f/class_kratos_1_1_custom_workflow_factory.html#a9f0eefe814c69a11fdcffb1a923555e7">Kratos::CustomWorkflowFactory::CreateKratosGeoSettlement</a></div><div class="ttdeci">static KratosGeoSettlement * CreateKratosGeoSettlement()</div><div class="ttdef"><b>Definition:</b> custom_workflow_factory.cpp:25</div></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">class </span>KratosGeoSettlement;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../df/d9f/class_kratos_1_1_custom_workflow_factory.html">   22</a></span>&#160;<span class="keyword">class </span>KRATOS_API(GEO_MECHANICS_APPLICATION) <a class="code" href="../../df/d9f/class_kratos_1_1_custom_workflow_factory.html">CustomWorkflowFactory</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../dc/d9b/class_kratos_1_1_kratos_geo_settlement.html">KratosGeoSettlement</a>* CreateKratosGeoSettlement();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="ttc" id="aclass_kratos_1_1_custom_workflow_factory_html"><div class="ttname"><a href="../../df/d9f/class_kratos_1_1_custom_workflow_factory.html">Kratos::CustomWorkflowFactory</a></div><div class="ttdef"><b>Definition:</b> custom_workflow_factory.h:23</div></div>
 <div class="ttc" id="aclass_kratos_1_1_kratos_geo_settlement_html"><div class="ttname"><a href="../../dc/d9b/class_kratos_1_1_kratos_geo_settlement.html">Kratos::KratosGeoSettlement</a></div><div class="ttdef"><b>Definition:</b> dgeosettlement.h:39</div></div>
+<div class="ttc" id="akratos__export__api_8h_html"><div class="ttname"><a href="../../dc/d25/kratos__export__api_8h.html">kratos_export_api.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:23:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:21:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

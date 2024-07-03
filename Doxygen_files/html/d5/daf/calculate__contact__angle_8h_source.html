@@ -190,7 +190,7 @@ $(function() {
 <div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;          <span class="keywordflow">if</span> (neighb[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].FastGetSolutionStepValue(IS_BOUNDARY) != 0.0)</div>
 <div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          {</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;<span class="comment">//              if (neighnum == 0)</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">if</span> (neighnum &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15)</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordflow">if</span> (neighnum &lt; 1e-15)</div>
 <div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            {</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;              <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#aa45f1e1623198e6272d1793df42832f0">x1</a> = neighb[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].X();</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;              y1 = neighb[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].Y();</div>
@@ -344,7 +344,7 @@ $(function() {
 <div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">if</span> (neighb_faces[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].GetGeometry()[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>].FastGetSolutionStepValue(IS_FREE_SURFACE) != 0.0)</div>
 <div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            {</div>
 <div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="comment">//                if (visited == 0)</span></div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;              <span class="keywordflow">if</span> (visited &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15)</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;              <span class="keywordflow">if</span> (visited &lt; 1e-15)</div>
 <div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;              {</div>
 <div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                xj = neighb_faces[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].GetGeometry()[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>].X();</div>
 <div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                yj = neighb_faces[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].GetGeometry()[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>].Y();</div>
@@ -615,13 +615,12 @@ $(function() {
 <div class="ttc" id="anamespacerotating__cone_html_ab33bd86f7a31ca0d8e2b3e69609e3476"><div class="ttname"><a href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">rotating_cone.temp</a></div><div class="ttdeci">float temp</div><div class="ttdef"><b>Definition:</b> rotating_cone.py:85</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetensors_html_ae66df4ffae26db91dc3f60a76283301e"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#ae66df4ffae26db91dc3f60a76283301e">tensors::pi</a></div><div class="ttdeci">double precision, public pi</div><div class="ttdef"><b>Definition:</b> TensorModule.f:16</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="../../d1/d77/node_8h.html">node.h</a></div></div>
 <div class="ttc" id="aprocess_8h_html"><div class="ttname"><a href="../../da/d42/process_8h.html">process.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:48:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:47:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

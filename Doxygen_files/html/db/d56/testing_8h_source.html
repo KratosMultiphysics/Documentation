@@ -89,38 +89,72 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//                   Kratos default license: kratos/license.txt</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment">//</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//  Main authors:    Pooyan Dadvand</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//                   Carlos A. Roig</span></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment">//</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// System includes</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">// External includes</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// Project includes</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d7d/expect_8h.html">includes/expect.h</a>&quot;</span>  <span class="comment">// It is almost always necessary. includes the exception</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d7a/test__suite_8h.html">testing/test_suite.h</a>&quot;</span> <span class="comment">// This includes the test_case.h which includes tester.h</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/dd1/data__communicator_8h.html">includes/data_communicator.h</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d5f/test__skipped__exception_8h.html">testing/test_skipped_exception.h</a>&quot;</span> <span class="comment">// Macros and exception class used to skip tests.</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d60/namespace_kratos_1_1_testing.html">Kratos::Testing</a> </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// System includes</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">// External includes</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;gtest/gtest.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;gmock/gmock.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">// Project includes</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d1/d7d/expect_8h.html">includes/expect.h</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/dd1/data__communicator_8h.html">includes/data_communicator.h</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d5f/test__skipped__exception_8h.html">testing/test_skipped_exception.h</a>&quot;</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(KRATOS_CORE) DataCommunicator&amp; <a class="code" href="../../db/d60/namespace_kratos_1_1_testing.html#a352a1156d8981d76f3cf565c0945370b">GetDefaultDataCommunicator</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &quot;tests/test_utilities/test_suite.h&quot;</span>            <span class="comment">// Default Testing Suite. TODO: Remove once core is migrated to &quot;core_test_suites&quot;.</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &quot;tests/test_utilities/test_environment.h&quot;</span>      <span class="comment">// Environment used to initialize the tests.</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &quot;tests/test_utilities/test_event_listener.h&quot;</span>   <span class="comment">// Custom Event Listener to control the output of the tests.</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="../../db/d56/testing_8h.html#a2bd80768073ed3647570764f84311069">   33</a></span>&#160;<span class="preprocessor">#define KRATOS_TEST_CASE(A) TEST_F(KratosCoreFastSuite, A)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../db/d56/testing_8h.html#ab1011f9e243c83f0617318a54927b9aa">   34</a></span>&#160;<span class="preprocessor">#define KRATOS_TEST_CASE_IN_SUITE(A, B) TEST_F(B, A)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="../../db/d56/testing_8h.html#abb6c3cc275cddfc0e89f1a1f0507a37f">   35</a></span>&#160;<span class="preprocessor">#define KRATOS_DISTRIBUTED_TEST_CASE_IN_SUITE(A, B) TEST_F(B, A)</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d60/namespace_kratos_1_1_testing.html">Kratos::Testing</a> {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">/*</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="comment"> * Initializes the parallel testing environment. This is usefull for other tests depending on a parallel environment.</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="../../d0/d3a/class_kratos_1_1_testing_1_1_g_test_main.html">   42</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d0/d3a/class_kratos_1_1_testing_1_1_g_test_main.html">GTestMain</a> {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../d0/d3a/class_kratos_1_1_testing_1_1_g_test_main.html#ac57dfab7f7a2aea00da61d3a71f2877b">   44</a></span>&#160;        <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/d3a/class_kratos_1_1_testing_1_1_g_test_main.html#ac57dfab7f7a2aea00da61d3a71f2877b">InitializeTesting</a>(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>* argv[]) {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="comment">// Initialize the tests</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            ::testing::InitGoogleTest(&amp;argc, argv);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">// Remove the default listener</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            testing::TestEventListeners&amp; listeners = testing::UnitTest::GetInstance()-&gt;listeners();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keyword">auto</span> default_printer = listeners.Release(listeners.default_result_printer());</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">// Create a configurable listener</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            Kratos::Testing::ConfigurableEventListener *listener = <span class="keyword">new</span> Kratos::Testing::ConfigurableEventListener(default_printer);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="comment">// Add the common environment to the test</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            ::testing::AddGlobalTestEnvironment(<span class="keyword">new</span> Kratos::Testing::KratosTestEnv);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="comment">// Add our listener</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            listeners.Append(listener);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="comment">// Run the tests</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keywordflow">return</span> RUN_ALL_TESTS();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;} <span class="comment">// namespace Kratos::Testing</span></div>
+<div class="ttc" id="aclass_kratos_1_1_testing_1_1_g_test_main_html"><div class="ttname"><a href="../../d0/d3a/class_kratos_1_1_testing_1_1_g_test_main.html">Kratos::Testing::GTestMain</a></div><div class="ttdef"><b>Definition:</b> testing.h:42</div></div>
+<div class="ttc" id="aclass_kratos_1_1_testing_1_1_g_test_main_html_ac57dfab7f7a2aea00da61d3a71f2877b"><div class="ttname"><a href="../../d0/d3a/class_kratos_1_1_testing_1_1_g_test_main.html#ac57dfab7f7a2aea00da61d3a71f2877b">Kratos::Testing::GTestMain::InitializeTesting</a></div><div class="ttdeci">static int InitializeTesting(int argc, char *argv[])</div><div class="ttdef"><b>Definition:</b> testing.h:44</div></div>
 <div class="ttc" id="adata__communicator_8h_html"><div class="ttname"><a href="../../d9/dd1/data__communicator_8h.html">data_communicator.h</a></div></div>
 <div class="ttc" id="aexpect_8h_html"><div class="ttname"><a href="../../d1/d7d/expect_8h.html">expect.h</a></div></div>
-<div class="ttc" id="akratos__export__api_8h_html_a4a2ae55622388bff8ab6a766b5e0765e"><div class="ttname"><a href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a></div><div class="ttdeci">#define KRATOS_API(...)</div><div class="ttdef"><b>Definition:</b> kratos_export_api.h:40</div></div>
-<div class="ttc" id="anamespace_kratos_1_1_testing_html"><div class="ttname"><a href="../../db/d60/namespace_kratos_1_1_testing.html">Kratos::Testing</a></div><div class="ttdef"><b>Definition:</b> distributed_test_case.cpp:24</div></div>
-<div class="ttc" id="anamespace_kratos_1_1_testing_html_a352a1156d8981d76f3cf565c0945370b"><div class="ttname"><a href="../../db/d60/namespace_kratos_1_1_testing.html#a352a1156d8981d76f3cf565c0945370b">Kratos::Testing::GetDefaultDataCommunicator</a></div><div class="ttdeci">DataCommunicator &amp; GetDefaultDataCommunicator()</div><div class="ttdef"><b>Definition:</b> testing.cpp:24</div></div>
+<div class="ttc" id="anamespace_kratos_1_1_testing_html"><div class="ttname"><a href="../../db/d60/namespace_kratos_1_1_testing.html">Kratos::Testing</a></div><div class="ttdef"><b>Definition:</b> mpi_testing.h:32</div></div>
 <div class="ttc" id="atest__skipped__exception_8h_html"><div class="ttname"><a href="../../d9/d5f/test__skipped__exception_8h.html">test_skipped_exception.h</a></div></div>
-<div class="ttc" id="atest__suite_8h_html"><div class="ttname"><a href="../../d6/d7a/test__suite_8h.html">test_suite.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 03:09:58 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 03:08:20 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

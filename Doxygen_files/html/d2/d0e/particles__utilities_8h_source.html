@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rVolumeModelPart,</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rParticlesModelPart,</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;double&gt;</a>&amp; rCounterVariable,</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> SearchTolerance=1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-5</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> SearchTolerance=1e-5</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    )</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="comment">//reset the counter</span></div>
@@ -183,7 +183,7 @@ $(function() {
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> NumberOfTypes,</div>
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;TScalarType&gt;</a>&amp; rParticleTypeVariable=AUX_INDEX,</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;Vector&gt;</a>&amp; rClassificationVectorVariable=MARKER_LABELS,</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> SearchTolerance=1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-5</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> SearchTolerance=1e-5</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    )</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    {</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="comment">//reset the counter</span></div>
@@ -232,7 +232,7 @@ $(function() {
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rParticlesModelPart,</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;TDataType&gt;</a>&amp; rVariable,</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keyword">const</span> TDataType&amp; OutsiderValue,</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> SearchTolerance=1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-5</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> SearchTolerance=1e-5</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    )</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    {</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> max_results = 10000;</div>
@@ -381,11 +381,10 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_html_ab15e733333d61f7c78e9c1ba2d5a8626"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#ab15e733333d61f7c78e9c1ba2d5a8626">Kratos::row</a></div><div class="ttdeci">AMatrix::MatrixRow&lt; const TExpressionType &gt; row(AMatrix::MatrixExpression&lt; TExpressionType, TCategory &gt; const &amp;TheExpression, std::size_t RowIndex)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:649</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetest__pureconvectionsolver__benchmarking_html_ac0504a9bad6b43804efaffbdfa9bf88e"><div class="ttname"><a href="../../d7/dd6/namespacetest__pureconvectionsolver__benchmarking.html#ac0504a9bad6b43804efaffbdfa9bf88e">test_pureconvectionsolver_benchmarking.zero</a></div><div class="ttdeci">zero</div><div class="ttdef"><b>Definition:</b> test_pureconvectionsolver_benchmarking.py:94</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 03:10:19 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 03:08:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

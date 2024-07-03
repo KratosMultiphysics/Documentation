@@ -556,7 +556,7 @@ $(function() {
 <div class="line"><a name="l00592"></a><span class="lineno">  592</span>&#160;                    }</div>
 <div class="line"><a name="l00593"></a><span class="lineno">  593</span>&#160;                    wall_vel = sqrt(wall_vel);</div>
 <div class="line"><a name="l00594"></a><span class="lineno">  594</span>&#160; </div>
-<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                    <span class="keywordflow">if</span> (wall_vel &gt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12) <span class="comment">// do not bother if velocity is zero</span></div>
+<div class="line"><a name="l00595"></a><span class="lineno">  595</span>&#160;                    <span class="keywordflow">if</span> (wall_vel &gt; 1e-12) <span class="comment">// do not bother if velocity is zero</span></div>
 <div class="line"><a name="l00596"></a><span class="lineno">  596</span>&#160;                    {</div>
 <div class="line"><a name="l00597"></a><span class="lineno">  597</span>&#160; </div>
 <div class="line"><a name="l00598"></a><span class="lineno">  598</span>&#160;                        <span class="comment">// linear region</span></div>
@@ -573,7 +573,7 @@ $(function() {
 <div class="line"><a name="l00609"></a><span class="lineno">  609</span>&#160; </div>
 <div class="line"><a name="l00610"></a><span class="lineno">  610</span>&#160;                            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> iter = 0;</div>
 <div class="line"><a name="l00611"></a><span class="lineno">  611</span>&#160;                            <span class="keywordtype">double</span> dx = 1e10;</div>
-<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                            <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="../../d6/d93/namespacehinsberg__optimization.html#a7bc0db444ce9f1806a325d9f1f0ebf08">tol</a> = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-6;</div>
+<div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                            <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="../../d6/d93/namespacehinsberg__optimization.html#a7bc0db444ce9f1806a325d9f1f0ebf08">tol</a> = 1e-6;</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;                            <span class="keywordtype">double</span> uplus = Ikappa * log(yplus) + <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#af137b36537d676d49c91d33e4305fc44">B</a>;</div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160; </div>
 <div class="line"><a name="l00615"></a><span class="lineno">  615</span>&#160;                            <span class="keywordflow">while</span>(iter &lt; 100 &amp;&amp; fabs(dx) &gt; <a class="code" href="../../d6/d93/namespacehinsberg__optimization.html#a7bc0db444ce9f1806a325d9f1f0ebf08">tol</a> * utau)</div>
@@ -785,13 +785,12 @@ $(function() {
 <div class="ttc" id="anamespacesensitivity_matrix_html_a66f3c3a8f1f19530f87c9bd69c40d3ff"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">sensitivityMatrix.N</a></div><div class="ttdeci">N</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:29</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_af137b36537d676d49c91d33e4305fc44"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#af137b36537d676d49c91d33e4305fc44">sensitivityMatrix.B</a></div><div class="ttdeci">B</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:76</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="aprocess__info_8h_html"><div class="ttname"><a href="../../de/db8/process__info_8h.html">process_info.h</a></div></div>
 <div class="ttc" id="aserializer_8h_html"><div class="ttname"><a href="../../dd/d5f/serializer_8h.html">serializer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:20:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:19:10 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

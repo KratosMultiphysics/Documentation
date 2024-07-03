@@ -171,7 +171,7 @@ $(function() {
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    </div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    <span class="keywordflow">for</span>(ModelPart::NodesContainerType::iterator <a class="code" href="../../dd/da9/namespace_generate_c_n.html#ac856b46efd4f20922f7a01e62b4eebaf">im</a> = ThisModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a59e727cef5f608c3006f87356bd9bdcd">NodesBegin</a>() ; <a class="code" href="../../dd/da9/namespace_generate_c_n.html#ac856b46efd4f20922f7a01e62b4eebaf">im</a> != ThisModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#adddcc5bbc4b0acc4aeb81953d900c42a">NodesEnd</a>() ; ++<a class="code" href="../../dd/da9/namespace_generate_c_n.html#ac856b46efd4f20922f7a01e62b4eebaf">im</a>)</div>
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        {</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;          <span class="keywordflow">if</span> (<a class="code" href="../../dd/da9/namespace_generate_c_n.html#ac856b46efd4f20922f7a01e62b4eebaf">im</a>-&gt;FastGetSolutionStepValue(IS_INTERFACE) != 0.0 &amp;&amp; <a class="code" href="../../dd/da9/namespace_generate_c_n.html#ac856b46efd4f20922f7a01e62b4eebaf">im</a>-&gt;FastGetSolutionStepValue(IS_LAGRANGIAN_INLET) &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;          <span class="keywordflow">if</span> (<a class="code" href="../../dd/da9/namespace_generate_c_n.html#ac856b46efd4f20922f7a01e62b4eebaf">im</a>-&gt;FastGetSolutionStepValue(IS_INTERFACE) != 0.0 &amp;&amp; <a class="code" href="../../dd/da9/namespace_generate_c_n.html#ac856b46efd4f20922f7a01e62b4eebaf">im</a>-&gt;FastGetSolutionStepValue(IS_LAGRANGIAN_INLET) &lt; 1e-15)</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;          {</div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="../../d4/dc2/class_kratos_1_1_global_pointers_vector.html">GlobalPointersVector&lt; Node &gt;</a>&amp; neighb = <a class="code" href="../../dd/da9/namespace_generate_c_n.html#ac856b46efd4f20922f7a01e62b4eebaf">im</a>-&gt;GetValue(NEIGHBOUR_NODES);</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        x0 = <a class="code" href="../../dd/da9/namespace_generate_c_n.html#ac856b46efd4f20922f7a01e62b4eebaf">im</a>-&gt;X();</div>
@@ -440,7 +440,7 @@ $(function() {
 <div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;          }</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        }</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        <span class="keywordtype">double</span> A_mixed_norm = sqrt(A_mixed*A_mixed);</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">if</span>(A_mixed_norm &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-10)</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;        <span class="keywordflow">if</span>(A_mixed_norm &lt; 1e-10)</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;        {</div>
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;          K_xi[0] = 0.0;</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;          K_xi[1] = 0.0;</div>
@@ -710,7 +710,7 @@ $(function() {
 <div class="line"><a name="l00671"></a><span class="lineno">  671</span>&#160;        </div>
 <div class="line"><a name="l00672"></a><span class="lineno">  672</span>&#160;        <span class="keywordtype">double</span> cond_sum = 0.0;</div>
 <div class="line"><a name="l00673"></a><span class="lineno">  673</span>&#160;        <span class="keywordtype">double</span> cond_prod = <a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a>*<a class="code" href="../../d7/d2b/namespacegenerate__weakly__compressible__navier__stokes__element.html#a23c7942c22f11dfd6e96d8df72217656">c</a> - <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">b</a>*<a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">b</a>;</div>
-<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        <span class="keywordtype">double</span> eps_cond = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-5;</div>
+<div class="line"><a name="l00674"></a><span class="lineno">  674</span>&#160;        <span class="keywordtype">double</span> eps_cond = 1e-5;</div>
 <div class="line"><a name="l00675"></a><span class="lineno">  675</span>&#160;        <span class="keywordflow">if</span> (option == 1)</div>
 <div class="line"><a name="l00676"></a><span class="lineno">  676</span>&#160;          cond_sum = 0.5*(<a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a> + <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">b</a>);</div>
 <div class="line"><a name="l00677"></a><span class="lineno">  677</span>&#160;        <span class="keywordflow">else</span></div>
@@ -1464,14 +1464,13 @@ $(function() {
 <div class="ttc" id="anamespacesensitivity_matrix_html_af137b36537d676d49c91d33e4305fc44"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#af137b36537d676d49c91d33e4305fc44">sensitivityMatrix.B</a></div><div class="ttdeci">B</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:76</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetensors_html_ae66df4ffae26db91dc3f60a76283301e"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#ae66df4ffae26db91dc3f60a76283301e">tensors::pi</a></div><div class="ttdeci">double precision, public pi</div><div class="ttdef"><b>Definition:</b> TensorModule.f:16</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="../../d1/d77/node_8h.html">node.h</a></div></div>
 <div class="ttc" id="aopenmp__utils_8h_html"><div class="ttname"><a href="../../d1/db8/openmp__utils_8h.html">openmp_utils.h</a></div></div>
 <div class="ttc" id="aprocess_8h_html"><div class="ttname"><a href="../../da/d42/process_8h.html">process.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:48:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:47:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

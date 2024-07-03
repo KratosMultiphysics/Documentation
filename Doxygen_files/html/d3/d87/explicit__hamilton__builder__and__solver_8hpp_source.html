@@ -417,7 +417,7 @@ $(function() {
 <div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;               <span class="keywordtype">int</span> max_iters = 15;</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
 <div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;               <span class="keywordtype">double</span> <a class="code" href="../../d0/d88/namespacehinsberg__optimization__4.html#a2f33293fe3fdd1d5921e54f2263cc282">residual</a>  = 1;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;               <span class="keywordtype">double</span> tolerance = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;               <span class="keywordtype">double</span> tolerance = 1e-12;</div>
 <div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
 <div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;               <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> Residual  = <a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(3); <span class="comment">//current iteration residual vector</span></div>
 <div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;               <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> Rotation  = <a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(3); <span class="comment">//current step rotation vector</span></div>
@@ -425,7 +425,7 @@ $(function() {
 <div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160; </div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;               <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>=0; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>&lt;3; <a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>++)</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;             {</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;               Rotation[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>]            = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-5; <span class="comment">//CurrentStepRotation[j];</span></div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;               Rotation[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>]            = 1e-5; <span class="comment">//CurrentStepRotation[j];</span></div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;               ReferenceResidual[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>]   = <a class="code" href="../../db/d66/namespace_kratos.html#a47938bf089126167625f43c1e47ed468a57cec4137b614c87cb4e24a3d003a3e0">Y</a>[<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>];</div>
 <div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;             }</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160; </div>
@@ -978,13 +978,12 @@ $(function() {
 <div class="ttc" id="anamespacesensitivity_matrix_html_a276ae82595c6ebe2f05987c7af893337"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a276ae82595c6ebe2f05987c7af893337">sensitivityMatrix.A</a></div><div class="ttdeci">A</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:70</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetensors_html_a77b97b9c700f4d4697e0e623ce693eeb"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a77b97b9c700f4d4697e0e623ce693eeb">tensors::l</a></div><div class="ttdeci">integer l</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="asolid__mechanics__application__variables_8h_html"><div class="ttname"><a href="../../d7/d87/solid__mechanics__application__variables_8h.html">solid_mechanics_application_variables.h</a></div></div>
 <div class="ttc" id="atimer_8h_html"><div class="ttname"><a href="../../d5/dd0/timer_8h.html">timer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:35:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:33:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

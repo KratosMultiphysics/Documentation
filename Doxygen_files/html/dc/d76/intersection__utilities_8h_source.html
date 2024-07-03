@@ -132,7 +132,7 @@ $(function() {
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rLinePoint1,</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rLinePoint2,</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rIntersectionPoint,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12) {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1e-12) {</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">// This is the adaption of the implementation provided in:</span></div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="comment">// http://www.softsurfer.com/Archive/algorithm_0105/algorithm_0105.htm#intersect_RayTriangle()</span></div>
@@ -243,7 +243,7 @@ $(function() {
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        TCoordinatesType&amp; rIntersectionPoint1,</div>
 <div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        TCoordinatesType&amp; rIntersectionPoint2,</div>
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordtype">int</span>&amp; rSolution,<span class="comment">//IntersectionUtilitiesTetrahedraLineIntersectionStatus&amp; rSolution,</span></div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Epsilon = 1e-12</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        ) </div>
 <div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;    {</div>
 <div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="comment">// Lambda function to check the inside of a line corrected</span></div>
@@ -366,7 +366,7 @@ $(function() {
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        <span class="keyword">const</span> TCoordinatesType&amp; rLinePoint2,</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;        TCoordinatesType&amp; rIntersectionPoint1,</div>
 <div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;        TCoordinatesType&amp; rIntersectionPoint2,</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Epsilon = 1e-12</div>
 <div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;        ) </div>
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;    {</div>
 <div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d9/d31/namespace_kratos_d_e_m.html#af495b73a24bb64c89026693611463f9e">solution</a> = 0;<span class="comment">// IntersectionUtilitiesTetrahedraLineIntersectionStatus solution = IntersectionUtilitiesTetrahedraLineIntersectionStatus::NO_INTERSECTION;</span></div>
@@ -554,7 +554,7 @@ $(function() {
 <div class="line"><a name="l00628"></a><span class="lineno">  628</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rLinePoint0,</div>
 <div class="line"><a name="l00629"></a><span class="lineno">  629</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rLinePoint1,</div>
 <div class="line"><a name="l00630"></a><span class="lineno">  630</span>&#160;        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rIntersectionPoint,</div>
-<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12)</div>
+<div class="line"><a name="l00631"></a><span class="lineno">  631</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1e-12)</div>
 <div class="line"><a name="l00632"></a><span class="lineno">  632</span>&#160;    {</div>
 <div class="line"><a name="l00633"></a><span class="lineno">  633</span>&#160;        <span class="keywordflow">return</span> ComputeLineLineIntersection(</div>
 <div class="line"><a name="l00634"></a><span class="lineno">  634</span>&#160;            rLineGeometry[0], rLineGeometry[1], rLinePoint0, rLinePoint1, rIntersectionPoint, epsilon);</div>
@@ -566,7 +566,7 @@ $(function() {
 <div class="line"><a name="l00653"></a><span class="lineno">  653</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rLine2Point0,</div>
 <div class="line"><a name="l00654"></a><span class="lineno">  654</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rLine2Point1,</div>
 <div class="line"><a name="l00655"></a><span class="lineno">  655</span>&#160;        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rIntersectionPoint,</div>
-<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12)</div>
+<div class="line"><a name="l00656"></a><span class="lineno">  656</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1e-12)</div>
 <div class="line"><a name="l00657"></a><span class="lineno">  657</span>&#160;    {</div>
 <div class="line"><a name="l00658"></a><span class="lineno">  658</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a> r = rLine1Point1 - rLine1Point0;</div>
 <div class="line"><a name="l00659"></a><span class="lineno">  659</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a> s = rLine2Point1 - rLine2Point0;</div>
@@ -619,7 +619,7 @@ $(function() {
 <div class="line"><a name="l00718"></a><span class="lineno">  718</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rLinePoint1,</div>
 <div class="line"><a name="l00719"></a><span class="lineno">  719</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rLinePoint2,</div>
 <div class="line"><a name="l00720"></a><span class="lineno">  720</span>&#160;        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rIntersectionPoint,</div>
-<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12)</div>
+<div class="line"><a name="l00721"></a><span class="lineno">  721</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1e-12)</div>
 <div class="line"><a name="l00722"></a><span class="lineno">  722</span>&#160;    {</div>
 <div class="line"><a name="l00723"></a><span class="lineno">  723</span>&#160;        <span class="comment">// This is the adaption of the implementation provided in:</span></div>
 <div class="line"><a name="l00724"></a><span class="lineno">  724</span>&#160;        <span class="comment">// http://www.softsurfer.com/Archive/algorithm_0105/algorithm_0105.htm#intersect_RayTriangle()</span></div>
@@ -706,7 +706,7 @@ $(function() {
 <div class="line"><a name="l00847"></a><span class="lineno">  847</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00848"></a><span class="lineno">  848</span>&#160;        }</div>
 <div class="line"><a name="l00849"></a><span class="lineno">  849</span>&#160;        <span class="comment">// if ( Dist1 == Dist2) return 0;</span></div>
-<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        <span class="keywordflow">if</span> (std::abs(Dist1-Dist2) &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12){</div>
+<div class="line"><a name="l00850"></a><span class="lineno">  850</span>&#160;        <span class="keywordflow">if</span> (std::abs(Dist1-Dist2) &lt; 1e-12){</div>
 <div class="line"><a name="l00851"></a><span class="lineno">  851</span>&#160;            <span class="keywordflow">return</span> 0;</div>
 <div class="line"><a name="l00852"></a><span class="lineno">  852</span>&#160;        }</div>
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        rIntersectionPoint = rPoint1 + (rPoint2-rPoint1)*(-Dist1/(Dist2-Dist1));</div>
@@ -776,13 +776,12 @@ $(function() {
 <div class="ttc" id="anamespaceode__solve_html_ab54790bab98776945f91764ba8377c41"><div class="ttname"><a href="../../d2/df2/namespaceode__solve.html#ab54790bab98776945f91764ba8377c41">ode_solve.t</a></div><div class="ttdeci">int t</div><div class="ttdef"><b>Definition:</b> ode_solve.py:392</div></div>
 <div class="ttc" id="anamespaceode__solve_html_af41b115f7d3a8f9529eb671ad53e1d25"><div class="ttname"><a href="../../d2/df2/namespaceode__solve.html#af41b115f7d3a8f9529eb671ad53e1d25">ode_solve.n</a></div><div class="ttdeci">int n</div><div class="ttdoc">manufactured solution and derivatives (u=0 at z=0 dudz=0 at z=domain_height)</div><div class="ttdef"><b>Definition:</b> ode_solve.py:402</div></div>
 <div class="ttc" id="anamespaceradii__error__plotter_html_ad5355af9e0a79c7580f67b6a6c29eb00"><div class="ttname"><a href="../../d0/d40/namespaceradii__error__plotter.html#ad5355af9e0a79c7580f67b6a6c29eb00">radii_error_plotter.dir</a></div><div class="ttdeci">dir</div><div class="ttdef"><b>Definition:</b> radii_error_plotter.py:10</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="apoint_8h_html"><div class="ttname"><a href="../../d2/d91/point_8h.html">point.h</a></div></div>
 <div class="ttc" id="apointer__vector_8h_html"><div class="ttname"><a href="../../d4/df9/pointer__vector_8h.html">pointer_vector.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 03:10:19 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 03:08:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

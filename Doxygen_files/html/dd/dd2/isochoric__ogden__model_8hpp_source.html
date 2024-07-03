@@ -490,9 +490,9 @@ $(function() {
 <div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;    <span class="keywordflow">for</span>( <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>&lt;rVoigtSize; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
 <div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;    {</div>
 <div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;        value = rVariables.<a class="code" href="../../d9/dce/struct_kratos_1_1_hyper_elastic_model_1_1_hyper_elastic_model_data.html#ae88a2723fa7fea62e6625f8de6d86c30">GetModelData</a>().<a class="code" href="../../dd/dd9/struct_kratos_1_1_constitutive_model_data_1_1_model_data.html#a505bbc1ef5acb99231a78954c3550a10">GetDeltaDeformationMatrix</a>()(rIndexVoigtTensor[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>][0],rIndexVoigtTensor[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>][1]);</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordtype">double</span>  deltavalue = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-10;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;        <span class="keywordtype">double</span>  deltavalue = 1e-10;</div>
 <div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        <span class="keywordflow">if</span>( value !=0 )</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        deltavalue = value * 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-8;</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        deltavalue = value * 1e-8;</div>
 <div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160; </div>
 <div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160; </div>
 <div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;        <span class="comment">//Calculate stress</span></div>
@@ -1203,7 +1203,6 @@ $(function() {
 <div class="ttc" id="anamespacequadrature_html_aae897447319c4634b1dcef7634fe5876"><div class="ttname"><a href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">quadrature.j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> quadrature.py:648</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_a6212f9d19053f6faf7e2852dd469a5dc"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a6212f9d19053f6faf7e2852dd469a5dc">sensitivityMatrix.p</a></div><div class="ttdeci">p</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:52</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="aogden__model_8hpp_html"><div class="ttname"><a href="../../d0/da8/ogden__model_8hpp.html">ogden_model.hpp</a></div></div>
 <div class="ttc" id="astruct_kratos_1_1_constitutive_model_data_1_1_material_data_html"><div class="ttname"><a href="../../d3/d07/struct_kratos_1_1_constitutive_model_data_1_1_material_data.html">Kratos::ConstitutiveModelData::MaterialData</a></div><div class="ttdef"><b>Definition:</b> constitutive_model_data.hpp:92</div></div>
 <div class="ttc" id="astruct_kratos_1_1_constitutive_model_data_1_1_material_data_html_a8b9705aadf4a102fb9748680afe9dd82"><div class="ttname"><a href="../../d3/d07/struct_kratos_1_1_constitutive_model_data_1_1_material_data.html#a8b9705aadf4a102fb9748680afe9dd82">Kratos::ConstitutiveModelData::MaterialData::GetBulkModulus</a></div><div class="ttdeci">const double &amp; GetBulkModulus() const</div><div class="ttdef"><b>Definition:</b> constitutive_model_data.hpp:114</div></div>
@@ -1237,7 +1236,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:13:54 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:12:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -1454,7 +1454,7 @@ $(function() {
 <div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;                             <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,4&gt;</a>&amp;                         ElementalDistances)</div>
 <div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;    {</div>
 <div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;        <span class="comment">// Assign a distance limit</span></div>
-<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;        <span class="keywordtype">double</span> dist_limit = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-5;</div>
+<div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;        <span class="keywordtype">double</span> dist_limit = 1e-5;</div>
 <div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;<span class="comment">//         bool distChangedToLimit = false; //variable to indicate that a distance value &lt; tolerance is set to a limit distance = tolerance</span></div>
 <div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;<span class="comment">// </span></div>
 <div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;<span class="comment">//         for(unsigned int i_node = 0; i_node &lt; 4; i_node++)</span></div>
@@ -1908,7 +1908,7 @@ $(function() {
 <div class="line"><a name="l01966"></a><span class="lineno"> 1966</span>&#160;        <a class="code" href="../../d1/d71/class_kratos_1_1_distance_spatial_containers_configure.html#a52507df7964b6b97940b333c31f5eb58">DistanceSpatialContainersConfigure::data_type</a> nodes_array;</div>
 <div class="line"><a name="l01967"></a><span class="lineno"> 1967</span>&#160; </div>
 <div class="line"><a name="l01968"></a><span class="lineno"> 1968</span>&#160; </div>
-<div class="line"><a name="l01969"></a><span class="lineno"> 1969</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12;</div>
+<div class="line"><a name="l01969"></a><span class="lineno"> 1969</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1e-12;</div>
 <div class="line"><a name="l01970"></a><span class="lineno"> 1970</span>&#160; </div>
 <div class="line"><a name="l01971"></a><span class="lineno"> 1971</span>&#160;        <span class="keywordtype">double</span> distance = 1.0;</div>
 <div class="line"><a name="l01972"></a><span class="lineno"> 1972</span>&#160; </div>
@@ -2043,7 +2043,7 @@ $(function() {
 <div class="line"><a name="l02101"></a><span class="lineno"> 2101</span>&#160;        intersections_container_type intersections;</div>
 <div class="line"><a name="l02102"></a><span class="lineno"> 2102</span>&#160; </div>
 <div class="line"><a name="l02103"></a><span class="lineno"> 2103</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="../../d3/d2b/namespaceisotropic__damage__automatic__differentiation.html#a3d30b20e72b60cc184b00182233472ba">dimension</a> = 3;</div>
-<div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-12;</div>
+<div class="line"><a name="l02104"></a><span class="lineno"> 2104</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1e-12;</div>
 <div class="line"><a name="l02105"></a><span class="lineno"> 2105</span>&#160; </div>
 <div class="line"><a name="l02106"></a><span class="lineno"> 2106</span>&#160;        <span class="keywordtype">double</span> distances[3] = {1.0, 1.0, 1.0};</div>
 <div class="line"><a name="l02107"></a><span class="lineno"> 2107</span>&#160; </div>
@@ -2506,7 +2506,7 @@ $(function() {
 <div class="line"><a name="l02606"></a><span class="lineno"> 2606</span>&#160; </div>
 <div class="line"><a name="l02607"></a><span class="lineno"> 2607</span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon;</div>
 <div class="line"><a name="l02608"></a><span class="lineno"> 2608</span>&#160; </div>
-<div class="line"><a name="l02622"></a><span class="lineno"> 2622</span>&#160;    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> EigenVectors(<span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a276ae82595c6ebe2f05987c7af893337">A</a>, <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; vectors, <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; lambda, <span class="keywordtype">double</span> zero_tolerance =1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-9, <span class="keywordtype">int</span> <a class="code" href="../../da/dce/namespace_project_parameters.html#a189b310e127e9b365a5f7c2b5c3bcdfe">max_iterations</a> = 10)</div>
+<div class="line"><a name="l02622"></a><span class="lineno"> 2622</span>&#160;    <span class="keyword">static</span> <span class="keyword">inline</span> <span class="keywordtype">void</span> EigenVectors(<span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a276ae82595c6ebe2f05987c7af893337">A</a>, <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; vectors, <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp; lambda, <span class="keywordtype">double</span> zero_tolerance =1e-9, <span class="keywordtype">int</span> <a class="code" href="../../da/dce/namespace_project_parameters.html#a189b310e127e9b365a5f7c2b5c3bcdfe">max_iterations</a> = 10)</div>
 <div class="line"><a name="l02623"></a><span class="lineno"> 2623</span>&#160;    {</div>
 <div class="line"><a name="l02624"></a><span class="lineno"> 2624</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a> Help= <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a276ae82595c6ebe2f05987c7af893337">A</a>;</div>
 <div class="line"><a name="l02625"></a><span class="lineno"> 2625</span>&#160; </div>
@@ -2703,7 +2703,7 @@ $(function() {
 <div class="line"><a name="l02842"></a><span class="lineno"> 2842</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
 <div class="line"><a name="l02843"></a><span class="lineno"> 2843</span>&#160;}</div>
 <div class="line"><a name="l02845"></a><span class="lineno"> 2845</span>&#160; </div>
-<div class="line"><a name="l02846"></a><span class="lineno"> 2846</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> CalculateSignedDistanceTo3DSkinProcess::epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-18;</div>
+<div class="line"><a name="l02846"></a><span class="lineno"> 2846</span>&#160;<span class="keyword">const</span> <span class="keywordtype">double</span> CalculateSignedDistanceTo3DSkinProcess::epsilon = 1e-18;</div>
 <div class="line"><a name="l02847"></a><span class="lineno"> 2847</span>&#160; </div>
 <div class="line"><a name="l02848"></a><span class="lineno"> 2848</span>&#160; </div>
 <div class="line"><a name="l02849"></a><span class="lineno"> 2849</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
@@ -2917,7 +2917,6 @@ $(function() {
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetensors_html_a77b97b9c700f4d4697e0e623ce693eeb"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a77b97b9c700f4d4697e0e623ce693eeb">tensors::l</a></div><div class="ttdeci">integer l</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetensors_html_ae66df4ffae26db91dc3f60a76283301e"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#ae66df4ffae26db91dc3f60a76283301e">tensors::pi</a></div><div class="ttdeci">double precision, public pi</div><div class="ttdef"><b>Definition:</b> TensorModule.f:16</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="aoctree__binary_8h_html"><div class="ttname"><a href="../../df/dbd/octree__binary_8h.html">octree_binary.h</a></div></div>
 <div class="ttc" id="aprocess_8h_html"><div class="ttname"><a href="../../da/d42/process_8h.html">process.h</a></div></div>
 <div class="ttc" id="aquadrilateral__3d__4_8h_html"><div class="ttname"><a href="../../da/db5/quadrilateral__3d__4_8h.html">quadrilateral_3d_4.h</a></div></div>
@@ -2935,7 +2934,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 03:06:15 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 03:04:40 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

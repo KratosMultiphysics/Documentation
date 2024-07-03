@@ -101,7 +101,7 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">   23</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">StressStatePolicy</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">   23</a></span>&#160;<span class="keyword">class </span>KRATOS_API(GEO_MECHANICS_APPLICATION) <a class="code" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html">StressStatePolicy</a></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a3af49e9ae1ebb0c84e0bfa1f27dcce83">   26</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a3af49e9ae1ebb0c84e0bfa1f27dcce83">~StressStatePolicy</a>() = <span class="keywordflow">default</span>;</div>
@@ -133,14 +133,14 @@ $(function() {
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> DefineVoigtVector(std::size_t Dimension);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> constexpr std::size_t <a class="code" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#aa44a7b4966cf74231a67a27f9eb221c6">GetVoigtSize</a>(std::size_t Dimension)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">static</span> constexpr std::size_t GetVoigtSize(std::size_t Dimension)</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> Dimension == <a class="code" href="../../db/d66/namespace_kratos.html#a24106e544e4428dde5d7b229f689af37">N_DIM_3D</a> ? <a class="code" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a9bd21a2e5357d7585c2155bb58c0d659">GetVoigtSize3D</a>() : <a class="code" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a7e36bba0d38ad97f54be2044f6f17813">GetVoigtSize2D</a>();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span> Dimension == <a class="code" href="../../db/d66/namespace_kratos.html#a24106e544e4428dde5d7b229f689af37">N_DIM_3D</a> ? GetVoigtSize3D() : GetVoigtSize2D();</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">static</span> constexpr std::size_t <a class="code" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#a85e123b2e799a6f8031a09df1d689a1c">GetStressTensorSize</a>(std::size_t Dimension)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keyword">static</span> constexpr std::size_t GetStressTensorSize(std::size_t Dimension)</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> Dimension == <a class="code" href="../../db/d66/namespace_kratos.html#a24106e544e4428dde5d7b229f689af37">N_DIM_3D</a> ? <a class="code" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#acf1740b20f9fd4f68ef6efacea9c8e3b">GetStressTensorSize3D</a>() : <a class="code" href="../../d8/d08/class_kratos_1_1_stress_state_policy.html#ad3e83d1c24e7acf7879e2273bdb11eb4">GetStressTensorSize2D</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> Dimension == <a class="code" href="../../db/d66/namespace_kratos.html#a24106e544e4428dde5d7b229f689af37">N_DIM_3D</a> ? GetStressTensorSize3D() : GetStressTensorSize2D();</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;};</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
@@ -177,7 +177,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:22:53 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:21:29 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

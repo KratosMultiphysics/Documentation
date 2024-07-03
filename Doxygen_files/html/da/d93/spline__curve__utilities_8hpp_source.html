@@ -288,7 +288,7 @@ $(function() {
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;      <span class="comment">//Compute new knot using the Bisection method</span></div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;      <span class="keywordtype">int</span> max_iters    = 500;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="keywordtype">double</span> tolerance = (<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>*Length - <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a2cf1e8170a2253d4c0ab0ce0171af724">S</a>) * 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-3;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;      <span class="keywordtype">double</span> tolerance = (<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>*Length - <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a2cf1e8170a2253d4c0ab0ce0171af724">S</a>) * 1e-3;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="../../d7/d1c/namespace_peclet_test.html#a133bb4116d66a849b836d356da660f74">error</a>     = tolerance * 10;</div>
 <div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;      <a class="code" href="../../d3/d5c/struct_kratos_1_1_spline_curve_utilities_1_1_spline_type.html">SplineType</a> FirstHalfSpline;</div>
@@ -443,7 +443,7 @@ $(function() {
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;      <span class="comment">//Start adaptative sub interval integration</span></div>
 <div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;      <span class="keywordtype">int</span> max_iters    = 40;</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      <span class="keywordtype">double</span> tolerance = <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a2cf1e8170a2253d4c0ab0ce0171af724">S</a> * 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-2;</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      <span class="keywordtype">double</span> tolerance = <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a2cf1e8170a2253d4c0ab0ce0171af724">S</a> * 1e-2;</div>
 <div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      <span class="keywordtype">double</span> <a class="code" href="../../d7/d1c/namespace_peclet_test.html#a133bb4116d66a849b836d356da660f74">error</a>     = tolerance * 10;</div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
 <div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;      <span class="keywordtype">double</span> Sk = 0;</div>
@@ -746,7 +746,7 @@ $(function() {
 <div class="line"><a name="l00682"></a><span class="lineno">  682</span>&#160;      <span class="comment">//std::cout&lt;&lt;&quot; SPLINE ID &quot;&lt;&lt;rSpline.id&lt;&lt;std::endl;</span></div>
 <div class="line"><a name="l00683"></a><span class="lineno">  683</span>&#160; </div>
 <div class="line"><a name="l00684"></a><span class="lineno">  684</span>&#160;      <span class="comment">//Iterative Parameters</span></div>
-<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;      <span class="keywordtype">double</span> tolerance = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-7; <span class="comment">//1e-8</span></div>
+<div class="line"><a name="l00685"></a><span class="lineno">  685</span>&#160;      <span class="keywordtype">double</span> tolerance = 1e-7; <span class="comment">//1e-8</span></div>
 <div class="line"><a name="l00686"></a><span class="lineno">  686</span>&#160; </div>
 <div class="line"><a name="l00687"></a><span class="lineno">  687</span>&#160;      iter = 0;</div>
 <div class="line"><a name="l00688"></a><span class="lineno">  688</span>&#160;      <span class="keywordtype">double</span> distance = tolerance*10;</div>
@@ -852,7 +852,7 @@ $(function() {
 <div class="line"><a name="l00788"></a><span class="lineno">  788</span>&#160; </div>
 <div class="line"><a name="l00789"></a><span class="lineno">  789</span>&#160; </div>
 <div class="line"><a name="l00790"></a><span class="lineno">  790</span>&#160;      <span class="comment">//Iterative Parameters</span></div>
-<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;      <span class="keywordtype">double</span> tolerance = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-7; <span class="comment">//1e-8;</span></div>
+<div class="line"><a name="l00791"></a><span class="lineno">  791</span>&#160;      <span class="keywordtype">double</span> tolerance = 1e-7; <span class="comment">//1e-8;</span></div>
 <div class="line"><a name="l00792"></a><span class="lineno">  792</span>&#160;      <span class="keywordtype">double</span> distance  = tolerance * 10;</div>
 <div class="line"><a name="l00793"></a><span class="lineno">  793</span>&#160; </div>
 <div class="line"><a name="l00794"></a><span class="lineno">  794</span>&#160;      <span class="keywordtype">int</span> iter    = 0;</div>
@@ -1294,7 +1294,6 @@ $(function() {
 <div class="ttc" id="anamespacequadrature_html_aae897447319c4634b1dcef7634fe5876"><div class="ttname"><a href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">quadrature.j</a></div><div class="ttdeci">int j</div><div class="ttdef"><b>Definition:</b> quadrature.py:648</div></div>
 <div class="ttc" id="anamespacerun__marine__rain__substepping_html_a2250a5e90750fb2a488bd78422d37046"><div class="ttname"><a href="../../d7/d04/namespacerun__marine__rain__substepping.html#a2250a5e90750fb2a488bd78422d37046">run_marine_rain_substepping.m</a></div><div class="ttdeci">int m</div><div class="ttdef"><b>Definition:</b> run_marine_rain_substepping.py:8</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="aopenmp__utils_8h_html"><div class="ttname"><a href="../../d1/db8/openmp__utils_8h.html">openmp_utils.h</a></div></div>
 <div class="ttc" id="aspatial__containers_8h_html"><div class="ttname"><a href="../../db/d8f/spatial__containers_8h.html">spatial_containers.h</a></div></div>
 <div class="ttc" id="astruct_kratos_1_1_spline_curve_utilities_1_1_spline_type_html"><div class="ttname"><a href="../../d3/d5c/struct_kratos_1_1_spline_curve_utilities_1_1_spline_type.html">Kratos::SplineCurveUtilities::SplineType</a></div><div class="ttdef"><b>Definition:</b> spline_curve_utilities.hpp:66</div></div>
@@ -1308,7 +1307,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:17:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:16:25 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

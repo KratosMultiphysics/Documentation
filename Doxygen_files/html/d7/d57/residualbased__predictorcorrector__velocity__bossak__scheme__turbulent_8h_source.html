@@ -339,7 +339,7 @@ $(function() {
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="../../d8/dbc/class_kratos_1_1_residual_based_predictor_corrector_velocity_bossak_scheme_turbulent.html#ab6ea633bc7d2db65749e6554f484782c">mMeshVelocity</a> == 2)<span class="comment">//Lagrangian</span></div>
 <div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                    {</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                        <span class="keywordflow">if</span>((itNode)-&gt;FastGetSolutionStepValue(IS_LAGRANGIAN_INLET) &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;                        <span class="keywordflow">if</span>((itNode)-&gt;FastGetSolutionStepValue(IS_LAGRANGIAN_INLET) &lt; 1e-15)</div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                        {</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                            <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3 &gt;</a> &amp; CurrentDisplacement = (itNode)-&gt;FastGetSolutionStepValue(DISPLACEMENT, 0);</div>
 <div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                            <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3 &gt;</a> &amp; OldDisplacement = (itNode)-&gt;FastGetSolutionStepValue(DISPLACEMENT, 1);</div>
@@ -421,7 +421,7 @@ $(function() {
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3 &gt;</a> &amp; OldDisplacement = (itNode)-&gt;FastGetSolutionStepValue(DISPLACEMENT, 1);</div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3 &gt;</a> &amp; CurrentDisplacement = (itNode)-&gt;FastGetSolutionStepValue(DISPLACEMENT, 0);</div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                  <span class="keywordflow">if</span>((itNode)-&gt;FastGetSolutionStepValue(IS_LAGRANGIAN_INLET) &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15)</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                  <span class="keywordflow">if</span>((itNode)-&gt;FastGetSolutionStepValue(IS_LAGRANGIAN_INLET) &lt; 1e-15)</div>
 <div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            {</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(itNode-&gt;FastGetSolutionStepValue(MESH_VELOCITY)) = itNode-&gt;FastGetSolutionStepValue(VELOCITY);</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                <a class="code" href="../../d8/dbc/class_kratos_1_1_residual_based_predictor_corrector_velocity_bossak_scheme_turbulent.html#ae0636cc271f4034d565b2547124ddc05">UpdateDisplacement</a>(CurrentDisplacement, OldDisplacement, OldVelocity, OldAcceleration, CurrentAcceleration);</div>
@@ -1080,7 +1080,6 @@ $(function() {
 <div class="ttc" id="anamespacesensitivity_matrix_html_a276ae82595c6ebe2f05987c7af893337"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a276ae82595c6ebe2f05987c7af893337">sensitivityMatrix.A</a></div><div class="ttdeci">A</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:70</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_af14af89f05a917a288573a4b77c48c1f"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#af14af89f05a917a288573a4b77c48c1f">sensitivityMatrix.nnodes</a></div><div class="ttdeci">int nnodes</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:24</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="aopenmp__utils_8h_html"><div class="ttname"><a href="../../d1/db8/openmp__utils_8h.html">openmp_utils.h</a></div></div>
 <div class="ttc" id="aprocess_8h_html"><div class="ttname"><a href="../../da/d42/process_8h.html">process.h</a></div></div>
 <div class="ttc" id="ascheme_8h_html"><div class="ttname"><a href="../../d2/d64/scheme_8h.html">scheme.h</a></div></div>
@@ -1088,7 +1087,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:21:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:20:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

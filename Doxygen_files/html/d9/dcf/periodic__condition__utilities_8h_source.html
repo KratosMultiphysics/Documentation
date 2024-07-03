@@ -239,7 +239,7 @@ $(function() {
 <div class="line"><a name="l00229"></a><span class="lineno"><a class="line" href="../../d9/d01/class_kratos_1_1_periodic_condition_utilities.html#aeb427ece5e3a8ec320835c67acc9cc00">  229</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d9/d01/class_kratos_1_1_periodic_condition_utilities.html#aeb427ece5e3a8ec320835c67acc9cc00">GenerateConditions</a>(<span class="keyword">const</span> TReference&amp; MovementRef,</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                            Properties::Pointer pProperties,</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                <span class="keyword">const</span> std::string&amp; rConditionLabel,</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                            <span class="keyword">const</span> <span class="keywordtype">double</span> Tolerance = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-4)</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                            <span class="keyword">const</span> <span class="keywordtype">double</span> Tolerance = 1e-4)</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    {</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
@@ -305,7 +305,7 @@ $(function() {
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#a0bc8ca20163d926dc5090cf16a6adc06">KRATOS_THROW_ERROR</a>(std::logic_error,<span class="stringliteral">&quot;PeriodicConditionUtilities error: DefinePeriodicBoundary() called without a spatial search structure. Please call SetUpSearchStructure() first.&quot;</span>,<span class="stringliteral">&quot;&quot;</span>)</div>
 <div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160; </div>
 <div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160; </div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> Tolerance = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-4; <span class="comment">// Relative tolerance when searching for node pairs</span></div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">double</span> Tolerance = 1e-4; <span class="comment">// Relative tolerance when searching for node pairs</span></div>
 <div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160; </div>
 <div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a> Translation;</div>
 <div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        Translation[0] = TranslationX;</div>
@@ -472,7 +472,6 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_html_a9c6097d0b0a27d1cea94992b1087f56a"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">Kratos::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;rIStream, LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">input stream function</div></div>
 <div class="ttc" id="anamespace_kratos_html_aa8155351242bcfc8f8b9169ed3260d1c"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#aa8155351242bcfc8f8b9169ed3260d1c">Kratos::PointVector</a></div><div class="ttdeci">std::vector&lt; PointTypePointer &gt; PointVector</div><div class="ttdef"><b>Definition:</b> internal_variables_interpolation_process.h:53</div></div>
 <div class="ttc" id="anamespace_kratos_html_acfc842a43d19dffc2d8105e5cbea17a9"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">Kratos::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;rOStream, const LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">output stream function</div><div class="ttdef"><b>Definition:</b> linear_master_slave_constraint.h:432</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="../../d1/d77/node_8h.html">node.h</a></div></div>
 <div class="ttc" id="aperiodic__variables__container_8h_html"><div class="ttname"><a href="../../d9/da6/periodic__variables__container_8h.html">periodic_variables_container.h</a></div></div>
 <div class="ttc" id="apoint__3d_8h_html"><div class="ttname"><a href="../../d2/d20/point__3d_8h.html">point_3d.h</a></div></div>
@@ -483,7 +482,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:21:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:20:22 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

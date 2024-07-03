@@ -1583,7 +1583,7 @@ $(function() {
 <div class="line"><a name="l01506"></a><span class="lineno"> 1506</span>&#160;      edges_o[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].resize(5, 3, <span class="keyword">false</span>);  <span class="comment">//2 values of the 2 shape functions, and derivates in (xyz) direction).</span></div>
 <div class="line"><a name="l01507"></a><span class="lineno"> 1507</span>&#160;    }</div>
 <div class="line"><a name="l01508"></a><span class="lineno"> 1508</span>&#160; </div>
-<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15; <span class="comment">//1.00e-9;</span></div>
+<div class="line"><a name="l01509"></a><span class="lineno"> 1509</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1e-15; <span class="comment">//1.00e-9;</span></div>
 <div class="line"><a name="l01510"></a><span class="lineno"> 1510</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> near_factor = 1.00e-12;</div>
 <div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160; </div>
 <div class="line"><a name="l01512"></a><span class="lineno"> 1512</span>&#160;      bounded_matrix&lt;double, 4, 3 &gt; coord_node=<a class="code" href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">ZeroMatrix</a>(4,3);</div>
@@ -1880,8 +1880,8 @@ $(function() {
 <div class="line"><a name="l01803"></a><span class="lineno"> 1803</span>&#160;        }</div>
 <div class="line"><a name="l01804"></a><span class="lineno"> 1804</span>&#160;        }</div>
 <div class="line"><a name="l01805"></a><span class="lineno"> 1805</span>&#160; </div>
-<div class="line"><a name="l01806"></a><span class="lineno"> 1806</span>&#160;      <span class="keywordflow">if</span>(max_aux_dist_on_cut &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-9*max_lenght)</div>
-<div class="line"><a name="l01807"></a><span class="lineno"> 1807</span>&#160;        max_aux_dist_on_cut =  1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-9*max_lenght;</div>
+<div class="line"><a name="l01806"></a><span class="lineno"> 1806</span>&#160;      <span class="keywordflow">if</span>(max_aux_dist_on_cut &lt; 1e-9*max_lenght)</div>
+<div class="line"><a name="l01807"></a><span class="lineno"> 1807</span>&#160;        max_aux_dist_on_cut =  1e-9*max_lenght;</div>
 <div class="line"><a name="l01808"></a><span class="lineno"> 1808</span>&#160; </div>
 <div class="line"><a name="l01809"></a><span class="lineno"> 1809</span>&#160;      <span class="keywordtype">int</span> edge_ids[6];</div>
 <div class="line"><a name="l01810"></a><span class="lineno"> 1810</span>&#160;      <a class="code" href="../../d8/dbb/class_kratos_1_1_tetrahedra_split.html#abd2b7e11cfc8c0de5efbb486d6f5dae0">TetrahedraSplit::TetrahedraSplitMode</a>(split_edge, edge_ids);</div>
@@ -2618,12 +2618,11 @@ $(function() {
 <div class="ttc" id="anamespacesquare__domain_html_a5fe4e4609932bcb338b5aca6b92b2029"><div class="ttname"><a href="../../d3/d51/namespacesquare__domain.html#a5fe4e4609932bcb338b5aca6b92b2029">square_domain.number_of_partitions</a></div><div class="ttdeci">number_of_partitions</div><div class="ttdef"><b>Definition:</b> square_domain.py:61</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetensors_html_a77b97b9c700f4d4697e0e623ce693eeb"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a77b97b9c700f4d4697e0e623ce693eeb">tensors::l</a></div><div class="ttdeci">integer l</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="asplit__tetrahedra_8h_html"><div class="ttname"><a href="../../d0/d9c/split__tetrahedra_8h.html">split_tetrahedra.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:27:16 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:25:55 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

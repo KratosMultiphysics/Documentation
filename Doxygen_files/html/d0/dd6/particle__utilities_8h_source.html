@@ -723,7 +723,7 @@ $(function() {
 <div class="line"><a name="l00643"></a><span class="lineno">  643</span>&#160;        <span class="keywordflow">if</span>(iii-&gt;FastGetSolutionStepValue(IS_BOUNDARY)==1.0){</div>
 <div class="line"><a name="l00644"></a><span class="lineno">  644</span>&#160;          <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; value_y1 = iii-&gt;FastGetSolutionStepValue(NORMAL);</div>
 <div class="line"><a name="l00645"></a><span class="lineno">  645</span>&#160;          <span class="keywordtype">double</span> norm_y1 =<a class="code" href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">norm_2</a>(value_y1);</div>
-<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;          value_y1 /=(norm_y1 + 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-9);</div>
+<div class="line"><a name="l00646"></a><span class="lineno">  646</span>&#160;          value_y1 /=(norm_y1 + 1e-9);</div>
 <div class="line"><a name="l00647"></a><span class="lineno">  647</span>&#160;        }</div>
 <div class="line"><a name="l00648"></a><span class="lineno">  648</span>&#160;      }</div>
 <div class="line"><a name="l00649"></a><span class="lineno">  649</span>&#160; </div>
@@ -1530,7 +1530,7 @@ $(function() {
 <div class="line"><a name="l01450"></a><span class="lineno"> 1450</span>&#160;                <span class="keywordflow">if</span>(Tp&gt;1000.0) Tp=1000.0;</div>
 <div class="line"><a name="l01451"></a><span class="lineno"> 1451</span>&#160;                <span class="keywordtype">double</span> <a class="code" href="../../d6/dd7/namespaceface__heat.html#ac34f348d9cf69d1b78b6f28e8dbbbc11">temperature</a> = 0.3e+8;<span class="comment">//1000000.0;//(iparticle)-&gt;FastGetSolutionStepValue(TEMPERATURE);</span></div>
 <div class="line"><a name="l01452"></a><span class="lineno"> 1452</span>&#160; </div>
-<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;                <a class="code" href="../../d6/dd7/namespaceface__heat.html#ac34f348d9cf69d1b78b6f28e8dbbbc11">temperature</a> = 2<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>+7;</div>
+<div class="line"><a name="l01453"></a><span class="lineno"> 1453</span>&#160;                <a class="code" href="../../d6/dd7/namespaceface__heat.html#ac34f348d9cf69d1b78b6f28e8dbbbc11">temperature</a> = 2e+7;</div>
 <div class="line"><a name="l01454"></a><span class="lineno"> 1454</span>&#160; </div>
 <div class="line"><a name="l01455"></a><span class="lineno"> 1455</span>&#160;                <span class="keywordflow">if</span>( (iparticle)-&gt;FastGetSolutionStepValue(DIAMETER)&gt;0)<span class="comment">//  ((iparticle)-&gt;GetValue(NEIGHBOUR_ELEMENTS)).size() == 0)</span></div>
 <div class="line"><a name="l01456"></a><span class="lineno"> 1456</span>&#160;          {</div>
@@ -2210,7 +2210,6 @@ $(function() {
 <div class="ttc" id="anamespacesensitivity_matrix_html_a8f488c74e9e53896f977dbd844b7cf5c"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">sensitivityMatrix.dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:25</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetest__pureconvectionsolver__benchmarking_html_ac0504a9bad6b43804efaffbdfa9bf88e"><div class="ttname"><a href="../../d7/dd6/namespacetest__pureconvectionsolver__benchmarking.html#ac0504a9bad6b43804efaffbdfa9bf88e">test_pureconvectionsolver_benchmarking.zero</a></div><div class="ttdeci">zero</div><div class="ttdef"><b>Definition:</b> test_pureconvectionsolver_benchmarking.py:94</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="../../d1/d77/node_8h.html">node.h</a></div></div>
 <div class="ttc" id="apfem__2__application__variables_8h_html"><div class="ttname"><a href="../../dc/da9/pfem__2__application__variables_8h.html">pfem_2_application_variables.h</a></div></div>
 <div class="ttc" id="aspatial__containers_8h_html"><div class="ttname"><a href="../../db/d8f/spatial__containers_8h.html">spatial_containers.h</a></div></div>
@@ -2219,7 +2218,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:27:16 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:25:55 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

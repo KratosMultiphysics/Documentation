@@ -95,54 +95,51 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dd/d33/time__incrementor_8h.html">time_incrementor.h</a>&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html">AdaptiveTimeIncrementor</a> : <span class="keyword">public</span> <a class="code" href="../../d6/dcb/class_kratos_1_1_time_incrementor.html">TimeIncrementor</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#ae9f26df8c829172ab264ccd254e65fc4">AdaptiveTimeIncrementor</a>(<span class="keywordtype">double</span>      StartTime,</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                            <span class="keywordtype">double</span>      EndTime,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            <span class="keywordtype">double</span>      StartIncrement,</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                            std::size_t MaxNumOfCycles     = 10,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                            <span class="keywordtype">double</span>      ReductionFactor    = 0.5,</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                            <span class="keywordtype">double</span>      IncreaseFactor     = 2.0,</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                            <span class="keywordtype">double</span>      MaxTimeStepFactor  = 1000.0,</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                            std::size_t MinNumOfIterations = 3,</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                            std::size_t MaxNumOfIterations = 15);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#a8b9038f6d0226189c90a908cf50155a3">WantNextStep</a>(<span class="keyword">const</span> <a class="code" href="../../d3/d92/struct_kratos_1_1_time_step_end_state.html">TimeStepEndState</a>&amp; rPreviousState) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    [[nodiscard]] <span class="keywordtype">bool</span> <a class="code" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#a16aae9b93dc3a6a75ae7f9931eaa0744">WantRetryStep</a>(std::size_t CycleNumber, <span class="keyword">const</span> <a class="code" href="../../d3/d92/struct_kratos_1_1_time_step_end_state.html">TimeStepEndState</a>&amp; rPreviousState) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    [[nodiscard]] <span class="keywordtype">double</span> <a class="code" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#a953cca55fcf0937ebe3d9f31f464a709">GetIncrement</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span>                 <a class="code" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#a6bea5a7dd7ad67102145348c4155aa1e">PostTimeStepExecution</a>(<span class="keyword">const</span> <a class="code" href="../../d3/d92/struct_kratos_1_1_time_step_end_state.html">TimeStepEndState</a>&amp; rResultantState) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">double</span>      mEndTime;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">double</span>      mDeltaTime;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::size_t mMaxNumOfCycles;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">double</span>      mReductionFactor;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">double</span>      mIncreaseFactor;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">double</span>      mMaxDeltaTime;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    std::size_t mMinNumOfIterations;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::size_t mMaxNumOfIterations;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="ttc" id="aclass_kratos_1_1_adaptive_time_incrementor_html"><div class="ttname"><a href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html">Kratos::AdaptiveTimeIncrementor</a></div><div class="ttdef"><b>Definition:</b> adaptive_time_incrementor.h:22</div></div>
-<div class="ttc" id="aclass_kratos_1_1_adaptive_time_incrementor_html_a16aae9b93dc3a6a75ae7f9931eaa0744"><div class="ttname"><a href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#a16aae9b93dc3a6a75ae7f9931eaa0744">Kratos::AdaptiveTimeIncrementor::WantRetryStep</a></div><div class="ttdeci">bool WantRetryStep(std::size_t CycleNumber, const TimeStepEndState &amp;rPreviousState) const override</div><div class="ttdef"><b>Definition:</b> adaptive_time_incrementor.cpp:63</div></div>
-<div class="ttc" id="aclass_kratos_1_1_adaptive_time_incrementor_html_a6bea5a7dd7ad67102145348c4155aa1e"><div class="ttname"><a href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#a6bea5a7dd7ad67102145348c4155aa1e">Kratos::AdaptiveTimeIncrementor::PostTimeStepExecution</a></div><div class="ttdeci">void PostTimeStepExecution(const TimeStepEndState &amp;rResultantState) override</div><div class="ttdef"><b>Definition:</b> adaptive_time_incrementor.cpp:74</div></div>
-<div class="ttc" id="aclass_kratos_1_1_adaptive_time_incrementor_html_a8b9038f6d0226189c90a908cf50155a3"><div class="ttname"><a href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#a8b9038f6d0226189c90a908cf50155a3">Kratos::AdaptiveTimeIncrementor::WantNextStep</a></div><div class="ttdeci">bool WantNextStep(const TimeStepEndState &amp;rPreviousState) const override</div><div class="ttdef"><b>Definition:</b> adaptive_time_incrementor.cpp:58</div></div>
-<div class="ttc" id="aclass_kratos_1_1_adaptive_time_incrementor_html_a953cca55fcf0937ebe3d9f31f464a709"><div class="ttname"><a href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#a953cca55fcf0937ebe3d9f31f464a709">Kratos::AdaptiveTimeIncrementor::GetIncrement</a></div><div class="ttdeci">double GetIncrement() const override</div><div class="ttdef"><b>Definition:</b> adaptive_time_incrementor.cpp:72</div></div>
-<div class="ttc" id="aclass_kratos_1_1_adaptive_time_incrementor_html_ae9f26df8c829172ab264ccd254e65fc4"><div class="ttname"><a href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html#ae9f26df8c829172ab264ccd254e65fc4">Kratos::AdaptiveTimeIncrementor::AdaptiveTimeIncrementor</a></div><div class="ttdeci">AdaptiveTimeIncrementor(double StartTime, double EndTime, double StartIncrement, std::size_t MaxNumOfCycles=10, double ReductionFactor=0.5, double IncreaseFactor=2.0, double MaxTimeStepFactor=1000.0, std::size_t MinNumOfIterations=3, std::size_t MaxNumOfIterations=15)</div><div class="ttdef"><b>Definition:</b> adaptive_time_incrementor.cpp:22</div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d25/kratos__export__api_8h.html">includes/kratos_export_api.h</a>&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html">   22</a></span>&#160;<span class="keyword">class </span>KRATOS_API(GEO_MECHANICS_APPLICATION) <a class="code" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html">AdaptiveTimeIncrementor</a> : <span class="keyword">public</span> <a class="code" href="../../d6/dcb/class_kratos_1_1_time_incrementor.html">TimeIncrementor</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <a class="code" href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html">AdaptiveTimeIncrementor</a>(<span class="keywordtype">double</span>      StartTime,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            <span class="keywordtype">double</span>      EndTime,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                            <span class="keywordtype">double</span>      StartIncrement,</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                            std::size_t MaxNumOfCycles     = 10,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                            <span class="keywordtype">double</span>      ReductionFactor    = 0.5,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                            <span class="keywordtype">double</span>      IncreaseFactor     = 2.0,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                            <span class="keywordtype">double</span>      MaxTimeStepFactor  = 1000.0,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                            std::size_t MinNumOfIterations = 3,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                            std::size_t MaxNumOfIterations = 15);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    [[nodiscard]] <span class="keywordtype">bool</span> WantNextStep(<span class="keyword">const</span> <a class="code" href="../../d3/d92/struct_kratos_1_1_time_step_end_state.html">TimeStepEndState</a>&amp; rPreviousState) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    [[nodiscard]] <span class="keywordtype">bool</span> WantRetryStep(std::size_t CycleNumber, <span class="keyword">const</span> <a class="code" href="../../d3/d92/struct_kratos_1_1_time_step_end_state.html">TimeStepEndState</a>&amp; rPreviousState) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    [[nodiscard]] <span class="keywordtype">double</span> GetIncrement() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">void</span>                 PostTimeStepExecution(<span class="keyword">const</span> <a class="code" href="../../d3/d92/struct_kratos_1_1_time_step_end_state.html">TimeStepEndState</a>&amp; rResultantState) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">double</span>      mEndTime;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">double</span>      mDeltaTime;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    std::size_t mMaxNumOfCycles;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">double</span>      mReductionFactor;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">double</span>      mIncreaseFactor;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keywordtype">double</span>      mMaxDeltaTime;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    std::size_t mMinNumOfIterations;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::size_t mMaxNumOfIterations;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;};</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="ttc" id="aclass_kratos_1_1_adaptive_time_incrementor_html"><div class="ttname"><a href="../../db/d6d/class_kratos_1_1_adaptive_time_incrementor.html">Kratos::AdaptiveTimeIncrementor</a></div><div class="ttdef"><b>Definition:</b> adaptive_time_incrementor.h:23</div></div>
 <div class="ttc" id="aclass_kratos_1_1_time_incrementor_html"><div class="ttname"><a href="../../d6/dcb/class_kratos_1_1_time_incrementor.html">Kratos::TimeIncrementor</a></div><div class="ttdef"><b>Definition:</b> time_incrementor.h:24</div></div>
+<div class="ttc" id="akratos__export__api_8h_html"><div class="ttname"><a href="../../dc/d25/kratos__export__api_8h.html">kratos_export_api.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
 <div class="ttc" id="astruct_kratos_1_1_time_step_end_state_html"><div class="ttname"><a href="../../d3/d92/struct_kratos_1_1_time_step_end_state.html">Kratos::TimeStepEndState</a></div><div class="ttdef"><b>Definition:</b> time_step_end_state.hpp:23</div></div>
 <div class="ttc" id="atime__incrementor_8h_html"><div class="ttname"><a href="../../dd/d33/time__incrementor_8h.html">time_incrementor.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:23:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:21:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

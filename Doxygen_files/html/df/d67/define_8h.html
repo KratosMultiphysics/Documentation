@@ -342,12 +342,11 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">catch</span>(ExceptionType&amp; <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>)                                        \</div>
+<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">catch</span>(ExceptionType&amp; e)                                        \</div>
 <div class="line">{                                                              \</div>
 <div class="line">Block                                                          \</div>
-<div class="line">KRATOS_ERROR &lt;&lt; <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>.what();                             \</div>
+<div class="line">KRATOS_ERROR &lt;&lt; e.what();                             \</div>
 <div class="line">}</div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -432,8 +431,8 @@ Macros</h2></td></tr>
 <div class="line">KRATOS_CATCH_AND_THROW(std::domain_error,MoreInfo,Block)     \</div>
 <div class="line">KRATOS_CATCH_AND_THROW(std::logic_error,MoreInfo,Block)      \</div>
 <div class="line">KRATOS_CATCH_AND_THROW(std::runtime_error,MoreInfo,Block)    \</div>
-<div class="line">catch(Exception&amp; <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>) { Block <span class="keywordflow">throw</span> Exception(<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>) &lt;&lt; <a class="code" href="../../da/da6/code__location_8h.html#a8b6f952887c9f8a8780a7775c84d571d">KRATOS_CODE_LOCATION</a> &lt;&lt; MoreInfo &lt;&lt; std::endl; } \</div>
-<div class="line">catch(std::exception&amp; <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>) { Block <a class="code" href="../../df/d67/define_8h.html#a0bc8ca20163d926dc5090cf16a6adc06">KRATOS_THROW_ERROR</a>(std::runtime_error, <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>.what(), MoreInfo) } \</div>
+<div class="line">catch(Exception&amp; e) { Block <span class="keywordflow">throw</span> Exception(e) &lt;&lt; <a class="code" href="../../da/da6/code__location_8h.html#a8b6f952887c9f8a8780a7775c84d571d">KRATOS_CODE_LOCATION</a> &lt;&lt; MoreInfo &lt;&lt; std::endl; } \</div>
+<div class="line">catch(std::exception&amp; e) { Block <a class="code" href="../../df/d67/define_8h.html#a0bc8ca20163d926dc5090cf16a6adc06">KRATOS_THROW_ERROR</a>(std::runtime_error, e.what(), MoreInfo) } \</div>
 <div class="line">catch(...) { Block <a class="code" href="../../df/d67/define_8h.html#a0bc8ca20163d926dc5090cf16a6adc06">KRATOS_THROW_ERROR</a>(std::runtime_error, <span class="stringliteral">&quot;Unknown error&quot;</span>, MoreInfo) }</div>
 <div class="ttc" id="acode__location_8h_html_a8b6f952887c9f8a8780a7775c84d571d"><div class="ttname"><a href="../../da/da6/code__location_8h.html#a8b6f952887c9f8a8780a7775c84d571d">KRATOS_CODE_LOCATION</a></div><div class="ttdeci">#define KRATOS_CODE_LOCATION</div><div class="ttdef"><b>Definition:</b> code_location.h:129</div></div>
 <div class="ttc" id="adefine_8h_html_a0bc8ca20163d926dc5090cf16a6adc06"><div class="ttname"><a href="../../df/d67/define_8h.html#a0bc8ca20163d926dc5090cf16a6adc06">KRATOS_THROW_ERROR</a></div><div class="ttdeci">#define KRATOS_THROW_ERROR(ExceptionType, ErrorMessage, MoreInfo)</div><div class="ttdef"><b>Definition:</b> define.h:77</div></div>
@@ -2849,7 +2848,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 03:10:42 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 03:09:03 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

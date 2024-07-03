@@ -683,7 +683,7 @@ $(function() {
 <div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;        <span class="keyword">const</span> TPointType&amp; r_second_point = <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#af2cce5940da9a3d3cb6c4f16fb8d8a25">BaseType::GetPoint</a>(1);</div>
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160; </div>
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;        <span class="comment">// Project point</span></div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> tolerance = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-14; <span class="comment">// Tolerance</span></div>
+<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> tolerance = 1e-14; <span class="comment">// Tolerance</span></div>
 <div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160; </div>
 <div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> length = <a class="code" href="../../db/d1c/class_kratos_1_1_line2_d2.html#a1a9cea573f91fa7a289a05c9bed87423">Length</a>();</div>
 <div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160; </div>
@@ -806,9 +806,9 @@ $(function() {
 <div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160; </div>
 <div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;        <span class="keywordflow">for</span> ( <span class="keywordtype">int</span> it_gp = 0; it_gp &lt; integration_points_number; it_gp++ )</div>
 <div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;        {</div>
-<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;            <span class="keywordtype">double</span> <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> = <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ad186709ed81b9bd6c9846ac6781de1be">IntegrationPoints</a>[it_gp].X();</div>
-<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 0 ) = 0.5 * ( 1 - <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> );</div>
-<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 1 ) = 0.5 * ( 1 + <a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a> );</div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160;            <span class="keywordtype">double</span> e = <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#ad186709ed81b9bd6c9846ac6781de1be">IntegrationPoints</a>[it_gp].X();</div>
+<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 0 ) = 0.5 * ( 1 - e );</div>
+<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>( it_gp, 1 ) = 0.5 * ( 1 + e );</div>
 <div class="line"><a name="l01267"></a><span class="lineno"> 1267</span>&#160;        }</div>
 <div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160; </div>
 <div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>;</div>
@@ -1083,11 +1083,10 @@ $(function() {
 <div class="ttc" id="anamespacerotating__cone_html_ab33bd86f7a31ca0d8e2b3e69609e3476"><div class="ttname"><a href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">rotating_cone.temp</a></div><div class="ttdeci">float temp</div><div class="ttdef"><b>Definition:</b> rotating_cone.py:85</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_a66f3c3a8f1f19530f87c9bd69c40d3ff"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">sensitivityMatrix.N</a></div><div class="ttdeci">N</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:29</div></div>
 <div class="ttc" id="anamespacestd_html"><div class="ttname"><a href="../../d8/dcc/namespacestd.html">std</a></div><div class="ttdoc">namespace</div><div class="ttdef"><b>Definition:</b> array_1d.h:793</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:53:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:52:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

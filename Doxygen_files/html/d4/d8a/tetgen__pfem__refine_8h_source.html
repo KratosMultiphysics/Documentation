@@ -1071,7 +1071,7 @@ $(function() {
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160;            <span class="keywordtype">double</span> vol = CalculateVol(x0,y0,z0,<a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#aa45f1e1623198e6272d1793df42832f0">x1</a>,y1,z1,<a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a28ebd5cdeb3e67065a25549468fe5676">x2</a>,y2,z2,x3,y3,z3);</div>
 <div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160; </div>
 <div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;            <span class="keywordtype">double</span> inv_vol = 0.0;</div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;            <span class="keywordflow">if</span>(vol &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-26)</div>
+<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;            <span class="keywordflow">if</span>(vol &lt; 1e-26)</div>
 <div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;              {</div>
 <div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;                <span class="comment">//KRATOS_THROW_ERROR(std::logic_error,&quot;element with zero vol found&quot;,&quot;&quot;);</span></div>
 <div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;                <a class="code" href="../../df/d67/define_8h.html#a6135b00508a42f0e8f91d1369644cbc1">KRATOS_WATCH</a>(<span class="stringliteral">&quot;WARNING!!!!!!!!!! YOU HAVE A SLIVER HERE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!&quot;</span>)</div>
@@ -1183,7 +1183,7 @@ $(function() {
 <div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;            <a class="code" href="../../d3/d16/namespacesp__statistics.html#a803b73de8837dce9d81f468b39aad4a7">volume</a> = detJ * 0.16666666667;</div>
 <div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;<span class="comment">//          KRATOS_WATCH(&quot;55555555555555555555555&quot;);</span></div>
 <div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160; </div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="../../d3/d16/namespacesp__statistics.html#a803b73de8837dce9d81f468b39aad4a7">volume</a> &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-3 * hmax*hmax*hmax)  <span class="comment">//this is a sliver and we will remove it</span></div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;            <span class="keywordflow">if</span>(<a class="code" href="../../d3/d16/namespacesp__statistics.html#a803b73de8837dce9d81f468b39aad4a7">volume</a> &lt; 1e-3 * hmax*hmax*hmax)  <span class="comment">//this is a sliver and we will remove it</span></div>
 <div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;            {</div>
 <div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;            <span class="comment">//KRATOS_WATCH(&quot;666666666666666666666666666&quot;);</span></div>
 <div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;                <span class="comment">//very bad element // ser a very high center for it to be eliminated</span></div>
@@ -1379,14 +1379,13 @@ $(function() {
 <div class="ttc" id="anamespacesensitivity_matrix_html_a8f488c74e9e53896f977dbd844b7cf5c"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a8f488c74e9e53896f977dbd844b7cf5c">sensitivityMatrix.dim</a></div><div class="ttdeci">int dim</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:25</div></div>
 <div class="ttc" id="anamespacesp__statistics_html_a803b73de8837dce9d81f468b39aad4a7"><div class="ttname"><a href="../../d3/d16/namespacesp__statistics.html#a803b73de8837dce9d81f468b39aad4a7">sp_statistics.volume</a></div><div class="ttdeci">volume</div><div class="ttdef"><b>Definition:</b> sp_statistics.py:15</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="aspatial__containers_8h_html"><div class="ttname"><a href="../../db/d8f/spatial__containers_8h.html">spatial_containers.h</a></div></div>
 <div class="ttc" id="atetrahedra__3d__4_8h_html"><div class="ttname"><a href="../../da/d60/tetrahedra__3d__4_8h.html">tetrahedra_3d_4.h</a></div></div>
 <div class="ttc" id="atriangle__3d__3_8h_html"><div class="ttname"><a href="../../d9/def/triangle__3d__3_8h.html">triangle_3d_3.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:23:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:21:55 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

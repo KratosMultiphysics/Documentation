@@ -148,7 +148,7 @@ $(function() {
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="comment">            { 2, 4, 5, -1}</span></div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment">        };*/</span></div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15; <span class="comment">//1.00e-9;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1e-15; <span class="comment">//1.00e-9;</span></div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> near_factor = 1.00e-12;</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d3/d51/namespacesquare__domain.html#a5fe4e4609932bcb338b5aca6b92b2029">number_of_partitions</a> = 1;</div>
@@ -459,8 +459,8 @@ $(function() {
 <div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160; </div>
 <div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;            <span class="comment">/*      if(max_aux_dist_on_cut &lt; 1e-10)</span></div>
 <div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;<span class="comment">                      max_aux_dist_on_cut = 1e-10;*/</span></div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="keywordflow">if</span>(max_aux_dist_on_cut &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-9*max_lenght)</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                max_aux_dist_on_cut =  1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-9*max_lenght;</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="keywordflow">if</span>(max_aux_dist_on_cut &lt; 1e-9*max_lenght)</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                max_aux_dist_on_cut =  1e-9*max_lenght;</div>
 <div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d3/d51/namespacesquare__domain.html#a5fe4e4609932bcb338b5aca6b92b2029">number_of_partitions</a>; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            {</div>
@@ -567,7 +567,7 @@ $(function() {
 <div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;<span class="comment">            { 2, 4, 5, -1}</span></div>
 <div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;<span class="comment">        };*/</span></div>
 <div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160; </div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-15; <span class="comment">//1.00e-9;</span></div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> epsilon = 1e-15; <span class="comment">//1.00e-9;</span></div>
 <div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> near_factor = 1.00e-12;</div>
 <div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160; </div>
 <div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../d3/d51/namespacesquare__domain.html#a5fe4e4609932bcb338b5aca6b92b2029">number_of_partitions</a> = 1;</div>
@@ -868,8 +868,8 @@ $(function() {
 <div class="line"><a name="l00837"></a><span class="lineno">  837</span>&#160; </div>
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;            <span class="comment">/*      if(max_aux_dist_on_cut &lt; 1e-10)</span></div>
 <div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;<span class="comment">                      max_aux_dist_on_cut = 1e-10;*/</span></div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            <span class="keywordflow">if</span>(max_aux_dist_on_cut &lt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-9*max_lenght)</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;                max_aux_dist_on_cut =  1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-9*max_lenght;</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;            <span class="keywordflow">if</span>(max_aux_dist_on_cut &lt; 1e-9*max_lenght)</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;                max_aux_dist_on_cut =  1e-9*max_lenght;</div>
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160; </div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d3/d51/namespacesquare__domain.html#a5fe4e4609932bcb338b5aca6b92b2029">number_of_partitions</a>; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            {</div>
@@ -2737,12 +2737,11 @@ $(function() {
 <div class="ttc" id="anamespacesquare__domain_html_a5fe4e4609932bcb338b5aca6b92b2029"><div class="ttname"><a href="../../d3/d51/namespacesquare__domain.html#a5fe4e4609932bcb338b5aca6b92b2029">square_domain.number_of_partitions</a></div><div class="ttdeci">number_of_partitions</div><div class="ttdef"><b>Definition:</b> square_domain.py:61</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetensors_html_a77b97b9c700f4d4697e0e623ce693eeb"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a77b97b9c700f4d4697e0e623ce693eeb">tensors::l</a></div><div class="ttdeci">integer l</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="asplit__tetrahedra_8h_html"><div class="ttname"><a href="../../d0/d9c/split__tetrahedra_8h.html">split_tetrahedra.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 03:10:18 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 03:08:40 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

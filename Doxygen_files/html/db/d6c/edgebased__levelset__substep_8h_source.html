@@ -2416,7 +2416,7 @@ $(function() {
 <div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;                            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> k_comp = 0; k_comp &lt; TDim; k_comp++)</div>
 <div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;                                <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> m_comp = 0; m_comp &lt; TDim; m_comp++)</div>
 <div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;                                    aaa += a_i[k_comp] * a_i[m_comp] * edge_ij.LaplacianIJ(k_comp, m_comp);</div>
-<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;                            <span class="keywordflow">if</span> (norm_a &gt; 1<a class="code" href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">e</a>-10)</div>
+<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;                            <span class="keywordflow">if</span> (norm_a &gt; 1e-10)</div>
 <div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;                            {</div>
 <div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;                                aaa /= (norm_a * norm_a);</div>
 <div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160;                                <span class="keywordtype">double</span> capturing2 = aaa * (phi_j - phi_i);</div>
@@ -2976,14 +2976,13 @@ $(function() {
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anamespacetensors_html_ae45f2cad44156b1f87c76425c7f6cbec"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#ae45f2cad44156b1f87c76425c7f6cbec">tensors::sign1</a></div><div class="ttdeci">integer function sign1(a)</div><div class="ttdef"><b>Definition:</b> TensorModule.f:872</div></div>
 <div class="ttc" id="anamespacetest__pureconvectionsolver__benchmarking_html_a2480f8b7f9f6fd8b9ed481e4057ee92a"><div class="ttname"><a href="../../d7/dd6/namespacetest__pureconvectionsolver__benchmarking.html#a2480f8b7f9f6fd8b9ed481e4057ee92a">test_pureconvectionsolver_benchmarking.pressure</a></div><div class="ttdeci">float pressure</div><div class="ttdef"><b>Definition:</b> test_pureconvectionsolver_benchmarking.py:101</div></div>
-<div class="ttc" id="anamespacetesting_1_1run__cpp__mpi__tests_html_a1530e25e44288a87b31cbc1ec50d3eab"><div class="ttname"><a href="../../d5/dbe/namespacetesting_1_1run__cpp__mpi__tests.html#a1530e25e44288a87b31cbc1ec50d3eab">testing.run_cpp_mpi_tests.e</a></div><div class="ttdeci">e</div><div class="ttdef"><b>Definition:</b> run_cpp_mpi_tests.py:31</div></div>
 <div class="ttc" id="anamespaceulf___p_g_l_a_s_s_html_a52cc0cdfba0167aa6f6a2d19f05f0070"><div class="ttname"><a href="../../d3/dca/namespaceulf___p_g_l_a_s_s.html#a52cc0cdfba0167aa6f6a2d19f05f0070">ulf_PGLASS.factor</a></div><div class="ttdeci">float factor</div><div class="ttdoc">for node in (self.combined_model_part).Nodes: pold = node.GetSolutionStepValue(PRESSURE,...</div><div class="ttdef"><b>Definition:</b> ulf_PGLASS.py:254</div></div>
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="../../d1/d77/node_8h.html">node.h</a></div></div>
 <div class="ttc" id="areduction__utilities_8h_html"><div class="ttname"><a href="../../d6/d05/reduction__utilities_8h.html">reduction_utilities.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jul 2 2024 02:22:00 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Jul 3 2024 02:20:35 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
