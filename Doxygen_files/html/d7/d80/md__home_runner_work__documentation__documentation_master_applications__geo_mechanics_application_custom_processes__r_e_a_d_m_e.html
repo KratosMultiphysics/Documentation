@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KratosMultiphysics: Processes</title>
+<title>KratosMultiphysics: Custom processes</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -72,14 +72,24 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Processes </div>  </div>
+<div class="title">Custom processes </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This folder contains the custom processes that are used in the <a class="el" href="../../d2/d22/namespace_geo_mechanics_application.html">GeoMechanicsApplication</a>. Processes are commands that can be executed during several stages of a calculation. In the <a class="el" href="../../d2/d22/namespace_geo_mechanics_application.html">GeoMechanicsApplication</a>, their main use is to apply boundary conditions and/or constraints , but there are more specific examples (e.g. the K0 procedure, nodal extrapolation, or (de)activation of certain parts of the model).</p>
-<p>In this document, we will explain the different processes. Since this effort is a work in progress, not all processes are documented yet. If you have any questions, please contact the maintainers (@KratosMultiphysics/geomechanics on GitHub).</p>
+<div class="textblock"><p>This folder contains the custom processes that are used in the <a class="el" href="../../d2/d22/namespace_geo_mechanics_application.html">GeoMechanicsApplication</a>. Processes are commands that can be executed during several stages of a calculation. In the <a class="el" href="../../d2/d22/namespace_geo_mechanics_application.html">GeoMechanicsApplication</a>, their main use is to apply boundary conditions and/or constraints , but there are more specific examples (e.g. the K0 procedure, nodal extrapolation, or (de)activation of certain parts of the model). Since this effort is a work in progress, not all processes are documented yet. If you have any questions, please contact the maintainers (@KratosMultiphysics/geomechanics on GitHub).</p>
 <p>Documented processes:</p><ul>
+<li>$c-\phi$ reduction process</li>
 <li><a href="../../#extrapolation-of-integration-values-to-nodes">GeoExtrapolateIntegrationPointValuesToNodesProcess</a></li>
 </ul>
+<h1>$c-\phi$ reduction process</h1>
+<p>For the assessment of a safety factor to characterize slope stability, a Mohr-Coulomb material based $c-\phi$ reduction scheme is implemented. The apex of the Mohr-Coulomb cone shaped failure surface is kept in the same position, therefore both $c$ and $\tan \phi$ will diminish at the same rate.</p>
+<h2>Incrementation scheme</h2>
+<p>The $c-\phi$ reduction process requires the existence of a stress state in your model and the use of a Mohr-Coulomb material (in a UDSM or UMAT formulation). Preferably this stress state is an equilibrium state, such that no stresses in integration points violate the given Mohr-Coulomb failure surface. During the stage with the active $c-\phi$ reduction process, $c$ and $\tan \phi$ will be incrementally reduced in steps with an initial size of 10%. For each reduction step stresses are mapped back onto the reduced Mohr-Coulomb yield surface and equilibrium is found if possible. When equilibrium is no longer found in the given number of iterations for the Newton-Raphson scheme, the step is retried with a halved reduction increment. This is repeated until the allowed number of cycles for a step is reached. <br  />
+</p>
+<h2>Safety factor</h2>
+<p>The safety factor is computed as the inverse of the reduction factor <a href="../../#1">[1]</a>:</p>
+<p>$$SF = \frac{1}{\alpha}$$</p>
+<p>where the reduction factor $\alpha$ is the ratio of the found critical values for cohesion and friction angle $c_c$ or $\phi_c$ and original material parameters.</p>
+<p>$$\alpha = \frac{c_c}{c} = \frac{\tan \phi_c}{\tan \phi}$$</p>
 <h1>Extrapolation of integration values to nodes</h1>
 <p>The <code>GeoExtrapolateIntegrationPointValuesToNodesProcess</code> can be used as a post-processing step to acquire nodal data for variables that are stored at the integration points. This is useful for visualization services which expect nodal data.</p>
 <p>Conceptually the process consists of the following steps:</p><ol type="1">
@@ -102,12 +112,14 @@ $(function() {
 <div class="line">  }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> Where the <code>model_part_name</code> should contain the name of the model part where the extrapolation is to be performed for the variables in <code>list_of_variables</code>. These variables could be of any type, as long as the <code>Element</code> class has an implementation of the <code>CalculateOnIntegrationPoints</code> function for them.</p>
-<p>When this process is added to the <code>ProjectParameters.json</code>, the variables specified in <code>list_of_variables</code> can be exported as nodal output (e.g. as <code>nodal_results</code> in the <code>GiDOutputProcess</code>). </p>
+<p>When this process is added to the <code>ProjectParameters.json</code>, the variables specified in <code>list_of_variables</code> can be exported as nodal output (e.g. as <code>nodal_results</code> in the <code>GiDOutputProcess</code>).</p>
+<h1>References</h1>
+<p><a class="anchor" id="1"></a>[1] Brinkgreve, R.B.J., Bakker, H.L., 1991. Non-linear finite element analysis of safety factors, Computer Methods and Advances in Geomechanics, Beer, Booker &amp; Carterr (eds), Balkema, Rotterdam. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 4 2024 03:11:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Jul 5 2024 03:10:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

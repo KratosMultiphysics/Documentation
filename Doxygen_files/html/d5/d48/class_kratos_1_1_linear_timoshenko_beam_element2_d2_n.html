@@ -82,7 +82,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>This is the Timoshenko beam element of 2 nodes. Reference: Felippa and Oñate, "Accurate Timoshenko Beam Elements For Linear Elastostatics and LPB Stability", Archives of Comp. Methods in Eng. (2021) 28:2021-2080.  
+<p>This is the Timoshenko beam element of 2 nodes. Reference: Felippa and Oñate, "Accurate Timoshenko Beam Elements For Linear Elastostatics and LPB Stability", Archives of Comp. Methods in Eng. (2021) 28:2021-2080 DOI: <a href="https://doi.org/10.1007/s11831-020-09515-0">https://doi.org/10.1007/s11831-020-09515-0</a>.  
  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/dfe/timoshenko__beam__element__2_d2_n_8h_source.html">timoshenko_beam_element_2D2N.h</a>&gt;</code></p>
@@ -120,25 +120,28 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeedf47ade70e6acf70268033175c1222"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#aeedf47ade70e6acf70268033175c1222">GetDoFsPerNode</a> () const</td></tr>
 <tr class="memdesc:aeedf47ade70e6acf70268033175c1222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Indicates the amount of DoFs per node (u0, v, theta)  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#aeedf47ade70e6acf70268033175c1222">More...</a><br /></td></tr>
 <tr class="separator:aeedf47ade70e6acf70268033175c1222"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa82e2549f0b74003882b5937aa6a40bf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#aa82e2549f0b74003882b5937aa6a40bf">GetNodalValuesVector</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValue)</td></tr>
-<tr class="memdesc:aa82e2549f0b74003882b5937aa6a40bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 6 component vector including the values of the DoFs in LOCAL axes.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#aa82e2549f0b74003882b5937aa6a40bf">More...</a><br /></td></tr>
-<tr class="separator:aa82e2549f0b74003882b5937aa6a40bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e37819e716f65b993907b4add1c2514"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a1e37819e716f65b993907b4add1c2514">CalculateAxialStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValues)</td></tr>
-<tr class="memdesc:a1e37819e716f65b993907b4add1c2514"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the axial strain (El), shear strain (gamma_xy) and bending curvature (kappa)  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a1e37819e716f65b993907b4add1c2514">More...</a><br /></td></tr>
-<tr class="separator:a1e37819e716f65b993907b4add1c2514"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8bf1f654712e5c9d18dcf820a7f2dce1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a8bf1f654712e5c9d18dcf820a7f2dce1">CalculateShearStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValues)</td></tr>
-<tr class="separator:a8bf1f654712e5c9d18dcf820a7f2dce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c8b3b6504bb6910cd2f7ab64a550e25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a2c8b3b6504bb6910cd2f7ab64a550e25">CalculateBendingCurvature</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValues)</td></tr>
-<tr class="separator:a2c8b3b6504bb6910cd2f7ab64a550e25"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f7de6e63867ba08278e8b312966a4db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a9f7de6e63867ba08278e8b312966a4db">CalculateGeneralizedStrainsVector</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rStrain, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValues)</td></tr>
-<tr class="memdesc:a9f7de6e63867ba08278e8b312966a4db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the axial strain (El), shear strain (gamma_xy) and bending curvature (kappa) and builds the strain vector.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a9f7de6e63867ba08278e8b312966a4db">More...</a><br /></td></tr>
-<tr class="separator:a9f7de6e63867ba08278e8b312966a4db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae335ce36c93eb2f796f64d57ef0606e2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ae335ce36c93eb2f796f64d57ef0606e2">CalculateLength</a> ()</td></tr>
-<tr class="memdesc:ae335ce36c93eb2f796f64d57ef0606e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the length of the FE and returns it.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ae335ce36c93eb2f796f64d57ef0606e2">More...</a><br /></td></tr>
-<tr class="separator:ae335ce36c93eb2f796f64d57ef0606e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51b6001e86ee657a369b26cdaa2b724c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a51b6001e86ee657a369b26cdaa2b724c">GlobalSizeVector</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rGlobalSizeVector, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rLocalSizeVector)</td></tr>
-<tr class="memdesc:a51b6001e86ee657a369b26cdaa2b724c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies a vector to include the components of a local size vector to the global size.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a51b6001e86ee657a369b26cdaa2b724c">More...</a><br /></td></tr>
-<tr class="separator:a51b6001e86ee657a369b26cdaa2b724c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95b4653cf5ca17f8a890b8a7c3e43209"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a95b4653cf5ca17f8a890b8a7c3e43209">GetAngle</a> () const</td></tr>
+<tr class="memdesc:a95b4653cf5ca17f8a890b8a7c3e43209"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns the angle of the FE axis.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a95b4653cf5ca17f8a890b8a7c3e43209">More...</a><br /></td></tr>
+<tr class="separator:a95b4653cf5ca17f8a890b8a7c3e43209"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ecfe3f7532e22648e489da48c2ebbe4"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a7ecfe3f7532e22648e489da48c2ebbe4">GetNodalValuesVector</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValue) const</td></tr>
+<tr class="memdesc:a7ecfe3f7532e22648e489da48c2ebbe4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a 6 component vector including the values of the DoFs in LOCAL beam axes.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a7ecfe3f7532e22648e489da48c2ebbe4">More...</a><br /></td></tr>
+<tr class="separator:a7ecfe3f7532e22648e489da48c2ebbe4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73bcfa8c419a85a81ca20b788a05a79a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a73bcfa8c419a85a81ca20b788a05a79a">CalculateAxialStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValues) const</td></tr>
+<tr class="memdesc:a73bcfa8c419a85a81ca20b788a05a79a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the axial strain (El), shear strain (gamma_xy) and bending curvature (kappa)  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a73bcfa8c419a85a81ca20b788a05a79a">More...</a><br /></td></tr>
+<tr class="separator:a73bcfa8c419a85a81ca20b788a05a79a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25f9d589a330300ca61f09210c0c04c4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a25f9d589a330300ca61f09210c0c04c4">CalculateShearStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValues) const</td></tr>
+<tr class="separator:a25f9d589a330300ca61f09210c0c04c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b25b3f993a3e39ca7c568893050b422"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a1b25b3f993a3e39ca7c568893050b422">CalculateBendingCurvature</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValues) const</td></tr>
+<tr class="separator:a1b25b3f993a3e39ca7c568893050b422"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a49afc95a155118414908982685e36352"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a49afc95a155118414908982685e36352">CalculateGeneralizedStrainsVector</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rStrain, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rNodalValues) const</td></tr>
+<tr class="memdesc:a49afc95a155118414908982685e36352"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the axial strain (El), shear strain (gamma_xy) and bending curvature (kappa) and builds the strain vector.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a49afc95a155118414908982685e36352">More...</a><br /></td></tr>
+<tr class="separator:a49afc95a155118414908982685e36352"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a11ff9a50e81a123e0574d0d73c7566db"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a11ff9a50e81a123e0574d0d73c7566db">CalculateLength</a> () const</td></tr>
+<tr class="memdesc:a11ff9a50e81a123e0574d0d73c7566db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the length of the FE and returns it.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a11ff9a50e81a123e0574d0d73c7566db">More...</a><br /></td></tr>
+<tr class="separator:a11ff9a50e81a123e0574d0d73c7566db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2839a0b505a2bfff5e0c708713db8a95"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a2839a0b505a2bfff5e0c708713db8a95">GlobalSizeVector</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rGlobalSizeVector, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rLocalSizeVector) const</td></tr>
+<tr class="memdesc:a2839a0b505a2bfff5e0c708713db8a95"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies a vector to include the components of a local size vector to the global size.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a2839a0b505a2bfff5e0c708713db8a95">More...</a><br /></td></tr>
+<tr class="separator:a2839a0b505a2bfff5e0c708713db8a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae74c5b13b6a61912c91baec62c6a9386"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ae74c5b13b6a61912c91baec62c6a9386">GlobalSizeAxialVector</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rGlobalSizeVector, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rLocalSizeVector)</td></tr>
 <tr class="memdesc:ae74c5b13b6a61912c91baec62c6a9386"><td class="mdescLeft">&#160;</td><td class="mdescRight">Modifies a vector to include the components of a local size vector to the global size.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ae74c5b13b6a61912c91baec62c6a9386">More...</a><br /></td></tr>
 <tr class="separator:ae74c5b13b6a61912c91baec62c6a9386"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,37 +168,39 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab1649f8b337b97729512898d118a750b"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">GeometryType::IntegrationPointsArrayType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ab1649f8b337b97729512898d118a750b">IntegrationPoints</a> (<a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
 <tr class="memdesc:ab1649f8b337b97729512898d118a750b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the set of integration points.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ab1649f8b337b97729512898d118a750b">More...</a><br /></td></tr>
 <tr class="separator:ab1649f8b337b97729512898d118a750b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a60cc1ae968b1553aceb10b59e31d09ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a60cc1ae968b1553aceb10b59e31d09ad">GetShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi)</td></tr>
-<tr class="memdesc:a60cc1ae968b1553aceb10b59e31d09ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the 4 shape functions used for interpolating the transverse displacement v. (denoted as N) Also its derivatives.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a60cc1ae968b1553aceb10b59e31d09ad">More...</a><br /></td></tr>
-<tr class="separator:a60cc1ae968b1553aceb10b59e31d09ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af2dce8cfb2242acee017600a5cae24fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#af2dce8cfb2242acee017600a5cae24fc">GetFirstDerivativesShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi)</td></tr>
-<tr class="separator:af2dce8cfb2242acee017600a5cae24fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09bde2599de4f91233be3bc8fc8fc406"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a09bde2599de4f91233be3bc8fc8fc406">GetSecondDerivativesShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi)</td></tr>
-<tr class="separator:a09bde2599de4f91233be3bc8fc8fc406"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6563274e3592abd812bde8e6ca8ef4a5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a6563274e3592abd812bde8e6ca8ef4a5">GetThirdDerivativesShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi)</td></tr>
-<tr class="separator:a6563274e3592abd812bde8e6ca8ef4a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afaf877ee4c69b97ee1db64af3f112fd8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#afaf877ee4c69b97ee1db64af3f112fd8">GetNThetaShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi)</td></tr>
-<tr class="memdesc:afaf877ee4c69b97ee1db64af3f112fd8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the 4 shape functions used for interpolating the total rotation Theta (N_theta) Also its derivative.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#afaf877ee4c69b97ee1db64af3f112fd8">More...</a><br /></td></tr>
-<tr class="separator:afaf877ee4c69b97ee1db64af3f112fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0fa801519bdf2421d58370ade1f80104"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a0fa801519bdf2421d58370ade1f80104">GetFirstDerivativesNThetaShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi)</td></tr>
-<tr class="separator:a0fa801519bdf2421d58370ade1f80104"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab29c27bc192a9a454ba2b617fa25fac4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ab29c27bc192a9a454ba2b617fa25fac4">GetNu0ShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi)</td></tr>
-<tr class="memdesc:ab29c27bc192a9a454ba2b617fa25fac4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the 2 shape functions used for interpolating the axial displacement u0 Also its derivatives.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ab29c27bc192a9a454ba2b617fa25fac4">More...</a><br /></td></tr>
-<tr class="separator:ab29c27bc192a9a454ba2b617fa25fac4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4dab27964d0ad123b5519eb7e3aab42"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#aa4dab27964d0ad123b5519eb7e3aab42">GetFirstDerivativesNu0ShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi)</td></tr>
-<tr class="separator:aa4dab27964d0ad123b5519eb7e3aab42"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18ef3fc41dac2e365287bfed95c2dd2d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a18ef3fc41dac2e365287bfed95c2dd2d">RotateLHS</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLHS, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> &amp;rGeometry)</td></tr>
+<tr class="memitem:a8be11713221460c33572b965e92d9976"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a8be11713221460c33572b965e92d9976">GetShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi) const</td></tr>
+<tr class="memdesc:a8be11713221460c33572b965e92d9976"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the 4 shape functions used for interpolating the transverse displacement v. (denoted as N) Also its derivatives.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a8be11713221460c33572b965e92d9976">More...</a><br /></td></tr>
+<tr class="separator:a8be11713221460c33572b965e92d9976"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37fcf7b29ae66b05a9bdc88c5b0f813f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a37fcf7b29ae66b05a9bdc88c5b0f813f">GetFirstDerivativesShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi) const</td></tr>
+<tr class="separator:a37fcf7b29ae66b05a9bdc88c5b0f813f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2398fff98e31bd689c02d36f79356ba"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ad2398fff98e31bd689c02d36f79356ba">GetSecondDerivativesShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi) const</td></tr>
+<tr class="separator:ad2398fff98e31bd689c02d36f79356ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa36a6c52fdc7e2b86545b39c241632f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#afa36a6c52fdc7e2b86545b39c241632f">GetThirdDerivativesShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi) const</td></tr>
+<tr class="separator:afa36a6c52fdc7e2b86545b39c241632f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad69324ea921b112dcb0c87575d60d443"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ad69324ea921b112dcb0c87575d60d443">GetFourthDerivativesShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi) const</td></tr>
+<tr class="separator:ad69324ea921b112dcb0c87575d60d443"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0002be982ae86cdbc09d1391a84a00c8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a0002be982ae86cdbc09d1391a84a00c8">GetNThetaShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi) const</td></tr>
+<tr class="memdesc:a0002be982ae86cdbc09d1391a84a00c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the 4 shape functions used for interpolating the total rotation Theta (N_theta) Also its derivative.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a0002be982ae86cdbc09d1391a84a00c8">More...</a><br /></td></tr>
+<tr class="separator:a0002be982ae86cdbc09d1391a84a00c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6e608fe76b43446ec5d3ee7a3f47185"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ab6e608fe76b43446ec5d3ee7a3f47185">GetFirstDerivativesNThetaShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi) const</td></tr>
+<tr class="separator:ab6e608fe76b43446ec5d3ee7a3f47185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91031a41d930cbf917ae0c60d55ad185"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a91031a41d930cbf917ae0c60d55ad185">GetNu0ShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi) const</td></tr>
+<tr class="memdesc:a91031a41d930cbf917ae0c60d55ad185"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns the 2 shape functions used for interpolating the axial displacement u0 Also its derivatives.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a91031a41d930cbf917ae0c60d55ad185">More...</a><br /></td></tr>
+<tr class="separator:a91031a41d930cbf917ae0c60d55ad185"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1fcb826442f6e2962b1b12af03920d6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ab1fcb826442f6e2962b1b12af03920d6">GetFirstDerivativesNu0ShapeFunctionsValues</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rN, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Length, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Phi, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> xi) const</td></tr>
+<tr class="separator:ab1fcb826442f6e2962b1b12af03920d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18ef3fc41dac2e365287bfed95c2dd2d"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a18ef3fc41dac2e365287bfed95c2dd2d">RotateLHS</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLHS, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> &amp;rGeometry)</td></tr>
 <tr class="memdesc:a18ef3fc41dac2e365287bfed95c2dd2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function rotates the LHS from local to global coordinates.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a18ef3fc41dac2e365287bfed95c2dd2d">More...</a><br /></td></tr>
 <tr class="separator:a18ef3fc41dac2e365287bfed95c2dd2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2cd42b40a42598a84df7eb81102b024b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a2cd42b40a42598a84df7eb81102b024b">RotateRHS</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRHS, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> &amp;rGeometry)</td></tr>
+<tr class="memitem:a2cd42b40a42598a84df7eb81102b024b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a2cd42b40a42598a84df7eb81102b024b">RotateRHS</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRHS, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> &amp;rGeometry)</td></tr>
 <tr class="memdesc:a2cd42b40a42598a84df7eb81102b024b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function rotates the RHS from local to global coordinates.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a2cd42b40a42598a84df7eb81102b024b">More...</a><br /></td></tr>
 <tr class="separator:a2cd42b40a42598a84df7eb81102b024b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8768ea41390e2dab0fd41dfdbbd092eb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a8768ea41390e2dab0fd41dfdbbd092eb">RotateAll</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLHS, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRHS, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> &amp;rGeometry)</td></tr>
+<tr class="memitem:a8768ea41390e2dab0fd41dfdbbd092eb"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a8768ea41390e2dab0fd41dfdbbd092eb">RotateAll</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLHS, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRHS, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">GeometryType</a> &amp;rGeometry)</td></tr>
 <tr class="memdesc:a8768ea41390e2dab0fd41dfdbbd092eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function rotates the LHS and RHS from local to global coordinates.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a8768ea41390e2dab0fd41dfdbbd092eb">More...</a><br /></td></tr>
 <tr class="separator:a8768ea41390e2dab0fd41dfdbbd092eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8cc1d3c782bf055ab24823c1e47d3ba"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#af8cc1d3c782bf055ab24823c1e47d3ba">GetLocalAxesBodyForce</a> (const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;rElement, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">GeometryType::IntegrationPointsArrayType</a> &amp;rIntegrationPoints, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> PointNumber)</td></tr>
-<tr class="memdesc:af8cc1d3c782bf055ab24823c1e47d3ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function retrieves the body forces in local axes.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#af8cc1d3c782bf055ab24823c1e47d3ba">More...</a><br /></td></tr>
-<tr class="separator:af8cc1d3c782bf055ab24823c1e47d3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906801d6d07c2372b7a242f93018bf20"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a906801d6d07c2372b7a242f93018bf20">GetLocalAxesBodyForce</a> (const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;rElement, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">GeometryType::IntegrationPointsArrayType</a> &amp;rIntegrationPoints, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> PointNumber) const</td></tr>
+<tr class="memdesc:a906801d6d07c2372b7a242f93018bf20"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function retrieves the body forces in local axes.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a906801d6d07c2372b7a242f93018bf20">More...</a><br /></td></tr>
+<tr class="separator:a906801d6d07c2372b7a242f93018bf20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fec553677419849a533fd89bdbc5f91"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a0fec553677419849a533fd89bdbc5f91">CalculateLocalSystem</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="memdesc:a0fec553677419849a533fd89bdbc5f91"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function provides a more general interface to the element.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a0fec553677419849a533fd89bdbc5f91">More...</a><br /></td></tr>
 <tr class="separator:a0fec553677419849a533fd89bdbc5f91"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -556,7 +561,7 @@ Protected Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Protected member Variables</div></td></tr>
-<tr class="memitem:ac64e8719d2c84608d637aedc57737c7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ac64e8719d2c84608d637aedc57737c7b">mThisIntegrationMethod</a></td></tr>
+<tr class="memitem:ac64e8719d2c84608d637aedc57737c7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#ac64e8719d2c84608d637aedc57737c7b">mThisIntegrationMethod</a> = <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404fafcb35549294c506ea4670ec08dacd31c">GeometryData::IntegrationMethod::GI_GAUSS_3</a></td></tr>
 <tr class="separator:ac64e8719d2c84608d637aedc57737c7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e877f98d539828e32757fffd9bde864"><td class="memItemLeft" align="right" valign="top">std::vector&lt; ConstitutiveLaw::Pointer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a7e877f98d539828e32757fffd9bde864">mConstitutiveLawVector</a></td></tr>
 <tr class="memdesc:a7e877f98d539828e32757fffd9bde864"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently selected integration methods.  <a href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a7e877f98d539828e32757fffd9bde864">More...</a><br /></td></tr>
@@ -713,7 +718,7 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a7e633a5159d1e064fb875282bef94ad0 inherit pub_static_methods_class_kratos_1_1_flags"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>This is the Timoshenko beam element of 2 nodes. Reference: Felippa and Oñate, "Accurate Timoshenko Beam Elements For Linear Elastostatics and LPB Stability", Archives of Comp. Methods in Eng. (2021) 28:2021-2080. </p>
+<div class="textblock"><p>This is the Timoshenko beam element of 2 nodes. Reference: Felippa and Oñate, "Accurate Timoshenko Beam Elements For Linear Elastostatics and LPB Stability", Archives of Comp. Methods in Eng. (2021) 28:2021-2080 DOI: <a href="https://doi.org/10.1007/s11831-020-09515-0">https://doi.org/10.1007/s11831-020-09515-0</a>. </p>
 <dl class="section author"><dt>Author</dt><dd>Alejandro Cornejo </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="affa18f986a94e0460d95469f8fe4bc2e"></a>
@@ -863,11 +868,14 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1e37819e716f65b993907b4add1c2514"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1e37819e716f65b993907b4add1c2514">&#9670;&nbsp;</a></span>CalculateAxialStrain()</h2>
+<a id="a73bcfa8c419a85a81ca20b788a05a79a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73bcfa8c419a85a81ca20b788a05a79a">&#9670;&nbsp;</a></span>CalculateAxialStrain()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::LinearTimoshenkoBeamElement2D2N::CalculateAxialStrain </td>
@@ -896,9 +904,14 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Computes the axial strain (El), shear strain (gamma_xy) and bending curvature (kappa) </p>
@@ -912,13 +925,18 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#af07de6f3c2251c784afcc131e7814627">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
-<a id="a2c8b3b6504bb6910cd2f7ab64a550e25"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c8b3b6504bb6910cd2f7ab64a550e25">&#9670;&nbsp;</a></span>CalculateBendingCurvature()</h2>
+<a id="a1b25b3f993a3e39ca7c568893050b422"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b25b3f993a3e39ca7c568893050b422">&#9670;&nbsp;</a></span>CalculateBendingCurvature()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::LinearTimoshenkoBeamElement2D2N::CalculateBendingCurvature </td>
@@ -947,15 +965,22 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#a7965ce8ec9bbe7414c828f51e6b8d02e">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
-<a id="a9f7de6e63867ba08278e8b312966a4db"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f7de6e63867ba08278e8b312966a4db">&#9670;&nbsp;</a></span>CalculateGeneralizedStrainsVector()</h2>
+<a id="a49afc95a155118414908982685e36352"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a49afc95a155118414908982685e36352">&#9670;&nbsp;</a></span>CalculateGeneralizedStrainsVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -993,7 +1018,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1058,8 +1083,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="ae335ce36c93eb2f796f64d57ef0606e2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae335ce36c93eb2f796f64d57ef0606e2">&#9670;&nbsp;</a></span>CalculateLength()</h2>
+<a id="a11ff9a50e81a123e0574d0d73c7566db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a11ff9a50e81a123e0574d0d73c7566db">&#9670;&nbsp;</a></span>CalculateLength()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1068,15 +1093,15 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::LinearTimoshenkoBeamElement2D2N::CalculateLength </td>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::LinearTimoshenkoBeamElement2D2N::CalculateLength </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -1294,11 +1319,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8bf1f654712e5c9d18dcf820a7f2dce1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bf1f654712e5c9d18dcf820a7f2dce1">&#9670;&nbsp;</a></span>CalculateShearStrain()</h2>
+<a id="a25f9d589a330300ca61f09210c0c04c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25f9d589a330300ca61f09210c0c04c4">&#9670;&nbsp;</a></span>CalculateShearStrain()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::LinearTimoshenkoBeamElement2D2N::CalculateShearStrain </td>
@@ -1327,10 +1355,17 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#a28dbb572ed8bc198b35fdf5a2b1bc68f">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
@@ -1417,6 +1452,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aa97bc3d6e94af0447c31efa335ece8d6">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#afd827937d2781fe2d403b0a0572e6b54">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
 <a id="a107f20a4ca0e0f4ef41d7f4482b479bd"></a>
@@ -1471,6 +1508,8 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>a Pointer to the new element </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a08841154b68ef76cff12d101feeb3d8b">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#ac371c5728d7b93b184546d73ce0e77c8">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
@@ -1527,6 +1566,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9d3fcc73aa43b460715466d283803b61">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#af0dfb23548ce77534e07654b4d468b1e">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
 <a id="af26127211cc33bd9fec44ad1f44c7fb8"></a>
@@ -1573,6 +1614,33 @@ Additional Inherited Members</h2></td></tr>
 </dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a7e1773ec5953e766fb36127d799f0e10">Kratos::Element</a>.</p>
+
+</div>
+</div>
+<a id="a95b4653cf5ca17f8a890b8a7c3e43209"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95b4653cf5ca17f8a890b8a7c3e43209">&#9670;&nbsp;</a></span>GetAngle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::LinearTimoshenkoBeamElement2D2N::GetAngle </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method returns the angle of the FE axis. </p>
 
 </div>
 </div>
@@ -1650,11 +1718,14 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a0fa801519bdf2421d58370ade1f80104"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0fa801519bdf2421d58370ade1f80104">&#9670;&nbsp;</a></span>GetFirstDerivativesNThetaShapeFunctionsValues()</h2>
+<a id="ab6e608fe76b43446ec5d3ee7a3f47185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6e608fe76b43446ec5d3ee7a3f47185">&#9670;&nbsp;</a></span>GetFirstDerivativesNThetaShapeFunctionsValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::GetFirstDerivativesNThetaShapeFunctionsValues </td>
@@ -1683,18 +1754,28 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#ae06a6e9d2b1f7a125b047a0eb7357e09">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
-<a id="aa4dab27964d0ad123b5519eb7e3aab42"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4dab27964d0ad123b5519eb7e3aab42">&#9670;&nbsp;</a></span>GetFirstDerivativesNu0ShapeFunctionsValues()</h2>
+<a id="ab1fcb826442f6e2962b1b12af03920d6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab1fcb826442f6e2962b1b12af03920d6">&#9670;&nbsp;</a></span>GetFirstDerivativesNu0ShapeFunctionsValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::GetFirstDerivativesNu0ShapeFunctionsValues </td>
@@ -1723,18 +1804,28 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#a8385e5c627a3a45c5af985773e51c062">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
-<a id="af2dce8cfb2242acee017600a5cae24fc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af2dce8cfb2242acee017600a5cae24fc">&#9670;&nbsp;</a></span>GetFirstDerivativesShapeFunctionsValues()</h2>
+<a id="a37fcf7b29ae66b05a9bdc88c5b0f813f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37fcf7b29ae66b05a9bdc88c5b0f813f">&#9670;&nbsp;</a></span>GetFirstDerivativesShapeFunctionsValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::GetFirstDerivativesShapeFunctionsValues </td>
@@ -1763,10 +1854,67 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#addf5a30461ca700e9537b87d9545fa18">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
+</div>
+</div>
+<a id="ad69324ea921b112dcb0c87575d60d443"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad69324ea921b112dcb0c87575d60d443">&#9670;&nbsp;</a></span>GetFourthDerivativesShapeFunctionsValues()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void Kratos::LinearTimoshenkoBeamElement2D2N::GetFourthDerivativesShapeFunctionsValues </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rN</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>Length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>Phi</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>xi</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#ace1b2ecaed48c1b2101b0c834803833d">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
@@ -1800,8 +1948,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="af8cc1d3c782bf055ab24823c1e47d3ba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8cc1d3c782bf055ab24823c1e47d3ba">&#9670;&nbsp;</a></span>GetLocalAxesBodyForce()</h2>
+<a id="a906801d6d07c2372b7a242f93018bf20"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a906801d6d07c2372b7a242f93018bf20">&#9670;&nbsp;</a></span>GetLocalAxesBodyForce()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1827,7 +1975,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1844,31 +1992,44 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aa82e2549f0b74003882b5937aa6a40bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa82e2549f0b74003882b5937aa6a40bf">&#9670;&nbsp;</a></span>GetNodalValuesVector()</h2>
+<a id="a7ecfe3f7532e22648e489da48c2ebbe4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ecfe3f7532e22648e489da48c2ebbe4">&#9670;&nbsp;</a></span>GetNodalValuesVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::GetNodalValuesVector </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;&#160;</td>
           <td class="paramname"><em>rNodalValue</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Returns a 6 component vector including the values of the DoFs in LOCAL axes. </p>
+<p>Returns a 6 component vector including the values of the DoFs in LOCAL beam axes. </p>
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#aa98d42e44ddadab8ee9ef8f7961a6364">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
-<a id="afaf877ee4c69b97ee1db64af3f112fd8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afaf877ee4c69b97ee1db64af3f112fd8">&#9670;&nbsp;</a></span>GetNThetaShapeFunctionsValues()</h2>
+<a id="a0002be982ae86cdbc09d1391a84a00c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0002be982ae86cdbc09d1391a84a00c8">&#9670;&nbsp;</a></span>GetNThetaShapeFunctionsValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::GetNThetaShapeFunctionsValues </td>
@@ -1897,9 +2058,14 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>This function returns the 4 shape functions used for interpolating the total rotation Theta (N_theta) Also its derivative. </p>
@@ -1913,13 +2079,18 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#a45b487781b074e6990127d30f6ed9d9d">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
-<a id="ab29c27bc192a9a454ba2b617fa25fac4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab29c27bc192a9a454ba2b617fa25fac4">&#9670;&nbsp;</a></span>GetNu0ShapeFunctionsValues()</h2>
+<a id="a91031a41d930cbf917ae0c60d55ad185"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91031a41d930cbf917ae0c60d55ad185">&#9670;&nbsp;</a></span>GetNu0ShapeFunctionsValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::GetNu0ShapeFunctionsValues </td>
@@ -1948,9 +2119,14 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>This function returns the 2 shape functions used for interpolating the axial displacement u0 Also its derivatives. </p>
@@ -1964,13 +2140,18 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#af57e59f2be8181c086b993cd09937d24">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
-<a id="a09bde2599de4f91233be3bc8fc8fc406"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09bde2599de4f91233be3bc8fc8fc406">&#9670;&nbsp;</a></span>GetSecondDerivativesShapeFunctionsValues()</h2>
+<a id="ad2398fff98e31bd689c02d36f79356ba"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2398fff98e31bd689c02d36f79356ba">&#9670;&nbsp;</a></span>GetSecondDerivativesShapeFunctionsValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::GetSecondDerivativesShapeFunctionsValues </td>
@@ -1999,18 +2180,28 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#a96899471cfc5845c4ce24773697372c0">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
-<a id="a60cc1ae968b1553aceb10b59e31d09ad"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a60cc1ae968b1553aceb10b59e31d09ad">&#9670;&nbsp;</a></span>GetShapeFunctionsValues()</h2>
+<a id="a8be11713221460c33572b965e92d9976"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8be11713221460c33572b965e92d9976">&#9670;&nbsp;</a></span>GetShapeFunctionsValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::GetShapeFunctionsValues </td>
@@ -2039,9 +2230,14 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>This function returns the 4 shape functions used for interpolating the transverse displacement v. (denoted as N) Also its derivatives. </p>
@@ -2055,13 +2251,18 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#aea7a564cd0de0469888dac43d79a2c68">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
-<a id="a6563274e3592abd812bde8e6ca8ef4a5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6563274e3592abd812bde8e6ca8ef4a5">&#9670;&nbsp;</a></span>GetThirdDerivativesShapeFunctionsValues()</h2>
+<a id="afa36a6c52fdc7e2b86545b39c241632f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa36a6c52fdc7e2b86545b39c241632f">&#9670;&nbsp;</a></span>GetThirdDerivativesShapeFunctionsValues()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::GetThirdDerivativesShapeFunctionsValues </td>
@@ -2090,10 +2291,17 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#a5ea65cd0dd1267667f01ea4bd6e81dd5">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
@@ -2140,10 +2348,12 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#ae923a861835e258d3a5e69b8277a1b98">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
-<a id="a51b6001e86ee657a369b26cdaa2b724c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51b6001e86ee657a369b26cdaa2b724c">&#9670;&nbsp;</a></span>GlobalSizeVector()</h2>
+<a id="a2839a0b505a2bfff5e0c708713db8a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2839a0b505a2bfff5e0c708713db8a95">&#9670;&nbsp;</a></span>GlobalSizeVector()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2166,7 +2376,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td> const</td>
         </tr>
       </table>
   </td>
@@ -2184,6 +2394,8 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#a7bc7c84a37761bf92f2a106c4f38c0cf">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
@@ -2215,6 +2427,8 @@ Additional Inherited Members</h2></td></tr>
 <dl class="section warning"><dt>Warning</dt><dd>Must be called before any calculation is done </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aeadd08afa1c095972ed69ba848649eb0">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#ace8f4a175038b4528a997bf70d558dc2">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
@@ -2346,6 +2560,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#abb4bc2919fc17612f0441d8545d4c6f6">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#ad30a1c17b3867760f59ef801090d9a72">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
 <a id="a19cdc0f2fc548a8a67cf73c39147e870"></a>
@@ -2376,6 +2592,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ac71fe3bed66508f04d7ffb92b9b81926">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#af17cf38f9ad7fe907f89fb2ee50f428c">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
 <a id="a8768ea41390e2dab0fd41dfdbbd092eb"></a>
@@ -2383,6 +2601,9 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::RotateAll </td>
@@ -2408,6 +2629,11 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>This function rotates the LHS and RHS from local to global coordinates. </p>
@@ -2420,6 +2646,8 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#aa218f69582ce2d34ef8ead3606a80aa8">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
 <a id="a18ef3fc41dac2e365287bfed95c2dd2d"></a>
@@ -2427,6 +2655,9 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::RotateLHS </td>
@@ -2446,6 +2677,11 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>This function rotates the LHS from local to global coordinates. </p>
@@ -2457,6 +2693,8 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#abd5616715c954f879f53135ecd2c06f3">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
+
 </div>
 </div>
 <a id="a2cd42b40a42598a84df7eb81102b024b"></a>
@@ -2464,6 +2702,9 @@ Additional Inherited Members</h2></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void Kratos::LinearTimoshenkoBeamElement2D2N::RotateRHS </td>
@@ -2483,6 +2724,11 @@ Additional Inherited Members</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>This function rotates the RHS from local to global coordinates. </p>
@@ -2493,6 +2739,8 @@ Additional Inherited Members</h2></td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Reimplemented in <a class="el" href="../../d3/dc7/class_kratos_1_1_linear_timoshenko_beam_element2_d3_n.html#a69883e94a136ec39f0b1268fa852d45b">Kratos::LinearTimoshenkoBeamElement2D3N</a>.</p>
 
 </div>
 </div>
@@ -2648,7 +2896,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> Kratos::LinearTimoshenkoBeamElement2D2N::mThisIntegrationMethod</td>
+          <td class="memname"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> Kratos::LinearTimoshenkoBeamElement2D2N::mThisIntegrationMethod = <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404fafcb35549294c506ea4670ec08dacd31c">GeometryData::IntegrationMethod::GI_GAUSS_3</a></td>
         </tr>
       </table>
   </td>
@@ -2667,7 +2915,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 4 2024 03:55:10 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Jul 5 2024 03:54:42 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

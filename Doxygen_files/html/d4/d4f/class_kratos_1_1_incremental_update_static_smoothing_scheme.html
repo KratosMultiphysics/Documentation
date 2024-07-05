@@ -181,6 +181,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0298d6e126cfbe4ce8e35efa4b91dd11"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4f/class_kratos_1_1_incremental_update_static_smoothing_scheme.html#a0298d6e126cfbe4ce8e35efa4b91dd11">~IncrementalUpdateStaticSmoothingScheme</a> ()</td></tr>
 <tr class="memdesc:a0298d6e126cfbe4ce8e35efa4b91dd11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="../../d4/d4f/class_kratos_1_1_incremental_update_static_smoothing_scheme.html#a0298d6e126cfbe4ce8e35efa4b91dd11">More...</a><br /></td></tr>
 <tr class="separator:a0298d6e126cfbe4ce8e35efa4b91dd11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae48338904238e8f50dde4f9ca083ebbc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4f/class_kratos_1_1_incremental_update_static_smoothing_scheme.html#ae48338904238e8f50dde4f9ca083ebbc">Initialize</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;r_model_part) override</td></tr>
+<tr class="memdesc:ae48338904238e8f50dde4f9ca083ebbc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the place to initialize the <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html" title="This class provides the implementation of the basic tasks that are needed by the solution strategy.">Scheme</a>.  <a href="../../d4/d4f/class_kratos_1_1_incremental_update_static_smoothing_scheme.html#ae48338904238e8f50dde4f9ca083ebbc">More...</a><br /></td></tr>
+<tr class="separator:ae48338904238e8f50dde4f9ca083ebbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abffa933dcfff4f04f1b80bb703846bf1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d4f/class_kratos_1_1_incremental_update_static_smoothing_scheme.html#abffa933dcfff4f04f1b80bb703846bf1">FinalizeSolutionStep</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../d9/dba/class_kratos_1_1_residual_based_incremental_update_static_scheme.html#a5e68da06e1d284b1b88e53e2a28e2639">TSystemMatrixType</a> &amp;A, <a class="el" href="../../d9/dba/class_kratos_1_1_residual_based_incremental_update_static_scheme.html#ac6d59fb8c7cfbbb83429f0361ad9c83b">TSystemVectorType</a> &amp;Dx, <a class="el" href="../../d9/dba/class_kratos_1_1_residual_based_incremental_update_static_scheme.html#ac6d59fb8c7cfbbb83429f0361ad9c83b">TSystemVectorType</a> &amp;b) override</td></tr>
 <tr class="memdesc:abffa933dcfff4f04f1b80bb703846bf1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called once at the end of a solution step, after convergence is reached if an iterative process is needed.  <a href="../../d4/d4f/class_kratos_1_1_incremental_update_static_smoothing_scheme.html#abffa933dcfff4f04f1b80bb703846bf1">More...</a><br /></td></tr>
 <tr class="separator:abffa933dcfff4f04f1b80bb703846bf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -253,9 +256,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afd523af3c0a75222b3e50e88606444ea inherit pub_methods_class_kratos_1_1_scheme"><td class="memItemLeft" align="right" valign="top">virtual Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#afd523af3c0a75222b3e50e88606444ea">Clone</a> ()</td></tr>
 <tr class="memdesc:afd523af3c0a75222b3e50e88606444ea inherit pub_methods_class_kratos_1_1_scheme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone method.  <a href="../../d1/da3/class_kratos_1_1_scheme.html#afd523af3c0a75222b3e50e88606444ea">More...</a><br /></td></tr>
 <tr class="separator:afd523af3c0a75222b3e50e88606444ea inherit pub_methods_class_kratos_1_1_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cc59e3895ee2bd8e6bd5e8b617d714a inherit pub_methods_class_kratos_1_1_scheme"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a8cc59e3895ee2bd8e6bd5e8b617d714a">Initialize</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
-<tr class="memdesc:a8cc59e3895ee2bd8e6bd5e8b617d714a inherit pub_methods_class_kratos_1_1_scheme"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the place to initialize the <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html" title="This class provides the implementation of the basic tasks that are needed by the solution strategy.">Scheme</a>.  <a href="../../d1/da3/class_kratos_1_1_scheme.html#a8cc59e3895ee2bd8e6bd5e8b617d714a">More...</a><br /></td></tr>
-<tr class="separator:a8cc59e3895ee2bd8e6bd5e8b617d714a inherit pub_methods_class_kratos_1_1_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31a366e1c36bde075071da84a085a078 inherit pub_methods_class_kratos_1_1_scheme"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a31a366e1c36bde075071da84a085a078">SchemeIsInitialized</a> ()</td></tr>
 <tr class="memdesc:a31a366e1c36bde075071da84a085a078 inherit pub_methods_class_kratos_1_1_scheme"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns if the scheme is initialized.  <a href="../../d1/da3/class_kratos_1_1_scheme.html#a31a366e1c36bde075071da84a085a078">More...</a><br /></td></tr>
 <tr class="separator:a31a366e1c36bde075071da84a085a078 inherit pub_methods_class_kratos_1_1_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -518,6 +518,44 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 </div>
 </div>
+<a id="ae48338904238e8f50dde4f9ca083ebbc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae48338904238e8f50dde4f9ca083ebbc">&#9670;&nbsp;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d4/d4f/class_kratos_1_1_incremental_update_static_smoothing_scheme.html">Kratos::IncrementalUpdateStaticSmoothingScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::Initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the place to initialize the <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html" title="This class provides the implementation of the basic tasks that are needed by the solution strategy.">Scheme</a>. </p>
+<p>This is intended to be called just once when the strategy is initialized </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part of the problem to solve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a8cc59e3895ee2bd8e6bd5e8b617d714a">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+
+</div>
+</div>
 <a id="ac6999ecdf38716369ee4eda3cbbe01cc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac6999ecdf38716369ee4eda3cbbe01cc">&#9670;&nbsp;</a></span>KRATOS_CLASS_POINTER_DEFINITION()</h2>
 
@@ -544,7 +582,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jul 4 2024 03:31:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Jul 5 2024 03:30:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
