@@ -97,7 +97,8 @@ $(function() {
 , <a class="el" href="d1/dcc/struct_kratos_1_1_residual_based_implicit_time_scheme_1_1_general_matrices.html#a1addc987b86281ab4ee5dbd7ed978b9c">Kratos::ResidualBasedImplicitTimeScheme&lt; TSparseSpace, TDenseSpace &gt;::GeneralMatrices</a>
 </li>
 <li>m
-: <a class="el" href="d7/d53/class_kratos_1_1_tetrahedra_reconnect_utility.html#a2b7a6680d782a8631b51d3bf9c1212b7">Kratos::TetrahedraReconnectUtility</a>
+: <a class="el" href="d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html#a8f32639449868dfe64a259f3fe9a964e">Kratos::SmallDisplacementMixedVolumetricStrainElement::GaussPointAuxiliaryVariables</a>
+, <a class="el" href="d7/d53/class_kratos_1_1_tetrahedra_reconnect_utility.html#a2b7a6680d782a8631b51d3bf9c1212b7">Kratos::TetrahedraReconnectUtility</a>
 </li>
 <li>M1
 : <a class="el" href="d2/d51/classode__solve_1_1_f_e_m__coefficient__matrix__generator.html#a9b3796fd9f16b599ff6290b4ab43282f">ode_solve.FEM_coefficient_matrix_generator</a>
@@ -144,6 +145,9 @@ $(function() {
 </li>
 <li>m_plane_coordinates
 : <a class="el" href="de/d48/class_kratos_1_1_global_joint_stress_utility.html#abac66a8b5636ee9d50b9bf461e91c14a">Kratos::GlobalJointStressUtility</a>
+</li>
+<li>m_T
+: <a class="el" href="d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html#a08dba0f91331d8267bb114323309c523">Kratos::SmallDisplacementMixedVolumetricStrainElement::GaussPointAuxiliaryVariables</a>
 </li>
 <li>m_used_nodes
 : <a class="el" href="de/d50/class_kratos_1_1_isosurface_printer_application.html#ab9c9d3c6febb81c24b00cd6368c7317a">Kratos::IsosurfacePrinterApplication</a>
@@ -1780,6 +1784,12 @@ $(function() {
 <li>mDisplacementOld
 : <a class="el" href="d2/dd1/class_kratos_1_1_multiaxial_control_module_generalized2_d_utilities.html#a5e230c82487b4f44bdd01a900d2408ed">Kratos::MultiaxialControlModuleGeneralized2DUtilities</a>
 </li>
+<li>mDisplacementSubscale1
+: <a class="el" href="dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a4a1114b14102825ccbc6aac7e5a87a68">Kratos::SmallDisplacementMixedVolumetricStrainElement</a>
+</li>
+<li>mDisplacementSubscale2
+: <a class="el" href="dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#ae5a61c640c3e646b7a2271e0e8e45678">Kratos::SmallDisplacementMixedVolumetricStrainElement</a>
+</li>
 <li>mDistance
 : <a class="el" href="db/d16/class_kratos_1_1_spheric_particle_1_1_particle_data_buffer.html#a65591031d0689fd9debb2adabba7bd4c">Kratos::SphericParticle::ParticleDataBuffer</a>
 </li>
@@ -3276,16 +3286,13 @@ $(function() {
 , <a class="el" href="da/d3e/class_kratos_1_1_geo_cr_beam_element_linear3_d2_n.html#ab95543ff2aef85d7fbe9cfad472032dd">Kratos::GeoCrBeamElementLinear3D2N</a>
 </li>
 <li>mInternalStresses
-: <a class="el" href="d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a8f81be8b839fbc0a16575b6027b32c6e">Kratos::GeoLinearTrussElement&lt; TDim, TNumNodes &gt;</a>
-, <a class="el" href="d1/dd7/class_kratos_1_1_geo_truss_element.html#aad7f7f2c2fedebd4522000a99dc69828">Kratos::GeoTrussElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d1/dd7/class_kratos_1_1_geo_truss_element.html#aad7f7f2c2fedebd4522000a99dc69828">Kratos::GeoTrussElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>mInternalStressesFinalized
-: <a class="el" href="d5/d52/class_kratos_1_1_geo_linear_truss_element.html#adee0eb8d0648636cca7e518045f03d32">Kratos::GeoLinearTrussElement&lt; TDim, TNumNodes &gt;</a>
-, <a class="el" href="d1/dd7/class_kratos_1_1_geo_truss_element.html#ae020d8c6efd9e9a08c831f52a0e9b741">Kratos::GeoTrussElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d1/dd7/class_kratos_1_1_geo_truss_element.html#ae020d8c6efd9e9a08c831f52a0e9b741">Kratos::GeoTrussElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>mInternalStressesFinalizedPrevious
-: <a class="el" href="d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a7246174835eae40f3f698d1bb97e2548">Kratos::GeoLinearTrussElement&lt; TDim, TNumNodes &gt;</a>
-, <a class="el" href="d1/dd7/class_kratos_1_1_geo_truss_element.html#a4ff8db90a18dddf7bd8347402ddf17b6">Kratos::GeoTrussElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d1/dd7/class_kratos_1_1_geo_truss_element.html#a4ff8db90a18dddf7bd8347402ddf17b6">Kratos::GeoTrussElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>mInternalVariables
 : <a class="el" href="d8/dc0/class_kratos_1_1_flow_rule.html#a000efd8dfc91f6b624cc2a7b5c8c8489">Kratos::FlowRule</a>
@@ -4463,13 +4470,13 @@ $(function() {
 , <a class="el" href="dd/d14/class_main_coupling_pfem_fem_dem_1_1_main_coupling_pfem_fem_dem___solution.html#a68054041dcde6e4e8cc95946c3a469a6">MainCouplingPfemFemDem.MainCouplingPfemFemDem_Solution</a>
 , <a class="el" href="d4/d10/class_main_coupling_pfem_fem_dem_aitken_substepping_1_1_main_coupling_pfem_fem_dem_aitken_substepping___solution.html#af801039057c1d4dca38278eede532c5c">MainCouplingPfemFemDemAitkenSubstepping.MainCouplingPfemFemDemAitkenSubstepping_Solution</a>
 , <a class="el" href="d0/d71/class_main_coupling_pfem_fem_dem_substepping_1_1_main_coupling_pfem_fem_dem_substepping___solution.html#ae5e11f9649013fb9bc531061abf07252">MainCouplingPfemFemDemSubstepping.MainCouplingPfemFemDemSubstepping_Solution</a>
+, <a class="el" href="d7/d09/class_main_fem_dem_1_1_f_e_m___solution.html#a22c49f4f3ee4f0c67a57348559bb9ec0">MainFemDem.FEM_Solution</a>
 </li>
 <li>Model
 : <a class="el" href="d7/d09/class_main_fem_dem_1_1_f_e_m___solution.html#a61ed72029ef95a3ad2a180beccac222d">MainFemDem.FEM_Solution</a>
 </li>
 <li>model
-: <a class="el" href="d7/d09/class_main_fem_dem_1_1_f_e_m___solution.html#a22c49f4f3ee4f0c67a57348559bb9ec0">MainFemDem.FEM_Solution</a>
-, <a class="el" href="d7/d7b/class_main_material_1_1_solution.html#aac343d51e3542eb124fba75d7fdf09d3">MainMaterial.Solution</a>
+: <a class="el" href="d7/d7b/class_main_material_1_1_solution.html#aac343d51e3542eb124fba75d7fdf09d3">MainMaterial.Solution</a>
 </li>
 <li>Model
 : <a class="el" href="dc/d6c/class_main_solid_f_e_m_1_1_solution.html#a07d67d25f2f9e07591e49d7be27aa58b">MainSolidFEM.Solution</a>
@@ -7093,7 +7100,7 @@ $(function() {
 <li>mSize
 : <a class="el" href="db/d07/class_kratos_1_1_cluster_information.html#a895134bcda1259cc57747023dcff7206">Kratos::ClusterInformation</a>
 , <a class="el" href="d6/d7d/class_kratos_1_1_gid_gauss_points_container.html#a8151b016aa6bc4c5b7063c8fe90f306a">Kratos::GidGaussPointsContainer</a>
-, <a class="el" href="d4/dc4/class_kratos_1_1_pfem_gid_gauss_points_container.html#acb1251468284fff3f7ca0cfe90834688">Kratos::PfemGidGaussPointsContainer</a>
+, <a class="el" href="d4/dc4/class_kratos_1_1_pfem_gid_gauss_points_container.html#a09e7b0d2af9ed363c39f4170b71f070c">Kratos::PfemGidGaussPointsContainer</a>
 </li>
 <li>mSkinSphere
 : <a class="el" href="da/dca/class_kratos_1_1_spheric_continuum_particle.html#a2dce7ea34898a23c81df15966ba2a63d">Kratos::SphericContinuumParticle</a>
@@ -7353,8 +7360,7 @@ $(function() {
 , <a class="el" href="dd/d3c/class_kratos_1_1_small_strain_umat_model.html#a24eceb4d774b58b2e1d0ed5be514f484">Kratos::SmallStrainUmatModel</a>
 </li>
 <li>mStressVectorSize
-: <a class="el" href="d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ac009adb52a0ec84e439cb851eed55ad4">Kratos::GeoLinearTrussElement&lt; TDim, TNumNodes &gt;</a>
-, <a class="el" href="d1/dd7/class_kratos_1_1_geo_truss_element.html#a23a7ccd8e5cbe0cac73b3fd18e8a3da4">Kratos::GeoTrussElement&lt; TDim, TNumNodes &gt;</a>
+: <a class="el" href="d1/dd7/class_kratos_1_1_geo_truss_element.html#a23a7ccd8e5cbe0cac73b3fd18e8a3da4">Kratos::GeoTrussElement&lt; TDim, TNumNodes &gt;</a>
 </li>
 <li>mStride
 : <a class="el" href="d9/dc2/class_kratos_1_1_unary_slice_expression.html#ac953781bdb79c60b785e8ef65d06244d">Kratos::UnarySliceExpression</a>
@@ -8255,7 +8261,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 15 2024 04:08:52 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jul 16 2024 04:07:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

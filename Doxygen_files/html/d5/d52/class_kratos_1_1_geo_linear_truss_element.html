@@ -78,8 +78,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="../../d6/d13/class_kratos_1_1_geo_linear_truss_element-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -106,8 +104,8 @@ Collaboration diagram for Kratos::GeoLinearTrussElement&lt; TDim, TNumNodes &gt;
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a5401985e2009a4a141bb8a98e05bed28"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a5401985e2009a4a141bb8a98e05bed28">BaseType</a> = <a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html">GeoTrussElementLinearBase</a>&lt; TDim, TNumNodes &gt;</td></tr>
-<tr class="separator:a5401985e2009a4a141bb8a98e05bed28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c53318ca8a3e8c036e7f30c115b8e2"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a46c53318ca8a3e8c036e7f30c115b8e2">BaseType</a> = <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">GeoTrussElementBase</a>&lt; TDim, TNumNodes &gt;</td></tr>
+<tr class="separator:a46c53318ca8a3e8c036e7f30c115b8e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab08784758c57b3da2f0783e606063240"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ab08784758c57b3da2f0783e606063240">GeometryType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a></td></tr>
 <tr class="separator:ab08784758c57b3da2f0783e606063240"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff18a17571224482cb057420b128064c"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#aff18a17571224482cb057420b128064c">NodesArrayType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">Element::NodesArrayType</a></td></tr>
@@ -126,27 +124,6 @@ Public Types</h2></td></tr>
 <tr class="separator:ada920c143ab0189bfa2bbde86dcadd8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a588feea7b5521944714f73cfcc088930"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a588feea7b5521944714f73cfcc088930">FullDofVectorType</a> = typename <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">GeoTrussElementBase</a>&lt; TDim, TNumNodes &gt;::<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a588feea7b5521944714f73cfcc088930">FullDofVectorType</a></td></tr>
 <tr class="separator:a588feea7b5521944714f73cfcc088930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_kratos_1_1_geo_truss_element_linear_base')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html">Kratos::GeoTrussElementLinearBase&lt; TDim, TNumNodes &gt;</a></td></tr>
-<tr class="memitem:a83d84e6a1bf71a9527197edbf3eb9010 inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a83d84e6a1bf71a9527197edbf3eb9010">BaseType</a> = <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">GeoTrussElementBase</a>&lt; TDim, TNumNodes &gt;</td></tr>
-<tr class="separator:a83d84e6a1bf71a9527197edbf3eb9010 inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6132adf28a7e2f4a1de917b9ba430ba2 inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a6132adf28a7e2f4a1de917b9ba430ba2">GeometryType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae05e937d824d7ea3a0f7ce693deee92d">Element::GeometryType</a></td></tr>
-<tr class="separator:a6132adf28a7e2f4a1de917b9ba430ba2 inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9545edffdb0e828144bb8abff2be387e inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a9545edffdb0e828144bb8abff2be387e">NodesArrayType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">Element::NodesArrayType</a></td></tr>
-<tr class="separator:a9545edffdb0e828144bb8abff2be387e inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7608cfb52741a44ae466c83ac24ddba1 inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a7608cfb52741a44ae466c83ac24ddba1">PropertiesType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6fc34b088a4dbbfe82a57b8a946e9be4">Element::PropertiesType</a></td></tr>
-<tr class="separator:a7608cfb52741a44ae466c83ac24ddba1 inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3046807728117b90fea7e0081488d3fa inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a3046807728117b90fea7e0081488d3fa">IndexType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#afd91b47df908a51813f1e7443e567c1c">Element::IndexType</a></td></tr>
-<tr class="separator:a3046807728117b90fea7e0081488d3fa inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0627bfe4abdfa7bb725e2a73872ceee inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ac0627bfe4abdfa7bb725e2a73872ceee">SizeType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">Element::SizeType</a></td></tr>
-<tr class="separator:ac0627bfe4abdfa7bb725e2a73872ceee inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa05e1c8d5af271791bf2c18b7d894682 inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#aa05e1c8d5af271791bf2c18b7d894682">MatrixType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">Element::MatrixType</a></td></tr>
-<tr class="separator:aa05e1c8d5af271791bf2c18b7d894682 inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0cee7dd21fcce96c793fd0bfa8e8d26f inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a0cee7dd21fcce96c793fd0bfa8e8d26f">VectorType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">Element::VectorType</a></td></tr>
-<tr class="separator:a0cee7dd21fcce96c793fd0bfa8e8d26f inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6694ffdc4a3c769c73948441fc469d4b inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a6694ffdc4a3c769c73948441fc469d4b">FullDofMatrixType</a> = typename <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">GeoTrussElementBase</a>&lt; TDim, TNumNodes &gt;::<a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a6694ffdc4a3c769c73948441fc469d4b">FullDofMatrixType</a></td></tr>
-<tr class="separator:a6694ffdc4a3c769c73948441fc469d4b inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a839dfa464c282fc18803776aa9fbd22b inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a839dfa464c282fc18803776aa9fbd22b">FullDofVectorType</a> = typename <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">GeoTrussElementBase</a>&lt; TDim, TNumNodes &gt;::<a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a839dfa464c282fc18803776aa9fbd22b">FullDofVectorType</a></td></tr>
-<tr class="separator:a839dfa464c282fc18803776aa9fbd22b inherit pub_types_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_types_class_kratos_1_1_geo_truss_element_base"><td colspan="2" onclick="javascript:toggleInherit('pub_types_class_kratos_1_1_geo_truss_element_base')"><img src="../../closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a></td></tr>
 <tr class="memitem:aacdbb6498c689320a215b6358bd1b720 inherit pub_types_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#aacdbb6498c689320a215b6358bd1b720">BaseType</a> = <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a></td></tr>
 <tr class="separator:aacdbb6498c689320a215b6358bd1b720 inherit pub_types_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -291,8 +268,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a54b2423cd2dc99cd63285c1d09efeb59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1d58dca7533c3191142e871b96331ee"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#aa1d58dca7533c3191142e871b96331ee">GeoLinearTrussElement</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeometry, PropertiesType::Pointer pProperties)</td></tr>
 <tr class="separator:aa1d58dca7533c3191142e871b96331ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad39a33be9ea8c7fc179566e89d9b90d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#aad39a33be9ea8c7fc179566e89d9b90d">~GeoLinearTrussElement</a> () override</td></tr>
-<tr class="separator:aad39a33be9ea8c7fc179566e89d9b90d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b1b4d6439a753006d110ea467745a8b"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a0b1b4d6439a753006d110ea467745a8b">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeom, PropertiesType::Pointer pProperties) const override</td></tr>
 <tr class="memdesc:a0b1b4d6439a753006d110ea467745a8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new element.  <a href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a0b1b4d6439a753006d110ea467745a8b">More...</a><br /></td></tr>
 <tr class="separator:a0b1b4d6439a753006d110ea467745a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -301,63 +276,33 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1c55ef44672fc98e35db057d70084215"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04860483f3c3f7ffa55dca91b06f26a6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a04860483f3c3f7ffa55dca91b06f26a6">Initialize</a> (const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="separator:a04860483f3c3f7ffa55dca91b06f26a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1d4c4556c31e75b62138ad95503e2bcd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a1d4c4556c31e75b62138ad95503e2bcd">CalculateLeftHandSide</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
+<tr class="separator:a1d4c4556c31e75b62138ad95503e2bcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a315e342ade4f5aaa7c757216c4e89c79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a315e342ade4f5aaa7c757216c4e89c79">CalculateRightHandSide</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
+<tr class="separator:a315e342ade4f5aaa7c757216c4e89c79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f12abd010c2ab944a1334bd161df032"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a2f12abd010c2ab944a1334bd161df032">CreateElementStiffnessMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLocalStiffnessMatrix, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
+<tr class="memdesc:a2f12abd010c2ab944a1334bd161df032"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the total stiffness matrix for the element.  <a href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a2f12abd010c2ab944a1334bd161df032">More...</a><br /></td></tr>
+<tr class="separator:a2f12abd010c2ab944a1334bd161df032"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a518fbc42c109da8c5959b9d8100755"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a1a518fbc42c109da8c5959b9d8100755">WriteTransformationCoordinates</a> (<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a588feea7b5521944714f73cfcc088930">FullDofVectorType</a> &amp;rReferenceCoordinates) override</td></tr>
+<tr class="memdesc:a1a518fbc42c109da8c5959b9d8100755"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the current nodal postion for the transformation matrix.  <a href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a1a518fbc42c109da8c5959b9d8100755">More...</a><br /></td></tr>
+<tr class="separator:a1a518fbc42c109da8c5959b9d8100755"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0ab57f6ed2b35f9317af44d81c198277"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a0ab57f6ed2b35f9317af44d81c198277">UpdateInternalForces</a> (<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a588feea7b5521944714f73cfcc088930">FullDofVectorType</a> &amp;rInternalForces, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="memdesc:a0ab57f6ed2b35f9317af44d81c198277"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function updates the internal normal force w.r.t. the current deformations.  <a href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a0ab57f6ed2b35f9317af44d81c198277">More...</a><br /></td></tr>
 <tr class="separator:a0ab57f6ed2b35f9317af44d81c198277"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47a0627585fde2a433f84153508329e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a47a0627585fde2a433f84153508329e4">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="separator:a47a0627585fde2a433f84153508329e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa523214108a9664e0b84bd1a66191476"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#aa523214108a9664e0b84bd1a66191476">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;) override</td></tr>
+<tr class="separator:aa523214108a9664e0b84bd1a66191476"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a969074eaab574e939c20a3a7d5837db9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a969074eaab574e939c20a3a7d5837db9">FinalizeSolutionStep</a> (const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="separator:a969074eaab574e939c20a3a7d5837db9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb9e4b1b331be2a7f6ed61f003da3ff3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#acb9e4b1b331be2a7f6ed61f003da3ff3">ResetConstitutiveLaw</a> () override</td></tr>
 <tr class="separator:acb9e4b1b331be2a7f6ed61f003da3ff3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_kratos_1_1_geo_truss_element_linear_base')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html">Kratos::GeoTrussElementLinearBase&lt; TDim, TNumNodes &gt;</a></td></tr>
-<tr class="memitem:a432b5920d916f9c894a23aa28dbd5039 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a432b5920d916f9c894a23aa28dbd5039">KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION</a> (<a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html">GeoTrussElementLinearBase</a>)</td></tr>
-<tr class="separator:a432b5920d916f9c894a23aa28dbd5039 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a36a9573c5d7b7079d4e75977589cb54c inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a36a9573c5d7b7079d4e75977589cb54c">GeoTrussElementLinearBase</a> ()=default</td></tr>
-<tr class="separator:a36a9573c5d7b7079d4e75977589cb54c inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42fa0df7662cb8592fe8f0b3f9886678 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a42fa0df7662cb8592fe8f0b3f9886678">GeoTrussElementLinearBase</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeometry)</td></tr>
-<tr class="separator:a42fa0df7662cb8592fe8f0b3f9886678 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2867e30e7fe501d23e009bc4cfa0c932 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a2867e30e7fe501d23e009bc4cfa0c932">GeoTrussElementLinearBase</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeometry, PropertiesType::Pointer pProperties)</td></tr>
-<tr class="separator:a2867e30e7fe501d23e009bc4cfa0c932 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a447b222fdc00ca0d6cb92084a30e7ac7 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a447b222fdc00ca0d6cb92084a30e7ac7">~GeoTrussElementLinearBase</a> () override</td></tr>
-<tr class="separator:a447b222fdc00ca0d6cb92084a30e7ac7 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65915512ec9cd438cf8e6960e6b5e102 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a65915512ec9cd438cf8e6960e6b5e102">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeom, PropertiesType::Pointer pProperties) const override</td></tr>
-<tr class="memdesc:a65915512ec9cd438cf8e6960e6b5e102 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new element.  <a href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a65915512ec9cd438cf8e6960e6b5e102">More...</a><br /></td></tr>
-<tr class="separator:a65915512ec9cd438cf8e6960e6b5e102 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a806ea1f8baee0877698b2d1c82a3ff62 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a806ea1f8baee0877698b2d1c82a3ff62">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;ThisNodes, PropertiesType::Pointer pProperties) const override</td></tr>
-<tr class="memdesc:a806ea1f8baee0877698b2d1c82a3ff62 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new element.  <a href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a806ea1f8baee0877698b2d1c82a3ff62">More...</a><br /></td></tr>
-<tr class="separator:a806ea1f8baee0877698b2d1c82a3ff62 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab6f90699af5c1e3cac32754f9f844707 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ab6f90699af5c1e3cac32754f9f844707">CalculateRightHandSide</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
-<tr class="separator:ab6f90699af5c1e3cac32754f9f844707 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8c7da13c0a510f571c678d690bdb980c inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a8c7da13c0a510f571c678d690bdb980c">CalculateLeftHandSide</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
-<tr class="separator:a8c7da13c0a510f571c678d690bdb980c inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab27621d9bdaeec9c751b132ceeacc654 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ab27621d9bdaeec9c751b132ceeacc654">AddPrestressLinear</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector)</td></tr>
-<tr class="memdesc:ab27621d9bdaeec9c751b132ceeacc654 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function adds forces from prestressing to the force vector.  <a href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ab27621d9bdaeec9c751b132ceeacc654">More...</a><br /></td></tr>
-<tr class="separator:ab27621d9bdaeec9c751b132ceeacc654 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f5bd9013af4ff2359e7c33cf57f59f9 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a0f5bd9013af4ff2359e7c33cf57f59f9">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
-<tr class="separator:a0f5bd9013af4ff2359e7c33cf57f59f9 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25c5f8a119b8dfe46bb14e4f2657370c inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a25c5f8a119b8dfe46bb14e4f2657370c">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
-<tr class="separator:a25c5f8a119b8dfe46bb14e4f2657370c inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cbebbfad6de945339876054d3c1e872 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a7cbebbfad6de945339876054d3c1e872">CreateElementStiffnessMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLocalStiffnessMatrix, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
-<tr class="memdesc:a7cbebbfad6de945339876054d3c1e872 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the total stiffness matrix for the element.  <a href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a7cbebbfad6de945339876054d3c1e872">More...</a><br /></td></tr>
-<tr class="separator:a7cbebbfad6de945339876054d3c1e872 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad01217ae6c8154ada14b88d7ccce1f91 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ad01217ae6c8154ada14b88d7ccce1f91">WriteTransformationCoordinates</a> (<a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a839dfa464c282fc18803776aa9fbd22b">FullDofVectorType</a> &amp;rReferenceCoordinates) override</td></tr>
-<tr class="memdesc:ad01217ae6c8154ada14b88d7ccce1f91 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the original nodal postion for the transformation matrix.  <a href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ad01217ae6c8154ada14b88d7ccce1f91">More...</a><br /></td></tr>
-<tr class="separator:ad01217ae6c8154ada14b88d7ccce1f91 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a25122e850a80d603e367906381cfdf71 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a25122e850a80d603e367906381cfdf71">CalculateLinearStrain</a> ()</td></tr>
-<tr class="memdesc:a25122e850a80d603e367906381cfdf71 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the current linear-Lagrange strain.  <a href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a25122e850a80d603e367906381cfdf71">More...</a><br /></td></tr>
-<tr class="separator:a25122e850a80d603e367906381cfdf71 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad24a2bf31cabd0c370f614f7451bea83 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ad24a2bf31cabd0c370f614f7451bea83">UpdateInternalForces</a> (<a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a839dfa464c282fc18803776aa9fbd22b">FullDofVectorType</a> &amp;rInternalForces, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
-<tr class="memdesc:ad24a2bf31cabd0c370f614f7451bea83 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function updates the internal forces.  <a href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ad24a2bf31cabd0c370f614f7451bea83">More...</a><br /></td></tr>
-<tr class="separator:ad24a2bf31cabd0c370f614f7451bea83 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aabbd3df81b3f039d563bf9b0a6d93a97 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#aabbd3df81b3f039d563bf9b0a6d93a97">FinalizeSolutionStep</a> (const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
-<tr class="separator:aabbd3df81b3f039d563bf9b0a6d93a97 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab36da9d5447df4175f7dbd1dc9eb74a5 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ab36da9d5447df4175f7dbd1dc9eb74a5">WriteTransformationCoordinates</a> (<a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a839dfa464c282fc18803776aa9fbd22b">FullDofVectorType</a> &amp;rReferenceCoordinates)</td></tr>
-<tr class="memdesc:ab36da9d5447df4175f7dbd1dc9eb74a5 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the current nodal postion for the transformation matrix.  <a href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#ab36da9d5447df4175f7dbd1dc9eb74a5">More...</a><br /></td></tr>
-<tr class="separator:ab36da9d5447df4175f7dbd1dc9eb74a5 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af37810d30c202de133cb238c65f1ba86 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#af37810d30c202de133cb238c65f1ba86">WriteTransformationCoordinates</a> (<a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#a839dfa464c282fc18803776aa9fbd22b">FullDofVectorType</a> &amp;rReferenceCoordinates)</td></tr>
-<tr class="memdesc:af37810d30c202de133cb238c65f1ba86 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the current nodal postion for the transformation matrix.  <a href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html#af37810d30c202de133cb238c65f1ba86">More...</a><br /></td></tr>
-<tr class="separator:af37810d30c202de133cb238c65f1ba86 inherit pub_methods_class_kratos_1_1_geo_truss_element_linear_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad443c5c9a685227b4924de1fa668ccd4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ad443c5c9a685227b4924de1fa668ccd4">WriteTransformationCoordinates</a> (<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a588feea7b5521944714f73cfcc088930">FullDofVectorType</a> &amp;rReferenceCoordinates)</td></tr>
+<tr class="memdesc:ad443c5c9a685227b4924de1fa668ccd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the current nodal postion for the transformation matrix.  <a href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ad443c5c9a685227b4924de1fa668ccd4">More...</a><br /></td></tr>
+<tr class="separator:ad443c5c9a685227b4924de1fa668ccd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c731a8d4fd31be3e0a3c9470f417d78"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a1c731a8d4fd31be3e0a3c9470f417d78">WriteTransformationCoordinates</a> (<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a588feea7b5521944714f73cfcc088930">FullDofVectorType</a> &amp;rReferenceCoordinates)</td></tr>
+<tr class="memdesc:a1c731a8d4fd31be3e0a3c9470f417d78"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function calculates the current nodal postion for the transformation matrix.  <a href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a1c731a8d4fd31be3e0a3c9470f417d78">More...</a><br /></td></tr>
+<tr class="separator:a1c731a8d4fd31be3e0a3c9470f417d78"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_kratos_1_1_geo_truss_element_base"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_kratos_1_1_geo_truss_element_base')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a></td></tr>
 <tr class="memitem:a235a51dc6f589e9953375676c305cdde inherit pub_methods_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a235a51dc6f589e9953375676c305cdde">KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION</a> (<a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">GeoTrussElementBase</a>)</td></tr>
 <tr class="separator:a235a51dc6f589e9953375676c305cdde inherit pub_methods_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -763,30 +708,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adecbe7f3ade6e1ad68ce6b36fdd6e266 inherit pub_methods_class_kratos_1_1_flags"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="../../d9/d4f/class_kratos_1_1_flags.html#adecbe7f3ade6e1ad68ce6b36fdd6e266">More...</a><br /></td></tr>
 <tr class="separator:adecbe7f3ade6e1ad68ce6b36fdd6e266 inherit pub_methods_class_kratos_1_1_flags"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
-Protected Attributes</h2></td></tr>
-<tr class="memitem:a8f81be8b839fbc0a16575b6027b32c6e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a8f81be8b839fbc0a16575b6027b32c6e">mInternalStresses</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ac009adb52a0ec84e439cb851eed55ad4">mStressVectorSize</a>)</td></tr>
-<tr class="separator:a8f81be8b839fbc0a16575b6027b32c6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adee0eb8d0648636cca7e518045f03d32"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#adee0eb8d0648636cca7e518045f03d32">mInternalStressesFinalized</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ac009adb52a0ec84e439cb851eed55ad4">mStressVectorSize</a>)</td></tr>
-<tr class="separator:adee0eb8d0648636cca7e518045f03d32"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7246174835eae40f3f698d1bb97e2548"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a7246174835eae40f3f698d1bb97e2548">mInternalStressesFinalizedPrevious</a> = <a class="el" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ac009adb52a0ec84e439cb851eed55ad4">mStressVectorSize</a>)</td></tr>
-<tr class="separator:a7246174835eae40f3f698d1bb97e2548"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_class_kratos_1_1_geo_truss_element_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_kratos_1_1_geo_truss_element_base')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a></td></tr>
-<tr class="memitem:a870d97a9cdcac62e6ac6a061e0d7450a inherit pro_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">ConstitutiveLaw::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a870d97a9cdcac62e6ac6a061e0d7450a">mpConstitutiveLaw</a> = nullptr</td></tr>
-<tr class="separator:a870d97a9cdcac62e6ac6a061e0d7450a inherit pro_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:ac009adb52a0ec84e439cb851eed55ad4"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ac009adb52a0ec84e439cb851eed55ad4">mStressVectorSize</a> = 1</td></tr>
-<tr class="separator:ac009adb52a0ec84e439cb851eed55ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_kratos_1_1_geo_truss_element_base')"><img src="../../closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a></td></tr>
-<tr class="memitem:a728f8892b50ba87c14bd056d93c2aaa3 inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a728f8892b50ba87c14bd056d93c2aaa3">NDof</a> = TDim * TNumNodes</td></tr>
-<tr class="separator:a728f8892b50ba87c14bd056d93c2aaa3 inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a13a5cd1675df5efc40edf387053a286f inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a13a5cd1675df5efc40edf387053a286f">DIM</a> = TDim</td></tr>
-<tr class="separator:a13a5cd1675df5efc40edf387053a286f inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9c9f5fada7d66eae2ee2d97c6d62ea8c inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a9c9f5fada7d66eae2ee2d97c6d62ea8c">NUM_NODES</a> = TNumNodes</td></tr>
-<tr class="separator:a9c9f5fada7d66eae2ee2d97c6d62ea8c inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:ad3f5346f31d572dd2ab4fcd658de5bc4"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ad3f5346f31d572dd2ab4fcd658de5bc4">Serializer</a></td></tr>
@@ -822,6 +743,16 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a8913e76776a378373acf5d1390300870 inherit pub_static_methods_class_kratos_1_1_flags"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7e633a5159d1e064fb875282bef94ad0 inherit pub_static_methods_class_kratos_1_1_flags"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#a7e633a5159d1e064fb875282bef94ad0">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> ThisPosition, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> Value=true)</td></tr>
 <tr class="separator:a7e633a5159d1e064fb875282bef94ad0 inherit pub_static_methods_class_kratos_1_1_flags"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_attribs_class_kratos_1_1_geo_truss_element_base"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_kratos_1_1_geo_truss_element_base')"><img src="../../closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a></td></tr>
+<tr class="memitem:a870d97a9cdcac62e6ac6a061e0d7450a inherit pro_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">ConstitutiveLaw::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a870d97a9cdcac62e6ac6a061e0d7450a">mpConstitutiveLaw</a> = nullptr</td></tr>
+<tr class="separator:a870d97a9cdcac62e6ac6a061e0d7450a inherit pro_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td colspan="2" onclick="javascript:toggleInherit('pro_static_attribs_class_kratos_1_1_geo_truss_element_base')"><img src="../../closed.png" alt="-"/>&#160;Static Protected Attributes inherited from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a></td></tr>
+<tr class="memitem:a728f8892b50ba87c14bd056d93c2aaa3 inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a728f8892b50ba87c14bd056d93c2aaa3">NDof</a> = TDim * TNumNodes</td></tr>
+<tr class="separator:a728f8892b50ba87c14bd056d93c2aaa3 inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a13a5cd1675df5efc40edf387053a286f inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a13a5cd1675df5efc40edf387053a286f">DIM</a> = TDim</td></tr>
+<tr class="separator:a13a5cd1675df5efc40edf387053a286f inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c9f5fada7d66eae2ee2d97c6d62ea8c inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a9c9f5fada7d66eae2ee2d97c6d62ea8c">NUM_NODES</a> = TNumNodes</td></tr>
+<tr class="separator:a9c9f5fada7d66eae2ee2d97c6d62ea8c inherit pro_static_attribs_class_kratos_1_1_geo_truss_element_base"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;unsigned int TDim, unsigned int TNumNodes&gt;<br />
@@ -830,8 +761,8 @@ class Kratos::GeoLinearTrussElement&lt; TDim, TNumNodes &gt;</h3>
 <p>This is a linear truss element. </p>
 <dl class="section author"><dt>Author</dt><dd>Vahid Galavi </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a id="a5401985e2009a4a141bb8a98e05bed28"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5401985e2009a4a141bb8a98e05bed28">&#9670;&nbsp;</a></span>BaseType</h2>
+<a id="a46c53318ca8a3e8c036e7f30c115b8e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46c53318ca8a3e8c036e7f30c115b8e2">&#9670;&nbsp;</a></span>BaseType</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -839,7 +770,7 @@ class Kratos::GeoLinearTrussElement&lt; TDim, TNumNodes &gt;</h3>
 template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname">using <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ad6372bb5f9c583d5a9ff15ac5b8ae176">BaseType</a> =  <a class="el" href="../../d8/dfe/class_kratos_1_1_geo_truss_element_linear_base.html">GeoTrussElementLinearBase</a>&lt;TDim, TNumNodes&gt;</td>
+          <td class="memname">using <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ad6372bb5f9c583d5a9ff15ac5b8ae176">BaseType</a> =  <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html">GeoTrussElementBase</a>&lt;TDim, TNumNodes&gt;</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1084,8 +1015,9 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="aad39a33be9ea8c7fc179566e89d9b90d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aad39a33be9ea8c7fc179566e89d9b90d">&#9670;&nbsp;</a></span>~GeoLinearTrussElement()</h2>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a1d4c4556c31e75b62138ad95503e2bcd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1d4c4556c31e75b62138ad95503e2bcd">&#9670;&nbsp;</a></span>CalculateLeftHandSide()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1096,21 +1028,43 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::~<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">GeoLinearTrussElement</a></td>
+          <td class="memname">void <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::CalculateLeftHandSide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span></span>  </td>
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
+<p>this is called during the assembling process in order to calculate the elemental left hand side matrix only </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rLeftHandSideMatrix</td><td>the elemental left hand side matrix </td></tr>
+    <tr><td class="paramname">rCurrentProcessInfo</td><td>the current process info instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a592264b6aaa375d9ace147d32240a73d">Kratos::Element</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
 <a id="a47a0627585fde2a433f84153508329e4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47a0627585fde2a433f84153508329e4">&#9670;&nbsp;</a></span>CalculateOnIntegrationPoints()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a47a0627585fde2a433f84153508329e4">&#9670;&nbsp;</a></span>CalculateOnIntegrationPoints() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1152,6 +1106,99 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><div class="memdoc">
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aa3ef921c5befb0d14d3a95d335dd4811">Kratos::Element</a>.</p>
+
+</div>
+</div>
+<a id="aa523214108a9664e0b84bd1a66191476"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa523214108a9664e0b84bd1a66191476">&#9670;&nbsp;</a></span>CalculateOnIntegrationPoints() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::CalculateOnIntegrationPoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rVariable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rOutput</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname">&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a54df47ed39150e9f1d2696be12ce4049">Kratos::Element</a>.</p>
+
+</div>
+</div>
+<a id="a315e342ade4f5aaa7c757216c4e89c79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a315e342ade4f5aaa7c757216c4e89c79">&#9670;&nbsp;</a></span>CalculateRightHandSide()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::CalculateRightHandSide </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rRightHandSideVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>this is called during the assembling process in order to calculate the elemental right hand side vector only </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rRightHandSideVector</td><td>the elemental right hand side vector </td></tr>
+    <tr><td class="paramname">rCurrentProcessInfo</td><td>the current process info instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a7c4f1ea4eff4e0a74e3b4b79ace68e35">Kratos::Element</a>.</p>
 
 </div>
 </div>
@@ -1266,6 +1313,48 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>The pointer to the created element </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9d3fcc73aa43b460715466d283803b61">Kratos::Element</a>.</p>
+
+</div>
+</div>
+<a id="a2f12abd010c2ab944a1334bd161df032"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f12abd010c2ab944a1334bd161df032">&#9670;&nbsp;</a></span>CreateElementStiffnessMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::CreateElementStiffnessMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rLocalStiffnessMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function calculates the total stiffness matrix for the element. </p>
+
+<p>Reimplemented from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#a6cb58e5e33b1c60829499f9ab625a1e9">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a>.</p>
 
 </div>
 </div>
@@ -1426,6 +1515,116 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
+<a id="ad443c5c9a685227b4924de1fa668ccd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad443c5c9a685227b4924de1fa668ccd4">&#9670;&nbsp;</a></span>WriteTransformationCoordinates() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; 3, 2 &gt;::WriteTransformationCoordinates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a588feea7b5521944714f73cfcc088930">FullDofVectorType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rReferenceCoordinates</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function calculates the current nodal postion for the transformation matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rReferenceCoordinates</td><td>The current coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#af185809ea6e65d9b8663be05995bec6b">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a1c731a8d4fd31be3e0a3c9470f417d78"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c731a8d4fd31be3e0a3c9470f417d78">&#9670;&nbsp;</a></span>WriteTransformationCoordinates() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; 2, 2 &gt;::WriteTransformationCoordinates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a588feea7b5521944714f73cfcc088930">FullDofVectorType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rReferenceCoordinates</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function calculates the current nodal postion for the transformation matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rReferenceCoordinates</td><td>The current coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#af185809ea6e65d9b8663be05995bec6b">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a1a518fbc42c109da8c5959b9d8100755"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a518fbc42c109da8c5959b9d8100755">&#9670;&nbsp;</a></span>WriteTransformationCoordinates() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::WriteTransformationCoordinates </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#a588feea7b5521944714f73cfcc088930">FullDofVectorType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rReferenceCoordinates</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This function calculates the current nodal postion for the transformation matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rReferenceCoordinates</td><td>The current coordinates </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html#af185809ea6e65d9b8663be05995bec6b">Kratos::GeoTrussElementBase&lt; TDim, TNumNodes &gt;</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Friends And Related Function Documentation</h2>
 <a id="ad3f5346f31d572dd2ab4fcd658de5bc4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad3f5346f31d572dd2ab4fcd658de5bc4">&#9670;&nbsp;</a></span>Serializer</h2>
@@ -1451,103 +1650,6 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<h2 class="groupheader">Member Data Documentation</h2>
-<a id="a8f81be8b839fbc0a16575b6027b32c6e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8f81be8b839fbc0a16575b6027b32c6e">&#9670;&nbsp;</a></span>mInternalStresses</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::mInternalStresses = <a class="el" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ac009adb52a0ec84e439cb851eed55ad4">mStressVectorSize</a>)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="adee0eb8d0648636cca7e518045f03d32"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adee0eb8d0648636cca7e518045f03d32">&#9670;&nbsp;</a></span>mInternalStressesFinalized</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::mInternalStressesFinalized = <a class="el" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ac009adb52a0ec84e439cb851eed55ad4">mStressVectorSize</a>)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a7246174835eae40f3f698d1bb97e2548"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7246174835eae40f3f698d1bb97e2548">&#9670;&nbsp;</a></span>mInternalStressesFinalizedPrevious</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::mInternalStressesFinalizedPrevious = <a class="el" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(<a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html#ac009adb52a0ec84e439cb851eed55ad4">mStressVectorSize</a>)</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="ac009adb52a0ec84e439cb851eed55ad4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac009adb52a0ec84e439cb851eed55ad4">&#9670;&nbsp;</a></span>mStressVectorSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">constexpr <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> <a class="el" href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html">Kratos::GeoLinearTrussElement</a>&lt; TDim, TNumNodes &gt;::mStressVectorSize = 1</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_elements/<a class="el" href="../../da/dad/geo__linear__truss__element_8hpp_source.html">geo_linear_truss_element.hpp</a></li>
 <li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_elements/<a class="el" href="../../d6/d6a/geo__linear__truss__element_8cpp.html">geo_linear_truss_element.cpp</a></li>
@@ -1555,7 +1657,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 15 2024 03:45:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jul 16 2024 03:44:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

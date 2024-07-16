@@ -123,9 +123,9 @@ $(function() {
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a064f3f0687f004996f5e75d8614d5e2c">   69</a></span>&#160;    <span class="keyword">typedef</span> std::size_t             <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a064f3f0687f004996f5e75d8614d5e2c">SizeType</a>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a33f0af1076d605f8546c226d6d782033">   72</a></span>&#160;    <span class="keyword">static</span> constexpr <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a064f3f0687f004996f5e75d8614d5e2c">SizeType</a> Dimension = 2;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a33f0af1076d605f8546c226d6d782033">   72</a></span>&#160;    <span class="keyword">static</span> constexpr <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html#ad2f92c9305e9666dd35fca930b7e4f56">SizeType</a> Dimension = 2;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#af2314aacdb0d0f83d5dd2ba3e8e5b854">   75</a></span>&#160;    <span class="keyword">static</span> constexpr <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a064f3f0687f004996f5e75d8614d5e2c">SizeType</a> VoigtSize = 3;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#af2314aacdb0d0f83d5dd2ba3e8e5b854">   75</a></span>&#160;    <span class="keyword">static</span> constexpr <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html#ad2f92c9305e9666dd35fca930b7e4f56">SizeType</a> VoigtSize = 3;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a0981de187f58f06e9ffbe8f6610152e4">   78</a></span>&#160;    <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a0981de187f58f06e9ffbe8f6610152e4">KRATOS_CLASS_POINTER_DEFINITION</a>( <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html">LinearPlaneStress</a> );</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
@@ -143,12 +143,12 @@ $(function() {
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">void</span> GetLawFeatures(<a class="code" href="../../db/d3d/struct_kratos_1_1_constitutive_law_1_1_features.html">Features</a>&amp; rFeatures) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a2abf1e7faf9293ad6b07f53b283ca7f0">  118</a></span>&#160;    <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a064f3f0687f004996f5e75d8614d5e2c">SizeType</a> <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a2abf1e7faf9293ad6b07f53b283ca7f0">WorkingSpaceDimension</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a2abf1e7faf9293ad6b07f53b283ca7f0">  118</a></span>&#160;    <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html#ad2f92c9305e9666dd35fca930b7e4f56">SizeType</a> <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a2abf1e7faf9293ad6b07f53b283ca7f0">WorkingSpaceDimension</a>()<span class="keyword"> override</span></div>
 <div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> Dimension;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    };</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#ab362d90ece6f220355c5f96da007ad6a">  126</a></span>&#160;    <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#a064f3f0687f004996f5e75d8614d5e2c">SizeType</a> <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#ab362d90ece6f220355c5f96da007ad6a">GetStrainSize</a>()<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#ab362d90ece6f220355c5f96da007ad6a">  126</a></span>&#160;    <a class="code" href="../../df/da7/class_kratos_1_1_constitutive_law.html#ad2f92c9305e9666dd35fca930b7e4f56">SizeType</a> <a class="code" href="../../df/da7/class_kratos_1_1_linear_plane_stress.html#ab362d90ece6f220355c5f96da007ad6a">GetStrainSize</a>()<span class="keyword"> const override</span></div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keywordflow">return</span> VoigtSize;</div>
 <div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    }</div>
@@ -203,6 +203,7 @@ $(function() {
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;}; <span class="comment">// Class LinearPlaneStress</span></div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html">Kratos::ConstitutiveLaw</a></div><div class="ttdef"><b>Definition:</b> constitutive_law.h:47</div></div>
+<div class="ttc" id="aclass_kratos_1_1_constitutive_law_html_ad2f92c9305e9666dd35fca930b7e4f56"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html#ad2f92c9305e9666dd35fca930b7e4f56">Kratos::ConstitutiveLaw::SizeType</a></div><div class="ttdeci">std::size_t SizeType</div><div class="ttdef"><b>Definition:</b> constitutive_law.h:82</div></div>
 <div class="ttc" id="aclass_kratos_1_1_elastic_isotropic3_d_html"><div class="ttname"><a href="../../d0/dfa/class_kratos_1_1_elastic_isotropic3_d.html">Kratos::ElasticIsotropic3D</a></div><div class="ttdef"><b>Definition:</b> elastic_isotropic_3d.h:53</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, 1 &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_linear_plane_stress_html"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_linear_plane_stress.html">Kratos::LinearPlaneStress</a></div><div class="ttdoc">This class defines a small deformation linear elastic constitutive model for plane stress cases.</div><div class="ttdef"><b>Definition:</b> linear_plane_stress.h:50</div></div>
@@ -228,7 +229,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 15 2024 02:25:25 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jul 16 2024 02:23:03 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

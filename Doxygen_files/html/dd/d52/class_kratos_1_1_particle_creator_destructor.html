@@ -144,6 +144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3073ea1d642903c77b4056a7dfdf97bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a274ad87caa776a51b61976f3e968f97c"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d52/class_kratos_1_1_particle_creator_destructor.html#a274ad87caa776a51b61976f3e968f97c">SelectRadius</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> initial, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;r_sub_model_part_with_parameters, std::map&lt; std::string, std::unique_ptr&lt; <a class="el" href="../../dc/d45/class_kratos_1_1_random_variable.html">RandomVariable</a> &gt;&gt; &amp;r_random_variables_map)</td></tr>
 <tr class="separator:a274ad87caa776a51b61976f3e968f97c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc6125507dc21b6ab1912f2e509e5ddd"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d52/class_kratos_1_1_particle_creator_destructor.html#adc6125507dc21b6ab1912f2e509e5ddd">SelectRadius</a> (<a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> r_sub_model_part_with_parameters, std::map&lt; std::string, std::unique_ptr&lt; <a class="el" href="../../dc/d45/class_kratos_1_1_random_variable.html">RandomVariable</a> &gt;&gt; &amp;r_random_variables_map)</td></tr>
+<tr class="separator:adc6125507dc21b6ab1912f2e509e5ddd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a717295b3a071626f779cc2ac7d07dcc5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d52/class_kratos_1_1_particle_creator_destructor.html#a717295b3a071626f779cc2ac7d07dcc5">NodeCreatorWithPhysicalParameters</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;r_modelpart, <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> ::Pointer &amp;pnew_node, <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> aId, <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> ::Pointer &amp;reference_node, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> radius, <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;params, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;r_sub_model_part_with_parameters, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> has_sphericity, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> has_rotation, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> initial)</td></tr>
 <tr class="separator:a717295b3a071626f779cc2ac7d07dcc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f458255ef692bc03f868d4d308b0b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/d52/class_kratos_1_1_particle_creator_destructor.html#a2f458255ef692bc03f868d4d308b0b86">NodeForClustersCreatorWithPhysicalParameters</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;r_modelpart, <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> ::Pointer &amp;pnew_node, <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> aId, <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> ::Pointer &amp;reference_node, <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;params, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;r_sub_model_part_with_parameters, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> has_sphericity, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> has_rotation, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> initial)</td></tr>
@@ -2577,7 +2579,7 @@ template&lt;class TParticleType &gt; </div>
 </div>
 </div>
 <a id="a274ad87caa776a51b61976f3e968f97c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a274ad87caa776a51b61976f3e968f97c">&#9670;&nbsp;</a></span>SelectRadius()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a274ad87caa776a51b61976f3e968f97c">&#9670;&nbsp;</a></span>SelectRadius() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2595,6 +2597,42 @@ template&lt;class TParticleType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>r_sub_model_part_with_parameters</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::map&lt; std::string, std::unique_ptr&lt; <a class="el" href="../../dc/d45/class_kratos_1_1_random_variable.html">RandomVariable</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>r_random_variables_map</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adc6125507dc21b6ab1912f2e509e5ddd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc6125507dc21b6ab1912f2e509e5ddd">&#9670;&nbsp;</a></span>SelectRadius() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::ParticleCreatorDestructor::SelectRadius </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td>
           <td class="paramname"><em>r_sub_model_part_with_parameters</em>, </td>
         </tr>
         <tr>
@@ -2903,7 +2941,7 @@ template&lt;class TParticleType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 15 2024 03:36:28 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jul 16 2024 03:34:44 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

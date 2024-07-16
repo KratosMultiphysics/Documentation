@@ -77,6 +77,7 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
+<a href="#pro-types">Protected Types</a> &#124;
 <a href="../../d7/da2/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Kratos::SmallDisplacementMixedVolumetricStrainElement Class Reference<div class="ingroups"><a class="el" href="../../d8/d46/group___structural_mechanics_application.html">StructuralMechanicsApplication</a></div></div>  </div>
@@ -103,6 +104,8 @@ Collaboration diagram for Kratos::SmallDisplacementMixedVolumetricStrainElement:
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html">GaussPointAuxiliaryVariables</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,15 +160,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0fc62123ee5a4253d45e50047da64b60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a0fc62123ee5a4253d45e50047da64b60">CalculateRightHandSide</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="memdesc:a0fc62123ee5a4253d45e50047da64b60"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called during the assembling process in order to calculate the elemental right hand side vector only.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a0fc62123ee5a4253d45e50047da64b60">More...</a><br /></td></tr>
 <tr class="separator:a0fc62123ee5a4253d45e50047da64b60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a98d8389ab4787b23d2a7fcf4c64ee8d8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a98d8389ab4787b23d2a7fcf4c64ee8d8">CalculateMassMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rMassMatrix, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
+<tr class="memdesc:a98d8389ab4787b23d2a7fcf4c64ee8d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is called during the assembling process in order to calculate the elemental mass matrix.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a98d8389ab4787b23d2a7fcf4c64ee8d8">More...</a><br /></td></tr>
+<tr class="separator:a98d8389ab4787b23d2a7fcf4c64ee8d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b4384ec07ac2f873bba0a1c5de5f956"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a5b4384ec07ac2f873bba0a1c5de5f956">GetSecondDerivativesVector</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rValues, <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> Step=0) const override</td></tr>
+<tr class="separator:a5b4384ec07ac2f873bba0a1c5de5f956"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa730d93beae7561532806b3ed0fb576d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#aa730d93beae7561532806b3ed0fb576d">Check</a> (const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) const override</td></tr>
 <tr class="memdesc:aa730d93beae7561532806b3ed0fb576d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function provides the place to perform checks on the completeness of the input.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#aa730d93beae7561532806b3ed0fb576d">More...</a><br /></td></tr>
 <tr class="separator:aa730d93beae7561532806b3ed0fb576d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3fc15c65db6cf88ef8e34f38b0a031e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a3fc15c65db6cf88ef8e34f38b0a031e5">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
-<tr class="memdesc:a3fc15c65db6cf88ef8e34f38b0a031e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a double <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> Constitutive Law.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a3fc15c65db6cf88ef8e34f38b0a031e5">More...</a><br /></td></tr>
+<tr class="memdesc:a3fc15c65db6cf88ef8e34f38b0a031e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a double <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the element Gauss points.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a3fc15c65db6cf88ef8e34f38b0a031e5">More...</a><br /></td></tr>
 <tr class="separator:a3fc15c65db6cf88ef8e34f38b0a031e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34590b9e716429bd26528cb642cc260c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a34590b9e716429bd26528cb642cc260c">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
-<tr class="memdesc:a34590b9e716429bd26528cb642cc260c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a Vector <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> Constitutive Law.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a34590b9e716429bd26528cb642cc260c">More...</a><br /></td></tr>
+<tr class="memdesc:a34590b9e716429bd26528cb642cc260c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate a Vector <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the element Gauss points.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a34590b9e716429bd26528cb642cc260c">More...</a><br /></td></tr>
 <tr class="separator:a34590b9e716429bd26528cb642cc260c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbbf5e68bcd585a5edd4b2517a742e44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#afbbf5e68bcd585a5edd4b2517a742e44">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
+<tr class="memdesc:afbbf5e68bcd585a5edd4b2517a742e44"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate an array <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the element Gauss points.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#afbbf5e68bcd585a5edd4b2517a742e44">More...</a><br /></td></tr>
+<tr class="separator:afbbf5e68bcd585a5edd4b2517a742e44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Input and output</div></td></tr>
 <tr class="memitem:a0698b7a9cde1a4730fdd1f142a8c7ba3"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a0698b7a9cde1a4730fdd1f142a8c7ba3">GetSpecifications</a> () const override</td></tr>
 <tr class="memdesc:a0698b7a9cde1a4730fdd1f142a8c7ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method provides the specifications/requirements of the element.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a0698b7a9cde1a4730fdd1f142a8c7ba3">More...</a><br /></td></tr>
@@ -201,8 +212,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d65cead546588b09ac0d88e1a1087fe inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a50c933175523337fcee36708ffc38707 inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a50c933175523337fcee36708ffc38707">GetFirstDerivativesVector</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;values, <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> Step=0) const</td></tr>
 <tr class="separator:a50c933175523337fcee36708ffc38707 inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e5cbc3b1a40f099993e63b7e7e5996f inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9e5cbc3b1a40f099993e63b7e7e5996f">GetSecondDerivativesVector</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;values, <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> Step=0) const</td></tr>
-<tr class="separator:a9e5cbc3b1a40f099993e63b7e7e5996f inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a03a703d395a34972440da12098da4227 inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a03a703d395a34972440da12098da4227">ResetConstitutiveLaw</a> ()</td></tr>
 <tr class="separator:a03a703d395a34972440da12098da4227 inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa71b806186c969a6f62026f0a5596761 inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aa71b806186c969a6f62026f0a5596761">InitializeNonLinearIteration</a> (const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
@@ -221,8 +230,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a006c9a30219d64169d40410a5a3a57f5 inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3efd621064abb2d00d79125eeb341337 inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a3efd621064abb2d00d79125eeb341337">CalculateSecondDerivativesRHS</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
 <tr class="separator:a3efd621064abb2d00d79125eeb341337 inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6c1fed3b2da3a5e60ff3d15d25b811fd inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6c1fed3b2da3a5e60ff3d15d25b811fd">CalculateMassMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rMassMatrix, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
-<tr class="separator:a6c1fed3b2da3a5e60ff3d15d25b811fd inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ced0eb45523609420b0914f15c61362 inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a7ced0eb45523609420b0914f15c61362">CalculateDampingMatrix</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rDampingMatrix, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
 <tr class="separator:a7ced0eb45523609420b0914f15c61362 inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97ba54df893bdadfbb48f8c5d136c3aa inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a97ba54df893bdadfbb48f8c5d136c3aa">CalculateLumpedMassVector</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rLumpedMassVector, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) const</td></tr>
@@ -250,8 +257,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a09ad822aa50d029da34c0f561363d1f9 inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6c11eeb24210268e9baf0472f80b69d4 inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6c11eeb24210268e9baf0472f80b69d4">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
 <tr class="separator:a6c11eeb24210268e9baf0472f80b69d4 inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3ef921c5befb0d14d3a95d335dd4811 inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aa3ef921c5befb0d14d3a95d335dd4811">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
-<tr class="separator:aa3ef921c5befb0d14d3a95d335dd4811 inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0b4440e6a2ede11afac3881a2872be66 inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a0b4440e6a2ede11afac3881a2872be66">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 4 &gt;&gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 4 &gt;&gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
 <tr class="separator:a0b4440e6a2ede11afac3881a2872be66 inherit pub_methods_class_kratos_1_1_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae03934591e90e3858c806551a8e678f inherit pub_methods_class_kratos_1_1_element"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aae03934591e90e3858c806551a8e678f">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 6 &gt;&gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 6 &gt;&gt; &amp;rOutput, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
@@ -485,6 +490,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:adecbe7f3ade6e1ad68ce6b36fdd6e266 inherit pub_methods_class_kratos_1_1_flags"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="../../d9/d4f/class_kratos_1_1_flags.html#adecbe7f3ade6e1ad68ce6b36fdd6e266">More...</a><br /></td></tr>
 <tr class="separator:adecbe7f3ade6e1ad68ce6b36fdd6e266 inherit pub_methods_class_kratos_1_1_flags"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
+Protected Types</h2></td></tr>
+<tr class="memitem:a45e765e7792976bbf274dd0e1d7c83fa"><td class="memItemLeft" align="right" valign="top">typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a45e765e7792976bbf274dd0e1d7c83fa">IndexType</a></td></tr>
+<tr class="memdesc:a45e765e7792976bbf274dd0e1d7c83fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">The definition of the index type.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a45e765e7792976bbf274dd0e1d7c83fa">More...</a><br /></td></tr>
+<tr class="separator:a45e765e7792976bbf274dd0e1d7c83fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6946b6e187a3bdf5922eeaaf9594539f"><td class="memItemLeft" align="right" valign="top">typedef std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a6946b6e187a3bdf5922eeaaf9594539f">SizeType</a></td></tr>
+<tr class="memdesc:a6946b6e187a3bdf5922eeaaf9594539f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The definition of the sizetype.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a6946b6e187a3bdf5922eeaaf9594539f">More...</a><br /></td></tr>
+<tr class="separator:a6946b6e187a3bdf5922eeaaf9594539f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Protected Operations</div></td></tr>
@@ -500,20 +514,61 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:aac580c57eb356f53560971bf73471bd2"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#aac580c57eb356f53560971bf73471bd2">UseElementProvidedStrain</a> () const</td></tr>
 <tr class="memdesc:aac580c57eb356f53560971bf73471bd2"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns if the element provides the strain.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#aac580c57eb356f53560971bf73471bd2">More...</a><br /></td></tr>
 <tr class="separator:aac580c57eb356f53560971bf73471bd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a26e1000e61efc17b31c2990c36f03203"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a26e1000e61efc17b31c2990c36f03203">CalculateKinematicVariables</a> (<a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;rThisKinematicVariables, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> PointNumber, const <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">GeometryType::IntegrationMethod</a> &amp;rIntegrationMethod) const</td></tr>
+<tr class="memdesc:a26e1000e61efc17b31c2990c36f03203"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the kinematics.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a26e1000e61efc17b31c2990c36f03203">More...</a><br /></td></tr>
+<tr class="separator:a26e1000e61efc17b31c2990c36f03203"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac02baa6c09b8a3bfb290eb54e3d61a18"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#ac02baa6c09b8a3bfb290eb54e3d61a18">SetConstitutiveVariables</a> (<a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;rThisKinematicVariables, <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;rThisConstitutiveVariables, <a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> PointNumber, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">GeometryType::IntegrationPointsArrayType</a> &amp;IntegrationPoints) const</td></tr>
 <tr class="memdesc:ac02baa6c09b8a3bfb290eb54e3d61a18"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions updates the data structure passed to the CL.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#ac02baa6c09b8a3bfb290eb54e3d61a18">More...</a><br /></td></tr>
 <tr class="separator:ac02baa6c09b8a3bfb290eb54e3d61a18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fa7d43bbde3f9753eb3eb91fbf8a330"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a9fa7d43bbde3f9753eb3eb91fbf8a330">CalculateConstitutiveVariables</a> (<a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;rThisKinematicVariables, <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;rThisConstitutiveVariables, <a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> PointNumber, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">GeometryType::IntegrationPointsArrayType</a> &amp;IntegrationPoints, const <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6">ConstitutiveLaw::StressMeasure</a> ThisStressMeasure=<a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6ae3e22f3fbe295d85337a6aa660fd29e2">ConstitutiveLaw::StressMeasure_PK2</a>) const</td></tr>
 <tr class="memdesc:a9fa7d43bbde3f9753eb3eb91fbf8a330"><td class="mdescLeft">&#160;</td><td class="mdescRight">This functions updates the constitutive variables.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a9fa7d43bbde3f9753eb3eb91fbf8a330">More...</a><br /></td></tr>
 <tr class="separator:a9fa7d43bbde3f9753eb3eb91fbf8a330"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aeb3eb30792ab1f31da04d9e5abd7c9b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#aeb3eb30792ab1f31da04d9e5abd7c9b7">CalculateGaussPointAuxiliaryVariables</a> (<a class="el" href="../../d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html">GaussPointAuxiliaryVariables</a> &amp;rThisGaussPointAuxiliaryVariables, const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;rThisKinematicVariables, const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;rThisConstitutiveVariables, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rProcessInfo, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> PointNumber) const</td></tr>
+<tr class="memdesc:aeb3eb30792ab1f31da04d9e5abd7c9b7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Gauss point data.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#aeb3eb30792ab1f31da04d9e5abd7c9b7">More...</a><br /></td></tr>
+<tr class="separator:aeb3eb30792ab1f31da04d9e5abd7c9b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a675faf2cbdc30f675a56f4aab08f20ef"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a675faf2cbdc30f675a56f4aab08f20ef">GetBodyForce</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">GeometryType::IntegrationPointsArrayType</a> &amp;rIntegrationPoints, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> PointNumber) const</td></tr>
 <tr class="memdesc:a675faf2cbdc30f675a56f4aab08f20ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function computes the body force.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a675faf2cbdc30f675a56f4aab08f20ef">More...</a><br /></td></tr>
 <tr class="separator:a675faf2cbdc30f675a56f4aab08f20ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac857653e546c87cb03cc10a138339b5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#ac857653e546c87cb03cc10a138339b5e">CalculateBulkModulus</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rC) const</td></tr>
+<tr class="memdesc:ac857653e546c87cb03cc10a138339b5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the isotropic bulk modulus Calculates the bulk modulus for the transformation to the closest isotropic tensor.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#ac857653e546c87cb03cc10a138339b5e">More...</a><br /></td></tr>
+<tr class="separator:ac857653e546c87cb03cc10a138339b5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10ef5a92af3acd9ac0bb0638bf71338c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a10ef5a92af3acd9ac0bb0638bf71338c">CalculateTau1</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rVoigtIdAnysotropyMatrixProd, const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;rThisKinematicVariables, const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;rThisConstitutiveVariables, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) const</td></tr>
+<tr class="memdesc:a10ef5a92af3acd9ac0bb0638bf71338c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the displacement subscale stabilization parameter Calculates the first stabilization parameter corresponding to the displacement subscale.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a10ef5a92af3acd9ac0bb0638bf71338c">More...</a><br /></td></tr>
+<tr class="separator:a10ef5a92af3acd9ac0bb0638bf71338c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af837ebe363ea0fd2bdbe3f31d8db48e1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#af837ebe363ea0fd2bdbe3f31d8db48e1">CalculateTau2</a> (const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;rThisConstitutiveVariables) const</td></tr>
+<tr class="memdesc:af837ebe363ea0fd2bdbe3f31d8db48e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the volumetric strain subscale stabilization parameter Calculates the second stabilization parameter corresponding to the volumetric strain subscale.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#af837ebe363ea0fd2bdbe3f31d8db48e1">More...</a><br /></td></tr>
+<tr class="separator:af837ebe363ea0fd2bdbe3f31d8db48e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a5f1f5baf001bb6d62cc53dcc142ba3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a1a5f1f5baf001bb6d62cc53dcc142ba3">CalculateLocalSystemGaussPointContribution</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;rThisKinematicVariables, const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;rThisConstitutiveVariables, const <a class="el" href="../../d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html">GaussPointAuxiliaryVariables</a> &amp;rThisGaussPointAuxiliaryVariables) const</td></tr>
+<tr class="memdesc:a1a5f1f5baf001bb6d62cc53dcc142ba3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the current Gauss point local system (LHS and RHS) contributions.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a1a5f1f5baf001bb6d62cc53dcc142ba3">More...</a><br /></td></tr>
+<tr class="separator:a1a5f1f5baf001bb6d62cc53dcc142ba3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53d91880fef067abd5e873956a7571d1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a53d91880fef067abd5e873956a7571d1">CalculateRightHandSideGaussPointContribution</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;rRightHandSideVector, const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;rThisKinematicVariables, const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;rThisConstitutiveVariables, const <a class="el" href="../../d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html">GaussPointAuxiliaryVariables</a> &amp;rThisGaussPointAuxiliaryVariables) const</td></tr>
+<tr class="memdesc:a53d91880fef067abd5e873956a7571d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the current Gauss point RHS contribution.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a53d91880fef067abd5e873956a7571d1">More...</a><br /></td></tr>
+<tr class="separator:a53d91880fef067abd5e873956a7571d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93ec7c06dee4bb47483af5ae0e3a7528"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a93ec7c06dee4bb47483af5ae0e3a7528">CalculateLeftHandSideGaussPointContribution</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;rThisKinematicVariables, const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;rThisConstitutiveVariables, const <a class="el" href="../../d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html">GaussPointAuxiliaryVariables</a> &amp;rThisGaussPointAuxiliaryVariables) const</td></tr>
+<tr class="memdesc:a93ec7c06dee4bb47483af5ae0e3a7528"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the current Gauss point LHS contribution.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a93ec7c06dee4bb47483af5ae0e3a7528">More...</a><br /></td></tr>
+<tr class="separator:a93ec7c06dee4bb47483af5ae0e3a7528"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a990085aba9525f0e91c28117eeaa45d3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a990085aba9525f0e91c28117eeaa45d3">UpdateGaussPointDisplacementSubscaleHistory</a> (const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;rThisKinematicVariables, const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;rThisConstitutiveVariables, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rProcessInfo, const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> PointIndex)</td></tr>
+<tr class="memdesc:a990085aba9525f0e91c28117eeaa45d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the subscale historical values for the dynamic case.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a990085aba9525f0e91c28117eeaa45d3">More...</a><br /></td></tr>
+<tr class="separator:a990085aba9525f0e91c28117eeaa45d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Protected Access</div></td></tr>
+<tr class="memitem:a2e9832b52db32c35234f5d84e97bcbad"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a2e9832b52db32c35234f5d84e97bcbad">GetAnisotropyTensor</a> () const</td></tr>
+<tr class="memdesc:a2e9832b52db32c35234f5d84e97bcbad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Anisotropy Tensor object.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a2e9832b52db32c35234f5d84e97bcbad">More...</a><br /></td></tr>
+<tr class="separator:a2e9832b52db32c35234f5d84e97bcbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Protected Inquiry</div></td></tr>
+<tr class="memitem:ad4ffdd08aa143d86359fef3e0108d758"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#ad4ffdd08aa143d86359fef3e0108d758">IsDynamic</a> () const</td></tr>
+<tr class="memdesc:ad4ffdd08aa143d86359fef3e0108d758"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a bool variable indicating if the problem is dynamic The variable is set in the Initialize function according to the presence of the ACCELERATION variable.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#ad4ffdd08aa143d86359fef3e0108d758">More...</a><br /></td></tr>
+<tr class="separator:ad4ffdd08aa143d86359fef3e0108d758"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Protected member Variables</div></td></tr>
+<tr class="memitem:a4a1114b14102825ccbc6aac7e5a87a68"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a4a1114b14102825ccbc6aac7e5a87a68">mDisplacementSubscale1</a></td></tr>
+<tr class="separator:a4a1114b14102825ccbc6aac7e5a87a68"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5a61c640c3e646b7a2271e0e8e45678"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#ae5a61c640c3e646b7a2271e0e8e45678">mDisplacementSubscale2</a></td></tr>
+<tr class="memdesc:ae5a61c640c3e646b7a2271e0e8e45678"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gauss points displacement subscale at previous time step.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#ae5a61c640c3e646b7a2271e0e8e45678">More...</a><br /></td></tr>
+<tr class="separator:ae5a61c640c3e646b7a2271e0e8e45678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d31f9d776d85a2cbcc691dac0487283"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a3d31f9d776d85a2cbcc691dac0487283">mThisIntegrationMethod</a></td></tr>
+<tr class="memdesc:a3d31f9d776d85a2cbcc691dac0487283"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gauss points displacement subscale at two previous time step.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a3d31f9d776d85a2cbcc691dac0487283">More...</a><br /></td></tr>
 <tr class="separator:a3d31f9d776d85a2cbcc691dac0487283"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5881a6785eb7aa2110bcc27d90c9f5c4"><td class="memItemLeft" align="right" valign="top">std::vector&lt; ConstitutiveLaw::Pointer &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a5881a6785eb7aa2110bcc27d90c9f5c4">mConstitutiveLawVector</a></td></tr>
 <tr class="memdesc:a5881a6785eb7aa2110bcc27d90c9f5c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Currently selected integration methods.  <a href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a5881a6785eb7aa2110bcc27d90c9f5c4">More...</a><br /></td></tr>
@@ -738,6 +793,30 @@ Riccardo Rossi </dd></dl>
 
 </div>
 </div>
+<a id="a45e765e7792976bbf274dd0e1d7c83fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45e765e7792976bbf274dd0e1d7c83fa">&#9670;&nbsp;</a></span>IndexType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::size_t <a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a45e765e7792976bbf274dd0e1d7c83fa">Kratos::SmallDisplacementMixedVolumetricStrainElement::IndexType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The definition of the index type. </p>
+
+</div>
+</div>
 <a id="a4274397f50cc95927bc76282afc64dbe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4274397f50cc95927bc76282afc64dbe">&#9670;&nbsp;</a></span>IntegrationMethod</h2>
 
@@ -767,6 +846,30 @@ Riccardo Rossi </dd></dl>
 </div><div class="memdoc">
 
 <p>This is the definition of the node. </p>
+
+</div>
+</div>
+<a id="a6946b6e187a3bdf5922eeaaf9594539f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6946b6e187a3bdf5922eeaaf9594539f">&#9670;&nbsp;</a></span>SizeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef std::size_t <a class="el" href="../../dc/da5/class_kratos_1_1_small_displacement_mixed_volumetric_strain_element.html#a6946b6e187a3bdf5922eeaaf9594539f">Kratos::SmallDisplacementMixedVolumetricStrainElement::SizeType</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The definition of the sizetype. </p>
 
 </div>
 </div>
@@ -942,6 +1045,41 @@ Riccardo Rossi </dd></dl>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac857653e546c87cb03cc10a138339b5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac857653e546c87cb03cc10a138339b5e">&#9670;&nbsp;</a></span>CalculateBulkModulus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateBulkModulus </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rC</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the isotropic bulk modulus Calculates the bulk modulus for the transformation to the closest isotropic tensor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rC</td><td>Input constitutive matrx </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double Isotropic bulk modulus </dd></dl>
+
+</div>
+</div>
 <a id="a9fa7d43bbde3f9753eb3eb91fbf8a330"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9fa7d43bbde3f9753eb3eb91fbf8a330">&#9670;&nbsp;</a></span>CalculateConstitutiveVariables()</h2>
 
@@ -1015,6 +1153,124 @@ Riccardo Rossi </dd></dl>
 
 </div>
 </div>
+<a id="aeb3eb30792ab1f31da04d9e5abd7c9b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeb3eb30792ab1f31da04d9e5abd7c9b7">&#9670;&nbsp;</a></span>CalculateGaussPointAuxiliaryVariables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateGaussPointAuxiliaryVariables </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html">GaussPointAuxiliaryVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisGaussPointAuxiliaryVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisKinematicVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisConstitutiveVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rProcessInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
+          <td class="paramname"><em>PointNumber</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the Gauss point data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rThisGaussPointAuxiliaryVariables</td><td>The Gauss point data container to be filled </td></tr>
+    <tr><td class="paramname">rThisKinematicVariables</td><td>The kinematic variables to be used to fill the data </td></tr>
+    <tr><td class="paramname">rThisConstitutiveVariables</td><td>The constitutive variables to be used to fill the data </td></tr>
+    <tr><td class="paramname">rProcessInfo</td><td>Reference to the current <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html" title="ProcessInfo holds the current value of different solution parameters.">ProcessInfo</a> container </td></tr>
+    <tr><td class="paramname">PointNumber</td><td>Gauss point index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a26e1000e61efc17b31c2990c36f03203"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a26e1000e61efc17b31c2990c36f03203">&#9670;&nbsp;</a></span>CalculateKinematicVariables()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateKinematicVariables </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisKinematicVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
+          <td class="paramname"><em>PointNumber</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">GeometryType::IntegrationMethod</a> &amp;&#160;</td>
+          <td class="paramname"><em>rIntegrationMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the kinematics. </p>
+<p>This method calculates the kinematics of the element for a given integration point </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rThisKinematicVariables</td><td>Integration point kinematics container </td></tr>
+    <tr><td class="paramname">PointNumber</td><td>Integration point index </td></tr>
+    <tr><td class="paramname">rIntegrationMethod</td><td>Integration rule </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a9e2f47f70b0ddb0ea790c3caea8975ba"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e2f47f70b0ddb0ea790c3caea8975ba">&#9670;&nbsp;</a></span>CalculateLeftHandSide()</h2>
 
@@ -1059,6 +1315,67 @@ Riccardo Rossi </dd></dl>
 </dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a592264b6aaa375d9ace147d32240a73d">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#afbb518072623062d559f6da0c0c466e1">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>.</p>
+
+</div>
+</div>
+<a id="a93ec7c06dee4bb47483af5ae0e3a7528"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93ec7c06dee4bb47483af5ae0e3a7528">&#9670;&nbsp;</a></span>CalculateLeftHandSideGaussPointContribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateLeftHandSideGaussPointContribution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisKinematicVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisConstitutiveVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html">GaussPointAuxiliaryVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisGaussPointAuxiliaryVariables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the current Gauss point LHS contribution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rLeftHandSideMatrix</td><td>The elemental left hand side matrix </td></tr>
+    <tr><td class="paramname">rThisKinematicVariables</td><td>Reference to the filled kinematics container </td></tr>
+    <tr><td class="paramname">rThisConstitutiveVariables</td><td>Reference to the filled constitutive variables container </td></tr>
+    <tr><td class="paramname">rThisGaussPointAuxiliaryVariables</td><td>Reference to the Gauss point data container </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1114,10 +1431,183 @@ Riccardo Rossi </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ad4b3bf73728cf4871e53fb71a5b53e01">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#a3ed1e9a00327a33aa45151fbe64bf6da">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#aaf0a17dd9fd9385ec41ccb770482e982">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
+
+</div>
+</div>
+<a id="a1a5f1f5baf001bb6d62cc53dcc142ba3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a5f1f5baf001bb6d62cc53dcc142ba3">&#9670;&nbsp;</a></span>CalculateLocalSystemGaussPointContribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateLocalSystemGaussPointContribution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rRightHandSideVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rLeftHandSideMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisKinematicVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisConstitutiveVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html">GaussPointAuxiliaryVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisGaussPointAuxiliaryVariables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the current Gauss point local system (LHS and RHS) contributions. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rRightHandSideVector</td><td>The elemental right hand side vector </td></tr>
+    <tr><td class="paramname">rLeftHandSideMatrix</td><td>The elemental left hand side matrix </td></tr>
+    <tr><td class="paramname">rThisKinematicVariables</td><td>Reference to the filled kinematics container </td></tr>
+    <tr><td class="paramname">rThisConstitutiveVariables</td><td>Reference to the filled constitutive variables container </td></tr>
+    <tr><td class="paramname">rThisGaussPointAuxiliaryVariables</td><td>Reference to the Gauss point data container </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a98d8389ab4787b23d2a7fcf4c64ee8d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98d8389ab4787b23d2a7fcf4c64ee8d8">&#9670;&nbsp;</a></span>CalculateMassMatrix()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateMassMatrix </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rMassMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is called during the assembling process in order to calculate the elemental mass matrix. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rMassMatrix</td><td>The elemental mass matrix </td></tr>
+    <tr><td class="paramname">rCurrentProcessInfo</td><td>The current process info instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6c1fed3b2da3a5e60ff3d15d25b811fd">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#a38ec098957b40dd229c0da49cca80020">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#aef94dfaf8371f3e2889cfff45b573921">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
+
+</div>
+</div>
+<a id="afbbf5e68bcd585a5edd4b2517a742e44"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbbf5e68bcd585a5edd4b2517a742e44">&#9670;&nbsp;</a></span>CalculateOnIntegrationPoints() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateOnIntegrationPoints </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rVariable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&gt; &amp;&#160;</td>
+          <td class="paramname"><em>rOutput</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate an array <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the element Gauss points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rVariable</td><td>The variable we want to get </td></tr>
+    <tr><td class="paramname">rOutput</td><td>The values obtained int the integration points </td></tr>
+    <tr><td class="paramname">rCurrentProcessInfo</td><td>the current process info instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aa3ef921c5befb0d14d3a95d335dd4811">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#aa3f73451ca27159af2b8193b70e771e0">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
+
 </div>
 </div>
 <a id="a3fc15c65db6cf88ef8e34f38b0a031e5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3fc15c65db6cf88ef8e34f38b0a031e5">&#9670;&nbsp;</a></span>CalculateOnIntegrationPoints() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fc15c65db6cf88ef8e34f38b0a031e5">&#9670;&nbsp;</a></span>CalculateOnIntegrationPoints() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1156,7 +1646,7 @@ Riccardo Rossi </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Calculate a double <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> Constitutive Law. </p>
+<p>Calculate a double <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the element Gauss points. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rVariable</td><td>The variable we want to get </td></tr>
@@ -1168,10 +1658,12 @@ Riccardo Rossi </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a5f1145ed5ec525063b0beaddf9a71b4f">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#ab41f22992e24f7b381ab6f0a787f675b">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
+
 </div>
 </div>
 <a id="a34590b9e716429bd26528cb642cc260c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a34590b9e716429bd26528cb642cc260c">&#9670;&nbsp;</a></span>CalculateOnIntegrationPoints() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a34590b9e716429bd26528cb642cc260c">&#9670;&nbsp;</a></span>CalculateOnIntegrationPoints() <span class="overload">[3/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1210,7 +1702,7 @@ Riccardo Rossi </dd></dl>
 </table>
 </div><div class="memdoc">
 
-<p>Calculate a Vector <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> Constitutive Law. </p>
+<p>Calculate a Vector <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html" title="Variable class contains all information needed to store and retrive data from a data container.">Variable</a> on the element Gauss points. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rVariable</td><td>The variable we want to get </td></tr>
@@ -1269,6 +1761,162 @@ Riccardo Rossi </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a7c4f1ea4eff4e0a74e3b4b79ace68e35">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#a42c8b4885f5a74c865bddc23444cbde2">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#a94c39ddb5564c648709eb2174fbb8026">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
+
+</div>
+</div>
+<a id="a53d91880fef067abd5e873956a7571d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53d91880fef067abd5e873956a7571d1">&#9670;&nbsp;</a></span>CalculateRightHandSideGaussPointContribution()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateRightHandSideGaussPointContribution </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a386f8c6624d548fe6f1e04f7d1ee9ddc">VectorType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rRightHandSideVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisKinematicVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisConstitutiveVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/d40/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_gauss_point_auxiliary_variables.html">GaussPointAuxiliaryVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisGaussPointAuxiliaryVariables</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the current Gauss point RHS contribution. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rRightHandSideVector</td><td>The elemental right hand side vector </td></tr>
+    <tr><td class="paramname">rThisKinematicVariables</td><td>Reference to the filled kinematics container </td></tr>
+    <tr><td class="paramname">rThisConstitutiveVariables</td><td>Reference to the filled constitutive variables container </td></tr>
+    <tr><td class="paramname">rThisGaussPointAuxiliaryVariables</td><td>Reference to the Gauss point data container </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a10ef5a92af3acd9ac0bb0638bf71338c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10ef5a92af3acd9ac0bb0638bf71338c">&#9670;&nbsp;</a></span>CalculateTau1()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateTau1 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rVoigtIdAnysotropyMatrixProd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisKinematicVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisConstitutiveVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the displacement subscale stabilization parameter Calculates the first stabilization parameter corresponding to the displacement subscale. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rVoigtIdAnysotropyMatrixProd</td><td>Matrix containing the Voigt identity and the anisotropy tensor product </td></tr>
+    <tr><td class="paramname">rThisKinematicVariables</td><td>Reference to the filled kinematics container </td></tr>
+    <tr><td class="paramname">rThisConstitutiveVariables</td><td>Reference to the filled constitutive variables container </td></tr>
+    <tr><td class="paramname">rCurrentProcessInfo</td><td>Reference to the current <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html" title="ProcessInfo holds the current value of different solution parameters.">ProcessInfo</a> container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double The displacement subscale stabilization constant </dd></dl>
+
+</div>
+</div>
+<a id="af837ebe363ea0fd2bdbe3f31d8db48e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af837ebe363ea0fd2bdbe3f31d8db48e1">&#9670;&nbsp;</a></span>CalculateTau2()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::SmallDisplacementMixedVolumetricStrainElement::CalculateTau2 </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisConstitutiveVariables</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculates the volumetric strain subscale stabilization parameter Calculates the second stabilization parameter corresponding to the volumetric strain subscale. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rThisConstitutiveVariables</td><td>Reference to the filled constitutive variables container </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double The volumetric strain subscale stabilization constant </dd></dl>
+
 </div>
 </div>
 <a id="aa730d93beae7561532806b3ed0fb576d"></a>
@@ -1304,6 +1952,8 @@ Riccardo Rossi </dd></dl>
 </dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#adc647599d0ee3b1de585feae42fb2395">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#afa6b0bcf924cbc5ba8fcc70344286109">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#ac9539be338aa3b24b774608709fc4eb5">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
 
 </div>
 </div>
@@ -1353,6 +2003,8 @@ Riccardo Rossi </dd></dl>
 <dl class="section return"><dt>Returns</dt><dd>a Pointer to the new element </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aa97bc3d6e94af0447c31efa335ece8d6">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#af6b66a4f2a7bcc611a36944afd617df1">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#a450d3944ce80fa1595fa0757e451ec5f">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
 
 </div>
 </div>
@@ -1409,6 +2061,8 @@ Riccardo Rossi </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a08841154b68ef76cff12d101feeb3d8b">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#acafc542b76f092a78f0a7eda92b1accd">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#a20fd23a011b82c4b86097e457130d28e">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
+
 </div>
 </div>
 <a id="a40dee5618cef88c036cc5c3e03e56f0b"></a>
@@ -1464,6 +2118,8 @@ Riccardo Rossi </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9d3fcc73aa43b460715466d283803b61">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#a3be07cfb4d0ae01bf57e6abf4e783428">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#a66a8dde3ecc4138614e5b3b4f2e40b54">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
+
 </div>
 </div>
 <a id="ab56ee4dee59f36e81068c2b49d31c8fa"></a>
@@ -1511,6 +2167,8 @@ Riccardo Rossi </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a7e1773ec5953e766fb36127d799f0e10">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#ab54e5eed669b24e1037f82b518164290">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>.</p>
+
 </div>
 </div>
 <a id="aff71473e2d57ae6a97a0fafca4153615"></a>
@@ -1546,6 +2204,34 @@ Riccardo Rossi </dd></dl>
 </dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#afc81fada0abbcc5bcf09ab659da20682">Kratos::Element</a>.</p>
+
+</div>
+</div>
+<a id="a2e9832b52db32c35234f5d84e97bcbad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9832b52db32c35234f5d84e97bcbad">&#9670;&nbsp;</a></span>GetAnisotropyTensor()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; Kratos::SmallDisplacementMixedVolumetricStrainElement::GetAnisotropyTensor </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Anisotropy Tensor object. </p>
+<dl class="section return"><dt>Returns</dt><dd>const Matrix&amp; Reference to the anisotropy tensor </dd></dl>
 
 </div>
 </div>
@@ -1640,6 +2326,8 @@ Riccardo Rossi </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aca483ecb1dac945e9b6a5104480cf0cd">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#a11458e946c0d391779328ae153b6baf7">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>.</p>
+
 </div>
 </div>
 <a id="ad7d05bc84a8066a04c0316ceb8144d73"></a>
@@ -1672,6 +2360,47 @@ Riccardo Rossi </dd></dl>
 
 </div>
 </div>
+<a id="a5b4384ec07ac2f873bba0a1c5de5f956"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b4384ec07ac2f873bba0a1c5de5f956">&#9670;&nbsp;</a></span>GetSecondDerivativesVector()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::SmallDisplacementMixedVolumetricStrainElement::GetSecondDerivativesVector </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
+          <td class="paramname"><em>Step</em> = <code>0</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Getting method to obtain the second time derivative of variable which defines the degrees of freedom </p>
+
+<p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9e5cbc3b1a40f099993e63b7e7e5996f">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#a387dea65c041773663aa61a8dfb89700">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>.</p>
+
+</div>
+</div>
 <a id="a0698b7a9cde1a4730fdd1f142a8c7ba3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0698b7a9cde1a4730fdd1f142a8c7ba3">&#9670;&nbsp;</a></span>GetSpecifications()</h2>
 
@@ -1699,6 +2428,8 @@ Riccardo Rossi </dd></dl>
 <p>This can be used to enhance solvers and analysis. The following is an example: { "time_integration" : [], // NOTE: Options are static, implicit, explicit "framework" : "eulerian", // NOTE: Options are eulerian, lagrangian, ALE "symmetric_lhs" : true, // NOTE: Options are true/false "positive_definite_lhs" : false, // NOTE: Options are true/false "output" : { // NOTE: Values compatible as output "gauss_point" : ["INTEGRATION_WEIGTH"], "nodal_historical" : ["DISPLACEMENT"], "nodal_non_historical" : [], "entity" : [] }, "required_variables" : ["DISPLACEMENT"], // NOTE: Fill with the required variables "required_dofs" : ["DISPLACEMENT_X", "DISPLACEMENT_Y"], // NOTE: Fill with the required dofs "flags_used" : ["BOUNDARY", "ACTIVE"], // NOTE: Fill with the flags used "compatible_geometries" : ["Triangle2D3"], // NOTE: Compatible geometries. Options are "Point2D", "Point3D", "Sphere3D1", "Line2D2", "Line2D3", "Line3D2", "Line3D3", "Triangle2D3", "Triangle2D6", "Triangle3D3", "Triangle3D6", "Quadrilateral2D4", "Quadrilateral2D8", "Quadrilateral2D9", "Quadrilateral3D4", "Quadrilateral3D8", "Quadrilateral3D9", "Tetrahedra3D4" , "Tetrahedra3D10" , "Prism3D6" , "Prism3D15" , "Hexahedra3D8" , "Hexahedra3D20" , "Hexahedra3D27" "element_integrates_in_time" : true, // NOTE: Options are true/false "compatible_constitutive_laws": { "type" : ["PlaneStress","PlaneStrain"], // NOTE: List of CL compatible types. Options are "PlaneStress", "PlaneStrain", "3D" "dimension" : ["2D", "2D"], // NOTE: List of dimensions. Options are "2D", "3D", "2DAxysimm" "strain_size" : [3,3] // NOTE: List of strain sizes }, "documentation" : "This is an element" // NOTE: The documentation of the entity } </p><dl class="section return"><dt>Returns</dt><dd>specifications The required specifications/requirements </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a1e18cf4c1297409107cfe14e0fa21330">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#a5f0f725b7672a43f42c7d3faacb9c20e">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#a09031d7691dda9419c477d8818bf68d6">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
 
 </div>
 </div>
@@ -1728,6 +2459,8 @@ Riccardo Rossi </dd></dl>
 <p>Turn back information as a string. </p>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#aa48c14d472ab9c233d9cf8d67dc9aabe">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#a452a68305af296569361aed5ac8fb14d">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#adcc81959c2d4febe821f8bccfb04fc04">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
 
 </div>
 </div>
@@ -1825,6 +2558,36 @@ Riccardo Rossi </dd></dl>
 
 </div>
 </div>
+<a id="ad4ffdd08aa143d86359fef3e0108d758"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4ffdd08aa143d86359fef3e0108d758">&#9670;&nbsp;</a></span>IsDynamic()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> Kratos::SmallDisplacementMixedVolumetricStrainElement::IsDynamic </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a bool variable indicating if the problem is dynamic The variable is set in the Initialize function according to the presence of the ACCELERATION variable. </p>
+<dl class="section return"><dt>Returns</dt><dd>true If the problem is dynamic </dd>
+<dd>
+false If the problem is not dynamic (e.g., static or eigenvalue analysis) </dd></dl>
+
+</div>
+</div>
 <a id="a58e2ffc8bf4254b0ae48aa0041aaa5d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a58e2ffc8bf4254b0ae48aa0041aaa5d4">&#9670;&nbsp;</a></span>KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION()</h2>
 
@@ -1871,6 +2634,8 @@ Riccardo Rossi </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#abb4bc2919fc17612f0441d8545d4c6f6">Kratos::Element</a>.</p>
 
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#a7c81ae356315a5851d8e2a3f208c485a">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#ab79f74c2196d90e722d2597f77533e62">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
+
 </div>
 </div>
 <a id="a2e4c7ec24a349b939ea654d8983e536d"></a>
@@ -1900,6 +2665,8 @@ Riccardo Rossi </dd></dl>
 <p>Print information about this object. </p>
 
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ac71fe3bed66508f04d7ffb92b9b81926">Kratos::Element</a>.</p>
+
+<p>Reimplemented in <a class="el" href="../../d2/d01/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_non_linear_element.html#ad5392232f5cbdc0a67ba7a039f0c099c">Kratos::SmallDisplacementMixedVolumetricStrainOssNonLinearElement</a>, and <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#a63fb4be6dda7bb63c699c0efb0e436f0">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
 
 </div>
 </div>
@@ -2037,6 +2804,67 @@ Riccardo Rossi </dd></dl>
 
 </div>
 </div>
+<a id="a990085aba9525f0e91c28117eeaa45d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a990085aba9525f0e91c28117eeaa45d3">&#9670;&nbsp;</a></span>UpdateGaussPointDisplacementSubscaleHistory()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::SmallDisplacementMixedVolumetricStrainElement::UpdateGaussPointDisplacementSubscaleHistory </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/dcc/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_kinematic_variables.html">KinematicVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisKinematicVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d5/daa/struct_kratos_1_1_small_displacement_mixed_volumetric_strain_element_1_1_constitutive_variables.html">ConstitutiveVariables</a> &amp;&#160;</td>
+          <td class="paramname"><em>rThisConstitutiveVariables</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rProcessInfo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
+          <td class="paramname"><em>PointIndex</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Updates the subscale historical values for the dynamic case. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rThisKinematicVariables</td><td>Reference to the filled kinematics container </td></tr>
+    <tr><td class="paramname">rThisConstitutiveVariables</td><td>Reference to the filled constitutive variables container </td></tr>
+    <tr><td class="paramname">rProcessInfo</td><td>Reference to the current <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html" title="ProcessInfo holds the current value of different solution parameters.">ProcessInfo</a> container </td></tr>
+    <tr><td class="paramname">PointIndex</td><td>Gauss point index </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="../../d7/d31/class_kratos_1_1_small_displacement_mixed_volumetric_strain_oss_element.html#a77b26522c03f8a5386ba576f8a978a88">Kratos::SmallDisplacementMixedVolumetricStrainOssElement</a>.</p>
+
+</div>
+</div>
 <a id="aac580c57eb356f53560971bf73471bd2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac580c57eb356f53560971bf73471bd2">&#9670;&nbsp;</a></span>UseElementProvidedStrain()</h2>
 
@@ -2112,6 +2940,52 @@ Riccardo Rossi </dd></dl>
 
 </div>
 </div>
+<a id="a4a1114b14102825ccbc6aac7e5a87a68"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4a1114b14102825ccbc6aac7e5a87a68">&#9670;&nbsp;</a></span>mDisplacementSubscale1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&gt; Kratos::SmallDisplacementMixedVolumetricStrainElement::mDisplacementSubscale1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae5a61c640c3e646b7a2271e0e8e45678"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5a61c640c3e646b7a2271e0e8e45678">&#9670;&nbsp;</a></span>mDisplacementSubscale2</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&gt; Kratos::SmallDisplacementMixedVolumetricStrainElement::mDisplacementSubscale2</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Gauss points displacement subscale at previous time step. </p>
+
+</div>
+</div>
 <a id="a3d31f9d776d85a2cbcc691dac0487283"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3d31f9d776d85a2cbcc691dac0487283">&#9670;&nbsp;</a></span>mThisIntegrationMethod</h2>
 
@@ -2132,6 +3006,8 @@ Riccardo Rossi </dd></dl>
 </table>
 </div><div class="memdoc">
 
+<p>Gauss points displacement subscale at two previous time step. </p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -2141,7 +3017,7 @@ Riccardo Rossi </dd></dl>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 15 2024 04:00:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jul 16 2024 03:58:35 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
