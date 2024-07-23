@@ -12,7 +12,7 @@
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title="This is a 2D&#45;2node truss element with 2 translational dofs per node.">
-<polygon fill="#bfbfbf" stroke="black" points="505.5,-529.5 505.5,-751.5 668.5,-751.5 668.5,-529.5 505.5,-529.5"/>
+<polygon fill="#bfbfbf" stroke="black" points="505.5,-518.5 505.5,-751.5 668.5,-751.5 668.5,-518.5 505.5,-518.5"/>
 <text text-anchor="start" x="513.5" y="-739.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElementBase</text>
 <text text-anchor="middle" x="587" y="-728.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; TDim, TNumNodes &gt;</text>
 <polyline fill="none" stroke="black" points="505.5,-721.5 668.5,-721.5 "/>
@@ -32,7 +32,8 @@
 <text text-anchor="start" x="513.5" y="-569.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ EquationIdVector()</text>
 <text text-anchor="start" x="513.5" y="-558.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetDofList()</text>
 <text text-anchor="start" x="513.5" y="-547.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
-<text text-anchor="start" x="513.5" y="-536.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 35 more...</text>
+<text text-anchor="start" x="513.5" y="-536.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 34 more...</text>
+<text text-anchor="start" x="513.5" y="-525.5" font-family="Helvetica,sans-Serif" font-size="10.00"># FinalizeMaterialResponse()</text>
 </a>
 </g>
 </g>
@@ -40,84 +41,83 @@
 <g id="node6" class="node">
 <title>Node6</title>
 <g id="a_node6"><a xlink:href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="0,-270.5 0,-459.5 182,-459.5 182,-270.5 0,-270.5"/>
-<text text-anchor="start" x="8" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoLinearTrussElement</text>
-<text text-anchor="middle" x="91" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; 3, 2 &gt;</text>
-<polyline fill="none" stroke="black" points="0,-429.5 182,-429.5 "/>
-<text text-anchor="middle" x="91" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="0,-410.5 182,-410.5 "/>
-<text text-anchor="start" x="8" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
-<text text-anchor="start" x="8" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
-<text text-anchor="start" x="8" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
-<text text-anchor="start" x="8" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
-<text text-anchor="start" x="8" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
-<text text-anchor="start" x="8" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
-<text text-anchor="start" x="8" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
-<text text-anchor="start" x="8" y="-321.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
-<text text-anchor="start" x="8" y="-310.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateLeftHandSide()</text>
-<text text-anchor="start" x="8" y="-299.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateRightHandSide()</text>
-<text text-anchor="start" x="8" y="-288.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ CreateElementStiffnessMatrix()</text>
-<text text-anchor="start" x="8" y="-277.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 8 more...</text>
+<polygon fill="none" stroke="black" points="0,-265 0,-454 182,-454 182,-265 0,-265"/>
+<text text-anchor="start" x="8" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoLinearTrussElement</text>
+<text text-anchor="middle" x="91" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; 3, 2 &gt;</text>
+<polyline fill="none" stroke="black" points="0,-424 182,-424 "/>
+<text text-anchor="middle" x="91" y="-412" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="0,-405 182,-405 "/>
+<text text-anchor="start" x="8" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
+<text text-anchor="start" x="8" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
+<text text-anchor="start" x="8" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
+<text text-anchor="start" x="8" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
+<text text-anchor="start" x="8" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
+<text text-anchor="start" x="8" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
+<text text-anchor="start" x="8" y="-327" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
+<text text-anchor="start" x="8" y="-316" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
+<text text-anchor="start" x="8" y="-305" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateLeftHandSide()</text>
+<text text-anchor="start" x="8" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateRightHandSide()</text>
+<text text-anchor="start" x="8" y="-283" font-family="Helvetica,sans-Serif" font-size="10.00">+ CreateElementStiffnessMatrix()</text>
+<text text-anchor="start" x="8" y="-272" font-family="Helvetica,sans-Serif" font-size="10.00">and 8 more...</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node6 -->
 <g id="edge5" class="edge">
 <title>Node1&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M495.37,-620.73C410.4,-600 283.51,-560.31 191,-493 177.95,-483.51 165.72,-471.87 154.6,-459.53"/>
-<polygon fill="none" stroke="midnightblue" points="494.73,-624.17 505.27,-623.1 496.36,-617.37 494.73,-624.17"/>
+<path fill="none" stroke="midnightblue" d="M495.32,-613.21C410.59,-590.82 284.11,-549.08 191,-482 179.81,-473.94 169.14,-464.32 159.22,-454.09"/>
+<polygon fill="none" stroke="midnightblue" points="494.63,-616.64 505.19,-615.78 496.39,-609.87 494.63,-616.64"/>
 </g>
 <!-- Node7 -->
 <g id="node7" class="node">
 <title>Node7</title>
 <g id="a_node7"><a xlink:href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="200,-270.5 200,-459.5 382,-459.5 382,-270.5 200,-270.5"/>
-<text text-anchor="start" x="208" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoLinearTrussElement</text>
-<text text-anchor="middle" x="291" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; 2, 2 &gt;</text>
-<polyline fill="none" stroke="black" points="200,-429.5 382,-429.5 "/>
-<text text-anchor="middle" x="291" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="200,-410.5 382,-410.5 "/>
-<text text-anchor="start" x="208" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
-<text text-anchor="start" x="208" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
-<text text-anchor="start" x="208" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
-<text text-anchor="start" x="208" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
-<text text-anchor="start" x="208" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
-<text text-anchor="start" x="208" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
-<text text-anchor="start" x="208" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
-<text text-anchor="start" x="208" y="-321.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
-<text text-anchor="start" x="208" y="-310.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateLeftHandSide()</text>
-<text text-anchor="start" x="208" y="-299.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateRightHandSide()</text>
-<text text-anchor="start" x="208" y="-288.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ CreateElementStiffnessMatrix()</text>
-<text text-anchor="start" x="208" y="-277.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 8 more...</text>
+<polygon fill="none" stroke="black" points="200,-265 200,-454 382,-454 382,-265 200,-265"/>
+<text text-anchor="start" x="208" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoLinearTrussElement</text>
+<text text-anchor="middle" x="291" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; 2, 2 &gt;</text>
+<polyline fill="none" stroke="black" points="200,-424 382,-424 "/>
+<text text-anchor="middle" x="291" y="-412" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="200,-405 382,-405 "/>
+<text text-anchor="start" x="208" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
+<text text-anchor="start" x="208" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
+<text text-anchor="start" x="208" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
+<text text-anchor="start" x="208" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
+<text text-anchor="start" x="208" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
+<text text-anchor="start" x="208" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
+<text text-anchor="start" x="208" y="-327" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
+<text text-anchor="start" x="208" y="-316" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
+<text text-anchor="start" x="208" y="-305" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateLeftHandSide()</text>
+<text text-anchor="start" x="208" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateRightHandSide()</text>
+<text text-anchor="start" x="208" y="-283" font-family="Helvetica,sans-Serif" font-size="10.00">+ CreateElementStiffnessMatrix()</text>
+<text text-anchor="start" x="208" y="-272" font-family="Helvetica,sans-Serif" font-size="10.00">and 8 more...</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node7 -->
 <g id="edge6" class="edge">
 <title>Node1&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M497.19,-579.93C462.39,-554.96 423.24,-524.44 391,-493 380.45,-482.71 370.02,-471.31 360.11,-459.67"/>
-<polygon fill="none" stroke="midnightblue" points="495.3,-582.88 505.47,-585.83 499.36,-577.18 495.3,-582.88"/>
+<path fill="none" stroke="midnightblue" d="M497.25,-571.02C462.63,-545.06 423.6,-513.67 391,-482 382.08,-473.34 373.18,-463.92 364.56,-454.28"/>
+<polygon fill="none" stroke="midnightblue" points="495.38,-573.99 505.49,-577.15 499.56,-568.37 495.38,-573.99"/>
 </g>
 <!-- Node8 -->
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:href="../../d1/dd7/class_kratos_1_1_geo_truss_element.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="400,-237.5 400,-492.5 578,-492.5 578,-237.5 400,-237.5"/>
-<text text-anchor="start" x="408" y="-480.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElement</text>
-<text text-anchor="middle" x="489" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; 3, 2 &gt;</text>
-<polyline fill="none" stroke="black" points="400,-462.5 578,-462.5 "/>
-<text text-anchor="start" x="408" y="-450.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStresses</text>
-<text text-anchor="start" x="408" y="-439.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStressesFinalized</text>
+<polygon fill="none" stroke="black" points="400,-237.5 400,-481.5 578,-481.5 578,-237.5 400,-237.5"/>
+<text text-anchor="start" x="408" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElement</text>
+<text text-anchor="middle" x="489" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; 3, 2 &gt;</text>
+<polyline fill="none" stroke="black" points="400,-451.5 578,-451.5 "/>
+<text text-anchor="start" x="408" y="-439.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStresses</text>
 <text text-anchor="start" x="408" y="-428.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStressesFinalized</text>
-<text text-anchor="start" x="408" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00">Previous</text>
-<text text-anchor="start" x="408" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mStressVectorSize</text>
-<polyline fill="none" stroke="black" points="400,-399.5 578,-399.5 "/>
-<text text-anchor="start" x="408" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
-<text text-anchor="start" x="408" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
-<text text-anchor="start" x="408" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
+<text text-anchor="start" x="408" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStressesFinalized</text>
+<text text-anchor="start" x="408" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00">Previous</text>
+<text text-anchor="start" x="408" y="-395.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mStressVectorSize</text>
+<polyline fill="none" stroke="black" points="400,-388.5 578,-388.5 "/>
+<text text-anchor="start" x="408" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
+<text text-anchor="start" x="408" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
 <text text-anchor="start" x="408" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
 <text text-anchor="start" x="408" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
-<text text-anchor="start" x="408" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ~GeoTrussElement()</text>
+<text text-anchor="start" x="408" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
 <text text-anchor="start" x="408" y="-321.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
 <text text-anchor="start" x="408" y="-310.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
 <text text-anchor="start" x="408" y="-299.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
@@ -132,29 +132,28 @@
 <!-- Node1&#45;&gt;Node8 -->
 <g id="edge7" class="edge">
 <title>Node1&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M544.11,-519.81C540.91,-510.88 537.68,-501.86 534.47,-492.9"/>
-<polygon fill="none" stroke="midnightblue" points="540.9,-521.21 547.56,-529.44 547.48,-518.84 540.9,-521.21"/>
+<path fill="none" stroke="midnightblue" d="M542.11,-508.72C538.9,-499.77 535.67,-490.75 532.47,-481.82"/>
+<polygon fill="none" stroke="midnightblue" points="538.91,-510.17 545.58,-518.41 545.5,-507.81 538.91,-510.17"/>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
 <title>Node9</title>
 <g id="a_node9"><a xlink:href="../../d1/dd7/class_kratos_1_1_geo_truss_element.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="596,-237.5 596,-492.5 774,-492.5 774,-237.5 596,-237.5"/>
-<text text-anchor="start" x="604" y="-480.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElement</text>
-<text text-anchor="middle" x="685" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; 2, 2 &gt;</text>
-<polyline fill="none" stroke="black" points="596,-462.5 774,-462.5 "/>
-<text text-anchor="start" x="604" y="-450.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStresses</text>
-<text text-anchor="start" x="604" y="-439.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStressesFinalized</text>
+<polygon fill="none" stroke="black" points="596,-237.5 596,-481.5 774,-481.5 774,-237.5 596,-237.5"/>
+<text text-anchor="start" x="604" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElement</text>
+<text text-anchor="middle" x="685" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; 2, 2 &gt;</text>
+<polyline fill="none" stroke="black" points="596,-451.5 774,-451.5 "/>
+<text text-anchor="start" x="604" y="-439.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStresses</text>
 <text text-anchor="start" x="604" y="-428.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStressesFinalized</text>
-<text text-anchor="start" x="604" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00">Previous</text>
-<text text-anchor="start" x="604" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mStressVectorSize</text>
-<polyline fill="none" stroke="black" points="596,-399.5 774,-399.5 "/>
-<text text-anchor="start" x="604" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
-<text text-anchor="start" x="604" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
-<text text-anchor="start" x="604" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
+<text text-anchor="start" x="604" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStressesFinalized</text>
+<text text-anchor="start" x="604" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00">Previous</text>
+<text text-anchor="start" x="604" y="-395.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mStressVectorSize</text>
+<polyline fill="none" stroke="black" points="596,-388.5 774,-388.5 "/>
+<text text-anchor="start" x="604" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
+<text text-anchor="start" x="604" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
 <text text-anchor="start" x="604" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
 <text text-anchor="start" x="604" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
-<text text-anchor="start" x="604" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ~GeoTrussElement()</text>
+<text text-anchor="start" x="604" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
 <text text-anchor="start" x="604" y="-321.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
 <text text-anchor="start" x="604" y="-310.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
 <text text-anchor="start" x="604" y="-299.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
@@ -169,60 +168,59 @@
 <!-- Node1&#45;&gt;Node9 -->
 <g id="edge8" class="edge">
 <title>Node1&#45;&gt;Node9</title>
-<path fill="none" stroke="midnightblue" d="M629.89,-519.81C633.09,-510.88 636.32,-501.86 639.53,-492.9"/>
-<polygon fill="none" stroke="midnightblue" points="626.52,-518.84 626.44,-529.44 633.1,-521.21 626.52,-518.84"/>
+<path fill="none" stroke="midnightblue" d="M631.89,-508.72C635.1,-499.77 638.33,-490.75 641.53,-481.82"/>
+<polygon fill="none" stroke="midnightblue" points="628.5,-507.81 628.42,-518.41 635.09,-510.17 628.5,-507.81"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
 <title>Node10</title>
 <g id="a_node10"><a xlink:href="../../d5/d52/class_kratos_1_1_geo_linear_truss_element.html" target="_top" xlink:title="This is a linear truss element.">
-<polygon fill="none" stroke="black" points="792,-270.5 792,-459.5 974,-459.5 974,-270.5 792,-270.5"/>
-<text text-anchor="start" x="800" y="-447.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoLinearTrussElement</text>
-<text text-anchor="middle" x="883" y="-436.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; TDim, TNumNodes &gt;</text>
-<polyline fill="none" stroke="black" points="792,-429.5 974,-429.5 "/>
-<text text-anchor="middle" x="883" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="792,-410.5 974,-410.5 "/>
-<text text-anchor="start" x="800" y="-398.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
-<text text-anchor="start" x="800" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
-<text text-anchor="start" x="800" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
-<text text-anchor="start" x="800" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
-<text text-anchor="start" x="800" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
-<text text-anchor="start" x="800" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
-<text text-anchor="start" x="800" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
-<text text-anchor="start" x="800" y="-321.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
-<text text-anchor="start" x="800" y="-310.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateLeftHandSide()</text>
-<text text-anchor="start" x="800" y="-299.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateRightHandSide()</text>
-<text text-anchor="start" x="800" y="-288.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ CreateElementStiffnessMatrix()</text>
-<text text-anchor="start" x="800" y="-277.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 8 more...</text>
+<polygon fill="none" stroke="black" points="792,-265 792,-454 974,-454 974,-265 792,-265"/>
+<text text-anchor="start" x="800" y="-442" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoLinearTrussElement</text>
+<text text-anchor="middle" x="883" y="-431" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; TDim, TNumNodes &gt;</text>
+<polyline fill="none" stroke="black" points="792,-424 974,-424 "/>
+<text text-anchor="middle" x="883" y="-412" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="792,-405 974,-405 "/>
+<text text-anchor="start" x="800" y="-393" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
+<text text-anchor="start" x="800" y="-382" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
+<text text-anchor="start" x="800" y="-371" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
+<text text-anchor="start" x="800" y="-360" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
+<text text-anchor="start" x="800" y="-349" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoLinearTrussElement()</text>
+<text text-anchor="start" x="800" y="-338" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
+<text text-anchor="start" x="800" y="-327" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
+<text text-anchor="start" x="800" y="-316" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
+<text text-anchor="start" x="800" y="-305" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateLeftHandSide()</text>
+<text text-anchor="start" x="800" y="-294" font-family="Helvetica,sans-Serif" font-size="10.00">+ CalculateRightHandSide()</text>
+<text text-anchor="start" x="800" y="-283" font-family="Helvetica,sans-Serif" font-size="10.00">+ CreateElementStiffnessMatrix()</text>
+<text text-anchor="start" x="800" y="-272" font-family="Helvetica,sans-Serif" font-size="10.00">and 8 more...</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node10 -->
 <g id="edge9" class="edge">
 <title>Node1&#45;&gt;Node10</title>
-<path fill="none" stroke="midnightblue" d="M676.81,-579.93C711.61,-554.96 750.76,-524.44 783,-493 793.55,-482.71 803.98,-471.31 813.89,-459.67"/>
-<polygon fill="none" stroke="midnightblue" points="674.64,-577.18 668.53,-585.83 678.7,-582.88 674.64,-577.18"/>
+<path fill="none" stroke="midnightblue" d="M676.75,-571.02C711.37,-545.06 750.4,-513.67 783,-482 791.92,-473.34 800.82,-463.92 809.44,-454.28"/>
+<polygon fill="none" stroke="midnightblue" points="674.44,-568.37 668.51,-577.15 678.62,-573.99 674.44,-568.37"/>
 </g>
 <!-- Node11 -->
 <g id="node11" class="node">
 <title>Node11</title>
 <g id="a_node11"><a xlink:href="../../d1/dd7/class_kratos_1_1_geo_truss_element.html" target="_top" xlink:title="This is a 2node truss element with reset&#45;displacement.">
-<polygon fill="none" stroke="black" points="992,-237.5 992,-492.5 1170,-492.5 1170,-237.5 992,-237.5"/>
-<text text-anchor="start" x="1000" y="-480.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElement</text>
-<text text-anchor="middle" x="1081" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; TDim, TNumNodes &gt;</text>
-<polyline fill="none" stroke="black" points="992,-462.5 1170,-462.5 "/>
-<text text-anchor="start" x="1000" y="-450.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStresses</text>
-<text text-anchor="start" x="1000" y="-439.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStressesFinalized</text>
+<polygon fill="none" stroke="black" points="992,-237.5 992,-481.5 1170,-481.5 1170,-237.5 992,-237.5"/>
+<text text-anchor="start" x="1000" y="-469.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElement</text>
+<text text-anchor="middle" x="1081" y="-458.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; TDim, TNumNodes &gt;</text>
+<polyline fill="none" stroke="black" points="992,-451.5 1170,-451.5 "/>
+<text text-anchor="start" x="1000" y="-439.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStresses</text>
 <text text-anchor="start" x="1000" y="-428.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStressesFinalized</text>
-<text text-anchor="start" x="1000" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00">Previous</text>
-<text text-anchor="start" x="1000" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mStressVectorSize</text>
-<polyline fill="none" stroke="black" points="992,-399.5 1170,-399.5 "/>
-<text text-anchor="start" x="1000" y="-387.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
-<text text-anchor="start" x="1000" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
-<text text-anchor="start" x="1000" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
+<text text-anchor="start" x="1000" y="-417.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mInternalStressesFinalized</text>
+<text text-anchor="start" x="1000" y="-406.5" font-family="Helvetica,sans-Serif" font-size="10.00">Previous</text>
+<text text-anchor="start" x="1000" y="-395.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mStressVectorSize</text>
+<polyline fill="none" stroke="black" points="992,-388.5 1170,-388.5 "/>
+<text text-anchor="start" x="1000" y="-376.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
+<text text-anchor="start" x="1000" y="-365.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
 <text text-anchor="start" x="1000" y="-354.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
 <text text-anchor="start" x="1000" y="-343.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
-<text text-anchor="start" x="1000" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ~GeoTrussElement()</text>
+<text text-anchor="start" x="1000" y="-332.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
 <text text-anchor="start" x="1000" y="-321.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
 <text text-anchor="start" x="1000" y="-310.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
 <text text-anchor="start" x="1000" y="-299.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
@@ -237,8 +235,8 @@
 <!-- Node1&#45;&gt;Node11 -->
 <g id="edge10" class="edge">
 <title>Node1&#45;&gt;Node11</title>
-<path fill="none" stroke="midnightblue" d="M678.78,-620.94C763.86,-600.36 890.82,-560.77 983,-493 986.03,-490.77 989.01,-488.43 991.94,-485.98"/>
-<polygon fill="none" stroke="midnightblue" points="677.79,-617.57 668.87,-623.29 679.41,-624.38 677.79,-617.57"/>
+<path fill="none" stroke="midnightblue" d="M678.44,-613.52C763.28,-591.3 890.08,-549.64 983,-482 985.96,-479.85 988.88,-477.58 991.75,-475.23"/>
+<polygon fill="none" stroke="midnightblue" points="677.37,-610.18 668.56,-616.07 679.12,-616.96 677.37,-610.18"/>
 </g>
 <!-- Node2 -->
 <g id="node2" class="node">
@@ -326,8 +324,8 @@
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node2&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M587,-777.92C587,-768.97 587,-760.29 587,-751.93"/>
-<polygon fill="none" stroke="midnightblue" points="583.5,-778.14 587,-788.14 590.5,-778.14 583.5,-778.14"/>
+<path fill="none" stroke="midnightblue" d="M587,-778.15C587,-769.03 587,-760.16 587,-751.62"/>
+<polygon fill="none" stroke="midnightblue" points="583.5,-778.15 587,-788.15 590.5,-778.15 583.5,-778.15"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
@@ -589,8 +587,8 @@
 <!-- Node11&#45;&gt;Node12 -->
 <g id="edge11" class="edge">
 <title>Node11&#45;&gt;Node12</title>
-<path fill="none" stroke="midnightblue" d="M985.74,-238.97C975.95,-226.12 966.1,-213.19 956.56,-200.68"/>
-<polygon fill="none" stroke="midnightblue" points="982.98,-241.12 991.82,-246.95 988.54,-236.88 982.98,-241.12"/>
+<path fill="none" stroke="midnightblue" d="M985.48,-235.75C976.3,-223.96 967.07,-212.09 958.1,-200.57"/>
+<polygon fill="none" stroke="midnightblue" points="982.92,-238.16 991.82,-243.9 988.44,-233.86 982.92,-238.16"/>
 </g>
 <!-- Node13 -->
 <g id="node13" class="node">
@@ -621,8 +619,8 @@
 <!-- Node11&#45;&gt;Node13 -->
 <g id="edge12" class="edge">
 <title>Node11&#45;&gt;Node13</title>
-<path fill="none" stroke="midnightblue" d="M1081,-227.25C1081,-218.3 1081,-209.38 1081,-200.66"/>
-<polygon fill="none" stroke="midnightblue" points="1077.5,-227.36 1081,-237.36 1084.5,-227.36 1077.5,-227.36"/>
+<path fill="none" stroke="midnightblue" d="M1081,-227.12C1081,-218.23 1081,-209.36 1081,-200.68"/>
+<polygon fill="none" stroke="midnightblue" points="1077.5,-227.15 1081,-237.15 1084.5,-227.15 1077.5,-227.15"/>
 </g>
 <!-- Node14 -->
 <g id="node14" class="node">
@@ -653,8 +651,8 @@
 <!-- Node11&#45;&gt;Node14 -->
 <g id="edge13" class="edge">
 <title>Node11&#45;&gt;Node14</title>
-<path fill="none" stroke="midnightblue" d="M1176.26,-238.97C1186.05,-226.12 1195.9,-213.19 1205.44,-200.68"/>
-<polygon fill="none" stroke="midnightblue" points="1173.46,-236.88 1170.18,-246.95 1179.02,-241.12 1173.46,-236.88"/>
+<path fill="none" stroke="midnightblue" d="M1176.52,-235.75C1185.7,-223.96 1194.93,-212.09 1203.9,-200.57"/>
+<polygon fill="none" stroke="midnightblue" points="1173.56,-233.86 1170.18,-243.9 1179.08,-238.16 1173.56,-233.86"/>
 </g>
 </g>
 </svg>

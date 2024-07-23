@@ -38,18 +38,17 @@
 <g id="node2" class="node">
 <title>Node2</title>
 <g id="a_node2"><a xlink:href="../../d1/dd7/class_kratos_1_1_geo_truss_element.html" target="_top" xlink:title="This is a 2node truss element with reset&#45;displacement.">
-<polygon fill="none" stroke="black" points="166.5,-238.5 166.5,-449.5 344.5,-449.5 344.5,-238.5 166.5,-238.5"/>
-<text text-anchor="start" x="174.5" y="-437.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElement</text>
-<text text-anchor="middle" x="255.5" y="-426.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; TDim, TNumNodes &gt;</text>
-<polyline fill="none" stroke="black" points="166.5,-419.5 344.5,-419.5 "/>
-<text text-anchor="start" x="174.5" y="-407.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mStressVectorSize</text>
-<polyline fill="none" stroke="black" points="166.5,-400.5 344.5,-400.5 "/>
-<text text-anchor="start" x="174.5" y="-388.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
-<text text-anchor="start" x="174.5" y="-377.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
-<text text-anchor="start" x="174.5" y="-366.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
+<polygon fill="none" stroke="black" points="166.5,-238.5 166.5,-438.5 344.5,-438.5 344.5,-238.5 166.5,-238.5"/>
+<text text-anchor="start" x="174.5" y="-426.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElement</text>
+<text text-anchor="middle" x="255.5" y="-415.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; TDim, TNumNodes &gt;</text>
+<polyline fill="none" stroke="black" points="166.5,-408.5 344.5,-408.5 "/>
+<text text-anchor="start" x="174.5" y="-396.5" font-family="Helvetica,sans-Serif" font-size="10.00"># mStressVectorSize</text>
+<polyline fill="none" stroke="black" points="166.5,-389.5 344.5,-389.5 "/>
+<text text-anchor="start" x="174.5" y="-377.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ KRATOS_CLASS_INTRUSIVE</text>
+<text text-anchor="start" x="174.5" y="-366.5" font-family="Helvetica,sans-Serif" font-size="10.00">_POINTER_DEFINITION()</text>
 <text text-anchor="start" x="174.5" y="-355.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
 <text text-anchor="start" x="174.5" y="-344.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
-<text text-anchor="start" x="174.5" y="-333.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ ~GeoTrussElement()</text>
+<text text-anchor="start" x="174.5" y="-333.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GeoTrussElement()</text>
 <text text-anchor="start" x="174.5" y="-322.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
 <text text-anchor="start" x="174.5" y="-311.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Create()</text>
 <text text-anchor="start" x="174.5" y="-300.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
@@ -64,14 +63,14 @@
 <!-- Node2&#45;&gt;Node1 -->
 <g id="edge1" class="edge">
 <title>Node2&#45;&gt;Node1</title>
-<path fill="none" stroke="midnightblue" d="M255.5,-228.19C255.5,-219.05 255.5,-209.86 255.5,-200.84"/>
-<polygon fill="none" stroke="midnightblue" points="252,-228.48 255.5,-238.48 259,-228.48 252,-228.48"/>
+<path fill="none" stroke="midnightblue" d="M255.5,-228.44C255.5,-219.18 255.5,-209.86 255.5,-200.68"/>
+<polygon fill="none" stroke="midnightblue" points="252,-228.44 255.5,-238.44 259,-228.44 252,-228.44"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
 <g id="a_node3"><a xlink:href="../../d8/d8c/class_kratos_1_1_geo_truss_element_base.html" target="_top" xlink:title="This is a 2D&#45;2node truss element with 2 translational dofs per node.">
-<polygon fill="none" stroke="black" points="91,-530.5 91,-752.5 254,-752.5 254,-530.5 91,-530.5"/>
+<polygon fill="none" stroke="black" points="91,-519.5 91,-752.5 254,-752.5 254,-519.5 91,-519.5"/>
 <text text-anchor="start" x="99" y="-740.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::GeoTrussElementBase</text>
 <text text-anchor="middle" x="172.5" y="-729.5" font-family="Helvetica,sans-Serif" font-size="10.00">&lt; TDim, TNumNodes &gt;</text>
 <polyline fill="none" stroke="black" points="91,-722.5 254,-722.5 "/>
@@ -91,15 +90,16 @@
 <text text-anchor="start" x="99" y="-570.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ EquationIdVector()</text>
 <text text-anchor="start" x="99" y="-559.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ GetDofList()</text>
 <text text-anchor="start" x="99" y="-548.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Initialize()</text>
-<text text-anchor="start" x="99" y="-537.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 35 more...</text>
+<text text-anchor="start" x="99" y="-537.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 34 more...</text>
+<text text-anchor="start" x="99" y="-526.5" font-family="Helvetica,sans-Serif" font-size="10.00"># FinalizeMaterialResponse()</text>
 </a>
 </g>
 </g>
 <!-- Node3&#45;&gt;Node2 -->
 <g id="edge2" class="edge">
 <title>Node3&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M206.12,-520.8C212.73,-497.26 219.62,-472.74 226.08,-449.73"/>
-<polygon fill="none" stroke="midnightblue" points="202.74,-519.89 203.41,-530.47 209.48,-521.79 202.74,-519.89"/>
+<path fill="none" stroke="midnightblue" d="M207.69,-509.72C214.36,-485.98 221.25,-461.45 227.65,-438.65"/>
+<polygon fill="none" stroke="midnightblue" points="204.28,-508.91 204.95,-519.48 211.02,-510.8 204.28,-508.91"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
@@ -187,8 +187,8 @@
 <!-- Node4&#45;&gt;Node3 -->
 <g id="edge3" class="edge">
 <title>Node4&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M168.81,-780.41C169.07,-770.82 169.31,-761.54 169.55,-752.63"/>
-<polygon fill="none" stroke="midnightblue" points="165.31,-780.41 168.54,-790.5 172.31,-780.6 165.31,-780.41"/>
+<path fill="none" stroke="midnightblue" d="M168.71,-779.97C168.96,-770.67 169.2,-761.64 169.43,-752.94"/>
+<polygon fill="none" stroke="midnightblue" points="165.21,-780.08 168.44,-790.17 172.2,-780.26 165.21,-780.08"/>
 </g>
 <!-- Node5 -->
 <g id="node5" class="node">
@@ -425,36 +425,36 @@
 <g id="node8" class="node">
 <title>Node8</title>
 <g id="a_node8"><a xlink:href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="277,-547 277,-736 414,-736 414,-547 277,-547"/>
-<text text-anchor="start" x="285" y="-724" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::Internals::</text>
-<text text-anchor="start" x="285" y="-713" font-family="Helvetica,sans-Serif" font-size="10.00">Matrix&lt; double, AMatrix</text>
-<text text-anchor="middle" x="345.5" y="-702" font-family="Helvetica,sans-Serif" font-size="10.00">::dynamic, 1 &gt;</text>
-<polyline fill="none" stroke="black" points="277,-695 414,-695 "/>
-<text text-anchor="middle" x="345.5" y="-683" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
-<polyline fill="none" stroke="black" points="277,-676 414,-676 "/>
-<text text-anchor="start" x="285" y="-664" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
-<text text-anchor="start" x="285" y="-653" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
-<text text-anchor="start" x="285" y="-642" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
-<text text-anchor="start" x="285" y="-631" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
-<text text-anchor="start" x="285" y="-620" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
-<text text-anchor="start" x="285" y="-609" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
-<text text-anchor="start" x="285" y="-598" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
-<text text-anchor="start" x="285" y="-587" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
-<text text-anchor="start" x="285" y="-576" font-family="Helvetica,sans-Serif" font-size="10.00">+ operator=()</text>
-<text text-anchor="start" x="285" y="-565" font-family="Helvetica,sans-Serif" font-size="10.00">+ operator=()</text>
-<text text-anchor="start" x="285" y="-554" font-family="Helvetica,sans-Serif" font-size="10.00">and 30 more...</text>
+<polygon fill="none" stroke="black" points="277,-541.5 277,-730.5 414,-730.5 414,-541.5 277,-541.5"/>
+<text text-anchor="start" x="285" y="-718.5" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos::Internals::</text>
+<text text-anchor="start" x="285" y="-707.5" font-family="Helvetica,sans-Serif" font-size="10.00">Matrix&lt; double, AMatrix</text>
+<text text-anchor="middle" x="345.5" y="-696.5" font-family="Helvetica,sans-Serif" font-size="10.00">::dynamic, 1 &gt;</text>
+<polyline fill="none" stroke="black" points="277,-689.5 414,-689.5 "/>
+<text text-anchor="middle" x="345.5" y="-677.5" font-family="Helvetica,sans-Serif" font-size="10.00"> </text>
+<polyline fill="none" stroke="black" points="277,-670.5 414,-670.5 "/>
+<text text-anchor="start" x="285" y="-658.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
+<text text-anchor="start" x="285" y="-647.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
+<text text-anchor="start" x="285" y="-636.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
+<text text-anchor="start" x="285" y="-625.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
+<text text-anchor="start" x="285" y="-614.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
+<text text-anchor="start" x="285" y="-603.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
+<text text-anchor="start" x="285" y="-592.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
+<text text-anchor="start" x="285" y="-581.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ Matrix()</text>
+<text text-anchor="start" x="285" y="-570.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ operator=()</text>
+<text text-anchor="start" x="285" y="-559.5" font-family="Helvetica,sans-Serif" font-size="10.00">+ operator=()</text>
+<text text-anchor="start" x="285" y="-548.5" font-family="Helvetica,sans-Serif" font-size="10.00">and 30 more...</text>
 </a>
 </g>
 </g>
 <!-- Node8&#45;&gt;Node2 -->
 <g id="edge7" class="edge">
 <title>Node8&#45;&gt;Node2</title>
-<path fill="none" stroke="#404040" d="M316.9,-546.6C308.64,-519.49 299.53,-489.58 290.92,-461.29"/>
-<polygon fill="none" stroke="#404040" points="290.88,-461.17 285.31,-456.6 287.39,-449.69 292.96,-454.27 290.88,-461.17"/>
-<text text-anchor="middle" x="377" y="-504" font-family="Helvetica,sans-Serif" font-size="10.00"> #mInternalStresses</text>
-<text text-anchor="middle" x="377" y="-493" font-family="Helvetica,sans-Serif" font-size="10.00">#mInternalStressesFinalized</text>
-<text text-anchor="start" x="306.5" y="-482" font-family="Helvetica,sans-Serif" font-size="10.00">#mInternalStressesFinalized</text>
-<text text-anchor="middle" x="377" y="-471" font-family="Helvetica,sans-Serif" font-size="10.00">Previous</text>
+<path fill="none" stroke="#404040" d="M316.9,-541.1C308.11,-512.23 298.35,-480.18 289.24,-450.29"/>
+<polygon fill="none" stroke="#404040" points="289.15,-449.99 283.58,-445.42 285.66,-438.51 291.23,-443.09 289.15,-449.99"/>
+<text text-anchor="middle" x="374" y="-493" font-family="Helvetica,sans-Serif" font-size="10.00"> #mInternalStresses</text>
+<text text-anchor="middle" x="374" y="-482" font-family="Helvetica,sans-Serif" font-size="10.00">#mInternalStressesFinalized</text>
+<text text-anchor="start" x="303.5" y="-471" font-family="Helvetica,sans-Serif" font-size="10.00">#mInternalStressesFinalized</text>
+<text text-anchor="middle" x="374" y="-460" font-family="Helvetica,sans-Serif" font-size="10.00">Previous</text>
 </g>
 <!-- Node9 -->
 <g id="node9" class="node">
@@ -475,8 +475,8 @@
 <!-- Node9&#45;&gt;Node8 -->
 <g id="edge8" class="edge">
 <title>Node9&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M345.5,-1148.52C345.5,-1052.93 345.5,-853.97 345.5,-736.01"/>
-<polygon fill="none" stroke="midnightblue" points="342,-1148.55 345.5,-1158.55 349,-1148.55 342,-1148.55"/>
+<path fill="none" stroke="midnightblue" d="M345.5,-1148.46C345.5,-1051.89 345.5,-849.78 345.5,-730.57"/>
+<polygon fill="none" stroke="midnightblue" points="342,-1148.59 345.5,-1158.59 349,-1148.59 342,-1148.59"/>
 </g>
 <!-- Node10 -->
 <g id="node10" class="node">
@@ -495,8 +495,8 @@
 <!-- Node10&#45;&gt;Node8 -->
 <g id="edge9" class="edge">
 <title>Node10&#45;&gt;Node8</title>
-<path fill="none" stroke="midnightblue" d="M516.72,-1159.49C508.94,-1082.6 487.4,-918.66 436.5,-790 429.36,-771.95 420.04,-753.64 410.1,-736.33"/>
-<polygon fill="none" stroke="midnightblue" points="513.26,-1160.14 517.73,-1169.75 520.23,-1159.46 513.26,-1160.14"/>
+<path fill="none" stroke="midnightblue" d="M516.5,-1159.58C508.39,-1082.82 486.36,-919.07 436.5,-790 428.82,-770.11 418.66,-749.82 407.93,-730.8"/>
+<polygon fill="none" stroke="midnightblue" points="513.05,-1160.23 517.56,-1169.82 520.02,-1159.51 513.05,-1160.23"/>
 </g>
 </g>
 </svg>

@@ -128,6 +128,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a13434001e0c607a57e55ee0f78442c02"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a13434001e0c607a57e55ee0f78442c02">Rotate</a> (TLocalVectorType &amp;rLocalVector, <a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a06fccfc36af564d5fd78e475be8c3652">GeometryType</a> &amp;rGeometry) const</td></tr>
 <tr class="memdesc:a13434001e0c607a57e55ee0f78442c02"><td class="mdescLeft">&#160;</td><td class="mdescRight">RHS only version of Rotate.  <a href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a13434001e0c607a57e55ee0f78442c02">More...</a><br /></td></tr>
 <tr class="separator:a13434001e0c607a57e55ee0f78442c02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84e323adb75f94bf90a6b0b81ea4e1ee"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a84e323adb75f94bf90a6b0b81ea4e1ee">RevertRotate</a> (TLocalVectorType &amp;rLocalVector, <a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a06fccfc36af564d5fd78e475be8c3652">GeometryType</a> &amp;rGeometry) const</td></tr>
+<tr class="memdesc:a84e323adb75f94bf90a6b0b81ea4e1ee"><td class="mdescLeft">&#160;</td><td class="mdescRight">RHS only version of Rotate which reverts the rotation to the original frame.  <a href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a84e323adb75f94bf90a6b0b81ea4e1ee">More...</a><br /></td></tr>
+<tr class="separator:a84e323adb75f94bf90a6b0b81ea4e1ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa009a5cdaa5525824d38e491a61d6ab5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#aa009a5cdaa5525824d38e491a61d6ab5">ApplySlipCondition</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a06fccfc36af564d5fd78e475be8c3652">GeometryType</a> &amp;rGeometry) const</td></tr>
 <tr class="memdesc:aa009a5cdaa5525824d38e491a61d6ab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply slip boundary conditions to the rotated local contributions.  <a href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#aa009a5cdaa5525824d38e491a61d6ab5">More...</a><br /></td></tr>
 <tr class="separator:aa009a5cdaa5525824d38e491a61d6ab5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -154,12 +157,14 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Protected Operations</div></td></tr>
-<tr class="memitem:a380830bd819ae76114f81e6c6aac4a9e"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TBlockSize, unsigned int TSkip = 0&gt; </td></tr>
-<tr class="memitem:a380830bd819ae76114f81e6c6aac4a9e"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a380830bd819ae76114f81e6c6aac4a9e">RotateAux</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a06fccfc36af564d5fd78e475be8c3652">GeometryType</a> &amp;rGeometry) const</td></tr>
-<tr class="separator:a380830bd819ae76114f81e6c6aac4a9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3970ce3c4bce1fa2da0c862ea9cf6547"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim&gt; </td></tr>
-<tr class="memitem:a3970ce3c4bce1fa2da0c862ea9cf6547"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a3970ce3c4bce1fa2da0c862ea9cf6547">RotateAuxPure</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a06fccfc36af564d5fd78e475be8c3652">GeometryType</a> &amp;rGeometry) const</td></tr>
-<tr class="separator:a3970ce3c4bce1fa2da0c862ea9cf6547"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b6b8d7a65157b354c94a8f1ffeaef52"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, unsigned int TBlockSize, unsigned int TSkip = 0, bool TRevertRotation = false&gt; </td></tr>
+<tr class="memitem:a3b6b8d7a65157b354c94a8f1ffeaef52"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a3b6b8d7a65157b354c94a8f1ffeaef52">RotateAux</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a06fccfc36af564d5fd78e475be8c3652">GeometryType</a> &amp;rGeometry) const</td></tr>
+<tr class="memdesc:a3b6b8d7a65157b354c94a8f1ffeaef52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxilliary function to rotate local system contributions between the original and tangential-normal frames of reference, to be used when pressure etc. is present.  <a href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a3b6b8d7a65157b354c94a8f1ffeaef52">More...</a><br /></td></tr>
+<tr class="separator:a3b6b8d7a65157b354c94a8f1ffeaef52"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfbc8c9cad7175f7d57f72a24bdf645c"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim, bool TRevertRotation = false&gt; </td></tr>
+<tr class="memitem:abfbc8c9cad7175f7d57f72a24bdf645c"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#abfbc8c9cad7175f7d57f72a24bdf645c">RotateAuxPure</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a06fccfc36af564d5fd78e475be8c3652">GeometryType</a> &amp;rGeometry) const</td></tr>
+<tr class="memdesc:abfbc8c9cad7175f7d57f72a24bdf645c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Auxilliary function to rotate local system contributions between the original and tangential-normal frames of reference, to be used when there is only velocity (no additional pressure or other var block)  <a href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#abfbc8c9cad7175f7d57f72a24bdf645c">More...</a><br /></td></tr>
+<tr class="separator:abfbc8c9cad7175f7d57f72a24bdf645c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9fac5a3450223b8d00002850ff5ed744"><td class="memTemplParams" colspan="2">template&lt;unsigned int TBlockSize, unsigned int TSkip = 0&gt; </td></tr>
 <tr class="memitem:a9fac5a3450223b8d00002850ff5ed744"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a9fac5a3450223b8d00002850ff5ed744">LocalRotationOperator2D</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TBlockSize, TBlockSize &gt; &amp;rRot, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a12586a83f5fd7e8430d9e8bbec6aa0b1">GeometryType::PointType</a> &amp;rThisPoint) const</td></tr>
 <tr class="separator:a9fac5a3450223b8d00002850ff5ed744"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1064,6 +1069,53 @@ template&lt;class TLocalMatrixType , class TLocalVectorType , class TValueType &
 
 </div>
 </div>
+<a id="a84e323adb75f94bf90a6b0b81ea4e1ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a84e323adb75f94bf90a6b0b81ea4e1ee">&#9670;&nbsp;</a></span>RevertRotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TLocalMatrixType , class TLocalVectorType , class TValueType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html">Kratos::CoordinateTransformationUtils</a>&lt; TLocalMatrixType, TLocalVectorType, TValueType &gt;::RevertRotate </td>
+          <td>(</td>
+          <td class="paramtype">TLocalVectorType &amp;&#160;</td>
+          <td class="paramname"><em>rLocalVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dd/db2/class_kratos_1_1_coordinate_transformation_utils.html#a06fccfc36af564d5fd78e475be8c3652">GeometryType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rGeometry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>RHS only version of Rotate which reverts the rotation to the original frame. </p>
+<p>Rotates the local RHS vector (rLocalVector) in the tangential-normal coordinate system back to the original coordinate system </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rLocalVector</td><td>Local RHS vector associated with rGeometry, to be transformed </td></tr>
+    <tr><td class="paramname">rGeometry</td><td><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html" title="Geometry base class.">Geometry</a> associated with rLocalVector </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="adc9ac42342a5b72640557c718c535a98"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc9ac42342a5b72640557c718c535a98">&#9670;&nbsp;</a></span>Rotate() <span class="overload">[1/2]</span></h2>
 
@@ -1157,20 +1209,27 @@ template&lt;class TLocalMatrixType , class TLocalVectorType , class TValueType &
 </div><div class="memdoc">
 
 <p>RHS only version of Rotate. </p>
+<p>Rotates the local RHS vector (rLocalVector) to a tangential-normal coordinate system defined by the normals of the associated rGeometry </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rLocalVector</td><td>Local RHS vector associated with rGeometry, to be transformed </td></tr>
+    <tr><td class="paramname">rGeometry</td><td><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html" title="Geometry base class.">Geometry</a> associated with rLocalVector </td></tr>
+  </table>
+  </dd>
+</dl>
 
 <p>Reimplemented in <a class="el" href="../../dd/d58/class_kratos_1_1_compressible_element_rotation_utility.html#ad2a9ffc79f822cef7425112275e43bb3">Kratos::CompressibleElementRotationUtility&lt; TLocalMatrixType, TLocalVectorType &gt;</a>.</p>
 
 </div>
 </div>
-<a id="a380830bd819ae76114f81e6c6aac4a9e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a380830bd819ae76114f81e6c6aac4a9e">&#9670;&nbsp;</a></span>RotateAux()</h2>
+<a id="a3b6b8d7a65157b354c94a8f1ffeaef52"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b6b8d7a65157b354c94a8f1ffeaef52">&#9670;&nbsp;</a></span>RotateAux()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class TLocalMatrixType , class TLocalVectorType , class TValueType &gt; </div>
 <div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TBlockSize, unsigned int TSkip = 0&gt; </div>
+template&lt;unsigned int TDim, unsigned int TBlockSize, unsigned int TSkip = 0, bool TRevertRotation = false&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1206,17 +1265,36 @@ template&lt;unsigned int TDim, unsigned int TBlockSize, unsigned int TSkip = 0&g
 </table>
 </div><div class="memdoc">
 
+<p>Auxilliary function to rotate local system contributions between the original and tangential-normal frames of reference, to be used when pressure etc. is present. </p>
+<p>Transforms the local system based on the normal associated with the rGeometry into tangential- normal coordinates if TRevertRotation is false. Otherwise, the rotation matrix used is transposed and the inverse transformation is applied &ndash; this transforms the system back to the original coordinate system. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TDim</td><td>Number of spatial dimensions </td></tr>
+    <tr><td class="paramname">TBlockSize</td><td>Total number of DoFs associated with each node </td></tr>
+    <tr><td class="paramname">TSkip</td><td>Auxiliary value to shift the entries of the rotated array </td></tr>
+    <tr><td class="paramname">TRevertRotation</td><td>Boolean indicating if the transformation is reverted (true -&gt; revert transformation) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rLocalMatrix</td><td>Local LHS matrix contribution associated with rGeometry </td></tr>
+    <tr><td class="paramname">rLocalVector</td><td>Local RHS vector contribution associated with rGeometry </td></tr>
+    <tr><td class="paramname">rGeometry</td><td><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html" title="Geometry base class.">Geometry</a> associated with local system </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
-<a id="a3970ce3c4bce1fa2da0c862ea9cf6547"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3970ce3c4bce1fa2da0c862ea9cf6547">&#9670;&nbsp;</a></span>RotateAuxPure()</h2>
+<a id="abfbc8c9cad7175f7d57f72a24bdf645c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abfbc8c9cad7175f7d57f72a24bdf645c">&#9670;&nbsp;</a></span>RotateAuxPure()</h2>
 
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
 template&lt;class TLocalMatrixType , class TLocalVectorType , class TValueType &gt; </div>
 <div class="memtemplate">
-template&lt;unsigned int TDim&gt; </div>
+template&lt;unsigned int TDim, bool TRevertRotation = false&gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
@@ -1251,6 +1329,23 @@ template&lt;unsigned int TDim&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Auxilliary function to rotate local system contributions between the original and tangential-normal frames of reference, to be used when there is only velocity (no additional pressure or other var block) </p>
+<p>Transforms the local system based on the normal associated with the rGeometry into tangential- normal coordinates if TRevertRotation is false. Otherwise, the rotation matrix used is transposed and the inverse transformation is applied &ndash; this transforms the system back to the original coordinate system. </p><dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TDim</td><td>Number of spatial dimensions </td></tr>
+    <tr><td class="paramname">TRevertRotation</td><td>Boolean indicating if the transformation is reverted (true -&gt; revert transformation) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rLocalMatrix</td><td>Local LHS matrix contribution associated with rGeometry </td></tr>
+    <tr><td class="paramname">rLocalVector</td><td>Local RHS vector contribution associated with rGeometry </td></tr>
+    <tr><td class="paramname">rGeometry</td><td><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html" title="Geometry base class.">Geometry</a> associated with local system </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -1292,7 +1387,7 @@ template&lt;class TLocalMatrixType , class TLocalVectorType , class TValueType &
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 22 2024 03:21:02 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Jul 23 2024 03:17:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
