@@ -88,13 +88,13 @@ $(function() {
 <div class="dynheader">
 Inheritance diagram for responses.response_function.ResponseFunction:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/df7/classresponses_1_1response__function_1_1_response_function__inherit__graph.svg" width="254" height="375"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d6/df7/classresponses_1_1response__function_1_1_response_function__inherit__graph.svg" width="254" height="360"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <div class="dynheader">
 Collaboration diagram for responses.response_function.ResponseFunction:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/d61/classresponses_1_1response__function_1_1_response_function__coll__graph.svg" width="254" height="375"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d5/d61/classresponses_1_1response__function_1_1_response_function__coll__graph.svg" width="254" height="360"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -122,12 +122,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeeb273cae650c9a82a9afdbba74fa342"><td class="memItemLeft" align="right" valign="top">None&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/classresponses_1_1response__function_1_1_response_function.html#aeeb273cae650c9a82a9afdbba74fa342">CalculateGradient</a> (self, 'dict[SupportedSensitivityFieldVariableTypes, KratosOA.CollectiveExpression]' physical_variable_collective_expressions)</td></tr>
 <tr class="memdesc:aeeb273cae650c9a82a9afdbba74fa342"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate gradient w.r.t.  <a href="../../dc/d2f/classresponses_1_1response__function_1_1_response_function.html#aeeb273cae650c9a82a9afdbba74fa342">More...</a><br /></td></tr>
 <tr class="separator:aeeb273cae650c9a82a9afdbba74fa342"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e8a4e9c5306f62cee9037cabeafee1c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos.ModelPart</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/classresponses_1_1response__function_1_1_response_function.html#a5e8a4e9c5306f62cee9037cabeafee1c">GetEvaluatedModelPart</a> (self)</td></tr>
-<tr class="memdesc:a5e8a4e9c5306f62cee9037cabeafee1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model part for which this response is computed on.  <a href="../../dc/d2f/classresponses_1_1response__function_1_1_response_function.html#a5e8a4e9c5306f62cee9037cabeafee1c">More...</a><br /></td></tr>
-<tr class="separator:a5e8a4e9c5306f62cee9037cabeafee1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa581bdfd7890912021381c85a846c137"><td class="memItemLeft" align="right" valign="top"> 'Union[<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos.ModelPart</a>, None]'&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/classresponses_1_1response__function_1_1_response_function.html#aa581bdfd7890912021381c85a846c137">GetAnalysisModelPart</a> (self)</td></tr>
-<tr class="memdesc:aa581bdfd7890912021381c85a846c137"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the analysis model part if exists.  <a href="../../dc/d2f/classresponses_1_1response__function_1_1_response_function.html#aa581bdfd7890912021381c85a846c137">More...</a><br /></td></tr>
-<tr class="separator:aa581bdfd7890912021381c85a846c137"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a502acae5524c8383878ad46f210763b5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos.ModelPart</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/d2f/classresponses_1_1response__function_1_1_response_function.html#a502acae5524c8383878ad46f210763b5">GetInfluencingModelPart</a> (self)</td></tr>
+<tr class="memdesc:a502acae5524c8383878ad46f210763b5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the model part which influences the computation of the response value.  <a href="../../dc/d2f/classresponses_1_1response__function_1_1_response_function.html#a502acae5524c8383878ad46f210763b5">More...</a><br /></td></tr>
+<tr class="separator:a502acae5524c8383878ad46f210763b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base response function. </p>
@@ -275,53 +272,6 @@ a single model part should be created using Kratos.ModelPartOperationUtilities.
 </pre> 
 </div>
 </div>
-<a id="aa581bdfd7890912021381c85a846c137"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa581bdfd7890912021381c85a846c137">&#9670;&nbsp;</a></span>GetAnalysisModelPart()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"> 'Union[<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos.ModelPart</a>, None]' responses.response_function.ResponseFunction.GetAnalysisModelPart </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the analysis model part if exists. </p>
-<p>Otherwise returns None. </p><pre class="fragment">    This method returns the analysis model part if an analysis is used (as in Adjoint case)
-    to compute the gradients. If it is not the case, then None should be returned.
-
-    Returns:
-        Union[Kratos.ModelPart, None]: Analysis model part if used, otherwise None
-</pre> 
-</div>
-</div>
-<a id="a5e8a4e9c5306f62cee9037cabeafee1c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e8a4e9c5306f62cee9037cabeafee1c">&#9670;&nbsp;</a></span>GetEvaluatedModelPart()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"> <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos.ModelPart</a> responses.response_function.ResponseFunction.GetEvaluatedModelPart </td>
-          <td>(</td>
-          <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Returns the model part for which this response is computed on. </p>
-<pre class="fragment">    Returns:
-        Kratos.ModelPart: Response function model part.
-</pre> 
-</div>
-</div>
 <a id="a55d08b87c98d1468ec6fcc3124f1f7fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a55d08b87c98d1468ec6fcc3124f1f7fe">&#9670;&nbsp;</a></span>GetImplementedPhysicalKratosVariables()</h2>
 
@@ -348,6 +298,38 @@ a single model part should be created using Kratos.ModelPartOperationUtilities.
 
     Returns:
         list[SupportedSensitivityFieldVariableTypes]: All dependent physical variables of the response.
+</pre> 
+</div>
+</div>
+<a id="a502acae5524c8383878ad46f210763b5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a502acae5524c8383878ad46f210763b5">&#9670;&nbsp;</a></span>GetInfluencingModelPart()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"> <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos.ModelPart</a> responses.response_function.ResponseFunction.GetInfluencingModelPart </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Returns the model part which influences the computation of the response value. </p>
+<pre class="fragment">    Following two cases are considered:
+        1. Responses without adjoint system solve: The value of the response can only be influenced by
+           changing the quantities in the evaluated model part (evaluated model part is the one which the
+           response value is computed.) Therefore, in this case, this method should return the
+           evaluated model part.
+        2. Responses with adjoint system solve: The value of the response can be influenced by
+            changing quantities in the adjoint/primal model part (Evaluated model part needs to have
+            intersection with the adjoint/primal model part). Therefore, in this case, this method should return the
+            adjoint analysis model part.
+
+    Returns:
+        Kratos.ModelPart: Response function model part which influences the response value.
 </pre> 
 </div>
 </div>
@@ -396,7 +378,7 @@ a single model part should be created using Kratos.ModelPartOperationUtilities.
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jul 28 2024 04:12:50 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Mon Jul 29 2024 04:10:39 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
