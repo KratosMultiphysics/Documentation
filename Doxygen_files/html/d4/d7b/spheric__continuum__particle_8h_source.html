@@ -209,7 +209,7 @@ $(function() {
 <div class="line"><a name="l00134"></a><span class="lineno"><a class="line" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html#a6b52642b6edfa7f272c33f149bcfbc60">  134</a></span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html#a6b52642b6edfa7f272c33f149bcfbc60">mInitialNeighborsSize</a>;</div>
 <div class="line"><a name="l00135"></a><span class="lineno"><a class="line" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html#a56fdcd590efad03364bf51a24e4cbf63">  135</a></span>&#160;        std::vector&lt;Kratos::DEMContinuumConstitutiveLaw::Pointer&gt; <a class="code" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html#a56fdcd590efad03364bf51a24e4cbf63">mContinuumConstitutiveLawArray</a>;</div>
 <div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html#a9f175232871d66831f7b40017260ad4d">  136</a></span>&#160;        <span class="keywordtype">double</span> mLocalRadiusAmplificationFactor = 1.0;</div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html#a4baaafb24e148d391c02362b3c14427e">  137</a></span>&#160;        <span class="keywordtype">double</span> mLocalJointNormal[3];</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="comment">//double mLocalJointNormal[3];</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
@@ -308,8 +308,8 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_spheric_continuum_particle_html_af12e4beab558b6b5eb30bb711be0668c"><div class="ttname"><a href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html#af12e4beab558b6b5eb30bb711be0668c">Kratos::SphericContinuumParticle::mIniNeighbourFailureId</a></div><div class="ttdeci">std::vector&lt; int &gt; mIniNeighbourFailureId</div><div class="ttdef"><b>Definition:</b> spheric_continuum_particle.h:130</div></div>
 <div class="ttc" id="aclass_kratos_1_1_spheric_continuum_particle_html_af18dd808336c15ed61c06e775ae8e8a5"><div class="ttname"><a href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html#af18dd808336c15ed61c06e775ae8e8a5">Kratos::SphericContinuumParticle::mFemIniNeighbourIds</a></div><div class="ttdeci">std::vector&lt; int &gt; mFemIniNeighbourIds</div><div class="ttdef"><b>Definition:</b> spheric_continuum_particle.h:155</div></div>
 <div class="ttc" id="aclass_kratos_1_1_spheric_continuum_particle_html_af5278e5038e9f08776b152e3abf38790"><div class="ttname"><a href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html#af5278e5038e9f08776b152e3abf38790">Kratos::SphericContinuumParticle::IsSkin</a></div><div class="ttdeci">virtual bool IsSkin()</div><div class="ttdef"><b>Definition:</b> spheric_continuum_particle.h:110</div></div>
-<div class="ttc" id="aclass_kratos_1_1_spheric_particle_1_1_particle_data_buffer_html"><div class="ttname"><a href="../../db/d16/class_kratos_1_1_spheric_particle_1_1_particle_data_buffer.html">Kratos::SphericParticle::ParticleDataBuffer</a></div><div class="ttdef"><b>Definition:</b> spheric_particle.h:59</div></div>
-<div class="ttc" id="aclass_kratos_1_1_spheric_particle_html"><div class="ttname"><a href="../../dd/d19/class_kratos_1_1_spheric_particle.html">Kratos::SphericParticle</a></div><div class="ttdef"><b>Definition:</b> spheric_particle.h:31</div></div>
+<div class="ttc" id="aclass_kratos_1_1_spheric_particle_1_1_particle_data_buffer_html"><div class="ttname"><a href="../../db/d16/class_kratos_1_1_spheric_particle_1_1_particle_data_buffer.html">Kratos::SphericParticle::ParticleDataBuffer</a></div><div class="ttdef"><b>Definition:</b> spheric_particle.h:60</div></div>
+<div class="ttc" id="aclass_kratos_1_1_spheric_particle_html"><div class="ttname"><a href="../../dd/d19/class_kratos_1_1_spheric_particle.html">Kratos::SphericParticle</a></div><div class="ttdef"><b>Definition:</b> spheric_particle.h:32</div></div>
 <div class="ttc" id="aclass_kratos_1_1_variable_html"><div class="ttname"><a href="../../d1/d66/class_kratos_1_1_variable.html">Kratos::Variable&lt; double &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1array__1d_html"><div class="ttname"><a href="../../d4/ddc/class_kratos_1_1array__1d.html">Kratos::array_1d&lt; double, 3 &gt;</a></div></div>
 <div class="ttc" id="adefine_8h_html"><div class="ttname"><a href="../../df/d67/define_8h.html">define.h</a></div></div>
@@ -328,7 +328,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jul 31 2024 02:00:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Aug 1 2024 02:29:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
