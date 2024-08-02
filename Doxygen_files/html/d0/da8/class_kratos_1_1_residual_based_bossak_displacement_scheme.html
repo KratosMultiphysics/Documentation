@@ -287,6 +287,9 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ad656c2d4b973a937efcb20cfd4733526"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html#ad656c2d4b973a937efcb20cfd4733526">AssignSettings</a> (const <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters) override</td></tr>
 <tr class="memdesc:ad656c2d4b973a937efcb20cfd4733526"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign member variables from <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>.  <a href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html#ad656c2d4b973a937efcb20cfd4733526">More...</a><br /></td></tr>
 <tr class="separator:ad656c2d4b973a937efcb20cfd4733526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba28174362bd0d08c6304ecb1bedb64d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html#aba28174362bd0d08c6304ecb1bedb64d">AuxiliarInitializeBossak</a> ()</td></tr>
+<tr class="memdesc:aba28174362bd0d08c6304ecb1bedb64d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Utility function for initializing some members.  <a href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html#aba28174362bd0d08c6304ecb1bedb64d">More...</a><br /></td></tr>
+<tr class="separator:aba28174362bd0d08c6304ecb1bedb64d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Protected Operations</div></td></tr>
 <tr class="inherit_header pro_methods_class_kratos_1_1_scheme"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_kratos_1_1_scheme')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a></td></tr>
 <tr class="memitem:a827975dad272bb42a442246694accf9c inherit pro_methods_class_kratos_1_1_scheme"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a827975dad272bb42a442246694accf9c">ValidateAndAssignParameters</a> (<a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters, const <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> DefaultParameters) const</td></tr>
@@ -1203,7 +1206,36 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#aa8dfc8e2c69b72ec89e2acdbeb017bba">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#af7f29de7a4b35593e21b6186d3aeb9f5">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#af7f29de7a4b35593e21b6186d3aeb9f5">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../dc/d3d/class_kratos_1_1_structural_mechanics_bossak_scheme.html#abc49f3e160fa5e82a79a93c356f671af">Kratos::StructuralMechanicsBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+
+</div>
+</div>
+<a id="aba28174362bd0d08c6304ecb1bedb64d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba28174362bd0d08c6304ecb1bedb64d">&#9670;&nbsp;</a></span>AuxiliarInitializeBossak()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html">Kratos::ResidualBasedBossakDisplacementScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::AuxiliarInitializeBossak </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Utility function for initializing some members. </p>
 
 </div>
 </div>
@@ -1336,7 +1368,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#afd523af3c0a75222b3e50e88606444ea">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#ae638c6c2ac068070dd2cb827c9a8f28c">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#a713b91ec131a99ecff8515191dd7e07c">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a88fa2989c97aa22233373eb48ef38339">Kratos::MPMResidualBasedBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#ae638c6c2ac068070dd2cb827c9a8f28c">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#a713b91ec131a99ecff8515191dd7e07c">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, <a class="el" href="../../dc/d3d/class_kratos_1_1_structural_mechanics_bossak_scheme.html#a00c04152d4a2fd4eade1307d786e4399">Kratos::StructuralMechanicsBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a88fa2989c97aa22233373eb48ef38339">Kratos::MPMResidualBasedBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
 </div>
 </div>
@@ -1376,7 +1408,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#ac981b61bc9e20b66f69639ac467735b2">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#aea4990b365bf199e4a32b9e7e228f9a3">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#aeb75649cbd9bb5552b439244a82259cf">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#aea4990b365bf199e4a32b9e7e228f9a3">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#aeb75649cbd9bb5552b439244a82259cf">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../dc/d3d/class_kratos_1_1_structural_mechanics_bossak_scheme.html#a00adf4fc8f5563f3292c17de4f6b69d1">Kratos::StructuralMechanicsBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
 </div>
 </div>
@@ -1409,7 +1441,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a3636124004b6b6b1ffc0a9e32fda160d">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#a49de70b3b14fe01d32a6b79e605842eb">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#a4db54dbb60b3d96fedfa4ef0f8ba2e1b">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#a49de70b3b14fe01d32a6b79e605842eb">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#a4db54dbb60b3d96fedfa4ef0f8ba2e1b">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../dc/d3d/class_kratos_1_1_structural_mechanics_bossak_scheme.html#a4bad55f595de443081f8dd560a04038d">Kratos::StructuralMechanicsBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
 </div>
 </div>
@@ -1442,7 +1474,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#ae1b2708d323dabd1a57170e6d0910a9d">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#a546597e507d529d1bea1c0218e84a9ef">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#af6ad09559ef688a98fee610046032406">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#a546597e507d529d1bea1c0218e84a9ef">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#af6ad09559ef688a98fee610046032406">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../dc/d3d/class_kratos_1_1_structural_mechanics_bossak_scheme.html#abd77f2eb12f41262f62029546ec0daac">Kratos::StructuralMechanicsBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
 </div>
 </div>
@@ -1508,7 +1540,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a8b23e1040579e6ca60837d1bff4253e2">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a1f3d8c53ddb7c6206bdad1d514873d8a">Kratos::MPMResidualBasedBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a1f3d8c53ddb7c6206bdad1d514873d8a">Kratos::MPMResidualBasedBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../dc/d3d/class_kratos_1_1_structural_mechanics_bossak_scheme.html#ac27e2d02c08d4c6b7a6b5039104f586b">Kratos::StructuralMechanicsBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
 </div>
 </div>
@@ -1666,7 +1698,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a9d1312108df64b3f057cc8525cbc728e">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#a6c5e2091a791452f6aa42fc63936e75b">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#a5e026299ce9a5d081f018f0370d4b966">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#a6c5e2091a791452f6aa42fc63936e75b">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#a5e026299ce9a5d081f018f0370d4b966">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../dc/d3d/class_kratos_1_1_structural_mechanics_bossak_scheme.html#a39e61d576c558b735512bfdb54df8d92">Kratos::StructuralMechanicsBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
 </div>
 </div>
@@ -1700,7 +1732,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 <p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a55fb779bd2e771697e3a8937421664d2">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#aa6ab44d7ac8dfeead87787387538395d">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#a4c44d1b62d01b1ce3d7661059a57bf72">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+<p>Reimplemented in <a class="el" href="../../d3/df0/class_kratos_1_1_residual_based_pseudo_static_displacement_scheme.html#aa6ab44d7ac8dfeead87787387538395d">Kratos::ResidualBasedPseudoStaticDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, <a class="el" href="../../d2/d03/class_kratos_1_1_residual_based_newmark_displacement_scheme.html#a4c44d1b62d01b1ce3d7661059a57bf72">Kratos::ResidualBasedNewmarkDisplacementScheme&lt; TSparseSpace, TDenseSpace &gt;</a>, and <a class="el" href="../../dc/d3d/class_kratos_1_1_structural_mechanics_bossak_scheme.html#ac0ceb01d56acbdfb1058e47cabe04092">Kratos::StructuralMechanicsBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
 </div>
 </div>
@@ -2011,7 +2043,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Aug 1 2024 03:24:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Aug 2 2024 03:17:52 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
