@@ -330,7 +330,7 @@ $(function() {
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> Rank</div>
 <div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;        )</div>
 <div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;    {</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">if</span> constexpr (!TSparseSpace::IsDistributedSpace()) {</div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;        <span class="keywordflow">if</span> constexpr (!TSparseSpace::IsDistributed()) {</div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <span class="keywordflow">return</span> rDof.IsFree();</div>
 <div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        } <span class="keywordflow">else</span> {</div>
 <div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="keywordflow">return</span> (rDof.IsFree() &amp;&amp; (rDof.GetSolutionStepValue(PARTITION_INDEX) == Rank));</div>
@@ -467,7 +467,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 6 2024 03:11:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 7 2024 03:14:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
