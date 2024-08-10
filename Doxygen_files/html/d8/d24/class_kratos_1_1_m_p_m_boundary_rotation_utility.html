@@ -99,9 +99,9 @@ Collaboration diagram for Kratos::MPMBoundaryRotationUtility&lt; TLocalMatrixTyp
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Life Cycle</div></td></tr>
-<tr class="memitem:aa2d297dc9965530a8d78281fa44a92ef"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aa2d297dc9965530a8d78281fa44a92ef">MPMBoundaryRotationUtility</a> (const unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> DomainSize, const unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> BlockSize, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rVariable)</td></tr>
-<tr class="memdesc:aa2d297dc9965530a8d78281fa44a92ef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aa2d297dc9965530a8d78281fa44a92ef">More...</a><br /></td></tr>
-<tr class="separator:aa2d297dc9965530a8d78281fa44a92ef"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a076fd9fa4d79c4ac1185c40a645dcd23"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a076fd9fa4d79c4ac1185c40a645dcd23">MPMBoundaryRotationUtility</a> (const unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> DomainSize, const unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> BlockSize)</td></tr>
+<tr class="memdesc:a076fd9fa4d79c4ac1185c40a645dcd23"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor.  <a href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a076fd9fa4d79c4ac1185c40a645dcd23">More...</a><br /></td></tr>
+<tr class="separator:a076fd9fa4d79c4ac1185c40a645dcd23"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdb261caf24fcc1ab76b829161da8175"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#afdb261caf24fcc1ab76b829161da8175">~MPMBoundaryRotationUtility</a> () override</td></tr>
 <tr class="memdesc:afdb261caf24fcc1ab76b829161da8175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <a href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#afdb261caf24fcc1ab76b829161da8175">More...</a><br /></td></tr>
 <tr class="separator:afdb261caf24fcc1ab76b829161da8175"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -112,27 +112,20 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a06313ca64878e4603147a6881d563621"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a06313ca64878e4603147a6881d563621">Rotate</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const override</td></tr>
 <tr class="memdesc:a06313ca64878e4603147a6881d563621"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rotate the local system contributions so that they are oriented with each node's normal.  <a href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a06313ca64878e4603147a6881d563621">More...</a><br /></td></tr>
 <tr class="separator:a06313ca64878e4603147a6881d563621"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9bf9b3ca46e238ba8f5bc90300b9349f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a9bf9b3ca46e238ba8f5bc90300b9349f">RotateRHS</a> (TLocalVectorType &amp;rLocalVector, <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const</td></tr>
-<tr class="memdesc:a9bf9b3ca46e238ba8f5bc90300b9349f"><td class="mdescLeft">&#160;</td><td class="mdescRight">RHS only version of Rotate.  <a href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a9bf9b3ca46e238ba8f5bc90300b9349f">More...</a><br /></td></tr>
-<tr class="separator:a9bf9b3ca46e238ba8f5bc90300b9349f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1bc760973804a7e34d3341f03ed667f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#af1bc760973804a7e34d3341f03ed667f">RevertRotate</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const</td></tr>
+<tr class="separator:af1bc760973804a7e34d3341f03ed667f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0cad6830a520a92994fae398722f3d85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a0cad6830a520a92994fae398722f3d85">ApplySlipCondition</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const override</td></tr>
 <tr class="memdesc:a0cad6830a520a92994fae398722f3d85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply roler type boundary conditions to the rotated local contributions.  <a href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a0cad6830a520a92994fae398722f3d85">More...</a><br /></td></tr>
 <tr class="separator:a0cad6830a520a92994fae398722f3d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93f05c16c9ddb2d9c69fb59bff0b0352"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a93f05c16c9ddb2d9c69fb59bff0b0352">ApplySlipCondition</a> (TLocalVectorType &amp;rLocalVector, <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const override</td></tr>
 <tr class="memdesc:a93f05c16c9ddb2d9c69fb59bff0b0352"><td class="mdescLeft">&#160;</td><td class="mdescRight">RHS only version of ApplySlipCondition.  <a href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a93f05c16c9ddb2d9c69fb59bff0b0352">More...</a><br /></td></tr>
 <tr class="separator:a93f05c16c9ddb2d9c69fb59bff0b0352"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a485d6b11adbf40dd44a5fe76962c57a1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a485d6b11adbf40dd44a5fe76962c57a1">ElementApplySlipCondition</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const</td></tr>
-<tr class="separator:a485d6b11adbf40dd44a5fe76962c57a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af244cc5d374a186b88c42218f872e336"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#af244cc5d374a186b88c42218f872e336">ElementApplySlipCondition</a> (TLocalVectorType &amp;rLocalVector, <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const</td></tr>
-<tr class="separator:af244cc5d374a186b88c42218f872e336"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf2400ea0a7a88c99b292665195e4887"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#abf2400ea0a7a88c99b292665195e4887">ConditionApplySlipCondition</a> (TLocalMatrixType &amp;rLocalMatrix, TLocalVectorType &amp;rLocalVector, <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const</td></tr>
-<tr class="separator:abf2400ea0a7a88c99b292665195e4887"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a143fc543388781295c05ee2deb54fe88"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a143fc543388781295c05ee2deb54fe88">ConditionApplySlipCondition</a> (TLocalVectorType &amp;rLocalVector, <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const</td></tr>
-<tr class="separator:a143fc543388781295c05ee2deb54fe88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47cbaa984f14636a5aa9adc3997f16b7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a47cbaa984f14636a5aa9adc3997f16b7">IsPenalty</a> (const <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a4dae763d2ca1828ef848171813100b83">NodeType</a> &amp;rNode) const</td></tr>
-<tr class="separator:a47cbaa984f14636a5aa9adc3997f16b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7e6dee37ae066571062cbaf91c627a48"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a7e6dee37ae066571062cbaf91c627a48">IsPenalty</a> (const <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const</td></tr>
-<tr class="separator:a7e6dee37ae066571062cbaf91c627a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc6c0e4afe4c9b626eddd85d0ed856da"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#afc6c0e4afe4c9b626eddd85d0ed856da">IsParticleBasedSlip</a> (const <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a4dae763d2ca1828ef848171813100b83">NodeType</a> &amp;rNode) const</td></tr>
+<tr class="separator:afc6c0e4afe4c9b626eddd85d0ed856da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a863471ad27c4714f983270938bda7540"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a863471ad27c4714f983270938bda7540">IsParticleBasedSlip</a> (const <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;rGeometry) const</td></tr>
+<tr class="separator:a863471ad27c4714f983270938bda7540"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa27d641b0c7f0c09564bba85c139d8d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#afa27d641b0c7f0c09564bba85c139d8d">IsConformingSlip</a> (const <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a4dae763d2ca1828ef848171813100b83">NodeType</a> &amp;rNode) const</td></tr>
+<tr class="separator:afa27d641b0c7f0c09564bba85c139d8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a204f15d15651775c292c937cc8b5d690"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a204f15d15651775c292c937cc8b5d690">RotateDisplacements</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart) const</td></tr>
 <tr class="memdesc:a204f15d15651775c292c937cc8b5d690"><td class="mdescLeft">&#160;</td><td class="mdescRight">Same functionalities as RotateVelocities, just to have a clear function naming.  <a href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a204f15d15651775c292c937cc8b5d690">More...</a><br /></td></tr>
 <tr class="separator:a204f15d15651775c292c937cc8b5d690"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -267,8 +260,8 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="aa2d297dc9965530a8d78281fa44a92ef"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa2d297dc9965530a8d78281fa44a92ef">&#9670;&nbsp;</a></span>MPMBoundaryRotationUtility()</h2>
+<a id="a076fd9fa4d79c4ac1185c40a645dcd23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a076fd9fa4d79c4ac1185c40a645dcd23">&#9670;&nbsp;</a></span>MPMBoundaryRotationUtility()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,13 +281,7 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const unsigned <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>&#160;</td>
-          <td class="paramname"><em>BlockSize</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>rVariable</em>&#160;</td>
+          <td class="paramname"><em>BlockSize</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -498,170 +485,6 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
 
 </div>
 </div>
-<a id="abf2400ea0a7a88c99b292665195e4887"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf2400ea0a7a88c99b292665195e4887">&#9670;&nbsp;</a></span>ConditionApplySlipCondition() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::ConditionApplySlipCondition </td>
-          <td>(</td>
-          <td class="paramtype">TLocalMatrixType &amp;&#160;</td>
-          <td class="paramname"><em>rLocalMatrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TLocalVectorType &amp;&#160;</td>
-          <td class="paramname"><em>rLocalVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;&#160;</td>
-          <td class="paramname"><em>rGeometry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a143fc543388781295c05ee2deb54fe88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a143fc543388781295c05ee2deb54fe88">&#9670;&nbsp;</a></span>ConditionApplySlipCondition() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::ConditionApplySlipCondition </td>
-          <td>(</td>
-          <td class="paramtype">TLocalVectorType &amp;&#160;</td>
-          <td class="paramname"><em>rLocalVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;&#160;</td>
-          <td class="paramname"><em>rGeometry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a485d6b11adbf40dd44a5fe76962c57a1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a485d6b11adbf40dd44a5fe76962c57a1">&#9670;&nbsp;</a></span>ElementApplySlipCondition() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::ElementApplySlipCondition </td>
-          <td>(</td>
-          <td class="paramtype">TLocalMatrixType &amp;&#160;</td>
-          <td class="paramname"><em>rLocalMatrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">TLocalVectorType &amp;&#160;</td>
-          <td class="paramname"><em>rLocalVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;&#160;</td>
-          <td class="paramname"><em>rGeometry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="af244cc5d374a186b88c42218f872e336"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af244cc5d374a186b88c42218f872e336">&#9670;&nbsp;</a></span>ElementApplySlipCondition() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::ElementApplySlipCondition </td>
-          <td>(</td>
-          <td class="paramtype">TLocalVectorType &amp;&#160;</td>
-          <td class="paramname"><em>rLocalVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;&#160;</td>
-          <td class="paramname"><em>rGeometry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a1d42e33b3a14e8b609ff3ed1ee645202"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1d42e33b3a14e8b609ff3ed1ee645202">&#9670;&nbsp;</a></span>GetSlidingState()</h2>
 
@@ -720,8 +543,8 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
 
 </div>
 </div>
-<a id="a7e6dee37ae066571062cbaf91c627a48"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7e6dee37ae066571062cbaf91c627a48">&#9670;&nbsp;</a></span>IsPenalty() <span class="overload">[1/2]</span></h2>
+<a id="afa27d641b0c7f0c09564bba85c139d8d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afa27d641b0c7f0c09564bba85c139d8d">&#9670;&nbsp;</a></span>IsConformingSlip()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -732,7 +555,35 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::IsPenalty </td>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::IsConformingSlip </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a4dae763d2ca1828ef848171813100b83">NodeType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rNode</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a863471ad27c4714f983270938bda7540"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a863471ad27c4714f983270938bda7540">&#9670;&nbsp;</a></span>IsParticleBasedSlip() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::IsParticleBasedSlip </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;&#160;</td>
           <td class="paramname"><em>rGeometry</em></td><td>)</td>
@@ -748,8 +599,8 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
 
 </div>
 </div>
-<a id="a47cbaa984f14636a5aa9adc3997f16b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47cbaa984f14636a5aa9adc3997f16b7">&#9670;&nbsp;</a></span>IsPenalty() <span class="overload">[2/2]</span></h2>
+<a id="afc6c0e4afe4c9b626eddd85d0ed856da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc6c0e4afe4c9b626eddd85d0ed856da">&#9670;&nbsp;</a></span>IsParticleBasedSlip() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -760,7 +611,7 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::IsPenalty </td>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::IsParticleBasedSlip </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#a4dae763d2ca1828ef848171813100b83">NodeType</a> &amp;&#160;</td>
           <td class="paramname"><em>rNode</em></td><td>)</td>
@@ -953,6 +804,50 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
 
 </div>
 </div>
+<a id="af1bc760973804a7e34d3341f03ed667f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af1bc760973804a7e34d3341f03ed667f">&#9670;&nbsp;</a></span>RevertRotate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::RevertRotate </td>
+          <td>(</td>
+          <td class="paramtype">TLocalMatrixType &amp;&#160;</td>
+          <td class="paramname"><em>rLocalMatrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TLocalVectorType &amp;&#160;</td>
+          <td class="paramname"><em>rLocalVector</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rGeometry</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a06313ca64878e4603147a6881d563621"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a06313ca64878e4603147a6881d563621">&#9670;&nbsp;</a></span>Rotate()</h2>
 
@@ -1036,46 +931,6 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
 </div><div class="memdoc">
 
 <p>Same functionalities as RotateVelocities, just to have a clear function naming. </p>
-
-</div>
-</div>
-<a id="a9bf9b3ca46e238ba8f5bc90300b9349f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9bf9b3ca46e238ba8f5bc90300b9349f">&#9670;&nbsp;</a></span>RotateRHS()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html">Kratos::MPMBoundaryRotationUtility</a>&lt; TLocalMatrixType, TLocalVectorType &gt;::RotateRHS </td>
-          <td>(</td>
-          <td class="paramtype">TLocalVectorType &amp;&#160;</td>
-          <td class="paramname"><em>rLocalVector</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../d8/d24/class_kratos_1_1_m_p_m_boundary_rotation_utility.html#aeecb4cf66c59becb331faa127a07b4f2">GeometryType</a> &amp;&#160;</td>
-          <td class="paramname"><em>rGeometry</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>RHS only version of Rotate. </p>
 
 </div>
 </div>
@@ -1170,7 +1025,7 @@ template&lt;class TLocalMatrixType , class TLocalVectorType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 9 2024 03:50:35 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Aug 10 2024 03:48:13 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

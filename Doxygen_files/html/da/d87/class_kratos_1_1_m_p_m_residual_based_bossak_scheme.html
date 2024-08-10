@@ -151,6 +151,9 @@ Collaboration diagram for Kratos::MPMResidualBasedBossakScheme&lt; TSparseSpace,
 <tr class="separator:a88fa2989c97aa22233373eb48ef38339"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a686985fb40e132f5cf396ad9bd4d8558"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a686985fb40e132f5cf396ad9bd4d8558">~MPMResidualBasedBossakScheme</a> ()</td></tr>
 <tr class="separator:a686985fb40e132f5cf396ad9bd4d8558"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34a59faf6e988d900a9f7f81b7d78183"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a34a59faf6e988d900a9f7f81b7d78183">Initialize</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart) override</td></tr>
+<tr class="memdesc:a34a59faf6e988d900a9f7f81b7d78183"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the place to initialize the <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html" title="This class provides the implementation of the basic tasks that are needed by the solution strategy.">Scheme</a>.  <a href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a34a59faf6e988d900a9f7f81b7d78183">More...</a><br /></td></tr>
+<tr class="separator:a34a59faf6e988d900a9f7f81b7d78183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a362044073eddae04b4e99617755c03e8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a362044073eddae04b4e99617755c03e8">Update</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html#ae98209c95fce6e200da4be40d6f6dcbc">DofsArrayType</a> &amp;rDofSet, <a class="el" href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html#a2e7e686950a2649b9f7b44c54ee989fb">TSystemMatrixType</a> &amp;rA, <a class="el" href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html#a48b2f4454db28b8caf6c06782d1c37a6">TSystemVectorType</a> &amp;rDx, <a class="el" href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html#a48b2f4454db28b8caf6c06782d1c37a6">TSystemVectorType</a> &amp;rb) override</td></tr>
 <tr class="memdesc:a362044073eddae04b4e99617755c03e8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performing the update of the solution.  <a href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a362044073eddae04b4e99617755c03e8">More...</a><br /></td></tr>
 <tr class="separator:a362044073eddae04b4e99617755c03e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -181,8 +184,8 @@ Collaboration diagram for Kratos::MPMResidualBasedBossakScheme&lt; TSparseSpace,
 <tr class="memitem:acf351d11df37f4a495789446f51e993e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#acf351d11df37f4a495789446f51e993e">CalculateRHSContribution</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a> &amp;rCurrentCondition, <a class="el" href="../../d0/da8/class_kratos_1_1_residual_based_bossak_displacement_scheme.html#a3ac77f11d1ea26feb22679b5c5633200">LocalSystemVectorType</a> &amp;RHS_Contribution, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="memdesc:acf351d11df37f4a495789446f51e993e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions that calculates the RHS of a "condition" object.  <a href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#acf351d11df37f4a495789446f51e993e">More...</a><br /></td></tr>
 <tr class="separator:acf351d11df37f4a495789446f51e993e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65a05c3f203be606eb0597b840208195"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a65a05c3f203be606eb0597b840208195">ClearReactionOnPenaltyBoundary</a> () const</td></tr>
-<tr class="separator:a65a05c3f203be606eb0597b840208195"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d1bd25d9c0e7fe8c4bb82d0c4093f3f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a5d1bd25d9c0e7fe8c4bb82d0c4093f3f">ClearConformingFrictionReaction</a> () const</td></tr>
+<tr class="separator:a5d1bd25d9c0e7fe8c4bb82d0c4093f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1534f19cae67e94cfcce008edbd5f6a1"><td class="memItemLeft" align="right" valign="top">TSparseSpace::DofUpdaterPointerType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a1534f19cae67e94cfcce008edbd5f6a1">mpDofUpdater</a></td></tr>
 <tr class="separator:a1534f19cae67e94cfcce008edbd5f6a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8c7650d5854783cd3ec158361ce6c25"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/dac/struct_kratos_1_1_residual_based_bossak_displacement_scheme_1_1_bossak_alpha_method.html">BossakAlphaMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#ae8c7650d5854783cd3ec158361ce6c25">mBossak</a></td></tr>
@@ -391,9 +394,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a79f311199cf2996a8eb58cc7cf556447 inherit pub_methods_class_kratos_1_1_scheme"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a79f311199cf2996a8eb58cc7cf556447">KRATOS_CLASS_POINTER_DEFINITION</a> (<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html">Scheme</a>)</td></tr>
 <tr class="memdesc:a79f311199cf2996a8eb58cc7cf556447 inherit pub_methods_class_kratos_1_1_scheme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html" title="This class provides the implementation of the basic tasks that are needed by the solution strategy.">Scheme</a>.  <a href="../../d1/da3/class_kratos_1_1_scheme.html#a79f311199cf2996a8eb58cc7cf556447">More...</a><br /></td></tr>
 <tr class="separator:a79f311199cf2996a8eb58cc7cf556447 inherit pub_methods_class_kratos_1_1_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8cc59e3895ee2bd8e6bd5e8b617d714a inherit pub_methods_class_kratos_1_1_scheme"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a8cc59e3895ee2bd8e6bd5e8b617d714a">Initialize</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
-<tr class="memdesc:a8cc59e3895ee2bd8e6bd5e8b617d714a inherit pub_methods_class_kratos_1_1_scheme"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the place to initialize the <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html" title="This class provides the implementation of the basic tasks that are needed by the solution strategy.">Scheme</a>.  <a href="../../d1/da3/class_kratos_1_1_scheme.html#a8cc59e3895ee2bd8e6bd5e8b617d714a">More...</a><br /></td></tr>
-<tr class="separator:a8cc59e3895ee2bd8e6bd5e8b617d714a inherit pub_methods_class_kratos_1_1_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31a366e1c36bde075071da84a085a078 inherit pub_methods_class_kratos_1_1_scheme"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a31a366e1c36bde075071da84a085a078">SchemeIsInitialized</a> ()</td></tr>
 <tr class="memdesc:a31a366e1c36bde075071da84a085a078 inherit pub_methods_class_kratos_1_1_scheme"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method returns if the scheme is initialized.  <a href="../../d1/da3/class_kratos_1_1_scheme.html#a31a366e1c36bde075071da84a085a078">More...</a><br /></td></tr>
 <tr class="separator:a31a366e1c36bde075071da84a085a078 inherit pub_methods_class_kratos_1_1_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1123,8 +1123,8 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 
 </div>
 </div>
-<a id="a65a05c3f203be606eb0597b840208195"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a65a05c3f203be606eb0597b840208195">&#9670;&nbsp;</a></span>ClearReactionOnPenaltyBoundary()</h2>
+<a id="a5d1bd25d9c0e7fe8c4bb82d0c4093f3f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d1bd25d9c0e7fe8c4bb82d0c4093f3f">&#9670;&nbsp;</a></span>ClearConformingFrictionReaction()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1135,7 +1135,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html">Kratos::MPMResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::ClearReactionOnPenaltyBoundary </td>
+          <td class="memname">void <a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html">Kratos::MPMResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::ClearConformingFrictionReaction </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -1304,6 +1304,44 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 </dl>
 
 <p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a8213309fd659c490bf8b07592f9ace1e">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a34a59faf6e988d900a9f7f81b7d78183"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a34a59faf6e988d900a9f7f81b7d78183">&#9670;&nbsp;</a></span>Initialize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html">Kratos::MPMResidualBasedBossakScheme</a>&lt; TSparseSpace, TDenseSpace &gt;::Initialize </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This is the place to initialize the <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html" title="This class provides the implementation of the basic tasks that are needed by the solution strategy.">Scheme</a>. </p>
+<p>This is intended to be called just once when the strategy is initialized </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part of the problem to solve </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented from <a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a8cc59e3895ee2bd8e6bd5e8b617d714a">Kratos::Scheme&lt; TSparseSpace, TDenseSpace &gt;</a>.</p>
 
 </div>
 </div>
@@ -1801,7 +1839,7 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 9 2024 03:50:20 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Aug 10 2024 03:47:57 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
