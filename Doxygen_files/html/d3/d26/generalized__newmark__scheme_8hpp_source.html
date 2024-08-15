@@ -230,7 +230,7 @@ $(function() {
 <div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_second_order_vector_variable : this-&gt;GetSecondOrderVectorVariables()) {</div>
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="keywordflow">if</span> (!rNode.<a class="code" href="../../d5/ddd/class_kratos_1_1_node.html#a58beb37ee1097393cb06647ecdc5344a">SolutionStepsDataHas</a>(r_second_order_vector_variable.instance)) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160; </div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> updated_first_derivative =</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a> updated_first_derivative =</div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                rNode.<a class="code" href="../../d5/ddd/class_kratos_1_1_node.html#a3014bd9654b1b44fdc9d50b2656803c6">FastGetSolutionStepValue</a>(r_second_order_vector_variable.first_time_derivative, 1) +</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                (1.0 - GetGamma()) * this-&gt;GetDeltaTime() *</div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    rNode.<a class="code" href="../../d5/ddd/class_kratos_1_1_node.html#a3014bd9654b1b44fdc9d50b2656803c6">FastGetSolutionStepValue</a>(r_second_order_vector_variable.second_time_derivative, 1) +</div>
@@ -247,7 +247,7 @@ $(function() {
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span>&amp; r_second_order_vector_variable : this-&gt;GetSecondOrderVectorVariables()) {</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordflow">if</span> (!rNode.<a class="code" href="../../d5/ddd/class_kratos_1_1_node.html#a58beb37ee1097393cb06647ecdc5344a">SolutionStepsDataHas</a>(r_second_order_vector_variable.instance)) <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> updated_second_time_derivative =</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a> updated_second_time_derivative =</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                ((rNode.<a class="code" href="../../d5/ddd/class_kratos_1_1_node.html#a3014bd9654b1b44fdc9d50b2656803c6">FastGetSolutionStepValue</a>(r_second_order_vector_variable.instance, 0) -</div>
 <div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                  rNode.<a class="code" href="../../d5/ddd/class_kratos_1_1_node.html#a3014bd9654b1b44fdc9d50b2656803c6">FastGetSolutionStepValue</a>(r_second_order_vector_variable.instance, 1)) -</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                 this-&gt;GetDeltaTime() * rNode.<a class="code" href="../../d5/ddd/class_kratos_1_1_node.html#a3014bd9654b1b44fdc9d50b2656803c6">FastGetSolutionStepValue</a>(</div>
@@ -294,6 +294,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_scheme_html_a1d0be4b6bdec0f05a45716ad08d9df90"><div class="ttname"><a href="../../d1/da3/class_kratos_1_1_scheme.html#a1d0be4b6bdec0f05a45716ad08d9df90">Kratos::Scheme::TSystemMatrixType</a></div><div class="ttdeci">typename TSparseSpace::MatrixType TSystemMatrixType</div><div class="ttdoc">Matrix type definition.</div><div class="ttdef"><b>Definition:</b> scheme.h:71</div></div>
 <div class="ttc" id="aclass_kratos_1_1_scheme_html_a775ed6815b7e378fbdca3305f3ac758b"><div class="ttname"><a href="../../d1/da3/class_kratos_1_1_scheme.html#a775ed6815b7e378fbdca3305f3ac758b">Kratos::Scheme::TSystemVectorType</a></div><div class="ttdeci">typename TSparseSpace::VectorType TSystemVectorType</div><div class="ttdoc">Vector type definition.</div><div class="ttdef"><b>Definition:</b> scheme.h:74</div></div>
 <div class="ttc" id="aclass_kratos_1_1_variable_html"><div class="ttname"><a href="../../d1/d66/class_kratos_1_1_variable.html">Kratos::Variable&lt; double &gt;</a></div></div>
+<div class="ttc" id="aclass_kratos_1_1array__1d_html"><div class="ttname"><a href="../../d4/ddc/class_kratos_1_1array__1d.html">Kratos::array_1d&lt; double, 3 &gt;</a></div></div>
 <div class="ttc" id="adefine_8h_html_a5eac541f5e39bf0360a12f51f0248513"><div class="ttname"><a href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a></div><div class="ttdeci">#define KRATOS_CATCH(MoreInfo)</div><div class="ttdef"><b>Definition:</b> define.h:110</div></div>
 <div class="ttc" id="adefine_8h_html_ab9c29d6a0d19ff26bbc4e45e3181fb3f"><div class="ttname"><a href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div><div class="ttdeci">#define KRATOS_TRY</div><div class="ttdef"><b>Definition:</b> define.h:109</div></div>
 <div class="ttc" id="ageomechanics__time__integration__scheme_8hpp_html"><div class="ttname"><a href="../../d9/dee/geomechanics__time__integration__scheme_8hpp.html">geomechanics_time_integration_scheme.hpp</a></div></div>
@@ -313,7 +314,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 14 2024 02:27:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Aug 15 2024 02:20:57 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
