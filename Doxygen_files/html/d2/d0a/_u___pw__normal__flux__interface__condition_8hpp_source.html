@@ -147,39 +147,40 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                              <a class="code" href="../../db/d66/namespace_kratos.html#a8cc375c875cc5176998d59a7d3ea4803">NodesArrayType</a> <span class="keyword">const</span>&amp;   ThisNodes,</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                              PropertiesType::Pointer pProperties) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    std::string Info() <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="comment">// Member Variables</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="comment">// Member Variables</span></div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keywordtype">void</span> CalculateRHS(<a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">VectorType</a>&amp; rRightHandSideVector, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; CurrentProcessInfo) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordtype">void</span> CalculateRHS(<a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">VectorType</a>&amp; rRightHandSideVector, <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; CurrentProcessInfo) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">// Member Variables</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="comment">// Member Variables</span></div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">// Serialization</span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="comment">//----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------</span></div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../d9/dde/class_kratos_1_1_u_pw_normal_flux_interface_condition.html#ad3f5346f31d572dd2ab4fcd658de5bc4">   87</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="comment">// Serialization</span></div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a>)</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a>)</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}; <span class="comment">// class UPwNormalFluxInterfaceCondition.</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="../../d9/dde/class_kratos_1_1_u_pw_normal_flux_interface_condition.html#ad3f5346f31d572dd2ab4fcd658de5bc4">   89</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a>)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a>)</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;}; <span class="comment">// class UPwNormalFluxInterfaceCondition.</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="a_u___pw__condition_8hpp_html"><div class="ttname"><a href="../../d2/de7/_u___pw__condition_8hpp.html">U_Pw_condition.hpp</a></div></div>
 <div class="ttc" id="a_u___pw__face__load__interface__condition_8hpp_html"><div class="ttname"><a href="../../dc/dd9/_u___pw__face__load__interface__condition_8hpp.html">U_Pw_face_load_interface_condition.hpp</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_condition_html"><div class="ttname"><a href="../../d1/d6e/class_kratos_1_1_condition.html">Kratos::Condition</a></div><div class="ttdoc">Base class for all Conditions.</div><div class="ttdef"><b>Definition:</b> condition.h:59</div></div>
@@ -214,7 +215,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Aug 19 2024 02:28:38 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Aug 20 2024 02:26:20 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
