@@ -1081,13 +1081,13 @@ $(function() {
 <div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;    <span class="keywordflow">for</span>(ModelPart::ConditionsContainerType::iterator ic = rModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a1c8f74bec8af82fc8b754db08e89e9c1">ConditionsBegin</a>(); ic!= rModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#afe4a4f2acaf43a9775940ba4ca95644f">ConditionsEnd</a>(); ++ic)</div>
 <div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;    {</div>
 <div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;      <span class="keywordflow">if</span>(ic-&gt;IsNot(NEW_ENTITY) &amp;&amp; ic-&gt;IsNot(TO_ERASE)){</div>
-<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;        Geometry&lt; Node &gt;&amp; rConditionGeom = ic-&gt;GetGeometry();</div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>&lt;rConditionGeom.size(); ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>){</div>
+<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;        <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; rConditionGeom = ic-&gt;GetGeometry();</div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>=0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>&lt;rConditionGeom.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a2477b702b7e4972903ca29e31b6ded56">size</a>(); ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>){</div>
 <div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;          <span class="comment">//std::cout&lt;&lt;&quot;[&quot;&lt;&lt;ic-&gt;Id()&lt;&lt;&quot;] i &quot;&lt;&lt;i&lt;&lt;&quot; condition &quot;&lt;&lt;rConditionGeom[i].Id()&lt;&lt;std::endl;</span></div>
 <div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;          <span class="keywordflow">if</span>(rConditionGeom[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].<a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#a4f077303c44ee715718ed045077514ea">Is</a>(TO_ERASE))</div>
 <div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;            std::cout&lt;&lt;<span class="stringliteral">&quot;     WARNING: Released node condition &quot;</span>&lt;&lt;std::endl;</div>
 <div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160; </div>
-<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;          node_shared_conditions[rConditionGeom[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].Id()].push_back(*(ic.base()));</div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;          node_shared_conditions[rConditionGeom[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a6a78c4a94b491bfa7e9b79795ad8e42b">Id</a>()].<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a0eeca428fac9434755f761a5f74e795c">push_back</a>(*(ic.base()));</div>
 <div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;        }</div>
 <div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;      }</div>
 <div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;               <span class="keywordflow">else</span> <span class="keywordflow">if</span> ( ic-&gt;Is(TO_ERASE))</div>
@@ -1167,8 +1167,8 @@ $(function() {
 <div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;            <span class="comment">// std::cout&lt;&lt;&quot;     N2 &quot;&lt;&lt;N2&lt;&lt;std::endl;</span></div>
 <div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160; </div>
 <div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160; </div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;            Geometry&lt; Node &gt;&amp; rConditionGeom1 = node_shared_conditions[nodeId][<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]-&gt;GetGeometry();</div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;            Geometry&lt; Node &gt;&amp; rConditionGeom2 = node_shared_conditions[nodeId][<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>]-&gt;GetGeometry();</div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;            <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; rConditionGeom1 = node_shared_conditions[nodeId][<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]-&gt;GetGeometry();</div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;            <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; rConditionGeom2 = node_shared_conditions[nodeId][<a class="code" href="../../d7/d2b/namespacequadrature.html#aae897447319c4634b1dcef7634fe5876">j</a>]-&gt;GetGeometry();</div>
 <div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160; </div>
 <div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;            <span class="comment">//node in id Node1;</span></div>
 <div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160; </div>
@@ -1221,7 +1221,7 @@ $(function() {
 <div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160; </div>
 <div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;              <span class="comment">//create new condition Node0-NodeB</span></div>
 <div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160;              <a class="code" href="../../d1/d6e/class_kratos_1_1_condition.html#a55e09e02b7d8367cac5617d9bf46e760">Condition::NodesArrayType</a> face;</div>
-<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;              face.<a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html#a7507e0e9fc8ab95622662b927f86e50f">reserve</a>(2);</div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;              face.reserve(2);</div>
 <div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160; </div>
 <div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;              face.push_back(rConditionGeom1(0));</div>
 <div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160;              face.push_back(rConditionGeom2(1));</div>
@@ -1363,7 +1363,7 @@ $(function() {
 <div class="line"><a name="l01377"></a><span class="lineno"> 1377</span>&#160; </div>
 <div class="line"><a name="l01378"></a><span class="lineno"> 1378</span>&#160;                <span class="comment">//create new condition Node0-NodeB</span></div>
 <div class="line"><a name="l01379"></a><span class="lineno"> 1379</span>&#160;                <a class="code" href="../../d1/d6e/class_kratos_1_1_condition.html#a55e09e02b7d8367cac5617d9bf46e760">Condition::NodesArrayType</a> face;</div>
-<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;                face.<a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html#a7507e0e9fc8ab95622662b927f86e50f">reserve</a>(2);</div>
+<div class="line"><a name="l01380"></a><span class="lineno"> 1380</span>&#160;                face.reserve(2);</div>
 <div class="line"><a name="l01381"></a><span class="lineno"> 1381</span>&#160; </div>
 <div class="line"><a name="l01382"></a><span class="lineno"> 1382</span>&#160;                face.push_back(rConditionGeom1(0));</div>
 <div class="line"><a name="l01383"></a><span class="lineno"> 1383</span>&#160;                face.push_back(rConditionGeom3(1));</div>
@@ -1376,14 +1376,14 @@ $(function() {
 <div class="line"><a name="l01390"></a><span class="lineno"> 1390</span>&#160;                pcond-&gt;Set(NEW_ENTITY);</div>
 <div class="line"><a name="l01391"></a><span class="lineno"> 1391</span>&#160; </div>
 <div class="line"><a name="l01392"></a><span class="lineno"> 1392</span>&#160;                <span class="keywordflow">if</span>( <a class="code" href="../../d4/d1f/class_kratos_1_1_remove_nodes_mesher_process.html#aa3929e9ad1486915e37c07b516c52d39">mEchoLevel</a> &gt; 0 ){</div>
-<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;                  std::cout&lt;&lt;<span class="stringliteral">&quot;     Condition INSERTED (Id: &quot;</span>&lt;&lt;new_id&lt;&lt;<span class="stringliteral">&quot;) [&quot;</span>&lt;&lt;rConditionGeom1[0].Id()&lt;&lt;<span class="stringliteral">&quot;, &quot;</span>&lt;&lt;rConditionGeom3[1].Id()&lt;&lt;<span class="stringliteral">&quot;] &quot;</span>&lt;&lt;std::endl;</div>
+<div class="line"><a name="l01393"></a><span class="lineno"> 1393</span>&#160;                  std::cout&lt;&lt;<span class="stringliteral">&quot;     Condition INSERTED (Id: &quot;</span>&lt;&lt;new_id&lt;&lt;<span class="stringliteral">&quot;) [&quot;</span>&lt;&lt;rConditionGeom1[0].<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a6a78c4a94b491bfa7e9b79795ad8e42b">Id</a>()&lt;&lt;<span class="stringliteral">&quot;, &quot;</span>&lt;&lt;rConditionGeom3[1].Id()&lt;&lt;<span class="stringliteral">&quot;] &quot;</span>&lt;&lt;std::endl;</div>
 <div class="line"><a name="l01394"></a><span class="lineno"> 1394</span>&#160;                }</div>
 <div class="line"><a name="l01395"></a><span class="lineno"> 1395</span>&#160; </div>
 <div class="line"><a name="l01396"></a><span class="lineno"> 1396</span>&#160;                rConditionGeom1[0].Set(TO_ERASE,<span class="keyword">false</span>);  <span class="comment">// do not release Node1</span></div>
 <div class="line"><a name="l01397"></a><span class="lineno"> 1397</span>&#160;                rConditionGeom3[1].Set(TO_ERASE,<span class="keyword">false</span>);  <span class="comment">// do not release Node2</span></div>
 <div class="line"><a name="l01398"></a><span class="lineno"> 1398</span>&#160; </div>
 <div class="line"><a name="l01399"></a><span class="lineno"> 1399</span>&#160; </div>
-<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;                pcond-&gt;SetValue(NORMAL, NewCond-&gt;GetValue(NORMAL) );</div>
+<div class="line"><a name="l01400"></a><span class="lineno"> 1400</span>&#160;                pcond-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a0bb59c671de6977c2c62081ca2ab0874">SetValue</a>(NORMAL, NewCond-&gt;GetValue(NORMAL) );</div>
 <div class="line"><a name="l01401"></a><span class="lineno"> 1401</span>&#160;                pcond-&gt;SetValue(MASTER_NODES, NewCond-&gt;GetValue(MASTER_NODES) );</div>
 <div class="line"><a name="l01402"></a><span class="lineno"> 1402</span>&#160; </div>
 <div class="line"><a name="l01403"></a><span class="lineno"> 1403</span>&#160;                MeshDataTransferUtilities TransferUtilities;</div>
@@ -1463,6 +1463,8 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_flags_html_a4f077303c44ee715718ed045077514ea"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#a4f077303c44ee715718ed045077514ea">Kratos::Flags::Is</a></div><div class="ttdeci">bool Is(Flags const &amp;rOther) const</div><div class="ttdoc">Checks if the flags in this object match those in the given Flags object.</div><div class="ttdef"><b>Definition:</b> flags.h:318</div></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html_abf73692c98d6f843fd74b7319e4f2ece"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html#abf73692c98d6f843fd74b7319e4f2ece">Kratos::Flags::IsNot</a></div><div class="ttdeci">bool IsNot(Flags const &amp;rOther) const</div><div class="ttdoc">Checks if the flags in this object do not match those in the given Flags object.</div><div class="ttdef"><b>Definition:</b> flags.h:338</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html_a0bb59c671de6977c2c62081ca2ab0874"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a0bb59c671de6977c2c62081ca2ab0874">Kratos::Geometry::SetValue</a></div><div class="ttdeci">void SetValue(const TVariableType &amp;rThisVariable, typename TVariableType::Type const &amp;rValue)</div><div class="ttdef"><b>Definition:</b> geometry.h:617</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html_a0eeca428fac9434755f761a5f74e795c"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a0eeca428fac9434755f761a5f74e795c">Kratos::Geometry::push_back</a></div><div class="ttdeci">void push_back(PointPointerType x)</div><div class="ttdef"><b>Definition:</b> geometry.h:548</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_a2477b702b7e4972903ca29e31b6ded56"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a2477b702b7e4972903ca29e31b6ded56">Kratos::Geometry::size</a></div><div class="ttdeci">SizeType size() const</div><div class="ttdef"><b>Definition:</b> geometry.h:518</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_a6a78c4a94b491bfa7e9b79795ad8e42b"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a6a78c4a94b491bfa7e9b79795ad8e42b">Kratos::Geometry::Id</a></div><div class="ttdeci">IndexType const  &amp; Id() const</div><div class="ttdoc">Id of this Geometry.</div><div class="ttdef"><b>Definition:</b> geometry.h:964</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_aa0c1b14ffc9a1d3a0b93331b608bc49e"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#aa0c1b14ffc9a1d3a0b93331b608bc49e">Kratos::Geometry::PointsArrayType</a></div><div class="ttdeci">PointerVector&lt; TPointType &gt; PointsArrayType</div><div class="ttdef"><b>Definition:</b> geometry.h:118</div></div>
@@ -1563,7 +1565,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 20 2024 02:23:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 21 2024 02:23:39 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

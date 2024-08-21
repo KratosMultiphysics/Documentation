@@ -826,7 +826,7 @@ $(function() {
 <div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;        PropertiesType::Pointer pProperties, <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> ThisIndex = 0);</div>
 <div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160; </div>
 <div class="line"><a name="l01093"></a><span class="lineno"><a class="line" href="../../d1/d79/class_kratos_1_1_model_part.html#a09f29389752d7c8c864940b1b7b71990"> 1093</a></span>&#160;    ElementType::Pointer <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a09f29389752d7c8c864940b1b7b71990">CreateNewElement</a>(std::string ElementName,</div>
-<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> Id, <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">Geometry&lt; Node &gt;::PointsArrayType</a> pElementNodes,</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;        <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> Id, <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;::PointsArrayType</a> pElementNodes,</div>
 <div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;        PropertiesType::Pointer pProperties, <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> ThisIndex = 0);</div>
 <div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160; </div>
 <div class="line"><a name="l01098"></a><span class="lineno"><a class="line" href="../../d1/d79/class_kratos_1_1_model_part.html#a8432300e5090c8d97770c702b0212676"> 1098</a></span>&#160;    ElementType::Pointer <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a8432300e5090c8d97770c702b0212676">CreateNewElement</a>(std::string ElementName,</div>
@@ -980,7 +980,7 @@ $(function() {
 <div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;            PropertiesType::Pointer pProperties, <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> ThisIndex = 0);</div>
 <div class="line"><a name="l01283"></a><span class="lineno"> 1283</span>&#160; </div>
 <div class="line"><a name="l01285"></a><span class="lineno"><a class="line" href="../../d1/d79/class_kratos_1_1_model_part.html#a2176db0077d47714cdde02113b6a5a9b"> 1285</a></span>&#160;    ConditionType::Pointer <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a2176db0077d47714cdde02113b6a5a9b">CreateNewCondition</a>(std::string ConditionName,</div>
-<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;            <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> Id, <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">Geometry&lt; Node &gt;::PointsArrayType</a> pConditionNodes,</div>
+<div class="line"><a name="l01286"></a><span class="lineno"> 1286</span>&#160;            <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> Id, <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;::PointsArrayType</a> pConditionNodes,</div>
 <div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;            PropertiesType::Pointer pProperties, <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> ThisIndex = 0);</div>
 <div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160; </div>
 <div class="line"><a name="l01290"></a><span class="lineno"><a class="line" href="../../d1/d79/class_kratos_1_1_model_part.html#add51d8c95a37114eb6b6b601f333219f"> 1290</a></span>&#160;    ConditionType::Pointer <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#add51d8c95a37114eb6b6b601f333219f">CreateNewCondition</a>(std::string ConditionName,</div>
@@ -1086,7 +1086,7 @@ $(function() {
 <div class="line"><a name="l01424"></a><span class="lineno"> 1424</span>&#160; </div>
 <div class="line"><a name="l01430"></a><span class="lineno"> 1430</span>&#160;    GeometryType::Pointer CreateNewGeometry(</div>
 <div class="line"><a name="l01431"></a><span class="lineno"> 1431</span>&#160;        <span class="keyword">const</span> std::string&amp; rGeometryTypeName,</div>
-<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;        <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">GeometryType::PointsArrayType</a> pGeometryNodes</div>
+<div class="line"><a name="l01432"></a><span class="lineno"> 1432</span>&#160;        <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#aa0c1b14ffc9a1d3a0b93331b608bc49e">GeometryType::PointsArrayType</a> pGeometryNodes</div>
 <div class="line"><a name="l01433"></a><span class="lineno"> 1433</span>&#160;        );</div>
 <div class="line"><a name="l01434"></a><span class="lineno"> 1434</span>&#160; </div>
 <div class="line"><a name="l01440"></a><span class="lineno"> 1440</span>&#160;    GeometryType::Pointer CreateNewGeometry(</div>
@@ -1103,7 +1103,7 @@ $(function() {
 <div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;    GeometryType::Pointer CreateNewGeometry(</div>
 <div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160;        <span class="keyword">const</span> std::string&amp; rGeometryTypeName,</div>
 <div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a> GeometryId,</div>
-<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;        <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">GeometryType::PointsArrayType</a> pGeometryNodes</div>
+<div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;        <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#aa0c1b14ffc9a1d3a0b93331b608bc49e">GeometryType::PointsArrayType</a> pGeometryNodes</div>
 <div class="line"><a name="l01467"></a><span class="lineno"> 1467</span>&#160;        );</div>
 <div class="line"><a name="l01468"></a><span class="lineno"> 1468</span>&#160; </div>
 <div class="line"><a name="l01475"></a><span class="lineno"> 1475</span>&#160;    GeometryType::Pointer CreateNewGeometry(</div>
@@ -1121,7 +1121,7 @@ $(function() {
 <div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;    GeometryType::Pointer CreateNewGeometry(</div>
 <div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;        <span class="keyword">const</span> std::string&amp; rGeometryTypeName,</div>
 <div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;        <span class="keyword">const</span> std::string&amp; rGeometryIdentifierName,</div>
-<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;        <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">GeometryType::PointsArrayType</a> pGeometryNodes</div>
+<div class="line"><a name="l01502"></a><span class="lineno"> 1502</span>&#160;        <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#aa0c1b14ffc9a1d3a0b93331b608bc49e">GeometryType::PointsArrayType</a> pGeometryNodes</div>
 <div class="line"><a name="l01503"></a><span class="lineno"> 1503</span>&#160;        );</div>
 <div class="line"><a name="l01504"></a><span class="lineno"> 1504</span>&#160; </div>
 <div class="line"><a name="l01511"></a><span class="lineno"> 1511</span>&#160;    GeometryType::Pointer CreateNewGeometry(</div>
@@ -1574,6 +1574,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_geometry_container_html_a72ef8f2f9cd459c6458680faaab92b3d"><div class="ttname"><a href="../../dc/d7d/class_kratos_1_1_geometry_container.html#a72ef8f2f9cd459c6458680faaab92b3d">Kratos::GeometryContainer&lt; GeometryType &gt;::GeometryConstantIterator</a></div><div class="ttdeci">GeometriesMapType::const_iterator GeometryConstantIterator</div><div class="ttdoc">Const Geometry Iterator.</div><div class="ttdef"><b>Definition:</b> geometry_container.h:68</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_container_html_a866e15f81896c01dfd8a2011f388a780"><div class="ttname"><a href="../../dc/d7d/class_kratos_1_1_geometry_container.html#a866e15f81896c01dfd8a2011f388a780">Kratos::GeometryContainer&lt; GeometryType &gt;::GeometryIterator</a></div><div class="ttdeci">GeometriesMapType::iterator GeometryIterator</div><div class="ttdoc">Geometry Iterator.</div><div class="ttdef"><b>Definition:</b> geometry_container.h:65</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html_aa0c1b14ffc9a1d3a0b93331b608bc49e"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#aa0c1b14ffc9a1d3a0b93331b608bc49e">Kratos::Geometry&lt; Node &gt;::PointsArrayType</a></div><div class="ttdeci">PointerVector&lt; Node &gt; PointsArrayType</div><div class="ttdef"><b>Definition:</b> geometry.h:118</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, AMatrix::dynamic &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_master_slave_constraint_html"><div class="ttname"><a href="../../de/d16/class_kratos_1_1_master_slave_constraint.html">Kratos::MasterSlaveConstraint</a></div><div class="ttdoc">A class that implements the interface for different master-slave constraints to be applied on a syste...</div><div class="ttdef"><b>Definition:</b> master_slave_constraint.h:76</div></div>
 <div class="ttc" id="aclass_kratos_1_1_mesh_html"><div class="ttname"><a href="../../d8/d28/class_kratos_1_1_mesh.html">Kratos::Mesh&lt; NodeType, PropertiesType, ElementType, ConditionType &gt;</a></div></div>
@@ -1896,7 +1897,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 20 2024 03:09:06 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 21 2024 03:09:05 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -1457,7 +1457,7 @@ $(function() {
 <div class="line"><a name="l01460"></a><span class="lineno"> 1460</span>&#160;            {</div>
 <div class="line"><a name="l01461"></a><span class="lineno"> 1461</span>&#160; </div>
 <div class="line"><a name="l01462"></a><span class="lineno"> 1462</span>&#160;                <a class="code" href="../../d4/dc2/class_kratos_1_1_global_pointers_vector.html">GlobalPointersVector&lt; Element &gt;</a>&amp; neighbor_els = elem-&gt;GetValue(NEIGHBOUR_ELEMENTS);</div>
-<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;                Geometry&lt; Node &gt;&amp; geom = elem-&gt;GetGeometry();</div>
+<div class="line"><a name="l01463"></a><span class="lineno"> 1463</span>&#160;                <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom = elem-&gt;GetGeometry();</div>
 <div class="line"><a name="l01464"></a><span class="lineno"> 1464</span>&#160; </div>
 <div class="line"><a name="l01465"></a><span class="lineno"> 1465</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> ii=0; ii&lt;(Tdim+1); ++ii)</div>
 <div class="line"><a name="l01466"></a><span class="lineno"> 1466</span>&#160;                {</div>
@@ -1492,7 +1492,7 @@ $(function() {
 <div class="line"><a name="l01495"></a><span class="lineno"> 1495</span>&#160;                                {</div>
 <div class="line"><a name="l01496"></a><span class="lineno"> 1496</span>&#160;                                    <span class="comment">//one segment is detected</span></div>
 <div class="line"><a name="l01497"></a><span class="lineno"> 1497</span>&#160;                                    ++seg_num;</div>
-<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;                                    raw_seg_list.push_back(geom[2].Id());</div>
+<div class="line"><a name="l01498"></a><span class="lineno"> 1498</span>&#160;                                    raw_seg_list.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a0eeca428fac9434755f761a5f74e795c">push_back</a>(geom[2].Id());</div>
 <div class="line"><a name="l01499"></a><span class="lineno"> 1499</span>&#160;                                    raw_seg_list.push_back(geom[1].Id());</div>
 <div class="line"><a name="l01500"></a><span class="lineno"> 1500</span>&#160;                                    geom[2].FastGetSolutionStepValue(IS_INTERFACE) = 1.0;</div>
 <div class="line"><a name="l01501"></a><span class="lineno"> 1501</span>&#160;                                    geom[1].FastGetSolutionStepValue(IS_INTERFACE) = 1.0;</div>
@@ -1524,7 +1524,7 @@ $(function() {
 <div class="line"><a name="l01527"></a><span class="lineno"> 1527</span>&#160;                                {</div>
 <div class="line"><a name="l01528"></a><span class="lineno"> 1528</span>&#160;                                    <span class="comment">//one segment is detected</span></div>
 <div class="line"><a name="l01529"></a><span class="lineno"> 1529</span>&#160;                                    ++seg_num;</div>
-<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;                                    raw_seg_list.push_back(geom[0].Id());</div>
+<div class="line"><a name="l01530"></a><span class="lineno"> 1530</span>&#160;                                    raw_seg_list.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a0eeca428fac9434755f761a5f74e795c">push_back</a>(geom[0].Id());</div>
 <div class="line"><a name="l01531"></a><span class="lineno"> 1531</span>&#160;                                    raw_seg_list.push_back(geom[2].Id());</div>
 <div class="line"><a name="l01532"></a><span class="lineno"> 1532</span>&#160;                                    geom[0].FastGetSolutionStepValue(IS_INTERFACE) = 1.0;</div>
 <div class="line"><a name="l01533"></a><span class="lineno"> 1533</span>&#160;                                    geom[2].FastGetSolutionStepValue(IS_INTERFACE) = 1.0;</div>
@@ -1556,7 +1556,7 @@ $(function() {
 <div class="line"><a name="l01559"></a><span class="lineno"> 1559</span>&#160;                                {</div>
 <div class="line"><a name="l01560"></a><span class="lineno"> 1560</span>&#160;                                    <span class="comment">//one segment is detected</span></div>
 <div class="line"><a name="l01561"></a><span class="lineno"> 1561</span>&#160;                                    ++seg_num;</div>
-<div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;                                    raw_seg_list.push_back(geom[1].Id());</div>
+<div class="line"><a name="l01562"></a><span class="lineno"> 1562</span>&#160;                                    raw_seg_list.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a0eeca428fac9434755f761a5f74e795c">push_back</a>(geom[1].Id());</div>
 <div class="line"><a name="l01563"></a><span class="lineno"> 1563</span>&#160;                                    raw_seg_list.push_back(geom[0].Id());</div>
 <div class="line"><a name="l01564"></a><span class="lineno"> 1564</span>&#160;                                    geom[1].FastGetSolutionStepValue(IS_INTERFACE) = 1.0;</div>
 <div class="line"><a name="l01565"></a><span class="lineno"> 1565</span>&#160;                                    geom[0].FastGetSolutionStepValue(IS_INTERFACE) = 1.0;</div>
@@ -1738,7 +1738,8 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_element_html_a9d3fcc73aa43b460715466d283803b61"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a9d3fcc73aa43b460715466d283803b61">Kratos::Element::Create</a></div><div class="ttdeci">virtual Pointer Create(IndexType NewId, NodesArrayType const &amp;ThisNodes, PropertiesType::Pointer pProperties) const</div><div class="ttdoc">It creates a new element pointer.</div><div class="ttdef"><b>Definition:</b> element.h:202</div></div>
 <div class="ttc" id="aclass_kratos_1_1_entities_erase_process_html"><div class="ttname"><a href="../../dc/d89/class_kratos_1_1_entities_erase_process.html">Kratos::EntitiesEraseProcess</a></div><div class="ttdoc">This process removes the entities from a model part with the flag TO_ERASE.</div><div class="ttdef"><b>Definition:</b> entity_erase_process.h:70</div></div>
 <div class="ttc" id="aclass_kratos_1_1_entities_erase_process_html_ad938ea59ef7f9612d558b24d6b1b4db5"><div class="ttname"><a href="../../dc/d89/class_kratos_1_1_entities_erase_process.html#ad938ea59ef7f9612d558b24d6b1b4db5">Kratos::EntitiesEraseProcess::Execute</a></div><div class="ttdeci">void Execute() override</div><div class="ttdoc">Execute method is used to execute the Process algorithms.</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry&lt; Node &gt;</a></div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html_a0eeca428fac9434755f761a5f74e795c"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a0eeca428fac9434755f761a5f74e795c">Kratos::Geometry::push_back</a></div><div class="ttdeci">void push_back(PointPointerType x)</div><div class="ttdef"><b>Definition:</b> geometry.h:548</div></div>
 <div class="ttc" id="aclass_kratos_1_1_global_pointer_html"><div class="ttname"><a href="../../dd/d1e/class_kratos_1_1_global_pointer.html">Kratos::GlobalPointer</a></div><div class="ttdoc">This class is a wrapper for a pointer to a data that is located in a different rank.</div><div class="ttdef"><b>Definition:</b> global_pointer.h:44</div></div>
 <div class="ttc" id="aclass_kratos_1_1_global_pointers_vector_html"><div class="ttname"><a href="../../d4/dc2/class_kratos_1_1_global_pointers_vector.html">Kratos::GlobalPointersVector&lt; Element &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_kratos_zero_matrix_html"><div class="ttname"><a href="../../db/d87/class_kratos_1_1_kratos_zero_matrix.html">Kratos::KratosZeroMatrix</a></div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:497</div></div>
@@ -1831,7 +1832,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 20 2024 02:27:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 21 2024 02:27:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

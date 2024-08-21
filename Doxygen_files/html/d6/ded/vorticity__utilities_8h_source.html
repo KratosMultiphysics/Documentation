@@ -112,7 +112,7 @@ $(function() {
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a65d714d2f31696ba4153c42d584d71c8">   40</a></span>&#160;    <a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a65d714d2f31696ba4153c42d584d71c8">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html">VorticityUtilities</a>);</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a72866a78d7a311548bd6099d59391702">   43</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Geometry&lt; Node &gt;::ShapeFunctionsGradientsType</a> <a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a72866a78d7a311548bd6099d59391702">ShapeFunctionDerivativesArrayType</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a72866a78d7a311548bd6099d59391702">   43</a></span>&#160;    <span class="keyword">typedef</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;::ShapeFunctionsGradientsType</a> <a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a72866a78d7a311548bd6099d59391702">ShapeFunctionDerivativesArrayType</a>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="comment">// Deleted default constructor</span></div>
@@ -128,17 +128,17 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#aa6b8422df07897f7b77f889a80c393a1">CalculateQValue</a>(</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;Node&gt;</a>&amp; rGeometry,</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">ShapeFunctionDerivativesArrayType</a>&amp; rShapeFunctionsGradients,</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a72866a78d7a311548bd6099d59391702">ShapeFunctionDerivativesArrayType</a>&amp; rShapeFunctionsGradients,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        std::vector&lt;double&gt;&amp; rQValues);</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a8aeb292fc7f5ea99965909132a3e0f52">CalculateVorticityMagnitude</a>(</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;Node&gt;</a>&amp; rGeometry,</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">ShapeFunctionDerivativesArrayType</a>&amp; rShapeFunctionsGradients,</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a72866a78d7a311548bd6099d59391702">ShapeFunctionDerivativesArrayType</a>&amp; rShapeFunctionsGradients,</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::vector&lt;double&gt;&amp; rVorticityMagnitudes);</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a772de003cdf8b55d4d0a56bb65f8587a">CalculateVorticityVector</a>(</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;Node&gt;</a>&amp; rGeometry,</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">ShapeFunctionDerivativesArrayType</a>&amp; rShapeFunctionsGradients,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a72866a78d7a311548bd6099d59391702">ShapeFunctionDerivativesArrayType</a>&amp; rShapeFunctionsGradients,</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        std::vector&lt;<a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&gt;&amp; rVorticities);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">private</span>:</div>
@@ -161,7 +161,7 @@ $(function() {
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
-<div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix</a></div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:41</div></div>
+<div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, AMatrix::dynamic &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_vorticity_utilities_html"><div class="ttname"><a href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html">Kratos::VorticityUtilities</a></div><div class="ttdoc">A set of functions to compute quantities of interest for turbulent flows.</div><div class="ttdef"><b>Definition:</b> vorticity_utilities.h:34</div></div>
 <div class="ttc" id="aclass_kratos_1_1_vorticity_utilities_html_a0e982df1b428eed464870bfecc18d7e9"><div class="ttname"><a href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a0e982df1b428eed464870bfecc18d7e9">Kratos::VorticityUtilities::operator=</a></div><div class="ttdeci">VorticityUtilities &amp; operator=(VorticityUtilities const &amp;rOther)=delete</div><div class="ttdoc">Deleted assignment operator.</div></div>
 <div class="ttc" id="aclass_kratos_1_1_vorticity_utilities_html_a5ad2101c1dc8316bf0734b6d63db1b43"><div class="ttname"><a href="../../d6/d42/class_kratos_1_1_vorticity_utilities.html#a5ad2101c1dc8316bf0734b6d63db1b43">Kratos::VorticityUtilities::VorticityUtilities</a></div><div class="ttdeci">VorticityUtilities()=delete</div></div>
@@ -180,7 +180,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 20 2024 02:25:42 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 21 2024 02:25:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -117,7 +117,7 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <a class="code" href="../../d6/d3f/transfer__utility_8h.html#a95ed76edc983cae239b65f370953d216">KRATOS_CLASS_POINTER_DEFINITION</a>(FaceSelector);</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">virtual</span> ~FaceSelector() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> Prepare(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rMainModelPart) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsSelected(<span class="keyword">const</span> <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp;) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> IsSelected(<span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp;) <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;};</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">class </span>SelectIfAllNodesOnSubModelPart: <span class="keyword">public</span> FaceSelector</div>
@@ -129,7 +129,7 @@ $(function() {
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keywordtype">void</span> Prepare(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rMainModelPart) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> IsSelected(<span class="keyword">const</span> <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp; rNodes) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keywordtype">bool</span> IsSelected(<span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp; rNodes) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;};</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="keyword">class </span>SelectIfOneNodeNotOnSubModelPart: <span class="keyword">public</span> FaceSelector</div>
@@ -141,7 +141,7 @@ $(function() {
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> Prepare(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rMainModelPart) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> IsSelected(<span class="keyword">const</span> <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp; rNodes) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">bool</span> IsSelected(<span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp; rNodes) <span class="keyword">const override</span>;</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">public</span>:</div>
@@ -152,7 +152,7 @@ $(function() {
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">using</span> <span class="keyword">typename</span> <a class="code" href="../../dd/d9b/class_kratos_1_1_skin_detection_process.html#a06c41aee1dd1572a892c31923053e8a5">SkinDetectionProcess&lt;TDim&gt;::HashMapVectorIntIdsType</a>;</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">using</span> <span class="keyword">typename</span> <a class="code" href="../../dd/d9b/class_kratos_1_1_skin_detection_process.html#a5970bc1f88d4e195385df00d282e41be">SkinDetectionProcess&lt;TDim&gt;::VectorIndexType</a>;</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="../../d1/d7f/class_kratos_1_1_sub_model_part_skin_detection_process.html#a35976925d331671938529a8d09b5c6cd">  101</a></span>&#160;<span class="keyword">using</span> <a class="code" href="../../d1/d7f/class_kratos_1_1_sub_model_part_skin_detection_process.html#a35976925d331671938529a8d09b5c6cd">ConditionCheckType</a> = <a class="code" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>(<span class="keyword">const</span> <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp;);</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="../../d1/d7f/class_kratos_1_1_sub_model_part_skin_detection_process.html#a35976925d331671938529a8d09b5c6cd">  101</a></span>&#160;<span class="keyword">using</span> <a class="code" href="../../d1/d7f/class_kratos_1_1_sub_model_part_skin_detection_process.html#a35976925d331671938529a8d09b5c6cd">ConditionCheckType</a> = <a class="code" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>(<span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp;);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<a class="code" href="../../d1/d7f/class_kratos_1_1_sub_model_part_skin_detection_process.html">SubModelPartSkinDetectionProcess</a>(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart, <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> Settings);</div>
@@ -205,7 +205,7 @@ $(function() {
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keyword">typename</span> FaceSelector::Pointer mpFaceSelector;</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160; </div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> FaceIsNeeded(<span class="keyword">const</span> <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp;)</div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> FaceIsNeeded(<span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;Node&gt;::PointsArrayType</a>&amp;)</div>
 <div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;{</div>
 <div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;}</div>
@@ -233,9 +233,9 @@ $(function() {
 <div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;} <span class="comment">// namespace Kratos.</span></div>
 <div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_SUB_MODEL_PART_SKIN_DETECTION_PROCESS_H_INCLUDED  defined</span></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
 <div class="ttc" id="aclass_kratos_1_1_parameters_html"><div class="ttname"><a href="../../dd/da0/class_kratos_1_1_parameters.html">Kratos::Parameters</a></div><div class="ttdoc">This class provides to Kratos a data structure for I/O based on the standard of JSON.</div><div class="ttdef"><b>Definition:</b> kratos_parameters.h:59</div></div>
-<div class="ttc" id="aclass_kratos_1_1_pointer_vector_html"><div class="ttname"><a href="../../de/d83/class_kratos_1_1_pointer_vector.html">Kratos::PointerVector</a></div><div class="ttdoc">PointerVector is a container like stl vector but using a vector to store pointers to its data.</div><div class="ttdef"><b>Definition:</b> pointer_vector.h:72</div></div>
 <div class="ttc" id="aclass_kratos_1_1_skin_detection_process_html"><div class="ttname"><a href="../../dd/d9b/class_kratos_1_1_skin_detection_process.html">Kratos::SkinDetectionProcess</a></div><div class="ttdoc">An algorithm that looks for neighbour elements in a mesh and creates a submodelpart containing the sk...</div><div class="ttdef"><b>Definition:</b> skin_detection_process.h:69</div></div>
 <div class="ttc" id="aclass_kratos_1_1_skin_detection_process_html_a06c41aee1dd1572a892c31923053e8a5"><div class="ttname"><a href="../../dd/d9b/class_kratos_1_1_skin_detection_process.html#a06c41aee1dd1572a892c31923053e8a5">Kratos::SkinDetectionProcess::HashMapVectorIntIdsType</a></div><div class="ttdeci">std::unordered_map&lt; VectorIndexType, IndexType, VectorIndexHasherType, VectorIndexComparorType &gt; HashMapVectorIntIdsType</div><div class="ttdoc">Define the map considered for properties ids.</div><div class="ttdef"><b>Definition:</b> skin_detection_process.h:103</div></div>
 <div class="ttc" id="aclass_kratos_1_1_skin_detection_process_html_a5970bc1f88d4e195385df00d282e41be"><div class="ttname"><a href="../../dd/d9b/class_kratos_1_1_skin_detection_process.html#a5970bc1f88d4e195385df00d282e41be">Kratos::SkinDetectionProcess::VectorIndexType</a></div><div class="ttdeci">std::vector&lt; IndexType &gt; VectorIndexType</div><div class="ttdoc">Definition of the vector indexes considered.</div><div class="ttdef"><b>Definition:</b> skin_detection_process.h:82</div></div>
@@ -260,7 +260,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 20 2024 03:10:57 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 21 2024 03:10:56 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

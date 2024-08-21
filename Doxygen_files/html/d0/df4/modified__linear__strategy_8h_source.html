@@ -813,24 +813,24 @@ $(function() {
 <div class="line"><a name="l00903"></a><span class="lineno">  903</span>&#160;        {</div>
 <div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160; </div>
 <div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160; </div>
-<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;            Geometry&lt; Node &gt;&amp; geom = <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>-&gt;GetGeometry();</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;            <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom = <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>-&gt;GetGeometry();</div>
 <div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;            <span class="comment">//counting the n-r of structure nodes</span></div>
 <div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> str_nr=0;</div>
 <div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160; </div>
 <div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;            <span class="comment">//for (int k = 0;k&lt;TDim+1;k++)</span></div>
-<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/d2b/namespacequadrature.html#a56123f01f0d1e776d9a6d85aa0f27caa">k</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#a56123f01f0d1e776d9a6d85aa0f27caa">k</a>&lt;geom.size(); <a class="code" href="../../d7/d2b/namespacequadrature.html#a56123f01f0d1e776d9a6d85aa0f27caa">k</a>++)</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d7/d2b/namespacequadrature.html#a56123f01f0d1e776d9a6d85aa0f27caa">k</a> = 0; <a class="code" href="../../d7/d2b/namespacequadrature.html#a56123f01f0d1e776d9a6d85aa0f27caa">k</a>&lt;geom.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a2477b702b7e4972903ca29e31b6ded56">size</a>(); <a class="code" href="../../d7/d2b/namespacequadrature.html#a56123f01f0d1e776d9a6d85aa0f27caa">k</a>++)</div>
 <div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;            {</div>
 <div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160;                str_nr+=(<span class="keywordtype">unsigned</span> <a class="code" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a>)(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>-&gt;GetGeometry()[<a class="code" href="../../d7/d2b/namespacequadrature.html#a56123f01f0d1e776d9a6d85aa0f27caa">k</a>].FastGetSolutionStepValue(IS_STRUCTURE));</div>
 <div class="line"><a name="l00914"></a><span class="lineno">  914</span>&#160;            }</div>
 <div class="line"><a name="l00916"></a><span class="lineno">  916</span>&#160;            <span class="comment">//if the element is not having all the nodes IS_STRUCTURE, assemble it, otherwise do nothing</span></div>
 <div class="line"><a name="l00917"></a><span class="lineno">  917</span>&#160;            <span class="comment">// that means, that the entries corresponding to the structural elements are zero</span></div>
-<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="comment"></span>            <span class="keywordflow">if</span> (geom.size()!=str_nr)</div>
+<div class="line"><a name="l00919"></a><span class="lineno">  919</span>&#160;<span class="comment"></span>            <span class="keywordflow">if</span> (geom.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a2477b702b7e4972903ca29e31b6ded56">size</a>()!=str_nr)</div>
 <div class="line"><a name="l00920"></a><span class="lineno">  920</span>&#160;            {</div>
 <div class="line"><a name="l00921"></a><span class="lineno">  921</span>&#160;                <a class="code" href="../../d0/d77/class_kratos_1_1_geometry_utils.html#ad75233ab581389b921c5534015dcf0b2">GeometryUtils::CalculateGeometryData</a>(geom, DN_DX, <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>, Volume);</div>
 <div class="line"><a name="l00922"></a><span class="lineno">  922</span>&#160; </div>
 <div class="line"><a name="l00923"></a><span class="lineno">  923</span>&#160;                <span class="comment">//finiding local indices</span></div>
 <div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;                <span class="comment">//for(int ii = 0; ii&lt;TDim+1; ii++)</span></div>
-<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ii = 0; ii&lt;geom.size(); ii++)</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ii = 0; ii&lt;geom.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a2477b702b7e4972903ca29e31b6ded56">size</a>(); ii++)</div>
 <div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;                {</div>
 <div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;                    local_indices[ii] = geom[ii].GetDof(DISPLACEMENT_X,dof_position).EquationId();</div>
 <div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;                }</div>
@@ -839,7 +839,7 @@ $(function() {
 <div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;                <span class="comment">//now we check if this is an interface element (i.e. FSI element)</span></div>
 <div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160; </div>
 <div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160;                <span class="keywordtype">int</span> n_interface=0;</div>
-<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ii = 0; ii&lt;geom.size(); ii++)</div>
+<div class="line"><a name="l00934"></a><span class="lineno">  934</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> ii = 0; ii&lt;geom.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a2477b702b7e4972903ca29e31b6ded56">size</a>(); ii++)</div>
 <div class="line"><a name="l00935"></a><span class="lineno">  935</span>&#160;                {</div>
 <div class="line"><a name="l00936"></a><span class="lineno">  936</span>&#160;                    n_interface = geom[ii].FastGetSolutionStepValue(IS_INTERFACE);</div>
 <div class="line"><a name="l00937"></a><span class="lineno">  937</span>&#160;                }</div>
@@ -926,6 +926,8 @@ $(function() {
 <div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160; </div>
 <div class="ttc" id="a_u_l_f__application_8h_html"><div class="ttname"><a href="../../d9/d45/_u_l_f__application_8h.html">ULF_application.h</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_communicator_html_aeac30940c4529aa1f7d2af14a768b62b"><div class="ttname"><a href="../../d3/da4/class_kratos_1_1_communicator.html#aeac30940c4529aa1f7d2af14a768b62b">Kratos::Communicator::MyPID</a></div><div class="ttdeci">virtual int MyPID() const</div><div class="ttdef"><b>Definition:</b> communicator.cpp:91</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry&lt; Node &gt;</a></div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html_a2477b702b7e4972903ca29e31b6ded56"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a2477b702b7e4972903ca29e31b6ded56">Kratos::Geometry::size</a></div><div class="ttdeci">SizeType size() const</div><div class="ttdef"><b>Definition:</b> geometry.h:518</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_utils_html_ad75233ab581389b921c5534015dcf0b2"><div class="ttname"><a href="../../d0/d77/class_kratos_1_1_geometry_utils.html#ad75233ab581389b921c5534015dcf0b2">Kratos::GeometryUtils::CalculateGeometryData</a></div><div class="ttdeci">static void CalculateGeometryData(const GeometryType &amp;rGeometry, BoundedMatrix&lt; double, 4, 3 &gt; &amp;rDN_DX, array_1d&lt; double, 4 &gt; &amp;rN, double &amp;rVolume)</div><div class="ttdoc">This function is designed to compute the shape function derivatives, shape functions and volume in 3D...</div><div class="ttdef"><b>Definition:</b> geometry_utilities.h:176</div></div>
 <div class="ttc" id="aclass_kratos_1_1_global_pointers_vector_html_a04db5b3969fe3a11463c561a3cae856a"><div class="ttname"><a href="../../d4/dc2/class_kratos_1_1_global_pointers_vector.html#a04db5b3969fe3a11463c561a3cae856a">Kratos::GlobalPointersVector::iterator</a></div><div class="ttdeci">boost::indirect_iterator&lt; typename TContainerType::iterator &gt; iterator</div><div class="ttdef"><b>Definition:</b> global_pointers_vector.h:79</div></div>
 <div class="ttc" id="aclass_kratos_1_1_implicit_solving_strategy_html"><div class="ttname"><a href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html">Kratos::ImplicitSolvingStrategy</a></div><div class="ttdoc">Implicit solving strategy base class This is the base class from which we will derive all the implici...</div><div class="ttdef"><b>Definition:</b> implicit_solving_strategy.h:61</div></div>
@@ -1015,7 +1017,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 20 2024 02:53:35 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 21 2024 02:53:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

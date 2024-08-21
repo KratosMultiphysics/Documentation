@@ -992,11 +992,11 @@ $(function() {
 <div class="line"><a name="l00992"></a><span class="lineno">  992</span>&#160; </div>
 <div class="line"><a name="l00993"></a><span class="lineno">  993</span>&#160;                <span class="comment">//Generate condition</span></div>
 <div class="line"><a name="l00994"></a><span class="lineno">  994</span>&#160;                <a class="code" href="../../d1/d6e/class_kratos_1_1_condition.html#a55e09e02b7d8367cac5617d9bf46e760">Condition::NodesArrayType</a> temp1;</div>
-<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;                temp1.<a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html#a7507e0e9fc8ab95622662b927f86e50f">reserve</a>(2);</div>
+<div class="line"><a name="l00995"></a><span class="lineno">  995</span>&#160;                temp1.reserve(2);</div>
 <div class="line"><a name="l00996"></a><span class="lineno">  996</span>&#160;                temp1.push_back(iii-&gt;GetGeometry()(1));</div>
 <div class="line"><a name="l00997"></a><span class="lineno">  997</span>&#160;                temp1.push_back(iii-&gt;GetGeometry()(2));</div>
 <div class="line"><a name="l00998"></a><span class="lineno">  998</span>&#160; </div>
-<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;                Geometry&lt; Node &gt;::Pointer cond = Geometry&lt; Node &gt;::Pointer(<span class="keyword">new</span> Geometry&lt; Node &gt;(temp1) );</div>
+<div class="line"><a name="l00999"></a><span class="lineno">  999</span>&#160;                Geometry&lt; Node &gt;::Pointer cond = Geometry&lt; Node &gt;::Pointer(<span class="keyword">new</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>(temp1) );</div>
 <div class="line"><a name="l01000"></a><span class="lineno"> 1000</span>&#160;                <span class="keywordtype">int</span> <span class="keywordtype">id</span> = (iii-&gt;Id()-1)*3;</div>
 <div class="line"><a name="l01001"></a><span class="lineno"> 1001</span>&#160;                Condition::Pointer p_cond = rReferenceBoundaryCondition.Create(<span class="keywordtype">id</span>, temp1, properties);</div>
 <div class="line"><a name="l01002"></a><span class="lineno"> 1002</span>&#160;                ThisModelPart.Conditions().push_back(p_cond);</div>
@@ -1015,11 +1015,11 @@ $(function() {
 <div class="line"><a name="l01015"></a><span class="lineno"> 1015</span>&#160; </div>
 <div class="line"><a name="l01016"></a><span class="lineno"> 1016</span>&#160;                <span class="comment">//Generate condition</span></div>
 <div class="line"><a name="l01017"></a><span class="lineno"> 1017</span>&#160;                <a class="code" href="../../d1/d6e/class_kratos_1_1_condition.html#a55e09e02b7d8367cac5617d9bf46e760">Condition::NodesArrayType</a> temp1;</div>
-<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;                temp1.<a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html#a7507e0e9fc8ab95622662b927f86e50f">reserve</a>(2);</div>
+<div class="line"><a name="l01018"></a><span class="lineno"> 1018</span>&#160;                temp1.reserve(2);</div>
 <div class="line"><a name="l01019"></a><span class="lineno"> 1019</span>&#160;                temp1.push_back(iii-&gt;GetGeometry()(2));</div>
 <div class="line"><a name="l01020"></a><span class="lineno"> 1020</span>&#160;                temp1.push_back(iii-&gt;GetGeometry()(0));</div>
 <div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160; </div>
-<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;                Geometry&lt; Node &gt;::Pointer cond = Geometry&lt; Node &gt;::Pointer(<span class="keyword">new</span> Geometry&lt; Node &gt;(temp1) );</div>
+<div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;                Geometry&lt; Node &gt;::Pointer cond = Geometry&lt; Node &gt;::Pointer(<span class="keyword">new</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>(temp1) );</div>
 <div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160;                <span class="keywordtype">int</span> <span class="keywordtype">id</span> = (iii-&gt;Id()-1)*3+1;</div>
 <div class="line"><a name="l01024"></a><span class="lineno"> 1024</span>&#160;                Condition::Pointer p_cond = rReferenceBoundaryCondition.Create(<span class="keywordtype">id</span>, temp1, properties);</div>
 <div class="line"><a name="l01025"></a><span class="lineno"> 1025</span>&#160;                ThisModelPart.Conditions().push_back(p_cond);</div>
@@ -1038,11 +1038,11 @@ $(function() {
 <div class="line"><a name="l01038"></a><span class="lineno"> 1038</span>&#160; </div>
 <div class="line"><a name="l01039"></a><span class="lineno"> 1039</span>&#160;<span class="comment">//                  Generate condition</span></div>
 <div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160;                <a class="code" href="../../d1/d6e/class_kratos_1_1_condition.html#a55e09e02b7d8367cac5617d9bf46e760">Condition::NodesArrayType</a> temp1;</div>
-<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;                temp1.<a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html#a7507e0e9fc8ab95622662b927f86e50f">reserve</a>(2);</div>
+<div class="line"><a name="l01041"></a><span class="lineno"> 1041</span>&#160;                temp1.reserve(2);</div>
 <div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;                temp1.push_back(iii-&gt;GetGeometry()(0));</div>
 <div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;                temp1.push_back(iii-&gt;GetGeometry()(1));</div>
 <div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160; </div>
-<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;                Geometry&lt; Node &gt;::Pointer cond = Geometry&lt; Node &gt;::Pointer(<span class="keyword">new</span> Geometry&lt; Node &gt;(temp1) );</div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;                Geometry&lt; Node &gt;::Pointer cond = Geometry&lt; Node &gt;::Pointer(<span class="keyword">new</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>(temp1) );</div>
 <div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;                <span class="keywordtype">int</span> <span class="keywordtype">id</span> = (iii-&gt;Id()-1)*3+2;</div>
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160;                Condition::Pointer p_cond = rReferenceBoundaryCondition.Create(<span class="keywordtype">id</span>, temp1, properties);</div>
 <div class="line"><a name="l01048"></a><span class="lineno"> 1048</span>&#160;                ThisModelPart.Conditions().push_back(p_cond);</div>
@@ -1412,7 +1412,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_element_html_a9d3fcc73aa43b460715466d283803b61"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a9d3fcc73aa43b460715466d283803b61">Kratos::Element::Create</a></div><div class="ttdeci">virtual Pointer Create(IndexType NewId, NodesArrayType const &amp;ThisNodes, PropertiesType::Pointer pProperties) const</div><div class="ttdoc">It creates a new element pointer.</div><div class="ttdef"><b>Definition:</b> element.h:202</div></div>
 <div class="ttc" id="aclass_kratos_1_1_entities_erase_process_html"><div class="ttname"><a href="../../dc/d89/class_kratos_1_1_entities_erase_process.html">Kratos::EntitiesEraseProcess</a></div><div class="ttdoc">This process removes the entities from a model part with the flag TO_ERASE.</div><div class="ttdef"><b>Definition:</b> entity_erase_process.h:70</div></div>
 <div class="ttc" id="aclass_kratos_1_1_entities_erase_process_html_ad938ea59ef7f9612d558b24d6b1b4db5"><div class="ttname"><a href="../../dc/d89/class_kratos_1_1_entities_erase_process.html#ad938ea59ef7f9612d558b24d6b1b4db5">Kratos::EntitiesEraseProcess::Execute</a></div><div class="ttdeci">void Execute() override</div><div class="ttdoc">Execute method is used to execute the Process algorithms.</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry&lt; Node &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_global_pointer_html"><div class="ttname"><a href="../../dd/d1e/class_kratos_1_1_global_pointer.html">Kratos::GlobalPointer</a></div><div class="ttdoc">This class is a wrapper for a pointer to a data that is located in a different rank.</div><div class="ttdef"><b>Definition:</b> global_pointer.h:44</div></div>
 <div class="ttc" id="aclass_kratos_1_1_global_pointers_vector_html"><div class="ttname"><a href="../../d4/dc2/class_kratos_1_1_global_pointers_vector.html">Kratos::GlobalPointersVector&lt; Element &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_kratos_zero_matrix_html"><div class="ttname"><a href="../../db/d87/class_kratos_1_1_kratos_zero_matrix.html">Kratos::KratosZeroMatrix</a></div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:497</div></div>
@@ -1437,7 +1437,6 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_point_html_a8cce3ed26cea2cbd14c71f8f1c85aa60"><div class="ttname"><a href="../../d3/d3f/class_kratos_1_1_point.html#a8cce3ed26cea2cbd14c71f8f1c85aa60">Kratos::Point::Y</a></div><div class="ttdeci">double Y() const</div><div class="ttdef"><b>Definition:</b> point.h:187</div></div>
 <div class="ttc" id="aclass_kratos_1_1_point_html_adb36ae5ffe567fb88b0aee7ee087c757"><div class="ttname"><a href="../../d3/d3f/class_kratos_1_1_point.html#adb36ae5ffe567fb88b0aee7ee087c757">Kratos::Point::Z</a></div><div class="ttdeci">double Z() const</div><div class="ttdef"><b>Definition:</b> point.h:193</div></div>
 <div class="ttc" id="aclass_kratos_1_1_point_html_aff0c4821bd73c97a33baf22ce14c0f55"><div class="ttname"><a href="../../d3/d3f/class_kratos_1_1_point.html#aff0c4821bd73c97a33baf22ce14c0f55">Kratos::Point::X</a></div><div class="ttdeci">double X() const</div><div class="ttdef"><b>Definition:</b> point.h:181</div></div>
-<div class="ttc" id="aclass_kratos_1_1_pointer_vector_html_a7507e0e9fc8ab95622662b927f86e50f"><div class="ttname"><a href="../../de/d83/class_kratos_1_1_pointer_vector.html#a7507e0e9fc8ab95622662b927f86e50f">Kratos::PointerVector::reserve</a></div><div class="ttdeci">void reserve(size_type dim)</div><div class="ttdef"><b>Definition:</b> pointer_vector.h:319</div></div>
 <div class="ttc" id="aclass_kratos_1_1_timer_html_ac5f475958d2d9ea59734f63c93705cfd"><div class="ttname"><a href="../../d9/d31/class_kratos_1_1_timer.html#ac5f475958d2d9ea59734f63c93705cfd">Kratos::Timer::ElapsedSeconds</a></div><div class="ttdeci">static double ElapsedSeconds(const std::chrono::steady_clock::time_point StartTime)</div><div class="ttdoc">This method returns the resulting time.</div><div class="ttdef"><b>Definition:</b> timer.h:179</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tree_html"><div class="ttname"><a href="../../d8/d13/class_kratos_1_1_tree.html">Kratos::Tree</a></div><div class="ttdoc">A generic tree data structure for spatial partitioning.</div><div class="ttdef"><b>Definition:</b> tree.h:190</div></div>
 <div class="ttc" id="aclass_kratos_1_1_tri_gen_droplet_modeler_html"><div class="ttname"><a href="../../de/d7b/class_kratos_1_1_tri_gen_droplet_modeler.html">Kratos::TriGenDropletModeler</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> trigen_droplet_refine.h:61</div></div>
@@ -1516,7 +1515,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 20 2024 02:27:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 21 2024 02:27:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

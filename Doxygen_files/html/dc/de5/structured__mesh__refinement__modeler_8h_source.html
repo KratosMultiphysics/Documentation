@@ -295,7 +295,7 @@ $(function() {
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keyword">typename</span> <a class="code" href="../../db/d66/namespace_kratos.html#a884ade0675a6a17a14d1bce5e3ae2fe3">ComponentType::GeometryType</a>&amp; r_geometry = rThisComponent.GetGeometry();</div>
 <div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d4d/class_kratos_1_1_modeler.html#abee7838d49727c274febd7b6c30f2292">SizeType</a> components_nodes_number = r_geometry.size();</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d4d/class_kratos_1_1_modeler.html#abee7838d49727c274febd7b6c30f2292">SizeType</a> components_nodes_number = r_geometry.<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a2477b702b7e4972903ca29e31b6ded56">size</a>();</div>
 <div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
 <div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> shape_functions_values(components_nodes_number);</div>
 <div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
@@ -571,7 +571,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_element_html_a9d3fcc73aa43b460715466d283803b61"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a9d3fcc73aa43b460715466d283803b61">Kratos::Element::Create</a></div><div class="ttdeci">virtual Pointer Create(IndexType NewId, NodesArrayType const &amp;ThisNodes, PropertiesType::Pointer pProperties) const</div><div class="ttdoc">It creates a new element pointer.</div><div class="ttdef"><b>Definition:</b> element.h:202</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_ae7832e8bf96597bb61a6cd9ffa6c0de9"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#ae7832e8bf96597bb61a6cd9ffa6c0de9">Kratos::Element::pGetProperties</a></div><div class="ttdeci">PropertiesType::Pointer pGetProperties()</div><div class="ttdoc">returns the pointer to the property of the element. Does not throw an error, to allow copying of elem...</div><div class="ttdef"><b>Definition:</b> element.h:1014</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometrical_object_html_a4f9fe36156afc7d5d5c8555ff3378b78"><div class="ttname"><a href="../../d3/d62/class_kratos_1_1_geometrical_object.html#a4f9fe36156afc7d5d5c8555ff3378b78">Kratos::GeometricalObject::GetGeometry</a></div><div class="ttdeci">GeometryType &amp; GetGeometry()</div><div class="ttdoc">Returns the reference of the geometry.</div><div class="ttdef"><b>Definition:</b> geometrical_object.h:158</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry&lt; Node &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_a2477b702b7e4972903ca29e31b6ded56"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a2477b702b7e4972903ca29e31b6ded56">Kratos::Geometry::size</a></div><div class="ttdeci">SizeType size() const</div><div class="ttdef"><b>Definition:</b> geometry.h:518</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_a4e909b71750d8c6bd35b8f8348e37105"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a4e909b71750d8c6bd35b8f8348e37105">Kratos::Geometry::LocalSpaceDimension</a></div><div class="ttdeci">SizeType LocalSpaceDimension() const</div><div class="ttdef"><b>Definition:</b> geometry.h:1300</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, 1 &gt;</a></div></div>
@@ -633,7 +633,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 20 2024 03:09:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 21 2024 03:09:46 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

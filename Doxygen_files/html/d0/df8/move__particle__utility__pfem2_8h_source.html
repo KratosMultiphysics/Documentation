@@ -2372,7 +2372,7 @@ $(function() {
 <div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160;        <span class="keywordflow">if</span>(is_found == <span class="keyword">true</span>)</div>
 <div class="line"><a name="l02305"></a><span class="lineno"> 2305</span>&#160;        {</div>
 <div class="line"><a name="l02306"></a><span class="lineno"> 2306</span>&#160;            KEEP_INTEGRATING=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;            Geometry&lt; Node &gt;&amp; geom = pelement-&gt;GetGeometry();<span class="comment">//the element we&#39;re in</span></div>
+<div class="line"><a name="l02307"></a><span class="lineno"> 2307</span>&#160;            <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom = pelement-&gt;GetGeometry();<span class="comment">//the element we&#39;re in</span></div>
 <div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160;            <a class="code" href="../../db/df4/namespacepure__conduction.html#ae09a2606ce877131c3666ac38c7d5525">vel</a>=<a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(3);</div>
 <div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;            vel_without_other_phase_nodes = <a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(3);</div>
 <div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;            sum_Ns_without_other_phase_nodes=0.0;</div>
@@ -2447,7 +2447,7 @@ $(function() {
 <div class="line"><a name="l02382"></a><span class="lineno"> 2382</span>&#160;                is_found = FindNodeOnMesh(position, <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a> ,pelement,elements_in_trajectory,number_of_elements_in_trajectory,check_from_element_number,result_begin,MaxNumberOfResults); <span class="comment">//good, now we know where this point is:</span></div>
 <div class="line"><a name="l02383"></a><span class="lineno"> 2383</span>&#160;                <span class="keywordflow">if</span>(is_found == <span class="keyword">true</span>)</div>
 <div class="line"><a name="l02384"></a><span class="lineno"> 2384</span>&#160;                {</div>
-<div class="line"><a name="l02385"></a><span class="lineno"> 2385</span>&#160;                    Geometry&lt; Node &gt;&amp; geom = pelement-&gt;GetGeometry();<span class="comment">//the element we&#39;re in</span></div>
+<div class="line"><a name="l02385"></a><span class="lineno"> 2385</span>&#160;                    <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom = pelement-&gt;GetGeometry();<span class="comment">//the element we&#39;re in</span></div>
 <div class="line"><a name="l02386"></a><span class="lineno"> 2386</span>&#160;                    sum_Ns_without_other_phase_nodes=0.0;</div>
 <div class="line"><a name="l02387"></a><span class="lineno"> 2387</span>&#160; </div>
 <div class="line"><a name="l02388"></a><span class="lineno"> 2388</span>&#160;                    <span class="keywordflow">if</span> (particle_distance&lt;0.0 &amp;&amp; discriminate_streamlines==<span class="keyword">true</span>)</div>
@@ -2535,7 +2535,7 @@ $(function() {
 <div class="line"><a name="l02470"></a><span class="lineno"> 2470</span>&#160;    <span class="keywordtype">void</span> AccelerateParticleUsingDeltaVelocity(</div>
 <div class="line"><a name="l02471"></a><span class="lineno"> 2471</span>&#160;                         PFEM_Particle_Fluid &amp; pparticle,</div>
 <div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;                         Element::Pointer &amp; pelement,</div>
-<div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160;                         Geometry&lt; Node &gt;&amp; geom)</div>
+<div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160;                         <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom)</div>
 <div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;    {</div>
 <div class="line"><a name="l02475"></a><span class="lineno"> 2475</span>&#160;        array_1d&lt;double,TDim+1&gt; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>;</div>
 <div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160; </div>
@@ -2652,7 +2652,7 @@ $(function() {
 <div class="line"><a name="l02587"></a><span class="lineno"> 2587</span>&#160;        <span class="keywordflow">if</span>(is_found == <span class="keyword">true</span>)</div>
 <div class="line"><a name="l02588"></a><span class="lineno"> 2588</span>&#160;        {</div>
 <div class="line"><a name="l02589"></a><span class="lineno"> 2589</span>&#160;            KEEP_INTEGRATING=<span class="keyword">true</span>;</div>
-<div class="line"><a name="l02590"></a><span class="lineno"> 2590</span>&#160;            Geometry&lt; Node &gt;&amp; geom = pelement-&gt;GetGeometry();<span class="comment">//the element we&#39;re in</span></div>
+<div class="line"><a name="l02590"></a><span class="lineno"> 2590</span>&#160;            <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom = pelement-&gt;GetGeometry();<span class="comment">//the element we&#39;re in</span></div>
 <div class="line"><a name="l02591"></a><span class="lineno"> 2591</span>&#160;            <a class="code" href="../../db/df4/namespacepure__conduction.html#ae09a2606ce877131c3666ac38c7d5525">vel</a>=<a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(3);</div>
 <div class="line"><a name="l02592"></a><span class="lineno"> 2592</span>&#160;            particle_vel=<a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(3);</div>
 <div class="line"><a name="l02593"></a><span class="lineno"> 2593</span>&#160;            distance=0.0;</div>
@@ -2679,7 +2679,7 @@ $(function() {
 <div class="line"><a name="l02614"></a><span class="lineno"> 2614</span>&#160;                is_found = FindNodeOnMesh(position, <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a> ,pelement,result_begin,MaxNumberOfResults); <span class="comment">//good, now we know where this point is:</span></div>
 <div class="line"><a name="l02615"></a><span class="lineno"> 2615</span>&#160;                <span class="keywordflow">if</span>(is_found == <span class="keyword">true</span>)</div>
 <div class="line"><a name="l02616"></a><span class="lineno"> 2616</span>&#160;                {</div>
-<div class="line"><a name="l02617"></a><span class="lineno"> 2617</span>&#160;                    Geometry&lt; Node &gt;&amp; geom = pelement-&gt;GetGeometry();<span class="comment">//the element we&#39;re in</span></div>
+<div class="line"><a name="l02617"></a><span class="lineno"> 2617</span>&#160;                    <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom = pelement-&gt;GetGeometry();<span class="comment">//the element we&#39;re in</span></div>
 <div class="line"><a name="l02618"></a><span class="lineno"> 2618</span>&#160; </div>
 <div class="line"><a name="l02619"></a><span class="lineno"> 2619</span>&#160;                    <a class="code" href="../../db/df4/namespacepure__conduction.html#ae09a2606ce877131c3666ac38c7d5525">vel</a>=<a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(3);</div>
 <div class="line"><a name="l02620"></a><span class="lineno"> 2620</span>&#160;                    particle_vel=<a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(3);</div>
@@ -3209,7 +3209,7 @@ $(function() {
 <div class="line"><a name="l03155"></a><span class="lineno"> 3155</span>&#160; </div>
 <div class="line"><a name="l03156"></a><span class="lineno"> 3156</span>&#160; </div>
 <div class="line"><a name="l03157"></a><span class="lineno"> 3157</span>&#160; </div>
-<div class="line"><a name="l03158"></a><span class="lineno"> 3158</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositions_4(Geometry&lt; Node &gt;&amp; geom, BoundedMatrix&lt;double, 7, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 7, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>)</div>
+<div class="line"><a name="l03158"></a><span class="lineno"> 3158</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositions_4(<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom, BoundedMatrix&lt;double, 7, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 7, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>)</div>
 <div class="line"><a name="l03159"></a><span class="lineno"> 3159</span>&#160;        {</div>
 <div class="line"><a name="l03160"></a><span class="lineno"> 3160</span>&#160;            <span class="keywordtype">double</span> one_third = 1.0 / 3.0;</div>
 <div class="line"><a name="l03161"></a><span class="lineno"> 3161</span>&#160;            <span class="keywordtype">double</span> one_sixt = 0.15; <span class="comment">//1.0 / 6.0;</span></div>
@@ -3251,7 +3251,7 @@ $(function() {
 <div class="line"><a name="l03197"></a><span class="lineno"> 3197</span>&#160;        }</div>
 <div class="line"><a name="l03198"></a><span class="lineno"> 3198</span>&#160; </div>
 <div class="line"><a name="l03199"></a><span class="lineno"> 3199</span>&#160; </div>
-<div class="line"><a name="l03200"></a><span class="lineno"> 3200</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositionsForPostReseed(Geometry&lt; Node &gt;&amp; geom, BoundedMatrix&lt;double, 7, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 7, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//2d</span></div>
+<div class="line"><a name="l03200"></a><span class="lineno"> 3200</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositionsForPostReseed(<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom, BoundedMatrix&lt;double, 7, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 7, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//2d</span></div>
 <div class="line"><a name="l03201"></a><span class="lineno"> 3201</span>&#160;        {</div>
 <div class="line"><a name="l03202"></a><span class="lineno"> 3202</span>&#160;            <span class="keywordtype">double</span> one_third = 1.0 / 3.0;</div>
 <div class="line"><a name="l03203"></a><span class="lineno"> 3203</span>&#160;            <span class="keywordtype">double</span> one_eight = 0.12; <span class="comment">//1.0 / 6.0;</span></div>
@@ -3326,7 +3326,7 @@ $(function() {
 <div class="line"><a name="l03272"></a><span class="lineno"> 3272</span>&#160; </div>
 <div class="line"><a name="l03273"></a><span class="lineno"> 3273</span>&#160;        }</div>
 <div class="line"><a name="l03274"></a><span class="lineno"> 3274</span>&#160; </div>
-<div class="line"><a name="l03275"></a><span class="lineno"> 3275</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositionsForPostReseed(Geometry&lt; Node &gt;&amp; geom, BoundedMatrix&lt;double, 9, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 9, 4 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//3D</span></div>
+<div class="line"><a name="l03275"></a><span class="lineno"> 3275</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositionsForPostReseed(<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom, BoundedMatrix&lt;double, 9, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 9, 4 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//3D</span></div>
 <div class="line"><a name="l03276"></a><span class="lineno"> 3276</span>&#160;        {</div>
 <div class="line"><a name="l03277"></a><span class="lineno"> 3277</span>&#160;            <span class="keywordtype">double</span> one_quarter = 0.25;</div>
 <div class="line"><a name="l03278"></a><span class="lineno"> 3278</span>&#160;            <span class="keywordtype">double</span> small_fraction = 0.1; <span class="comment">//1.0 / 6.0;</span></div>
@@ -3394,7 +3394,7 @@ $(function() {
 <div class="line"><a name="l03340"></a><span class="lineno"> 3340</span>&#160; </div>
 <div class="line"><a name="l03341"></a><span class="lineno"> 3341</span>&#160; </div>
 <div class="line"><a name="l03342"></a><span class="lineno"> 3342</span>&#160; </div>
-<div class="line"><a name="l03343"></a><span class="lineno"> 3343</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositionsForPreReseed(Geometry&lt; Node &gt;&amp; geom, BoundedMatrix&lt;double, 3, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 3, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//2D</span></div>
+<div class="line"><a name="l03343"></a><span class="lineno"> 3343</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositionsForPreReseed(<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom, BoundedMatrix&lt;double, 3, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 3, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//2D</span></div>
 <div class="line"><a name="l03344"></a><span class="lineno"> 3344</span>&#160;        {</div>
 <div class="line"><a name="l03345"></a><span class="lineno"> 3345</span>&#160; </div>
 <div class="line"><a name="l03346"></a><span class="lineno"> 3346</span>&#160;            <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>(0, 0) = 0.5;</div>
@@ -3426,7 +3426,7 @@ $(function() {
 <div class="line"><a name="l03372"></a><span class="lineno"> 3372</span>&#160; </div>
 <div class="line"><a name="l03373"></a><span class="lineno"> 3373</span>&#160;        }</div>
 <div class="line"><a name="l03374"></a><span class="lineno"> 3374</span>&#160; </div>
-<div class="line"><a name="l03375"></a><span class="lineno"> 3375</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositionsForPreReseed(Geometry&lt; Node &gt;&amp; geom, BoundedMatrix&lt;double, 4, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 4, 4 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//3D</span></div>
+<div class="line"><a name="l03375"></a><span class="lineno"> 3375</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositionsForPreReseed(<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom, BoundedMatrix&lt;double, 4, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 4, 4 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//3D</span></div>
 <div class="line"><a name="l03376"></a><span class="lineno"> 3376</span>&#160;        {</div>
 <div class="line"><a name="l03377"></a><span class="lineno"> 3377</span>&#160;            <span class="comment">//creating 4 particles, each will be closer to a node and equidistant to the other nodes</span></div>
 <div class="line"><a name="l03378"></a><span class="lineno"> 3378</span>&#160; </div>
@@ -3466,7 +3466,7 @@ $(function() {
 <div class="line"><a name="l03412"></a><span class="lineno"> 3412</span>&#160; </div>
 <div class="line"><a name="l03413"></a><span class="lineno"> 3413</span>&#160; </div>
 <div class="line"><a name="l03414"></a><span class="lineno"> 3414</span>&#160; </div>
-<div class="line"><a name="l03415"></a><span class="lineno"> 3415</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositions_45(Geometry&lt; Node &gt;&amp; geom, BoundedMatrix&lt;double, 45, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 45, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>)</div>
+<div class="line"><a name="l03415"></a><span class="lineno"> 3415</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositions_45(<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom, BoundedMatrix&lt;double, 45, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 45, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>)</div>
 <div class="line"><a name="l03416"></a><span class="lineno"> 3416</span>&#160;        {</div>
 <div class="line"><a name="l03417"></a><span class="lineno"> 3417</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;NEW ELEMENT&quot; &lt;&lt; std::endl;</span></div>
 <div class="line"><a name="l03418"></a><span class="lineno"> 3418</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/daa/namespacescript___t_h_e_r_m_a_l___c_o_r_r_e_c_t.html#a37fe67255f2e1d30f90f0f02ceb60616">counter</a>=0;</div>
@@ -3488,7 +3488,7 @@ $(function() {
 <div class="line"><a name="l03434"></a><span class="lineno"> 3434</span>&#160; </div>
 <div class="line"><a name="l03435"></a><span class="lineno"> 3435</span>&#160;        }</div>
 <div class="line"><a name="l03436"></a><span class="lineno"> 3436</span>&#160; </div>
-<div class="line"><a name="l03437"></a><span class="lineno"> 3437</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositions_initial(Geometry&lt; Node &gt;&amp; geom, BoundedMatrix&lt;double, 15, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 15, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//2D</span></div>
+<div class="line"><a name="l03437"></a><span class="lineno"> 3437</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositions_initial(<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom, BoundedMatrix&lt;double, 15, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 15, 3 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//2D</span></div>
 <div class="line"><a name="l03438"></a><span class="lineno"> 3438</span>&#160;        {</div>
 <div class="line"><a name="l03439"></a><span class="lineno"> 3439</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;NEW ELEMENT&quot; &lt;&lt; std::endl;</span></div>
 <div class="line"><a name="l03440"></a><span class="lineno"> 3440</span>&#160;            <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d0/daa/namespacescript___t_h_e_r_m_a_l___c_o_r_r_e_c_t.html#a37fe67255f2e1d30f90f0f02ceb60616">counter</a>=0;</div>
@@ -3510,7 +3510,7 @@ $(function() {
 <div class="line"><a name="l03456"></a><span class="lineno"> 3456</span>&#160; </div>
 <div class="line"><a name="l03457"></a><span class="lineno"> 3457</span>&#160;        }</div>
 <div class="line"><a name="l03458"></a><span class="lineno"> 3458</span>&#160; </div>
-<div class="line"><a name="l03459"></a><span class="lineno"> 3459</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositions_initial(Geometry&lt; Node &gt;&amp; geom, BoundedMatrix&lt;double, 20, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 20, 4 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//3D</span></div>
+<div class="line"><a name="l03459"></a><span class="lineno"> 3459</span>&#160;        <span class="keywordtype">void</span> ComputeGaussPointPositions_initial(<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt; Node &gt;</a>&amp; geom, BoundedMatrix&lt;double, 20, 3 &gt; &amp; pos,BoundedMatrix&lt;double, 20, 4 &gt; &amp; <a class="code" href="../../d0/d79/namespacesensitivity_matrix.html#a66f3c3a8f1f19530f87c9bd69c40d3ff">N</a>) <span class="comment">//3D</span></div>
 <div class="line"><a name="l03460"></a><span class="lineno"> 3460</span>&#160;        {</div>
 <div class="line"><a name="l03461"></a><span class="lineno"> 3461</span>&#160;            <span class="comment">//std::cout &lt;&lt; &quot;NEW ELEMENT&quot; &lt;&lt; std::endl;</span></div>
 <div class="line"><a name="l03462"></a><span class="lineno"> 3462</span>&#160;            <span class="comment">//double total;</span></div>
@@ -3751,7 +3751,7 @@ $(function() {
 <div class="ttc" id="acell_8h_html"><div class="ttname"><a href="../../d0/ddd/cell_8h.html">cell.h</a></div></div>
 <div class="ttc" id="acfd__variables_8h_html"><div class="ttname"><a href="../../d0/d8e/cfd__variables_8h.html">cfd_variables.h</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_bins_object_dynamic_html"><div class="ttname"><a href="../../d8/d3a/class_kratos_1_1_bins_object_dynamic.html">Kratos::BinsObjectDynamic</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> bins_dynamic_objects.h:57</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry&lt; Node &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_ad118a7d5327cec70de8c5ee81db7b91e"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#ad118a7d5327cec70de8c5ee81db7b91e">Kratos::Geometry::GetValue</a></div><div class="ttdeci">TVariableType::Type &amp; GetValue(const TVariableType &amp;rThisVariable)</div><div class="ttdef"><b>Definition:</b> geometry.h:627</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_afd51475099147b19ee8d4569115149ec"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#afd51475099147b19ee8d4569115149ec">Kratos::Geometry::Area</a></div><div class="ttdeci">virtual double Area() const</div><div class="ttdoc">This method calculate and return area or surface area of this geometry depending to it's dimension.</div><div class="ttdef"><b>Definition:</b> geometry.h:1345</div></div>
 <div class="ttc" id="aclass_kratos_1_1_global_pointers_vector_html"><div class="ttname"><a href="../../d4/dc2/class_kratos_1_1_global_pointers_vector.html">Kratos::GlobalPointersVector</a></div><div class="ttdoc">This class is a vector which stores global pointers.</div><div class="ttdef"><b>Definition:</b> global_pointers_vector.h:61</div></div>
@@ -3888,7 +3888,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 20 2024 02:31:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 21 2024 02:31:14 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
