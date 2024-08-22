@@ -130,9 +130,6 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a09db60bd3b503fa6ec42e3e037c48da1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d166ebf592596df503f6acaf62090d2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a9d166ebf592596df503f6acaf62090d2">InvertMatrix2</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 2, 2 &gt; &amp;rInvertedMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 2, 2 &gt; &amp;InputMatrix)</td></tr>
 <tr class="separator:a9d166ebf592596df503f6acaf62090d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9e1ba47e380b77d5302cc77b1d4d1ff2"><td class="memTemplParams" colspan="2">template&lt;unsigned int TDim&gt; </td></tr>
-<tr class="memitem:a9e1ba47e380b77d5302cc77b1d4d1ff2"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a9e1ba47e380b77d5302cc77b1d4d1ff2">AssembleDensityMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim+1, TDim+1 &gt; &amp;DensityMatrix, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Density)</td></tr>
-<tr class="separator:a9e1ba47e380b77d5302cc77b1d4d1ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9c21e71794fc1fcf48bd58b81eb1e5b"><td class="memTemplParams" colspan="2">template&lt;typename MatrixType &gt; </td></tr>
 <tr class="memitem:ad9c21e71794fc1fcf48bd58b81eb1e5b"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ad9c21e71794fc1fcf48bd58b81eb1e5b">AssembleDensityMatrix</a> (MatrixType &amp;DensityMatrix, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Density)</td></tr>
 <tr class="separator:ad9c21e71794fc1fcf48bd58b81eb1e5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -209,46 +206,8 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9e1ba47e380b77d5302cc77b1d4d1ff2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e1ba47e380b77d5302cc77b1d4d1ff2">&#9670;&nbsp;</a></span>AssembleDensityMatrix() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void Kratos::GeoElementUtilities::AssembleDensityMatrix </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, TDim+1, TDim+1 &gt; &amp;&#160;</td>
-          <td class="paramname"><em>DensityMatrix</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
-          <td class="paramname"><em>Density</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="ad9c21e71794fc1fcf48bd58b81eb1e5b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad9c21e71794fc1fcf48bd58b81eb1e5b">&#9670;&nbsp;</a></span>AssembleDensityMatrix() <span class="overload">[2/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad9c21e71794fc1fcf48bd58b81eb1e5b">&#9670;&nbsp;</a></span>AssembleDensityMatrix()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1418,7 +1377,7 @@ template&lt;unsigned int TDof, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Aug 21 2024 03:45:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Aug 22 2024 03:47:05 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
