@@ -78,6 +78,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../d4/dba/class_kratos_1_1_line_interface_geometry-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Kratos::LineInterfaceGeometry Class Reference</div>  </div>
@@ -215,6 +216,52 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:acbcb0e4517e32d9eece1b116ce045789"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#acbcb0e4517e32d9eece1b116ce045789">PrintData</a> (std::ostream &amp;rOStream) const override</td></tr>
 <tr class="memdesc:acbcb0e4517e32d9eece1b116ce045789"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print object's data.  <a href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#acbcb0e4517e32d9eece1b116ce045789">More...</a><br /></td></tr>
 <tr class="separator:acbcb0e4517e32d9eece1b116ce045789"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afffec9004a5dd0397c7b34bec47b88f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#afffec9004a5dd0397c7b34bec47b88f4">Normal</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex) const override</td></tr>
+<tr class="memdesc:afffec9004a5dd0397c7b34bec47b88f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns the vector, which is normal to its corresponding geometry in the given integration point for the default integration method.  <a href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#afffec9004a5dd0397c7b34bec47b88f4">More...</a><br /></td></tr>
+<tr class="separator:afffec9004a5dd0397c7b34bec47b88f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac3f405bfbe4ed01de4fee6d583db8ba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#ac3f405bfbe4ed01de4fee6d583db8ba9">Normal</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="memdesc:ac3f405bfbe4ed01de4fee6d583db8ba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns the vector, which is normal to its corresponding geometry in the given integration point.  <a href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#ac3f405bfbe4ed01de4fee6d583db8ba9">More...</a><br /></td></tr>
+<tr class="separator:ac3f405bfbe4ed01de4fee6d583db8ba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54fc6e04f2315e1e32ff8245f9e19983"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a54fc6e04f2315e1e32ff8245f9e19983">UnitNormal</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex) const override</td></tr>
+<tr class="memdesc:a54fc6e04f2315e1e32ff8245f9e19983"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns the normalized normal vector in the given integration point.  <a href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a54fc6e04f2315e1e32ff8245f9e19983">More...</a><br /></td></tr>
+<tr class="separator:a54fc6e04f2315e1e32ff8245f9e19983"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbb2e5d268405c4a9e124b82c2f0ec8a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#acbb2e5d268405c4a9e124b82c2f0ec8a">UnitNormal</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="memdesc:acbb2e5d268405c4a9e124b82c2f0ec8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns the normalized normal vector in the given integration point.  <a href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#acbb2e5d268405c4a9e124b82c2f0ec8a">More...</a><br /></td></tr>
+<tr class="separator:acbb2e5d268405c4a9e124b82c2f0ec8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7bc8c9047d13068b5d75635c622e478"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#ad7bc8c9047d13068b5d75635c622e478">Jacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="separator:ad7bc8c9047d13068b5d75635c622e478"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3ceb7b55ebc68df57b9a4cc74e42cc2d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a3ceb7b55ebc68df57b9a4cc74e42cc2d">Jacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod, <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;DeltaPosition) const override</td></tr>
+<tr class="separator:a3ceb7b55ebc68df57b9a4cc74e42cc2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7730633682d410796e827e9e6f553745"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a7730633682d410796e827e9e6f553745">Jacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="separator:a7730633682d410796e827e9e6f553745"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6db7b3ecf5477b9919c4363ea509c326"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a6db7b3ecf5477b9919c4363ea509c326">Jacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rDeltaPosition) const override</td></tr>
+<tr class="separator:a6db7b3ecf5477b9919c4363ea509c326"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3e82011219e65e0613010c0757bf958"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#aa3e82011219e65e0613010c0757bf958">DeterminantOfJacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="separator:aa3e82011219e65e0613010c0757bf958"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab64a8980005ddbfa75f7e6a69699500c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#ab64a8980005ddbfa75f7e6a69699500c">DeterminantOfJacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="separator:ab64a8980005ddbfa75f7e6a69699500c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74026d9379756bdf05795d98060b1a95"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a74026d9379756bdf05795d98060b1a95">InverseOfJacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="separator:a74026d9379756bdf05795d98060b1a95"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad08899daebcb47971a37b614ed780455"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#ad08899daebcb47971a37b614ed780455">InverseOfJacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="separator:ad08899daebcb47971a37b614ed780455"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bf3ac433d8a14a976209a12e00cecd0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a1bf3ac433d8a14a976209a12e00cecd0">ShapeFunctionsIntegrationPointsGradients</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="separator:a1bf3ac433d8a14a976209a12e00cecd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7db4f8740925eb7c8ba5b43625da1e00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a7db4f8740925eb7c8ba5b43625da1e00">ShapeFunctionsIntegrationPointsGradients</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;rResult, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rDeterminantsOfJacobian, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const override</td></tr>
+<tr class="separator:a7db4f8740925eb7c8ba5b43625da1e00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1801fa19844c73eeb55b7dd22860528e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a1801fa19844c73eeb55b7dd22860528e">ShapeFunctionsIntegrationPointsGradients</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;rResult, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rDeterminantsOfJacobian, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod, <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;ShapeFunctionsIntegrationPointsValues) const override</td></tr>
+<tr class="separator:a1801fa19844c73eeb55b7dd22860528e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fcce92d83004da73b6c30ffaf51dff2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a9fcce92d83004da73b6c30ffaf51dff2">GetDefaultIntegrationInfo</a> () const override</td></tr>
+<tr class="memdesc:a9fcce92d83004da73b6c30ffaf51dff2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the default integration per geometry.  <a href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a9fcce92d83004da73b6c30ffaf51dff2">More...</a><br /></td></tr>
+<tr class="separator:a9fcce92d83004da73b6c30ffaf51dff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad420b1be2fa356c800fab1e80d7202b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#ad420b1be2fa356c800fab1e80d7202b1">CreateIntegrationPoints</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">IntegrationPointsArrayType</a> &amp;rIntegrationPoints, <a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;rIntegrationInfo) const override</td></tr>
+<tr class="separator:ad420b1be2fa356c800fab1e80d7202b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42ab64ccc0e4ff1a5dd06d9429e6c06"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#ad42ab64ccc0e4ff1a5dd06d9429e6c06">CreateQuadraturePointGeometries</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> &amp;rResultGeometries, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> NumberOfShapeFunctionDerivatives, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">IntegrationPointsArrayType</a> &amp;rIntegrationPoints, <a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;rIntegrationInfo) override</td></tr>
+<tr class="separator:ad42ab64ccc0e4ff1a5dd06d9429e6c06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17caf7f779d7d731a0954b83b5906951"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a17caf7f779d7d731a0954b83b5906951">CreateQuadraturePointGeometries</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> &amp;rResultGeometries, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> NumberOfShapeFunctionDerivatives, <a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;rIntegrationInfo) override</td></tr>
+<tr class="separator:a17caf7f779d7d731a0954b83b5906951"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aabcfab1f750529f689e1b4350483f53f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#aabcfab1f750529f689e1b4350483f53f">GlobalSpaceDerivatives</a> (std::vector&lt; <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &gt; &amp;rGlobalSpaceDerivatives, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a606fa3884401b8c2a1689a3b302dc309">SizeType</a> DerivativeOrder) const override</td></tr>
+<tr class="memdesc:aabcfab1f750529f689e1b4350483f53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method maps from dimension space to working space and computes the number of derivatives at the dimension parameter.  <a href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#aabcfab1f750529f689e1b4350483f53f">More...</a><br /></td></tr>
+<tr class="separator:aabcfab1f750529f689e1b4350483f53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_kratos_1_1_geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_kratos_1_1_geometry')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry&lt; Node &gt;</a></td></tr>
 <tr class="memitem:aaf1caf790034fea33190bed0b893475f inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aaf1caf790034fea33190bed0b893475f">Geometry</a> ()</td></tr>
 <tr class="memdesc:aaf1caf790034fea33190bed0b893475f inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Standard Constructor. Generates self assigned id.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#aaf1caf790034fea33190bed0b893475f">More...</a><br /></td></tr>
@@ -460,21 +507,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3e26f01e789e6f7ccc8a85cf4b65c635 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3e26f01e789e6f7ccc8a85cf4b65c635">Normal</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;rPointLocalCoordinates) const</td></tr>
 <tr class="memdesc:a3e26f01e789e6f7ccc8a85cf4b65c635 inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns a vector that is normal to its corresponding geometry in the given local point.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#a3e26f01e789e6f7ccc8a85cf4b65c635">More...</a><br /></td></tr>
 <tr class="separator:a3e26f01e789e6f7ccc8a85cf4b65c635 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7786ffcc637e7c3ce878659fea5d02d inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#af7786ffcc637e7c3ce878659fea5d02d">Normal</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex) const</td></tr>
-<tr class="memdesc:af7786ffcc637e7c3ce878659fea5d02d inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns the vector, which is normal to its corresponding geometry in the given integration point for the default integration method.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#af7786ffcc637e7c3ce878659fea5d02d">More...</a><br /></td></tr>
-<tr class="separator:af7786ffcc637e7c3ce878659fea5d02d inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aaea94717beba01354005a553412a8a76 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aaea94717beba01354005a553412a8a76">Normal</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="memdesc:aaea94717beba01354005a553412a8a76 inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns the vector, which is normal to its corresponding geometry in the given integration point.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#aaea94717beba01354005a553412a8a76">More...</a><br /></td></tr>
-<tr class="separator:aaea94717beba01354005a553412a8a76 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60f142e68df0009b5d17f12129a1cb97 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a60f142e68df0009b5d17f12129a1cb97">UnitNormal</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;rPointLocalCoordinates) const</td></tr>
 <tr class="memdesc:a60f142e68df0009b5d17f12129a1cb97 inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">It computes the unit normal of the geometry in the given local point.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#a60f142e68df0009b5d17f12129a1cb97">More...</a><br /></td></tr>
 <tr class="separator:a60f142e68df0009b5d17f12129a1cb97 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa4593d71e1c09570ddfb6b2f07206fc1 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa4593d71e1c09570ddfb6b2f07206fc1">UnitNormal</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex) const</td></tr>
-<tr class="memdesc:aa4593d71e1c09570ddfb6b2f07206fc1 inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns the normalized normal vector in the given integration point.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#aa4593d71e1c09570ddfb6b2f07206fc1">More...</a><br /></td></tr>
-<tr class="separator:aa4593d71e1c09570ddfb6b2f07206fc1 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acfa6a9c7f181d022fd98a70705403724 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; double, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#acfa6a9c7f181d022fd98a70705403724">UnitNormal</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="memdesc:acfa6a9c7f181d022fd98a70705403724 inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">It returns the normalized normal vector in the given integration point.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#acfa6a9c7f181d022fd98a70705403724">More...</a><br /></td></tr>
-<tr class="separator:acfa6a9c7f181d022fd98a70705403724 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab342bd7e485d10466f225268a6b3e4cc inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ab342bd7e485d10466f225268a6b3e4cc">Quality</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ab2ff43363583dcf314d7bd9b99094986">QualityCriteria</a> qualityCriteria) const</td></tr>
 <tr class="separator:ab342bd7e485d10466f225268a6b3e4cc inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a61d0ad145624b48fce58de82afc59ae5 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a61d0ad145624b48fce58de82afc59ae5">ComputeDihedralAngles</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rDihedralAngles) const</td></tr>
@@ -537,12 +572,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad186709ed81b9bd6c9846ac6781de1be inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af7bc231d427be92a1be2df3831e1f974 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">IntegrationPointsArrayType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#af7bc231d427be92a1be2df3831e1f974">IntegrationPoints</a> (<a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
 <tr class="separator:af7bc231d427be92a1be2df3831e1f974 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad73cda8b8913fefe61e9803d6ddff2e9 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad73cda8b8913fefe61e9803d6ddff2e9">CreateIntegrationPoints</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">IntegrationPointsArrayType</a> &amp;rIntegrationPoints, <a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;rIntegrationInfo) const</td></tr>
-<tr class="separator:ad73cda8b8913fefe61e9803d6ddff2e9 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8697101528e81a437af5b7f1827411db inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a8697101528e81a437af5b7f1827411db">CreateQuadraturePointGeometries</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> &amp;rResultGeometries, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> NumberOfShapeFunctionDerivatives, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">IntegrationPointsArrayType</a> &amp;rIntegrationPoints, <a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;rIntegrationInfo)</td></tr>
-<tr class="separator:a8697101528e81a437af5b7f1827411db inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa12772f444385706187cd5f2ed35aebb inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa12772f444385706187cd5f2ed35aebb">CreateQuadraturePointGeometries</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> &amp;rResultGeometries, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> NumberOfShapeFunctionDerivatives, <a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;rIntegrationInfo)</td></tr>
-<tr class="separator:aa12772f444385706187cd5f2ed35aebb inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3479b2bdbceb2a918bcc61390aca7aaf inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3479b2bdbceb2a918bcc61390aca7aaf">GlobalCoordinates</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> const &amp;LocalCoordinates) const</td></tr>
 <tr class="separator:a3479b2bdbceb2a918bcc61390aca7aaf inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a13bbdc380d317963313914159bdf24fb inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a13bbdc380d317963313914159bdf24fb">GlobalCoordinates</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex) const</td></tr>
@@ -555,9 +584,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afed44bb93a6f8c16c93b5c84cbb1e951 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#afed44bb93a6f8c16c93b5c84cbb1e951">GlobalSpaceDerivatives</a> (std::vector&lt; <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &gt; &amp;rGlobalSpaceDerivatives, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;rLocalCoordinates, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a606fa3884401b8c2a1689a3b302dc309">SizeType</a> DerivativeOrder) const</td></tr>
 <tr class="memdesc:afed44bb93a6f8c16c93b5c84cbb1e951 inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method maps from dimension space to working space and computes the number of derivatives at the dimension parameter.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#afed44bb93a6f8c16c93b5c84cbb1e951">More...</a><br /></td></tr>
 <tr class="separator:afed44bb93a6f8c16c93b5c84cbb1e951 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a383ee3a205e04c809ae5e7e537e47d44 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a383ee3a205e04c809ae5e7e537e47d44">GlobalSpaceDerivatives</a> (std::vector&lt; <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &gt; &amp;rGlobalSpaceDerivatives, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a606fa3884401b8c2a1689a3b302dc309">SizeType</a> DerivativeOrder) const</td></tr>
-<tr class="memdesc:a383ee3a205e04c809ae5e7e537e47d44 inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method maps from dimension space to working space and computes the number of derivatives at the dimension parameter.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#a383ee3a205e04c809ae5e7e537e47d44">More...</a><br /></td></tr>
-<tr class="separator:a383ee3a205e04c809ae5e7e537e47d44 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02b0c042be1f9923e2e664c005828a19 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a02b0c042be1f9923e2e664c005828a19">ProjectionPoint</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;rPointGlobalCoordinates, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;rProjectedPointGlobalCoordinates, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;rProjectedPointLocalCoordinates, const double Tolerance=std::numeric_limits&lt; double &gt;::epsilon()) const</td></tr>
 <tr class="memdesc:a02b0c042be1f9923e2e664c005828a19 inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Projects a certain point on the geometry, or finds the closest point, depending on the provided initial guess. The external point does not necessary lay on the geometry. It shall deal as the interface to the mathematical projection function e.g. the Newton-Raphson. Thus, the breaking criteria does not necessarily mean that it found a point on the surface, if it is really the closest if or not. It shows only if the breaking criteria, defined by the tolerance is reached.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#a02b0c042be1f9923e2e664c005828a19">More...</a><br /></td></tr>
 <tr class="separator:a02b0c042be1f9923e2e664c005828a19 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -587,34 +613,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4daf303c05fc5fdf00c5add76c8bd18d inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae44e97ffdd927578546170dfed724b35 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae44e97ffdd927578546170dfed724b35">Jacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;rResult) const</td></tr>
 <tr class="separator:ae44e97ffdd927578546170dfed724b35 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4cd201456a643ef8b9983063e4e41ef2 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a4cd201456a643ef8b9983063e4e41ef2">Jacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="separator:a4cd201456a643ef8b9983063e4e41ef2 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a65ec0cc6775b20566dbb0f2f2dc1a2b2 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a65ec0cc6775b20566dbb0f2f2dc1a2b2">Jacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod, <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;DeltaPosition) const</td></tr>
-<tr class="separator:a65ec0cc6775b20566dbb0f2f2dc1a2b2 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8dd9eb86de097106ea3cc44c7369ed8 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#af8dd9eb86de097106ea3cc44c7369ed8">Jacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex) const</td></tr>
 <tr class="separator:af8dd9eb86de097106ea3cc44c7369ed8 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add5a59566160cef68043b43fef43eed2 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#add5a59566160cef68043b43fef43eed2">Jacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="separator:add5a59566160cef68043b43fef43eed2 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e2021490f746324ce62490ab94845ab inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a8e2021490f746324ce62490ab94845ab">Jacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rDeltaPosition) const</td></tr>
-<tr class="separator:a8e2021490f746324ce62490ab94845ab inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15aea277e8294ae99d448c10e6a984f6 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a15aea277e8294ae99d448c10e6a984f6">Jacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rResult, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &amp;rCoordinates, <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rDeltaPosition) const</td></tr>
 <tr class="separator:a15aea277e8294ae99d448c10e6a984f6 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d2b05ee63064ed2a21c828b19d6d273 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a6d2b05ee63064ed2a21c828b19d6d273">DeterminantOfJacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rResult) const</td></tr>
 <tr class="separator:a6d2b05ee63064ed2a21c828b19d6d273 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad13770335f0c6920ee34479b4c14ca83 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad13770335f0c6920ee34479b4c14ca83">DeterminantOfJacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="separator:ad13770335f0c6920ee34479b4c14ca83 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6617aa69c319ffa08220d78fa6d48f9f inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a6617aa69c319ffa08220d78fa6d48f9f">DeterminantOfJacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex) const</td></tr>
 <tr class="separator:a6617aa69c319ffa08220d78fa6d48f9f inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af6abc0c38902662604b71267ec3539e3 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#af6abc0c38902662604b71267ec3539e3">DeterminantOfJacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="separator:af6abc0c38902662604b71267ec3539e3 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7aed22c14cddc96dd38a65f25c14ac65 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a7aed22c14cddc96dd38a65f25c14ac65">InverseOfJacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;rResult) const</td></tr>
 <tr class="separator:a7aed22c14cddc96dd38a65f25c14ac65 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64104ada7dd6ae713bc8b4c74832a903 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a64104ada7dd6ae713bc8b4c74832a903">InverseOfJacobian</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="separator:a64104ada7dd6ae713bc8b4c74832a903 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac82a99fed817b5e6a69793060156401b inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ac82a99fed817b5e6a69793060156401b">InverseOfJacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex) const</td></tr>
 <tr class="separator:ac82a99fed817b5e6a69793060156401b inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa2b5d68dfa3006e4bfd61083806a32b9 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa2b5d68dfa3006e4bfd61083806a32b9">InverseOfJacobian</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rResult, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> IntegrationPointIndex, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="separator:aa2b5d68dfa3006e4bfd61083806a32b9 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55933ce2a5962b99d8604b0e0f024c15 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a55933ce2a5962b99d8604b0e0f024c15">ShapeFunctionsValues</a> () const</td></tr>
 <tr class="separator:a55933ce2a5962b99d8604b0e0f024c15 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfdaa271ff3f0afc535d7de2d5a41202 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#adfdaa271ff3f0afc535d7de2d5a41202">ShapeFunctionsValues</a> (<a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
@@ -643,12 +653,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2a713b745297609ef9aa93259cbe520d inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acbc154528c2c90d5f614775adf7be649 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#acbc154528c2c90d5f614775adf7be649">ShapeFunctionsIntegrationPointsGradients</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;rResult) const</td></tr>
 <tr class="separator:acbc154528c2c90d5f614775adf7be649 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3673de46931a4adcdfdaf26048b4f22d inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3673de46931a4adcdfdaf26048b4f22d">ShapeFunctionsIntegrationPointsGradients</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;rResult, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="separator:a3673de46931a4adcdfdaf26048b4f22d inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad956efd39cbcec2a6bab8e78a697bbb8 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad956efd39cbcec2a6bab8e78a697bbb8">ShapeFunctionsIntegrationPointsGradients</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;rResult, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rDeterminantsOfJacobian, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod) const</td></tr>
-<tr class="separator:ad956efd39cbcec2a6bab8e78a697bbb8 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad0460b4ddfdb242d950880fa19d40e6b inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad0460b4ddfdb242d950880fa19d40e6b">ShapeFunctionsIntegrationPointsGradients</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;rResult, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rDeterminantsOfJacobian, <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a> ThisMethod, <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;ShapeFunctionsIntegrationPointsValues) const</td></tr>
-<tr class="separator:ad0460b4ddfdb242d950880fa19d40e6b inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c8ee5585d5aa79a33ee55f4d3152b14 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3c8ee5585d5aa79a33ee55f4d3152b14">Check</a> () const</td></tr>
 <tr class="separator:a3c8ee5585d5aa79a33ee55f4d3152b14 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae6aa751124237b3bddd421bc6c1b91ff inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae6aa751124237b3bddd421bc6c1b91ff">Name</a> () const</td></tr>
@@ -666,9 +670,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6587d044a9418d6aaa3a31406d4fe0b8 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3849bbba98fe1c515237ca3b31bd695 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ab3849bbba98fe1c515237ca3b31bd695">GetDefaultIntegrationMethod</a> () const</td></tr>
 <tr class="separator:ab3849bbba98fe1c515237ca3b31bd695 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0f0e891e0bb7f872a5ff57f79410245 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#af0f0e891e0bb7f872a5ff57f79410245">GetDefaultIntegrationInfo</a> () const</td></tr>
-<tr class="memdesc:af0f0e891e0bb7f872a5ff57f79410245 inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the default integration per geometry.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#af0f0e891e0bb7f872a5ff57f79410245">More...</a><br /></td></tr>
-<tr class="separator:af0f0e891e0bb7f872a5ff57f79410245 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1cc5e84b3c881aa28a3e8ffc2739b760 inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a1cc5e84b3c881aa28a3e8ffc2739b760">IsSymmetric</a> () const</td></tr>
 <tr class="separator:a1cc5e84b3c881aa28a3e8ffc2739b760 inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6a78c4a94b491bfa7e9b79795ad8e42b inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a6a78c4a94b491bfa7e9b79795ad8e42b">Id</a> () const</td></tr>
@@ -687,8 +688,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:ac88d2f707f86c198751ce78742dd610b inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets Id with the use of the name of this geometry.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#ac88d2f707f86c198751ce78742dd610b">More...</a><br /></td></tr>
 <tr class="separator:ac88d2f707f86c198751ce78742dd610b inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
-Additional Inherited Members</h2></td></tr>
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a72fb8f45d65b6871509409f3efc74586"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a72fb8f45d65b6871509409f3efc74586">IntegrationSchemeFunctionalityNotImplementedMessage</a> ()</td></tr>
+<tr class="separator:a72fb8f45d65b6871509409f3efc74586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_static_methods_class_kratos_1_1_geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_static_methods_class_kratos_1_1_geometry')"><img src="../../closed.png" alt="-"/>&#160;Static Public Member Functions inherited from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry&lt; Node &gt;</a></td></tr>
 <tr class="memitem:a754bc59ed0302f95c1e5226621bd8ee6 inherit pub_static_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a754bc59ed0302f95c1e5226621bd8ee6">HasSameType</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a65b4ca3cbd26c96ada700897c05350c1">GeometryType</a> &amp;rLHS, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a65b4ca3cbd26c96ada700897c05350c1">GeometryType</a> &amp;rRHS)</td></tr>
 <tr class="memdesc:a754bc59ed0302f95c1e5226621bd8ee6 inherit pub_static_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if two GeometryType have the same type.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#a754bc59ed0302f95c1e5226621bd8ee6">More...</a><br /></td></tr>
@@ -711,6 +714,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a27992172f648600085beddb571930be8 inherit pub_static_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a27992172f648600085beddb571930be8">GenerateId</a> (const std::string &amp;rName)</td></tr>
 <tr class="memdesc:a27992172f648600085beddb571930be8 inherit pub_static_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the corresponding hash-Id to a string name.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#a27992172f648600085beddb571930be8">More...</a><br /></td></tr>
 <tr class="separator:a27992172f648600085beddb571930be8 inherit pub_static_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pub_static_attribs_class_kratos_1_1_geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_kratos_1_1_geometry')"><img src="../../closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry&lt; Node &gt;</a></td></tr>
 <tr class="memitem:ab17a8bde9fd325d80cdb83e13ce407ac inherit pub_static_attribs_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">static constexpr <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ab17a8bde9fd325d80cdb83e13ce407ac">BACKGROUND_GEOMETRY_INDEX</a></td></tr>
 <tr class="separator:ab17a8bde9fd325d80cdb83e13ce407ac inherit pub_static_attribs_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -938,8 +944,140 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ad420b1be2fa356c800fab1e80d7202b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad420b1be2fa356c800fab1e80d7202b1">&#9670;&nbsp;</a></span>CreateIntegrationPoints()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::LineInterfaceGeometry::CreateIntegrationPoints </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">IntegrationPointsArrayType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rIntegrationPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rIntegrationInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad73cda8b8913fefe61e9803d6ddff2e9">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ad42ab64ccc0e4ff1a5dd06d9429e6c06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42ab64ccc0e4ff1a5dd06d9429e6c06">&#9670;&nbsp;</a></span>CreateQuadraturePointGeometries() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::LineInterfaceGeometry::CreateQuadraturePointGeometries </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResultGeometries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>NumberOfShapeFunctionDerivatives</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">IntegrationPointsArrayType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rIntegrationPoints</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rIntegrationInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a8697101528e81a437af5b7f1827411db">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a17caf7f779d7d731a0954b83b5906951"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a17caf7f779d7d731a0954b83b5906951">&#9670;&nbsp;</a></span>CreateQuadraturePointGeometries() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::LineInterfaceGeometry::CreateQuadraturePointGeometries </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResultGeometries</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>NumberOfShapeFunctionDerivatives</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;&#160;</td>
+          <td class="paramname"><em>rIntegrationInfo</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa12772f444385706187cd5f2ed35aebb">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a233776b2ecec8a17f5fe856107c7a976"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a233776b2ecec8a17f5fe856107c7a976">&#9670;&nbsp;</a></span>DeterminantOfJacobian()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a233776b2ecec8a17f5fe856107c7a976">&#9670;&nbsp;</a></span>DeterminantOfJacobian() <span class="overload">[1/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -974,6 +1112,99 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a42f8146a437bd6056eb0ee68933b735b">InverseOfJacobian</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aab03056155f1f7b5e3bc3011c80cf58c">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ab64a8980005ddbfa75f7e6a69699500c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab64a8980005ddbfa75f7e6a69699500c">&#9670;&nbsp;</a></span>DeterminantOfJacobian() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Kratos::LineInterfaceGeometry::DeterminantOfJacobian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>IntegrationPointIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determinant of jacobian in specific integration point of given integration method. This method calculate determinant of jacobian in given integration point of given integration method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IntegrationPointIndex</td><td>index of integration point which jacobians has to be calculated in it.</td></tr>
+    <tr><td class="paramname">IntegrationPointIndex</td><td>index of integration point which determinant of jacobians has to be calculated in it.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Determinamt of jacobian matrix \( |J|_i \) where \( i \) is the given integration point index of given integration method.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a76664c56015e391d9254e77691091d4b">Jacobian</a> </dd>
+<dd>
+<a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a42f8146a437bd6056eb0ee68933b735b">InverseOfJacobian</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#af6abc0c38902662604b71267ec3539e3">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="aa3e82011219e65e0613010c0757bf958"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3e82011219e65e0613010c0757bf958">&#9670;&nbsp;</a></span>DeterminantOfJacobian() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a>&amp; Kratos::LineInterfaceGeometry::DeterminantOfJacobian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Determinant of jacobians for given integration method. This method calculate determinant of jacobian in all integrations points of given integration method.</p>
+<dl class="section return"><dt>Returns</dt><dd>Vector of double which is vector of determinants of jacobians \( |J|_i \) where \( i=1,2,...,n \) is the integration point index of given integration method.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a76664c56015e391d9254e77691091d4b">Jacobian</a> </dd>
+<dd>
+<a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a42f8146a437bd6056eb0ee68933b735b">InverseOfJacobian</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad13770335f0c6920ee34479b4c14ca83">Kratos::Geometry&lt; Node &gt;</a>.</p>
 
 </div>
 </div>
@@ -1012,6 +1243,89 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a9fcce92d83004da73b6c30ffaf51dff2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fcce92d83004da73b6c30ffaf51dff2">&#9670;&nbsp;</a></span>GetDefaultIntegrationInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> Kratos::LineInterfaceGeometry::GetDefaultIntegrationInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Provides the default integration per geometry. </p>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#af0f0e891e0bb7f872a5ff57f79410245">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="aabcfab1f750529f689e1b4350483f53f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aabcfab1f750529f689e1b4350483f53f">&#9670;&nbsp;</a></span>GlobalSpaceDerivatives()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::LineInterfaceGeometry::GlobalSpaceDerivatives </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4544314c77990c2b8f31d157ce6c758">CoordinatesArrayType</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rGlobalSpaceDerivatives</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>IntegrationPointIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a606fa3884401b8c2a1689a3b302dc309">SizeType</a>&#160;</td>
+          <td class="paramname"><em>DerivativeOrder</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method maps from dimension space to working space and computes the number of derivatives at the dimension parameter. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IntegrationPointIndex</td><td>the coordinates of a certain integration point. </td></tr>
+    <tr><td class="paramname">rDerivativeOrder</td><td>of computed derivatives </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>std::vector&lt;<a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a>&gt; with the coordinates in working space The list is structured as following: [0] - global coordinates [1 - loc_space_dim] - base vectors [...] - higher order vectors (2D: du^2, dudv, dv^2) </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a383ee3a205e04c809ae5e7e537e47d44">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a115fb73cc6e95a45fe7b6ffd54b7134b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a115fb73cc6e95a45fe7b6ffd54b7134b">&#9670;&nbsp;</a></span>Info()</h2>
 
@@ -1041,8 +1355,82 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a72fb8f45d65b6871509409f3efc74586"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72fb8f45d65b6871509409f3efc74586">&#9670;&nbsp;</a></span>IntegrationSchemeFunctionalityNotImplementedMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::string Kratos::LineInterfaceGeometry::IntegrationSchemeFunctionalityNotImplementedMessage </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a74026d9379756bdf05795d98060b1a95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74026d9379756bdf05795d98060b1a95">&#9670;&nbsp;</a></span>InverseOfJacobian() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a>&amp; Kratos::LineInterfaceGeometry::InverseOfJacobian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inverse of jacobians for given integration method. This method calculate inverse of jacobians matrices in all integrations points of given integration method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ThisMethod</td><td>integration method which inverse of jacobians has to be calculated in its integration points.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Inverse of jacobian matrices \( J^{-1}_i \) where \( i=1,2,...,n \) is the integration point index of given integration method.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a76664c56015e391d9254e77691091d4b">Jacobian</a> </dd>
+<dd>
+<a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a233776b2ecec8a17f5fe856107c7a976">DeterminantOfJacobian</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a64104ada7dd6ae713bc8b4c74832a903">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a42f8146a437bd6056eb0ee68933b735b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42f8146a437bd6056eb0ee68933b735b">&#9670;&nbsp;</a></span>InverseOfJacobian()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a42f8146a437bd6056eb0ee68933b735b">&#9670;&nbsp;</a></span>InverseOfJacobian() <span class="overload">[2/3]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1090,8 +1478,174 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="ad08899daebcb47971a37b614ed780455"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad08899daebcb47971a37b614ed780455">&#9670;&nbsp;</a></span>InverseOfJacobian() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; Kratos::LineInterfaceGeometry::InverseOfJacobian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>IntegrationPointIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Inverse of jacobian in specific integration point of given integration method. This method calculate Inverse of jacobian matrix in given integration point of given integration method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IntegrationPointIndex</td><td>index of integration point which inverse of jacobians has to be calculated in it.</td></tr>
+    <tr><td class="paramname">ThisMethod</td><td>integration method which inverse of jacobians has to be calculated in its integration points.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Inverse of jacobian matrix \( J^{-1}_i \) where \( i \) is the given integration point index of given integration method.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a76664c56015e391d9254e77691091d4b">Jacobian</a> </dd>
+<dd>
+<a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a233776b2ecec8a17f5fe856107c7a976">DeterminantOfJacobian</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa2b5d68dfa3006e4bfd61083806a32b9">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ad7bc8c9047d13068b5d75635c622e478"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7bc8c9047d13068b5d75635c622e478">&#9670;&nbsp;</a></span>Jacobian() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a>&amp; Kratos::LineInterfaceGeometry::Jacobian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Jacobians for given method. This method calculate jacobians matrices in all integrations points of given integration method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ThisMethod</td><td>integration method which jacobians has to be calculated in its integration points.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>JacobiansType a Vector of jacobian matrices \( J_i \) where \( i=1,2,...,n \) is the integration point index of given integration method.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a233776b2ecec8a17f5fe856107c7a976">DeterminantOfJacobian</a> </dd>
+<dd>
+<a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a42f8146a437bd6056eb0ee68933b735b">InverseOfJacobian</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a4cd201456a643ef8b9983063e4e41ef2">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a3ceb7b55ebc68df57b9a4cc74e42cc2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3ceb7b55ebc68df57b9a4cc74e42cc2d">&#9670;&nbsp;</a></span>Jacobian() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a>&amp; Kratos::LineInterfaceGeometry::Jacobian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa700b1af2232b22fd8af4626034c312f">JacobiansType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>DeltaPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Jacobians for given method. This method calculate jacobians matrices in all integrations points of given integration method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ThisMethod</td><td>integration method which jacobians has to be calculated in its integration points.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>JacobiansType a Vector of jacobian matrices \( J_i \) where \( i=1,2,...,n \) is the integration point index of given integration method.</dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">DeltaPosition</td><td>Matrix with the nodes position increment which describes the configuration where the jacobian has to be calculated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a233776b2ecec8a17f5fe856107c7a976">DeterminantOfJacobian</a> </dd>
+<dd>
+<a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a42f8146a437bd6056eb0ee68933b735b">InverseOfJacobian</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a65ec0cc6775b20566dbb0f2f2dc1a2b2">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
 <a id="a76664c56015e391d9254e77691091d4b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a76664c56015e391d9254e77691091d4b">&#9670;&nbsp;</a></span>Jacobian()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a76664c56015e391d9254e77691091d4b">&#9670;&nbsp;</a></span>Jacobian() <span class="overload">[3/5]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1136,6 +1690,125 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a42f8146a437bd6056eb0ee68933b735b">InverseOfJacobian</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ae4f7a4d07bdc03c9ca83378dbfe79474">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a7730633682d410796e827e9e6f553745"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7730633682d410796e827e9e6f553745">&#9670;&nbsp;</a></span>Jacobian() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; Kratos::LineInterfaceGeometry::Jacobian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>IntegrationPointIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Jacobian in specific integration point of given integration method. This method calculate jacobian matrix in given integration point of given integration method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IntegrationPointIndex</td><td>index of integration point which jacobians has to be calculated in it.</td></tr>
+    <tr><td class="paramname">ThisMethod</td><td>integration method which jacobians has to be calculated in its integration points.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix&lt;double&gt;</a> Jacobian matrix \( J_i \) where \( i \) is the given integration point index of given integration method.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a233776b2ecec8a17f5fe856107c7a976">DeterminantOfJacobian</a> </dd>
+<dd>
+<a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a42f8146a437bd6056eb0ee68933b735b">InverseOfJacobian</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#add5a59566160cef68043b43fef43eed2">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a6db7b3ecf5477b9919c4363ea509c326"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6db7b3ecf5477b9919c4363ea509c326">&#9670;&nbsp;</a></span>Jacobian() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&amp; Kratos::LineInterfaceGeometry::Jacobian </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>IntegrationPointIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDeltaPosition</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Jacobian in specific integration point of given integration method. This method calculate jacobian matrix in given integration point of given integration method.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IntegrationPointIndex</td><td>index of integration point which jacobians has to be calculated in it.</td></tr>
+    <tr><td class="paramname">ThisMethod</td><td>integration method which jacobians has to be calculated in its integration points.</td></tr>
+    <tr><td class="paramname">rDeltaPosition</td><td>Matrix with the nodes position increment which describes the configuration where the jacobian has to be calculated.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix&lt;double&gt;</a> Jacobian matrix \( J_i \) where \( i \) is the given integration point index of given integration method.</dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a233776b2ecec8a17f5fe856107c7a976">DeterminantOfJacobian</a> </dd>
+<dd>
+<a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a42f8146a437bd6056eb0ee68933b735b">InverseOfJacobian</a> </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a8e2021490f746324ce62490ab94845ab">Kratos::Geometry&lt; Node &gt;</a>.</p>
 
 </div>
 </div>
@@ -1188,6 +1861,91 @@ Additional Inherited Members</h2></td></tr>
 <a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#ad5ba34291fce89a63e28dcb49d62c5a9" title="This method calculate and return length, area or volume of this geometry depending to it&#39;s dimension.">DomainSize()</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a31bbbe14cc77d6f9d1fd9b23eff8b00e">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="afffec9004a5dd0397c7b34bec47b88f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afffec9004a5dd0397c7b34bec47b88f4">&#9670;&nbsp;</a></span>Normal() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3&gt; Kratos::LineInterfaceGeometry::Normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>IntegrationPointIndex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>It returns the vector, which is normal to its corresponding geometry in the given integration point for the default integration method. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IntegrationPointIndex</td><td>index in internal integration point list </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The normal in the given integration point </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#af7786ffcc637e7c3ce878659fea5d02d">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="ac3f405bfbe4ed01de4fee6d583db8ba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f405bfbe4ed01de4fee6d583db8ba9">&#9670;&nbsp;</a></span>Normal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3&gt; Kratos::LineInterfaceGeometry::Normal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>IntegrationPointIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>It returns the vector, which is normal to its corresponding geometry in the given integration point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IntegrationPointIndex</td><td>index in internal integration point list </td></tr>
+    <tr><td class="paramname">ThisMethod</td><td>the integration point is dependent on the used integration method </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The normal in the given integration point </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aaea94717beba01354005a553412a8a76">Kratos::Geometry&lt; Node &gt;</a>.</p>
 
 </div>
 </div>
@@ -1331,6 +2089,138 @@ Additional Inherited Members</h2></td></tr>
 <p>Print information about this object. </p>
 
 <p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a99aacb4bf537b5434f58c6b630b22fc1">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a1bf3ac433d8a14a976209a12e00cecd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1bf3ac433d8a14a976209a12e00cecd0">&#9670;&nbsp;</a></span>ShapeFunctionsIntegrationPointsGradients() <span class="overload">[1/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::LineInterfaceGeometry::ShapeFunctionsIntegrationPointsGradients </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3673de46931a4adcdfdaf26048b4f22d">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a7db4f8740925eb7c8ba5b43625da1e00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7db4f8740925eb7c8ba5b43625da1e00">&#9670;&nbsp;</a></span>ShapeFunctionsIntegrationPointsGradients() <span class="overload">[2/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::LineInterfaceGeometry::ShapeFunctionsIntegrationPointsGradients </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDeterminantsOfJacobian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad956efd39cbcec2a6bab8e78a697bbb8">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a1801fa19844c73eeb55b7dd22860528e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1801fa19844c73eeb55b7dd22860528e">&#9670;&nbsp;</a></span>ShapeFunctionsIntegrationPointsGradients() <span class="overload">[3/3]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Kratos::LineInterfaceGeometry::ShapeFunctionsIntegrationPointsGradients </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">ShapeFunctionsGradientsType</a> &amp;&#160;</td>
+          <td class="paramname"><em>rResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
+          <td class="paramname"><em>rDeterminantsOfJacobian</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;&#160;</td>
+          <td class="paramname"><em>ShapeFunctionsIntegrationPointsValues</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad0460b4ddfdb242d950880fa19d40e6b">Kratos::Geometry&lt; Node &gt;</a>.</p>
 
 </div>
 </div>
@@ -1479,13 +2369,99 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a54fc6e04f2315e1e32ff8245f9e19983"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54fc6e04f2315e1e32ff8245f9e19983">&#9670;&nbsp;</a></span>UnitNormal() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3&gt; Kratos::LineInterfaceGeometry::UnitNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>IntegrationPointIndex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>It returns the normalized normal vector in the given integration point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IntegrationPointIndex</td><td>index in internal integration point list </td></tr>
+    <tr><td class="paramname">ThisMethod</td><td>the integration point is dependent on the used integration method </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The normal in the given integration point </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#aa4593d71e1c09570ddfb6b2f07206fc1">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="acbb2e5d268405c4a9e124b82c2f0ec8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acbb2e5d268405c4a9e124b82c2f0ec8a">&#9670;&nbsp;</a></span>UnitNormal() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3&gt; Kratos::LineInterfaceGeometry::UnitNormal </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a>&#160;</td>
+          <td class="paramname"><em>IntegrationPointIndex</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">IntegrationMethod</a>&#160;</td>
+          <td class="paramname"><em>ThisMethod</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>It returns the normalized normal vector in the given integration point. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">IntegrationPointIndex</td><td>index in internal integration point list </td></tr>
+    <tr><td class="paramname">ThisMethod</td><td>the integration point is dependent on the used integration method </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The normal in the given integration point </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#acfa6a9c7f181d022fd98a70705403724">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_geometries/<a class="el" href="../../d8/dea/line__interface__geometry_8h_source.html">line_interface_geometry.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 23 2024 03:49:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Aug 24 2024 03:44:21 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
