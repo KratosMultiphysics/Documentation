@@ -97,20 +97,27 @@ $(function() {
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d89/variable_8h.html">containers/variable.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d7/de2/namespace_kratos_1_1_geo.html">Kratos::Geo</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d7/de2/namespace_kratos_1_1_geo.html#a9674e63ccb7141b63bb94f6d3c55aa24">   23</a></span>&#160;<span class="keyword">using</span> <a class="code" href="../../d7/de2/namespace_kratos_1_1_geo.html#a9674e63ccb7141b63bb94f6d3c55aa24">ConstVariableRefs</a> = std::vector&lt;std::reference_wrapper&lt;const Variable&lt;double&gt;&gt;&gt;;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;} <span class="comment">// namespace Kratos::Geo</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/d87/integration__point_8h.html">integration/integration_point.h</a>&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../d7/de2/namespace_kratos_1_1_geo.html">Kratos::Geo</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d7/de2/namespace_kratos_1_1_geo.html#a9674e63ccb7141b63bb94f6d3c55aa24">   24</a></span>&#160;<span class="keyword">using</span> <a class="code" href="../../d7/de2/namespace_kratos_1_1_geo.html#a9674e63ccb7141b63bb94f6d3c55aa24">ConstVariableRefs</a> = std::vector&lt;std::reference_wrapper&lt;const Variable&lt;double&gt;&gt;&gt;;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="../../d7/de2/namespace_kratos_1_1_geo.html#aa4c8309c3de9cbd063c4830bcb4abc38">   26</a></span>&#160;<span class="keyword">using</span> <a class="code" href="../../d9/d7d/class_kratos_1_1_integration_point.html">IntegrationPointType</a>       = <a class="code" href="../../d9/d7d/class_kratos_1_1_integration_point.html">IntegrationPoint&lt;3&gt;</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d7/de2/namespace_kratos_1_1_geo.html#a57b668bae758b9ec99e33c437f8afce4">   27</a></span>&#160;<span class="keyword">using</span> <a class="code" href="../../d7/de2/namespace_kratos_1_1_geo.html#a57b668bae758b9ec99e33c437f8afce4">IntegrationPointVectorType</a> = std::vector&lt;IntegrationPointType&gt;;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;} <span class="comment">// namespace Kratos::Geo</span></div>
+<div class="ttc" id="aclass_kratos_1_1_integration_point_html"><div class="ttname"><a href="../../d9/d7d/class_kratos_1_1_integration_point.html">Kratos::IntegrationPoint</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> integration_point.h:52</div></div>
+<div class="ttc" id="aintegration__point_8h_html"><div class="ttname"><a href="../../da/d87/integration__point_8h.html">integration_point.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_1_1_geo_html"><div class="ttname"><a href="../../d7/de2/namespace_kratos_1_1_geo.html">Kratos::Geo</a></div><div class="ttdef"><b>Definition:</b> dof_utilities.cpp:35</div></div>
-<div class="ttc" id="anamespace_kratos_1_1_geo_html_a9674e63ccb7141b63bb94f6d3c55aa24"><div class="ttname"><a href="../../d7/de2/namespace_kratos_1_1_geo.html#a9674e63ccb7141b63bb94f6d3c55aa24">Kratos::Geo::ConstVariableRefs</a></div><div class="ttdeci">std::vector&lt; std::reference_wrapper&lt; const Variable&lt; double &gt; &gt;&gt; ConstVariableRefs</div><div class="ttdef"><b>Definition:</b> geo_aliases.h:23</div></div>
+<div class="ttc" id="anamespace_kratos_1_1_geo_html_a57b668bae758b9ec99e33c437f8afce4"><div class="ttname"><a href="../../d7/de2/namespace_kratos_1_1_geo.html#a57b668bae758b9ec99e33c437f8afce4">Kratos::Geo::IntegrationPointVectorType</a></div><div class="ttdeci">std::vector&lt; IntegrationPointType &gt; IntegrationPointVectorType</div><div class="ttdef"><b>Definition:</b> geo_aliases.h:27</div></div>
+<div class="ttc" id="anamespace_kratos_1_1_geo_html_a9674e63ccb7141b63bb94f6d3c55aa24"><div class="ttname"><a href="../../d7/de2/namespace_kratos_1_1_geo.html#a9674e63ccb7141b63bb94f6d3c55aa24">Kratos::Geo::ConstVariableRefs</a></div><div class="ttdeci">std::vector&lt; std::reference_wrapper&lt; const Variable&lt; double &gt; &gt;&gt; ConstVariableRefs</div><div class="ttdef"><b>Definition:</b> geo_aliases.h:24</div></div>
 <div class="ttc" id="avariable_8h_html"><div class="ttname"><a href="../../da/d89/variable_8h.html">variable.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Aug 27 2024 02:29:57 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Aug 28 2024 02:31:03 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
