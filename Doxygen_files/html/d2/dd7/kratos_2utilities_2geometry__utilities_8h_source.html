@@ -708,11 +708,57 @@ $(function() {
 <div class="line"><a name="l00853"></a><span class="lineno">  853</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#afb4178f7aa038bd0ed82d2a4b3bf4906">min</a> = std::min_element(distances.begin(), distances.end());</div>
 <div class="line"><a name="l00854"></a><span class="lineno">  854</span>&#160;        <span class="keywordflow">return</span> *<a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#afb4178f7aa038bd0ed82d2a4b3bf4906">min</a>;</div>
 <div class="line"><a name="l00855"></a><span class="lineno">  855</span>&#160;    }</div>
-<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160;};</div>
-<div class="line"><a name="l00857"></a><span class="lineno">  857</span>&#160; </div>
-<div class="line"><a name="l00858"></a><span class="lineno">  858</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
-<div class="line"><a name="l00859"></a><span class="lineno">  859</span>&#160; </div>
-<div class="line"><a name="l00860"></a><span class="lineno">  860</span>&#160; </div>
+<div class="line"><a name="l00856"></a><span class="lineno">  856</span>&#160; </div>
+<div class="line"><a name="l00869"></a><span class="lineno">  869</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> TriangleBoxOverlap(</div>
+<div class="line"><a name="l00870"></a><span class="lineno">  870</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a>&amp; rBoxCenter,</div>
+<div class="line"><a name="l00871"></a><span class="lineno">  871</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a>&amp; rBoxHalfSize,</div>
+<div class="line"><a name="l00872"></a><span class="lineno">  872</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a>&amp; rVertex0,</div>
+<div class="line"><a name="l00873"></a><span class="lineno">  873</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a>&amp; rVertex1,</div>
+<div class="line"><a name="l00874"></a><span class="lineno">  874</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a>&amp; rVertex2</div>
+<div class="line"><a name="l00875"></a><span class="lineno">  875</span>&#160;        );</div>
+<div class="line"><a name="l00876"></a><span class="lineno">  876</span>&#160; </div>
+<div class="line"><a name="l00886"></a><span class="lineno">  886</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> PlaneBoxOverlap(</div>
+<div class="line"><a name="l00887"></a><span class="lineno">  887</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rNormal,</div>
+<div class="line"><a name="l00888"></a><span class="lineno">  888</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Distance,</div>
+<div class="line"><a name="l00889"></a><span class="lineno">  889</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rMaxBox</div>
+<div class="line"><a name="l00890"></a><span class="lineno">  890</span>&#160;        );</div>
+<div class="line"><a name="l00891"></a><span class="lineno">  891</span>&#160; </div>
+<div class="line"><a name="l00892"></a><span class="lineno">  892</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00893"></a><span class="lineno">  893</span>&#160; </div>
+<div class="line"><a name="l00904"></a><span class="lineno">  904</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> AxisTestX(</div>
+<div class="line"><a name="l00905"></a><span class="lineno">  905</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> EdgeY,</div>
+<div class="line"><a name="l00906"></a><span class="lineno">  906</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> EdgeZ,</div>
+<div class="line"><a name="l00907"></a><span class="lineno">  907</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AbsEdgeY,</div>
+<div class="line"><a name="l00908"></a><span class="lineno">  908</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AbsEdgeZ,</div>
+<div class="line"><a name="l00909"></a><span class="lineno">  909</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rVertA,</div>
+<div class="line"><a name="l00910"></a><span class="lineno">  910</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rVertC,</div>
+<div class="line"><a name="l00911"></a><span class="lineno">  911</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a>&amp; rBoxHalfSize</div>
+<div class="line"><a name="l00912"></a><span class="lineno">  912</span>&#160;        );</div>
+<div class="line"><a name="l00913"></a><span class="lineno">  913</span>&#160; </div>
+<div class="line"><a name="l00924"></a><span class="lineno">  924</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> AxisTestY(</div>
+<div class="line"><a name="l00925"></a><span class="lineno">  925</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> EdgeX,</div>
+<div class="line"><a name="l00926"></a><span class="lineno">  926</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> EdgeY,</div>
+<div class="line"><a name="l00927"></a><span class="lineno">  927</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AbsEdgeX,</div>
+<div class="line"><a name="l00928"></a><span class="lineno">  928</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AbsEdgeZ,</div>
+<div class="line"><a name="l00929"></a><span class="lineno">  929</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rVertA,</div>
+<div class="line"><a name="l00930"></a><span class="lineno">  930</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rVertC,</div>
+<div class="line"><a name="l00931"></a><span class="lineno">  931</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a>&amp; rBoxHalfSize</div>
+<div class="line"><a name="l00932"></a><span class="lineno">  932</span>&#160;        );</div>
+<div class="line"><a name="l00933"></a><span class="lineno">  933</span>&#160; </div>
+<div class="line"><a name="l00944"></a><span class="lineno">  944</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">bool</span> AxisTestZ(</div>
+<div class="line"><a name="l00945"></a><span class="lineno">  945</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> EdgeX,</div>
+<div class="line"><a name="l00946"></a><span class="lineno">  946</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> EdgeY,</div>
+<div class="line"><a name="l00947"></a><span class="lineno">  947</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AbsEdgeX,</div>
+<div class="line"><a name="l00948"></a><span class="lineno">  948</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AbsEdgeY,</div>
+<div class="line"><a name="l00949"></a><span class="lineno">  949</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rVertA,</div>
+<div class="line"><a name="l00950"></a><span class="lineno">  950</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double,3&gt;</a>&amp; rVertC,</div>
+<div class="line"><a name="l00951"></a><span class="lineno">  951</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a>&amp; rBoxHalfSize</div>
+<div class="line"><a name="l00952"></a><span class="lineno">  952</span>&#160;        );</div>
+<div class="line"><a name="l00953"></a><span class="lineno">  953</span>&#160;};</div>
+<div class="line"><a name="l00954"></a><span class="lineno">  954</span>&#160; </div>
+<div class="line"><a name="l00955"></a><span class="lineno">  955</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00956"></a><span class="lineno">  956</span>&#160; </div>
+<div class="line"><a name="l00957"></a><span class="lineno">  957</span>&#160; </div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a3bd412badaf6f2d8fcb56bbaa659346c"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a3bd412badaf6f2d8fcb56bbaa659346c">Kratos::GeometryData::KratosGeometryType</a></div><div class="ttdeci">KratosGeometryType</div><div class="ttdef"><b>Definition:</b> geometry_data.h:110</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a86f17c328cce116053a8786b7a0f404f"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">Kratos::GeometryData::IntegrationMethod</a></div><div class="ttdeci">IntegrationMethod</div><div class="ttdef"><b>Definition:</b> geometry_data.h:76</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_ab787dae4572114859d96bd90baeab00aa5f08033f0b26050e74acef53e9d4e05a"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#ab787dae4572114859d96bd90baeab00aa5f08033f0b26050e74acef53e9d4e05a">Kratos::GeometryData::KratosGeometryFamily::Kratos_Tetrahedra</a></div><div class="ttdeci">@ Kratos_Tetrahedra</div></div>
@@ -775,7 +821,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 5 2024 03:20:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Sep 6 2024 03:21:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -90,7 +90,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::GeometryUtils:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d25/class_kratos_1_1_geometry_utils__coll__graph.svg" width="252" height="499"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../da/d25/class_kratos_1_1_geometry_utils__coll__graph.svg" width="248" height="323"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
 </div>
 </div>
 <table class="memberdecls">
@@ -112,7 +112,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:abb7cd50c74e830fba057c14399e39b0a"><td class="memItemLeft" align="right" valign="top">template&lt;&gt; </td></tr>
 <tr class="memitem:abb7cd50c74e830fba057c14399e39b0a"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d77/class_kratos_1_1_geometry_utils.html#abb7cd50c74e830fba057c14399e39b0a">EvaluateHistoricalVariableValueAtGaussPoint</a> (<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;rOutput, const <a class="el" href="../../d0/d77/class_kratos_1_1_geometry_utils.html#a0e9e91c9e8b8a5eae25198d37e7ada3d">GeometryType</a> &amp;rGeometry, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rVariable, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rGaussPointShapeFunctionValues, const <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> Step)</td></tr>
 <tr class="separator:abb7cd50c74e830fba057c14399e39b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Operations</div></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Operations</h2></td></tr>
 <tr class="memitem:a22a0b50ae4c2e49660ca91857f61d4ad"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d77/class_kratos_1_1_geometry_utils.html#a22a0b50ae4c2e49660ca91857f61d4ad">GetGeometryName</a> (const <a class="el" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a3bd412badaf6f2d8fcb56bbaa659346c">GeometryData::KratosGeometryType</a> TypeOfGeometry)</td></tr>
 <tr class="memdesc:a22a0b50ae4c2e49660ca91857f61d4ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns a string equivalent for the geometry type.  <a href="../../d0/d77/class_kratos_1_1_geometry_utils.html#a22a0b50ae4c2e49660ca91857f61d4ad">More...</a><br /></td></tr>
 <tr class="separator:a22a0b50ae4c2e49660ca91857f61d4ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -208,6 +209,12 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa8dbbce6c64a7d952130d44b32933b27"><td class="memTemplItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d77/class_kratos_1_1_geometry_utils.html#aa8dbbce6c64a7d952130d44b32933b27">CalculateDistanceFrom3DGeometry</a> (const TGeometryType &amp;rGeometry, const typename TGeometryType::CoordinatesArrayType &amp;rPointGlobalCoordinates, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Tolerance=std::numeric_limits&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;::epsilon())</td></tr>
 <tr class="memdesc:aa8dbbce6c64a7d952130d44b32933b27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the distance between an point in global coordinates and the closest point of this geometry.  <a href="../../d0/d77/class_kratos_1_1_geometry_utils.html#aa8dbbce6c64a7d952130d44b32933b27">More...</a><br /></td></tr>
 <tr class="separator:aa8dbbce6c64a7d952130d44b32933b27"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7e425c8a103b125c98eac7c965493e4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d77/class_kratos_1_1_geometry_utils.html#af7e425c8a103b125c98eac7c965493e4">TriangleBoxOverlap</a> (const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;rBoxCenter, const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;rBoxHalfSize, const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;rVertex0, const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;rVertex1, const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;rVertex2)</td></tr>
+<tr class="memdesc:af7e425c8a103b125c98eac7c965493e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">use separating axis theorem to test overlap between triangle and box  <a href="../../d0/d77/class_kratos_1_1_geometry_utils.html#af7e425c8a103b125c98eac7c965493e4">More...</a><br /></td></tr>
+<tr class="separator:af7e425c8a103b125c98eac7c965493e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a275ba08e123e4338de9bc356bf5359f6"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d77/class_kratos_1_1_geometry_utils.html#a275ba08e123e4338de9bc356bf5359f6">PlaneBoxOverlap</a> (const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;rNormal, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Distance, const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;rMaxBox)</td></tr>
+<tr class="memdesc:a275ba08e123e4338de9bc356bf5359f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if a plane intersects a box.  <a href="../../d0/d77/class_kratos_1_1_geometry_utils.html#a275ba08e123e4338de9bc356bf5359f6">More...</a><br /></td></tr>
+<tr class="separator:a275ba08e123e4338de9bc356bf5359f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This function provides basic routines for working with simplicial meshes. </p>
@@ -1280,6 +1287,60 @@ template&lt;class TDataType &gt; </div>
 
 </div>
 </div>
+<a id="a275ba08e123e4338de9bc356bf5359f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a275ba08e123e4338de9bc356bf5359f6">&#9670;&nbsp;</a></span>PlaneBoxOverlap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> Kratos::GeometryUtils::PlaneBoxOverlap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rNormal</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>Distance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rMaxBox</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if a plane intersects a box. </p>
+<dl class="section see"><dt>See also</dt><dd>TriBoxOverlap</dd></dl>
+<p><a class="el" href="../../d2/de6/class_kratos_1_1_plane.html">Plane</a> equation: rNormal*x+rDist=0 </p><dl class="section return"><dt>Returns</dt><dd>bool intersection flag </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rNormal</td><td>the plane normal </td></tr>
+    <tr><td class="paramname">rDist</td><td>distance to origin </td></tr>
+    <tr><td class="paramname">rMaxBox</td><td>box corner from the origin </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a014832351aeccab1927e7b150f239562"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a014832351aeccab1927e7b150f239562">&#9670;&nbsp;</a></span>PointDistanceToLineSegment3D()</h2>
 
@@ -1868,6 +1929,72 @@ template&lt;class TMatrix1 , class TMatrix2 , class TMatrix3 &gt; </div>
 
 </div>
 </div>
+<a id="af7e425c8a103b125c98eac7c965493e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7e425c8a103b125c98eac7c965493e4">&#9670;&nbsp;</a></span>TriangleBoxOverlap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> Kratos::GeometryUtils::TriangleBoxOverlap </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>rBoxCenter</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>rBoxHalfSize</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>rVertex0</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>rVertex1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d3/d3f/class_kratos_1_1_point.html">Point</a> &amp;&#160;</td>
+          <td class="paramname"><em>rVertex2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>use separating axis theorem to test overlap between triangle and box </p>
+<p>Need to test for overlap in these directions: 1) the {x,y,(z)}-directions 2) normal of the triangle 3) crossproduct (edge from tri, {x,y,z}-direction) gives 3x3=9 more tests </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rBoxCenter</td><td>The center of the box </td></tr>
+    <tr><td class="paramname">rBoxHalfSize</td><td>The half size of the box </td></tr>
+    <tr><td class="paramname">rVertex0</td><td>The first vertex of the triangle </td></tr>
+    <tr><td class="paramname">rVertex1</td><td>The second vertex of the triangle </td></tr>
+    <tr><td class="paramname">rVertex2</td><td>The third vertex of the triangle </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/kratos/utilities/<a class="el" href="../../d2/dd7/kratos_2utilities_2geometry__utilities_8h_source.html">geometry_utilities.h</a></li>
 <li>/home/runner/work/Documentation/Documentation/master/kratos/utilities/<a class="el" href="../../d2/da4/kratos_2utilities_2geometry__utilities_8cpp.html">geometry_utilities.cpp</a></li>
@@ -1875,7 +2002,7 @@ template&lt;class TMatrix1 , class TMatrix2 , class TMatrix3 &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 5 2024 03:23:52 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Sep 6 2024 03:24:38 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

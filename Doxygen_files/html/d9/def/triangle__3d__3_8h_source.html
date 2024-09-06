@@ -461,7 +461,7 @@ $(function() {
 <div class="line"><a name="l00690"></a><span class="lineno">  690</span>&#160;        box_half_size[1] = 0.5 * std::abs(rHighPoint[1] - rLowPoint[1]);</div>
 <div class="line"><a name="l00691"></a><span class="lineno">  691</span>&#160;        box_half_size[2] = 0.5 * std::abs(rHighPoint[2] - rLowPoint[2]);</div>
 <div class="line"><a name="l00692"></a><span class="lineno">  692</span>&#160; </div>
-<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;        <span class="keywordflow">return</span> TriBoxOverlap(box_center, box_half_size);</div>
+<div class="line"><a name="l00693"></a><span class="lineno">  693</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d0/d77/class_kratos_1_1_geometry_utils.html#af7e425c8a103b125c98eac7c965493e4">GeometryUtils::TriangleBoxOverlap</a>(box_center, box_half_size, this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#af2cce5940da9a3d3cb6c4f16fb8d8a25">GetPoint</a>(0), this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#af2cce5940da9a3d3cb6c4f16fb8d8a25">GetPoint</a>(1), this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#af2cce5940da9a3d3cb6c4f16fb8d8a25">GetPoint</a>(2));</div>
 <div class="line"><a name="l00694"></a><span class="lineno">  694</span>&#160;    }</div>
 <div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160; </div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160; </div>
@@ -1560,189 +1560,43 @@ $(function() {
 <div class="line"><a name="l02298"></a><span class="lineno"> 2298</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
 <div class="line"><a name="l02299"></a><span class="lineno"> 2299</span>&#160;    }</div>
 <div class="line"><a name="l02300"></a><span class="lineno"> 2300</span>&#160; </div>
-<div class="line"><a name="l02309"></a><span class="lineno"> 2309</span>&#160;    <span class="keyword">inline</span> <span class="keywordtype">bool</span> TriBoxOverlap(Point&amp; rBoxCenter, Point&amp; rBoxHalfSize)<span class="keyword"> const</span></div>
-<div class="line"><a name="l02310"></a><span class="lineno"> 2310</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l02311"></a><span class="lineno"> 2311</span>&#160;        <span class="keywordtype">double</span> abs_ex, abs_ey, abs_ez, distance;</div>
-<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160;        array_1d&lt;double,3 &gt; vert0, vert1, vert2;</div>
-<div class="line"><a name="l02313"></a><span class="lineno"> 2313</span>&#160;        array_1d&lt;double,3 &gt; edge0, edge1, edge2, normal;</div>
-<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160;        std::pair&lt;double, double&gt; min_max;</div>
-<div class="line"><a name="l02315"></a><span class="lineno"> 2315</span>&#160; </div>
-<div class="line"><a name="l02316"></a><span class="lineno"> 2316</span>&#160;        <span class="comment">// move everything so that the boxcenter is in (0,0,0)</span></div>
-<div class="line"><a name="l02317"></a><span class="lineno"> 2317</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(vert0) = this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#af2cce5940da9a3d3cb6c4f16fb8d8a25">GetPoint</a>(0) - rBoxCenter;</div>
-<div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(vert1) = this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#af2cce5940da9a3d3cb6c4f16fb8d8a25">GetPoint</a>(1) - rBoxCenter;</div>
-<div class="line"><a name="l02319"></a><span class="lineno"> 2319</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(vert2) = this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#af2cce5940da9a3d3cb6c4f16fb8d8a25">GetPoint</a>(2) - rBoxCenter;</div>
-<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160; </div>
-<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160;        <span class="comment">// compute triangle edges</span></div>
-<div class="line"><a name="l02322"></a><span class="lineno"> 2322</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(edge0) = vert1 - vert0;</div>
-<div class="line"><a name="l02323"></a><span class="lineno"> 2323</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(edge1) = vert2 - vert1;</div>
-<div class="line"><a name="l02324"></a><span class="lineno"> 2324</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">noalias</a>(edge2) = vert0 - vert2;</div>
+<div class="line"><a name="l02304"></a><span class="lineno"> 2304</span>&#160; </div>
+<div class="line"><a name="l02308"></a><span class="lineno"> 2308</span>&#160; </div>
+<div class="line"><a name="l02312"></a><span class="lineno"> 2312</span>&#160; </div>
+<div class="line"><a name="l02313"></a><span class="lineno"><a class="line" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a329deaf94ab6c555bfe3f077fc71ffe3"> 2313</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TOtherPo<span class="keywordtype">int</span>Type&gt; <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Triangle3D3</a>;</div>
+<div class="line"><a name="l02314"></a><span class="lineno"> 2314</span>&#160; </div>
+<div class="line"><a name="l02318"></a><span class="lineno"> 2318</span>&#160; </div>
+<div class="line"><a name="l02320"></a><span class="lineno"> 2320</span>&#160;}; <span class="comment">// Class Geometry</span></div>
+<div class="line"><a name="l02321"></a><span class="lineno"> 2321</span>&#160; </div>
 <div class="line"><a name="l02325"></a><span class="lineno"> 2325</span>&#160; </div>
-<div class="line"><a name="l02326"></a><span class="lineno"> 2326</span>&#160;        <span class="comment">// Bullet 3:</span></div>
-<div class="line"><a name="l02327"></a><span class="lineno"> 2327</span>&#160;        <span class="comment">// test the 9 tests first (this was faster)</span></div>
-<div class="line"><a name="l02328"></a><span class="lineno"> 2328</span>&#160;        abs_ex = std::abs(edge0[0]);</div>
-<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160;        abs_ey = std::abs(edge0[1]);</div>
-<div class="line"><a name="l02330"></a><span class="lineno"> 2330</span>&#160;        abs_ez = std::abs(edge0[2]);</div>
-<div class="line"><a name="l02331"></a><span class="lineno"> 2331</span>&#160;        <span class="keywordflow">if</span> (AxisTestX(edge0[1],edge0[2],abs_ey,abs_ez,vert0,vert2,rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02332"></a><span class="lineno"> 2332</span>&#160;        <span class="keywordflow">if</span> (AxisTestY(edge0[0],edge0[2],abs_ex,abs_ez,vert0,vert2,rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02333"></a><span class="lineno"> 2333</span>&#160;        <span class="keywordflow">if</span> (AxisTestZ(edge0[0],edge0[1],abs_ex,abs_ey,vert0,vert2,rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160; </div>
-<div class="line"><a name="l02335"></a><span class="lineno"> 2335</span>&#160;        abs_ex = std::abs(edge1[0]);</div>
-<div class="line"><a name="l02336"></a><span class="lineno"> 2336</span>&#160;        abs_ey = std::abs(edge1[1]);</div>
-<div class="line"><a name="l02337"></a><span class="lineno"> 2337</span>&#160;        abs_ez = std::abs(edge1[2]);</div>
-<div class="line"><a name="l02338"></a><span class="lineno"> 2338</span>&#160;        <span class="keywordflow">if</span> (AxisTestX(edge1[1],edge1[2],abs_ey,abs_ez,vert1,vert0,rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;        <span class="keywordflow">if</span> (AxisTestY(edge1[0],edge1[2],abs_ex,abs_ez,vert1,vert0,rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;        <span class="keywordflow">if</span> (AxisTestZ(edge1[0],edge1[1],abs_ex,abs_ey,vert1,vert0,rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160; </div>
-<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;        abs_ex = std::abs(edge2[0]);</div>
-<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160;        abs_ey = std::abs(edge2[1]);</div>
-<div class="line"><a name="l02344"></a><span class="lineno"> 2344</span>&#160;        abs_ez = std::abs(edge2[2]);</div>
-<div class="line"><a name="l02345"></a><span class="lineno"> 2345</span>&#160;        <span class="keywordflow">if</span> (AxisTestX(edge2[1],edge2[2],abs_ey,abs_ez,vert2,vert1,rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;        <span class="keywordflow">if</span> (AxisTestY(edge2[0],edge2[2],abs_ex,abs_ez,vert2,vert1,rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160;        <span class="keywordflow">if</span> (AxisTestZ(edge2[0],edge2[1],abs_ex,abs_ey,vert2,vert1,rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02348"></a><span class="lineno"> 2348</span>&#160; </div>
-<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160;        <span class="comment">// Bullet 1:</span></div>
-<div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;        <span class="comment">//  first test overlap in the {x,y,z}-directions</span></div>
-<div class="line"><a name="l02351"></a><span class="lineno"> 2351</span>&#160;        <span class="comment">//  find min, max of the triangle for each direction, and test for</span></div>
-<div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;        <span class="comment">//  overlap in that direction -- this is equivalent to testing a minimal</span></div>
-<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;        <span class="comment">//  AABB around the triangle against the AABB</span></div>
-<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160; </div>
-<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;        <span class="comment">// test in X-direction</span></div>
-<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;        min_max = std::minmax({vert0[0], vert1[0], vert2[0]});</div>
-<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;        <span class="keywordflow">if</span>(min_max.first&gt;rBoxHalfSize[0] || min_max.second&lt;-rBoxHalfSize[0]) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l02329"></a><span class="lineno"> 2329</span>&#160; </div>
+<div class="line"><a name="l02332"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gaf4c572c6a9d18066dfe80b316af6c425"> 2332</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TPo<span class="keywordtype">int</span>Type&gt; <span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(</div>
+<div class="line"><a name="l02333"></a><span class="lineno"> 2333</span>&#160;    std::istream&amp; rIStream,</div>
+<div class="line"><a name="l02334"></a><span class="lineno"> 2334</span>&#160;    <a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Triangle3D3&lt;TPointType&gt;</a>&amp; rThis );</div>
+<div class="line"><a name="l02338"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gac5b12d8463980bd947001045f4b62455"> 2338</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TPo<span class="keywordtype">int</span>Type&gt; <span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(</div>
+<div class="line"><a name="l02339"></a><span class="lineno"> 2339</span>&#160;    std::ostream&amp; rOStream,</div>
+<div class="line"><a name="l02340"></a><span class="lineno"> 2340</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Triangle3D3&lt;TPointType&gt;</a>&amp; rThis )</div>
+<div class="line"><a name="l02341"></a><span class="lineno"> 2341</span>&#160;{</div>
+<div class="line"><a name="l02342"></a><span class="lineno"> 2342</span>&#160;    rThis.<a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a5ee2ddd7ece31343c6da19e6eb98475b">PrintInfo</a>( rOStream );</div>
+<div class="line"><a name="l02343"></a><span class="lineno"> 2343</span>&#160;    rOStream &lt;&lt; std::endl;</div>
+<div class="line"><a name="l02344"></a><span class="lineno"> 2344</span>&#160;    rThis.<a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a4816a141509a03c0dd1e27df3c19ad4b">PrintData</a>( rOStream );</div>
+<div class="line"><a name="l02345"></a><span class="lineno"> 2345</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
+<div class="line"><a name="l02346"></a><span class="lineno"> 2346</span>&#160;}</div>
+<div class="line"><a name="l02347"></a><span class="lineno"> 2347</span>&#160; </div>
+<div class="line"><a name="l02349"></a><span class="lineno"> 2349</span>&#160; </div>
+<div class="line"><a name="l02350"></a><span class="lineno"> 2350</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TPo<span class="keywordtype">int</span>Type&gt; <span class="keyword">const</span></div>
+<div class="line"><a name="l02351"></a><span class="lineno"> 2351</span>&#160;GeometryData Triangle3D3&lt;TPointType&gt;::msGeometryData(</div>
+<div class="line"><a name="l02352"></a><span class="lineno"> 2352</span>&#160;    &amp;<a class="code" href="../../db/d66/namespace_kratos.html#aabf4ae56b3a49bad4a3537aaf6316f78">msGeometryDimension</a>,</div>
+<div class="line"><a name="l02353"></a><span class="lineno"> 2353</span>&#160;    <a class="code" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404fac865d92aa445dbb1943a3ea35d55a52e">GeometryData::IntegrationMethod::GI_GAUSS_1</a>,</div>
+<div class="line"><a name="l02354"></a><span class="lineno"> 2354</span>&#160;    Triangle3D3&lt;TPointType&gt;::AllIntegrationPoints(),</div>
+<div class="line"><a name="l02355"></a><span class="lineno"> 2355</span>&#160;    Triangle3D3&lt;TPointType&gt;::AllShapeFunctionsValues(),</div>
+<div class="line"><a name="l02356"></a><span class="lineno"> 2356</span>&#160;    AllShapeFunctionsLocalGradients()</div>
+<div class="line"><a name="l02357"></a><span class="lineno"> 2357</span>&#160;);</div>
 <div class="line"><a name="l02358"></a><span class="lineno"> 2358</span>&#160; </div>
-<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;        <span class="comment">// test in Y-direction</span></div>
-<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;        min_max = std::minmax({vert0[1], vert1[1], vert2[1]});</div>
-<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160;        <span class="keywordflow">if</span>(min_max.first&gt;rBoxHalfSize[1] || min_max.second&lt;-rBoxHalfSize[1]) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160; </div>
-<div class="line"><a name="l02363"></a><span class="lineno"> 2363</span>&#160;        <span class="comment">// test in Z-direction</span></div>
-<div class="line"><a name="l02364"></a><span class="lineno"> 2364</span>&#160;        min_max = std::minmax({vert0[2], vert1[2], vert2[2]});</div>
-<div class="line"><a name="l02365"></a><span class="lineno"> 2365</span>&#160;        <span class="keywordflow">if</span>(min_max.first&gt;rBoxHalfSize[2] || min_max.second&lt;-rBoxHalfSize[2]) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02366"></a><span class="lineno"> 2366</span>&#160; </div>
-<div class="line"><a name="l02367"></a><span class="lineno"> 2367</span>&#160;        <span class="comment">// Bullet 2:</span></div>
-<div class="line"><a name="l02368"></a><span class="lineno"> 2368</span>&#160;        <span class="comment">//  test if the box intersects the plane of the triangle</span></div>
-<div class="line"><a name="l02369"></a><span class="lineno"> 2369</span>&#160;        <span class="comment">//  compute plane equation of triangle: normal*x+distance=0</span></div>
-<div class="line"><a name="l02370"></a><span class="lineno"> 2370</span>&#160;        <a class="code" href="../../d2/df1/class_kratos_1_1_math_utils.html#a3f3809a3e2d5bbf26534499077572992">MathUtils&lt;double&gt;::CrossProduct</a>(normal, edge0, edge1);</div>
-<div class="line"><a name="l02371"></a><span class="lineno"> 2371</span>&#160;        distance = -<a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(normal, vert0);</div>
-<div class="line"><a name="l02372"></a><span class="lineno"> 2372</span>&#160;        <span class="keywordflow">if</span>(!PlaneBoxOverlap(normal, distance, rBoxHalfSize)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02373"></a><span class="lineno"> 2373</span>&#160; </div>
-<div class="line"><a name="l02374"></a><span class="lineno"> 2374</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;  <span class="comment">// box and triangle overlaps</span></div>
-<div class="line"><a name="l02375"></a><span class="lineno"> 2375</span>&#160;    }</div>
-<div class="line"><a name="l02376"></a><span class="lineno"> 2376</span>&#160; </div>
-<div class="line"><a name="l02388"></a><span class="lineno"> 2388</span>&#160;    <span class="keywordtype">bool</span> PlaneBoxOverlap(<span class="keyword">const</span> array_1d&lt;double,3&gt;&amp; rNormal, <span class="keyword">const</span> <span class="keywordtype">double</span>&amp; rDist, <span class="keyword">const</span> array_1d&lt;double,3&gt;&amp; rMaxBox)<span class="keyword"> const</span></div>
-<div class="line"><a name="l02389"></a><span class="lineno"> 2389</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l02390"></a><span class="lineno"> 2390</span>&#160;        array_1d&lt;double,3&gt; vmin, vmax;</div>
-<div class="line"><a name="l02391"></a><span class="lineno"> 2391</span>&#160;        <span class="keywordflow">for</span>(<span class="keywordtype">int</span> <a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a> = 0; <a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a> &lt; 3; <a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>++)</div>
-<div class="line"><a name="l02392"></a><span class="lineno"> 2392</span>&#160;        {</div>
-<div class="line"><a name="l02393"></a><span class="lineno"> 2393</span>&#160;            <span class="keywordflow">if</span>(rNormal[<a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>] &gt; 0.00)</div>
-<div class="line"><a name="l02394"></a><span class="lineno"> 2394</span>&#160;            {</div>
-<div class="line"><a name="l02395"></a><span class="lineno"> 2395</span>&#160;                vmin[<a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>] = -rMaxBox[<a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>];</div>
-<div class="line"><a name="l02396"></a><span class="lineno"> 2396</span>&#160;                vmax[<a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>] =  rMaxBox[<a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>];</div>
-<div class="line"><a name="l02397"></a><span class="lineno"> 2397</span>&#160;            }</div>
-<div class="line"><a name="l02398"></a><span class="lineno"> 2398</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l02399"></a><span class="lineno"> 2399</span>&#160;            {</div>
-<div class="line"><a name="l02400"></a><span class="lineno"> 2400</span>&#160;                vmin[<a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>] =  rMaxBox[<a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>];</div>
-<div class="line"><a name="l02401"></a><span class="lineno"> 2401</span>&#160;                vmax[<a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>] = -rMaxBox[<a class="code" href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">q</a>];</div>
-<div class="line"><a name="l02402"></a><span class="lineno"> 2402</span>&#160;            }</div>
-<div class="line"><a name="l02403"></a><span class="lineno"> 2403</span>&#160;        }</div>
-<div class="line"><a name="l02404"></a><span class="lineno"> 2404</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(rNormal, vmin) + rDist &gt;  0.00) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02405"></a><span class="lineno"> 2405</span>&#160;        <span class="keywordflow">if</span>(<a class="code" href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">inner_prod</a>(rNormal, vmax) + rDist &gt;= 0.00) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02406"></a><span class="lineno"> 2406</span>&#160; </div>
-<div class="line"><a name="l02407"></a><span class="lineno"> 2407</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02408"></a><span class="lineno"> 2408</span>&#160;    }</div>
-<div class="line"><a name="l02409"></a><span class="lineno"> 2409</span>&#160; </div>
-<div class="line"><a name="l02420"></a><span class="lineno"> 2420</span>&#160;    <span class="keywordtype">bool</span> AxisTestX(<span class="keywordtype">double</span>&amp; rEdgeY, <span class="keywordtype">double</span>&amp; rEdgeZ,</div>
-<div class="line"><a name="l02421"></a><span class="lineno"> 2421</span>&#160;                   <span class="keywordtype">double</span>&amp; rAbsEdgeY, <span class="keywordtype">double</span>&amp; rAbsEdgeZ,</div>
-<div class="line"><a name="l02422"></a><span class="lineno"> 2422</span>&#160;                   array_1d&lt;double,3&gt;&amp; rVertA,</div>
-<div class="line"><a name="l02423"></a><span class="lineno"> 2423</span>&#160;                   array_1d&lt;double,3&gt;&amp; rVertC,</div>
-<div class="line"><a name="l02424"></a><span class="lineno"> 2424</span>&#160;                   Point&amp; rBoxHalfSize)<span class="keyword"> const</span></div>
-<div class="line"><a name="l02425"></a><span class="lineno"> 2425</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l02426"></a><span class="lineno"> 2426</span>&#160;        <span class="keywordtype">double</span> proj_a, proj_c, rad;</div>
-<div class="line"><a name="l02427"></a><span class="lineno"> 2427</span>&#160;        proj_a = rEdgeY*rVertA[2] - rEdgeZ*rVertA[1];</div>
-<div class="line"><a name="l02428"></a><span class="lineno"> 2428</span>&#160;        proj_c = rEdgeY*rVertC[2] - rEdgeZ*rVertC[1];</div>
-<div class="line"><a name="l02429"></a><span class="lineno"> 2429</span>&#160;        std::pair&lt;double, double&gt; min_max = std::minmax(proj_a, proj_c);</div>
-<div class="line"><a name="l02430"></a><span class="lineno"> 2430</span>&#160; </div>
-<div class="line"><a name="l02431"></a><span class="lineno"> 2431</span>&#160;        rad = rAbsEdgeZ*rBoxHalfSize[1] + rAbsEdgeY*rBoxHalfSize[2];</div>
-<div class="line"><a name="l02432"></a><span class="lineno"> 2432</span>&#160; </div>
-<div class="line"><a name="l02433"></a><span class="lineno"> 2433</span>&#160;        <span class="keywordflow">if</span>(min_max.first&gt;rad || min_max.second&lt;-rad) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02434"></a><span class="lineno"> 2434</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02435"></a><span class="lineno"> 2435</span>&#160;    }</div>
-<div class="line"><a name="l02436"></a><span class="lineno"> 2436</span>&#160; </div>
-<div class="line"><a name="l02447"></a><span class="lineno"> 2447</span>&#160;    <span class="keywordtype">bool</span> AxisTestY(<span class="keywordtype">double</span>&amp; rEdgeX, <span class="keywordtype">double</span>&amp; rEdgeZ,</div>
-<div class="line"><a name="l02448"></a><span class="lineno"> 2448</span>&#160;                   <span class="keywordtype">double</span>&amp; rAbsEdgeX, <span class="keywordtype">double</span>&amp; rAbsEdgeZ,</div>
-<div class="line"><a name="l02449"></a><span class="lineno"> 2449</span>&#160;                   array_1d&lt;double,3&gt;&amp; rVertA,</div>
-<div class="line"><a name="l02450"></a><span class="lineno"> 2450</span>&#160;                   array_1d&lt;double,3&gt;&amp; rVertC,</div>
-<div class="line"><a name="l02451"></a><span class="lineno"> 2451</span>&#160;                   Point&amp; rBoxHalfSize)<span class="keyword"> const</span></div>
-<div class="line"><a name="l02452"></a><span class="lineno"> 2452</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l02453"></a><span class="lineno"> 2453</span>&#160;        <span class="keywordtype">double</span> proj_a, proj_c, rad;</div>
-<div class="line"><a name="l02454"></a><span class="lineno"> 2454</span>&#160;        proj_a = rEdgeZ*rVertA[0] - rEdgeX*rVertA[2];</div>
-<div class="line"><a name="l02455"></a><span class="lineno"> 2455</span>&#160;        proj_c = rEdgeZ*rVertC[0] - rEdgeX*rVertC[2];</div>
-<div class="line"><a name="l02456"></a><span class="lineno"> 2456</span>&#160;        std::pair&lt;double, double&gt; min_max = std::minmax(proj_a, proj_c);</div>
-<div class="line"><a name="l02457"></a><span class="lineno"> 2457</span>&#160; </div>
-<div class="line"><a name="l02458"></a><span class="lineno"> 2458</span>&#160;        rad = rAbsEdgeZ*rBoxHalfSize[0] + rAbsEdgeX*rBoxHalfSize[2];</div>
-<div class="line"><a name="l02459"></a><span class="lineno"> 2459</span>&#160; </div>
-<div class="line"><a name="l02460"></a><span class="lineno"> 2460</span>&#160;        <span class="keywordflow">if</span>(min_max.first&gt;rad || min_max.second&lt;-rad) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02461"></a><span class="lineno"> 2461</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02462"></a><span class="lineno"> 2462</span>&#160;    }</div>
-<div class="line"><a name="l02463"></a><span class="lineno"> 2463</span>&#160; </div>
-<div class="line"><a name="l02474"></a><span class="lineno"> 2474</span>&#160;    <span class="keywordtype">bool</span> AxisTestZ(<span class="keywordtype">double</span>&amp; rEdgeX, <span class="keywordtype">double</span>&amp; rEdgeY,</div>
-<div class="line"><a name="l02475"></a><span class="lineno"> 2475</span>&#160;                   <span class="keywordtype">double</span>&amp; rAbsEdgeX, <span class="keywordtype">double</span>&amp; rAbsEdgeY,</div>
-<div class="line"><a name="l02476"></a><span class="lineno"> 2476</span>&#160;                   array_1d&lt;double,3&gt;&amp; rVertA,</div>
-<div class="line"><a name="l02477"></a><span class="lineno"> 2477</span>&#160;                   array_1d&lt;double,3&gt;&amp; rVertC,</div>
-<div class="line"><a name="l02478"></a><span class="lineno"> 2478</span>&#160;                   Point&amp; rBoxHalfSize)<span class="keyword"> const</span></div>
-<div class="line"><a name="l02479"></a><span class="lineno"> 2479</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l02480"></a><span class="lineno"> 2480</span>&#160;        <span class="keywordtype">double</span> proj_a, proj_c, rad;</div>
-<div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;        proj_a = rEdgeX*rVertA[1] - rEdgeY*rVertA[0];</div>
-<div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;        proj_c = rEdgeX*rVertC[1] - rEdgeY*rVertC[0];</div>
-<div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;        std::pair&lt;double, double&gt; min_max = std::minmax(proj_a, proj_c);</div>
-<div class="line"><a name="l02484"></a><span class="lineno"> 2484</span>&#160; </div>
-<div class="line"><a name="l02485"></a><span class="lineno"> 2485</span>&#160;        rad = rAbsEdgeY*rBoxHalfSize[0] + rAbsEdgeX*rBoxHalfSize[1];</div>
-<div class="line"><a name="l02486"></a><span class="lineno"> 2486</span>&#160; </div>
-<div class="line"><a name="l02487"></a><span class="lineno"> 2487</span>&#160;        <span class="keywordflow">if</span>(min_max.first&gt;rad || min_max.second&lt;-rad) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l02488"></a><span class="lineno"> 2488</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l02489"></a><span class="lineno"> 2489</span>&#160;    }</div>
-<div class="line"><a name="l02490"></a><span class="lineno"> 2490</span>&#160; </div>
-<div class="line"><a name="l02494"></a><span class="lineno"> 2494</span>&#160; </div>
-<div class="line"><a name="l02495"></a><span class="lineno"> 2495</span>&#160; </div>
-<div class="line"><a name="l02499"></a><span class="lineno"> 2499</span>&#160; </div>
-<div class="line"><a name="l02500"></a><span class="lineno"> 2500</span>&#160; </div>
-<div class="line"><a name="l02504"></a><span class="lineno"> 2504</span>&#160; </div>
-<div class="line"><a name="l02505"></a><span class="lineno"><a class="line" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a329deaf94ab6c555bfe3f077fc71ffe3"> 2505</a></span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TOtherPo<span class="keywordtype">int</span>Type&gt; <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Triangle3D3</a>;</div>
-<div class="line"><a name="l02506"></a><span class="lineno"> 2506</span>&#160; </div>
-<div class="line"><a name="l02510"></a><span class="lineno"> 2510</span>&#160; </div>
-<div class="line"><a name="l02511"></a><span class="lineno"> 2511</span>&#160; </div>
-<div class="line"><a name="l02512"></a><span class="lineno"> 2512</span>&#160; </div>
-<div class="line"><a name="l02514"></a><span class="lineno"> 2514</span>&#160;}; <span class="comment">// Class Geometry</span></div>
-<div class="line"><a name="l02515"></a><span class="lineno"> 2515</span>&#160; </div>
-<div class="line"><a name="l02519"></a><span class="lineno"> 2519</span>&#160; </div>
-<div class="line"><a name="l02520"></a><span class="lineno"> 2520</span>&#160; </div>
-<div class="line"><a name="l02524"></a><span class="lineno"> 2524</span>&#160; </div>
-<div class="line"><a name="l02527"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gaf4c572c6a9d18066dfe80b316af6c425"> 2527</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TPo<span class="keywordtype">int</span>Type&gt; <span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(</div>
-<div class="line"><a name="l02528"></a><span class="lineno"> 2528</span>&#160;    std::istream&amp; rIStream,</div>
-<div class="line"><a name="l02529"></a><span class="lineno"> 2529</span>&#160;    <a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Triangle3D3&lt;TPointType&gt;</a>&amp; rThis );</div>
-<div class="line"><a name="l02533"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gac5b12d8463980bd947001045f4b62455"> 2533</a></span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TPo<span class="keywordtype">int</span>Type&gt; <span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(</div>
-<div class="line"><a name="l02534"></a><span class="lineno"> 2534</span>&#160;    std::ostream&amp; rOStream,</div>
-<div class="line"><a name="l02535"></a><span class="lineno"> 2535</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Triangle3D3&lt;TPointType&gt;</a>&amp; rThis )</div>
-<div class="line"><a name="l02536"></a><span class="lineno"> 2536</span>&#160;{</div>
-<div class="line"><a name="l02537"></a><span class="lineno"> 2537</span>&#160;    rThis.<a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a5ee2ddd7ece31343c6da19e6eb98475b">PrintInfo</a>( rOStream );</div>
-<div class="line"><a name="l02538"></a><span class="lineno"> 2538</span>&#160;    rOStream &lt;&lt; std::endl;</div>
-<div class="line"><a name="l02539"></a><span class="lineno"> 2539</span>&#160;    rThis.<a class="code" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a4816a141509a03c0dd1e27df3c19ad4b">PrintData</a>( rOStream );</div>
-<div class="line"><a name="l02540"></a><span class="lineno"> 2540</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
-<div class="line"><a name="l02541"></a><span class="lineno"> 2541</span>&#160;}</div>
-<div class="line"><a name="l02542"></a><span class="lineno"> 2542</span>&#160; </div>
-<div class="line"><a name="l02544"></a><span class="lineno"> 2544</span>&#160; </div>
-<div class="line"><a name="l02545"></a><span class="lineno"> 2545</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TPo<span class="keywordtype">int</span>Type&gt; <span class="keyword">const</span></div>
-<div class="line"><a name="l02546"></a><span class="lineno"> 2546</span>&#160;GeometryData Triangle3D3&lt;TPointType&gt;::msGeometryData(</div>
-<div class="line"><a name="l02547"></a><span class="lineno"> 2547</span>&#160;    &amp;<a class="code" href="../../db/d66/namespace_kratos.html#aabf4ae56b3a49bad4a3537aaf6316f78">msGeometryDimension</a>,</div>
-<div class="line"><a name="l02548"></a><span class="lineno"> 2548</span>&#160;    <a class="code" href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404fac865d92aa445dbb1943a3ea35d55a52e">GeometryData::IntegrationMethod::GI_GAUSS_1</a>,</div>
-<div class="line"><a name="l02549"></a><span class="lineno"> 2549</span>&#160;    Triangle3D3&lt;TPointType&gt;::AllIntegrationPoints(),</div>
-<div class="line"><a name="l02550"></a><span class="lineno"> 2550</span>&#160;    Triangle3D3&lt;TPointType&gt;::AllShapeFunctionsValues(),</div>
-<div class="line"><a name="l02551"></a><span class="lineno"> 2551</span>&#160;    AllShapeFunctionsLocalGradients()</div>
-<div class="line"><a name="l02552"></a><span class="lineno"> 2552</span>&#160;);</div>
-<div class="line"><a name="l02553"></a><span class="lineno"> 2553</span>&#160; </div>
-<div class="line"><a name="l02554"></a><span class="lineno"> 2554</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TPo<span class="keywordtype">int</span>Type&gt;</div>
-<div class="line"><a name="l02555"></a><span class="lineno"> 2555</span>&#160;<span class="keyword">const</span> GeometryDimension <a class="code" href="../../db/d66/namespace_kratos.html#adbd3ee45f9dc2cf860b204f7167b7fe8">Triangle3D3&lt;TPointType&gt;::msGeometryDimension</a>(3, 2);</div>
-<div class="line"><a name="l02556"></a><span class="lineno"> 2556</span>&#160; </div>
-<div class="line"><a name="l02557"></a><span class="lineno"> 2557</span>&#160;}<span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l02359"></a><span class="lineno"> 2359</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class</span> TPo<span class="keywordtype">int</span>Type&gt;</div>
+<div class="line"><a name="l02360"></a><span class="lineno"> 2360</span>&#160;<span class="keyword">const</span> GeometryDimension <a class="code" href="../../db/d66/namespace_kratos.html#adbd3ee45f9dc2cf860b204f7167b7fe8">Triangle3D3&lt;TPointType&gt;::msGeometryDimension</a>(3, 2);</div>
+<div class="line"><a name="l02361"></a><span class="lineno"> 2361</span>&#160; </div>
+<div class="line"><a name="l02362"></a><span class="lineno"> 2362</span>&#160;}<span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="aclass_kratos_1_1_geometrical_projection_utilities_html_a8b3f0ed865eb344c45502cd523a30481"><div class="ttname"><a href="../../de/d8f/class_kratos_1_1_geometrical_projection_utilities.html#a8b3f0ed865eb344c45502cd523a30481">Kratos::GeometricalProjectionUtilities::FastProject</a></div><div class="ttdeci">static TPointClass3 FastProject(const TPointClass1 &amp;rPointOrigin, const TPointClass2 &amp;rPointToProject, const array_1d&lt; double, 3 &gt; &amp;rNormal, double &amp;rDistance)</div><div class="ttdoc">Project a point over a plane (avoiding some steps)</div><div class="ttdef"><b>Definition:</b> geometrical_projection_utilities.h:134</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html">Kratos::GeometryData</a></div><div class="ttdef"><b>Definition:</b> geometry_data.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a3bd412badaf6f2d8fcb56bbaa659346c"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a3bd412badaf6f2d8fcb56bbaa659346c">Kratos::GeometryData::KratosGeometryType</a></div><div class="ttdeci">KratosGeometryType</div><div class="ttdef"><b>Definition:</b> geometry_data.h:110</div></div>
@@ -1789,7 +1643,8 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_af2db6fe2af7c28ce26bceb93a7ee6e85"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#af2db6fe2af7c28ce26bceb93a7ee6e85">Kratos::Geometry::ShapeFunctionsLocalGradientsContainerType</a></div><div class="ttdeci">GeometryData::ShapeFunctionsLocalGradientsContainerType ShapeFunctionsLocalGradientsContainerType</div><div class="ttdef"><b>Definition:</b> geometry.h:177</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_af98ab48e8455adf86c0d2cd88328bdf4"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#af98ab48e8455adf86c0d2cd88328bdf4">Kratos::Geometry::IntegrationPointsNumber</a></div><div class="ttdeci">SizeType IntegrationPointsNumber() const</div><div class="ttdef"><b>Definition:</b> geometry.h:2257</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_af9d759d64438a0945bbc7b4be42bf5df"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#af9d759d64438a0945bbc7b4be42bf5df">Kratos::Geometry::IntegrationMethod</a></div><div class="ttdeci">GeometryData::IntegrationMethod IntegrationMethod</div><div class="ttdef"><b>Definition:</b> geometry.h:122</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geometry_utils_html_a363e65342b4d6f2f313cca3db8194323"><div class="ttname"><a href="../../d0/d77/class_kratos_1_1_geometry_utils.html#a363e65342b4d6f2f313cca3db8194323">Kratos::GeometryUtils::PointDistanceToTriangle3D</a></div><div class="ttdeci">static double PointDistanceToTriangle3D(const Point &amp;rTrianglePoint1, const Point &amp;rTrianglePoint2, const Point &amp;rTrianglePoint3, const Point &amp;rPoint)</div><div class="ttdoc">This function calculates the distance of a 3D point to a 3D triangle.</div><div class="ttdef"><b>Definition:</b> geometry_utilities.cpp:172</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_utils_html_a363e65342b4d6f2f313cca3db8194323"><div class="ttname"><a href="../../d0/d77/class_kratos_1_1_geometry_utils.html#a363e65342b4d6f2f313cca3db8194323">Kratos::GeometryUtils::PointDistanceToTriangle3D</a></div><div class="ttdeci">static double PointDistanceToTriangle3D(const Point &amp;rTrianglePoint1, const Point &amp;rTrianglePoint2, const Point &amp;rTrianglePoint3, const Point &amp;rPoint)</div><div class="ttdoc">This function calculates the distance of a 3D point to a 3D triangle.</div><div class="ttdef"><b>Definition:</b> geometry_utilities.cpp:173</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geometry_utils_html_af7e425c8a103b125c98eac7c965493e4"><div class="ttname"><a href="../../d0/d77/class_kratos_1_1_geometry_utils.html#af7e425c8a103b125c98eac7c965493e4">Kratos::GeometryUtils::TriangleBoxOverlap</a></div><div class="ttdeci">static bool TriangleBoxOverlap(const Point &amp;rBoxCenter, const Point &amp;rBoxHalfSize, const Point &amp;rVertex0, const Point &amp;rVertex1, const Point &amp;rVertex2)</div><div class="ttdoc">use separating axis theorem to test overlap between triangle and box</div><div class="ttdef"><b>Definition:</b> geometry_utilities.cpp:714</div></div>
 <div class="ttc" id="aclass_kratos_1_1_integration_point_html"><div class="ttname"><a href="../../d9/d7d/class_kratos_1_1_integration_point.html">Kratos::IntegrationPoint</a></div><div class="ttdoc">Short class definition.</div><div class="ttdef"><b>Definition:</b> integration_point.h:52</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix</a></div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:41</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html_a1b55aa2038b7d4963ddf3c9f23a1016d"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html#a1b55aa2038b7d4963ddf3c9f23a1016d">Kratos::Internals::Matrix::swap</a></div><div class="ttdeci">void swap(Matrix &amp;Other)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:289</div></div>
@@ -1832,7 +1687,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html_a2d30a339c84b3a15723edbe0e5c1f851"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a2d30a339c84b3a15723edbe0e5c1f851">Kratos::Triangle3D3::BaseType</a></div><div class="ttdeci">Geometry&lt; TPointType &gt; BaseType</div><div class="ttdef"><b>Definition:</b> triangle_3d_3.h:86</div></div>
 <div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html_a2fe23a30969205328732fc1e061e2cdd"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a2fe23a30969205328732fc1e061e2cdd">Kratos::Triangle3D3::Triangle3D3</a></div><div class="ttdeci">Triangle3D3(Triangle3D3 const &amp;rOther)</div><div class="ttdef"><b>Definition:</b> triangle_3d_3.h:273</div></div>
 <div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html_a327f96e19eb00ea10907712f869e8082"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a327f96e19eb00ea10907712f869e8082">Kratos::Triangle3D3::Create</a></div><div class="ttdeci">BaseType::Pointer Create(const IndexType NewGeometryId, PointsArrayType const &amp;rThisPoints) const override</div><div class="ttdoc">Creates a new geometry pointer.</div><div class="ttdef"><b>Definition:</b> triangle_3d_3.h:371</div></div>
-<div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html_a329deaf94ab6c555bfe3f077fc71ffe3"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a329deaf94ab6c555bfe3f077fc71ffe3">Kratos::Triangle3D3::Triangle3D3</a></div><div class="ttdeci">friend class Triangle3D3</div><div class="ttdef"><b>Definition:</b> triangle_3d_3.h:2505</div></div>
+<div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html_a329deaf94ab6c555bfe3f077fc71ffe3"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a329deaf94ab6c555bfe3f077fc71ffe3">Kratos::Triangle3D3::Triangle3D3</a></div><div class="ttdeci">friend class Triangle3D3</div><div class="ttdef"><b>Definition:</b> triangle_3d_3.h:2313</div></div>
 <div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html_a33708b6cb83ce3e8894ebf2bfa7bfbeb"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a33708b6cb83ce3e8894ebf2bfa7bfbeb">Kratos::Triangle3D3::DeterminantOfJacobian</a></div><div class="ttdeci">double DeterminantOfJacobian(IndexType IntegrationPoint, IntegrationMethod ThisMethod) const override</div><div class="ttdef"><b>Definition:</b> triangle_3d_3.h:1312</div></div>
 <div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html_a399e531435ffcd5c9656746198cb405e"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a399e531435ffcd5c9656746198cb405e">Kratos::Triangle3D3::operator=</a></div><div class="ttdeci">Triangle3D3 &amp; operator=(const Triangle3D3 &amp;rOther)</div><div class="ttdef"><b>Definition:</b> triangle_3d_3.h:325</div></div>
 <div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html_a3b20f14c97d276b00af370c9c845dab9"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html#a3b20f14c97d276b00af370c9c845dab9">Kratos::Triangle3D3::IntegrationPointsArrayType</a></div><div class="ttdeci">BaseType::IntegrationPointsArrayType IntegrationPointsArrayType</div><div class="ttdef"><b>Definition:</b> triangle_3d_3.h:160</div></div>
@@ -1915,7 +1770,6 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_html_a358df20da9726efb77013692eb628f08"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a358df20da9726efb77013692eb628f08">Kratos::ZeroMatrix</a></div><div class="ttdeci">KratosZeroMatrix&lt; double &gt; ZeroMatrix</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:559</div></div>
 <div class="ttc" id="anamespace_kratos_html_a546e4f1c8e62734795679d3b59448410"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Kratos::Matrix</a></div><div class="ttdeci">Internals::Matrix&lt; double, AMatrix::dynamic, AMatrix::dynamic &gt; Matrix</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:470</div></div>
 <div class="ttc" id="anamespace_kratos_html_a63ea2d1c3abad6c974480d8ca9eb7bba"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a63ea2d1c3abad6c974480d8ca9eb7bba">Kratos::prod</a></div><div class="ttdeci">AMatrix::MatrixProductExpression&lt; TExpression1Type, TExpression2Type &gt; prod(AMatrix::MatrixExpression&lt; TExpression1Type, TCategory1 &gt; const &amp;First, AMatrix::MatrixExpression&lt; TExpression2Type, TCategory2 &gt; const &amp;Second)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:568</div></div>
-<div class="ttc" id="anamespace_kratos_html_a656fecfa2a6cca4ac7b95d43ee8ef0b2"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a656fecfa2a6cca4ac7b95d43ee8ef0b2">Kratos::inner_prod</a></div><div class="ttdeci">TExpression1Type::data_type inner_prod(AMatrix::MatrixExpression&lt; TExpression1Type, TCategory1 &gt; const &amp;First, AMatrix::MatrixExpression&lt; TExpression2Type, TCategory2 &gt; const &amp;Second)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:592</div></div>
 <div class="ttc" id="anamespace_kratos_html_a9c6097d0b0a27d1cea94992b1087f56a"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">Kratos::operator&gt;&gt;</a></div><div class="ttdeci">std::istream &amp; operator&gt;&gt;(std::istream &amp;rIStream, LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">input stream function</div></div>
 <div class="ttc" id="anamespace_kratos_html_aabf4ae56b3a49bad4a3537aaf6316f78"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#aabf4ae56b3a49bad4a3537aaf6316f78">Kratos::msGeometryDimension</a></div><div class="ttdeci">const GeometryData BrepCurve&lt; TContainerPointType, TContainerPointEmbeddedType &gt;::msGeometryData &amp; msGeometryDimension</div><div class="ttdef"><b>Definition:</b> brep_curve.h:483</div></div>
 <div class="ttc" id="anamespace_kratos_html_aaff3672cc52b90ee3d84713de272e1b5"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#aaff3672cc52b90ee3d84713de272e1b5">Kratos::noalias</a></div><div class="ttdeci">T &amp; noalias(T &amp;TheMatrix)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:484</div></div>
@@ -1923,7 +1777,6 @@ $(function() {
 <div class="ttc" id="anamespace_kratos_html_ac398e9982e45de7167981e05b7f5ff57"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">Kratos::int</a></div><div class="ttdeci">REACTION_CHECK_STIFFNESS_FACTOR int</div><div class="ttdef"><b>Definition:</b> contact_structural_mechanics_application_variables.h:75</div></div>
 <div class="ttc" id="anamespace_kratos_html_acfc842a43d19dffc2d8105e5cbea17a9"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">Kratos::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;rOStream, const LinearMasterSlaveConstraint &amp;rThis)</div><div class="ttdoc">output stream function</div><div class="ttdef"><b>Definition:</b> linear_master_slave_constraint.h:432</div></div>
 <div class="ttc" id="anamespace_kratos_html_adbd3ee45f9dc2cf860b204f7167b7fe8"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#adbd3ee45f9dc2cf860b204f7167b7fe8">Kratos::msGeometryDimension</a></div><div class="ttdeci">const GeometryData Triangle3D3&lt; TPointType &gt;::msGeometryData &amp; msGeometryDimension(), Triangle3D3&lt; TPointType &gt;::AllShapeFunctionsValues(), AllShapeFunctionsLocalGradients()</div><div class="ttdef"><b>Definition:</b> brep_curve.h:483</div></div>
-<div class="ttc" id="anamespacegenerate__convection__diffusion__explicit__element_html_ac7dee24e8e08e8850729fa951ca747b5"><div class="ttname"><a href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#ac7dee24e8e08e8850729fa951ca747b5">generate_convection_diffusion_explicit_element.q</a></div><div class="ttdeci">q</div><div class="ttdef"><b>Definition:</b> generate_convection_diffusion_explicit_element.py:109</div></div>
 <div class="ttc" id="anamespacegenerate__convection__diffusion__explicit__element_html_acf82adfe1bd2c047be0ec9a7f4e4f7bf"><div class="ttname"><a href="../../d8/d57/namespacegenerate__convection__diffusion__explicit__element.html#acf82adfe1bd2c047be0ec9a7f4e4f7bf">generate_convection_diffusion_explicit_element.f</a></div><div class="ttdeci">f</div><div class="ttdef"><b>Definition:</b> generate_convection_diffusion_explicit_element.py:112</div></div>
 <div class="ttc" id="anamespacegenerate__droplet__dynamics_html_a27b2f629f48dc9db22bf3bf51dfe96f3"><div class="ttname"><a href="../../d7/d92/namespacegenerate__droplet__dynamics.html#a27b2f629f48dc9db22bf3bf51dfe96f3">generate_droplet_dynamics.V</a></div><div class="ttdeci">V</div><div class="ttdef"><b>Definition:</b> generate_droplet_dynamics.py:256</div></div>
 <div class="ttc" id="anamespacegenerate__frictional__mortar__condition_html_aa45f1e1623198e6272d1793df42832f0"><div class="ttname"><a href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#aa45f1e1623198e6272d1793df42832f0">generate_frictional_mortar_condition.x1</a></div><div class="ttdeci">x1</div><div class="ttdef"><b>Definition:</b> generate_frictional_mortar_condition.py:121</div></div>
@@ -1952,7 +1805,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 5 2024 03:14:04 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Sep 6 2024 03:14:33 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

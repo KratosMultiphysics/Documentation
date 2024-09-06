@@ -1007,6 +1007,21 @@ Functions</h2></td></tr>
 <tr class="memdesc:gabaea0c242f935a185f68d45c2bc2f9e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the hash value of a given pair of values in a way that combines the hash values of the individual elements.  <a href="../../d5/d4d/group___kratos_core.html#gabaea0c242f935a185f68d45c2bc2f9e4">More...</a><br /></td></tr>
 <tr class="separator:gabaea0c242f935a185f68d45c2bc2f9e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader">Enum's</h2></td></tr>
+<tr class="memitem:gac3d61aaad7ae762df00c30379fa19dce"><td class="memItemLeft" align="right" valign="top">enum class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d4d/group___kratos_core.html#gac3d61aaad7ae762df00c30379fa19dce">Kratos::TriangleNearestPointLocation</a> { <br />
+&#160;&#160;<a class="el" href="../../d5/d4d/group___kratos_core.html#ggac3d61aaad7ae762df00c30379fa19dceabf190550f8b236383319d0074bbee349">Kratos::INSIDE_TRIANGLE</a>
+, <a class="el" href="../../d5/d4d/group___kratos_core.html#ggac3d61aaad7ae762df00c30379fa19dcea6a0b1ae2bc95e566e98343da199044f1">Kratos::ON_TRIANGLE_EDGE_01</a>
+, <a class="el" href="../../d5/d4d/group___kratos_core.html#ggac3d61aaad7ae762df00c30379fa19dcea5041ead311f3fe10ae4fbaf31b592f96">Kratos::ON_TRIANGLE_EDGE_12</a>
+, <a class="el" href="../../d5/d4d/group___kratos_core.html#ggac3d61aaad7ae762df00c30379fa19dcea2bc116628da0f6d2f6724523568941e0">Kratos::ON_TRIANGLE_EDGE_20</a>
+, <br />
+&#160;&#160;<a class="el" href="../../d5/d4d/group___kratos_core.html#ggac3d61aaad7ae762df00c30379fa19dceaf98461e409bb04e599e50aa702f3a977">Kratos::ON_TRIANGLE_VERTEX_0</a>
+, <a class="el" href="../../d5/d4d/group___kratos_core.html#ggac3d61aaad7ae762df00c30379fa19dcea83f7b26304a61a00eadb5785080053f4">Kratos::ON_TRIANGLE_VERTEX_1</a>
+, <a class="el" href="../../d5/d4d/group___kratos_core.html#ggac3d61aaad7ae762df00c30379fa19dcea35998d15d04e90e95fceec5db27a8183">Kratos::ON_TRIANGLE_VERTEX_2</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:gac3d61aaad7ae762df00c30379fa19dce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum class that defines the possible locations of the nearest point to a triangle.  <a href="../../d5/d4d/group___kratos_core.html#gac3d61aaad7ae762df00c30379fa19dce">More...</a><br /></td></tr>
+<tr class="separator:gac3d61aaad7ae762df00c30379fa19dce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type Definitions</h2></td></tr>
 <tr class="memitem:ga2de5c8eca6a91cc7ebe0f04f1b5625bd"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d4d/group___kratos_core.html#ga2de5c8eca6a91cc7ebe0f04f1b5625bd">Kratos::GlobalPointer&lt; TDataType &gt;::element_type</a> = TDataType</td></tr>
 <tr class="memdesc:ga2de5c8eca6a91cc7ebe0f04f1b5625bd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Definition of element type.  <a href="../../d5/d4d/group___kratos_core.html#ga2de5c8eca6a91cc7ebe0f04f1b5625bd">More...</a><br /></td></tr>
@@ -4169,6 +4184,41 @@ template&lt;class TSparseSpace , class TDenseSpace &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="gac3d61aaad7ae762df00c30379fa19dce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gac3d61aaad7ae762df00c30379fa19dce">&#9670;&nbsp;</a></span>TriangleNearestPointLocation</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="../../d5/d4d/group___kratos_core.html#gac3d61aaad7ae762df00c30379fa19dce">Kratos::TriangleNearestPointLocation</a></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">strong</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Enum class that defines the possible locations of the nearest point to a triangle. </p>
+<p>This enum class defines the possible locations of the nearest point to a triangle INSIDE_TRIANGLE: The nearest point is inside the triangle ON_TRIANGLE_EDGE_01: The nearest point is on the edge 01 of the triangle ON_TRIANGLE_EDGE_12: The nearest point is on the edge 12 of the triangle ON_TRIANGLE_EDGE_20: The nearest point is on the edge 20 of the triangle ON_TRIANGLE_VERTEX_0: The nearest point is on the vertex 0 of the triangle ON_TRIANGLE_VERTEX_1: The nearest point is on the vertex 1 of the triangle ON_TRIANGLE_VERTEX_2: The nearest point is on the vertex 2 of the triangle </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggac3d61aaad7ae762df00c30379fa19dceabf190550f8b236383319d0074bbee349"></a>INSIDE_TRIANGLE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggac3d61aaad7ae762df00c30379fa19dcea6a0b1ae2bc95e566e98343da199044f1"></a>ON_TRIANGLE_EDGE_01&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggac3d61aaad7ae762df00c30379fa19dcea5041ead311f3fe10ae4fbaf31b592f96"></a>ON_TRIANGLE_EDGE_12&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggac3d61aaad7ae762df00c30379fa19dcea2bc116628da0f6d2f6724523568941e0"></a>ON_TRIANGLE_EDGE_20&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggac3d61aaad7ae762df00c30379fa19dceaf98461e409bb04e599e50aa702f3a977"></a>ON_TRIANGLE_VERTEX_0&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggac3d61aaad7ae762df00c30379fa19dcea83f7b26304a61a00eadb5785080053f4"></a>ON_TRIANGLE_VERTEX_1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="ggac3d61aaad7ae762df00c30379fa19dcea35998d15d04e90e95fceec5db27a8183"></a>ON_TRIANGLE_VERTEX_2&#160;</td><td class="fielddoc"></td></tr>
+</table>
 
 </div>
 </div>
@@ -10140,7 +10190,7 @@ template&lt;class TDataType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 5 2024 03:20:49 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Sep 6 2024 03:21:30 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
