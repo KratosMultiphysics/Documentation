@@ -93,30 +93,45 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d25/kratos__export__api_8h.html">includes/kratos_export_api.h</a>&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d3e/ublas__interface_8h.html">includes/ublas_interface.h</a>&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html">   23</a></span>&#160;<span class="keyword">class </span>KRATOS_API(GEO_MECHANICS_APPLICATION) <a class="code" href="../../d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html">GeoMechanicsMathUtilities</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    [[nodiscard]] <span class="keyword">static</span> std::vector&lt;double&gt; CalculateDeterminants(<span class="keyword">const</span> std::vector&lt;Matrix&gt;&amp; rMatrices);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}; <span class="comment">// class GeoMechanicsMathUtilities</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/d25/kratos__export__api_8h.html">includes/kratos_export_api.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d9/d3e/ublas__interface_8h.html">includes/ublas_interface.h</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html">   25</a></span>&#160;<span class="keyword">class </span>KRATOS_API(GEO_MECHANICS_APPLICATION) <a class="code" href="../../d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html">GeoMechanicsMathUtilities</a></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    [[nodiscard]] <span class="keyword">static</span> std::vector&lt;double&gt; CalculateDeterminants(<span class="keyword">const</span> std::vector&lt;Matrix&gt;&amp; rMatrices);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_math_utilities_html"><div class="ttname"><a href="../../d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html">Kratos::GeoMechanicsMathUtilities</a></div><div class="ttdef"><b>Definition:</b> math_utilities.h:24</div></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> VectorType&gt;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="../../d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html#a71adc237be06d05f799c45bad4558762">   31</a></span>&#160;    [[nodiscard]] <span class="keyword">static</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">VectorType</a> <a class="code" href="../../d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html#a71adc237be06d05f799c45bad4558762">Normalized</a>(<span class="keyword">const</span> <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">VectorType</a>&amp; rVector)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> length = <a class="code" href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">norm_2</a>(rVector);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <a class="code" href="../../d5/d4d/group___kratos_core.html#ga421c079910a05f8a88688b045190ac9b">KRATOS_ERROR_IF_NOT</a>(length &gt; 0.0) &lt;&lt; <span class="stringliteral">&quot;A zero vector cannot be normalized\n&quot;</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordflow">return</span> rVector / length;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}; <span class="comment">// class GeoMechanicsMathUtilities</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_math_utilities_html"><div class="ttname"><a href="../../d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html">Kratos::GeoMechanicsMathUtilities</a></div><div class="ttdef"><b>Definition:</b> math_utilities.h:26</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_math_utilities_html_a71adc237be06d05f799c45bad4558762"><div class="ttname"><a href="../../d1/d46/class_kratos_1_1_geo_mechanics_math_utilities.html#a71adc237be06d05f799c45bad4558762">Kratos::GeoMechanicsMathUtilities::Normalized</a></div><div class="ttdeci">static VectorType Normalized(const VectorType &amp;rVector)</div><div class="ttdef"><b>Definition:</b> math_utilities.h:31</div></div>
+<div class="ttc" id="aclass_kratos_1_1array__1d_html"><div class="ttname"><a href="../../d4/ddc/class_kratos_1_1array__1d.html">Kratos::array_1d&lt; double, 3 &gt;</a></div></div>
+<div class="ttc" id="agroup___kratos_core_html_ga421c079910a05f8a88688b045190ac9b"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga421c079910a05f8a88688b045190ac9b">KRATOS_ERROR_IF_NOT</a></div><div class="ttdeci">#define KRATOS_ERROR_IF_NOT(conditional)</div><div class="ttdef"><b>Definition:</b> exception.h:163</div></div>
 <div class="ttc" id="akratos__export__api_8h_html"><div class="ttname"><a href="../../dc/d25/kratos__export__api_8h.html">kratos_export_api.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
+<div class="ttc" id="anamespace_kratos_html_a0c30d2b162b4757f7012f7006a8f1628"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a0c30d2b162b4757f7012f7006a8f1628">Kratos::norm_2</a></div><div class="ttdeci">TExpressionType::data_type norm_2(AMatrix::MatrixExpression&lt; TExpressionType, TCategory &gt; const &amp;TheExpression)</div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:625</div></div>
 <div class="ttc" id="aublas__interface_8h_html"><div class="ttname"><a href="../../d9/d3e/ublas__interface_8h.html">ublas_interface.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 10 2024 02:34:22 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Sep 11 2024 02:33:44 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -76,6 +76,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="../../db/d8d/class_kratos_1_1_geometry_utilities-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Kratos::GeometryUtilities Class Reference</div>  </div>
@@ -85,7 +86,7 @@ $(function() {
 <p>Short class definition.  
  <a href="../../d2/dcd/class_kratos_1_1_geometry_utilities.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="../../da/d53/applications_2_shape_optimization_application_2custom__utilities_2geometry__utilities_8h_source.html">geometry_utilities.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="../../dd/d3f/applications_2_geo_mechanics_application_2custom__utilities_2geometry__utilities_8h_source.html">geometry_utilities.h</a>&gt;</code></p>
 <div class="dynheader">
 Collaboration diagram for Kratos::GeometryUtilities:</div>
 <div class="dyncontent">
@@ -162,6 +163,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac828d0e72089d85e56ceb398c80dcd84"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/class_kratos_1_1_geometry_utilities.html#ac828d0e72089d85e56ceb398c80dcd84">PrintData</a> (std::ostream &amp;rOStream) const</td></tr>
 <tr class="memdesc:ac828d0e72089d85e56ceb398c80dcd84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print object's data.  <a href="../../d2/dcd/class_kratos_1_1_geometry_utilities.html#ac828d0e72089d85e56ceb398c80dcd84">More...</a><br /></td></tr>
 <tr class="separator:ac828d0e72089d85e56ceb398c80dcd84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a3bed2966880e980b32e6f5005f64bc5c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/class_kratos_1_1_geometry_utilities.html#a3bed2966880e980b32e6f5005f64bc5c">Calculate2DRotationMatrixForLineGeometry</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &gt; &amp;rGeometry, const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;rLocalCoordinate)</td></tr>
+<tr class="separator:a3bed2966880e980b32e6f5005f64bc5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type Definitions</h2></td></tr>
 <tr class="memitem:ab7e1118022603c357c6150af9ec10e12"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/dcd/class_kratos_1_1_geometry_utilities.html#ab7e1118022603c357c6150af9ec10e12">array_3d</a></td></tr>
@@ -345,6 +351,42 @@ Public Member Functions</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3bed2966880e980b32e6f5005f64bc5c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3bed2966880e980b32e6f5005f64bc5c">&#9670;&nbsp;</a></span>Calculate2DRotationMatrixForLineGeometry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> Kratos::GeometryUtilities::Calculate2DRotationMatrixForLineGeometry </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry</a>&lt; <a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rGeometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rLocalCoordinate</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 </div>
@@ -997,13 +1039,13 @@ template&lt;class TContainerType &gt; </div>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>/home/runner/work/Documentation/Documentation/master/applications/ShapeOptimizationApplication/custom_utilities/<a class="el" href="../../da/d53/applications_2_shape_optimization_application_2custom__utilities_2geometry__utilities_8h_source.html">geometry_utilities.h</a></li>
-<li>/home/runner/work/Documentation/Documentation/master/applications/ShapeOptimizationApplication/custom_utilities/<a class="el" href="../../da/d65/applications_2_shape_optimization_application_2custom__utilities_2geometry__utilities_8cpp.html">geometry_utilities.cpp</a></li>
+<li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_utilities/<a class="el" href="../../dd/d3f/applications_2_geo_mechanics_application_2custom__utilities_2geometry__utilities_8h_source.html">geometry_utilities.h</a></li>
+<li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_utilities/<a class="el" href="../../d5/d02/applications_2_geo_mechanics_application_2custom__utilities_2geometry__utilities_8cpp.html">geometry_utilities.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 10 2024 04:04:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Sep 11 2024 03:53:46 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
