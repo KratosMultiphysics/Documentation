@@ -93,29 +93,34 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="../../d1/d42/class_kratos_1_1_integration_scheme.html">   18</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d42/class_kratos_1_1_integration_scheme.html">IntegrationScheme</a></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;{</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a577f7b7464aeb6744a1ca5745c477b0d">   21</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a577f7b7464aeb6744a1ca5745c477b0d">~IntegrationScheme</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a0f829399acaa09d18ebbd0c16ee6838a">   23</a></span>&#160;    [[nodiscard]] <span class="keyword">virtual</span> std::size_t <a class="code" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a0f829399acaa09d18ebbd0c16ee6838a">GetNumberOfIntegrationPoints</a>() <span class="keyword">const</span>                    = 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#ab84d6040f6557fbf3f84ecd651cdd770">   24</a></span>&#160;    [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="../../d7/de2/namespace_kratos_1_1_geo.html#a57b668bae758b9ec99e33c437f8afce4">Geo::IntegrationPointVectorType</a>&amp; <a class="code" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#ab84d6040f6557fbf3f84ecd651cdd770">GetIntegrationPoints</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/db1/geo__aliases_8h.html">geo_aliases.h</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;cstddef&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;{</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="../../d1/d42/class_kratos_1_1_integration_scheme.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../d1/d42/class_kratos_1_1_integration_scheme.html">IntegrationScheme</a></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;{</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a577f7b7464aeb6744a1ca5745c477b0d">   25</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a577f7b7464aeb6744a1ca5745c477b0d">~IntegrationScheme</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="ttc" id="aclass_kratos_1_1_integration_scheme_html"><div class="ttname"><a href="../../d1/d42/class_kratos_1_1_integration_scheme.html">Kratos::IntegrationScheme</a></div><div class="ttdef"><b>Definition:</b> integration_scheme.h:19</div></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a0f829399acaa09d18ebbd0c16ee6838a">   27</a></span>&#160;    [[nodiscard]] <span class="keyword">virtual</span> std::size_t <a class="code" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a0f829399acaa09d18ebbd0c16ee6838a">GetNumberOfIntegrationPoints</a>() <span class="keyword">const</span>                    = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#ab84d6040f6557fbf3f84ecd651cdd770">   28</a></span>&#160;    [[nodiscard]] <span class="keyword">virtual</span> <span class="keyword">const</span> <a class="code" href="../../d7/de2/namespace_kratos_1_1_geo.html#a57b668bae758b9ec99e33c437f8afce4">Geo::IntegrationPointVectorType</a>&amp; <a class="code" href="../../d1/d42/class_kratos_1_1_integration_scheme.html#ab84d6040f6557fbf3f84ecd651cdd770">GetIntegrationPoints</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="ttc" id="aclass_kratos_1_1_integration_scheme_html"><div class="ttname"><a href="../../d1/d42/class_kratos_1_1_integration_scheme.html">Kratos::IntegrationScheme</a></div><div class="ttdef"><b>Definition:</b> integration_scheme.h:23</div></div>
 <div class="ttc" id="aclass_kratos_1_1_integration_scheme_html_a0f829399acaa09d18ebbd0c16ee6838a"><div class="ttname"><a href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a0f829399acaa09d18ebbd0c16ee6838a">Kratos::IntegrationScheme::GetNumberOfIntegrationPoints</a></div><div class="ttdeci">virtual std::size_t GetNumberOfIntegrationPoints() const =0</div></div>
 <div class="ttc" id="aclass_kratos_1_1_integration_scheme_html_a577f7b7464aeb6744a1ca5745c477b0d"><div class="ttname"><a href="../../d1/d42/class_kratos_1_1_integration_scheme.html#a577f7b7464aeb6744a1ca5745c477b0d">Kratos::IntegrationScheme::~IntegrationScheme</a></div><div class="ttdeci">virtual ~IntegrationScheme()=default</div></div>
 <div class="ttc" id="aclass_kratos_1_1_integration_scheme_html_ab84d6040f6557fbf3f84ecd651cdd770"><div class="ttname"><a href="../../d1/d42/class_kratos_1_1_integration_scheme.html#ab84d6040f6557fbf3f84ecd651cdd770">Kratos::IntegrationScheme::GetIntegrationPoints</a></div><div class="ttdeci">virtual const Geo::IntegrationPointVectorType &amp; GetIntegrationPoints() const =0</div></div>
+<div class="ttc" id="ageo__aliases_8h_html"><div class="ttname"><a href="../../d3/db1/geo__aliases_8h.html">geo_aliases.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_1_1_geo_html_a57b668bae758b9ec99e33c437f8afce4"><div class="ttname"><a href="../../d7/de2/namespace_kratos_1_1_geo.html#a57b668bae758b9ec99e33c437f8afce4">Kratos::Geo::IntegrationPointVectorType</a></div><div class="ttdeci">std::vector&lt; IntegrationPointType &gt; IntegrationPointVectorType</div><div class="ttdef"><b>Definition:</b> geo_aliases.h:27</div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 13 2024 02:34:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Sep 14 2024 02:32:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
