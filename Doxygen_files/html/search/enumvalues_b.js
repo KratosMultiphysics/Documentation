@@ -1,10 +1,9 @@
 var searchData=
 [
-  ['main_5fbackground_77805',['MAIN_BACKGROUND',['../d7/db4/class_kratos_1_1_chimera_hole_cutting_utility.html#a40e91ba7bd643beadded1895b35ed5a5a23ba4b45bf4e57ee882a97051a68f908',1,'Kratos::ChimeraHoleCuttingUtility']]],
-  ['mappingcheck_77806',['MappingCheck',['../db/de1/class_kratos_1_1_base_contact_search_process.html#ac0ee2a6f5c5539e60601efd587303b0ca6838122570b6a81bf01a050176eb9b2c',1,'Kratos::BaseContactSearchProcess']]],
-  ['master_77807',['Master',['../d9/d54/class_kratos_1_1_coupling_nitsche_condition.html#aaf582651a7ccd0510962eb6120245291af03bde11d261f185cbacfa32c1c6538c',1,'Kratos::CouplingNitscheCondition']]],
+  ['main_5fbackground_77806',['MAIN_BACKGROUND',['../d7/db4/class_kratos_1_1_chimera_hole_cutting_utility.html#a40e91ba7bd643beadded1895b35ed5a5a23ba4b45bf4e57ee882a97051a68f908',1,'Kratos::ChimeraHoleCuttingUtility']]],
+  ['mappingcheck_77807',['MappingCheck',['../db/de1/class_kratos_1_1_base_contact_search_process.html#ac0ee2a6f5c5539e60601efd587303b0ca6838122570b6a81bf01a050176eb9b2c',1,'Kratos::BaseContactSearchProcess']]],
   ['master_77808',['MASTER',['../da/d69/class_kratos_1_1_mixed_u_l_m_linear_solver.html#a59fc3b6f674667b166b5549640bb7e32a89a1533c37ec9254f22b5e0f29c9c0ff',1,'Kratos::MixedULMLinearSolver']]],
-  ['master_77809',['Master',['../db/d66/namespace_kratos.html#a8ad8a3150afe1e0563c6972e90a9448caf03bde11d261f185cbacfa32c1c6538c',1,'Kratos']]],
+  ['master_77809',['Master',['../d9/d54/class_kratos_1_1_coupling_nitsche_condition.html#aaf582651a7ccd0510962eb6120245291af03bde11d261f185cbacfa32c1c6538c',1,'Kratos::CouplingNitscheCondition::Master()'],['../db/d66/namespace_kratos.html#a8ad8a3150afe1e0563c6972e90a9448caf03bde11d261f185cbacfa32c1c6538c',1,'Kratos::Master()']]],
   ['masterline2d2n0_77810',['MasterLine2D2N0',['../db/d66/namespace_kratos.html#a188e9cac6b4745a28aa7526cd9099164a1114449e5d1167b23e1ab4535895199d',1,'Kratos']]],
   ['masterline2d2n1_77811',['MasterLine2D2N1',['../db/d66/namespace_kratos.html#a188e9cac6b4745a28aa7526cd9099164a12db56df2d6a2c9948075c2a36b6ead0',1,'Kratos']]],
   ['masterquadrilateral3d4n0_77812',['MasterQuadrilateral3D4N0',['../db/d66/namespace_kratos.html#a644333d70bbceb1cf012a6c50dd52dffa844889c9e9bcca7b799d2d03c92d00ba',1,'Kratos::MasterQuadrilateral3D4N0()'],['../db/d66/namespace_kratos.html#a7a7b6324210530d8d5781490c1c02a55a844889c9e9bcca7b799d2d03c92d00ba',1,'Kratos::MasterQuadrilateral3D4N0()']]],

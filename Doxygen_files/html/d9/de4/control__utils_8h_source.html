@@ -104,17 +104,17 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="../../db/d66/namespace_kratos.html">Kratos</a> {</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../df/deb/class_kratos_1_1_control_utils.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../df/deb/class_kratos_1_1_control_utils.html">ControlUtils</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="../../df/deb/class_kratos_1_1_control_utils.html">   28</a></span>&#160;<span class="keyword">class </span>KRATOS_API(SYSTEM_IDENTIFICATION_APPLICATION) <a class="code" href="../../df/deb/class_kratos_1_1_control_utils.html">ControlUtils</a></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;{</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TContainerType&gt;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../df/deb/class_kratos_1_1_control_utils.html#aa18c5f44c57ca52c0b500bb54b901ad0">AssignEquivalentProperties</a>(</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> AssignEquivalentProperties(</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        TContainerType&amp; rSourceContainer,</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        TContainerType&amp; rDestinationContainer);</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TContainerType&gt;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="../../df/deb/class_kratos_1_1_control_utils.html#a4692987561168877369770406e251a98">ClipContainerExpression</a>(</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> ClipContainerExpression(</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <a class="code" href="../../d7/d11/class_kratos_1_1_container_expression.html">ContainerExpression&lt;TContainerType&gt;</a>&amp; rContainerExpression,</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Min,</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Max);</div>
@@ -125,15 +125,13 @@ $(function() {
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;} <span class="comment">/* namespace Kratos.*/</span></div>
 <div class="ttc" id="aclass_kratos_1_1_container_expression_html"><div class="ttname"><a href="../../d7/d11/class_kratos_1_1_container_expression.html">Kratos::ContainerExpression</a></div><div class="ttdoc">Container variable data holder.</div><div class="ttdef"><b>Definition:</b> container_expression.h:80</div></div>
 <div class="ttc" id="aclass_kratos_1_1_control_utils_html"><div class="ttname"><a href="../../df/deb/class_kratos_1_1_control_utils.html">Kratos::ControlUtils</a></div><div class="ttdef"><b>Definition:</b> control_utils.h:29</div></div>
-<div class="ttc" id="aclass_kratos_1_1_control_utils_html_a4692987561168877369770406e251a98"><div class="ttname"><a href="../../df/deb/class_kratos_1_1_control_utils.html#a4692987561168877369770406e251a98">Kratos::ControlUtils::ClipContainerExpression</a></div><div class="ttdeci">static void ClipContainerExpression(ContainerExpression&lt; TContainerType &gt; &amp;rContainerExpression, const double Min, const double Max)</div><div class="ttdef"><b>Definition:</b> control_utils.cpp:59</div></div>
-<div class="ttc" id="aclass_kratos_1_1_control_utils_html_aa18c5f44c57ca52c0b500bb54b901ad0"><div class="ttname"><a href="../../df/deb/class_kratos_1_1_control_utils.html#aa18c5f44c57ca52c0b500bb54b901ad0">Kratos::ControlUtils::AssignEquivalentProperties</a></div><div class="ttdeci">static void AssignEquivalentProperties(TContainerType &amp;rSourceContainer, TContainerType &amp;rDestinationContainer)</div><div class="ttdef"><b>Definition:</b> control_utils.cpp:29</div></div>
 <div class="ttc" id="acontainer__expression_8h_html"><div class="ttname"><a href="../../d0/d97/container__expression_8h.html">container_expression.h</a></div></div>
 <div class="ttc" id="amodel__part_8h_html"><div class="ttname"><a href="../../dd/dfe/model__part_8h.html">model_part.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 19 2024 03:01:12 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Sep 20 2024 03:00:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
