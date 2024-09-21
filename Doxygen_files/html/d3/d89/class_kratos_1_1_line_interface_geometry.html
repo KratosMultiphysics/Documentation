@@ -253,6 +253,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a77ebcab98ce27089a7260cce01dbaafe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a77ebcab98ce27089a7260cce01dbaafe">GetDefaultIntegrationInfo</a> () const override</td></tr>
 <tr class="memdesc:a77ebcab98ce27089a7260cce01dbaafe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Provides the default integration per geometry.  <a href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a77ebcab98ce27089a7260cce01dbaafe">More...</a><br /></td></tr>
 <tr class="separator:a77ebcab98ce27089a7260cce01dbaafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2841330799bb6da3719ba63b8c83ca4e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a2841330799bb6da3719ba63b8c83ca4e">GenerateEdges</a> () const override</td></tr>
+<tr class="memdesc:a2841330799bb6da3719ba63b8c83ca4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method gives you all edges of this geometry.  <a href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a2841330799bb6da3719ba63b8c83ca4e">More...</a><br /></td></tr>
+<tr class="separator:a2841330799bb6da3719ba63b8c83ca4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aebccaca3c1b0cd0da109df4013fe8678"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#aebccaca3c1b0cd0da109df4013fe8678">CreateIntegrationPoints</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">IntegrationPointsArrayType</a> &amp;rIntegrationPoints, <a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;rIntegrationInfo) const override</td></tr>
 <tr class="separator:aebccaca3c1b0cd0da109df4013fe8678"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0fe3741d78c225f3a1ef7df8b0090367"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html#a0fe3741d78c225f3a1ef7df8b0090367">CreateQuadraturePointGeometries</a> (<a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> &amp;rResultGeometries, <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">IndexType</a> NumberOfShapeFunctionDerivatives, const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">IntegrationPointsArrayType</a> &amp;rIntegrationPoints, <a class="el" href="../../d6/d94/class_kratos_1_1_integration_info.html">IntegrationInfo</a> &amp;rIntegrationInfo) override</td></tr>
@@ -548,9 +551,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a40aeda3f9aaae8362ebea4a0f816789f inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a40aeda3f9aaae8362ebea4a0f816789f">KRATOS_DEPRECATED_MESSAGE</a> (&quot;This is legacy version (use <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a00db4aa910d8a81082be5019e0876f8f">GenerateEdges</a> instead)&quot;) virtual <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> Edges(void)</td></tr>
 <tr class="memdesc:a40aeda3f9aaae8362ebea4a0f816789f inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method gives you all edges of this geometry.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#a40aeda3f9aaae8362ebea4a0f816789f">More...</a><br /></td></tr>
 <tr class="separator:a40aeda3f9aaae8362ebea4a0f816789f inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a00db4aa910d8a81082be5019e0876f8f inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a00db4aa910d8a81082be5019e0876f8f">GenerateEdges</a> () const</td></tr>
-<tr class="memdesc:a00db4aa910d8a81082be5019e0876f8f inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method gives you all edges of this geometry.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#a00db4aa910d8a81082be5019e0876f8f">More...</a><br /></td></tr>
-<tr class="separator:a00db4aa910d8a81082be5019e0876f8f inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b5f56056fd16de602d8de3e307cfb0e inherit pub_methods_class_kratos_1_1_geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a9b5f56056fd16de602d8de3e307cfb0e">KRATOS_DEPRECATED_MESSAGE</a> (&quot;This is legacy version (use <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0249f834030a76578c069115a83b2af2">GenerateFaces</a> instead)&quot;) virtual <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> Faces(void)</td></tr>
 <tr class="memdesc:a9b5f56056fd16de602d8de3e307cfb0e inherit pub_methods_class_kratos_1_1_geometry"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns all faces of the current geometry.  <a href="../../dc/dea/class_kratos_1_1_geometry.html#a9b5f56056fd16de602d8de3e307cfb0e">More...</a><br /></td></tr>
 <tr class="separator:a9b5f56056fd16de602d8de3e307cfb0e inherit pub_methods_class_kratos_1_1_geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1266,6 +1266,41 @@ template&lt;typename MidGeometryType &gt; </div>
 <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a9ac28daf99515cadd44212c638a9fe00" title="This method calculate and return volume of this geometry.">Volume()</a> </dd></dl>
 
 <p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#af247fc3bed85b7be33abab8170d80a1b">Kratos::Geometry&lt; Node &gt;</a>.</p>
+
+</div>
+</div>
+<a id="a2841330799bb6da3719ba63b8c83ca4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2841330799bb6da3719ba63b8c83ca4e">&#9670;&nbsp;</a></span>GenerateEdges()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename MidGeometryType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a0e355d176c98668209fec90a5b73278c">GeometriesArrayType</a> <a class="el" href="../../d3/d89/class_kratos_1_1_line_interface_geometry.html">Kratos::LineInterfaceGeometry</a>&lt; MidGeometryType &gt;::GenerateEdges </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method gives you all edges of this geometry. </p>
+<p>This method will gives you all the edges with one dimension less than this geometry. For example a triangle would return three lines as its edges or a tetrahedral would return four triangle as its edges but won't return its six edge lines by this method. </p><dl class="section return"><dt>Returns</dt><dd>GeometriesArrayType containes this geometry edges. </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ac88b0de1985b7203e56c2735742362d3" title="This method gives you number of all edges of this geometry.">EdgesNumber()</a> </dd>
+<dd>
+Edge() </dd></dl>
+
+<p>Reimplemented from <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#a00db4aa910d8a81082be5019e0876f8f">Kratos::Geometry&lt; Node &gt;</a>.</p>
 
 </div>
 </div>
@@ -2543,7 +2578,7 @@ template&lt;typename MidGeometryType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Sep 20 2024 03:55:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Sep 21 2024 03:53:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
