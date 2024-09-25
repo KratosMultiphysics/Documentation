@@ -145,20 +145,26 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; mrModelPart;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; mrWakeModelPart;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> ComputeDistanceToWake();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a> mWakeNormal;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a> mWakeOrigin;</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> MarkWakeElements();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">void</span> ComputeDistanceToWake();</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> ComputeTrailingEdgeNode();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordtype">void</span> MarkWakeElements();</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    ModelPart::NodeType::Pointer pGetTrailingEdgeNode();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordtype">void</span> ComputeTrailingEdgeNode();</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}; <span class="comment">// Class Process</span></div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> SetWakeDistancesSignAccordingToNormal(</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>&amp; rElement,</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">BoundedVector&lt;double, 3&gt;</a>&amp; rElementalDistances);</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_DEFINE_EMBEDDED_WAKE_PROCESS_H</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    ModelPart::NodeType::Pointer pGetTrailingEdgeNode();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}; <span class="comment">// Class Process</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif </span><span class="comment">// KRATOS_DEFINE_EMBEDDED_WAKE_PROCESS_H</span></div>
 <div class="ttc" id="aclass_kratos_1_1_define_embedded_wake_process_html"><div class="ttname"><a href="../../de/dd9/class_kratos_1_1_define_embedded_wake_process.html">Kratos::DefineEmbeddedWakeProcess</a></div><div class="ttdef"><b>Definition:</b> define_embedded_wake_process.h:23</div></div>
 <div class="ttc" id="aclass_kratos_1_1_define_embedded_wake_process_html_a037ccf35669951f2fd5d91267fc600b4"><div class="ttname"><a href="../../de/dd9/class_kratos_1_1_define_embedded_wake_process.html#a037ccf35669951f2fd5d91267fc600b4">Kratos::DefineEmbeddedWakeProcess::operator=</a></div><div class="ttdeci">DefineEmbeddedWakeProcess &amp; operator=(DefineEmbeddedWakeProcess const &amp;rOther)=delete</div><div class="ttdoc">Assignment operator.</div></div>
 <div class="ttc" id="aclass_kratos_1_1_define_embedded_wake_process_html_a0f6b476bd180939a2164c9cb72b12e1f"><div class="ttname"><a href="../../de/dd9/class_kratos_1_1_define_embedded_wake_process.html#a0f6b476bd180939a2164c9cb72b12e1f">Kratos::DefineEmbeddedWakeProcess::~DefineEmbeddedWakeProcess</a></div><div class="ttdeci">~DefineEmbeddedWakeProcess()=default</div><div class="ttdoc">Destructor.</div></div>
@@ -168,15 +174,18 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_define_embedded_wake_process_html_ab156c2c15bade87e844f668aa95b7deb"><div class="ttname"><a href="../../de/dd9/class_kratos_1_1_define_embedded_wake_process.html#ab156c2c15bade87e844f668aa95b7deb">Kratos::DefineEmbeddedWakeProcess::DefineEmbeddedWakeProcess</a></div><div class="ttdeci">DefineEmbeddedWakeProcess(DefineEmbeddedWakeProcess const &amp;rOther)=delete</div><div class="ttdoc">Copy constructor.</div></div>
 <div class="ttc" id="aclass_kratos_1_1_define_embedded_wake_process_html_ad88421b690a7136a8042b3d4719897e4"><div class="ttname"><a href="../../de/dd9/class_kratos_1_1_define_embedded_wake_process.html#ad88421b690a7136a8042b3d4719897e4">Kratos::DefineEmbeddedWakeProcess::operator()</a></div><div class="ttdeci">void operator()()</div><div class="ttdoc">This operator is provided to call the process as a function and simply calls the Execute method.</div><div class="ttdef"><b>Definition:</b> define_embedded_wake_process.h:44</div></div>
 <div class="ttc" id="aclass_kratos_1_1_define_embedded_wake_process_html_ada58d7037c0594bc7fe2461552020e37"><div class="ttname"><a href="../../de/dd9/class_kratos_1_1_define_embedded_wake_process.html#ada58d7037c0594bc7fe2461552020e37">Kratos::DefineEmbeddedWakeProcess::Info</a></div><div class="ttdeci">std::string Info() const override</div><div class="ttdoc">Turn back information as a string.</div><div class="ttdef"><b>Definition:</b> define_embedded_wake_process.h:54</div></div>
+<div class="ttc" id="aclass_kratos_1_1_element_html"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html">Kratos::Element</a></div><div class="ttdoc">Base class for all Elements.</div><div class="ttdef"><b>Definition:</b> element.h:60</div></div>
+<div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix</a></div><div class="ttdef"><b>Definition:</b> amatrix_interface.h:41</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
 <div class="ttc" id="aclass_kratos_1_1_process_html"><div class="ttname"><a href="../../d2/d8c/class_kratos_1_1_process.html">Kratos::Process</a></div><div class="ttdoc">The base class for all processes in Kratos.</div><div class="ttdef"><b>Definition:</b> process.h:49</div></div>
+<div class="ttc" id="aclass_kratos_1_1array__1d_html"><div class="ttname"><a href="../../d4/ddc/class_kratos_1_1array__1d.html">Kratos::array_1d&lt; double, 3 &gt;</a></div></div>
 <div class="ttc" id="amodel__part_8h_html"><div class="ttname"><a href="../../dd/dfe/model__part_8h.html">model_part.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
 <div class="ttc" id="aprocess_8h_html"><div class="ttname"><a href="../../da/d42/process_8h.html">process.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Sep 24 2024 02:30:05 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Sep 25 2024 02:31:18 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
