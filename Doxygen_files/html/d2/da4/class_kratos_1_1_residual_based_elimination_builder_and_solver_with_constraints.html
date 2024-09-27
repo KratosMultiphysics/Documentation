@@ -589,7 +589,7 @@ Additional Inherited Members</h2></td></tr>
 class Kratos::ResidualBasedEliminationBuilderAndSolverWithConstraints&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</h3>
 
 <p>Current class provides an implementation for standard builder and solving operations. </p>
-<p>The RHS is constituted by the unbalanced loads (residual) Degrees of freedom are reordered putting the restrained degrees of freedom at the end of the system ordered in reverse order with respect to the DofSet. Imposition of the dirichlet conditions is naturally dealt with as the residual already contains this information. Calculation of the reactions involves a cost very similar to the calculation of the total residual The system is build in the following manner. A T matrix is assembled and constant vector g is assembled too. The T matrix contains the relations of all the dofs of the system, even the nodes with no master/slave relation. Then the size is n_total x n_red The relation u = T u_red Then: A_red = T^t A T b_red = T^t (b - A g) </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000034">Todo:</a></b></dt><dd>There is a more efficient way to asemble the system, but more costly, which is the following. In this case T will be only a relation matrix between master and slave dofs. Then n_slave x n_master: us = T um + g Separating into independent dofs, master ans slave dofs: u = uu um us A = Auu Aum Aus Amu Amm Ams Asu Asm Ass b = bu bm bs Finally: A_red = Auu Aum + Aus T Amu + T^t Asu Amm + T^t Ams^t + Ams T + T^t Ass T b_red = bu - Aus g bm - Ams g</dd></dl>
+<p>The RHS is constituted by the unbalanced loads (residual) Degrees of freedom are reordered putting the restrained degrees of freedom at the end of the system ordered in reverse order with respect to the DofSet. Imposition of the dirichlet conditions is naturally dealt with as the residual already contains this information. Calculation of the reactions involves a cost very similar to the calculation of the total residual The system is build in the following manner. A T matrix is assembled and constant vector g is assembled too. The T matrix contains the relations of all the dofs of the system, even the nodes with no master/slave relation. Then the size is n_total x n_red The relation u = T u_red Then: A_red = T^t A T b_red = T^t (b - A g) </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000035">Todo:</a></b></dt><dd>There is a more efficient way to asemble the system, but more costly, which is the following. In this case T will be only a relation matrix between master and slave dofs. Then n_slave x n_master: us = T um + g Separating into independent dofs, master ans slave dofs: u = uu um us A = Auu Aum Aus Amu Amm Ams Asu Asm Ass b = bu bm bs Finally: A_red = Auu Aum + Aus T Amu + T^t Asu Amm + T^t Ams^t + Ams T + T^t Ass T b_red = bu - Aus g bm - Ams g</dd></dl>
 <p>This system requires extra care and is more complicated and requires to compute the blocks properly </p><dl class="section author"><dt>Author</dt><dd>Vicente Mataix Ferrandiz </dd></dl>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="a6bcb2dbd5956d0ea25d821bc69130f76"></a>
@@ -2038,7 +2038,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div><div class="memdoc">
 
 <p>This function is exactly same as the <a class="el" href="../../d2/da4/class_kratos_1_1_residual_based_elimination_builder_and_solver_with_constraints.html#a236305006a4abafe3176624f9c74d1c3" title="This method constructs the relationship between the DoF.">ConstructMatrixStructure()</a> function in base class except that the function. </p>
-<p>Has the call to ApplyConstraints function call once the element and conditions compute their equation ids </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000035">Todo:</a></b></dt><dd>Move this method to a common class with block builder and solver with constraints </dd></dl>
+<p>Has the call to ApplyConstraints function call once the element and conditions compute their equation ids </p><dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000036">Todo:</a></b></dt><dd>Move this method to a common class with block builder and solver with constraints </dd></dl>
 <p>Definition of the eqautio id vector type</p>
 
 </div>
@@ -2922,7 +2922,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Sep 26 2024 03:29:54 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Sep 27 2024 03:30:59 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
