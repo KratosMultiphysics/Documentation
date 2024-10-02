@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['yellow_78674',['YELLOW',['../d1/dab/logging__settings_8hpp.html#abf681265909adf3d3e8116c93c0ba179',1,'logging_settings.hpp']]]
+  ['yellow_78677',['YELLOW',['../d1/dab/logging__settings_8hpp.html#abf681265909adf3d3e8116c93c0ba179',1,'logging_settings.hpp']]]
 ];
