@@ -276,9 +276,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8da7322c6e51f744ca3b0b5265723c8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dcf/class_kratos_1_1_small_strain_u_m_a_t3_d_law.html#a8da7322c6e51f744ca3b0b5265723c8b">InitializeMaterialResponseKirchhoff</a> (<a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues) override</td></tr>
 <tr class="memdesc:a8da7322c6e51f744ca3b0b5265723c8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the material response in terms of Kirchhoff stresses.  <a href="../../db/dcf/class_kratos_1_1_small_strain_u_m_a_t3_d_law.html#a8da7322c6e51f744ca3b0b5265723c8b">More...</a><br /></td></tr>
 <tr class="separator:a8da7322c6e51f744ca3b0b5265723c8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae518ac249a98b86b4664114a1ac52539"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dcf/class_kratos_1_1_small_strain_u_m_a_t3_d_law.html#ae518ac249a98b86b4664114a1ac52539">CalculateCauchyGreenStrain</a> (<a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStrainVector)</td></tr>
-<tr class="memdesc:ae518ac249a98b86b4664114a1ac52539"><td class="mdescLeft">&#160;</td><td class="mdescRight">It calculates the strain vector.  <a href="../../db/dcf/class_kratos_1_1_small_strain_u_m_a_t3_d_law.html#ae518ac249a98b86b4664114a1ac52539">More...</a><br /></td></tr>
-<tr class="separator:ae518ac249a98b86b4664114a1ac52539"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a99f31a87c7343887ba5eb5bbc3556e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dcf/class_kratos_1_1_small_strain_u_m_a_t3_d_law.html#a3a99f31a87c7343887ba5eb5bbc3556e">ResetMaterial</a> (const <a class="el" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a> &amp;rMaterialProperties, const <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a7633149e83d0e6073d30a5f710216a08">GeometryType</a> &amp;rElementGeometry, const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rShapeFunctionsValues) override</td></tr>
 <tr class="separator:a3a99f31a87c7343887ba5eb5bbc3556e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2fbb5dbef5152d685bfe410f4854b841"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/dcf/class_kratos_1_1_small_strain_u_m_a_t3_d_law.html#a2fbb5dbef5152d685bfe410f4854b841">GetValue</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rThisVariable, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;rValue) override</td></tr>
@@ -869,53 +866,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae518ac249a98b86b4664114a1ac52539"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae518ac249a98b86b4664114a1ac52539">&#9670;&nbsp;</a></span>CalculateCauchyGreenStrain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::SmallStrainUMAT3DLaw::CalculateCauchyGreenStrain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
-          <td class="paramname"><em>rValues</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>rStrainVector</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>It calculates the strain vector. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rValues</td><td>The internal values of the law </td></tr>
-    <tr><td class="paramname">rStrainVector</td><td>The strain vector in Voigt notation </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented in <a class="el" href="../../dc/dd4/class_kratos_1_1_small_strain_u_m_a_t3_d_interface_law.html#a7b6096f5421b24b9090f213fccbd0ca1">Kratos::SmallStrainUMAT3DInterfaceLaw</a>, <a class="el" href="../../d3/dce/class_kratos_1_1_small_strain_u_m_a_t2_d_plane_strain_law.html#abf94c49ba45d27af96862df0fa80d15d">Kratos::SmallStrainUMAT2DPlaneStrainLaw</a>, and <a class="el" href="../../d6/dce/class_kratos_1_1_small_strain_u_m_a_t2_d_interface_law.html#a59a050258be8fa79e6dcd386db6bd36c">Kratos::SmallStrainUMAT2DInterfaceLaw</a>.</p>
-
-</div>
-</div>
 <a id="a7964f7e4f8d742b876e6be1fe314fd8c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7964f7e4f8d742b876e6be1fe314fd8c">&#9670;&nbsp;</a></span>CalculateConstitutiveMatrix()</h2>
 
@@ -3325,7 +3275,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 4 2024 03:53:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Oct 5 2024 03:52:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

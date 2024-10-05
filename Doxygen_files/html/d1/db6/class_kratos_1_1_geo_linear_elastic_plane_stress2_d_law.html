@@ -504,8 +504,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:a5d94fc54137aca2bdc1cdfb00dd2ba96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14961ba0b0ab37d684d5349dda4cc613"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/class_kratos_1_1_geo_linear_elastic_plane_stress2_d_law.html#a14961ba0b0ab37d684d5349dda4cc613">CalculatePK2Stress</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStrainVector, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStressVector, <a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues) override</td></tr>
 <tr class="separator:a14961ba0b0ab37d684d5349dda4cc613"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad95d3675b785c78313aa755b973c38a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/db6/class_kratos_1_1_geo_linear_elastic_plane_stress2_d_law.html#ad95d3675b785c78313aa755b973c38a4">CalculateCauchyGreenStrain</a> (<a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStrainVector) override</td></tr>
-<tr class="separator:ad95d3675b785c78313aa755b973c38a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_kratos_1_1_constitutive_law"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_kratos_1_1_constitutive_law')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html">Kratos::ConstitutiveLaw</a></td></tr>
 <tr class="memitem:a3dd7429a250c74abc41ac9a084b9ac18 inherit pro_methods_class_kratos_1_1_constitutive_law"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a3dd7429a250c74abc41ac9a084b9ac18">ContraVariantPushForward</a> (<a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;rF)</td></tr>
 <tr class="separator:a3dd7429a250c74abc41ac9a084b9ac18 inherit pro_methods_class_kratos_1_1_constitutive_law"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -688,51 +686,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad95d3675b785c78313aa755b973c38a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad95d3675b785c78313aa755b973c38a4">&#9670;&nbsp;</a></span>CalculateCauchyGreenStrain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::GeoLinearElasticPlaneStress2DLaw::CalculateCauchyGreenStrain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
-          <td class="paramname"><em>rValues</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>rStrainVector</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>It calculates the strain vector </p><dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rValues</td><td>The internal values of the law </td></tr>
-    <tr><td class="paramname">rStrainVector</td><td>The strain vector in Voigt notation </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implements <a class="el" href="../../d4/d27/class_kratos_1_1_geo_linear_elastic_law.html#ab656374d256d58f86f5d22eb1577210d">Kratos::GeoLinearElasticLaw</a>.</p>
-
-</div>
-</div>
 <a id="a5d94fc54137aca2bdc1cdfb00dd2ba96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5d94fc54137aca2bdc1cdfb00dd2ba96">&#9670;&nbsp;</a></span>CalculateElasticMatrix()</h2>
 
@@ -1097,7 +1050,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 4 2024 03:53:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Oct 5 2024 03:52:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

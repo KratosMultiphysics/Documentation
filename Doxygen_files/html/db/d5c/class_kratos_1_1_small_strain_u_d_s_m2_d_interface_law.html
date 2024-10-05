@@ -226,9 +226,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4dcc3ea9058b8493fcce5c10c8c0e75e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3ed3a63e2e4933771737d09b5e7ca45"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6">StressMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/class_kratos_1_1_small_strain_u_d_s_m2_d_interface_law.html#aa3ed3a63e2e4933771737d09b5e7ca45">GetStressMeasure</a> () override</td></tr>
 <tr class="separator:aa3ed3a63e2e4933771737d09b5e7ca45"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1524bc768f5d2b749afd00251fcffdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/class_kratos_1_1_small_strain_u_d_s_m2_d_interface_law.html#ad1524bc768f5d2b749afd00251fcffdc">CalculateCauchyGreenStrain</a> (<a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStrainVector) override</td></tr>
-<tr class="memdesc:ad1524bc768f5d2b749afd00251fcffdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">It calculates the strain vector.  <a href="../../db/d5c/class_kratos_1_1_small_strain_u_d_s_m2_d_interface_law.html#ad1524bc768f5d2b749afd00251fcffdc">More...</a><br /></td></tr>
-<tr class="separator:ad1524bc768f5d2b749afd00251fcffdc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7ca2d1e38baefbc18a708a4d6ef45183"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/class_kratos_1_1_small_strain_u_d_s_m2_d_interface_law.html#a7ca2d1e38baefbc18a708a4d6ef45183">GetValue</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rThisVariable, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;rValue) override</td></tr>
 <tr class="separator:a7ca2d1e38baefbc18a708a4d6ef45183"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7da632c7b075f13ef926ce5c5f0ee3e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d5c/class_kratos_1_1_small_strain_u_d_s_m2_d_interface_law.html#a7da632c7b075f13ef926ce5c5f0ee3e0">GetValue</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &gt; &amp;rThisVariable, <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> &amp;rValue) override</td></tr>
@@ -793,53 +790,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ad1524bc768f5d2b749afd00251fcffdc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1524bc768f5d2b749afd00251fcffdc">&#9670;&nbsp;</a></span>CalculateCauchyGreenStrain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::SmallStrainUDSM2DInterfaceLaw::CalculateCauchyGreenStrain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
-          <td class="paramname"><em>rValues</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>rStrainVector</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>It calculates the strain vector. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rValues</td><td>The internal values of the law </td></tr>
-    <tr><td class="paramname">rStrainVector</td><td>The strain vector in Voigt notation </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="../../da/d12/class_kratos_1_1_small_strain_u_d_s_m3_d_law.html#ac4d922503b74d0316f60206488a58d15">Kratos::SmallStrainUDSM3DLaw</a>.</p>
-
-</div>
-</div>
 <a id="a81d17d21fbe410f37ecd4308698599ee"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a81d17d21fbe410f37ecd4308698599ee">&#9670;&nbsp;</a></span>Clone()</h2>
 
@@ -1543,7 +1493,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 4 2024 03:53:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Oct 5 2024 03:52:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

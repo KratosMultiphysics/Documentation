@@ -228,9 +228,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a82fce9cfeb28480dbdae85daf0c23c0c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa312675a5ac26eb0bc8bf3259245b1a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6">StressMeasure</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dce/class_kratos_1_1_small_strain_u_m_a_t2_d_plane_strain_law.html#aaa312675a5ac26eb0bc8bf3259245b1a">GetStressMeasure</a> () override</td></tr>
 <tr class="separator:aaa312675a5ac26eb0bc8bf3259245b1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abf94c49ba45d27af96862df0fa80d15d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dce/class_kratos_1_1_small_strain_u_m_a_t2_d_plane_strain_law.html#abf94c49ba45d27af96862df0fa80d15d">CalculateCauchyGreenStrain</a> (<a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;rValues, <a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;rStrainVector) override</td></tr>
-<tr class="memdesc:abf94c49ba45d27af96862df0fa80d15d"><td class="mdescLeft">&#160;</td><td class="mdescRight">It calculates the strain vector.  <a href="../../d3/dce/class_kratos_1_1_small_strain_u_m_a_t2_d_plane_strain_law.html#abf94c49ba45d27af96862df0fa80d15d">More...</a><br /></td></tr>
-<tr class="separator:abf94c49ba45d27af96862df0fa80d15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Input and output</div></td></tr>
 <tr class="memitem:a6d60d033e9077124012b6e30f02e84ff"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/dce/class_kratos_1_1_small_strain_u_m_a_t2_d_plane_strain_law.html#a6d60d033e9077124012b6e30f02e84ff">Info</a> () const override</td></tr>
 <tr class="memdesc:a6d60d033e9077124012b6e30f02e84ff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn back information as a string.  <a href="../../d3/dce/class_kratos_1_1_small_strain_u_m_a_t2_d_plane_strain_law.html#a6d60d033e9077124012b6e30f02e84ff">More...</a><br /></td></tr>
@@ -804,53 +801,6 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="abf94c49ba45d27af96862df0fa80d15d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abf94c49ba45d27af96862df0fa80d15d">&#9670;&nbsp;</a></span>CalculateCauchyGreenStrain()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Kratos::SmallStrainUMAT2DPlaneStrainLaw::CalculateCauchyGreenStrain </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
-          <td class="paramname"><em>rValues</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#a2382ac8a486c0d52da7ce94f4ccd6d70">Vector</a> &amp;&#160;</td>
-          <td class="paramname"><em>rStrainVector</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>It calculates the strain vector. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rValues</td><td>The internal values of the law </td></tr>
-    <tr><td class="paramname">rStrainVector</td><td>The strain vector in Voigt notation </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Reimplemented from <a class="el" href="../../db/dcf/class_kratos_1_1_small_strain_u_m_a_t3_d_law.html#ae518ac249a98b86b4664114a1ac52539">Kratos::SmallStrainUMAT3DLaw</a>.</p>
-
-</div>
-</div>
 <a id="acbe70944baf899f1a1082bd688e92ee9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acbe70944baf899f1a1082bd688e92ee9">&#9670;&nbsp;</a></span>Clone()</h2>
 
@@ -1444,7 +1394,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 4 2024 03:53:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Oct 5 2024 03:52:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
