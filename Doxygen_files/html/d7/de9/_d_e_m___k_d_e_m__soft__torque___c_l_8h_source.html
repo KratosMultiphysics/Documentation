@@ -112,27 +112,26 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                                                      <span class="keywordtype">double</span> ElasticLocalRotationalMoment[3],</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                                                      <span class="keywordtype">double</span> ViscoLocalRotationalMoment[3],</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                                                      <span class="keywordtype">double</span> equiv_poisson,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                                      <span class="keywordtype">double</span> indentation,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                                      <span class="keywordtype">double</span> LocalElasticContactForce[3]) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../dc/d56/class_kratos_1_1_d_e_m___k_d_e_m__soft__torque.html#ad3f5346f31d572dd2ab4fcd658de5bc4">   39</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span>{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../da/de4/class_kratos_1_1_d_e_m___k_d_e_m.html">DEM_KDEM</a>)</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    <span class="comment">//rSerializer.save(&quot;MyMemberName&quot;,myMember);</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span>{</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../da/de4/class_kratos_1_1_d_e_m___k_d_e_m.html">DEM_KDEM</a>)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <span class="comment">//rSerializer.load(&quot;MyMemberName&quot;,myMember);</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;} <span class="comment">/* namespace Kratos.*/</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEM_KDEM_SOFT_TORQUE_H_INCLUDED  defined */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                                      <span class="keywordtype">double</span> indentation) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="../../dc/d56/class_kratos_1_1_d_e_m___k_d_e_m__soft__torque.html#ad3f5346f31d572dd2ab4fcd658de5bc4">   38</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span>{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../da/de4/class_kratos_1_1_d_e_m___k_d_e_m.html">DEM_KDEM</a>)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="comment">//rSerializer.save(&quot;MyMemberName&quot;,myMember);</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span>{</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../da/de4/class_kratos_1_1_d_e_m___k_d_e_m.html">DEM_KDEM</a>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <span class="comment">//rSerializer.load(&quot;MyMemberName&quot;,myMember);</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    };</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;} <span class="comment">/* namespace Kratos.*/</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEM_KDEM_SOFT_TORQUE_H_INCLUDED  defined */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_d_e_m___k_d_e_m___c_l_8h_html"><div class="ttname"><a href="../../db/dd6/_d_e_m___k_d_e_m___c_l_8h.html">DEM_KDEM_CL.h</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_d_e_m___k_d_e_m__soft__torque_html"><div class="ttname"><a href="../../dc/d56/class_kratos_1_1_d_e_m___k_d_e_m__soft__torque.html">Kratos::DEM_KDEM_soft_torque</a></div><div class="ttdef"><b>Definition:</b> DEM_KDEM_soft_torque_CL.h:11</div></div>
 <div class="ttc" id="aclass_kratos_1_1_d_e_m___k_d_e_m__soft__torque_html_a47148445a1081aebbe2e45b342941559"><div class="ttname"><a href="../../dc/d56/class_kratos_1_1_d_e_m___k_d_e_m__soft__torque.html#a47148445a1081aebbe2e45b342941559">Kratos::DEM_KDEM_soft_torque::DEM_KDEM_soft_torque</a></div><div class="ttdeci">DEM_KDEM_soft_torque()</div><div class="ttdef"><b>Definition:</b> DEM_KDEM_soft_torque_CL.h:19</div></div>
@@ -150,7 +149,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 7 2024 02:38:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Oct 8 2024 02:38:43 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

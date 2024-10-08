@@ -148,10 +148,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a3daf00105b8ef451db5c988539adc6bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9d4c3556fcf50cc24487d3f05740bbf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/class_kratos_1_1_d_e_m__parallel__bond.html#ad9d4c3556fcf50cc24487d3f05740bbf">CalculateTangentialForces</a> (<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> OldLocalElasticContactForce[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalElasticContactForce[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalElasticExtraContactForce[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ViscoDampingLocalContactForce[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalCoordSystem[3][3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalDeltDisp[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalRelVel[3], const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> kt_el, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> equiv_shear, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;contact_sigma, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;contact_tau, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> indentation_particle, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> calculation_area, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;failure_criterion_state, <a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *element1, <a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *element2, <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> i_neighbour_count, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> &amp;sliding, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;r_process_info) override</td></tr>
 <tr class="separator:ad9d4c3556fcf50cc24487d3f05740bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8eedb5783708fe62455743dea7cbfeed"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/class_kratos_1_1_d_e_m__parallel__bond.html#a8eedb5783708fe62455743dea7cbfeed">CalculateMoments</a> (<a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *<a class="el" href="../../d9/db2/structelement.html">element</a>, <a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *neighbor, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> equiv_young, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> distance, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> calculation_area, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalCoordSystem[3][3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ElasticLocalRotationalMoment[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ViscoLocalRotationalMoment[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> equiv_poisson, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> indentation, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> indentation_particle, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalElasticContactForce[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> normalLocalContactForce, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> GlobalElasticContactForces[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalCoordSystem_2[3], const <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> i_neighbor_count) override</td></tr>
-<tr class="separator:a8eedb5783708fe62455743dea7cbfeed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d030e87a4bc2b7ca17d55d0454b7b18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/class_kratos_1_1_d_e_m__parallel__bond.html#a8d030e87a4bc2b7ca17d55d0454b7b18">ComputeParticleRotationalMoments</a> (<a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *<a class="el" href="../../d9/db2/structelement.html">element</a>, <a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *neighbor, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> equiv_young, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> distance, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> calculation_area, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalCoordSystem[3][3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ElasticLocalRotationalMoment[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ViscoLocalRotationalMoment[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> equiv_poisson, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> indentation, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalElasticContactForce[3]) override</td></tr>
-<tr class="separator:a8d030e87a4bc2b7ca17d55d0454b7b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87bd1a962e057ed2e4c0eb7dbb5768d2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/class_kratos_1_1_d_e_m__parallel__bond.html#a87bd1a962e057ed2e4c0eb7dbb5768d2">CalculateMoments</a> (<a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *<a class="el" href="../../d9/db2/structelement.html">element</a>, <a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *neighbor, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> equiv_young, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> distance, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> calculation_area, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalCoordSystem[3][3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ElasticLocalRotationalMoment[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ViscoLocalRotationalMoment[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> equiv_poisson, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> indentation, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> indentation_particle, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> normalLocalContactForce, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> GlobalContactForce[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalCoordSystem_2[3], const <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> i_neighbor_count) override</td></tr>
+<tr class="separator:a87bd1a962e057ed2e4c0eb7dbb5768d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd87b245b62df986946c442145bb19d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/class_kratos_1_1_d_e_m__parallel__bond.html#afd87b245b62df986946c442145bb19d0">ComputeParticleRotationalMoments</a> (<a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *<a class="el" href="../../d9/db2/structelement.html">element</a>, <a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *neighbor, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> equiv_young, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> distance, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> calculation_area, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalCoordSystem[3][3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ElasticLocalRotationalMoment[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ViscoLocalRotationalMoment[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> equiv_poisson, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> indentation) override</td></tr>
+<tr class="separator:afd87b245b62df986946c442145bb19d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac320e4207e694df0f7b4b2671ba5b229"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/class_kratos_1_1_d_e_m__parallel__bond.html#ac320e4207e694df0f7b4b2671ba5b229">CalculateBondRotationalDamping</a> (<a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *<a class="el" href="../../d9/db2/structelement.html">element</a>, <a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *neighbor, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalCoordSystem[3][3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> ViscoLocalRotationalMoment[3])</td></tr>
 <tr class="separator:ac320e4207e694df0f7b4b2671ba5b229"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90a5f9b0f320ccc7c5d80977a7d4fcf6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d7f/class_kratos_1_1_d_e_m__parallel__bond.html#a90a5f9b0f320ccc7c5d80977a7d4fcf6">AddContributionOfShearStrainParallelToBond</a> (<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> OldLocalElasticContactForce[3], <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalElasticExtraContactForce[3], <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;OldElasticExtraContactForce, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> LocalCoordSystem[3][3], const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> kt_el, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> calculation_area, <a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *element1, <a class="el" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a> *element2)</td></tr>
@@ -878,8 +878,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8eedb5783708fe62455743dea7cbfeed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8eedb5783708fe62455743dea7cbfeed">&#9670;&nbsp;</a></span>CalculateMoments()</h2>
+<a id="a87bd1a962e057ed2e4c0eb7dbb5768d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87bd1a962e057ed2e4c0eb7dbb5768d2">&#9670;&nbsp;</a></span>CalculateMoments()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -957,19 +957,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
-          <td class="paramname"><em>LocalElasticContactForce</em>[3], </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
           <td class="paramname"><em>normalLocalContactForce</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
-          <td class="paramname"><em>GlobalElasticContactForces</em>[3], </td>
+          <td class="paramname"><em>GlobalContactForce</em>[3], </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -996,7 +990,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="../../da/df9/class_kratos_1_1_d_e_m_continuum_constitutive_law.html#aa7049258b2e4bcc809c6f1ab34f35849">Kratos::DEMContinuumConstitutiveLaw</a>.</p>
+<p>Reimplemented from <a class="el" href="../../da/df9/class_kratos_1_1_d_e_m_continuum_constitutive_law.html#ad7beee891eef11606c078f2cfd852ca2">Kratos::DEMContinuumConstitutiveLaw</a>.</p>
 
 </div>
 </div>
@@ -1599,8 +1593,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a8d030e87a4bc2b7ca17d55d0454b7b18"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8d030e87a4bc2b7ca17d55d0454b7b18">&#9670;&nbsp;</a></span>ComputeParticleRotationalMoments()</h2>
+<a id="afd87b245b62df986946c442145bb19d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd87b245b62df986946c442145bb19d0">&#9670;&nbsp;</a></span>ComputeParticleRotationalMoments()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1666,13 +1660,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
-          <td class="paramname"><em>indentation</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
-          <td class="paramname"><em>LocalElasticContactForce</em>[3]&#160;</td>
+          <td class="paramname"><em>indentation</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1687,9 +1675,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Reimplemented from <a class="el" href="../../da/df9/class_kratos_1_1_d_e_m_continuum_constitutive_law.html#acd506baa984bc1cc606de1aa63dd4696">Kratos::DEMContinuumConstitutiveLaw</a>.</p>
+<p>Reimplemented from <a class="el" href="../../da/df9/class_kratos_1_1_d_e_m_continuum_constitutive_law.html#a0cce65f78d592d4fb9cce083d36a0b75">Kratos::DEMContinuumConstitutiveLaw</a>.</p>
 
-<p>Reimplemented in <a class="el" href="../../db/dd2/class_kratos_1_1_d_e_m__parallel__bond__for__membrane.html#a14868db8dc1fc492d46c1bf8e46a0b1f">Kratos::DEM_parallel_bond_for_membrane</a>.</p>
+<p>Reimplemented in <a class="el" href="../../db/dd2/class_kratos_1_1_d_e_m__parallel__bond__for__membrane.html#a128d8fa7a4a7a742b65dd2fa4c9b751c">Kratos::DEM_parallel_bond_for_membrane</a>.</p>
 
 </div>
 </div>
@@ -2335,7 +2323,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 7 2024 03:51:13 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Oct 8 2024 03:52:00 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

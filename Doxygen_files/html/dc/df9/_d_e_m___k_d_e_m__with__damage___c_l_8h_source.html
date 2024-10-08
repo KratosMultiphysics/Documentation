@@ -179,35 +179,34 @@ $(function() {
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                                                    <span class="keywordtype">double</span> ElasticLocalRotationalMoment[3],</div>
 <div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                                                    <span class="keywordtype">double</span> ViscoLocalRotationalMoment[3],</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                                    <span class="keywordtype">double</span> equiv_poisson,</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                    <span class="keywordtype">double</span> indentation,</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                                                    <span class="keywordtype">double</span> LocalElasticContactForce[3]) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                                                    <span class="keywordtype">double</span> indentation) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> CalculateNormalAndTangentialDamageComponents();</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#a4c576438befe427178e89c85f7d94091">  107</a></span>&#160;        <span class="keywordtype">double</span> mDamageNormal = 0.0;</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#a9cf10f947392c90d1d3f61d1934271a9">  108</a></span>&#160;        <span class="keywordtype">double</span> mDamageTangential = 0.0;</div>
-<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#ae74f59d3b27cceca41ad35d7e4fe3636">  109</a></span>&#160;        <span class="keywordtype">double</span> mDamageMoment = 0.0;</div>
-<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#a186c53c0ea8ec50d82a1125728885c57">  110</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> mDamageThresholdTolerance = 0.999;</div>
-<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#a551ac4fac6deff9ad4976779922ae5e7">  111</a></span>&#160;        <span class="keywordtype">double</span> mDamageReal = 0.0;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  115</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override </span>{</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../dc/d56/class_kratos_1_1_d_e_m___k_d_e_m__soft__torque.html">DEM_KDEM_soft_torque</a>)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                    <span class="comment">//rSerializer.save(&quot;MyMemberName&quot;,myMember);</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        }</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override </span>{</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../dc/d56/class_kratos_1_1_d_e_m___k_d_e_m__soft__torque.html">DEM_KDEM_soft_torque</a>)</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    <span class="comment">//rSerializer.load(&quot;MyMemberName&quot;,myMember);</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    };</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEM_KDEM_WITH_DAMAGE_H_INCLUDED  defined */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keywordtype">void</span> CalculateNormalAndTangentialDamageComponents();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#a4c576438befe427178e89c85f7d94091">  106</a></span>&#160;        <span class="keywordtype">double</span> mDamageNormal = 0.0;</div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#a9cf10f947392c90d1d3f61d1934271a9">  107</a></span>&#160;        <span class="keywordtype">double</span> mDamageTangential = 0.0;</div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#ae74f59d3b27cceca41ad35d7e4fe3636">  108</a></span>&#160;        <span class="keywordtype">double</span> mDamageMoment = 0.0;</div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#a186c53c0ea8ec50d82a1125728885c57">  109</a></span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> mDamageThresholdTolerance = 0.999;</div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#a551ac4fac6deff9ad4976779922ae5e7">  110</a></span>&#160;        <span class="keywordtype">double</span> mDamageReal = 0.0;</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  114</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override </span>{</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../dc/d56/class_kratos_1_1_d_e_m___k_d_e_m__soft__torque.html">DEM_KDEM_soft_torque</a>)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                    <span class="comment">//rSerializer.save(&quot;MyMemberName&quot;,myMember);</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override </span>{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../dc/d56/class_kratos_1_1_d_e_m___k_d_e_m__soft__torque.html">DEM_KDEM_soft_torque</a>)</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    <span class="comment">//rSerializer.load(&quot;MyMemberName&quot;,myMember);</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    };</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEM_KDEM_WITH_DAMAGE_H_INCLUDED  defined */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_d_e_m___k_d_e_m__soft__torque___c_l_8h_html"><div class="ttname"><a href="../../d7/de9/_d_e_m___k_d_e_m__soft__torque___c_l_8h.html">DEM_KDEM_soft_torque_CL.h</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_d_e_m___k_d_e_m__soft__torque_html"><div class="ttname"><a href="../../dc/d56/class_kratos_1_1_d_e_m___k_d_e_m__soft__torque.html">Kratos::DEM_KDEM_soft_torque</a></div><div class="ttdef"><b>Definition:</b> DEM_KDEM_soft_torque_CL.h:11</div></div>
 <div class="ttc" id="aclass_kratos_1_1_d_e_m___k_d_e_m__with__damage_html"><div class="ttname"><a href="../../d6/dc8/class_kratos_1_1_d_e_m___k_d_e_m__with__damage.html">Kratos::DEM_KDEM_with_damage</a></div><div class="ttdef"><b>Definition:</b> DEM_KDEM_with_damage_CL.h:9</div></div>
@@ -226,7 +225,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 7 2024 02:38:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Oct 8 2024 02:38:43 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

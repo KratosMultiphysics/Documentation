@@ -218,43 +218,41 @@ $(function() {
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                                      <span class="keywordtype">double</span> ViscoLocalRotationalMoment[3], </div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                                      <span class="keywordtype">double</span> equiv_poisson, </div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                                      <span class="keywordtype">double</span> indentation,</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                      <span class="keywordtype">double</span> indentation_particle, </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                      <span class="keywordtype">double</span> LocalElasticContactForce[3],</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                                      <span class="keywordtype">double</span> normalLocalContactForce,</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                      <span class="keywordtype">double</span> GlobalElasticContactForces[3],</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                                      <span class="keywordtype">double</span> LocalCoordSystem_2[3],</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                                      <span class="keyword">const</span> <span class="keywordtype">int</span> i_neighbor_count) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> ComputeParticleRotationalMoments(<a class="code" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a>* <a class="code" href="../../d9/db2/structelement.html">element</a>,</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                                      <a class="code" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a>* neighbor,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                                      <span class="keywordtype">double</span> equiv_young,</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                                                      <span class="keywordtype">double</span> distance,</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                                      <span class="keywordtype">double</span> calculation_area,</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                                                      <span class="keywordtype">double</span> LocalCoordSystem[3][3],</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                                                      <span class="keywordtype">double</span> ElasticLocalRotationalMoment[3],</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                                                      <span class="keywordtype">double</span> ViscoLocalRotationalMoment[3],</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                                                      <span class="keywordtype">double</span> equiv_poisson,</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                                                      <span class="keywordtype">double</span> indentation,</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                                                      <span class="keywordtype">double</span> LocalElasticContactForce[3]) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                      <span class="keywordtype">double</span> indentation_particle,</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                                      <span class="keywordtype">double</span> normalLocalContactForce,</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                                      <span class="keywordtype">double</span> GlobalContactForce[3],</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                                      <span class="keywordtype">double</span> LocalCoordSystem_2[3],</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                                      <span class="keyword">const</span> <span class="keywordtype">int</span> i_neighbor_count) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> ComputeParticleRotationalMoments(<a class="code" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a>* <a class="code" href="../../d9/db2/structelement.html">element</a>,</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                                                      <a class="code" href="../../da/dca/class_kratos_1_1_spheric_continuum_particle.html">SphericContinuumParticle</a>* neighbor,</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                                                      <span class="keywordtype">double</span> equiv_young,</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                                                      <span class="keywordtype">double</span> distance,</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                                                      <span class="keywordtype">double</span> calculation_area,</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                                                      <span class="keywordtype">double</span> LocalCoordSystem[3][3],</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                                                      <span class="keywordtype">double</span> ElasticLocalRotationalMoment[3],</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                                                      <span class="keywordtype">double</span> ViscoLocalRotationalMoment[3],</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                                                      <span class="keywordtype">double</span> equiv_poisson,</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                                                      <span class="keywordtype">double</span> indentation) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keyword">private</span>:</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../d1/d5a/class_kratos_1_1_d_e_m___dempack.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  159</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno"><a class="line" href="../../d1/d5a/class_kratos_1_1_d_e_m___dempack.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  161</a></span>&#160;        <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span>{</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../da/df9/class_kratos_1_1_d_e_m_continuum_constitutive_law.html">DEMContinuumConstitutiveLaw</a>)</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                    <span class="comment">//rSerializer.save(&quot;MyMemberName&quot;,myMember);</span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        }</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span>{</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../da/df9/class_kratos_1_1_d_e_m_continuum_constitutive_law.html">DEMContinuumConstitutiveLaw</a>)</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    <span class="comment">//rSerializer.load(&quot;MyMemberName&quot;,myMember);</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span>{</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../da/df9/class_kratos_1_1_d_e_m_continuum_constitutive_law.html">DEMContinuumConstitutiveLaw</a>)</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                    <span class="comment">//rSerializer.save(&quot;MyMemberName&quot;,myMember);</span></div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        }</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span>{</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../da/df9/class_kratos_1_1_d_e_m_continuum_constitutive_law.html">DEMContinuumConstitutiveLaw</a>)</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    <span class="comment">//rSerializer.load(&quot;MyMemberName&quot;,myMember);</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;    };</div>
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    };</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;} <span class="comment">/* namespace Kratos.*/</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEM_DEMPACK_H_INCLUDED  defined */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;} <span class="comment">/* namespace Kratos.*/</span></div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* DEM_DEMPACK_H_INCLUDED  defined */</span><span class="preprocessor"></span></div>
 <div class="ttc" id="a_d_e_m__continuum__constitutive__law_8h_html"><div class="ttname"><a href="../../d9/d78/_d_e_m__continuum__constitutive__law_8h.html">DEM_continuum_constitutive_law.h</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_d_e_m___dempack_html"><div class="ttname"><a href="../../d1/d5a/class_kratos_1_1_d_e_m___dempack.html">Kratos::DEM_Dempack</a></div><div class="ttdef"><b>Definition:</b> DEM_Dempack_CL.h:11</div></div>
 <div class="ttc" id="aclass_kratos_1_1_d_e_m___dempack_html_a0e89de23c7fd135fcec42df7b2b2c52a"><div class="ttname"><a href="../../d1/d5a/class_kratos_1_1_d_e_m___dempack.html#a0e89de23c7fd135fcec42df7b2b2c52a">Kratos::DEM_Dempack::~DEM_Dempack</a></div><div class="ttdeci">~DEM_Dempack()</div><div class="ttdef"><b>Definition:</b> DEM_Dempack_CL.h:20</div></div>
@@ -283,7 +281,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 7 2024 02:38:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Oct 8 2024 02:38:43 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
