@@ -240,6 +240,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a24bbab87ebc48e9fb262ecb155d9b933"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dec/class_kratos_1_1_geo_structural_base_element.html#a24bbab87ebc48e9fb262ecb155d9b933">~GeoStructuralBaseElement</a> ()=default</td></tr>
 <tr class="separator:a24bbab87ebc48e9fb262ecb155d9b933"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac484bd1db965054d64f42a69b17fd540"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dec/class_kratos_1_1_geo_structural_base_element.html#ac484bd1db965054d64f42a69b17fd540">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;, PropertiesType::Pointer) const override</td></tr>
+<tr class="memdesc:ac484bd1db965054d64f42a69b17fd540"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../dc/dec/class_kratos_1_1_geo_structural_base_element.html#ac484bd1db965054d64f42a69b17fd540">More...</a><br /></td></tr>
 <tr class="separator:ac484bd1db965054d64f42a69b17fd540"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab8ec70a2272453b62a658888926b23ed"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dec/class_kratos_1_1_geo_structural_base_element.html#ab8ec70a2272453b62a658888926b23ed">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>, GeometryType::Pointer, PropertiesType::Pointer) const override</td></tr>
 <tr class="memdesc:ab8ec70a2272453b62a658888926b23ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../dc/dec/class_kratos_1_1_geo_structural_base_element.html#ab8ec70a2272453b62a658888926b23ed">More...</a><br /></td></tr>
@@ -717,8 +718,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 </div>
 </div>
 <a id="a0bf4fe64a989acc8fe9eb81ba68cabae"></a>
@@ -1068,8 +1068,15 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+<p>ELEMENTS inherited from this class have to implement next CalculateLocalSystem, CalculateLeftHandSide and CalculateRightHandSide methods they can be managed internally with a private method to do the same calculations only once: MANDATORY this is called during the assembling process in order to calculate all elemental contributions to the global system matrix and the right hand side </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rLeftHandSideMatrix</td><td>the elemental left hand side matrix </td></tr>
+    <tr><td class="paramname">rRightHandSideVector</td><td>the elemental right hand side </td></tr>
+    <tr><td class="paramname">rCurrentProcessInfo</td><td>the current process info instance </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ad4b3bf73728cf4871e53fb71a5b53e01">Kratos::Element</a>.</p>
 
 </div>
@@ -1273,8 +1280,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 </div>
 </div>
 <a id="ab2b7f896723fba25a06f7c90168445b3"></a>
@@ -1389,19 +1395,19 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
           <td class="memname">Element::Pointer <a class="el" href="../../dc/dec/class_kratos_1_1_geo_structural_base_element.html">Kratos::GeoStructuralBaseElement</a>&lt; TDim, TNumNodes &gt;::Create </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a>&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>NewId</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;&#160;</td>
-          <td class="paramname">, </td>
+          <td class="paramname"><em>ThisNodes</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">PropertiesType::Pointer&#160;</td>
-          <td class="paramname">&#160;</td>
+          <td class="paramname"><em>pProperties</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1415,8 +1421,18 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
+<p>It creates a new element pointer. </p>
+<p>ELEMENTS inherited from this class have to implement next Create and Clone methods: MANDATORY </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NewId</td><td>the ID of the new element </td></tr>
+    <tr><td class="paramname">ThisNodes</td><td>the nodes of the new element </td></tr>
+    <tr><td class="paramname">pProperties</td><td>the properties assigned to the new element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a Pointer to the new element </dd></dl>
+
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9d3fcc73aa43b460715466d283803b61">Kratos::Element</a>.</p>
 
 <p>Reimplemented in <a class="el" href="../../dd/dea/class_kratos_1_1_geo_curved_beam_element.html#aea26be5afb9324250b0db85cff1ae353">Kratos::GeoCurvedBeamElement&lt; 2, 3 &gt;</a>.</p>
@@ -1937,8 +1953,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a32a64148dbfe542cbf4fca16a10822a9">Kratos::Element</a>.</p>
 
 </div>
@@ -2088,8 +2103,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 </div>
 </div>
 <a id="a3cfb7db83e608740daf73f2ae9f04f6b"></a>
@@ -2123,7 +2137,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 8 2024 04:01:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Oct 9 2024 03:57:32 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

@@ -331,6 +331,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a42c4e18c2be1ed31f796b38cc1339ee6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a42c4e18c2be1ed31f796b38cc1339ee6">~SteadyStatePwPipingElement</a> ()=default</td></tr>
 <tr class="separator:a42c4e18c2be1ed31f796b38cc1339ee6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0189592f0d723968e7f7738d72e8e198"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a0189592f0d723968e7f7738d72e8e198">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;ThisNodes, PropertiesType::Pointer pProperties) const override</td></tr>
+<tr class="memdesc:a0189592f0d723968e7f7738d72e8e198"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a0189592f0d723968e7f7738d72e8e198">More...</a><br /></td></tr>
 <tr class="separator:a0189592f0d723968e7f7738d72e8e198"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adbc9601fb840634019707bb7ddf5e9f4"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#adbc9601fb840634019707bb7ddf5e9f4">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeom, PropertiesType::Pointer pProperties) const override</td></tr>
 <tr class="memdesc:adbc9601fb840634019707bb7ddf5e9f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#adbc9601fb840634019707bb7ddf5e9f4">More...</a><br /></td></tr>
@@ -1374,8 +1375,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 </div>
 </div>
 <a id="ac4fffee02ae4f32e56c0f9c2b70ab0ab"></a>
@@ -2131,8 +2131,18 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
+<p>It creates a new element pointer. </p>
+<p>ELEMENTS inherited from this class have to implement next Create and Clone methods: MANDATORY </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NewId</td><td>the ID of the new element </td></tr>
+    <tr><td class="paramname">ThisNodes</td><td>the nodes of the new element </td></tr>
+    <tr><td class="paramname">pProperties</td><td>the properties assigned to the new element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a Pointer to the new element </dd></dl>
+
 <p>Reimplemented from <a class="el" href="../../db/d2d/class_kratos_1_1_steady_state_pw_interface_element.html#a1f94cd2928029348817f2af57526f930">Kratos::SteadyStatePwInterfaceElement&lt; TDim, TNumNodes &gt;</a>.</p>
 
 </div>
@@ -2277,7 +2287,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 8 2024 04:01:38 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Oct 9 2024 03:57:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

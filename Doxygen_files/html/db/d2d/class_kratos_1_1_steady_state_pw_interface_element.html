@@ -302,6 +302,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab83e5ccf87f0906ce2d6830b2ec718c8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2d/class_kratos_1_1_steady_state_pw_interface_element.html#ab83e5ccf87f0906ce2d6830b2ec718c8">~SteadyStatePwInterfaceElement</a> ()=default</td></tr>
 <tr class="separator:ab83e5ccf87f0906ce2d6830b2ec718c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1f94cd2928029348817f2af57526f930"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2d/class_kratos_1_1_steady_state_pw_interface_element.html#a1f94cd2928029348817f2af57526f930">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;ThisNodes, PropertiesType::Pointer pProperties) const override</td></tr>
+<tr class="memdesc:a1f94cd2928029348817f2af57526f930"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../db/d2d/class_kratos_1_1_steady_state_pw_interface_element.html#a1f94cd2928029348817f2af57526f930">More...</a><br /></td></tr>
 <tr class="separator:a1f94cd2928029348817f2af57526f930"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64eaaf38801b53e531af419af41c10e9"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2d/class_kratos_1_1_steady_state_pw_interface_element.html#a64eaaf38801b53e531af419af41c10e9">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeom, PropertiesType::Pointer pProperties) const override</td></tr>
 <tr class="memdesc:a64eaaf38801b53e531af419af41c10e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../db/d2d/class_kratos_1_1_steady_state_pw_interface_element.html#a64eaaf38801b53e531af419af41c10e9">More...</a><br /></td></tr>
@@ -1295,8 +1296,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 </div>
 </div>
 <a id="aa5a86051d7f28f5e0ded3f3b98a73aca"></a>
@@ -1751,8 +1751,18 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
+<p>It creates a new element pointer. </p>
+<p>ELEMENTS inherited from this class have to implement next Create and Clone methods: MANDATORY </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NewId</td><td>the ID of the new element </td></tr>
+    <tr><td class="paramname">ThisNodes</td><td>the nodes of the new element </td></tr>
+    <tr><td class="paramname">pProperties</td><td>the properties assigned to the new element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a Pointer to the new element </dd></dl>
+
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9d3fcc73aa43b460715466d283803b61">Kratos::Element</a>.</p>
 
 <p>Reimplemented in <a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a0189592f0d723968e7f7738d72e8e198">Kratos::SteadyStatePwPipingElement&lt; TDim, TNumNodes &gt;</a>, <a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a0189592f0d723968e7f7738d72e8e198">Kratos::SteadyStatePwPipingElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a0189592f0d723968e7f7738d72e8e198">Kratos::SteadyStatePwPipingElement&lt; 3, 6 &gt;</a>, and <a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a0189592f0d723968e7f7738d72e8e198">Kratos::SteadyStatePwPipingElement&lt; 2, 4 &gt;</a>.</p>
@@ -1813,7 +1823,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 8 2024 04:01:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Oct 9 2024 03:57:36 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

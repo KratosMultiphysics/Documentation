@@ -273,6 +273,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a452dede80e245b153f59cad4b38acc89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a452dede80e245b153f59cad4b38acc89">~UndrainedUPwSmallStrainElement</a> ()=default</td></tr>
 <tr class="separator:a452dede80e245b153f59cad4b38acc89"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a42c41a2b14e79444636e72a74c40727c"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a42c41a2b14e79444636e72a74c40727c">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;ThisNodes, PropertiesType::Pointer pProperties) const override</td></tr>
+<tr class="memdesc:a42c41a2b14e79444636e72a74c40727c"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#a42c41a2b14e79444636e72a74c40727c">More...</a><br /></td></tr>
 <tr class="separator:a42c41a2b14e79444636e72a74c40727c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf31f6711e6438ef0f09b7728a90f981"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#acf31f6711e6438ef0f09b7728a90f981">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeom, PropertiesType::Pointer pProperties) const override</td></tr>
 <tr class="memdesc:acf31f6711e6438ef0f09b7728a90f981"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../d0/ddd/class_kratos_1_1_undrained_u_pw_small_strain_element.html#acf31f6711e6438ef0f09b7728a90f981">More...</a><br /></td></tr>
@@ -1151,8 +1152,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 </div>
 </div>
 <a id="a14be2d335dad9082cd8e189a37d1a0f6"></a>
@@ -1364,8 +1364,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><div class="memdoc">
 
 <p>Member Variables. </p>
-<hr  />
- 
+
 <p>Reimplemented from <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a67ea8f288e2f6b400576c2e8617f2c00">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>.</p>
 
 </div>
@@ -1550,8 +1549,18 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
+<p>It creates a new element pointer. </p>
+<p>ELEMENTS inherited from this class have to implement next Create and Clone methods: MANDATORY </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NewId</td><td>the ID of the new element </td></tr>
+    <tr><td class="paramname">ThisNodes</td><td>the nodes of the new element </td></tr>
+    <tr><td class="paramname">pProperties</td><td>the properties assigned to the new element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a Pointer to the new element </dd></dl>
+
 <p>Reimplemented from <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#aa80de4f3d245023273f543d7c7e3217a">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>.</p>
 
 </div>
@@ -1663,9 +1672,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><div class="memdoc">
 
 <p>Serialization. </p>
-<hr  />
-<hr  />
- 
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -1675,7 +1682,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 8 2024 04:01:40 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Oct 9 2024 03:57:39 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

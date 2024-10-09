@@ -274,6 +274,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6c183c51640c7037efca091051742840"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#a6c183c51640c7037efca091051742840">~UPwSmallStrainFICElement</a> ()=default</td></tr>
 <tr class="separator:a6c183c51640c7037efca091051742840"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a90b630c0492b5c097c24c62c3bd1f9e0"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#a90b630c0492b5c097c24c62c3bd1f9e0">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;ThisNodes, PropertiesType::Pointer pProperties) const override</td></tr>
+<tr class="memdesc:a90b630c0492b5c097c24c62c3bd1f9e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#a90b630c0492b5c097c24c62c3bd1f9e0">More...</a><br /></td></tr>
 <tr class="separator:a90b630c0492b5c097c24c62c3bd1f9e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3dfcf4cac99accfa10ee29969754002d"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#a3dfcf4cac99accfa10ee29969754002d">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeom, PropertiesType::Pointer pProperties) const override</td></tr>
 <tr class="memdesc:a3dfcf4cac99accfa10ee29969754002d"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../d5/da7/class_kratos_1_1_u_pw_small_strain_f_i_c_element.html#a3dfcf4cac99accfa10ee29969754002d">More...</a><br /></td></tr>
@@ -1225,8 +1226,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 </div>
 </div>
 <a id="a9134322ded549dc3f090c44ff02be7f1"></a>
@@ -2758,8 +2758,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 </div>
 </div>
 <a id="aaddfe1797924f5f8a633263135144336"></a>
@@ -2898,8 +2897,18 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
+<p>It creates a new element pointer. </p>
+<p>ELEMENTS inherited from this class have to implement next Create and Clone methods: MANDATORY </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NewId</td><td>the ID of the new element </td></tr>
+    <tr><td class="paramname">ThisNodes</td><td>the nodes of the new element </td></tr>
+    <tr><td class="paramname">pProperties</td><td>the properties assigned to the new element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a Pointer to the new element </dd></dl>
+
 <p>Reimplemented from <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#aa80de4f3d245023273f543d7c7e3217a">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>.</p>
 
 <p>Reimplemented in <a class="el" href="../../d8/d18/class_kratos_1_1_u_pw_updated_lagrangian_f_i_c_element.html#ab521635550a6d1255feb4eed417699f5">Kratos::UPwUpdatedLagrangianFICElement&lt; TDim, TNumNodes &gt;</a>, <a class="el" href="../../d8/d18/class_kratos_1_1_u_pw_updated_lagrangian_f_i_c_element.html#ab521635550a6d1255feb4eed417699f5">Kratos::UPwUpdatedLagrangianFICElement&lt; 2, 3 &gt;</a>, <a class="el" href="../../d8/d18/class_kratos_1_1_u_pw_updated_lagrangian_f_i_c_element.html#ab521635550a6d1255feb4eed417699f5">Kratos::UPwUpdatedLagrangianFICElement&lt; 3, 8 &gt;</a>, <a class="el" href="../../d8/d18/class_kratos_1_1_u_pw_updated_lagrangian_f_i_c_element.html#ab521635550a6d1255feb4eed417699f5">Kratos::UPwUpdatedLagrangianFICElement&lt; 3, 4 &gt;</a>, and <a class="el" href="../../d8/d18/class_kratos_1_1_u_pw_updated_lagrangian_f_i_c_element.html#ab521635550a6d1255feb4eed417699f5">Kratos::UPwUpdatedLagrangianFICElement&lt; 2, 4 &gt;</a>.</p>
@@ -3618,8 +3627,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+<p>ELEMENTS inherited from this class must implement next methods InitializeSolutionStep, FinalizeSolutionStep, InitializeNonLinearIteration, FinalizeNonLinearIteration if the element needs to perform any operation before and after the solution step if the element needs to perform any operation before and after the solution iteration these methods are: OPTIONAL this is called in the beginning of each solution step </p>
+
 <p>Reimplemented from <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a8b0c8f919026e2aceeed55d74866fdd2">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>.</p>
 
 </div>
@@ -3917,7 +3926,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 8 2024 04:01:39 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Oct 9 2024 03:57:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

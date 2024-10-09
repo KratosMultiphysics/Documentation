@@ -273,6 +273,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a579e1f4088a8d8ce2c46cdb0f8d4b42b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#a579e1f4088a8d8ce2c46cdb0f8d4b42b">~DrainedUPwSmallStrainElement</a> ()=default</td></tr>
 <tr class="separator:a579e1f4088a8d8ce2c46cdb0f8d4b42b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac41f61a2c9411639149fbe7ea69cfc62"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#ac41f61a2c9411639149fbe7ea69cfc62">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">NodesArrayType</a> const &amp;ThisNodes, PropertiesType::Pointer pProperties) const override</td></tr>
+<tr class="memdesc:ac41f61a2c9411639149fbe7ea69cfc62"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#ac41f61a2c9411639149fbe7ea69cfc62">More...</a><br /></td></tr>
 <tr class="separator:ac41f61a2c9411639149fbe7ea69cfc62"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3a69a53cf3edf7757461bd1bb81e1c9"><td class="memItemLeft" align="right" valign="top">Element::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#ad3a69a53cf3edf7757461bd1bb81e1c9">Create</a> (<a class="el" href="../../d9/d4f/class_kratos_1_1_flags.html#aea919baba86193ae475d3cdb836b925c">IndexType</a> NewId, GeometryType::Pointer pGeom, PropertiesType::Pointer pProperties) const override</td></tr>
 <tr class="memdesc:ad3a69a53cf3edf7757461bd1bb81e1c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">It creates a new element pointer.  <a href="../../db/d66/class_kratos_1_1_drained_u_pw_small_strain_element.html#ad3a69a53cf3edf7757461bd1bb81e1c9">More...</a><br /></td></tr>
@@ -1161,8 +1162,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
 </div>
 </div>
 <a id="a6fd1c6afa824b9f24ddd162b13426d47"></a>
@@ -1374,8 +1374,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><div class="memdoc">
 
 <p>Member Variables. </p>
-<hr  />
- 
+
 <p>Reimplemented from <a class="el" href="../../db/dd4/class_kratos_1_1_u_pw_small_strain_element.html#a67ea8f288e2f6b400576c2e8617f2c00">Kratos::UPwSmallStrainElement&lt; TDim, TNumNodes &gt;</a>.</p>
 
 </div>
@@ -1560,8 +1559,18 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+
+<p>It creates a new element pointer. </p>
+<p>ELEMENTS inherited from this class have to implement next Create and Clone methods: MANDATORY </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">NewId</td><td>the ID of the new element </td></tr>
+    <tr><td class="paramname">ThisNodes</td><td>the nodes of the new element </td></tr>
+    <tr><td class="paramname">pProperties</td><td>the properties assigned to the new element </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>a Pointer to the new element </dd></dl>
+
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a9d3fcc73aa43b460715466d283803b61">Kratos::Element</a>.</p>
 
 </div>
@@ -1591,8 +1600,8 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<hr  />
- 
+<p>ELEMENTS inherited from this class must implement next methods InitializeSolutionStep, FinalizeSolutionStep, InitializeNonLinearIteration, FinalizeNonLinearIteration if the element needs to perform any operation before and after the solution step if the element needs to perform any operation before and after the solution iteration these methods are: OPTIONAL this is called in the beginning of each solution step </p>
+
 <p>Reimplemented from <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a1513b5dd792b7b7e951cfd10f2fc1808">Kratos::Element</a>.</p>
 
 </div>
@@ -1641,9 +1650,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><div class="memdoc">
 
 <p>Serialization. </p>
-<hr  />
-<hr  />
- 
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -1653,7 +1660,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 8 2024 03:57:27 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Oct 9 2024 03:53:22 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
