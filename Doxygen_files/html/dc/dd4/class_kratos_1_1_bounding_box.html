@@ -132,6 +132,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a486e1e13dd002e58f6760c37e0f6b8f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd4/class_kratos_1_1_bounding_box.html#a486e1e13dd002e58f6760c37e0f6b8f5">Extend</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Margin)</td></tr>
 <tr class="memdesc:a486e1e13dd002e58f6760c37e0f6b8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extends the bounding box by adding a margin to its dimensions.  <a href="../../dc/dd4/class_kratos_1_1_bounding_box.html#a486e1e13dd002e58f6760c37e0f6b8f5">More...</a><br /></td></tr>
 <tr class="separator:a486e1e13dd002e58f6760c37e0f6b8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b93218b5dc917ab4a5c3053abc743d2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd4/class_kratos_1_1_bounding_box.html#a7b93218b5dc917ab4a5c3053abc743d2">IsInside</a> (const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;rPoint, const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> Tolerance=std::numeric_limits&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt;::epsilon()) const</td></tr>
+<tr class="memdesc:a7b93218b5dc917ab4a5c3053abc743d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a point is inside the bounding box with tolerance.  <a href="../../dc/dd4/class_kratos_1_1_bounding_box.html#a7b93218b5dc917ab4a5c3053abc743d2">More...</a><br /></td></tr>
+<tr class="separator:a7b93218b5dc917ab4a5c3053abc743d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Access</div></td></tr>
 <tr class="memitem:a8e1a3dc94d466b218fce20591c70514f"><td class="memItemLeft" align="right" valign="top">TPointType &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../dc/dd4/class_kratos_1_1_bounding_box.html#a8e1a3dc94d466b218fce20591c70514f">GetMinPoint</a> ()</td></tr>
 <tr class="memdesc:a8e1a3dc94d466b218fce20591c70514f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a reference to the minimum point.  <a href="../../dc/dd4/class_kratos_1_1_bounding_box.html#a8e1a3dc94d466b218fce20591c70514f">More...</a><br /></td></tr>
@@ -580,6 +583,54 @@ template&lt;typename TPointType &gt; </div>
 
 </div>
 </div>
+<a id="a7b93218b5dc917ab4a5c3053abc743d2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b93218b5dc917ab4a5c3053abc743d2">&#9670;&nbsp;</a></span>IsInside()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename TPointType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> <a class="el" href="../../dc/dd4/class_kratos_1_1_bounding_box.html">Kratos::BoundingBox</a>&lt; TPointType &gt;::IsInside </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rPoint</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td>
+          <td class="paramname"><em>Tolerance</em> = <code>std::numeric_limits&lt;<a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&gt;::epsilon()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Checks if a point is inside the bounding box with tolerance. </p>
+<p>This function checks if a given point is inside the bounding box defined by the minimum and maximum points. It returns true if the point is inside the bounding box within the given tolerance, and false otherwise. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rPoint</td><td>The point to be checked. </td></tr>
+    <tr><td class="paramname">Tolerance</td><td>A tolerance value to allow for slight inaccuracies (default is std::numeric_limits&lt;double&gt;::epsilon()). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the point is inside the bounding box within the given tolerance, false otherwise. </dd></dl>
+
+</div>
+</div>
 <a id="a16fd66af701a4c1badf0e95ed7680562"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a16fd66af701a4c1badf0e95ed7680562">&#9670;&nbsp;</a></span>KRATOS_CLASS_POINTER_DEFINITION()</h2>
 
@@ -753,7 +804,7 @@ template&lt;typename TIteratorType &gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 9 2024 03:30:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Oct 10 2024 03:31:14 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
