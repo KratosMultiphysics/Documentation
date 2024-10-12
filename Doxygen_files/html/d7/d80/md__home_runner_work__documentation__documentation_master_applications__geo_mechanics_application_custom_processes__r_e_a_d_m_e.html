@@ -77,9 +77,10 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p>This folder contains the custom processes that are used in the <a class="el" href="../../d2/d22/namespace_geo_mechanics_application.html">GeoMechanicsApplication</a>. Processes are commands that can be executed during several stages of a calculation. In the <a class="el" href="../../d2/d22/namespace_geo_mechanics_application.html">GeoMechanicsApplication</a>, their main use is to apply boundary conditions and/or constraints , but there are more specific examples (e.g. the K0 procedure, nodal extrapolation, or (de)activation of certain parts of the model). Since this effort is a work in progress, not all processes are documented yet. If you have any questions, please contact the maintainers (@KratosMultiphysics/geomechanics on GitHub).</p>
 <p>Documented processes:</p><ul>
-<li>$c-\phi$ reduction process</li>
+<li><a href="../../#c-phi-reduction-process">$c-\phi$ reduction process</a></li>
 <li><a href="../../#extrapolation-of-integration-values-to-nodes">GeoExtrapolateIntegrationPointValuesToNodesProcess</a></li>
 <li><a href="../../#reset-displacement-process">ResetDisplacementProcess</a></li>
+<li><a href="../../#K_0-procedure-process">$K_0$ procedure process</a></li>
 </ul>
 <h1>$c-\phi$ reduction process</h1>
 <p>For the assessment of a safety factor to characterize slope stability, a Mohr-Coulomb material based $c-\phi$ reduction scheme is implemented. The apex of the Mohr-Coulomb cone shaped failure surface is kept in the same position, therefore both $c$ and $\tan \phi$ will diminish at the same rate.</p>
@@ -122,13 +123,59 @@ $(function() {
 <li>The input type of the model can only be "rest" (short for restarted), to ensure that the state of the model is retained from the previous stage. The reason for this, is that the constitutive laws are used at the start of a state to calculate the initial stresses based on the history. If the model is not 'restarted', the constitutive laws will be cleared and the initial stresses can not be calculated correctly.</li>
 <li>The ConstitutiveLaw used in the elements this process is applied to should use the <code>InitialState</code> to apply the initial stresses to the calculated stresses.</li>
 </ol>
-<h1>References</h1>
+<h1>$K_0$ procedure process</h1>
+<p>For the initialization of an in-situ stress field, the $K_0$ procedure derives the horizontal effective stresses from a field of vertical effective stresses. Pre-requisite is a computed stress field with the desired normal effective stresses in the direction indicated with "K0_MAIN_DIRECTION". The normal effective stress in "K0_MAIN_DIRECTION" remains as is. Effective normal stresses in the other two directions are affected by the $K_0$ value, all shear stresses are erased. A specialized method for computation of the stress field with normal effective stresses is steered with "use_standard_procedure". When set to true, the material used for the modelpart used for the $K_0$ procedure process is changed to an incremental elastic material with constitutive tensor that has only zero off-diagonal terms and zero shear terms. When the stress computation is completed, the original constitutive law is restored.</p>
+<p>Depending on the given input parameters, the following scheme is adapted for computation of the $K_0$ value. $K_0^{nc}$ is gotten from either "K0_NC" the material input file or by computation from input of "INDEX_OF_UMAT_PHI_PARAMETER" and "UMAT_PARAMETERS":</p>
+<p>$$K_0^{nc} = 1.0 - \sin \phi$$</p>
+<p>When the overconsolidation ratio ("OCR") and optionally the unloading-reloading Poisson's ratio $\nu_{ur}$ ("POISSON_UNLOADING_RELOADING") are supplied, the normal consolidation value $K_0^{nc}$ is modified:</p>
+<p>$$K_0 = OCR.K_0^{nc} + \frac{\nu_{ur}}{1 - \nu_{ur}} ( OCR - 1 )$$</p>
+<p><img src="../../initial_effective_stress_tensor.png" alt="Initial effective stress tensor" class="inline"/></p>
+<p>Alternatively, when the pre-overburden pressure "POP" is specified, the initial stress tensor becomes:</p>
+<p><img src="../../initial_effective_stress_tensor_with_POP.png" alt="Initial effective stress tensor with POP" class="inline"/></p>
+<p>When the optional unloading-reloading Poisson's ratio is omitted, a default value $\nu_{ur} = 0$ is used such that the correction term drops to 0.</p>
+<h2>Note:</h2>
+<p>After the stress adaptation by the $K_0$ procedure, the stress state may not be in equilibrium with the present external forces anymore. Equilibrium may be reached by performing a step without applying additional load. Reaching equilibrium may then be accomplished by movement.</p>
+<h2>Usage</h2>
+<p>The process is defined as follows in "ProjectParameters.json" (also found in some of the <a href="../../../tests/test_k0_procedure_process">integration tests</a>). Without the addition of this process, no adaptation of the horizontal stresses takes place. </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;auxilliary_process_list&quot;: [</div>
+<div class="line">    {</div>
+<div class="line">      &quot;python_module&quot;: &quot;apply_k0_procedure_process&quot;,</div>
+<div class="line">      &quot;kratos_module&quot;: &quot;KratosMultiphysics.GeoMechanicsApplication&quot;,</div>
+<div class="line">      &quot;process_name&quot;: &quot;ApplyK0ProcedureProcess&quot;,</div>
+<div class="line">      &quot;Parameters&quot;: {</div>
+<div class="line">        &quot;model_part_name&quot;: &quot;PorousDomain.porous_computational_model_part&quot;,</div>
+<div class="line">        &quot;variable_name&quot;: &quot;CAUCHY_STRESS_TENSOR&quot;,</div>
+<div class="line">        &quot;use_standard_procedure&quot;: true</div>
+<div class="line">      }</div>
+<div class="line">    }</div>
+<div class="line">  ]</div>
+<div class="line">}</div>
+</div><!-- fragment --><p> The "apply_k0_procedure_process" needs the following material parameter input to be added in the "MaterialParameters.json". </p><div class="fragment"><div class="line">{</div>
+<div class="line">  &quot;Variables&quot;: {</div>
+<div class="line">    &quot;K0_MAIN_DIRECTION&quot;:           1,</div>
+<div class="line">    &quot;K0_NC&quot;:                       0.6,</div>
+<div class="line">    &quot;UDSM_NAME&quot;                :  &quot;MohrCoulomb64.dll&quot;,</div>
+<div class="line">    &quot;IS_FORTRAN_UDSM&quot;          :  true,</div>
+<div class="line">    &quot;NUMBER_OF_UMAT_PARAMETERS&quot;:  6,</div>
+<div class="line">    &quot;INDEX_OF_UMAT_PHI_PARAMETER&quot;: 4,</div>
+<div class="line">    &quot;UMAT_PARAMETERS&quot;          :  [30000000,</div>
+<div class="line">                                   0.2,</div>
+<div class="line">                                   1000.0,</div>
+<div class="line">                                   30,</div>
+<div class="line">                                   0.0,</div>
+<div class="line">                                   1000],</div>
+<div class="line">    &quot;OCR&quot;:                         1.4,</div>
+<div class="line">    &quot;POISSON_UNLOADING_RELOADING&quot;: 0.35,</div>
+<div class="line">    &quot;POP&quot;:                         800.0</div>
+<div class="line">  },</div>
+<div class="line">}</div>
+</div><!-- fragment --><h1>References</h1>
 <p><a class="anchor" id="1"></a>[1] Brinkgreve, R.B.J., Bakker, H.L., 1991. Non-linear finite element analysis of safety factors, Computer Methods and Advances in Geomechanics, Beer, Booker &amp; Carterr (eds), Balkema, Rotterdam. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 11 2024 03:26:30 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Oct 12 2024 03:23:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
