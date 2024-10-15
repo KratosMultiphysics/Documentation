@@ -82,7 +82,8 @@ $(function() {
 <div class="title">add_geometrical_utilities_to_python.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &quot;<a class="el" href="../../dd/d62/define__python_8h_source.html">includes/define_python.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &lt;pybind11/numpy.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../dd/d62/define__python_8h_source.html">includes/define_python.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../da/d42/process_8h_source.html">processes/process.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../dd/d62/add__geometrical__utilities__to__python_8h_source.html">python/add_geometrical_utilities_to_python.h</a>&quot;</code><br />
 <code>#include &quot;<a class="el" href="../../d9/db3/normal__calculation__utils_8h_source.html">utilities/normal_calculation_utils.h</a>&quot;</code><br />
@@ -121,6 +122,9 @@ Namespaces</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a86dd84a56924aae005f2767f50fdd8c1"><td class="memTemplParams" colspan="2">template&lt;std::size_t TDim&gt; </td></tr>
+<tr class="memitem:a86dd84a56924aae005f2767f50fdd8c1"><td class="memTemplItemLeft" align="right" valign="top">std::tuple&lt; pybind11::array_t&lt; int &gt;, pybind11::array_t&lt; int &gt;, pybind11::array_t&lt; double &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#a86dd84a56924aae005f2767f50fdd8c1">Kratos::Python::VectorizedFindHelper</a> (BinBasedFastPointLocator&lt; TDim &gt; &amp;rSelf, const Matrix &amp;rCoords)</td></tr>
+<tr class="separator:a86dd84a56924aae005f2767f50fdd8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a573ebc9261f04dc5bf0f009e5fef04b6"><td class="memTemplParams" colspan="2">template&lt;std::size_t TDim&gt; </td></tr>
 <tr class="memitem:a573ebc9261f04dc5bf0f009e5fef04b6"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#a573ebc9261f04dc5bf0f009e5fef04b6">Kratos::Python::InterpolateMeshVariableToSkinDouble</a> (EmbeddedSkinUtility&lt; TDim &gt; &amp;rEmbeddedSkinUtility, const Variable&lt; double &gt; &amp;rVariable, const Variable&lt; double &gt; &amp;rEmbeddedVariable)</td></tr>
 <tr class="separator:a573ebc9261f04dc5bf0f009e5fef04b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,7 +147,7 @@ Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 14 2024 03:30:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Oct 15 2024 03:28:42 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
