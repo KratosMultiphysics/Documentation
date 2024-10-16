@@ -450,7 +450,7 @@ Protected Attributes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Operations</h2></td></tr>
 <tr class="memitem:ad002a13d928ce7e67e4ec33eb0d0837a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcf/class_kratos_1_1_ann_prom_least_squares_petrov_galerkin_r_o_m_builder_and_solver.html#ad002a13d928ce7e67e4ec33eb0d0837a">SetUpDofSet</a> (typename TSchemeType::Pointer pScheme, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart) override</td></tr>
-<tr class="memdesc:ad002a13d928ce7e67e4ec33eb0d0837a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the list of the DofSets involved in the problem by "asking" to each element and condition its Dofs.  <a href="../../d7/dcf/class_kratos_1_1_ann_prom_least_squares_petrov_galerkin_r_o_m_builder_and_solver.html#ad002a13d928ce7e67e4ec33eb0d0837a">More...</a><br /></td></tr>
+<tr class="memdesc:ad002a13d928ce7e67e4ec33eb0d0837a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the list of the DofSets involved in the problem by calling the corresponding utility.  <a href="../../d7/dcf/class_kratos_1_1_ann_prom_least_squares_petrov_galerkin_r_o_m_builder_and_solver.html#ad002a13d928ce7e67e4ec33eb0d0837a">More...</a><br /></td></tr>
 <tr class="separator:ad002a13d928ce7e67e4ec33eb0d0837a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab6c11719e31bd1ed7fbbc9b375f99f3f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/dcf/class_kratos_1_1_ann_prom_least_squares_petrov_galerkin_r_o_m_builder_and_solver.html#ab6c11719e31bd1ed7fbbc9b375f99f3f">BuildAndProjectROM</a> (typename TSchemeType::Pointer pScheme, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../d2/d88/class_kratos_1_1_builder_and_solver.html#a4a7ec09f7f58df4a8140d57a7c0437d0">TSystemMatrixType</a> &amp;rA, <a class="el" href="../../d2/d88/class_kratos_1_1_builder_and_solver.html#a2cd11ba264c17998632c16118beb9edf">TSystemVectorType</a> &amp;rb, <a class="el" href="../../d2/d88/class_kratos_1_1_builder_and_solver.html#a2cd11ba264c17998632c16118beb9edf">TSystemVectorType</a> &amp;rDx) override</td></tr>
 <tr class="separator:ab6c11719e31bd1ed7fbbc9b375f99f3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1704,18 +1704,14 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </table>
 </div><div class="memdoc">
 
-<p>Builds the list of the DofSets involved in the problem by "asking" to each element and condition its Dofs. </p>
-<p>The list of dofs is stores inside the <a class="el" href="../../d2/d88/class_kratos_1_1_builder_and_solver.html" title="Current class provides an implementation for the base builder and solving operations.">BuilderAndSolver</a> as it is closely connected to the way the matrix and RHS are built </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Builds the list of the DofSets involved in the problem by calling the corresponding utility. </p>
+<p>The list of dofs is stored inside the <a class="el" href="../../d2/d88/class_kratos_1_1_builder_and_solver.html" title="Current class provides an implementation for the base builder and solving operations.">BuilderAndSolver</a> as it is closely connected to the way the matrix and RHS are built </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pScheme</td><td>The integration scheme considered </td></tr>
     <tr><td class="paramname">rModelPart</td><td>The model part of the problem to solve </td></tr>
   </table>
   </dd>
 </dl>
-<p>Here we declare three sets.</p><ul>
-<li>The global set: Contains all the DoF of the system</li>
-<li>The slave set: The DoF that are not going to be solved, due to MPC formulation</li>
-</ul>
 
 <p>Reimplemented from <a class="el" href="../../d3/d4c/class_kratos_1_1_ann_prom_global_r_o_m_builder_and_solver.html#ab1b20216240d0319786b12cb5f812671">Kratos::AnnPromGlobalROMBuilderAndSolver&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>.</p>
 
@@ -1851,7 +1847,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 15 2024 04:08:03 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Oct 16 2024 04:10:05 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

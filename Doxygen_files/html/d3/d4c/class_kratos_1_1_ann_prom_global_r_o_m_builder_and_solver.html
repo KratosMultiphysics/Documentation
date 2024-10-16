@@ -390,7 +390,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memdesc:a16a5e051f8e531796cfae2dad1416d82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create method.  <a href="../../d3/d4c/class_kratos_1_1_ann_prom_global_r_o_m_builder_and_solver.html#a16a5e051f8e531796cfae2dad1416d82">More...</a><br /></td></tr>
 <tr class="separator:a16a5e051f8e531796cfae2dad1416d82"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1b20216240d0319786b12cb5f812671"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4c/class_kratos_1_1_ann_prom_global_r_o_m_builder_and_solver.html#ab1b20216240d0319786b12cb5f812671">SetUpDofSet</a> (typename TSchemeType::Pointer pScheme, <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart) override</td></tr>
-<tr class="memdesc:ab1b20216240d0319786b12cb5f812671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the list of the DofSets involved in the problem by "asking" to each element and condition its Dofs.  <a href="../../d3/d4c/class_kratos_1_1_ann_prom_global_r_o_m_builder_and_solver.html#ab1b20216240d0319786b12cb5f812671">More...</a><br /></td></tr>
+<tr class="memdesc:ab1b20216240d0319786b12cb5f812671"><td class="mdescLeft">&#160;</td><td class="mdescRight">Builds the list of the DofSets involved in the problem by calling the corresponding utility.  <a href="../../d3/d4c/class_kratos_1_1_ann_prom_global_r_o_m_builder_and_solver.html#ab1b20216240d0319786b12cb5f812671">More...</a><br /></td></tr>
 <tr class="separator:ab1b20216240d0319786b12cb5f812671"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af226ec4cb15bd42046aec0e0f7915189"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d3/d4c/class_kratos_1_1_ann_prom_global_r_o_m_builder_and_solver.html#af226ec4cb15bd42046aec0e0f7915189">SetUpSystem</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart) override</td></tr>
 <tr class="memdesc:af226ec4cb15bd42046aec0e0f7915189"><td class="mdescLeft">&#160;</td><td class="mdescRight">Organises the dofset in order to speed up the building phase.  <a href="../../d3/d4c/class_kratos_1_1_ann_prom_global_r_o_m_builder_and_solver.html#af226ec4cb15bd42046aec0e0f7915189">More...</a><br /></td></tr>
@@ -2248,18 +2248,14 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </table>
 </div><div class="memdoc">
 
-<p>Builds the list of the DofSets involved in the problem by "asking" to each element and condition its Dofs. </p>
-<p>The list of dofs is stores inside the <a class="el" href="../../d2/d88/class_kratos_1_1_builder_and_solver.html" title="Current class provides an implementation for the base builder and solving operations.">BuilderAndSolver</a> as it is closely connected to the way the matrix and RHS are built </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Builds the list of the DofSets involved in the problem by calling the corresponding utility. </p>
+<p>The list of dofs is stored inside the <a class="el" href="../../d2/d88/class_kratos_1_1_builder_and_solver.html" title="Current class provides an implementation for the base builder and solving operations.">BuilderAndSolver</a> as it is closely connected to the way the matrix and RHS are built </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pScheme</td><td>The integration scheme considered </td></tr>
     <tr><td class="paramname">rModelPart</td><td>The model part of the problem to solve </td></tr>
   </table>
   </dd>
 </dl>
-<p>Here we declare three sets.</p><ul>
-<li>The global set: Contains all the DoF of the system</li>
-<li>The slave set: The DoF that are not going to be solved, due to MPC formulation</li>
-</ul>
 
 <p>Reimplemented from <a class="el" href="../../d9/d26/class_kratos_1_1_residual_based_block_builder_and_solver.html#a6d44bd0b58393337433588aefbc84fde">Kratos::ResidualBasedBlockBuilderAndSolver&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>.</p>
 
@@ -2583,7 +2579,7 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 15 2024 04:08:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Oct 16 2024 04:10:03 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
