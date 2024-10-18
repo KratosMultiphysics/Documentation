@@ -719,8 +719,8 @@ $(function() {
 <div class="line"><a name="l00710"></a><span class="lineno">  710</span>&#160;    {</div>
 <div class="line"><a name="l00711"></a><span class="lineno">  711</span>&#160;        <span class="keyword">const</span> std::size_t system_size = rA.size1();</div>
 <div class="line"><a name="l00712"></a><span class="lineno">  712</span>&#160; </div>
-<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span>* Avalues = rA.value_data().begin();</div>
-<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        <span class="keyword">const</span> std::size_t* Arow_indices = rA.index1_data().begin();</div>
+<div class="line"><a name="l00713"></a><span class="lineno">  713</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Avalues = rA.value_data();</div>
+<div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Arow_indices = rA.index1_data();</div>
 <div class="line"><a name="l00715"></a><span class="lineno">  715</span>&#160; </div>
 <div class="line"><a name="l00716"></a><span class="lineno">  716</span>&#160;        <span class="comment">// Define  zero value tolerance</span></div>
 <div class="line"><a name="l00717"></a><span class="lineno">  717</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> zero_tolerance = std::numeric_limits&lt;double&gt;::epsilon();</div>
@@ -775,9 +775,9 @@ $(function() {
 <div class="line"><a name="l00773"></a><span class="lineno">  773</span>&#160; </div>
 <div class="line"><a name="l00779"></a><span class="lineno"><a class="line" href="../../d4/d69/class_kratos_1_1_ublas_space.html#ad42b8610ddd21b444a3465213e89430b">  779</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#ad42b8610ddd21b444a3465213e89430b">GetDiagonalNorm</a>(<span class="keyword">const</span> <a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#ac57268de6f0e669adf029d76880a5a56">MatrixType</a>&amp; rA)</div>
 <div class="line"><a name="l00780"></a><span class="lineno">  780</span>&#160;    {</div>
-<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span>* Avalues = rA.value_data().begin();</div>
-<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;        <span class="keyword">const</span> std::size_t* Arow_indices = rA.index1_data().begin();</div>
-<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;        <span class="keyword">const</span> std::size_t* Acol_indices = rA.index2_data().begin();</div>
+<div class="line"><a name="l00781"></a><span class="lineno">  781</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Avalues = rA.value_data();</div>
+<div class="line"><a name="l00782"></a><span class="lineno">  782</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Arow_indices = rA.index1_data();</div>
+<div class="line"><a name="l00783"></a><span class="lineno">  783</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Acol_indices = rA.index2_data();</div>
 <div class="line"><a name="l00784"></a><span class="lineno">  784</span>&#160; </div>
 <div class="line"><a name="l00785"></a><span class="lineno">  785</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> diagonal_norm = <a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html">IndexPartition&lt;std::size_t&gt;</a>(<a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#a487f47451d3d6a201c658c6d7c0097cb">Size1</a>(rA)).<a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html#af1ce67064923939c2a8a0172cdb5e344">for_each</a>&lt;<a class="code" href="../../df/dfe/class_kratos_1_1_sum_reduction.html">SumReduction&lt;double&gt;</a>&gt;([&amp;](std::size_t <a class="code" href="../../d4/d9b/namespacehdf5__io__tools.html#a62cd2a22a5b2e26d9d65b94cf9e502d7">Index</a>){</div>
 <div class="line"><a name="l00786"></a><span class="lineno">  786</span>&#160;            <span class="keyword">const</span> std::size_t col_begin = Arow_indices[<a class="code" href="../../d4/d9b/namespacehdf5__io__tools.html#a62cd2a22a5b2e26d9d65b94cf9e502d7">Index</a>];</div>
@@ -800,9 +800,9 @@ $(function() {
 <div class="line"><a name="l00808"></a><span class="lineno">  808</span>&#160; </div>
 <div class="line"><a name="l00814"></a><span class="lineno"><a class="line" href="../../d4/d69/class_kratos_1_1_ublas_space.html#adba2b0fbc7399c859322130a341b9c90">  814</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#adba2b0fbc7399c859322130a341b9c90">GetMaxDiagonal</a>(<span class="keyword">const</span> <a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#ac57268de6f0e669adf029d76880a5a56">MatrixType</a>&amp; rA)</div>
 <div class="line"><a name="l00815"></a><span class="lineno">  815</span>&#160;    {</div>
-<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span>* Avalues = rA.value_data().begin();</div>
-<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        <span class="keyword">const</span> std::size_t* Arow_indices = rA.index1_data().begin();</div>
-<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;        <span class="keyword">const</span> std::size_t* Acol_indices = rA.index2_data().begin();</div>
+<div class="line"><a name="l00816"></a><span class="lineno">  816</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Avalues = rA.value_data();</div>
+<div class="line"><a name="l00817"></a><span class="lineno">  817</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Arow_indices = rA.index1_data();</div>
+<div class="line"><a name="l00818"></a><span class="lineno">  818</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Acol_indices = rA.index2_data();</div>
 <div class="line"><a name="l00819"></a><span class="lineno">  819</span>&#160; </div>
 <div class="line"><a name="l00820"></a><span class="lineno">  820</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html">IndexPartition&lt;std::size_t&gt;</a>(<a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#a487f47451d3d6a201c658c6d7c0097cb">Size1</a>(rA)).<a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html#af1ce67064923939c2a8a0172cdb5e344">for_each</a>&lt;<a class="code" href="../../dd/db6/class_kratos_1_1_max_reduction.html">MaxReduction&lt;double&gt;</a>&gt;([&amp;](std::size_t <a class="code" href="../../d4/d9b/namespacehdf5__io__tools.html#a62cd2a22a5b2e26d9d65b94cf9e502d7">Index</a>){</div>
 <div class="line"><a name="l00821"></a><span class="lineno">  821</span>&#160;            <span class="keyword">const</span> std::size_t col_begin = Arow_indices[<a class="code" href="../../d4/d9b/namespacehdf5__io__tools.html#a62cd2a22a5b2e26d9d65b94cf9e502d7">Index</a>];</div>
@@ -818,9 +818,9 @@ $(function() {
 <div class="line"><a name="l00831"></a><span class="lineno">  831</span>&#160; </div>
 <div class="line"><a name="l00837"></a><span class="lineno"><a class="line" href="../../d4/d69/class_kratos_1_1_ublas_space.html#ad27085d6f9217487c88238a679ebac83">  837</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">double</span> <a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#ad27085d6f9217487c88238a679ebac83">GetMinDiagonal</a>(<span class="keyword">const</span> <a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#ac57268de6f0e669adf029d76880a5a56">MatrixType</a>&amp; rA)</div>
 <div class="line"><a name="l00838"></a><span class="lineno">  838</span>&#160;    {</div>
-<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span>* Avalues = rA.value_data().begin();</div>
-<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="keyword">const</span> std::size_t* Arow_indices = rA.index1_data().begin();</div>
-<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        <span class="keyword">const</span> std::size_t* Acol_indices = rA.index2_data().begin();</div>
+<div class="line"><a name="l00839"></a><span class="lineno">  839</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Avalues = rA.value_data();</div>
+<div class="line"><a name="l00840"></a><span class="lineno">  840</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Arow_indices = rA.index1_data();</div>
+<div class="line"><a name="l00841"></a><span class="lineno">  841</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span>&amp; Acol_indices = rA.index2_data();</div>
 <div class="line"><a name="l00842"></a><span class="lineno">  842</span>&#160; </div>
 <div class="line"><a name="l00843"></a><span class="lineno">  843</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html">IndexPartition&lt;std::size_t&gt;</a>(<a class="code" href="../../d4/d69/class_kratos_1_1_ublas_space.html#a487f47451d3d6a201c658c6d7c0097cb">Size1</a>(rA)).<a class="code" href="../../d9/d9b/class_kratos_1_1_index_partition.html#af1ce67064923939c2a8a0172cdb5e344">for_each</a>&lt;<a class="code" href="../../d2/d43/class_kratos_1_1_min_reduction.html">MinReduction&lt;double&gt;</a>&gt;([&amp;](std::size_t <a class="code" href="../../d4/d9b/namespacehdf5__io__tools.html#a62cd2a22a5b2e26d9d65b94cf9e502d7">Index</a>){</div>
 <div class="line"><a name="l00844"></a><span class="lineno">  844</span>&#160;            <span class="keyword">const</span> std::size_t col_begin = Arow_indices[<a class="code" href="../../d4/d9b/namespacehdf5__io__tools.html#a62cd2a22a5b2e26d9d65b94cf9e502d7">Index</a>];</div>
@@ -1144,7 +1144,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 17 2024 03:27:21 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Oct 18 2024 03:27:29 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
