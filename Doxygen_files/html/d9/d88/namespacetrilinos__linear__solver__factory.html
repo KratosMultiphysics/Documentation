@@ -81,7 +81,11 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a049e3c3d9f654790027ed4052ae0dfc6"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/namespacetrilinos__linear__solver__factory.html#a049e3c3d9f654790027ed4052ae0dfc6">ConstructSolver</a> (configuration)</td></tr>
+<tr class="memdesc:a049e3c3d9f654790027ed4052ae0dfc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs and returns a Trilinos linear solver based on the given configuration.  <a href="../../d9/d88/namespacetrilinos__linear__solver__factory.html#a049e3c3d9f654790027ed4052ae0dfc6">More...</a><br /></td></tr>
 <tr class="separator:a049e3c3d9f654790027ed4052ae0dfc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcb44fb1f5ec917be2ec63982c02613e"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d88/namespacetrilinos__linear__solver__factory.html#afcb44fb1f5ec917be2ec63982c02613e">CreateFastestAvailableDirectLinearSolver</a> ()</td></tr>
+<tr class="memdesc:afcb44fb1f5ec917be2ec63982c02613e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates and returns the fastest available direct linear solver, based on a predefined order and availability.  <a href="../../d9/d88/namespacetrilinos__linear__solver__factory.html#afcb44fb1f5ec917be2ec63982c02613e">More...</a><br /></td></tr>
+<tr class="separator:afcb44fb1f5ec917be2ec63982c02613e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a049e3c3d9f654790027ed4052ae0dfc6"></a>
@@ -100,12 +104,79 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Constructs and returns a Trilinos linear solver based on the given configuration. </p>
+<p>Args: configuration (KM.Parameters): The configuration parameters for the solver.</p>
+<p>Returns: KratosTrilinos.TrilinosLinearSolverFactory().Create: A Trilinos linear solver.</p>
+<p>Raises: Exception: If the input is not a <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> Parameters object.</p>
+<p>Example: solver = ConstructSolver(config) </p>
+
+</div>
+</div>
+<a id="afcb44fb1f5ec917be2ec63982c02613e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcb44fb1f5ec917be2ec63982c02613e">&#9670;&nbsp;</a></span>CreateFastestAvailableDirectLinearSolver()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def trilinos_linear_solver_factory.CreateFastestAvailableDirectLinearSolver </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Creates and returns the fastest available direct linear solver, based on a predefined order and availability. </p>
+<p>TODO: A proper study of speed must be done, particularly depending of system size would be interesting</p>
+<p>In Trilinos, the speed of direct solvers like MUMPS, SuperLU_DIST, KLU, and Basker can depend on various factors including the size and sparsity of the matrix, the architecture of the computer system, and the specific characteristics of the problem being solved. Below are some general observations about these solvers:</p>
+<ol type="1">
+<li>MUMPS (MUltifrontal Massively Parallel Sparse Direct Solver):</li>
+</ol>
+<ul>
+<li>Parallel solver, handles large problems well.</li>
+<li>Can be used on distributed-memory machines.</li>
+<li>May have higher memory requirements.</li>
+</ul>
+<ol type="1">
+<li>SuperLU_DIST:</li>
+</ol>
+<ul>
+<li>Parallel solver, also designed for distributed-memory machines.</li>
+<li>Often used for large, sparse linear systems.</li>
+<li>Has good performance on a wide range of problems.</li>
+</ul>
+<ol type="1">
+<li>KLU:</li>
+</ol>
+<ul>
+<li>A serial solver, typically used for smaller problems.</li>
+<li>Works well for circuit simulation problems and other problems with a similar structure.</li>
+<li>Generally not suitable for large distributed-memory parallel computations.</li>
+</ul>
+<ol type="1">
+<li>Basker:</li>
+</ol>
+<ul>
+<li>Also a serial solver, suitable for smaller problems.</li>
+<li>May not perform as well on larger problems or on distributed-memory systems.</li>
+</ul>
+<p>Here are some considerations for choosing a solver:</p>
+<ul>
+<li>If you are working on a distributed-memory parallel machine and dealing with large problems, you might want to consider MUMPS or SuperLU_DIST.</li>
+<li>For smaller problems or problems with structure similar to circuit simulation problems, KLU might be a good choice.</li>
+<li>Basker might be suitable for smaller problems where other solvers are not performing well.</li>
+</ul>
+<p>Returns: ConstructSolver: The fastest available direct linear solver.</p>
+<p>Raises: Exception: If no linear solver could be constructed.</p>
+<p>Example: fast_solver = <a class="el" href="../../d9/d88/namespacetrilinos__linear__solver__factory.html#afcb44fb1f5ec917be2ec63982c02613e" title="Creates and returns the fastest available direct linear solver, based on a predefined order and avail...">CreateFastestAvailableDirectLinearSolver()</a> </p>
+
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 21 2024 04:26:42 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Oct 22 2024 04:24:18 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
