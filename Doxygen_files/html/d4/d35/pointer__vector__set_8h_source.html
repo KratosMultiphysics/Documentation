@@ -675,186 +675,209 @@ $(function() {
 <div class="line"><a name="l01021"></a><span class="lineno"> 1021</span>&#160;            <span class="keywordflow">return</span> TEqualType()(mKey, TGetKeyType()(*a));</div>
 <div class="line"><a name="l01022"></a><span class="lineno"> 1022</span>&#160;        }</div>
 <div class="line"><a name="l01023"></a><span class="lineno"> 1023</span>&#160; </div>
-<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#ad4a2ed258b9f55866406eea859d3e9d2">operator()</a>(TPointerType <a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a>, TPointerType <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">b</a>)<span class="keyword"> const</span></div>
-<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;<span class="keyword">        </span>{</div>
-<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;            <span class="keywordflow">return</span> TEqualType()(TGetKeyType()(*a), TGetKeyType()(*b));</div>
-<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160;        }</div>
-<div class="line"><a name="l01035"></a><span class="lineno"> 1035</span>&#160;    };</div>
-<div class="line"><a name="l01036"></a><span class="lineno"> 1036</span>&#160; </div>
-<div class="line"><a name="l01040"></a><span class="lineno"> 1040</span>&#160; </div>
-<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160; </div>
-<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;    TContainerType mData;</div>
+<div class="line"><a name="l01030"></a><span class="lineno"> 1030</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#ad4a2ed258b9f55866406eea859d3e9d2">operator()</a>(<span class="keyword">const</span> TDataType&amp; <a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l01031"></a><span class="lineno"> 1031</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l01032"></a><span class="lineno"> 1032</span>&#160;            <span class="keywordflow">return</span> TEqualType()(mKey, TGetKeyType()(<a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a>));</div>
+<div class="line"><a name="l01033"></a><span class="lineno"> 1033</span>&#160;        }</div>
+<div class="line"><a name="l01034"></a><span class="lineno"> 1034</span>&#160; </div>
+<div class="line"><a name="l01042"></a><span class="lineno"> 1042</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#ad4a2ed258b9f55866406eea859d3e9d2">operator()</a>(TPointerType <a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a>, TPointerType <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">b</a>)<span class="keyword"> const</span></div>
+<div class="line"><a name="l01043"></a><span class="lineno"> 1043</span>&#160;<span class="keyword">        </span>{</div>
+<div class="line"><a name="l01044"></a><span class="lineno"> 1044</span>&#160;            <span class="keywordflow">return</span> TEqualType()(TGetKeyType()(*a), TGetKeyType()(*b));</div>
+<div class="line"><a name="l01045"></a><span class="lineno"> 1045</span>&#160;        }</div>
+<div class="line"><a name="l01046"></a><span class="lineno"> 1046</span>&#160;    };</div>
 <div class="line"><a name="l01047"></a><span class="lineno"> 1047</span>&#160; </div>
-<div class="line"><a name="l01049"></a><span class="lineno"> 1049</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> mSortedPartSize;</div>
-<div class="line"><a name="l01050"></a><span class="lineno"> 1050</span>&#160; </div>
-<div class="line"><a name="l01052"></a><span class="lineno"> 1052</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> mMaxBufferSize;</div>
-<div class="line"><a name="l01053"></a><span class="lineno"> 1053</span>&#160; </div>
-<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160; </div>
+<div class="line"><a name="l01051"></a><span class="lineno"> 1051</span>&#160; </div>
+<div class="line"><a name="l01055"></a><span class="lineno"> 1055</span>&#160; </div>
+<div class="line"><a name="l01057"></a><span class="lineno"> 1057</span>&#160;    TContainerType mData;</div>
+<div class="line"><a name="l01058"></a><span class="lineno"> 1058</span>&#160; </div>
+<div class="line"><a name="l01060"></a><span class="lineno"> 1060</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> mSortedPartSize;</div>
 <div class="line"><a name="l01061"></a><span class="lineno"> 1061</span>&#160; </div>
-<div class="line"><a name="l01062"></a><span class="lineno"> 1062</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TIteratorType&gt;</div>
-<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;    <span class="keywordtype">void</span> SortedInsert(TIteratorType first, TIteratorType last)</div>
-<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160;    {</div>
-<div class="line"><a name="l01065"></a><span class="lineno"> 1065</span>&#160;        <span class="keywordflow">if</span> (std::distance(first, last) == 0) {</div>
-<div class="line"><a name="l01066"></a><span class="lineno"> 1066</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l01067"></a><span class="lineno"> 1067</span>&#160;        }</div>
+<div class="line"><a name="l01063"></a><span class="lineno"> 1063</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> mMaxBufferSize;</div>
+<div class="line"><a name="l01064"></a><span class="lineno"> 1064</span>&#160; </div>
 <div class="line"><a name="l01068"></a><span class="lineno"> 1068</span>&#160; </div>
-<div class="line"><a name="l01069"></a><span class="lineno"> 1069</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a1342499dd436307bfc67a5c1a2b9d030">empty</a>()) {</div>
-<div class="line"><a name="l01070"></a><span class="lineno"> 1070</span>&#160;            mData.reserve(std::distance(first, last));</div>
-<div class="line"><a name="l01071"></a><span class="lineno"> 1071</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it != last; ++it) {</div>
-<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160;                mData.push_back(TPointerType(&amp;GetReference(it)));</div>
-<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;            }</div>
-<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;            <span class="comment">// first find the largest range</span></div>
-<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> lower_bound_first = std::lower_bound(mData.begin(), mData.end(), KeyOf(GetReference(first)), CompareKey());</div>
-<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> upper_bound_last = std::upper_bound(lower_bound_first, mData.end(), KeyOf(GetReference(last-1)), CompareKey());</div>
-<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160; </div>
-<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160;            <span class="comment">// then find the compact sub range</span></div>
-<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> upper_bound_first = std::upper_bound(lower_bound_first, upper_bound_last, KeyOf(GetReference(first)), CompareKey());</div>
-<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> lower_bound_last = std::lower_bound(lower_bound_first, upper_bound_last, KeyOf(GetReference(last-1)), CompareKey());</div>
-<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160; </div>
-<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;            <span class="keywordflow">if</span> (lower_bound_first == lower_bound_last &amp;&amp;</div>
-<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;                lower_bound_first == upper_bound_first &amp;&amp;</div>
-<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;                lower_bound_first == upper_bound_last)</div>
-<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;            {</div>
-<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;                <span class="comment">// all 4 bounds are equal, hence this can be inserted without checking further</span></div>
+<div class="line"><a name="l01072"></a><span class="lineno"> 1072</span>&#160; </div>
+<div class="line"><a name="l01073"></a><span class="lineno"> 1073</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TIteratorType&gt;</div>
+<div class="line"><a name="l01074"></a><span class="lineno"> 1074</span>&#160;    <span class="keywordtype">void</span> SortedInsert(TIteratorType first, TIteratorType last)</div>
+<div class="line"><a name="l01075"></a><span class="lineno"> 1075</span>&#160;    {</div>
+<div class="line"><a name="l01076"></a><span class="lineno"> 1076</span>&#160;        <span class="keywordflow">if</span> (std::distance(first, last) == 0) {</div>
+<div class="line"><a name="l01077"></a><span class="lineno"> 1077</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l01078"></a><span class="lineno"> 1078</span>&#160;        }</div>
+<div class="line"><a name="l01079"></a><span class="lineno"> 1079</span>&#160; </div>
+<div class="line"><a name="l01080"></a><span class="lineno"> 1080</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a1342499dd436307bfc67a5c1a2b9d030">empty</a>()) {</div>
+<div class="line"><a name="l01081"></a><span class="lineno"> 1081</span>&#160;            mData.reserve(std::distance(first, last));</div>
+<div class="line"><a name="l01082"></a><span class="lineno"> 1082</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it != last; ++it) {</div>
+<div class="line"><a name="l01083"></a><span class="lineno"> 1083</span>&#160;                mData.push_back(GetPointer(it));</div>
+<div class="line"><a name="l01084"></a><span class="lineno"> 1084</span>&#160;            }</div>
+<div class="line"><a name="l01085"></a><span class="lineno"> 1085</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01086"></a><span class="lineno"> 1086</span>&#160;            <span class="keywordflow">if</span> (KeyOf(GetReference(first)) &gt; KeyOf(*(mData.back()))) {</div>
+<div class="line"><a name="l01087"></a><span class="lineno"> 1087</span>&#160;                <span class="comment">// all are pointing to the end of the vector, hence pushing back.</span></div>
 <div class="line"><a name="l01088"></a><span class="lineno"> 1088</span>&#160;                mData.reserve(mData.size() + std::distance(first, last));</div>
-<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;                <span class="keywordflow">if</span> (lower_bound_first == mData.end()) {</div>
-<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it != last; ++it) {</div>
-<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;                        mData.push_back(TPointerType(&amp;GetReference(it)));</div>
-<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;                    }</div>
-<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;                } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;                    <span class="comment">// now if the capacity of the new mData is larger than the existing</span></div>
-<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;                    <span class="comment">// capacity, then the current lower_bound_first is invalidated.</span></div>
-<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160;                    <span class="comment">// hence needs to find it again.</span></div>
-<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;                    <span class="keyword">const</span> <span class="keyword">auto</span> new_lower_bound = std::lower_bound(mData.begin(), mData.end(), KeyOf(GetReference(first)), CompareKey());</div>
-<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160;                    <span class="keyword">auto</span> current_pos = new_lower_bound - 1;</div>
-<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;                    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it != last; ++it) {</div>
-<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;                        current_pos = mData.insert(current_pos + 1, TPointerType(&amp;GetReference(it)));</div>
-<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;                    }</div>
-<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;                }</div>
-<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;                <span class="keyword">auto</span> p_current_itr = mData.begin();</div>
-<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;                <span class="comment">// now add the new elements</span></div>
-<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it != last; ++it) {</div>
-<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;                    <span class="comment">// find the lower bound element.</span></div>
-<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;                    p_current_itr = std::lower_bound(p_current_itr, mData.end(), KeyOf(GetReference(it)), CompareKey());</div>
-<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;                    <span class="keywordflow">if</span> (p_current_itr == mData.end() || !EqualKeyTo(KeyOf(GetReference(it)))(*p_current_itr)) {</div>
-<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160;                        p_current_itr = mData.insert(p_current_itr, TPointerType(&amp;GetReference(it)));</div>
-<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;                    }</div>
-<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;                }</div>
-<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;            }</div>
-<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;        }</div>
-<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160; </div>
-<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;        <span class="comment">// TODO: To be removed once push back is removed.</span></div>
-<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;        <span class="comment">// insert assumes the PointerVectorSet is already sorted,</span></div>
-<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;        <span class="comment">// hence mSortedPartSize should be mData.size()</span></div>
-<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160;        mSortedPartSize = mData.size();</div>
-<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;    }</div>
-<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160; </div>
-<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#af8a4fed0ce0280ee0e6771a160ae589e">key_type</a> KeyOf(<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a4d86d2359054ebdf0b7e941d8b50f857">iterator</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
-<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160;    {</div>
-<div class="line"><a name="l01130"></a><span class="lineno"> 1130</span>&#160;        <span class="keywordflow">return</span> TGetKeyType()(*i);</div>
-<div class="line"><a name="l01131"></a><span class="lineno"> 1131</span>&#160;    }</div>
-<div class="line"><a name="l01132"></a><span class="lineno"> 1132</span>&#160; </div>
-<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#af8a4fed0ce0280ee0e6771a160ae589e">key_type</a> KeyOf(<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#ae1bb256b141e6d49dbd169c75b847a7f">ptr_iterator</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
-<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160;    {</div>
-<div class="line"><a name="l01141"></a><span class="lineno"> 1141</span>&#160;        <span class="keywordflow">return</span> TGetKeyType()(**i);</div>
-<div class="line"><a name="l01142"></a><span class="lineno"> 1142</span>&#160;    }</div>
-<div class="line"><a name="l01143"></a><span class="lineno"> 1143</span>&#160; </div>
-<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#af8a4fed0ce0280ee0e6771a160ae589e">key_type</a> KeyOf(<span class="keyword">const</span> TDataType &amp;<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
-<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160;    {</div>
-<div class="line"><a name="l01152"></a><span class="lineno"> 1152</span>&#160;        <span class="keywordflow">return</span> TGetKeyType()(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>);</div>
-<div class="line"><a name="l01153"></a><span class="lineno"> 1153</span>&#160;    }</div>
-<div class="line"><a name="l01154"></a><span class="lineno"> 1154</span>&#160; </div>
-<div class="line"><a name="l01163"></a><span class="lineno"> 1163</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TIteratorType&gt;</div>
-<div class="line"><a name="l01164"></a><span class="lineno"> 1164</span>&#160;    <span class="keyword">inline</span> <span class="keyword">auto</span>&amp; GetReference(TIteratorType Iterator)<span class="keyword"> const</span></div>
-<div class="line"><a name="l01165"></a><span class="lineno"> 1165</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l01166"></a><span class="lineno"> 1166</span>&#160;        <span class="comment">// It is difficult to use std::iterator_traits to get the value</span></div>
-<div class="line"><a name="l01167"></a><span class="lineno"> 1167</span>&#160;        <span class="comment">// type of the iterator because, boost::indirect has a value type</span></div>
-<div class="line"><a name="l01168"></a><span class="lineno"> 1168</span>&#160;        <span class="comment">// which is harder to guess, and cryptic. Hence, using the decltype.</span></div>
-<div class="line"><a name="l01169"></a><span class="lineno"> 1169</span>&#160;        <span class="keyword">using</span> iterator_value_type = std::decay_t&lt;decltype(*Iterator)&gt;;</div>
-<div class="line"><a name="l01170"></a><span class="lineno"> 1170</span>&#160; </div>
-<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;        <span class="keywordflow">if</span> constexpr(std::is_same_v&lt;iterator_value_type, std::remove_cv_t&lt;value_type&gt;&gt;) {</div>
-<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;            <span class="comment">// in here, std::remove_cv is only used for the value_type because,</span></div>
-<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;            <span class="comment">// the PointerVectorSet can be with TDataType which is const, but the passed pointers</span></div>
-<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;            <span class="comment">// must be always TDataType::Pointer which is defined for non cost TDataType. This is</span></div>
-<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;            <span class="comment">// a valid use case. Other way is not possible, hence std::remove_cv is not used on</span></div>
-<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;            <span class="comment">// iterator_value_type.</span></div>
-<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;            <span class="keywordflow">return</span> *Iterator;</div>
-<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr(std::is_same_v&lt;iterator_value_type, pointer&gt;) {</div>
-<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;            <span class="keywordflow">return</span> **Iterator;</div>
-<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;            static_assert(!std::is_same_v&lt;TIteratorType, TIteratorType&gt;, <span class="stringliteral">&quot;Unsupported iterator type.&quot;</span>);</div>
-<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;            <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;        }</div>
-<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;    }</div>
-<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160; </div>
-<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160; </div>
-<div class="line"><a name="l01194"></a><span class="lineno"><a class="line" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#ad3f5346f31d572dd2ab4fcd658de5bc4"> 1194</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160; </div>
-<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const</span></div>
-<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;        <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a> = mData.size();</div>
-<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160; </div>
-<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;size&quot;</span>, <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a>);</div>
-<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160; </div>
-<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0 ; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a> ; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
-<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;            rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;E&quot;</span>, mData[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]);</div>
-<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160; </div>
-<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;Sorted Part Size&quot;</span>,mSortedPartSize);</div>
-<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;Max Buffer Size&quot;</span>,mMaxBufferSize);</div>
-<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;    }</div>
-<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160; </div>
-<div class="line"><a name="l01217"></a><span class="lineno"> 1217</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)</div>
-<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160;    {</div>
-<div class="line"><a name="l01219"></a><span class="lineno"> 1219</span>&#160;        <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a>;</div>
-<div class="line"><a name="l01220"></a><span class="lineno"> 1220</span>&#160; </div>
-<div class="line"><a name="l01221"></a><span class="lineno"> 1221</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;size&quot;</span>, <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a>);</div>
-<div class="line"><a name="l01222"></a><span class="lineno"> 1222</span>&#160; </div>
-<div class="line"><a name="l01223"></a><span class="lineno"> 1223</span>&#160;        mData.resize(<a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a>);</div>
+<div class="line"><a name="l01089"></a><span class="lineno"> 1089</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = first; it != last; ++it) {</div>
+<div class="line"><a name="l01090"></a><span class="lineno"> 1090</span>&#160;                    mData.push_back(GetPointer(it));</div>
+<div class="line"><a name="l01091"></a><span class="lineno"> 1091</span>&#160;                }</div>
+<div class="line"><a name="l01092"></a><span class="lineno"> 1092</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01093"></a><span class="lineno"> 1093</span>&#160;                TContainerType <a class="code" href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">temp</a>;</div>
+<div class="line"><a name="l01094"></a><span class="lineno"> 1094</span>&#160;                <a class="code" href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">temp</a>.reserve(mData.size() + std::distance(first, last));</div>
+<div class="line"><a name="l01095"></a><span class="lineno"> 1095</span>&#160;                <span class="keyword">auto</span> p_existing_data_itr = mData.begin();</div>
+<div class="line"><a name="l01096"></a><span class="lineno"> 1096</span>&#160; </div>
+<div class="line"><a name="l01097"></a><span class="lineno"> 1097</span>&#160;                CompareKey key_comparator;</div>
+<div class="line"><a name="l01098"></a><span class="lineno"> 1098</span>&#160; </div>
+<div class="line"><a name="l01099"></a><span class="lineno"> 1099</span>&#160;                <span class="keywordflow">while</span> (p_existing_data_itr != mData.end() &amp;&amp; first != last) {</div>
+<div class="line"><a name="l01100"></a><span class="lineno"> 1100</span>&#160;                    <span class="keywordflow">if</span> (key_comparator(*p_existing_data_itr, KeyOf(GetReference(first)))) {</div>
+<div class="line"><a name="l01101"></a><span class="lineno"> 1101</span>&#160;                        <a class="code" href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">temp</a>.push_back(GetPointer(p_existing_data_itr++));</div>
+<div class="line"><a name="l01102"></a><span class="lineno"> 1102</span>&#160;                    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (EqualKeyTo(KeyOf(GetReference(p_existing_data_itr)))(*first)) {</div>
+<div class="line"><a name="l01103"></a><span class="lineno"> 1103</span>&#160;                        <span class="comment">// here we keep the old entity, and discard the new entity.</span></div>
+<div class="line"><a name="l01104"></a><span class="lineno"> 1104</span>&#160;                        <a class="code" href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">temp</a>.push_back(GetPointer(p_existing_data_itr++));</div>
+<div class="line"><a name="l01105"></a><span class="lineno"> 1105</span>&#160;                        ++first;</div>
+<div class="line"><a name="l01106"></a><span class="lineno"> 1106</span>&#160;                    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01107"></a><span class="lineno"> 1107</span>&#160;                        <a class="code" href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">temp</a>.push_back(GetPointer(first++));</div>
+<div class="line"><a name="l01108"></a><span class="lineno"> 1108</span>&#160;                    }</div>
+<div class="line"><a name="l01109"></a><span class="lineno"> 1109</span>&#160;                }</div>
+<div class="line"><a name="l01110"></a><span class="lineno"> 1110</span>&#160; </div>
+<div class="line"><a name="l01111"></a><span class="lineno"> 1111</span>&#160;                <span class="comment">// now either p_existing_data_itr reached the end or first reached the end,</span></div>
+<div class="line"><a name="l01112"></a><span class="lineno"> 1112</span>&#160;                <span class="comment">// hence we add the remaining without checking</span></div>
+<div class="line"><a name="l01113"></a><span class="lineno"> 1113</span>&#160;                <span class="keywordflow">for</span> (; p_existing_data_itr != mData.end(); ++p_existing_data_itr) {</div>
+<div class="line"><a name="l01114"></a><span class="lineno"> 1114</span>&#160;                    <a class="code" href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">temp</a>.push_back(GetPointer(p_existing_data_itr));</div>
+<div class="line"><a name="l01115"></a><span class="lineno"> 1115</span>&#160;                }</div>
+<div class="line"><a name="l01116"></a><span class="lineno"> 1116</span>&#160;                <span class="keywordflow">for</span> (; first != last; ++first) {</div>
+<div class="line"><a name="l01117"></a><span class="lineno"> 1117</span>&#160;                    <a class="code" href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">temp</a>.push_back(GetPointer(first));</div>
+<div class="line"><a name="l01118"></a><span class="lineno"> 1118</span>&#160;                }</div>
+<div class="line"><a name="l01119"></a><span class="lineno"> 1119</span>&#160; </div>
+<div class="line"><a name="l01120"></a><span class="lineno"> 1120</span>&#160;                mData.swap(<a class="code" href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">temp</a>);</div>
+<div class="line"><a name="l01121"></a><span class="lineno"> 1121</span>&#160;            }</div>
+<div class="line"><a name="l01122"></a><span class="lineno"> 1122</span>&#160;        }</div>
+<div class="line"><a name="l01123"></a><span class="lineno"> 1123</span>&#160; </div>
+<div class="line"><a name="l01124"></a><span class="lineno"> 1124</span>&#160;        <span class="comment">// TODO: To be removed once push back is removed.</span></div>
+<div class="line"><a name="l01125"></a><span class="lineno"> 1125</span>&#160;        <span class="comment">// insert assumes the PointerVectorSet is already sorted,</span></div>
+<div class="line"><a name="l01126"></a><span class="lineno"> 1126</span>&#160;        <span class="comment">// hence mSortedPartSize should be mData.size()</span></div>
+<div class="line"><a name="l01127"></a><span class="lineno"> 1127</span>&#160;        mSortedPartSize = mData.size();</div>
+<div class="line"><a name="l01128"></a><span class="lineno"> 1128</span>&#160;    }</div>
+<div class="line"><a name="l01129"></a><span class="lineno"> 1129</span>&#160; </div>
+<div class="line"><a name="l01136"></a><span class="lineno"> 1136</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#af8a4fed0ce0280ee0e6771a160ae589e">key_type</a> KeyOf(<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a4d86d2359054ebdf0b7e941d8b50f857">iterator</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
+<div class="line"><a name="l01137"></a><span class="lineno"> 1137</span>&#160;    {</div>
+<div class="line"><a name="l01138"></a><span class="lineno"> 1138</span>&#160;        <span class="keywordflow">return</span> TGetKeyType()(*i);</div>
+<div class="line"><a name="l01139"></a><span class="lineno"> 1139</span>&#160;    }</div>
+<div class="line"><a name="l01140"></a><span class="lineno"> 1140</span>&#160; </div>
+<div class="line"><a name="l01147"></a><span class="lineno"> 1147</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#af8a4fed0ce0280ee0e6771a160ae589e">key_type</a> KeyOf(<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#ae1bb256b141e6d49dbd169c75b847a7f">ptr_iterator</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
+<div class="line"><a name="l01148"></a><span class="lineno"> 1148</span>&#160;    {</div>
+<div class="line"><a name="l01149"></a><span class="lineno"> 1149</span>&#160;        <span class="keywordflow">return</span> TGetKeyType()(**i);</div>
+<div class="line"><a name="l01150"></a><span class="lineno"> 1150</span>&#160;    }</div>
+<div class="line"><a name="l01151"></a><span class="lineno"> 1151</span>&#160; </div>
+<div class="line"><a name="l01158"></a><span class="lineno"> 1158</span>&#160;    <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#af8a4fed0ce0280ee0e6771a160ae589e">key_type</a> KeyOf(<span class="keyword">const</span> TDataType &amp;<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>)</div>
+<div class="line"><a name="l01159"></a><span class="lineno"> 1159</span>&#160;    {</div>
+<div class="line"><a name="l01160"></a><span class="lineno"> 1160</span>&#160;        <span class="keywordflow">return</span> TGetKeyType()(<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>);</div>
+<div class="line"><a name="l01161"></a><span class="lineno"> 1161</span>&#160;    }</div>
+<div class="line"><a name="l01162"></a><span class="lineno"> 1162</span>&#160; </div>
+<div class="line"><a name="l01171"></a><span class="lineno"> 1171</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TIteratorType&gt;</div>
+<div class="line"><a name="l01172"></a><span class="lineno"> 1172</span>&#160;    <span class="keyword">inline</span> <span class="keyword">auto</span>&amp; GetReference(TIteratorType Iterator)<span class="keyword"> const</span></div>
+<div class="line"><a name="l01173"></a><span class="lineno"> 1173</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l01174"></a><span class="lineno"> 1174</span>&#160;        <span class="comment">// It is difficult to use std::iterator_traits to get the value</span></div>
+<div class="line"><a name="l01175"></a><span class="lineno"> 1175</span>&#160;        <span class="comment">// type of the iterator because, boost::indirect has a value type</span></div>
+<div class="line"><a name="l01176"></a><span class="lineno"> 1176</span>&#160;        <span class="comment">// which is harder to guess, and cryptic. Hence, using the decltype.</span></div>
+<div class="line"><a name="l01177"></a><span class="lineno"> 1177</span>&#160;        <span class="keyword">using</span> iterator_value_type = std::decay_t&lt;decltype(*Iterator)&gt;;</div>
+<div class="line"><a name="l01178"></a><span class="lineno"> 1178</span>&#160; </div>
+<div class="line"><a name="l01179"></a><span class="lineno"> 1179</span>&#160;        <span class="keywordflow">if</span> constexpr(std::is_same_v&lt;iterator_value_type, std::remove_cv_t&lt;value_type&gt;&gt;) {</div>
+<div class="line"><a name="l01180"></a><span class="lineno"> 1180</span>&#160;            <span class="comment">// in here, std::remove_cv is only used for the value_type because,</span></div>
+<div class="line"><a name="l01181"></a><span class="lineno"> 1181</span>&#160;            <span class="comment">// the PointerVectorSet can be with TDataType which is const, but the passed pointers</span></div>
+<div class="line"><a name="l01182"></a><span class="lineno"> 1182</span>&#160;            <span class="comment">// must be always TDataType::Pointer which is defined for non cost TDataType. This is</span></div>
+<div class="line"><a name="l01183"></a><span class="lineno"> 1183</span>&#160;            <span class="comment">// a valid use case. Other way is not possible, hence std::remove_cv is not used on</span></div>
+<div class="line"><a name="l01184"></a><span class="lineno"> 1184</span>&#160;            <span class="comment">// iterator_value_type.</span></div>
+<div class="line"><a name="l01185"></a><span class="lineno"> 1185</span>&#160;            <span class="keywordflow">return</span> *Iterator;</div>
+<div class="line"><a name="l01186"></a><span class="lineno"> 1186</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr(std::is_same_v&lt;iterator_value_type, pointer&gt;) {</div>
+<div class="line"><a name="l01187"></a><span class="lineno"> 1187</span>&#160;            <span class="keywordflow">return</span> **Iterator;</div>
+<div class="line"><a name="l01188"></a><span class="lineno"> 1188</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01189"></a><span class="lineno"> 1189</span>&#160;            static_assert(!std::is_same_v&lt;TIteratorType, TIteratorType&gt;, <span class="stringliteral">&quot;Unsupported iterator type.&quot;</span>);</div>
+<div class="line"><a name="l01190"></a><span class="lineno"> 1190</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l01191"></a><span class="lineno"> 1191</span>&#160;        }</div>
+<div class="line"><a name="l01192"></a><span class="lineno"> 1192</span>&#160;    }</div>
+<div class="line"><a name="l01193"></a><span class="lineno"> 1193</span>&#160; </div>
+<div class="line"><a name="l01194"></a><span class="lineno"> 1194</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TIteratorType&gt;</div>
+<div class="line"><a name="l01195"></a><span class="lineno"> 1195</span>&#160;    <span class="keyword">inline</span> TPointerType GetPointer(TIteratorType Iterator)<span class="keyword"> const</span></div>
+<div class="line"><a name="l01196"></a><span class="lineno"> 1196</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l01197"></a><span class="lineno"> 1197</span>&#160;        <span class="comment">// It is difficult to use std::iterator_traits to get the value</span></div>
+<div class="line"><a name="l01198"></a><span class="lineno"> 1198</span>&#160;        <span class="comment">// type of the iterator because, boost::indirect has a value type</span></div>
+<div class="line"><a name="l01199"></a><span class="lineno"> 1199</span>&#160;        <span class="comment">// which is harder to guess, and cryptic. Hence, using the decltype.</span></div>
+<div class="line"><a name="l01200"></a><span class="lineno"> 1200</span>&#160;        <span class="keyword">using</span> iterator_value_type = std::decay_t&lt;decltype(*Iterator)&gt;;</div>
+<div class="line"><a name="l01201"></a><span class="lineno"> 1201</span>&#160; </div>
+<div class="line"><a name="l01202"></a><span class="lineno"> 1202</span>&#160;        <span class="keywordflow">if</span> constexpr(std::is_same_v&lt;iterator_value_type, std::remove_cv_t&lt;TPointerType&gt;&gt;) {</div>
+<div class="line"><a name="l01203"></a><span class="lineno"> 1203</span>&#160;            <span class="comment">// this supports any type of pointers</span></div>
+<div class="line"><a name="l01204"></a><span class="lineno"> 1204</span>&#160;            <span class="keywordflow">return</span> *Iterator;</div>
+<div class="line"><a name="l01205"></a><span class="lineno"> 1205</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> constexpr(std::is_same_v&lt;iterator_value_type, std::remove_cv_t&lt;value_type&gt;&gt; &amp;&amp; std::is_same_v&lt;TPointerType, Kratos::intrusive_ptr&lt;std::decay_t&lt;decltype(*Iterator)&gt;&gt;&gt;) {</div>
+<div class="line"><a name="l01206"></a><span class="lineno"> 1206</span>&#160;            <span class="comment">// now the *iterator points to a value type. Then we can only return the pointer if</span></div>
+<div class="line"><a name="l01207"></a><span class="lineno"> 1207</span>&#160;            <span class="comment">// the PointerVectorSet is of the type with intrusive_ptrs. Then we can safely construct the intrusive ptrs</span></div>
+<div class="line"><a name="l01208"></a><span class="lineno"> 1208</span>&#160;            <span class="keywordflow">return</span> TPointerType(&amp;*Iterator);</div>
+<div class="line"><a name="l01209"></a><span class="lineno"> 1209</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l01210"></a><span class="lineno"> 1210</span>&#160;            static_assert(!std::is_same_v&lt;TIteratorType, TIteratorType&gt;, <span class="stringliteral">&quot;Unsupported iterator type.&quot;</span>);</div>
+<div class="line"><a name="l01211"></a><span class="lineno"> 1211</span>&#160;            <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l01212"></a><span class="lineno"> 1212</span>&#160;        }</div>
+<div class="line"><a name="l01213"></a><span class="lineno"> 1213</span>&#160;    }</div>
+<div class="line"><a name="l01214"></a><span class="lineno"> 1214</span>&#160; </div>
+<div class="line"><a name="l01218"></a><span class="lineno"> 1218</span>&#160; </div>
+<div class="line"><a name="l01223"></a><span class="lineno"><a class="line" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#ad3f5346f31d572dd2ab4fcd658de5bc4"> 1223</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
 <div class="line"><a name="l01224"></a><span class="lineno"> 1224</span>&#160; </div>
-<div class="line"><a name="l01225"></a><span class="lineno"> 1225</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0 ; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a> ; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
-<div class="line"><a name="l01226"></a><span class="lineno"> 1226</span>&#160;            rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;E&quot;</span>, mData[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]);</div>
-<div class="line"><a name="l01227"></a><span class="lineno"> 1227</span>&#160; </div>
-<div class="line"><a name="l01228"></a><span class="lineno"> 1228</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;Sorted Part Size&quot;</span>,mSortedPartSize);</div>
-<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;Max Buffer Size&quot;</span>,mMaxBufferSize);</div>
-<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;    }</div>
-<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160; </div>
-<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160; </div>
-<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160; </div>
-<div class="line"><a name="l01243"></a><span class="lineno"> 1243</span>&#160; </div>
-<div class="line"><a name="l01245"></a><span class="lineno"> 1245</span>&#160; </div>
-<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;}; <span class="comment">// Class PointerVectorSet</span></div>
-<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160; </div>
+<div class="line"><a name="l01229"></a><span class="lineno"> 1229</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const</span></div>
+<div class="line"><a name="l01230"></a><span class="lineno"> 1230</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l01231"></a><span class="lineno"> 1231</span>&#160;        <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a> = mData.size();</div>
+<div class="line"><a name="l01232"></a><span class="lineno"> 1232</span>&#160; </div>
+<div class="line"><a name="l01233"></a><span class="lineno"> 1233</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;size&quot;</span>, <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a>);</div>
+<div class="line"><a name="l01234"></a><span class="lineno"> 1234</span>&#160; </div>
+<div class="line"><a name="l01235"></a><span class="lineno"> 1235</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0 ; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a> ; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
+<div class="line"><a name="l01236"></a><span class="lineno"> 1236</span>&#160;            rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;E&quot;</span>, mData[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]);</div>
+<div class="line"><a name="l01237"></a><span class="lineno"> 1237</span>&#160; </div>
+<div class="line"><a name="l01238"></a><span class="lineno"> 1238</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;Sorted Part Size&quot;</span>,mSortedPartSize);</div>
+<div class="line"><a name="l01239"></a><span class="lineno"> 1239</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a7570a477237a6cb6ba92a0e84c61fe6a">save</a>(<span class="stringliteral">&quot;Max Buffer Size&quot;</span>,mMaxBufferSize);</div>
+<div class="line"><a name="l01240"></a><span class="lineno"> 1240</span>&#160;    }</div>
+<div class="line"><a name="l01241"></a><span class="lineno"> 1241</span>&#160; </div>
+<div class="line"><a name="l01246"></a><span class="lineno"> 1246</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)</div>
+<div class="line"><a name="l01247"></a><span class="lineno"> 1247</span>&#160;    {</div>
+<div class="line"><a name="l01248"></a><span class="lineno"> 1248</span>&#160;        <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a>;</div>
 <div class="line"><a name="l01249"></a><span class="lineno"> 1249</span>&#160; </div>
-<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160; </div>
+<div class="line"><a name="l01250"></a><span class="lineno"> 1250</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;size&quot;</span>, <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a>);</div>
+<div class="line"><a name="l01251"></a><span class="lineno"> 1251</span>&#160; </div>
+<div class="line"><a name="l01252"></a><span class="lineno"> 1252</span>&#160;        mData.resize(<a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a>);</div>
+<div class="line"><a name="l01253"></a><span class="lineno"> 1253</span>&#160; </div>
+<div class="line"><a name="l01254"></a><span class="lineno"> 1254</span>&#160;        <span class="keywordflow">for</span>(<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a9f15f0eae9d29b51403cc5a6c4ea0377">size_type</a> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0 ; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#a1c3ce957bb604e9e317faf3f7fbfc834">local_size</a> ; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>++)</div>
+<div class="line"><a name="l01255"></a><span class="lineno"> 1255</span>&#160;            rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;E&quot;</span>, mData[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>]);</div>
 <div class="line"><a name="l01256"></a><span class="lineno"> 1256</span>&#160; </div>
-<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class </span>TDataType,</div>
-<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;         <span class="keyword">class </span>TGetKeyType,</div>
-<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160;         <span class="keyword">class </span>TCompareType,</div>
-<div class="line"><a name="l01261"></a><span class="lineno"> 1261</span>&#160;         <span class="keyword">class </span>TEqualType,</div>
-<div class="line"><a name="l01262"></a><span class="lineno"> 1262</span>&#160;         <span class="keyword">class </span>TPointerType,</div>
-<div class="line"><a name="l01263"></a><span class="lineno"> 1263</span>&#160;         <span class="keyword">class </span>TContainerType&gt;</div>
-<div class="line"><a name="l01264"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga74e53522edad6f51947c495b4894329c"> 1264</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(std::istream&amp; rIStream,</div>
-<div class="line"><a name="l01265"></a><span class="lineno"> 1265</span>&#160;                                  <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet&lt;TDataType, TGetKeyType, TCompareType, TEqualType, TPointerType, TContainerType&gt;</a>&amp; rThis);</div>
-<div class="line"><a name="l01266"></a><span class="lineno"> 1266</span>&#160; </div>
-<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class </span>TDataType,</div>
-<div class="line"><a name="l01269"></a><span class="lineno"> 1269</span>&#160;         <span class="keyword">class </span>TGetKeyType,</div>
-<div class="line"><a name="l01270"></a><span class="lineno"> 1270</span>&#160;         <span class="keyword">class </span>TCompareType,</div>
-<div class="line"><a name="l01271"></a><span class="lineno"> 1271</span>&#160;         <span class="keyword">class </span>TEqualType,</div>
-<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160;         <span class="keyword">class </span>TPointerType,</div>
-<div class="line"><a name="l01273"></a><span class="lineno"> 1273</span>&#160;         <span class="keyword">class </span>TContainerType&gt;</div>
-<div class="line"><a name="l01274"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gad9be13d9d87a168d31332b2eee858fc4"> 1274</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(std::ostream&amp; rOStream,</div>
-<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;                                  <span class="keyword">const</span> <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet&lt;TDataType, TGetKeyType, TCompareType, TEqualType, TPointerType, TContainerType&gt;</a>&amp; rThis)</div>
-<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160;{</div>
-<div class="line"><a name="l01277"></a><span class="lineno"> 1277</span>&#160;    rThis.<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#af7498ec887e73ea0028eaf2762595d6e">PrintInfo</a>(rOStream);</div>
-<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160;    rOStream &lt;&lt; std::endl;</div>
-<div class="line"><a name="l01279"></a><span class="lineno"> 1279</span>&#160;    rThis.<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a02b63b88582cccbd39944c89c9695ebb">PrintData</a>(rOStream);</div>
-<div class="line"><a name="l01280"></a><span class="lineno"> 1280</span>&#160; </div>
-<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
-<div class="line"><a name="l01282"></a><span class="lineno"> 1282</span>&#160;}</div>
-<div class="line"><a name="l01284"></a><span class="lineno"> 1284</span>&#160; </div>
-<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l01257"></a><span class="lineno"> 1257</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;Sorted Part Size&quot;</span>,mSortedPartSize);</div>
+<div class="line"><a name="l01258"></a><span class="lineno"> 1258</span>&#160;        rSerializer.<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html#a0a850102ec5368a32f2c3596f581a4ec">load</a>(<span class="stringliteral">&quot;Max Buffer Size&quot;</span>,mMaxBufferSize);</div>
+<div class="line"><a name="l01259"></a><span class="lineno"> 1259</span>&#160;    }</div>
+<div class="line"><a name="l01260"></a><span class="lineno"> 1260</span>&#160; </div>
+<div class="line"><a name="l01264"></a><span class="lineno"> 1264</span>&#160; </div>
+<div class="line"><a name="l01268"></a><span class="lineno"> 1268</span>&#160; </div>
+<div class="line"><a name="l01272"></a><span class="lineno"> 1272</span>&#160; </div>
+<div class="line"><a name="l01274"></a><span class="lineno"> 1274</span>&#160; </div>
+<div class="line"><a name="l01275"></a><span class="lineno"> 1275</span>&#160;}; <span class="comment">// Class PointerVectorSet</span></div>
+<div class="line"><a name="l01276"></a><span class="lineno"> 1276</span>&#160; </div>
+<div class="line"><a name="l01278"></a><span class="lineno"> 1278</span>&#160; </div>
+<div class="line"><a name="l01281"></a><span class="lineno"> 1281</span>&#160; </div>
+<div class="line"><a name="l01285"></a><span class="lineno"> 1285</span>&#160; </div>
+<div class="line"><a name="l01287"></a><span class="lineno"> 1287</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class </span>TDataType,</div>
+<div class="line"><a name="l01288"></a><span class="lineno"> 1288</span>&#160;         <span class="keyword">class </span>TGetKeyType,</div>
+<div class="line"><a name="l01289"></a><span class="lineno"> 1289</span>&#160;         <span class="keyword">class </span>TCompareType,</div>
+<div class="line"><a name="l01290"></a><span class="lineno"> 1290</span>&#160;         <span class="keyword">class </span>TEqualType,</div>
+<div class="line"><a name="l01291"></a><span class="lineno"> 1291</span>&#160;         <span class="keyword">class </span>TPointerType,</div>
+<div class="line"><a name="l01292"></a><span class="lineno"> 1292</span>&#160;         <span class="keyword">class </span>TContainerType&gt;</div>
+<div class="line"><a name="l01293"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga74e53522edad6f51947c495b4894329c"> 1293</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(std::istream&amp; rIStream,</div>
+<div class="line"><a name="l01294"></a><span class="lineno"> 1294</span>&#160;                                  <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet&lt;TDataType, TGetKeyType, TCompareType, TEqualType, TPointerType, TContainerType&gt;</a>&amp; rThis);</div>
+<div class="line"><a name="l01295"></a><span class="lineno"> 1295</span>&#160; </div>
+<div class="line"><a name="l01297"></a><span class="lineno"> 1297</span>&#160;<span class="keyword">template</span>&lt;<span class="keyword">class </span>TDataType,</div>
+<div class="line"><a name="l01298"></a><span class="lineno"> 1298</span>&#160;         <span class="keyword">class </span>TGetKeyType,</div>
+<div class="line"><a name="l01299"></a><span class="lineno"> 1299</span>&#160;         <span class="keyword">class </span>TCompareType,</div>
+<div class="line"><a name="l01300"></a><span class="lineno"> 1300</span>&#160;         <span class="keyword">class </span>TEqualType,</div>
+<div class="line"><a name="l01301"></a><span class="lineno"> 1301</span>&#160;         <span class="keyword">class </span>TPointerType,</div>
+<div class="line"><a name="l01302"></a><span class="lineno"> 1302</span>&#160;         <span class="keyword">class </span>TContainerType&gt;</div>
+<div class="line"><a name="l01303"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#gad9be13d9d87a168d31332b2eee858fc4"> 1303</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(std::ostream&amp; rOStream,</div>
+<div class="line"><a name="l01304"></a><span class="lineno"> 1304</span>&#160;                                  <span class="keyword">const</span> <a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">PointerVectorSet&lt;TDataType, TGetKeyType, TCompareType, TEqualType, TPointerType, TContainerType&gt;</a>&amp; rThis)</div>
+<div class="line"><a name="l01305"></a><span class="lineno"> 1305</span>&#160;{</div>
+<div class="line"><a name="l01306"></a><span class="lineno"> 1306</span>&#160;    rThis.<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#af7498ec887e73ea0028eaf2762595d6e">PrintInfo</a>(rOStream);</div>
+<div class="line"><a name="l01307"></a><span class="lineno"> 1307</span>&#160;    rOStream &lt;&lt; std::endl;</div>
+<div class="line"><a name="l01308"></a><span class="lineno"> 1308</span>&#160;    rThis.<a class="code" href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a02b63b88582cccbd39944c89c9695ebb">PrintData</a>(rOStream);</div>
+<div class="line"><a name="l01309"></a><span class="lineno"> 1309</span>&#160; </div>
+<div class="line"><a name="l01310"></a><span class="lineno"> 1310</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
+<div class="line"><a name="l01311"></a><span class="lineno"> 1311</span>&#160;}</div>
+<div class="line"><a name="l01313"></a><span class="lineno"> 1313</span>&#160; </div>
+<div class="line"><a name="l01314"></a><span class="lineno"> 1314</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="aclass_kratos_1_1_pointer_vector_set_html"><div class="ttname"><a href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html">Kratos::PointerVectorSet</a></div><div class="ttdoc">A sorted associative container similar to an STL set, but uses a vector to store pointers to its data...</div><div class="ttdef"><b>Definition:</b> pointer_vector_set.h:72</div></div>
 <div class="ttc" id="aclass_kratos_1_1_pointer_vector_set_html_a00b4b6cbbe3e808fc3e612ee815d09a9"><div class="ttname"><a href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a00b4b6cbbe3e808fc3e612ee815d09a9">Kratos::PointerVectorSet::Unique</a></div><div class="ttdeci">void Unique()</div><div class="ttdoc">Remove duplicate elements from the set.</div><div class="ttdef"><b>Definition:</b> pointer_vector_set.h:828</div></div>
 <div class="ttc" id="aclass_kratos_1_1_pointer_vector_set_html_a02b63b88582cccbd39944c89c9695ebb"><div class="ttname"><a href="../../db/dc6/class_kratos_1_1_pointer_vector_set.html#a02b63b88582cccbd39944c89c9695ebb">Kratos::PointerVectorSet::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> pointer_vector_set.h:933</div></div>
@@ -957,13 +980,14 @@ $(function() {
 <div class="ttc" id="anamespaceode__solve_html_a0b266774af0a13d56a57cf1ada122768"><div class="ttname"><a href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">ode_solve.load</a></div><div class="ttdeci">def load(f)</div><div class="ttdef"><b>Definition:</b> ode_solve.py:307</div></div>
 <div class="ttc" id="anamespaceode__solve_html_aae8a035c92cd801f6cf64409406c371b"><div class="ttname"><a href="../../d2/df2/namespaceode__solve.html#aae8a035c92cd801f6cf64409406c371b">ode_solve.const</a></div><div class="ttdeci">tuple const</div><div class="ttdef"><b>Definition:</b> ode_solve.py:403</div></div>
 <div class="ttc" id="anamespacequadrature_html_a56123f01f0d1e776d9a6d85aa0f27caa"><div class="ttname"><a href="../../d7/d2b/namespacequadrature.html#a56123f01f0d1e776d9a6d85aa0f27caa">quadrature.k</a></div><div class="ttdeci">int k</div><div class="ttdef"><b>Definition:</b> quadrature.py:595</div></div>
+<div class="ttc" id="anamespacerotating__cone_html_ab33bd86f7a31ca0d8e2b3e69609e3476"><div class="ttname"><a href="../../db/ddc/namespacerotating__cone.html#ab33bd86f7a31ca0d8e2b3e69609e3476">rotating_cone.temp</a></div><div class="ttdeci">float temp</div><div class="ttdef"><b>Definition:</b> rotating_cone.py:85</div></div>
 <div class="ttc" id="anamespacesensitivity_matrix_html_a676f7f559f80bd5ebc1bd73cadbef39b"><div class="ttname"><a href="../../d0/d79/namespacesensitivity_matrix.html#a676f7f559f80bd5ebc1bd73cadbef39b">sensitivityMatrix.x</a></div><div class="ttdeci">x</div><div class="ttdef"><b>Definition:</b> sensitivityMatrix.py:49</div></div>
 <div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="aserializer_8h_html"><div class="ttname"><a href="../../dd/d5f/serializer_8h.html">serializer.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 23 2024 03:07:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Oct 24 2024 03:07:29 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

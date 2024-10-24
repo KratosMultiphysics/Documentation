@@ -117,150 +117,113 @@ $(function() {
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a4acc3f2939095f534f25cf1a8febf4a6">   64</a></span>&#160;    <span class="keyword">static</span> constexpr std::array&lt;const char*, 2&gt; SupportedGeometries = {<span class="stringliteral">&quot;Triangle3D3&quot;</span>, <span class="stringliteral">&quot;Quadrilateral3D4&quot;</span>};</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a5b56794f25945492b5255daca7fd0871">   67</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d8/d5c/class_kratos_1_1_pointer_hash_map_set.html">GeometriesMapType</a> = <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a11b954c23406c77fae151a6e0587af66">ModelPart::GeometriesMapType</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">   67</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> = std::size_t;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a6d7890cf6c7330e71fc86ef1405a1b0d">   70</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../de/d83/class_kratos_1_1_pointer_vector.html">NodesArrayType</a> = <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">Element::NodesArrayType</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a4b2d9587c49bbf785ffe3da218f15913">   70</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a4b2d9587c49bbf785ffe3da218f15913">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html">ObjIO</a>);</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">   73</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> = std::size_t;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a4b2d9587c49bbf785ffe3da218f15913">   76</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a4b2d9587c49bbf785ffe3da218f15913">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html">ObjIO</a>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html">ObjIO</a>(</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d3b/namespace_d_e_m__run__all__benchmarks__analysis.html#ae4e86e61829e268ef6a8a671b6db6ad4">std::filesystem::path</a>&amp; rFilename,</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters = <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>()</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        );</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html">ObjIO</a>(</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a391139ce979b63717f77fcf0facf145c">Kratos::shared_ptr&lt;std::iostream&gt;</a> pInputStream,</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters = <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>()</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a07e1bb21388d6274a665d6ecf0d22ec7">  107</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a07e1bb21388d6274a665d6ecf0d22ec7">~ObjIO</a>(){}</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html">ObjIO</a>(</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d3b/namespace_d_e_m__run__all__benchmarks__analysis.html#ae4e86e61829e268ef6a8a671b6db6ad4">std::filesystem::path</a>&amp; rFilename,</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters = <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>()</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        );</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html">ObjIO</a>(</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a391139ce979b63717f77fcf0facf145c">Kratos::shared_ptr&lt;std::iostream&gt;</a> pInputStream,</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> ThisParameters = <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>()</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        );</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a07e1bb21388d6274a665d6ecf0d22ec7">  101</a></span>&#160;    <span class="keyword">virtual</span> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a07e1bb21388d6274a665d6ecf0d22ec7">~ObjIO</a>(){}</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> GetDefaultParameters();</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">static</span> <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> GetDefaultParameters();</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d7b/namespaceread__modelpart__from__json.html#ad28680524391f6d5acb64bbd0d2234b9">ReadModelPart</a>(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="keywordtype">void</span> WriteModelPart(<span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CleanUpProblematicGeometriesInMesh(</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        <span class="keyword">const</span> std::string&amp; rEntityType = <span class="stringliteral">&quot;element&quot;</span>,</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a> FirstNodeId = 1,</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a> FirstElementId = 1,</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a> FirstConditionId = 1,</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AreaTolerance = 1.0e-6</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        );</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d5/d7b/namespaceread__modelpart__from__json.html#ad28680524391f6d5acb64bbd0d2234b9">ReadModelPart</a>(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordtype">void</span> WriteModelPart(<span class="keyword">const</span> <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    std::string Info() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="keywordtype">void</span> PrintData(std::ostream&amp; rOStream) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160; </div>
+<div class="line"><a name="l00145"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a35ea0dadbf1cf9d147a45dfb377a3a2f">  145</a></span>&#160;    <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a35ea0dadbf1cf9d147a45dfb377a3a2f">mParameters</a>;          </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a066ad06ea8d5d14b4275eee503401dbe">  147</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mFirstNodeId = 0;      </div>
+<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#aa7962560f712a97c90295962b1ad5f49">  148</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mNextNodeId = 0;       </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
+<div class="line"><a name="l00150"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#aa6704df6589b9c7b165e10d7a7f9f7e2">  150</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mFirstElementId = 0;   </div>
+<div class="line"><a name="l00151"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a9b9b859f1d662c8ab8df79afbb66d70d">  151</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mNextElementId = 0;    </div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
+<div class="line"><a name="l00153"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a9d768a0f3789ae895855b6d535bd1456">  153</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mFirstConditionId = 0; </div>
+<div class="line"><a name="l00154"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#acd25bf6e3275cee285a2bdcbf4ba78e8">  154</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mNextConditionId = 0;  </div>
 <div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    std::string Info() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00156"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a4d1f08d994a63bdc5dd4ae322e7b2d13">  156</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mNormalCounter = 0;    </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a391139ce979b63717f77fcf0facf145c">Kratos::shared_ptr&lt;std::iostream&gt;</a> mpInputStream; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> mOptions; </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;    <span class="keywordtype">void</span> PrintData(std::ostream&amp; rOStream) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a35ea0dadbf1cf9d147a45dfb377a3a2f">  174</a></span>&#160;    <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a35ea0dadbf1cf9d147a45dfb377a3a2f">mParameters</a>;          </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
-<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a066ad06ea8d5d14b4275eee503401dbe">  176</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mFirstNodeId = 0;      </div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#aa7962560f712a97c90295962b1ad5f49">  177</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mNextNodeId = 0;       </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#aa6704df6589b9c7b165e10d7a7f9f7e2">  179</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mFirstElementId = 0;   </div>
-<div class="line"><a name="l00180"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a9b9b859f1d662c8ab8df79afbb66d70d">  180</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mNextElementId = 0;    </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a9d768a0f3789ae895855b6d535bd1456">  182</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mFirstConditionId = 0; </div>
-<div class="line"><a name="l00183"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#acd25bf6e3275cee285a2bdcbf4ba78e8">  183</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mNextConditionId = 0;  </div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keywordtype">void</span> ReadVerticesAndFaces(</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keyword">const</span> std::string&amp; rEntityType = <span class="stringliteral">&quot;element&quot;</span>,</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> NormalAsHistoricalVariable = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> DecomposeQuadrilateral = <span class="keyword">false</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        );</div>
 <div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a4d1f08d994a63bdc5dd4ae322e7b2d13">  185</a></span>&#160;    <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> mNormalCounter = 0;    </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a391139ce979b63717f77fcf0facf145c">Kratos::shared_ptr&lt;std::iostream&gt;</a> mpInputStream; </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a> mOptions; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    <span class="keywordtype">void</span> ReadVerticesAndFaces(</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;        <span class="keyword">const</span> std::string&amp; rEntityType = <span class="stringliteral">&quot;element&quot;</span>,</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> NormalAsHistoricalVariable = <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> DecomposeQuadrilateral = <span class="keyword">false</span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        );</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <span class="keywordtype">void</span> ParseVertexLine(</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keyword">const</span> std::string&amp; rLine</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        );</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">void</span> ParseNormalLine(</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="keyword">const</span> std::string&amp; rLine,</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> NormalAsHistoricalVariable = <span class="keyword">false</span></div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        );</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;    <span class="keywordtype">void</span> ParseFaceLine(</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="keyword">const</span> std::string&amp; rLine,</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="keyword">const</span> std::string&amp; rEntityType = <span class="stringliteral">&quot;element&quot;</span>,</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> DecomposeQuadrilateral = <span class="keyword">false</span></div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        );</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keywordtype">void</span> ParseVertexLine(</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keyword">const</span> std::string&amp; rLine</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        );</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    <span class="keywordtype">void</span> ParseNormalLine(</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        <span class="keyword">const</span> std::string&amp; rLine,</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> NormalAsHistoricalVariable = <span class="keyword">false</span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        );</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    <span class="keywordtype">void</span> ParseFaceLine(</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keyword">const</span> std::string&amp; rLine,</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <span class="keyword">const</span> std::string&amp; rEntityType = <span class="stringliteral">&quot;element&quot;</span>,</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> DecomposeQuadrilateral = <span class="keyword">false</span></div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    std::vector&lt;std::string&gt; Tokenize(<span class="keyword">const</span> std::string&amp; rLine);</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160; </div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}; <span class="comment">// Class ObjIO</span></div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga69150ea668ba1f4037ad320a00e66f46">  240</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(std::ostream&amp; rOStream,</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html">ObjIO</a>&amp; rThis)</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;{</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    rThis.<a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#adfce384ea3056fceaad03a2914bd5d50">PrintInfo</a>(rOStream);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    rOStream &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    rThis.<a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#afea3647442b3faf0401d74813d8d85a3">PrintData</a>(rOStream);</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;}</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    std::vector&lt;std::string&gt; Tokenize(<span class="keyword">const</span> std::string&amp; rLine);</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TEntityType&gt;</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> CleanUpProblematicGeometries(</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart,</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> FirstNodeId = 1,</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">IndexType</a> FirstEntityId = 1,</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> AreaTolerance = 1.0e-6</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        );</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> TEntityType&gt;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> RemoveEntitiesAndNodes(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160; </div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}; <span class="comment">// Class ObjIO</span></div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;<span class="comment">// Helper function definitions specialization</span></div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;<span class="keywordtype">void</span> ObjIO::RemoveEntitiesAndNodes&lt;Element&gt;(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart);</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160; </div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;<span class="keyword">template</span> &lt;&gt;</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;<span class="keywordtype">void</span> ObjIO::RemoveEntitiesAndNodes&lt;Condition&gt;(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rThisModelPart);</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga69150ea668ba1f4037ad320a00e66f46">  308</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(std::ostream&amp; rOStream,</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                <span class="keyword">const</span> <a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html">ObjIO</a>&amp; rThis)</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;{</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    rThis.<a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#adfce384ea3056fceaad03a2914bd5d50">PrintInfo</a>(rOStream);</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    rOStream &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;    rThis.<a class="code" href="../../df/d62/class_kratos_1_1_obj_i_o.html#afea3647442b3faf0401d74813d8d85a3">PrintData</a>(rOStream);</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;}</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160; </div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
-<div class="ttc" id="aclass_kratos_1_1_element_html_a8426feb246d38685520b978a4a83bf43"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a8426feb246d38685520b978a4a83bf43">Kratos::Element::NodesArrayType</a></div><div class="ttdeci">Geometry&lt; NodeType &gt;::PointsArrayType NodesArrayType</div><div class="ttdoc">definition of nodes container type, redefined from GeometryType</div><div class="ttdef"><b>Definition:</b> element.h:86</div></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="aclass_kratos_1_1_flags_html"><div class="ttname"><a href="../../d9/d4f/class_kratos_1_1_flags.html">Kratos::Flags</a></div><div class="ttdoc">Forward declaration.</div><div class="ttdef"><b>Definition:</b> flags.h:56</div></div>
 <div class="ttc" id="aclass_kratos_1_1_i_o_html"><div class="ttname"><a href="../../d2/d4d/class_kratos_1_1_i_o.html">Kratos::IO</a></div><div class="ttdoc">IO provides different implementation of input output procedures which can be used to read and write w...</div><div class="ttdef"><b>Definition:</b> io.h:58</div></div>
 <div class="ttc" id="aclass_kratos_1_1_model_part_html"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html">Kratos::ModelPart</a></div><div class="ttdoc">This class aims to manage meshes for multi-physics simulations.</div><div class="ttdef"><b>Definition:</b> model_part.h:77</div></div>
-<div class="ttc" id="aclass_kratos_1_1_model_part_html_a11b954c23406c77fae151a6e0587af66"><div class="ttname"><a href="../../d1/d79/class_kratos_1_1_model_part.html#a11b954c23406c77fae151a6e0587af66">Kratos::ModelPart::GeometriesMapType</a></div><div class="ttdeci">GeometryContainerType::GeometriesMapType GeometriesMapType</div><div class="ttdoc">Geometry Hash Map Container. Stores with hash of Ids to corresponding geometries.</div><div class="ttdef"><b>Definition:</b> model_part.h:246</div></div>
 <div class="ttc" id="aclass_kratos_1_1_obj_i_o_html"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html">Kratos::ObjIO</a></div><div class="ttdoc">This class reads from OBJ file format and creates elements in given model_part.</div><div class="ttdef"><b>Definition:</b> obj_io.h:58</div></div>
-<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_a07e1bb21388d6274a665d6ecf0d22ec7"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#a07e1bb21388d6274a665d6ecf0d22ec7">Kratos::ObjIO::~ObjIO</a></div><div class="ttdeci">virtual ~ObjIO()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> obj_io.h:107</div></div>
-<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_a35ea0dadbf1cf9d147a45dfb377a3a2f"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#a35ea0dadbf1cf9d147a45dfb377a3a2f">Kratos::ObjIO::mParameters</a></div><div class="ttdeci">Parameters mParameters</div><div class="ttdef"><b>Definition:</b> obj_io.h:174</div></div>
+<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_a07e1bb21388d6274a665d6ecf0d22ec7"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#a07e1bb21388d6274a665d6ecf0d22ec7">Kratos::ObjIO::~ObjIO</a></div><div class="ttdeci">virtual ~ObjIO()</div><div class="ttdoc">Destructor.</div><div class="ttdef"><b>Definition:</b> obj_io.h:101</div></div>
+<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_a35ea0dadbf1cf9d147a45dfb377a3a2f"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#a35ea0dadbf1cf9d147a45dfb377a3a2f">Kratos::ObjIO::mParameters</a></div><div class="ttdeci">Parameters mParameters</div><div class="ttdef"><b>Definition:</b> obj_io.h:145</div></div>
 <div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_a4b2d9587c49bbf785ffe3da218f15913"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#a4b2d9587c49bbf785ffe3da218f15913">Kratos::ObjIO::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(ObjIO)</div><div class="ttdoc">Pointer definition of ObjIO.</div></div>
-<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_a893e6ac1eb1e09be1036025bf29695d1"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">Kratos::ObjIO::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdoc">The index type definition.</div><div class="ttdef"><b>Definition:</b> obj_io.h:73</div></div>
-<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_adfce384ea3056fceaad03a2914bd5d50"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#adfce384ea3056fceaad03a2914bd5d50">Kratos::ObjIO::PrintInfo</a></div><div class="ttdeci">void PrintInfo(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> obj_io.cpp:679</div></div>
-<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_afea3647442b3faf0401d74813d8d85a3"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#afea3647442b3faf0401d74813d8d85a3">Kratos::ObjIO::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> obj_io.cpp:687</div></div>
+<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_a893e6ac1eb1e09be1036025bf29695d1"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#a893e6ac1eb1e09be1036025bf29695d1">Kratos::ObjIO::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdoc">The index type definition.</div><div class="ttdef"><b>Definition:</b> obj_io.h:67</div></div>
+<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_adfce384ea3056fceaad03a2914bd5d50"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#adfce384ea3056fceaad03a2914bd5d50">Kratos::ObjIO::PrintInfo</a></div><div class="ttdeci">void PrintInfo(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print information about this object.</div><div class="ttdef"><b>Definition:</b> obj_io.cpp:432</div></div>
+<div class="ttc" id="aclass_kratos_1_1_obj_i_o_html_afea3647442b3faf0401d74813d8d85a3"><div class="ttname"><a href="../../df/d62/class_kratos_1_1_obj_i_o.html#afea3647442b3faf0401d74813d8d85a3">Kratos::ObjIO::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const override</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> obj_io.cpp:440</div></div>
 <div class="ttc" id="aclass_kratos_1_1_parameters_html"><div class="ttname"><a href="../../dd/da0/class_kratos_1_1_parameters.html">Kratos::Parameters</a></div><div class="ttdoc">This class provides to Kratos a data structure for I/O based on the standard of JSON.</div><div class="ttdef"><b>Definition:</b> kratos_parameters.h:59</div></div>
-<div class="ttc" id="aclass_kratos_1_1_pointer_hash_map_set_html"><div class="ttname"><a href="../../d8/d5c/class_kratos_1_1_pointer_hash_map_set.html">Kratos::PointerHashMapSet&lt; GeometryType, std::hash&lt; std::size_t &gt;, GetGeometryId, GeometryPointerType &gt;</a></div></div>
-<div class="ttc" id="aclass_kratos_1_1_pointer_vector_html"><div class="ttname"><a href="../../de/d83/class_kratos_1_1_pointer_vector.html">Kratos::PointerVector</a></div><div class="ttdoc">PointerVector is a container like stl vector but using a vector to store pointers to its data.</div><div class="ttdef"><b>Definition:</b> pointer_vector.h:72</div></div>
 <div class="ttc" id="adefine_8h_html"><div class="ttname"><a href="../../df/d67/define_8h.html">define.h</a></div></div>
-<div class="ttc" id="agroup___kratos_core_html_ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">Kratos::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdoc">The definition of the index type.</div><div class="ttdef"><b>Definition:</b> key_hash.h:35</div></div>
 <div class="ttc" id="aio_8h_html"><div class="ttname"><a href="../../dc/dac/io_8h.html">io.h</a></div></div>
 <div class="ttc" id="anamespace_d_e_m__run__all__benchmarks__analysis_html_ae4e86e61829e268ef6a8a671b6db6ad4"><div class="ttname"><a href="../../d1/d3b/namespace_d_e_m__run__all__benchmarks__analysis.html#ae4e86e61829e268ef6a8a671b6db6ad4">DEM_run_all_benchmarks_analysis.path</a></div><div class="ttdeci">string path</div><div class="ttdef"><b>Definition:</b> DEM_run_all_benchmarks_analysis.py:10</div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
@@ -271,7 +234,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 23 2024 03:21:44 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Oct 24 2024 03:22:14 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
