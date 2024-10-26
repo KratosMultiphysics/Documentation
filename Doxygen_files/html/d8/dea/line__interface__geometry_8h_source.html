@@ -342,33 +342,35 @@ $(function() {
 <div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> points                  = this-&gt;<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#aaca9b13fdaebdeb695f1158e62e422c9">Points</a>();</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> number_of_midline_nodes = std::size_t{points.size() / 2};</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keyword">auto</span> is_null = [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; rNodePtr) { <span class="keywordflow">return</span> rNodePtr == <span class="keyword">nullptr</span>; };</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keywordflow">if</span> (std::any_of(points.ptr_begin(), points.ptr_end(), is_null)) {</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <span class="comment">// At least one point is not defined, so the points of the mid-line can&#39;t be computed.</span></div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="comment">// As a result, all the mid-line points will be undefined.</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordflow">return</span> PointerVector&lt;Node&gt;{number_of_midline_nodes};</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        }</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160; </div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        <span class="keyword">auto</span> result = PointerVector&lt;Node&gt;{};</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keywordflow">for</span> (std::size_t <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> = 0; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> &lt; number_of_midline_nodes; ++<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> mid_point = (points[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>] + points[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a> + number_of_midline_nodes]) / 2;</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            result.push_back(make_intrusive&lt;Node&gt;(points[<a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>].<a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html#a6a78c4a94b491bfa7e9b79795ad8e42b">Id</a>(), mid_point));</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        }</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;    std::unique_ptr&lt;BaseType&gt; mMidLineGeometry;</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;};</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keyword">auto</span>       result                  = PointerVector&lt;Node&gt;{number_of_midline_nodes};</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        <span class="keyword">auto</span> is_null = [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; rNodePtr) { <span class="keywordflow">return</span> rNodePtr == <span class="keyword">nullptr</span>; };</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;        <span class="keywordflow">if</span> (std::any_of(points.ptr_begin(), points.ptr_end(), is_null)) {</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="comment">// At least one point is not defined, so the points of the mid-line can&#39;t be computed.</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="comment">// As a result, all the mid-line points will be undefined.</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;        }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;        <span class="keyword">auto</span> begin_of_first_side  = points.ptr_begin();</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        <span class="keyword">auto</span> begin_of_second_side = begin_of_first_side + number_of_midline_nodes;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;        <span class="keyword">auto</span> make_mid_point       = [](<span class="keyword">auto</span> pPoint1, <span class="keyword">auto</span> pPoint2) {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordflow">return</span> make_intrusive&lt;Node&gt;(pPoint1-&gt;Id(), Point{(*pPoint1 + *pPoint2) / 2});</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        };</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        std::transform(begin_of_first_side, begin_of_second_side, begin_of_second_side,</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                       result.ptr_begin(), make_mid_point);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
 <div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160; </div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    std::unique_ptr&lt;BaseType&gt; mMidLineGeometry;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;};</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;} <span class="comment">// namespace Kratos</span></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_data_html_a86f17c328cce116053a8786b7a0f404f"><div class="ttname"><a href="../../dc/d8c/class_kratos_1_1_geometry_data.html#a86f17c328cce116053a8786b7a0f404f">Kratos::GeometryData::IntegrationMethod</a></div><div class="ttdeci">IntegrationMethod</div><div class="ttdef"><b>Definition:</b> geometry_data.h:76</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_a3cc5848cd4aba1954d1671419bd5c60c"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a3cc5848cd4aba1954d1671419bd5c60c">Kratos::Geometry&lt; Node &gt;::IntegrationPointsArrayType</a></div><div class="ttdeci">std::vector&lt; IntegrationPointType &gt; IntegrationPointsArrayType</div><div class="ttdef"><b>Definition:</b> geometry.h:161</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_a4e212e45e37562f4525995fe03c1a329"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a4e212e45e37562f4525995fe03c1a329">Kratos::Geometry&lt; Node &gt;::SetGeometryData</a></div><div class="ttdeci">void SetGeometryData(GeometryData const *pGeometryData)</div><div class="ttdoc">updates the pointer to GeometryData of the respective geometry.</div><div class="ttdef"><b>Definition:</b> geometry.h:3878</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_a606fa3884401b8c2a1689a3b302dc309"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a606fa3884401b8c2a1689a3b302dc309">Kratos::Geometry&lt; Node &gt;::SizeType</a></div><div class="ttdeci">std::size_t SizeType</div><div class="ttdef"><b>Definition:</b> geometry.h:144</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_a62faca8288b90e7d21fdb090cf38bc87"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a62faca8288b90e7d21fdb090cf38bc87">Kratos::Geometry&lt; Node &gt;::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdef"><b>Definition:</b> geometry.h:137</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geometry_html_a6a78c4a94b491bfa7e9b79795ad8e42b"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#a6a78c4a94b491bfa7e9b79795ad8e42b">Kratos::Geometry&lt; Node &gt;::Id</a></div><div class="ttdeci">IndexType const &amp; Id() const</div><div class="ttdoc">Id of this Geometry.</div><div class="ttdef"><b>Definition:</b> geometry.h:964</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html_aaca9b13fdaebdeb695f1158e62e422c9"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html#aaca9b13fdaebdeb695f1158e62e422c9">Kratos::Geometry&lt; Node &gt;::Points</a></div><div class="ttdeci">const PointsArrayType &amp; Points() const</div><div class="ttdef"><b>Definition:</b> geometry.h:1768</div></div>
 <div class="ttc" id="aclass_kratos_1_1_integration_info_html"><div class="ttname"><a href="../../d6/d94/class_kratos_1_1_integration_info.html">Kratos::IntegrationInfo</a></div><div class="ttdoc">Integration information for the creation of integration points.</div><div class="ttdef"><b>Definition:</b> integration_info.h:35</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, 1 &gt;</a></div></div>
@@ -424,12 +426,11 @@ $(function() {
 <div class="ttc" id="agroup___kratos_core_html_ga376e02451bc7cc3a5fd77b57f0549e6b"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a></div><div class="ttdeci">#define KRATOS_ERROR</div><div class="ttdef"><b>Definition:</b> exception.h:161</div></div>
 <div class="ttc" id="agroup___kratos_core_html_ga421c079910a05f8a88688b045190ac9b"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga421c079910a05f8a88688b045190ac9b">KRATOS_ERROR_IF_NOT</a></div><div class="ttdeci">#define KRATOS_ERROR_IF_NOT(conditional)</div><div class="ttdef"><b>Definition:</b> exception.h:163</div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
-<div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="anode_8h_html"><div class="ttname"><a href="../../d1/d77/node_8h.html">node.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 25 2024 02:41:08 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Oct 26 2024 02:35:53 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
