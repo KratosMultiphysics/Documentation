@@ -129,10 +129,14 @@ $(function() {
 <p>$$K_0^{nc} = 1.0 - \sin \phi$$</p>
 <p>When the overconsolidation ratio ("OCR") and optionally the unloading-reloading Poisson's ratio $\nu_{ur}$ ("POISSON_UNLOADING_RELOADING") are supplied, the normal consolidation value $K_0^{nc}$ is modified:</p>
 <p>$$K_0 = OCR.K_0^{nc} + \frac{\nu_{ur}}{1 - \nu_{ur}} ( OCR - 1 )$$</p>
-<p><img src="../../initial_effective_stress_tensor.png" alt="Initial effective stress tensor" class="inline"/></p>
-<p>Alternatively, when the pre-overburden pressure "POP" is specified, the initial stress tensor becomes:</p>
-<p><img src="../../initial_effective_stress_tensor_with_POP.png" alt="Initial effective stress tensor with POP" class="inline"/></p>
-<p>When the optional unloading-reloading Poisson's ratio is omitted, a default value $\nu_{ur} = 0$ is used such that the correction term drops to 0.</p>
+<div class="fragment"><div class="line">\sigma^{&#39;}_{initial} = \begin{bmatrix} {K_0 \sigma^{&#39;}_{zz}} &amp; 0 &amp; 0 \\</div>
+<div class="line">                                        0 &amp; {K_0 \sigma^{&#39;}_{zz}} &amp; 0 \\</div>
+<div class="line">                                        0 &amp; 0 &amp; {\sigma^{&#39;}_{zz}} \end{bmatrix}</div>
+</div><!-- fragment --><p>Alternatively, when the pre-overburden pressure "POP" is specified, the initial stress tensor becomes:</p>
+<div class="fragment"><div class="line">\sigma^{&#39;}_{initial} = \begin{bmatrix} {K_0^{nc} (\sigma^{&#39;}_{zz} + POP )} - \frac{\nu_{ur}}{1 - \nu_{ur}} POP &amp; 0 &amp; 0 \\</div>
+<div class="line">                                        0 &amp; {K_0^{nc} (\sigma^{&#39;}_{zz} + POP)} - \frac{\nu_{ur}}{1 - \nu_{ur}} POP &amp; 0 \\</div>
+<div class="line">                                        0 &amp; 0 &amp; {\sigma^{&#39;}_{zz}} \end{bmatrix}</div>
+</div><!-- fragment --><p>When the optional unloading-reloading Poisson's ratio is omitted, a default value $\nu_{ur} = 0$ is used such that the correction term drops to 0.</p>
 <h2>Note:</h2>
 <p>After the stress adaptation by the $K_0$ procedure, the stress state may not be in equilibrium with the present external forces anymore. Equilibrium may be reached by performing a step without applying additional load. Reaching equilibrium may then be accomplished by movement.</p>
 <h2>Usage</h2>
@@ -175,7 +179,7 @@ $(function() {
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Oct 29 2024 03:30:27 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Oct 30 2024 03:30:28 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
