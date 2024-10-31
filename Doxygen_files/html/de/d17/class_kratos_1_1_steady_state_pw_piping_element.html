@@ -922,9 +922,6 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ab453c98d8e8421918646ec519c9656da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b82c2e2043209bdf4af932f77bef45c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a9b82c2e2043209bdf4af932f77bef45c">CalculateOnIntegrationPoints</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rVariable, std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &gt; &amp;rValues, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo) override</td></tr>
 <tr class="separator:a9b82c2e2043209bdf4af932f77bef45c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84c9f3234fb64c9d8200fd1420250101"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a84c9f3234fb64c9d8200fd1420250101">CalculateParticleDiameter</a> (const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6fc34b088a4dbbfe82a57b8a946e9be4">PropertiesType</a> &amp;Prop)</td></tr>
-<tr class="memdesc:a84c9f3234fb64c9d8200fd1420250101"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the particle diameter for the particles in the pipe. The particle diameter equals d70, when the unmodified sellmeijer piping rule is used.  <a href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html#a84c9f3234fb64c9d8200fd1420250101">More...</a><br /></td></tr>
-<tr class="separator:a84c9f3234fb64c9d8200fd1420250101"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_kratos_1_1_steady_state_pw_interface_element"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_kratos_1_1_steady_state_pw_interface_element')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../db/d2d/class_kratos_1_1_steady_state_pw_interface_element.html">Kratos::SteadyStatePwInterfaceElement&lt; TDim, TNumNodes &gt;</a></td></tr>
 <tr class="memitem:aae7e448004a844a1c4d036ac79482bed inherit pro_methods_class_kratos_1_1_steady_state_pw_interface_element"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2d/class_kratos_1_1_steady_state_pw_interface_element.html#aae7e448004a844a1c4d036ac79482bed">CalculateAndAddLHS</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ab7dd9e43da6c61bd44ff4f76b28544ca">MatrixType</a> &amp;rLeftHandSideMatrix, <a class="el" href="../../db/d2d/class_kratos_1_1_steady_state_pw_interface_element.html#a381f42a65b65c3659cd5c7e93c4c4c1f">InterfaceElementVariables</a> &amp;rVariables) override</td></tr>
 <tr class="separator:aae7e448004a844a1c4d036ac79482bed inherit pro_methods_class_kratos_1_1_steady_state_pw_interface_element"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1959,44 +1956,6 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 
 </div>
 </div>
-<a id="a84c9f3234fb64c9d8200fd1420250101"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84c9f3234fb64c9d8200fd1420250101">&#9670;&nbsp;</a></span>CalculateParticleDiameter()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> <a class="el" href="../../de/d17/class_kratos_1_1_steady_state_pw_piping_element.html">Kratos::SteadyStatePwPipingElement</a>&lt; TDim, TNumNodes &gt;::CalculateParticleDiameter </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6fc34b088a4dbbfe82a57b8a946e9be4">PropertiesType</a> &amp;&#160;</td>
-          <td class="paramname"><em>Prop</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Calculate the particle diameter for the particles in the pipe. The particle diameter equals d70, when the unmodified sellmeijer piping rule is used. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">Prop</td><td></td></tr>
-    <tr><td class="paramname">Geom</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
 <a id="adaae28657aeac216de5e3713c7f9ecf4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adaae28657aeac216de5e3713c7f9ecf4">&#9670;&nbsp;</a></span>Check()</h2>
 
@@ -2287,7 +2246,7 @@ template&lt;unsigned int TDim, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Oct 30 2024 04:01:48 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Oct 31 2024 04:01:46 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
