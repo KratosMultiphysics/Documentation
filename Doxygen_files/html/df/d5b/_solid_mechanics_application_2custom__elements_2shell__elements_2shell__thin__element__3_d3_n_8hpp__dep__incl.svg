@@ -58,12 +58,12 @@ var sectionId = 'dynsection-1';
 <g id="node1" class="node">
 <title>Node1</title>
 <g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="142,-189.5 142,-252.5 337,-252.5 337,-189.5 142,-189.5"/>
-<text text-anchor="start" x="150" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/Documentation</text>
-<text text-anchor="start" x="150" y="-229.5" font-family="Helvetica,sans-Serif" font-size="10.00">/Documentation/master/applications</text>
-<text text-anchor="start" x="150" y="-218.5" font-family="Helvetica,sans-Serif" font-size="10.00">/SolidMechanicsApplication/custom</text>
-<text text-anchor="start" x="150" y="-207.5" font-family="Helvetica,sans-Serif" font-size="10.00">_elements/shell_elements/shell_thin</text>
-<text text-anchor="middle" x="239.5" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00">_element_3D3N.hpp</text>
+<polygon fill="#bfbfbf" stroke="black" points="108,-189.5 108,-252.5 303,-252.5 303,-189.5 108,-189.5"/>
+<text text-anchor="start" x="116" y="-240.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/Documentation</text>
+<text text-anchor="start" x="116" y="-229.5" font-family="Helvetica,sans-Serif" font-size="10.00">/Documentation/master/applications</text>
+<text text-anchor="start" x="116" y="-218.5" font-family="Helvetica,sans-Serif" font-size="10.00">/SolidMechanicsApplication/custom</text>
+<text text-anchor="start" x="116" y="-207.5" font-family="Helvetica,sans-Serif" font-size="10.00">_elements/shell_elements/shell_thin</text>
+<text text-anchor="middle" x="205.5" y="-196.5" font-family="Helvetica,sans-Serif" font-size="10.00">_element_3D3N.hpp</text>
 </a>
 </g>
 </g>
@@ -83,55 +83,37 @@ var sectionId = 'dynsection-1';
 <!-- Node1&#45;&gt;Node2 -->
 <g id="edge1" class="edge">
 <title>Node1&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M149.58,-184.08C136.86,-175.58 125.18,-165.3 116.5,-153 98.08,-126.89 94.8,-89.66 95.2,-63.61"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="147.74,-187.06 158.07,-189.42 151.47,-181.13 147.74,-187.06"/>
+<path fill="none" stroke="midnightblue" d="M182.49,-180.16C162.36,-145.31 133.55,-95.42 115.18,-63.61"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="179.63,-182.21 187.67,-189.12 185.7,-178.71 179.63,-182.21"/>
 </g>
 <!-- Node3 -->
 <g id="node3" class="node">
 <title>Node3</title>
-<g id="a_node3"><a xlink:href="../../d8/df1/add__cross__sections__to__python_8cpp.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="126,-100.5 126,-152.5 353,-152.5 353,-100.5 126,-100.5"/>
-<text text-anchor="start" x="134" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/Documentation</text>
-<text text-anchor="start" x="134" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">/Documentation/master/applications</text>
-<text text-anchor="start" x="134" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">/SolidMechanicsApplication/custom</text>
-<text text-anchor="middle" x="239.5" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">_python/add_cross_sections_to_python.cpp</text>
+<g id="a_node3"><a xlink:href="../../d4/d0a/solid__mechanics__application_8h.html" target="_top" xlink:title=" ">
+<polygon fill="none" stroke="black" points="216.5,-100.5 216.5,-152.5 410.5,-152.5 410.5,-100.5 216.5,-100.5"/>
+<text text-anchor="start" x="224.5" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/Documentation</text>
+<text text-anchor="start" x="224.5" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">/Documentation/master/applications</text>
+<text text-anchor="start" x="224.5" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">/SolidMechanicsApplication/solid</text>
+<text text-anchor="middle" x="313.5" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mechanics_application.h</text>
 </a>
 </g>
 </g>
 <!-- Node1&#45;&gt;Node3 -->
 <g id="edge2" class="edge">
 <title>Node1&#45;&gt;Node3</title>
-<path fill="none" stroke="midnightblue" d="M239.5,-179.42C239.5,-170.36 239.5,-161 239.5,-152.77"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="236,-179.46 239.5,-189.46 243,-179.46 236,-179.46"/>
+<path fill="none" stroke="midnightblue" d="M248.8,-182.91C260.62,-172.79 273.15,-162.06 284,-152.77"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="246.48,-180.29 241.16,-189.46 251.03,-185.61 246.48,-180.29"/>
+</g>
+<!-- Node3&#45;&gt;Node2 -->
+<g id="edge4" class="edge">
+<title>Node3&#45;&gt;Node2</title>
+<path fill="none" stroke="midnightblue" d="M245.54,-96.4C221.21,-85.98 193.73,-74.21 169.1,-63.66"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="244.48,-99.75 255.05,-100.47 247.23,-93.31 244.48,-99.75"/>
 </g>
 <!-- Node4 -->
 <g id="node4" class="node">
 <title>Node4</title>
-<g id="a_node4"><a xlink:href="../../d4/d0a/solid__mechanics__application_8h.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="371.5,-100.5 371.5,-152.5 565.5,-152.5 565.5,-100.5 371.5,-100.5"/>
-<text text-anchor="start" x="379.5" y="-140.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/Documentation</text>
-<text text-anchor="start" x="379.5" y="-129.5" font-family="Helvetica,sans-Serif" font-size="10.00">/Documentation/master/applications</text>
-<text text-anchor="start" x="379.5" y="-118.5" font-family="Helvetica,sans-Serif" font-size="10.00">/SolidMechanicsApplication/solid</text>
-<text text-anchor="middle" x="468.5" y="-107.5" font-family="Helvetica,sans-Serif" font-size="10.00">_mechanics_application.h</text>
-</a>
-</g>
-</g>
-<!-- Node1&#45;&gt;Node4 -->
-<g id="edge3" class="edge">
-<title>Node1&#45;&gt;Node4</title>
-<path fill="none" stroke="midnightblue" d="M324.6,-185.63C351.7,-174.68 381.16,-162.78 406.32,-152.62"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="323.08,-182.47 315.12,-189.46 325.7,-188.96 323.08,-182.47"/>
-</g>
-<!-- Node4&#45;&gt;Node2 -->
-<g id="edge5" class="edge">
-<title>Node4&#45;&gt;Node2</title>
-<path fill="none" stroke="midnightblue" d="M361.81,-100.07C361.7,-100.05 361.6,-100.02 361.5,-100 291.79,-83.7 273.8,-81.97 204.5,-64 201.41,-63.2 198.28,-62.37 195.11,-61.53"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="360.87,-103.45 371.41,-102.32 362.47,-96.63 360.87,-103.45"/>
-</g>
-<!-- Node5 -->
-<g id="node5" class="node">
-<title>Node5</title>
-<g id="a_node5"><a xlink:href="../../dc/d5a/_solid_mechanics_application_2custom__elements_2shell__elements_2shell__thick__element__3_d4_n_8cpp.html" target="_top" xlink:title=" ">
+<g id="a_node4"><a xlink:href="../../dc/d5a/_solid_mechanics_application_2custom__elements_2shell__elements_2shell__thick__element__3_d4_n_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="213.5,-0.5 213.5,-63.5 413.5,-63.5 413.5,-0.5 213.5,-0.5"/>
 <text text-anchor="start" x="221.5" y="-51.5" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/Documentation</text>
 <text text-anchor="start" x="221.5" y="-40.5" font-family="Helvetica,sans-Serif" font-size="10.00">/Documentation/master/applications</text>
@@ -141,16 +123,16 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node5 -->
-<g id="edge4" class="edge">
-<title>Node4&#45;&gt;Node5</title>
-<path fill="none" stroke="midnightblue" d="M417.87,-95.29C400.88,-85.15 381.93,-73.84 364.88,-63.66"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="416.17,-98.35 426.55,-100.47 419.76,-92.34 416.17,-98.35"/>
+<!-- Node3&#45;&gt;Node4 -->
+<g id="edge3" class="edge">
+<title>Node3&#45;&gt;Node4</title>
+<path fill="none" stroke="midnightblue" d="M313.5,-89.94C313.5,-81.23 313.5,-71.97 313.5,-63.51"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="310,-90.22 313.5,-100.22 317,-90.22 310,-90.22"/>
 </g>
-<!-- Node6 -->
-<g id="node6" class="node">
-<title>Node6</title>
-<g id="a_node6"><a xlink:href="../../da/d03/_solid_mechanics_application_2custom__utilities_2shell__cross__section_8cpp.html" target="_top" xlink:title=" ">
+<!-- Node5 -->
+<g id="node5" class="node">
+<title>Node5</title>
+<g id="a_node5"><a xlink:href="../../da/d03/_solid_mechanics_application_2custom__utilities_2shell__cross__section_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="431.5,-6 431.5,-58 625.5,-58 625.5,-6 431.5,-6"/>
 <text text-anchor="start" x="439.5" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/Documentation</text>
 <text text-anchor="start" x="439.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">/Documentation/master/applications</text>
@@ -159,16 +141,16 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node6 -->
-<g id="edge6" class="edge">
-<title>Node4&#45;&gt;Node6</title>
-<path fill="none" stroke="midnightblue" d="M490.46,-91.64C497.62,-80.6 505.45,-68.54 512.12,-58.25"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="487.4,-89.93 484.9,-100.22 493.27,-93.74 487.4,-89.93"/>
+<!-- Node3&#45;&gt;Node5 -->
+<g id="edge5" class="edge">
+<title>Node3&#45;&gt;Node5</title>
+<path fill="none" stroke="midnightblue" d="M381.2,-96.37C409.8,-84.07 442.78,-69.88 470.27,-58.05"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="379.48,-93.3 371.68,-100.47 382.25,-99.73 379.48,-93.3"/>
 </g>
-<!-- Node7 -->
-<g id="node7" class="node">
-<title>Node7</title>
-<g id="a_node7"><a xlink:href="../../d2/d54/solid__mechanics__application_8cpp.html" target="_top" xlink:title=" ">
+<!-- Node6 -->
+<g id="node6" class="node">
+<title>Node6</title>
+<g id="a_node6"><a xlink:href="../../d2/d54/solid__mechanics__application_8cpp.html" target="_top" xlink:title=" ">
 <polygon fill="none" stroke="black" points="643.5,-6 643.5,-58 837.5,-58 837.5,-6 643.5,-6"/>
 <text text-anchor="start" x="651.5" y="-46" font-family="Helvetica,sans-Serif" font-size="10.00">/home/runner/work/Documentation</text>
 <text text-anchor="start" x="651.5" y="-35" font-family="Helvetica,sans-Serif" font-size="10.00">/Documentation/master/applications</text>
@@ -177,11 +159,11 @@ var sectionId = 'dynsection-1';
 </a>
 </g>
 </g>
-<!-- Node4&#45;&gt;Node7 -->
-<g id="edge7" class="edge">
-<title>Node4&#45;&gt;Node7</title>
-<path fill="none" stroke="midnightblue" d="M551.8,-97.17C588.51,-84.69 631.3,-70.14 666.83,-58.05"/>
-<polygon fill="midnightblue" stroke="midnightblue" points="550.45,-93.93 542.11,-100.47 552.7,-100.56 550.45,-93.93"/>
+<!-- Node3&#45;&gt;Node6 -->
+<g id="edge6" class="edge">
+<title>Node3&#45;&gt;Node6</title>
+<path fill="none" stroke="midnightblue" d="M420.49,-107.63C483.17,-96.51 563.69,-81.1 634.5,-64 642.05,-62.18 649.86,-60.16 657.67,-58.04"/>
+<polygon fill="midnightblue" stroke="midnightblue" points="419.83,-104.2 410.59,-109.38 421.04,-111.09 419.83,-104.2"/>
 </g>
 </g>
 </svg>
