@@ -126,6 +126,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a3664a979306003238ee1db1957a3508c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8742bcc1b5ab4278831af5376a6f40f7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#a8742bcc1b5ab4278831af5376a6f40f7">FillPermeabilityMatrix</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 3, 3 &gt; &amp;rPermeabilityMatrix, const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6fc34b088a4dbbfe82a57b8a946e9be4">Element::PropertiesType</a> &amp;Prop)</td></tr>
 <tr class="separator:a8742bcc1b5ab4278831af5376a6f40f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbd52b7c120f9bf181e6f4fa431f277a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#afbd52b7c120f9bf181e6f4fa431f277a">FillPermeabilityMatrix</a> (const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6fc34b088a4dbbfe82a57b8a946e9be4">Element::PropertiesType</a> &amp;Prop, std::size_t Dimension)</td></tr>
+<tr class="separator:afbd52b7c120f9bf181e6f4fa431f277a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab113bf9c5305ee45ecc980bb37b99766"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ab113bf9c5305ee45ecc980bb37b99766">InvertMatrix2</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 2, 2 &gt; &amp;rInvertedMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 2, 2 &gt; &amp;InputMatrix, <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a> &amp;InputMatrixDet)</td></tr>
 <tr class="separator:ab113bf9c5305ee45ecc980bb37b99766"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab40a1d8b15cbd4a6cdfd06e476ab2c46"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/da0/class_kratos_1_1_geo_element_utilities.html#ab40a1d8b15cbd4a6cdfd06e476ab2c46">InvertMatrix2</a> (<a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 2, 2 &gt; &amp;rInvertedMatrix, const <a class="el" href="../../db/d66/namespace_kratos.html#af814fcac52f0e751de102eff35d08cd3">BoundedMatrix</a>&lt; <a class="el" href="../../db/d66/namespace_kratos.html#ac77084a57869cbecf89d3ee2c819c5d3">double</a>, 2, 2 &gt; &amp;InputMatrix)</td></tr>
@@ -1033,7 +1035,7 @@ template&lt;typename MatrixType1 , typename MatrixType2 &gt; </div>
 </div>
 </div>
 <a id="ad6f6edc51b69ec02ac125e074c09343d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad6f6edc51b69ec02ac125e074c09343d">&#9670;&nbsp;</a></span>FillPermeabilityMatrix() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6f6edc51b69ec02ac125e074c09343d">&#9670;&nbsp;</a></span>FillPermeabilityMatrix() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1069,7 +1071,7 @@ template&lt;typename MatrixType1 , typename MatrixType2 &gt; </div>
 </div>
 </div>
 <a id="a3664a979306003238ee1db1957a3508c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3664a979306003238ee1db1957a3508c">&#9670;&nbsp;</a></span>FillPermeabilityMatrix() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a3664a979306003238ee1db1957a3508c">&#9670;&nbsp;</a></span>FillPermeabilityMatrix() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1105,7 +1107,7 @@ template&lt;typename MatrixType1 , typename MatrixType2 &gt; </div>
 </div>
 </div>
 <a id="a8742bcc1b5ab4278831af5376a6f40f7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8742bcc1b5ab4278831af5376a6f40f7">&#9670;&nbsp;</a></span>FillPermeabilityMatrix() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8742bcc1b5ab4278831af5376a6f40f7">&#9670;&nbsp;</a></span>FillPermeabilityMatrix() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1124,6 +1126,42 @@ template&lt;typename MatrixType1 , typename MatrixType2 &gt; </div>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6fc34b088a4dbbfe82a57b8a946e9be4">Element::PropertiesType</a> &amp;&#160;</td>
           <td class="paramname"><em>Prop</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afbd52b7c120f9bf181e6f4fa431f277a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbd52b7c120f9bf181e6f4fa431f277a">&#9670;&nbsp;</a></span>FillPermeabilityMatrix() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> Kratos::GeoElementUtilities::FillPermeabilityMatrix </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a6fc34b088a4dbbfe82a57b8a946e9be4">Element::PropertiesType</a> &amp;&#160;</td>
+          <td class="paramname"><em>Prop</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::size_t&#160;</td>
+          <td class="paramname"><em>Dimension</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -1375,7 +1413,7 @@ template&lt;unsigned int TDof, unsigned int TNumNodes&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 6 2024 03:56:15 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Nov 7 2024 03:58:25 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
