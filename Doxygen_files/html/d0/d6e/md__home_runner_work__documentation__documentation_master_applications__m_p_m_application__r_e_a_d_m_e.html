@@ -75,51 +75,53 @@ $(function() {
 <div class="title">MPM Application </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>This application implements the Material Point Method (MPM) with main motivations of simulating non-linear large deformable materials, such as free-surface flows, geomechanical phenomena, and extreme events involving impact, penetration, fragmentation, blast, multi-phase interaction, failure evolution, etc.</p>
-<p align="center"></p>
-<p><img src="https://github.com/KratosMultiphysics/Documentation/blob/master/Readme_files/MPMApplication.gif" alt="" width="618" height="280" class="inline"/> </p>
-<h1>Getting Started</h1>
-<p>This application is part of the <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> Multiphysics Platform. Instructions on how to download, install and run the software in your local machine for development and testing purposes are available for both Linux and Windows distributions <a href="https://github.com/KratosMultiphysics/Kratos/blob/master/INSTALL.md">Installation page</a>.</p>
-<h2>Prerequisites</h2>
-<p>Build <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> and check the <a href="https://github.com/KratosMultiphysics/Kratos/blob/master/INSTALL.md#configuration-scripts-examples">configuration files</a></p>
-<p>In LINUX: check that in the /path_to_kratos/scripts/configure.sh the followinglines are written:</p>
-<div class="fragment"><div class="line">-DMPM_APPLICATION=ON</div>
-<div class="line">-DLINEAR_SOLVERS_APPLICATION=ON</div>
-</div><!-- fragment --><p>In WINDOWS: check that in the /path_to_kratos/scripts/configute.bat the following lines appears:</p>
-<div class="fragment"><div class="line">CALL :add_app %KRATOS_APP_DIR%\LinearSolversApplication;</div>
-<div class="line">CALL :add_app %KRATOS_APP_DIR%\MPMApplication;</div>
-</div><!-- fragment --><p>so the MPM application is compiled along with auxiliary linear solvers required.</p>
-<h1>Examples</h1>
-<p>Some use-cases and validation examples are available in the MPM section of the <a href="https://kratosmultiphysics.github.io/Examples/">Examples</a> repository. Also, some unit tests of the main features can be found in the <a href="https://github.com/KratosMultiphysics/Kratos/tree/master/applications/MPMApplication/tests">tests</a> folder.</p>
-<h2>GiD Interface</h2>
-<p>A GiD user interface for the MPM application is also available. It is located in GiD interface repository in <a href="https://github.com/KratosMultiphysics/GiDInterface/tree/master/">GiD interface repository</a>.</p>
-<p>It requires <a href="https://www.gidhome.com/">GiD</a> - Pre and Post Processing software.</p>
+<div class="textblock"><p>This application implements the <b>Material Point Method (MPM)</b> with main motivations of simulating non-linear large deformable materials, such as free-surface flows, geomechanical phenomena, and extreme events involving impact, penetration, fragmentation, blast, multi-phase interaction, failure evolution, etc.</p>
+<p><img src="https://user-images.githubusercontent.com/51473791/191960884-1f1c5a0c-efec-40ca-ac6d-2d53b5530739.gif" alt="MPMApplication" class="inline"/></p>
 <h1>Theory</h1>
-<p>Particle or meshfree methods are a category of methods where the state of a system is represented by a set of particles, without a fixed connectivity; hence, making such methods suitable for the analysis of moving discontinuities and large deformations with breaking and fragmentation. This approach does not suffer from the mesh distortion and entanglement issues posed by other Lagrangian discretizations such as the finite element method.</p>
-<h2>Material Point Method</h2>
-<p>The MPM is an hybrid thechnique which uses a fixed background grid (or mesh) for solving the governing equations in a FEM fashion and set of material particles (MP) for storing all the hystorical variables and material informations. MPM has gained a remarkably increasing popularity due to its capability in simulating problems involving historically dependent materials and large deformations. As MPM is able to combine the strengths of Eulerian and Lagrangian methods, it has been utilized in various engineering applications and industrial purposes, in particular in geomechanics and environmental fluid dynamics field.</p>
-<p>Recommended references for implementation details of MPM in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>:</p><ul>
-<li>Singer, V.; Sautter, K.B., Larese, A., Wüchner, R.; Bletzinger, K.U.; A partitioned material point method and discrete element method coupling scheme, Advanced Modeling and Simulation in Engineering Sciences, 9(16), (2022); DOI: <a href="https://doi.org/10.1186/s40323-022-00229-5">https://doi.org/10.1186/s40323-022-00229-5</a></li>
-<li>Chandra, B., Singer, V., Teschemacher, T., Wuechner, R., &amp; Larese, A. (2021). Nonconforming Dirichlet boundary conditions in implicit material point method by means of penalty augmentation. Acta Geotechnica, 16(8), 2315-2335. DOI: 10.1007/s11440-020-01123-3</li>
-<li>Wilson, P., Wüchner, R., &amp; Fernando, D. (2021). Distillation of the material point method cell crossing error leading to a novel quadrature‐based C 0 remedy. International Journal for Numerical Methods in Engineering, 122(6), 1513-1537.</li>
-<li>Iaconeta, I., Larese, A., Rossi, R., &amp; Oñate, E. (2018). A stabilized mixed implicit Material Point Method for non-linear incompressible solid mechanics. <em>Computational Mechanics</em>, 1-18. DOI 10.1007/s00466-018-1647-9</li>
-<li>Iaconeta, I., Larese, A., Rossi, R., &amp; Zhiming, G. (2016). Comparison of a material point method and a Galerkin meshfree method for the simulation of cohesive-frictional materials. <em>Materials</em>, 10(10), p. 1150. doi: 10.3390/ma10101150</li>
-<li><h1>Features</h1>
-</li>
+<p>Particle or meshfree methods are a family of methods in which the state of a system is represented by a set of particles, without a fixed connectivity. As a consequence, these methods are particularly well suited for the analysis of moving discontinuities and large deformations with breaking and fragmentation. This approach does not suffer from the mesh distortion and entanglement issues posed by other Lagrangian discretizations such as the Finite Element Method (FEM).</p>
+<p>The <b>Material Point Method</b> (MPM) is an hybrid thechnique which uses a fixed background grid (or mesh) for solving the governing equations in a FEM fashion and set of material particles (MP) for storing all the hystorical variables and material informations. The MPM has gained a remarkably increasing popularity due to its capability in simulating problems involving historically dependent materials and large deformations. As MPM is able to combine the strengths of both Eulerian and Lagrangian methods, it has been used in various engineering applications and industrial purposes, in particular in geomechanics and in the environmental fluid dynamics field.</p>
+<h1>Getting Started</h1>
+<p>The <code><a class="el" href="../../d0/d31/namespace_m_p_m_application.html">MPMApplication</a></code> is part of the <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> Multiphysics framework and can be obtained in two different ways:</p><ul>
+<li>by installing the <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> binaries using the package manager <code>pip</code> (suggested for users that want to use the application like a black-box);</li>
+<li>by downloading the source code and compiling it (suggested for developers).</li>
 </ul>
-<p>The following features are currently available and subject to development within the MPM Application:</p><ul>
-<li>Formulation:<ul>
-<li>Irreducible formulations (U displacement based)</li>
-<li>Mixed UP formulations</li>
+<h2>Getting Binaries with <code>pip</code> (users)</h2>
+<p><a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> binaries are available for Linux, Windows and MacOS and can be installed by using the <code>pip</code> package manager.</p>
+<p>Open the terminal and run the following command:</p>
+<div class="fragment"><div class="line">python3 -m pip install KratosMPMApplication</div>
+</div><!-- fragment --><p>This command will install the following packages:</p><ul>
+<li><code>KratosMultiphysics</code>: <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> Multiphysics Core;</li>
+<li><code>KratosMPMApplication</code>: application implementing MPM;</li>
+<li><code>KratosLinearSolversApplication</code>: dependency required by <code><a class="el" href="../../d0/d31/namespace_m_p_m_application.html">MPMApplication</a></code>.</li>
 </ul>
-</li>
-<li>Element types:<ul>
-<li>Updated Lagrangian elements - triangular and quadrilatera (2D) and tetrahedral and hexahedral (3D), structured and unstructured, using classical or partitioned quadrature rules (this latter limited to explicit MPM)</li>
+<h2>Build from Source (developers)</h2>
+<p>Instructions on how to download, compile and run <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> in your local machine for development and testing purposes are available for Linux, Windows and MacOS distributions in the <a href="https://github.com/KratosMultiphysics/Kratos/blob/master/INSTALL.md">installation page</a>.</p>
+<p>In particular, in order to use the <code><a class="el" href="../../d0/d31/namespace_m_p_m_application.html">MPMApplication</a></code> it is also required to compile the auxiliary <code><a class="el" href="../../de/d4f/namespace_linear_solvers_application.html">LinearSolversApplication</a></code>.</p>
+<ul>
+<li>In <b>Linux</b>, the following lines must appear in the <code>/path_to_kratos/scripts/standard_configure.sh</code> file: ```bash export KRATOS_APPLICATIONS= add_app ${KRATOS_APP_DIR}/MPMApplication add_app ${KRATOS_APP_DIR}/LinearSolversApplication ```</li>
+<li>In <b>Windows</b>, the following lines must appear in the <code>/path_to_kratos/scripts/standard_configure.sh</code> file: ```console set KRATOS_APPLICATIONS= CALL :add_app KRATOS_APP_DIR%\MPMApplication; CALL :add_app KRATOS_APP_DIR%\LinearSolversApplication; ```</li>
+</ul>
+<h1>GUI</h1>
+<p>A GUI (Graphic User Interface) for the MPM application is also available within the pre and post processing software <a href="https://www.gidhome.com/">GiD</a>. Instructions on how to download and install it are available in the <a href="https://github.com/KratosMultiphysics/GiDInterface/tree/master/"><code>GiDInterface</code> repository</a>. A basic knowledge of GiD is required.</p>
+<p>Any software able to handle <code>vtk</code> files can be used for post processing (e.g., <code>Paraview</code>).</p>
+<h1>Examples &amp; Tutorials</h1>
+<ul>
+<li>Use-cases and validation examples are available in the MPM section of the <a href="https://kratosmultiphysics.github.io/Examples/">Examples repository</a>.</li>
+<li>Unit tests of the main features can be found in the <a href="https://github.com/KratosMultiphysics/Kratos/tree/master/applications/MPMApplication/tests">tests</a> folder.</li>
+<li>A step-by-step tutorial using GiD for both pre and post processing is available <a href="https://kratosmultiphysics.github.io/Kratos/pages/Applications/MPM_Application/MPM_example_in_GiD/introduction.html">here</a>.</li>
+</ul>
+<h1>Features</h1>
+<p>The following features are currently available and subject to development within the <code><a class="el" href="../../d0/d31/namespace_m_p_m_application.html">MPMApplication</a></code>.</p>
+<p><b>Formulations</b></p><ul>
+<li>Irreducible formulation (u displacement based)</li>
+<li>Mixed UP (displacement/pressure) formulation</li>
+</ul>
+<p><b>Element types</b></p><ul>
+<li>Updated Lagrangian elements - triangular and quadrilateral (2D) and tetrahedral and hexahedral (3D), structured and unstructured, using classical or partitioned quadrature rules (this latter limited to explicit MPM)</li>
 <li>Updated Lagrangian axis-symmetric elements - triangular and quadrilateral (2D), structured and unstructured</li>
-<li>Updated Lagrangian mixed UP elements - triangular (2D) and tetrahedral (3D), structured and unstructured, stabilized using Variational Multiscale Stabilization or Pressure Projection techniques</li>
+<li>Updated Lagrangian mixed UP elements - triangular (2D) and tetrahedral (3D), structured and unstructured, stabilized using Variational Multiscale Stabilization (VMS) or Pressure Projection techniques</li>
 </ul>
-</li>
-<li>Constitutive laws:<ul>
+<p><b>Constitutive laws</b></p><ul>
 <li>Linear isotropic elastic materials - plane strain, plane stress, axis-symmetric, and 3D</li>
 <li>Hyperelastic Neo-Hookean laws - finite strain, plane strain, axis-symmetric, and 3D</li>
 <li>Elasto-plastic laws:<ul>
@@ -133,47 +135,70 @@ $(function() {
 </ul>
 </li>
 </ul>
-</li>
-<li>A set of Boundary conditions:<ul>
-<li>Grid-Based Conditions (conforming): applied directly on the background nodes<ul>
+<p><b>Boundary conditions</b></p><ul>
+<li>Grid-Based Conditions (conforming): applied directly at the background nodes<ul>
 <li>Neumann: Point load</li>
 <li>Neumann: Line load (a distributed load applied over a line)</li>
 <li>Neumann: Surface load (a distributed load applied over a face)</li>
-<li>Dirichlet: Slip and No slip condition on arbitrary boundary.</li>
+<li>Dirichlet: Slip and non-slip conditions for arbitrary inclination</li>
 </ul>
 </li>
-<li>Material Point-Based Conditions (non conforming): applied in moveable boundary particles<ul>
-<li>Neumann: Moving point load</li>
-<li>Dirichlet: Imposition of displacements (homogeneous and inhomogeneous) using penalty method</li>
+<li>Material Point-Based Conditions (non-conforming): applied on movable boundary particles<ul>
+<li>Neumann:<ul>
+<li>moving point load</li>
+<li>interface condition for partitioned coupling with DEM</li>
+</ul>
+</li>
+<li>Dirichlet: fixed, slip or contact condition<ul>
+<li>penalty method</li>
+<li>Lagrange multiplier method (<em>soon in the master branch</em>)</li>
+<li>perturbed Lagrangian method (<em>soon in the master branch</em>)</li>
+<li>interface condition for partitioned coupling with FEM, RBS,...</li>
 </ul>
 </li>
 </ul>
 </li>
-<li>Strategies and schemes:<ul>
+</ul>
+<p><b>Time schemes</b></p><ul>
 <li>Implicit - Newmark/Bossak prediction and correction scheme for static, quasi-static, and dynamic problems</li>
 <li>Explicit</li>
 </ul>
-</li>
-<li>Other features:<ul>
-<li>Partitioned coupling with Finite Element Method - weak and strong coupling of nonconforming discretization</li>
-<li>Partitioned coupling with the Discrete Element Method</li>
-<li>material point erase features - to delete material points outside the interest domain</li>
+<p><b>Other features</b></p><ul>
+<li>Partitioned coupling with Finite Element Method (FEM) - weak and strong coupling of nonconforming discretization</li>
+<li>Partitioned coupling with the Discrete Element Method (DEM)</li>
+<li>Partitioned coupling with the Rigid Body Solver (RBS)</li>
+<li>Material point erase features - to delete material points outside the interest domain</li>
 </ul>
-</li>
+<h1>References</h1>
+<p>Recommended references for implementation details of MPM in <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a>:</p>
+<ul>
+<li>Singer, V., (2024). <b>Partitioned Coupling Strategies to Simulate the Impact of Granular Mass Flows on Flexible Protective Structures</b>, <em>PhD Thesis</em>, Technical University of Munich.</li>
+<li>Singer, V., Teschemacher, T., Larese, A., Wüchner, R., Bletzinger, K.U. (2024). <b>Lagrange multiplier imposition of non-conforming essential boundary conditions in implicit Material Point Method</b>, <em>Computational Mechanics</em>, 73, 1311–1333 DOI: <a href="https://doi.org/10.1007/s00466-023-02412-w">10.1007/s00466-023-02412-w</a>.</li>
+<li>Singer, V., Sautter, K.B., Larese, A., Wüchner, R., Bletzinger K.-U., (2023) <b>Partitioned Coupling Approaches for the Simulation of Natural Hazards Impacting Protective Structures</b>, <em>VIII International Conference on Particle-Based Methods</em>. DOI: <a href="https://doi.org/10.23967/c.particles.2023.002">10.23967/c.particles.2023.002</a>.</li>
+<li>Singer, V., Larese, A., Wüchner, R., Bletzinger K.-U., (2023). <b>Partitioned MPM-FEM Coupling Approach for Advanced Numerical Simulation of Mass-Movement Hazards Impacting Flexible Protective Structures</b>, <em>X International Conference on Computational Methods for Coupled Problems in Science and Engineering</em>. DOI: <a href="https://doi.org/10.23967/c.coupled.2023.026">10.23967/c.coupled.2023.026</a>.</li>
+<li>Singer, V., Sautter, K.B., Larese, A., Wüchner, R., Bletzinger, K.-U. (2022). <b>A partitioned material point method and discrete element method coupling scheme</b>, <em>Advanced Modeling and Simulation in Engineering Sciences</em>, 9(16). DOI: <a href="https://doi.org/10.1186/s40323-022-00229-5">doi.org/10.1186/s40323-022-00229-5</a>.</li>
+<li>Wilson, P., (2022). <b>A computational impact analysis approach leveraging non-conforming spatial, temporal and methodological discretisations</b>, <em>PhD Thesis</em>, University of Queensland. DOI: <a href="https://doi.org/10.14264/3e10f66">10.14264/3e10f66</a>.</li>
+<li>Singer, V., Bodhinanda, C., Larese, A., Wüchner, R., Bletzinger K.-U., (2021). <b>A Staggered Material Point Method and Finite Element Method Coupling Scheme Using Gauss Seidel Communication Pattern</b>, <em>9th edition of the International Conference on Computational Methods for Coupled Problems in Science and Engineering</em>. DOI: <a href="https://doi.org/10.23967/coupled.2021.006">10.23967/coupled.2021.006</a>.</li>
+<li>Chandra, B., Singer, V., Teschemacher, T., Wuechner, R., &amp; Larese, A. (2021). <b>Nonconforming Dirichlet boundary conditions in implicit material point method by means of penalty augmentation</b>, <em>Acta Geotechnica</em>, 16(8), 2315-2335. DOI: <a href="https://doi.org/10.1007/s11440-020-01123-3">10.1007/s11440-020-01123-3</a>.</li>
+<li>Wilson, P., Wüchner, R., &amp; Fernando, D. (2021). <b>Distillation of the material point method cell crossing error leading to a novel quadrature‐based C0 remedy</b>, <em>International Journal for Numerical Methods in Engineering</em>, 122(6), 1513-1537. DOI: <a href="https://doi.org/10.1002/nme.6588">10.1002/nme.6588</a>.</li>
+<li>Iaconeta, I., Larese, A., Rossi, R., &amp; Oñate, E. (2018). <b>A stabilized mixed implicit Material Point Method for non-linear incompressible solid mechanics</b>, <em>Computational Mechanics</em>, 1-18. DOI: <a href="https://doi.org/10.1007/s00466-018-1647-9">10.1007/s00466-018-1647-9</a>.</li>
+<li>Iaconeta, I., Larese, A., Rossi, R., &amp; Zhiming, G. (2016). <b>Comparison of a material point method and a Galerkin meshfree method for the simulation of cohesive-frictional materials</b>, <em>Materials</em>, 10(10), p. 1150. DOI: <a href="https://doi.org/10.3390/ma10101150">10.3390/ma10101150</a>.</li>
 </ul>
 <h1>License</h1>
-<p>The MPM Application is OPEN SOURCE. The main code and program structure is available and aimed to grow with the need of any user willing to expand it. The BSD (Berkeley Software Distribution) licence allows to use and distribute the existing code without any restriction, but with the possibility to develop new parts of the code on an open or close basis depending on the developers.</p>
+<p>The <code><a class="el" href="../../d0/d31/namespace_m_p_m_application.html">MPMApplication</a></code> is <b>Open Source</b>. The main code and program structure is available and aimed to grow with the need of any user willing to expand it. The <b>BSD</b> licence allows to use and distribute the existing code without any restriction, but with the possibility to develop new parts of the code on an open or close basis depending on the developers.</p>
 <h1>Contact</h1>
 <ul>
 <li><b>Antonia Larese</b> - <em>Group Leader</em> - <a href="#" onclick="location.href='mai'+'lto:'+'ant'+'on'+'ia.'+'la'+'res'+'e@'+'uni'+'pd'+'.it'; return false;">antonia.larese@unipd.it</a></li>
 <li><b>Veronika Singer</b> - <em>Developer</em> - <a href="#" onclick="location.href='mai'+'lto:'+'ver'+'on'+'ika'+'.s'+'ing'+'er'+'@tu'+'m.'+'de'; return false;">veronika.singer@tum.de</a></li>
-<li><b>Laura Moreno</b> - <em>Developer</em> - <a href="#" onclick="location.href='mai'+'lto:'+'lau'+'ra'+'.mo'+'re'+'nom'+'ar'+'tin'+'ez'+'@un'+'ip'+'d.i'+'t'; return false;">laura.morenomartinez@unipd.it</a> </li>
+<li><b>Laura Moreno</b> - <em>Developer</em> - <a href="#" onclick="location.href='mai'+'lto:'+'lau'+'ra'+'.mo'+'re'+'nom'+'ar'+'tin'+'ez'+'@ua'+'.e'+'s'; return false;">laura.morenomartinez@ua.es</a></li>
+<li><b>Andi Makarim Katili</b> - <em>Developer</em> - <a href="#" onclick="location.href='mai'+'lto:'+'and'+'i.'+'kat'+'il'+'i@t'+'um'+'.de'; return false;">andi.katili@tum.de</a></li>
+<li><b>Nicolò Crescenzio</b> - <em>Developer</em> - <a href="#" onclick="location.href='mai'+'lto:'+'nic'+'ol'+'o.c'+'re'+'sce'+'nz'+'io@'+'ma'+'th.'+'un'+'ipd'+'.i'+'t'; return false;">nicolo.crescenzio@math.unipd.it</a> </li>
 </ul>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 7 2024 03:26:45 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Nov 8 2024 03:28:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
