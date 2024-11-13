@@ -101,12 +101,12 @@ $(function() {
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment">// Application includes</span></div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &quot;boost/range/adaptor/filtered.hpp&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/dc7/steady__state___pw__piping__element_8hpp.html">custom_elements/steady_state_Pw_piping_element.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d3f/geo__mechanics__newton__raphson__strategy_8hpp.html">custom_strategies/strategies/geo_mechanics_newton_raphson_strategy.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/dee/transport__equation__utilities_8hpp.html">custom_utilities/transport_equation_utilities.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d37/geo__mechanics__application__variables_8h.html">geo_mechanics_application_variables.h</a>&quot;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;chrono&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../da/df9/geo__steady__state___pw__piping__element_8h.html">custom_elements/geo_steady_state_Pw_piping_element.h</a>&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d0/dc7/steady__state___pw__piping__element_8hpp.html">custom_elements/steady_state_Pw_piping_element.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../db/d3f/geo__mechanics__newton__raphson__strategy_8hpp.html">custom_strategies/strategies/geo_mechanics_newton_raphson_strategy.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/dee/transport__equation__utilities_8hpp.html">custom_utilities/transport_equation_utilities.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d6/d37/geo__mechanics__application__variables_8h.html">geo_mechanics_application_variables.h</a>&quot;</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#include &lt;ctime&gt;</span></div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#include &lt;tuple&gt;</span></div>
@@ -130,362 +130,358 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a7b6b9a19311198c9d6ca6ad3368d3e5a">   49</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d7/d7a/class_kratos_1_1_properties.html">PropertiesType</a>           = <a class="code" href="../../d7/d7a/class_kratos_1_1_properties.html">Properties</a>;</div>
 <div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a2d155b026ca1b5f3622bd80f24c6dff0">   50</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d5/ddd/class_kratos_1_1_node.html">NodeType</a>                 = <a class="code" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a>;</div>
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a535d67382f5afcb22ac2130a7fc3149a">   51</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">GeometryType</a>             = <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;NodeType&gt;</a>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a8b77e2f8f65fa1b2cd67e584a981e994">   53</a></span>&#160;    <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a8b77e2f8f65fa1b2cd67e584a981e994">GeoMechanicsNewtonRaphsonErosionProcessStrategy</a>(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp;                    <a class="code" href="../../d6/dd7/namespaceface__heat.html#ab6da0d32b7fcf219eef3ad82012a91c9">model_part</a>,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                                    <span class="keyword">typename</span> TSchemeType::Pointer pScheme,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                                    <span class="keyword">typename</span> TConvergenceCriteriaType::Pointer pNewConvergenceCriteria,</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                                    <span class="keyword">typename</span> TBuilderAndSolverType::Pointer pNewBuilderAndSolver,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                                    <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&amp; rParameters,</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                                    <span class="keywordtype">int</span>         MaxIterations          = 30,</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                    <span class="keywordtype">bool</span>        CalculateReactions     = <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                                    <span class="keywordtype">bool</span>        ReformDofSetAtEachStep = <span class="keyword">false</span>,</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                                    <span class="keywordtype">bool</span>        <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ad2dda17b2c24e571bfdd05e9db418986">MoveMeshFlag</a>           = <span class="keyword">false</span>)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        : <a class="code" href="../../d7/d24/class_kratos_1_1_geo_mechanics_newton_raphson_strategy.html">GeoMechanicsNewtonRaphsonStrategy</a>&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;(</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;              <a class="code" href="../../d6/dd7/namespaceface__heat.html#ab6da0d32b7fcf219eef3ad82012a91c9">model_part</a>, pScheme, pNewConvergenceCriteria, pNewBuilderAndSolver, rParameters, MaxIterations, CalculateReactions, ReformDofSetAtEachStep, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ad2dda17b2c24e571bfdd05e9db418986">MoveMeshFlag</a>)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        rank              = <a class="code" href="../../d6/dd7/namespaceface__heat.html#ab6da0d32b7fcf219eef3ad82012a91c9">model_part</a>.GetCommunicator().MyPID();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        mPipingIterations = rParameters[<span class="stringliteral">&quot;max_piping_iterations&quot;</span>].<a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html#a63d37013189c774a62bd38094c9d0856">GetInt</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a4206b0404542275b5ed5808ea3df4dfe">   69</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a4206b0404542275b5ed5808ea3df4dfe">FinalizeSolutionStep</a>()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Max Piping Iterations: &quot;</span> &lt;&lt; mPipingIterations &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">bool</span> grow = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">// get piping elements</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        std::vector&lt;Element*&gt; PipeElements = <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a45dcfb59dd129612cf6c1de1c1aac998">GetPipingElements</a>();</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">auto</span> piping_interface_elements = std::vector&lt;SteadyStatePwPipingElement&lt;2, 4&gt;*&gt;{};</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        std::transform(</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            PipeElements.begin(), PipeElements.end(), std::back_inserter(piping_interface_elements),</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            [](<span class="keyword">auto</span> p_element) { return dynamic_cast&lt;SteadyStatePwPipingElement&lt;2, 4&gt;*&gt;(p_element); });</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="../../d5/d4d/group___kratos_core.html#gab957b416207ac826a58f2b9503cb0d38">KRATOS_DEBUG_ERROR_IF</a>(std::any_of(piping_interface_elements.begin(),</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                                          piping_interface_elements.end(), [](<span class="keyword">auto</span> p_element) {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            return p_element == nullptr;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        })) &lt;&lt; <span class="stringliteral">&quot;Not all open piping elements could be downcast to SteadyStatePwPipingElement&lt;2, 4&gt;*\n&quot;</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> n_el = PipeElements.size(); <span class="comment">// number of piping elements</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="comment">// get initially open pipe elements</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> openPipeElements = this-&gt;InitialiseNumActivePipeElements(PipeElements);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> (PipeElements.empty()) {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;No Pipe Elements -&gt; Finalizing Solution &quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            this-&gt;BaseClassFinalizeSolutionStep();</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="comment">// calculate max pipe height and pipe increment</span></div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        <span class="keywordtype">double</span> amax = CalculateMaxPipeHeight(PipeElements);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        <span class="comment">// continue this loop, while the pipe is growing in length</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;        <span class="keywordflow">while</span> (grow &amp;&amp; (openPipeElements &lt; n_el)) {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="comment">// todo: JDN (20220817) : grow not used.</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="comment">// bool Equilibrium = false;</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="comment">// get tip element and activate</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* tip_element = PipeElements.at(openPipeElements);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            openPipeElements += 1;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            tip_element-&gt;<a class="code" href="../../d3/d62/class_kratos_1_1_geometrical_object.html#ad8607c3f60c3c4b06c0186d86cbfaa85">SetValue</a>(PIPE_ACTIVE, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">// Get all open pipe elements</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            std::function&lt;<a class="code" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>(<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>*)&gt; <a class="code" href="../../d1/da4/namespacefilter.html">filter</a> = [](<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>) {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>-&gt;Has(PIPE_ACTIVE) &amp;&amp; <a class="code" href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">i</a>-&gt;GetValue(PIPE_ACTIVE);</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            };</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keyword">auto</span> OpenPipeElements = piping_interface_elements | boost::adaptors::filtered(<a class="code" href="../../d1/da4/namespacefilter.html">filter</a>);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;Number of Open Pipe Elements: &quot;</span> &lt;&lt; boost::size(OpenPipeElements) &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            <span class="comment">// non-lin picard iteration, for deepening the pipe</span></div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="comment">// Todo JDN (20220817):: Deal with Equilibrium redundancy</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="comment">// Equilibrium = check_pipe_equilibrium(OpenPipeElements, amax, mPipingIterations);</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            check_pipe_equilibrium(OpenPipeElements, amax, mPipingIterations);</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="comment">// check if pipe should grow in length</span></div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            std::tie(grow, openPipeElements) =</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                check_status_tip_element(openPipeElements, n_el, amax, PipeElements);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            <span class="comment">// if n open elements is lower than total pipe elements, save pipe height current</span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="comment">// growing iteration or reset to previous iteration in case the pipe should not grow.</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordflow">if</span> (openPipeElements &lt; n_el) {</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                save_or_reset_pipe_heights(OpenPipeElements, grow);</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            }</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            <span class="comment">// recalculate groundwater flow</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordtype">bool</span> converged = this-&gt;Recalculate();</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="comment">// error check</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            <a class="code" href="../../d5/d4d/group___kratos_core.html#ga421c079910a05f8a88688b045190ac9b">KRATOS_ERROR_IF_NOT</a>(converged) &lt;&lt; <span class="stringliteral">&quot;Groundwater flow calculation failed to converge.&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        this-&gt;BaseClassFinalizeSolutionStep();</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#ad7ee21dc8d3a9a38e4a0e2bdfc34d7fb">  148</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#ad7ee21dc8d3a9a38e4a0e2bdfc34d7fb">Check</a>()<span class="keyword"> override</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ab84b5439ebfdd69ba2fc533001723f70">BaseType::Check</a>();</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a1be92c602f6fec55824fec1a6deb82e7">GetBuilderAndSolver</a>()-&gt;Check(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>());</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;        this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a47043cf2c8eae2d91e76dba1b5498769">GetScheme</a>()-&gt;Check(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>());</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a45dcfb59dd129612cf6c1de1c1aac998">  159</a></span>&#160;    std::vector&lt;Element*&gt; <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a45dcfb59dd129612cf6c1de1c1aac998">GetPipingElements</a>()</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    {</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp;            CurrentModelPart = this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">GetModelPart</a>();</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        std::vector&lt;Element*&gt; PipeElements;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;        <span class="keywordtype">double</span>                PipeElementStartX;</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>&amp; <a class="code" href="../../d9/db2/structelement.html">element</a> : CurrentModelPart.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a94dfb23c46340061bd57e9b9c4e317c8">Elements</a>()) {</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="../../d9/db2/structelement.html">element</a>.GetProperties().Has(PIPE_START_ELEMENT)) {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                PipeElements.push_back(&amp;<a class="code" href="../../d9/db2/structelement.html">element</a>);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                <span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> startElement = <a class="code" href="../../d9/db2/structelement.html">element</a>.GetProperties()[PIPE_START_ELEMENT];</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                    &lt;&lt; <a class="code" href="../../d9/db2/structelement.html">element</a>.Id() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; startElement &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="../../d9/db2/structelement.html">element</a>.Id() == startElement) {</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    PipeElementStartX = <a class="code" href="../../d9/db2/structelement.html">element</a>.GetGeometry().GetPoint(0)[0];</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;        }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;        <span class="keywordflow">if</span> (PipeElements.empty()) {</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordflow">return</span> PipeElements;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        }</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;        <span class="comment">// Get Maximum X Value in Pipe</span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keyword">auto</span> rightPipe = std::max_element(PipeElements.begin(), PipeElements.end(),</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                                          [](<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a>, <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">b</a>) {</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            return a-&gt;GetGeometry().GetPoint(0)[0] &lt; b-&gt;GetGeometry().GetPoint(0)[0];</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        });</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        <span class="comment">// Get Minimum X Value in Pipe</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <span class="keyword">auto</span> leftPipe = std::min_element(PipeElements.begin(), PipeElements.end(),</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                                         [](<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a>, <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">b</a>) {</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            return a-&gt;GetGeometry().GetPoint(0)[0] &lt; b-&gt;GetGeometry().GetPoint(0)[0];</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;        });</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keywordtype">double</span> minX = leftPipe[0]-&gt;GetGeometry().GetPoint(0)[0];</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <span class="keywordtype">double</span> maxX = rightPipe[0]-&gt;GetGeometry().GetPoint(0)[0];</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160; </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            &lt;&lt; minX &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; maxX &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; PipeElementStartX &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        <span class="keywordflow">if</span> ((minX != PipeElementStartX) &amp;&amp; (maxX != PipeElementStartX)) {</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <a class="code" href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a> &lt;&lt; <span class="stringliteral">&quot;Unable to determine pipe direction (multiple directions possible) -  &quot;</span></div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                            <span class="stringliteral">&quot;Check PIPE_START_ELEMENT&quot;</span></div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                         &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        }</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        <span class="keywordflow">if</span> (minX == PipeElementStartX) {</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="comment">// Pipe Left -&gt; Right</span></div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            sort(PipeElements.begin(), PipeElements.end(), [](<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a433abcc86ff82888f447b695aa396a16">lhs</a>, <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a3c0c3f331487ee9a8f9a615928bb6668">rhs</a>) {</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                return lhs-&gt;GetGeometry().GetPoint(0)[0] &lt; rhs-&gt;GetGeometry().GetPoint(0)[0];</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            });</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            <span class="comment">// Pipe Right -&gt; Left</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            sort(PipeElements.begin(), PipeElements.end(), [](<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a433abcc86ff82888f447b695aa396a16">lhs</a>, <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a3c0c3f331487ee9a8f9a615928bb6668">rhs</a>) {</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                return lhs-&gt;GetGeometry().GetPoint(0)[0] &gt; rhs-&gt;GetGeometry().GetPoint(0)[0];</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            });</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        }</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Number of Pipe Elements: &quot;</span> &lt;&lt; PipeElements.size() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* pipeElement : PipeElements) {</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;PipeElementIDs (in order): &quot;</span> &lt;&lt; pipeElement-&gt;Id() &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        }</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        <span class="keywordflow">return</span> PipeElements;</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;    }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mPipingIterations; </div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">int</span>          rank;</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    <span class="keywordtype">double</span>       small_pipe_height    = 1e-10;</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;    <span class="keywordtype">double</span>       pipe_height_accuracy = small_pipe_height * 10;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160; </div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="keywordtype">int</span> InitialiseNumActivePipeElements(std::vector&lt;Element*&gt; PipeElements)</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        <span class="keywordtype">int</span> nOpenElements = 0;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#af30c219aacfcb5a627e56d2e484b2ef2">   52</a></span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#af30c219aacfcb5a627e56d2e484b2ef2">SizeType</a>                 = std::size_t;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a8b77e2f8f65fa1b2cd67e584a981e994">   54</a></span>&#160;    <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a8b77e2f8f65fa1b2cd67e584a981e994">GeoMechanicsNewtonRaphsonErosionProcessStrategy</a>(<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp;                    <a class="code" href="../../d6/dd7/namespaceface__heat.html#ab6da0d32b7fcf219eef3ad82012a91c9">model_part</a>,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                                    <span class="keyword">typename</span> TSchemeType::Pointer pScheme,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                                                    <span class="keyword">typename</span> TConvergenceCriteriaType::Pointer pNewConvergenceCriteria,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                                    <span class="keyword">typename</span> TBuilderAndSolverType::Pointer pNewBuilderAndSolver,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                                    <a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a>&amp; rParameters,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                                                    <span class="keywordtype">int</span>         MaxIterations          = 30,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                                                    <span class="keywordtype">bool</span>        CalculateReactions     = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                                                    <span class="keywordtype">bool</span>        ReformDofSetAtEachStep = <span class="keyword">false</span>,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                                                    <span class="keywordtype">bool</span>        <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ad2dda17b2c24e571bfdd05e9db418986">MoveMeshFlag</a>           = <span class="keyword">false</span>)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        : <a class="code" href="../../d7/d24/class_kratos_1_1_geo_mechanics_newton_raphson_strategy.html">GeoMechanicsNewtonRaphsonStrategy</a>&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;(</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;              <a class="code" href="../../d6/dd7/namespaceface__heat.html#ab6da0d32b7fcf219eef3ad82012a91c9">model_part</a>, pScheme, pNewConvergenceCriteria, pNewBuilderAndSolver, rParameters, MaxIterations, CalculateReactions, ReformDofSetAtEachStep, <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ad2dda17b2c24e571bfdd05e9db418986">MoveMeshFlag</a>)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        rank              = <a class="code" href="../../d6/dd7/namespaceface__heat.html#ab6da0d32b7fcf219eef3ad82012a91c9">model_part</a>.GetCommunicator().MyPID();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        mPipingIterations = rParameters[<span class="stringliteral">&quot;max_piping_iterations&quot;</span>].<a class="code" href="../../dd/da0/class_kratos_1_1_parameters.html#a63d37013189c774a62bd38094c9d0856">GetInt</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a4206b0404542275b5ed5808ea3df4dfe">   70</a></span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a4206b0404542275b5ed5808ea3df4dfe">FinalizeSolutionStep</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Max Piping Iterations: &quot;</span> &lt;&lt; mPipingIterations &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> piping_elements = <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a45dcfb59dd129612cf6c1de1c1aac998">GetPipingElements</a>();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">if</span> (piping_elements.empty()) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;No Pipe Elements -&gt; Finalizing Solution &quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            this-&gt;BaseClassFinalizeSolutionStep();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">auto</span> piping_interface_elements = std::vector&lt;SteadyStatePwPipingElement&lt;2, 4&gt;*&gt;{};</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        std::transform(piping_elements.begin(), piping_elements.end(),</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                       std::back_inserter(piping_interface_elements), [](<span class="keyword">auto</span> p_element) {</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            return dynamic_cast&lt;SteadyStatePwPipingElement&lt;2, 4&gt;*&gt;(p_element);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        });</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> number_of_piping_interface_elements = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            std::count_if(piping_interface_elements.begin(), piping_interface_elements.end(),</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                          [](<span class="keyword">auto</span> p_element) { return p_element != nullptr; }));</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <a class="code" href="../../d5/d4d/group___kratos_core.html#ga9fdd4e0364598f28a529107663707cf3">KRATOS_ERROR_IF</a>(number_of_piping_interface_elements != 0 &amp;&amp;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        number_of_piping_interface_elements != piping_interface_elements.size())</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Unexpected number of piping interface elements: expected either 0 or &quot;</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            &lt;&lt; piping_interface_elements.size() &lt;&lt; <span class="stringliteral">&quot; but got &quot;</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            &lt;&lt; number_of_piping_interface_elements &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span> (number_of_piping_interface_elements &gt; 0) {</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            this-&gt;DetermineOpenPipingElements(piping_interface_elements);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            this-&gt;BaseClassFinalizeSolutionStep();</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">auto</span> piping_line_elements = std::vector&lt;GeoSteadyStatePwPipingElement&lt;2, 2&gt;*&gt;{};</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        std::transform(piping_elements.begin(), piping_elements.end(),</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                       std::back_inserter(piping_line_elements), [](<span class="keyword">auto</span> p_element) {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            return dynamic_cast&lt;GeoSteadyStatePwPipingElement&lt;2, 2&gt;*&gt;(p_element);</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        });</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> number_of_piping_line_elements = <span class="keyword">static_cast&lt;</span>std::size_t<span class="keyword">&gt;</span>(</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            std::count_if(piping_line_elements.begin(), piping_line_elements.end(),</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                          [](<span class="keyword">auto</span> p_element) { return p_element != nullptr; }));</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <a class="code" href="../../d5/d4d/group___kratos_core.html#ga9fdd4e0364598f28a529107663707cf3">KRATOS_ERROR_IF</a>(number_of_piping_line_elements != piping_line_elements.size())</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Unexpected number of piping line elements: expected &quot;</span> &lt;&lt; piping_line_elements.size()</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            &lt;&lt; <span class="stringliteral">&quot; but got &quot;</span> &lt;&lt; number_of_piping_line_elements &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;        this-&gt;DetermineOpenPipingElements(piping_line_elements);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        this-&gt;BaseClassFinalizeSolutionStep();</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#ad7ee21dc8d3a9a38e4a0e2bdfc34d7fb">  125</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#ad7ee21dc8d3a9a38e4a0e2bdfc34d7fb">Check</a>()<span class="keyword"> override</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ab84b5439ebfdd69ba2fc533001723f70">BaseType::Check</a>();</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a1be92c602f6fec55824fec1a6deb82e7">GetBuilderAndSolver</a>()-&gt;Check(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>());</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        this-&gt;<a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a47043cf2c8eae2d91e76dba1b5498769">GetScheme</a>()-&gt;Check(<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">BaseType::GetModelPart</a>());</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a45dcfb59dd129612cf6c1de1c1aac998">  136</a></span>&#160;    std::vector&lt;Element*&gt; <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a45dcfb59dd129612cf6c1de1c1aac998">GetPipingElements</a>()</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    {</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp;            r_current_model_part = this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a6147a51a63c79eada32120eafc23b517">GetModelPart</a>();</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        std::vector&lt;Element*&gt; pipe_elements;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        <span class="keywordtype">double</span>                pipe_element_start_x;</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span>&amp; r_element : r_current_model_part.<a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html#a94dfb23c46340061bd57e9b9c4e317c8">Elements</a>()) {</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            <span class="keywordflow">if</span> (r_element.GetProperties().Has(PIPE_START_ELEMENT)) {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                pipe_elements.push_back(&amp;r_element);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                <span class="keywordtype">long</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> start_element = r_element.GetProperties()[PIPE_START_ELEMENT];</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160; </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    &lt;&lt; r_element.Id() &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; start_element &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                <span class="keywordflow">if</span> (r_element.Id() == start_element) {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    pipe_element_start_x = r_element.GetGeometry().GetPoint(0)[0];</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;        }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">if</span> (pipe_elements.empty()) {</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            <span class="keywordflow">return</span> pipe_elements;</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        <span class="comment">// Get Maximum X Value in Pipe</span></div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        <span class="keyword">auto</span> right_pipe = std::max_element(pipe_elements.begin(), pipe_elements.end(),</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                                           [](<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a>, <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">b</a>) {</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            return a-&gt;GetGeometry().GetPoint(0)[0] &lt; b-&gt;GetGeometry().GetPoint(0)[0];</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;        });</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;        <span class="comment">// Get Minimum X Value in Pipe</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;        <span class="keyword">auto</span> left_pipe = std::min_element(pipe_elements.begin(), pipe_elements.end(),</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                                          [](<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">a</a>, <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">b</a>) {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            return a-&gt;GetGeometry().GetPoint(0)[0] &lt; b-&gt;GetGeometry().GetPoint(0)[0];</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        });</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160; </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> min_x = left_pipe[0]-&gt;GetGeometry().GetPoint(0)[0];</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> max_x = right_pipe[0]-&gt;GetGeometry().GetPoint(0)[0];</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160; </div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            &lt;&lt; min_x &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; max_x &lt;&lt; <span class="stringliteral">&quot; &quot;</span> &lt;&lt; pipe_element_start_x &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;        <span class="keywordflow">if</span> ((min_x != pipe_element_start_x) &amp;&amp; (max_x != pipe_element_start_x)) {</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <a class="code" href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a> &lt;&lt; <span class="stringliteral">&quot;Unable to determine pipe direction (multiple directions possible) -  &quot;</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                            <span class="stringliteral">&quot;Check PIPE_START_ELEMENT&quot;</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                         &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        }</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;        <span class="keywordflow">if</span> (min_x == pipe_element_start_x) {</div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            <span class="comment">// Pipe Left -&gt; Right</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            std::sort(pipe_elements.begin(), pipe_elements.end(), [](<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a433abcc86ff82888f447b695aa396a16">lhs</a>, <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a3c0c3f331487ee9a8f9a615928bb6668">rhs</a>) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                return lhs-&gt;GetGeometry().GetPoint(0)[0] &lt; rhs-&gt;GetGeometry().GetPoint(0)[0];</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            });</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            <span class="comment">// Pipe Right -&gt; Left</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            std::sort(pipe_elements.begin(), pipe_elements.end(), [](<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a433abcc86ff82888f447b695aa396a16">lhs</a>, <span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* <a class="code" href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a3c0c3f331487ee9a8f9a615928bb6668">rhs</a>) {</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                return lhs-&gt;GetGeometry().GetPoint(0)[0] &gt; rhs-&gt;GetGeometry().GetPoint(0)[0];</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            });</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;        }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Number of Pipe Elements: &quot;</span> &lt;&lt; pipe_elements.size() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">const</span> <a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* pipeElement : pipe_elements) {</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;PipeElementIDs (in order): &quot;</span> &lt;&lt; pipeElement-&gt;Id() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;        <span class="keywordflow">return</span> pipe_elements;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;    }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160; </div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mPipingIterations; </div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;    <span class="keywordtype">int</span>          rank;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;    <span class="keywordtype">double</span>       mSmallPipeHeight    = 1e-10;</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;    <span class="keywordtype">double</span>       mPipeHeightAccuracy = mSmallPipeHeight * 10;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FilteredElementsType&gt;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;    <a class="code" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a> GetNumberOfActivePipeElements(<span class="keyword">const</span> FilteredElementsType&amp; rPipeElements)</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;    {</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        <span class="keyword">auto</span> is_pipe_active = [](<span class="keyword">auto</span> p_element) { <span class="keywordflow">return</span> p_element-&gt;GetValue(PIPE_ACTIVE); };</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;        <span class="keywordflow">return</span> std::count_if(std::begin(rPipeElements), <a class="code" href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a9635268cbcd16b8b3f12c26323611b53">std::end</a>(rPipeElements), is_pipe_active);</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;    }</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160; </div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FilteredElementsType&gt;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="keywordtype">double</span> CalculateMaxPipeHeight(<span class="keyword">const</span> FilteredElementsType&amp; rPipeElements)</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    {</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;        <span class="comment">// get maximum pipe particle diameter over all pipe elements</span></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;        <span class="keywordtype">double</span> max_diameter = 0;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> pipe_element : rPipeElements) {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            max_diameter = <a class="code" href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">std::max</a>(max_diameter, <a class="code" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a3befa6d909ff74b7655caf1ab11ad4a6">GeoTransportEquationUtilities::CalculateParticleDiameter</a>(</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                                                      pipe_element-&gt;GetProperties()));</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        <span class="comment">// max pipe height is maximum pipe particle diameter * a constant</span></div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> <a class="code" href="../../d3/d16/namespacesp__statistics.html#a83f6a906c1ae40e27b22b9078bba8e43">height_factor</a> = 100.;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;        <span class="keywordflow">return</span> max_diameter * <a class="code" href="../../d3/d16/namespacesp__statistics.html#a83f6a906c1ae40e27b22b9078bba8e43">height_factor</a>;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    }</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160; </div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="keywordflow">for</span> (<a class="code" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a>* pipe_element : PipeElements) {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordflow">if</span> (pipe_element-&gt;GetValue(PIPE_ACTIVE)) {</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                nOpenElements += 1;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="keywordflow">return</span> nOpenElements;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    }</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    <span class="keywordtype">double</span> CalculateMaxPipeHeight(std::vector&lt;Element*&gt; pipe_elements)</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    {</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordtype">double</span> max_diameter  = 0;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="../../d3/d16/namespacesp__statistics.html#a83f6a906c1ae40e27b22b9078bba8e43">height_factor</a> = 100;</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160; </div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="comment">// loop over all elements</span></div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;        <span class="keywordflow">for</span> (Element* pipe_element : pipe_elements) {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="comment">// calculate pipe particle diameter of pipe element</span></div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a7b6b9a19311198c9d6ca6ad3368d3e5a">PropertiesType</a> <a class="code" href="../../d2/dae/namespaceread__stl.html#a52c861540814bb657c77c8971302257d">prop</a> = pipe_element-&gt;GetProperties();</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordtype">double</span> particle_diameter = <a class="code" href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a3befa6d909ff74b7655caf1ab11ad4a6">GeoTransportEquationUtilities::CalculateParticleDiameter</a>(<a class="code" href="../../d2/dae/namespaceread__stl.html#a52c861540814bb657c77c8971302257d">prop</a>);</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;            <span class="comment">// get maximum pipe particle diameter of all pipe elements</span></div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordflow">if</span> (particle_diameter &gt; max_diameter) {</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;                max_diameter = particle_diameter;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        }</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160; </div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="comment">// max pipe height is maximum pipe particle diameter * a constant</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordflow">return</span> max_diameter * <a class="code" href="../../d3/d16/namespacesp__statistics.html#a83f6a906c1ae40e27b22b9078bba8e43">height_factor</a>;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;    }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    [[nodiscard]] <span class="keywordtype">double</span> CalculatePipeHeightIncrement(<span class="keywordtype">double</span> MaxPipeHeight, <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#af30c219aacfcb5a627e56d2e484b2ef2">SizeType</a> NumberOfSteps)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;        <span class="keywordflow">return</span> MaxPipeHeight / (<span class="keyword">static_cast&lt;</span><span class="keywordtype">double</span><span class="keyword">&gt;</span>(NumberOfSteps) - 1.);</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;    }</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160; </div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Recalculate()</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    {</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;ResidualBasedNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Recalculating&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;        <a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#aa0fd4e131f8c05559b557d65d6676357">GeoMechanicsNewtonRaphsonStrategy&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;::InitializeSolutionStep</a>();</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a9f96107b3f484bf0bd1c48743f008075">GeoMechanicsNewtonRaphsonStrategy&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;::Predict</a>();</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a8d10b3b709f71e1ce245d01499446d40">GeoMechanicsNewtonRaphsonStrategy&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;::SolveSolutionStep</a>();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;    }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160; </div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> BaseClassFinalizeSolutionStep()</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;    {</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        <span class="comment">// to override in a unit test</span></div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;        <a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#ad607c9d8196b7cfd56d1a1844eb4213c">GeoMechanicsNewtonRaphsonStrategy&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;::FinalizeSolutionStep</a>();</div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;    }</div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160; </div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FilteredElementsType&gt;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    <span class="keywordtype">bool</span> CheckPipeEquilibrium(<span class="keyword">const</span> FilteredElementsType&amp; rOpenPipeElements, <span class="keywordtype">double</span> MaxPipeHeight, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> MaxNumberOfPipingIterations)</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;    {</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;        <span class="keywordtype">bool</span>         equilibrium      = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;        <span class="keywordtype">bool</span>         converged        = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> piping_iteration = 0;</div>
 <div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">double</span> CalculatePipeHeightIncrement(<span class="keywordtype">double</span> max_pipe_height, <span class="keyword">const</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> <a class="code" href="../../d8/d1d/namespacebombardelli__test.html#adce4746eb7950f081486180ef6802b9b">n_steps</a>)</div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;    {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;        <span class="keywordflow">return</span> max_pipe_height / (<a class="code" href="../../d8/d1d/namespacebombardelli__test.html#adce4746eb7950f081486180ef6802b9b">n_steps</a> - 1);</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;    }</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> Recalculate()</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;        <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;ResidualBasedNewtonRaphsonStrategy&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            &lt;&lt; <span class="stringliteral">&quot;Recalculating&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        <a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#aa0fd4e131f8c05559b557d65d6676357">GeoMechanicsNewtonRaphsonStrategy&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;::InitializeSolutionStep</a>();</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;        <a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a9f96107b3f484bf0bd1c48743f008075">GeoMechanicsNewtonRaphsonStrategy&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;::Predict</a>();</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#a8d10b3b709f71e1ce245d01499446d40">GeoMechanicsNewtonRaphsonStrategy&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;::SolveSolutionStep</a>();</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">void</span> BaseClassFinalizeSolutionStep()</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    {</div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        <span class="comment">// to override in a unit test</span></div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        <a class="code" href="../../d4/dcd/class_kratos_1_1_residual_based_newton_raphson_strategy.html#ad607c9d8196b7cfd56d1a1844eb4213c">GeoMechanicsNewtonRaphsonStrategy&lt;TSparseSpace, TDenseSpace, TLinearSolver&gt;::FinalizeSolutionStep</a>();</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    }</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160; </div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FilteredElementType&gt;</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    <span class="keywordtype">bool</span> check_pipe_equilibrium(<span class="keyword">const</span> FilteredElementType&amp; open_pipe_elements, <span class="keywordtype">double</span> amax, <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> mPipingIterations)</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    {</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordtype">bool</span>         equilibrium = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;        <span class="keywordtype">bool</span>         converged   = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span> PipeIter    = 0;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        <span class="comment">// todo: JDN (20220817) : grow not used.</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        <span class="comment">// bool grow = true;</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="comment">// calculate max pipe height and pipe increment</span></div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        <span class="keywordtype">double</span> da = CalculatePipeHeightIncrement(amax, mPipingIterations);</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;        <span class="keywordflow">while</span> (PipeIter &lt; mPipingIterations &amp;&amp; !equilibrium &amp;&amp; converged) {</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;            <span class="comment">// set equilibrium on true</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            equilibrium = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160; </div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            <span class="comment">// perform a flow calculation and stop growing if the calculation doesn&#39;t converge</span></div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            converged = this-&gt;Recalculate();</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="comment">// todo: JDN (20220817) : grow not used.</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            <span class="comment">// if (!converged)</span></div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <span class="comment">//{</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="comment">//    grow = false;</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            <span class="comment">//}</span></div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160; </div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            <span class="keywordflow">if</span> (converged) {</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                <span class="comment">// Update depth of open piping Elements</span></div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                equilibrium = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                <span class="keywordflow">for</span> (<span class="keyword">auto</span> OpenPipeElement : open_pipe_elements) {</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                    <span class="comment">// get open pipe element geometry and properties</span></div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                    <span class="keyword">auto</span>&amp; Geom = OpenPipeElement-&gt;GetGeometry();</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    <span class="keyword">auto</span>&amp; <a class="code" href="../../d2/dae/namespaceread__stl.html#a52c861540814bb657c77c8971302257d">prop</a> = OpenPipeElement-&gt;GetProperties();</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160; </div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                    <span class="comment">// calculate equilibrium pipe height and get current pipe height</span></div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                    <span class="keywordtype">double</span> eq_height = OpenPipeElement-&gt;CalculateEquilibriumPipeHeight(</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                        <a class="code" href="../../d2/dae/namespaceread__stl.html#a52c861540814bb657c77c8971302257d">prop</a>, Geom, OpenPipeElement-&gt;GetValue(PIPE_ELEMENT_LENGTH));</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                    <span class="keywordtype">double</span> current_height = OpenPipeElement-&gt;GetValue(PIPE_HEIGHT);</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160; </div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                    <span class="comment">// set erosion on true if current pipe height is greater than the equilibrium height</span></div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    <span class="keywordflow">if</span> (current_height &gt; eq_height) {</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                        OpenPipeElement-&gt;SetValue(PIPE_EROSION, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                    }</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="comment">// calculate max pipe height and pipe increment</span></div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> pipe_height_increment =</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;            CalculatePipeHeightIncrement(MaxPipeHeight, MaxNumberOfPipingIterations);</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        <span class="keywordflow">while</span> (piping_iteration &lt; MaxNumberOfPipingIterations &amp;&amp; !equilibrium &amp;&amp; converged) {</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            equilibrium = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="comment">// perform a flow calculation and stop growing if the calculation doesn&#39;t converge</span></div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            converged = this-&gt;Recalculate();</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160; </div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;            <span class="keywordflow">if</span> (!converged) <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            <span class="comment">// Update depth of open piping Elements</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            equilibrium = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            <span class="keywordflow">for</span> (<span class="keyword">auto</span> p_open_pipe_element : rOpenPipeElements) {</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                <span class="comment">// get open pipe element geometry and properties</span></div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                <span class="keyword">auto</span>&amp; r_geom = p_open_pipe_element-&gt;GetGeometry();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <span class="keyword">auto</span>&amp; r_prop = p_open_pipe_element-&gt;GetProperties();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160; </div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                <span class="comment">// calculate equilibrium pipe height and get current pipe height</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                <span class="keywordtype">double</span> eq_height = p_open_pipe_element-&gt;CalculateEquilibriumPipeHeight(</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                    r_prop, r_geom, p_open_pipe_element-&gt;GetValue(PIPE_ELEMENT_LENGTH));</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                <span class="keyword">const</span> <span class="keyword">auto</span> current_height = p_open_pipe_element-&gt;GetValue(PIPE_HEIGHT);</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160; </div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <span class="comment">// set erosion on true if current pipe height is greater than the equilibrium height</span></div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                p_open_pipe_element-&gt;SetValue(PIPE_EROSION, p_open_pipe_element-&gt;GetValue(PIPE_EROSION) ||</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                                                                current_height &gt; eq_height);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                <span class="comment">// check this if statement, I don&#39;t understand the check for pipe erosion</span></div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                <span class="keywordflow">if</span> ((!p_open_pipe_element-&gt;GetValue(PIPE_EROSION) || current_height &gt; eq_height) &amp;&amp;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    current_height &lt; MaxPipeHeight) {</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                    p_open_pipe_element-&gt;SetValue(PIPE_HEIGHT, current_height + pipe_height_increment);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    equilibrium = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                <span class="comment">// check if equilibrium height and current pipe heights are diverging, stop</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                <span class="comment">// Picard iterations if this is the case and set pipe height on zero</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                <span class="keywordflow">if</span> (!p_open_pipe_element-&gt;GetValue(PIPE_EROSION) &amp;&amp; piping_iteration &gt; 1 &amp;&amp;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                    eq_height - current_height &gt; p_open_pipe_element-&gt;GetValue(DIFF_PIPE_HEIGHT)) {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                    p_open_pipe_element-&gt;SetValue(PIPE_HEIGHT, mSmallPipeHeight);</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                    equilibrium = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                }</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                <span class="comment">// calculate difference between equilibrium height and current pipe height</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                p_open_pipe_element-&gt;SetValue(DIFF_PIPE_HEIGHT, eq_height - current_height);</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            ++piping_iteration;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;        }</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        <span class="keywordflow">return</span> equilibrium;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;    }</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160; </div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FilteredElementsType&gt;</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    std::tuple&lt;bool, SizeType&gt; CheckStatusTipElement(<a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#af30c219aacfcb5a627e56d2e484b2ef2">SizeType</a> NumberOfOpenPipeElements,</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                                                     <a class="code" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#af30c219aacfcb5a627e56d2e484b2ef2">SizeType</a> NumberOfPipeELements,</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                                                     <span class="keywordtype">double</span>   MaxPipeHeight,</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                                                     <span class="keyword">const</span> FilteredElementsType&amp; rPipeElements)</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;    {</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        <span class="keywordtype">bool</span> grow = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <span class="comment">// check status of tip element, stop growing if pipe_height is zero or greater than maximum</span></div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <span class="comment">// pipe height or if all elements are open</span></div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordflow">if</span> (NumberOfOpenPipeElements &lt; NumberOfPipeELements) {</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            <span class="keyword">auto</span>       p_tip_element = rPipeElements.at(NumberOfOpenPipeElements - 1);</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> pipe_height   = p_tip_element-&gt;GetValue(PIPE_HEIGHT);</div>
 <div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160; </div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                    <span class="comment">// check this if statement, I don&#39;t understand the check for pipe erosion</span></div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                    <span class="keywordflow">if</span> (((!OpenPipeElement-&gt;GetValue(PIPE_EROSION) || (current_height &gt; eq_height)) &amp;&amp;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                         current_height &lt; amax)) {</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                        OpenPipeElement-&gt;SetValue(PIPE_HEIGHT, OpenPipeElement-&gt;GetValue(PIPE_HEIGHT) + da);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                        equilibrium = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160; </div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                    <span class="comment">// check if equilibrium height and current pipe heights are diverging, stop</span></div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                    <span class="comment">// picard iterations if this is the case and set pipe height on zero</span></div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                    <span class="keywordflow">if</span> (!OpenPipeElement-&gt;GetValue(PIPE_EROSION) &amp;&amp; (PipeIter &gt; 1) &amp;&amp;</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                        ((eq_height - current_height) &gt; OpenPipeElement-&gt;GetValue(DIFF_PIPE_HEIGHT))) {</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                        equilibrium = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                        OpenPipeElement-&gt;SetValue(PIPE_HEIGHT, small_pipe_height);</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                    }</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                    <span class="comment">// calculate difference between equilibrium height and current pipe height</span></div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                    OpenPipeElement-&gt;SetValue(DIFF_PIPE_HEIGHT, eq_height - current_height);</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                }</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                <span class="comment">// increment piping iteration number</span></div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                PipeIter += 1;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;            }</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        }</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">return</span> equilibrium;</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160; </div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;    std::tuple&lt;bool, int&gt; check_status_tip_element(<span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>          n_open_elements,</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;                                                   <span class="keywordtype">unsigned</span> <span class="keywordtype">int</span>          n_elements,</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                                                   <span class="keywordtype">double</span>                max_pipe_height,</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                                                   std::vector&lt;Element*&gt; PipeElements)</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    {</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        <span class="keywordtype">bool</span> grow = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="comment">// check status of tip element, stop growing if pipe_height is zero or greater than maximum</span></div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="comment">// pipe height or if all elements are open</span></div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keywordflow">if</span> (n_open_elements &lt; n_elements) {</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            <a class="code" href="../../d5/dc0/namespace_kratos_1_1_globals.html#ad083ce574e7f81d175b3dd5bcf71b813a231afe47f3f37d3808096b36c28b4ded">Element</a>* tip_element = PipeElements.at(n_open_elements - 1);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <span class="keywordtype">double</span>   pipe_height = tip_element-&gt;GetValue(PIPE_HEIGHT);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <span class="keywordflow">if</span> ((pipe_height &gt; max_pipe_height + std::numeric_limits&lt;double&gt;::epsilon()) ||</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;                (pipe_height &lt; pipe_height_accuracy)) {</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                <span class="comment">// stable element found; pipe length does not increase during current time step</span></div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                grow = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                tip_element-&gt;SetValue(PIPE_EROSION, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                tip_element-&gt;SetValue(PIPE_ACTIVE, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                n_open_elements -= 1;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160; </div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;                <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                    &lt;&lt; <span class="stringliteral">&quot;Number of Open Pipe Elements: &quot;</span> &lt;&lt; n_open_elements &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;            }</div>
-<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            grow = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;        }</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;        <span class="keywordflow">return</span> std::make_tuple(grow, n_open_elements);</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    }</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160; </div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FilteredElementType&gt;</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;    <span class="keywordtype">void</span> save_or_reset_pipe_heights(<span class="keyword">const</span> FilteredElementType&amp; open_pipe_elements, <span class="keywordtype">bool</span> grow)</div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;    {</div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> p_element : open_pipe_elements) {</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            <span class="keywordflow">if</span> (grow) {</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                p_element-&gt;SetValue(PREV_PIPE_HEIGHT, p_element-&gt;GetValue(PIPE_HEIGHT));</div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                p_element-&gt;SetValue(PIPE_HEIGHT, p_element-&gt;GetValue(PREV_PIPE_HEIGHT));</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;            }</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;        }</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;    }</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;}; <span class="comment">// Class GeoMechanicsNewtonRaphsonErosionProcessStrategy</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            <span class="keywordflow">if</span> (pipe_height &gt; MaxPipeHeight + std::numeric_limits&lt;double&gt;::epsilon() ||</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                pipe_height &lt; mPipeHeightAccuracy) {</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                <span class="comment">// stable element found; pipe length does not increase during current time step</span></div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                grow = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                p_tip_element-&gt;SetValue(PIPE_EROSION, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                p_tip_element-&gt;SetValue(PIPE_ACTIVE, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                --NumberOfOpenPipeElements;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160; </div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                    &lt;&lt; <span class="stringliteral">&quot;Number of Open Pipe Elements: &quot;</span> &lt;&lt; NumberOfOpenPipeElements &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;            }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            grow = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keywordflow">return</span> std::make_tuple(grow, NumberOfOpenPipeElements);</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;    }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160; </div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FilteredElementsType&gt;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;    <span class="keywordtype">void</span> SaveOrResetPipeHeights(<span class="keyword">const</span> FilteredElementsType&amp; rOpenPipeElements, <span class="keywordtype">bool</span> Grow)</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;        <span class="keywordflow">for</span> (<span class="keyword">auto</span> p_element : rOpenPipeElements) {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            <span class="keywordflow">if</span> (Grow) {</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;                p_element-&gt;SetValue(PREV_PIPE_HEIGHT, p_element-&gt;GetValue(PIPE_HEIGHT));</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                p_element-&gt;SetValue(PIPE_HEIGHT, p_element-&gt;GetValue(PREV_PIPE_HEIGHT));</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        }</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> FilteredElementsType&gt;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordtype">void</span> DetermineOpenPipingElements(<span class="keyword">const</span> FilteredElementsType&amp; rPipingElements)</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    {</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;        <span class="keywordtype">bool</span>       grow                      = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;        <span class="keyword">const</span> <span class="keyword">auto</span> number_of_piping_elements = rPipingElements.size();</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;        <span class="keyword">auto</span> number_of_open_piping_elements  = this-&gt;GetNumberOfActivePipeElements(rPipingElements);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keyword">auto</span> max_pipe_height                 = CalculateMaxPipeHeight(rPipingElements);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;        <span class="keywordflow">while</span> (grow &amp;&amp; (number_of_open_piping_elements &lt; number_of_piping_elements)) {</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;            <span class="comment">// get tip element and activate</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;            <span class="keyword">auto</span> p_tip_element = rPipingElements.at(number_of_open_piping_elements);</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            ++number_of_open_piping_elements;</div>
+<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;            p_tip_element-&gt;SetValue(PIPE_ACTIVE, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            <span class="comment">// Get all open pipe elements</span></div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            <span class="keyword">auto</span> <a class="code" href="../../d1/da4/namespacefilter.html">filter</a> = [](<span class="keyword">auto</span> p_element) {</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;                <span class="keywordflow">return</span> p_element-&gt;Has(PIPE_ACTIVE) &amp;&amp; p_element-&gt;GetValue(PIPE_ACTIVE);</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            };</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            <span class="keyword">auto</span> OpenPipeElements = rPipingElements | boost::adaptors::filtered(<a class="code" href="../../d1/da4/namespacefilter.html">filter</a>);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;            <a class="code" href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a>(<span class="stringliteral">&quot;PipingLoop&quot;</span>, this-&gt;<a class="code" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#a789fc74d1b086e5503dff3f1d60aa2ff">GetEchoLevel</a>() &gt; 0 &amp;&amp; rank == 0)</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                &lt;&lt; <span class="stringliteral">&quot;Number of Open Pipe Elements: &quot;</span> &lt;&lt; boost::size(OpenPipeElements) &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160; </div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;            <span class="comment">// nonlinear Picard iteration, for deepening the pipe</span></div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="comment">// Todo JDN (20220817):: Deal with Equilibrium redundancy</span></div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            CheckPipeEquilibrium(OpenPipeElements, max_pipe_height, mPipingIterations);</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160; </div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            <span class="comment">// check if pipe should grow in length</span></div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;            std::tie(grow, number_of_open_piping_elements) = CheckStatusTipElement(</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;                number_of_open_piping_elements, number_of_piping_elements, max_pipe_height, rPipingElements);</div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160; </div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;            <span class="comment">// if n open elements is lower than total pipe elements, save pipe height current</span></div>
+<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;            <span class="comment">// growing iteration or reset to previous iteration in case the pipe should not grow.</span></div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;            <span class="keywordflow">if</span> (number_of_open_piping_elements &lt; number_of_piping_elements) {</div>
+<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                SaveOrResetPipeHeights(OpenPipeElements, grow);</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            }</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <span class="comment">// recalculate groundwater flow</span></div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            <span class="keyword">const</span> <span class="keyword">auto</span> converged = this-&gt;Recalculate();</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160; </div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;            <a class="code" href="../../d5/d4d/group___kratos_core.html#ga421c079910a05f8a88688b045190ac9b">KRATOS_ERROR_IF_NOT</a>(converged) &lt;&lt; <span class="stringliteral">&quot;Groundwater flow calculation failed to converge.&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;        }</div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;    }</div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;}; <span class="comment">// Class GeoMechanicsNewtonRaphsonErosionProcessStrategy</span></div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;} <span class="comment">// namespace Kratos</span></div>
 <div class="ttc" id="aclass_kratos_1_1_builder_and_solver_html"><div class="ttname"><a href="../../d2/d88/class_kratos_1_1_builder_and_solver.html">Kratos::BuilderAndSolver</a></div><div class="ttdoc">Current class provides an implementation for the base builder and solving operations.</div><div class="ttdef"><b>Definition:</b> builder_and_solver.h:64</div></div>
 <div class="ttc" id="aclass_kratos_1_1_convergence_criteria_html"><div class="ttname"><a href="../../d3/d80/class_kratos_1_1_convergence_criteria.html">Kratos::ConvergenceCriteria</a></div><div class="ttdoc">This is the base class to define the different convergence criterion considered.</div><div class="ttdef"><b>Definition:</b> convergence_criteria.h:58</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html">Kratos::Element</a></div><div class="ttdoc">Base class for all Elements.</div><div class="ttdef"><b>Definition:</b> element.h:60</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy</a></div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:38</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_a4206b0404542275b5ed5808ea3df4dfe"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a4206b0404542275b5ed5808ea3df4dfe">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::FinalizeSolutionStep</a></div><div class="ttdeci">void FinalizeSolutionStep() override</div><div class="ttdoc">Performs all the required operations that should be done (for each step) after solving the solution s...</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:69</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_a45dcfb59dd129612cf6c1de1c1aac998"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a45dcfb59dd129612cf6c1de1c1aac998">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::GetPipingElements</a></div><div class="ttdeci">std::vector&lt; Element * &gt; GetPipingElements()</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:159</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_a4206b0404542275b5ed5808ea3df4dfe"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a4206b0404542275b5ed5808ea3df4dfe">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::FinalizeSolutionStep</a></div><div class="ttdeci">void FinalizeSolutionStep() override</div><div class="ttdoc">Performs all the required operations that should be done (for each step) after solving the solution s...</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:70</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_a45dcfb59dd129612cf6c1de1c1aac998"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a45dcfb59dd129612cf6c1de1c1aac998">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::GetPipingElements</a></div><div class="ttdeci">std::vector&lt; Element * &gt; GetPipingElements()</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:136</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_a759151a8cb90505f59a8a689a0705adb"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a759151a8cb90505f59a8a689a0705adb">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(GeoMechanicsNewtonRaphsonErosionProcessStrategy)</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_a7b6b9a19311198c9d6ca6ad3368d3e5a"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a7b6b9a19311198c9d6ca6ad3368d3e5a">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::PropertiesType</a></div><div class="ttdeci">Properties PropertiesType</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:49</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_a8b77e2f8f65fa1b2cd67e584a981e994"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a8b77e2f8f65fa1b2cd67e584a981e994">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::GeoMechanicsNewtonRaphsonErosionProcessStrategy</a></div><div class="ttdeci">GeoMechanicsNewtonRaphsonErosionProcessStrategy(ModelPart &amp;model_part, typename TSchemeType::Pointer pScheme, typename TConvergenceCriteriaType::Pointer pNewConvergenceCriteria, typename TBuilderAndSolverType::Pointer pNewBuilderAndSolver, Parameters &amp;rParameters, int MaxIterations=30, bool CalculateReactions=false, bool ReformDofSetAtEachStep=false, bool MoveMeshFlag=false)</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:53</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_ad7ee21dc8d3a9a38e4a0e2bdfc34d7fb"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#ad7ee21dc8d3a9a38e4a0e2bdfc34d7fb">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::Check</a></div><div class="ttdeci">int Check() override</div><div class="ttdoc">Function to perform expensive checks.</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:148</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_a8b77e2f8f65fa1b2cd67e584a981e994"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a8b77e2f8f65fa1b2cd67e584a981e994">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::GeoMechanicsNewtonRaphsonErosionProcessStrategy</a></div><div class="ttdeci">GeoMechanicsNewtonRaphsonErosionProcessStrategy(ModelPart &amp;model_part, typename TSchemeType::Pointer pScheme, typename TConvergenceCriteriaType::Pointer pNewConvergenceCriteria, typename TBuilderAndSolverType::Pointer pNewBuilderAndSolver, Parameters &amp;rParameters, int MaxIterations=30, bool CalculateReactions=false, bool ReformDofSetAtEachStep=false, bool MoveMeshFlag=false)</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:54</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_ad7ee21dc8d3a9a38e4a0e2bdfc34d7fb"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#ad7ee21dc8d3a9a38e4a0e2bdfc34d7fb">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::Check</a></div><div class="ttdeci">int Check() override</div><div class="ttdoc">Function to perform expensive checks.</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:125</div></div>
+<div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy_html_af30c219aacfcb5a627e56d2e484b2ef2"><div class="ttname"><a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#af30c219aacfcb5a627e56d2e484b2ef2">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy::SizeType</a></div><div class="ttdeci">std::size_t SizeType</div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_erosion_process_strategy.hpp:52</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geo_mechanics_newton_raphson_strategy_html"><div class="ttname"><a href="../../d7/d24/class_kratos_1_1_geo_mechanics_newton_raphson_strategy.html">Kratos::GeoMechanicsNewtonRaphsonStrategy</a></div><div class="ttdef"><b>Definition:</b> geo_mechanics_newton_raphson_strategy.hpp:31</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geo_transport_equation_utilities_html_a3befa6d909ff74b7655caf1ab11ad4a6"><div class="ttname"><a href="../../dc/d4c/class_kratos_1_1_geo_transport_equation_utilities.html#a3befa6d909ff74b7655caf1ab11ad4a6">Kratos::GeoTransportEquationUtilities::CalculateParticleDiameter</a></div><div class="ttdeci">static double CalculateParticleDiameter(const Properties &amp;rProperties)</div><div class="ttdef"><b>Definition:</b> transport_equation_utilities.cpp:18</div></div>
-<div class="ttc" id="aclass_kratos_1_1_geometrical_object_html_ad8607c3f60c3c4b06c0186d86cbfaa85"><div class="ttname"><a href="../../d3/d62/class_kratos_1_1_geometrical_object.html#ad8607c3f60c3c4b06c0186d86cbfaa85">Kratos::GeometricalObject::SetValue</a></div><div class="ttdeci">void SetValue(const TVariableType &amp;rThisVariable, typename TVariableType::Type const &amp;rValue)</div><div class="ttdef"><b>Definition:</b> geometrical_object.h:238</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geometry_html"><div class="ttname"><a href="../../dc/dea/class_kratos_1_1_geometry.html">Kratos::Geometry</a></div><div class="ttdoc">Geometry base class.</div><div class="ttdef"><b>Definition:</b> geometry.h:71</div></div>
 <div class="ttc" id="aclass_kratos_1_1_implicit_solving_strategy_html"><div class="ttname"><a href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html">Kratos::ImplicitSolvingStrategy</a></div><div class="ttdoc">Implicit solving strategy base class This is the base class from which we will derive all the implici...</div><div class="ttdef"><b>Definition:</b> implicit_solving_strategy.h:61</div></div>
 <div class="ttc" id="aclass_kratos_1_1_implicit_solving_strategy_html_a02604f35bccb23ba024a708a5b7af8f2"><div class="ttname"><a href="../../d8/df2/class_kratos_1_1_implicit_solving_strategy.html#a02604f35bccb23ba024a708a5b7af8f2">Kratos::ImplicitSolvingStrategy::TSystemVectorType</a></div><div class="ttdeci">BaseType::TSystemVectorType TSystemVectorType</div><div class="ttdef"><b>Definition:</b> implicit_solving_strategy.h:72</div></div>
@@ -517,32 +513,30 @@ $(function() {
 <div class="ttc" id="adefine_8h_html_ab9c29d6a0d19ff26bbc4e45e3181fb3f"><div class="ttname"><a href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div><div class="ttdeci">#define KRATOS_TRY</div><div class="ttdef"><b>Definition:</b> define.h:109</div></div>
 <div class="ttc" id="ageo__mechanics__application__variables_8h_html"><div class="ttname"><a href="../../d6/d37/geo__mechanics__application__variables_8h.html">geo_mechanics_application_variables.h</a></div></div>
 <div class="ttc" id="ageo__mechanics__newton__raphson__strategy_8hpp_html"><div class="ttname"><a href="../../db/d3f/geo__mechanics__newton__raphson__strategy_8hpp.html">geo_mechanics_newton_raphson_strategy.hpp</a></div></div>
+<div class="ttc" id="ageo__steady__state___pw__piping__element_8h_html"><div class="ttname"><a href="../../da/df9/geo__steady__state___pw__piping__element_8h.html">geo_steady_state_Pw_piping_element.h</a></div></div>
 <div class="ttc" id="agroup___kratos_core_html_ga376e02451bc7cc3a5fd77b57f0549e6b"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga376e02451bc7cc3a5fd77b57f0549e6b">KRATOS_ERROR</a></div><div class="ttdeci">#define KRATOS_ERROR</div><div class="ttdef"><b>Definition:</b> exception.h:161</div></div>
 <div class="ttc" id="agroup___kratos_core_html_ga421c079910a05f8a88688b045190ac9b"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga421c079910a05f8a88688b045190ac9b">KRATOS_ERROR_IF_NOT</a></div><div class="ttdeci">#define KRATOS_ERROR_IF_NOT(conditional)</div><div class="ttdef"><b>Definition:</b> exception.h:163</div></div>
-<div class="ttc" id="agroup___kratos_core_html_gab957b416207ac826a58f2b9503cb0d38"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#gab957b416207ac826a58f2b9503cb0d38">KRATOS_DEBUG_ERROR_IF</a></div><div class="ttdeci">#define KRATOS_DEBUG_ERROR_IF(conditional)</div><div class="ttdef"><b>Definition:</b> exception.h:171</div></div>
+<div class="ttc" id="agroup___kratos_core_html_ga9fdd4e0364598f28a529107663707cf3"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga9fdd4e0364598f28a529107663707cf3">KRATOS_ERROR_IF</a></div><div class="ttdeci">#define KRATOS_ERROR_IF(conditional)</div><div class="ttdef"><b>Definition:</b> exception.h:162</div></div>
 <div class="ttc" id="agroup___kratos_html_ga77c49181bec73a59e8ad275f8a56cdd0"><div class="ttname"><a href="../../df/da3/group___kratos.html#ga77c49181bec73a59e8ad275f8a56cdd0">KRATOS_INFO_IF</a></div><div class="ttdeci">#define KRATOS_INFO_IF(label, conditional)</div><div class="ttdef"><b>Definition:</b> logger.h:251</div></div>
 <div class="ttc" id="akratos__parameters_8h_html"><div class="ttname"><a href="../../db/d71/kratos__parameters_8h.html">kratos_parameters.h</a></div></div>
 <div class="ttc" id="amodel__part_8h_html"><div class="ttname"><a href="../../dd/dfe/model__part_8h.html">model_part.h</a></div></div>
-<div class="ttc" id="anamespace_kratos_1_1_globals_html_ad083ce574e7f81d175b3dd5bcf71b813a231afe47f3f37d3808096b36c28b4ded"><div class="ttname"><a href="../../d5/dc0/namespace_kratos_1_1_globals.html#ad083ce574e7f81d175b3dd5bcf71b813a231afe47f3f37d3808096b36c28b4ded">Kratos::Globals::DataLocation::Element</a></div><div class="ttdeci">@ Element</div></div>
+<div class="ttc" id="anamespace_d_e_m__benchmarks_html_a9635268cbcd16b8b3f12c26323611b53"><div class="ttname"><a href="../../d3/d1a/namespace_d_e_m__benchmarks.html#a9635268cbcd16b8b3f12c26323611b53">DEM_benchmarks.end</a></div><div class="ttdeci">end</div><div class="ttdef"><b>Definition:</b> DEM_benchmarks.py:180</div></div>
+<div class="ttc" id="anamespace_kratos_1_1_geometry_functions_html_a819e51c089a0d603f13c6ce87e7cbed5"><div class="ttname"><a href="../../d4/d8c/namespace_kratos_1_1_geometry_functions.html#a819e51c089a0d603f13c6ce87e7cbed5">Kratos::GeometryFunctions::max</a></div><div class="ttdeci">static double max(double a, double b)</div><div class="ttdef"><b>Definition:</b> GeometryFunctions.h:79</div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
-<div class="ttc" id="anamespace_kratos_html_a14b9d687ed53c882489400b57cdf34cd"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">Kratos::bool</a></div><div class="ttdeci">REACTION_CHECK_STIFFNESS_FACTOR INNER_LOOP_ITERATION DISTANCE_THRESHOLD ACTIVE_CHECK_FACTOR AUXILIAR_COORDINATES NORMAL_GAP WEIGHTED_GAP WEIGHTED_SCALAR_RESIDUAL bool</div><div class="ttdef"><b>Definition:</b> contact_structural_mechanics_application_variables.h:93</div></div>
-<div class="ttc" id="anamespacebombardelli__test_html_adce4746eb7950f081486180ef6802b9b"><div class="ttname"><a href="../../d8/d1d/namespacebombardelli__test.html#adce4746eb7950f081486180ef6802b9b">bombardelli_test.n_steps</a></div><div class="ttdeci">int n_steps</div><div class="ttdef"><b>Definition:</b> bombardelli_test.py:27</div></div>
+<div class="ttc" id="anamespace_kratos_html_a8b2d617fdb94b53f5f2bb88e1a7ebc18"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">Kratos::SizeType</a></div><div class="ttdeci">std::size_t SizeType</div><div class="ttdoc">The definition of the size type.</div><div class="ttdef"><b>Definition:</b> mortar_classes.h:43</div></div>
 <div class="ttc" id="anamespaceface__heat_html_ab6da0d32b7fcf219eef3ad82012a91c9"><div class="ttname"><a href="../../d6/dd7/namespaceface__heat.html#ab6da0d32b7fcf219eef3ad82012a91c9">face_heat.model_part</a></div><div class="ttdeci">model_part</div><div class="ttdef"><b>Definition:</b> face_heat.py:14</div></div>
 <div class="ttc" id="anamespacefilter_html"><div class="ttname"><a href="../../d1/da4/namespacefilter.html">filter</a></div><div class="ttdef"><b>Definition:</b> filter.py:1</div></div>
 <div class="ttc" id="anamespacegenerate__frictional__mortar__condition_html_a3c0c3f331487ee9a8f9a615928bb6668"><div class="ttname"><a href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a3c0c3f331487ee9a8f9a615928bb6668">generate_frictional_mortar_condition.rhs</a></div><div class="ttdeci">rhs</div><div class="ttdef"><b>Definition:</b> generate_frictional_mortar_condition.py:297</div></div>
 <div class="ttc" id="anamespacegenerate__frictional__mortar__condition_html_a433abcc86ff82888f447b695aa396a16"><div class="ttname"><a href="../../dc/d97/namespacegenerate__frictional__mortar__condition.html#a433abcc86ff82888f447b695aa396a16">generate_frictional_mortar_condition.lhs</a></div><div class="ttdeci">lhs</div><div class="ttdef"><b>Definition:</b> generate_frictional_mortar_condition.py:297</div></div>
 <div class="ttc" id="anamespacegenerate__stokes__twofluid__element_html_abf359962d3066decbbcfdf1ee2b8c1ae"><div class="ttname"><a href="../../d9/d7e/namespacegenerate__stokes__twofluid__element.html#abf359962d3066decbbcfdf1ee2b8c1ae">generate_stokes_twofluid_element.a</a></div><div class="ttdeci">a</div><div class="ttdef"><b>Definition:</b> generate_stokes_twofluid_element.py:77</div></div>
 <div class="ttc" id="anamespacegenerate__total__lagrangian__mixed__volumetric__strain__element_html_aa9be8bca3cd4b9f0c16093a9dda89988"><div class="ttname"><a href="../../d7/d33/namespacegenerate__total__lagrangian__mixed__volumetric__strain__element.html#aa9be8bca3cd4b9f0c16093a9dda89988">generate_total_lagrangian_mixed_volumetric_strain_element.b</a></div><div class="ttdeci">b</div><div class="ttdef"><b>Definition:</b> generate_total_lagrangian_mixed_volumetric_strain_element.py:31</div></div>
-<div class="ttc" id="anamespaceread__stl_html_a52c861540814bb657c77c8971302257d"><div class="ttname"><a href="../../d2/dae/namespaceread__stl.html#a52c861540814bb657c77c8971302257d">read_stl.prop</a></div><div class="ttdeci">prop</div><div class="ttdef"><b>Definition:</b> read_stl.py:10</div></div>
 <div class="ttc" id="anamespacesp__statistics_html_a83f6a906c1ae40e27b22b9078bba8e43"><div class="ttname"><a href="../../d3/d16/namespacesp__statistics.html#a83f6a906c1ae40e27b22b9078bba8e43">sp_statistics.height_factor</a></div><div class="ttdeci">height_factor</div><div class="ttdef"><b>Definition:</b> sp_statistics.py:22</div></div>
-<div class="ttc" id="anamespacetensors_html_a15a1da80aa773e2015eba781cababe05"><div class="ttname"><a href="../../d2/db8/namespacetensors.html#a15a1da80aa773e2015eba781cababe05">tensors::i</a></div><div class="ttdeci">integer i</div><div class="ttdef"><b>Definition:</b> TensorModule.f:17</div></div>
 <div class="ttc" id="asteady__state___pw__piping__element_8hpp_html"><div class="ttname"><a href="../../d0/dc7/steady__state___pw__piping__element_8hpp.html">steady_state_Pw_piping_element.hpp</a></div></div>
-<div class="ttc" id="astructelement_html"><div class="ttname"><a href="../../d9/db2/structelement.html">element</a></div><div class="ttdef"><b>Definition:</b> mesh_converter.cpp:33</div></div>
 <div class="ttc" id="atransport__equation__utilities_8hpp_html"><div class="ttname"><a href="../../d5/dee/transport__equation__utilities_8hpp.html">transport_equation_utilities.hpp</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 12 2024 02:39:26 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Nov 13 2024 02:38:00 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
