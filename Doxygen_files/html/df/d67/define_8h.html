@@ -2609,7 +2609,8 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <b>Value:</b><div class="fragment"><div class="line">    <a class="code" href="../../db/d66/namespace_kratos.html#a3c13f269b67bdbcc954598b9f538869a">AddKratosComponent</a>(name.Name(), name); \</div>
-<div class="line">    KratosComponents&lt;VariableData&gt;::Add(name.Name(), name);</div>
+<div class="line">    KratosComponents&lt;VariableData&gt;::Add(name.Name(), name); \</div>
+<div class="line">    name.Register();</div>
 <div class="ttc" id="anamespace_kratos_html_a3c13f269b67bdbcc954598b9f538869a"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a3c13f269b67bdbcc954598b9f538869a">Kratos::AddKratosComponent</a></div><div class="ttdeci">void AddKratosComponent(std::string const &amp;Name, ExplicitBuilderType const &amp;ThisComponent)</div><div class="ttdef"><b>Definition:</b> register_factories.cpp:23</div></div>
 </div><!-- fragment -->
 </div>
@@ -2848,7 +2849,7 @@ Macros</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 13 2024 03:26:22 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Nov 14 2024 03:26:39 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

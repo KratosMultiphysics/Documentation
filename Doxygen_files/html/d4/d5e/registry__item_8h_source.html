@@ -104,7 +104,7 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">    #include &lt;boost/any.hpp&gt;</span></div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#else</span></div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">    #include &lt;any&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif </span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="comment">// External includes</span></div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
@@ -294,7 +294,7 @@ $(function() {
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a5eac541f5e39bf0360a12f51f0248513">KRATOS_CATCH</a>(<span class="stringliteral">&quot;&quot;</span>);</div>
 <div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;    }</div>
 <div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160; </div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TDataType, <span class="keyword">typename</span> TCastType&gt; </div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TDataType, <span class="keyword">typename</span> TCastType&gt;</div>
 <div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="../../d7/d08/class_kratos_1_1_registry_item.html#a127403a819ac9d4531dbfd4003727e93">  261</a></span>&#160;    TCastType <span class="keyword">const</span>&amp; <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html#a127403a819ac9d4531dbfd4003727e93">GetValueAs</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="keyword">    </span>{</div>
 <div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ab9c29d6a0d19ff26bbc4e45e3181fb3f">KRATOS_TRY</a></div>
@@ -319,102 +319,112 @@ $(function() {
 <div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160; </div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <span class="keywordtype">bool</span> HasItem(std::string <span class="keyword">const</span>&amp; rItemName) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160; </div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    std::string Info() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> OtherType&gt;</div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="../../d7/d08/class_kratos_1_1_registry_item.html#aac6f5a42d99e3d1fdcf1a787bb0e1c5c">  289</a></span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html#aac6f5a42d99e3d1fdcf1a787bb0e1c5c">IsSameType</a>(<span class="keyword">const</span> OtherType&amp; rOther)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">try</span> {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            GetValue&lt;OtherType&gt;();</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;        } <span class="keywordflow">catch</span> (...) {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;    <span class="keywordtype">void</span> PrintData(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160; </div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    std::string ToJson(std::string <span class="keyword">const</span>&amp; rTabSpacing = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> std::size_t Level = 0) <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    std::string Info() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;    <span class="keywordtype">void</span> PrintInfo(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;    std::string mName;</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;<span class="preprocessor">#if defined (__GNUC__) &amp;&amp; __GNUC__ &lt;= 8 &amp;&amp; __GNUC_MINOR__ &lt;= 3</span></div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;    boost::any mpValue;</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;    std::any mpValue;</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    std::string (<a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>::*mGetValueStringMethod)() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160; </div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    std::string GetRegistryItemType()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        <span class="keywordflow">return</span> mpValue.type().name();</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;    }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160; </div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TItemType&gt;</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    std::string GetItemString()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;        std::stringstream buffer;</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;        buffer &lt;&lt; this-&gt;GetValue&lt;TItemType&gt;();</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;        <span class="keywordflow">return</span> buffer.str();</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;    }</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160; </div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160; </div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keyword">class </span>SubRegistryItemFunctor</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;    {</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... TArgumentsList&gt;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <span class="keyword">static</span> <span class="keyword">inline</span> RegistryItem::Pointer <a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ab92c2e9f910c89e79f484975c7a83520">Create</a>(</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            std::string <span class="keyword">const</span>&amp; ItemName,</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;            TArgumentsList&amp;&amp;... Arguments)</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        {</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            <span class="keywordflow">return</span> Kratos::make_shared&lt;RegistryItem&gt;(ItemName);</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        }</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    };</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TItemType&gt;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    <span class="keyword">class </span>SubValueItemFunctor</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... TArgumentsList, <span class="keyword">class </span>TFunctionType = std::function&lt;std::shared_ptr&lt;TItemType&gt;(TArgumentsList...)&gt;&gt;</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        <span class="keyword">static</span> <span class="keyword">inline</span> RegistryItem::Pointer <a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ab92c2e9f910c89e79f484975c7a83520">Create</a>(</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            std::string <span class="keyword">const</span>&amp; ItemName,</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            TFunctionType &amp;&amp; Function)</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        {</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            <span class="keywordflow">return</span> Kratos::make_shared&lt;RegistryItem&gt;(ItemName, std::forward&lt;TFunctionType&gt;(Function));</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... TArgumentsList&gt;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keyword">static</span> <span class="keyword">inline</span> RegistryItem::Pointer <a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ab92c2e9f910c89e79f484975c7a83520">Create</a>(</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            std::string <span class="keyword">const</span>&amp; ItemName,</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            TArgumentsList&amp;&amp;... Arguments)</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;        {</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            <span class="keywordflow">return</span> Kratos::make_shared&lt;RegistryItem&gt;(ItemName, Kratos::make_shared&lt;TItemType&gt;(std::forward&lt;TArgumentsList&gt;(Arguments)...));</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        }</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160; </div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    };</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordtype">void</span> PrintData(std::ostream&amp; rOStream) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;    std::string ToJson(std::string <span class="keyword">const</span>&amp; rTabSpacing = <span class="stringliteral">&quot;&quot;</span>, <span class="keyword">const</span> std::size_t Level = 0) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160; </div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160; </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;    std::string mName;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;<span class="preprocessor">#if defined (__GNUC__) &amp;&amp; __GNUC__ &lt;= 8 &amp;&amp; __GNUC_MINOR__ &lt;= 3</span></div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;    boost::any mpValue;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;    std::any mpValue;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    std::string (<a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>::*mGetValueStringMethod)() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160; </div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;    std::string GetRegistryItemType()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        <span class="keywordflow">return</span> mpValue.type().name();</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">class</span> TItemType&gt;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    std::string GetItemString()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        std::stringstream buffer;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;        buffer &lt;&lt; this-&gt;GetValue&lt;TItemType&gt;();</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;        <span class="keywordflow">return</span> buffer.str();</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;    }</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160; </div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160; </div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    <span class="keyword">class </span>SubRegistryItemFunctor</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... TArgumentsList&gt;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keyword">static</span> <span class="keyword">inline</span> RegistryItem::Pointer <a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ab92c2e9f910c89e79f484975c7a83520">Create</a>(</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            std::string <span class="keyword">const</span>&amp; ItemName,</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;            TArgumentsList&amp;&amp;... Arguments)</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;        {</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            <span class="keywordflow">return</span> Kratos::make_shared&lt;RegistryItem&gt;(ItemName);</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    };</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160; </div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keyword">template</span>&lt;<span class="keyword">typename</span> TItemType&gt;</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    <span class="keyword">class </span>SubValueItemFunctor</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... TArgumentsList, <span class="keyword">class </span>TFunctionType = std::function&lt;std::shared_ptr&lt;TItemType&gt;(TArgumentsList...)&gt;&gt;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        <span class="keyword">static</span> <span class="keyword">inline</span> RegistryItem::Pointer <a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ab92c2e9f910c89e79f484975c7a83520">Create</a>(</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;            std::string <span class="keyword">const</span>&amp; ItemName,</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            TFunctionType &amp;&amp; Function)</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;            <span class="keywordflow">return</span> Kratos::make_shared&lt;RegistryItem&gt;(ItemName, std::forward&lt;TFunctionType&gt;(Function));</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        }</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160; </div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;    std::string GetValueString() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    SubRegistryItemType&amp; GetSubRegistryItemMap();</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">class</span>... TArgumentsList&gt;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        <span class="keyword">static</span> <span class="keyword">inline</span> RegistryItem::Pointer <a class="code" href="../../d1/ddb/namespace_kratos_1_1_modeler_factory.html#ab92c2e9f910c89e79f484975c7a83520">Create</a>(</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;            std::string <span class="keyword">const</span>&amp; ItemName,</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;            TArgumentsList&amp;&amp;... Arguments)</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;        {</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;            <span class="keywordflow">return</span> Kratos::make_shared&lt;RegistryItem&gt;(ItemName, Kratos::make_shared&lt;TItemType&gt;(std::forward&lt;TArgumentsList&gt;(Arguments)...));</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;        }</div>
 <div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160; </div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    SubRegistryItemType&amp; GetSubRegistryItemMap() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    };</div>
 <div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160; </div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160; </div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;}; <span class="comment">// Class RegistryItem</span></div>
 <div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160; </div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    std::string GetValueString() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160; </div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;    SubRegistryItemType&amp; GetSubRegistryItemMap();</div>
 <div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160; </div>
-<div class="line"><a name="l00390"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga7aeddb8a56ba6ce8ee180f1c3731c988">  390</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;    std::istream&amp; rIStream,</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;    <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>&amp; rThis);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160; </div>
-<div class="line"><a name="l00395"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga659c689399e38a6b4aedd3378a3029d2">  395</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    std::ostream&amp; rOStream,</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>&amp; rThis)</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;{</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;    rThis.<a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html#af4f76f516f6bd48cb5c0ce0de9272e7b">PrintInfo</a>(rOStream);</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;    rOStream &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    rThis.<a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html#ab2ed55d743f54d0ce4beaaf6d500368c">PrintData</a>(rOStream);</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160; </div>
-<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
-<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;}</div>
-<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160; </div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    SubRegistryItemType&amp; GetSubRegistryItemMap() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160; </div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160; </div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;}; <span class="comment">// Class RegistryItem</span></div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160; </div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160; </div>
+<div class="line"><a name="l00400"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga7aeddb8a56ba6ce8ee180f1c3731c988">  400</a></span>&#160;<span class="keyword">inline</span> std::istream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#a9c6097d0b0a27d1cea94992b1087f56a">operator &gt;&gt; </a>(</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    std::istream&amp; rIStream,</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>&amp; rThis);</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160; </div>
+<div class="line"><a name="l00405"></a><span class="lineno"><a class="line" href="../../d4/dbe/group___application_name_application.html#ga659c689399e38a6b4aedd3378a3029d2">  405</a></span>&#160;<span class="keyword">inline</span> std::ostream&amp; <a class="code" href="../../db/d66/namespace_kratos.html#acfc842a43d19dffc2d8105e5cbea17a9">operator &lt;&lt; </a>(</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;    std::ostream&amp; rOStream,</div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;    <span class="keyword">const</span> <a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>&amp; rThis)</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;{</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;    rThis.<a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html#af4f76f516f6bd48cb5c0ce0de9272e7b">PrintInfo</a>(rOStream);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;    rOStream &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    rThis.<a class="code" href="../../d7/d08/class_kratos_1_1_registry_item.html#ab2ed55d743f54d0ce4beaaf6d500368c">PrintData</a>(rOStream);</div>
+<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
+<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;    <span class="keywordflow">return</span> rOStream;</div>
+<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;}</div>
+<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160; </div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;}  <span class="comment">// namespace Kratos.</span></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_item_1_1_key_return_const_iterator_html"><div class="ttname"><a href="../../db/d2e/class_kratos_1_1_registry_item_1_1_key_return_const_iterator.html">Kratos::RegistryItem::KeyReturnConstIterator</a></div><div class="ttdoc">Custom iterator with key as return type to be used in the Python export.</div><div class="ttdef"><b>Definition:</b> registry_item.h:65</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_item_1_1_key_return_const_iterator_html_a1107ffe8d28b5151fc236a8a029c0d05"><div class="ttname"><a href="../../db/d2e/class_kratos_1_1_registry_item_1_1_key_return_const_iterator.html#a1107ffe8d28b5151fc236a8a029c0d05">Kratos::RegistryItem::KeyReturnConstIterator::operator++</a></div><div class="ttdeci">KeyReturnConstIterator operator++(int)</div><div class="ttdef"><b>Definition:</b> registry_item.h:118</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_item_1_1_key_return_const_iterator_html_a1275a86d054f1f3394072cf620c49a5e"><div class="ttname"><a href="../../db/d2e/class_kratos_1_1_registry_item_1_1_key_return_const_iterator.html#a1275a86d054f1f3394072cf620c49a5e">Kratos::RegistryItem::KeyReturnConstIterator::value_type</a></div><div class="ttdeci">SubRegistryItemType::key_type value_type</div><div class="ttdef"><b>Definition:</b> registry_item.h:73</div></div>
@@ -444,6 +454,7 @@ $(function() {
 <div class="ttc" id="aclass_kratos_1_1_registry_item_html_a7631b950e4c83a18b4fc2c857b282c20"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#a7631b950e4c83a18b4fc2c857b282c20">Kratos::RegistryItem::RegistryItem</a></div><div class="ttdeci">RegistryItem(const std::string &amp;rName, const shared_ptr&lt; TItemType &gt; &amp;pValue)</div><div class="ttdoc">Constructor with the name and shared ptr.</div><div class="ttdef"><b>Definition:</b> registry_item.h:178</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_item_html_a88e1f751d6e195371dff78c5e3dd92a7"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#a88e1f751d6e195371dff78c5e3dd92a7">Kratos::RegistryItem::RegistryItem</a></div><div class="ttdeci">RegistryItem()=delete</div><div class="ttdoc">Default constructor deleted.</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_item_html_aac40150e802d32df42f5bb814e7d3666"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#aac40150e802d32df42f5bb814e7d3666">Kratos::RegistryItem::SubRegistryItemPointerType</a></div><div class="ttdeci">Kratos::shared_ptr&lt; SubRegistryItemType &gt; SubRegistryItemPointerType</div><div class="ttdoc">Pointer definition of SubRegistryItemType.</div><div class="ttdef"><b>Definition:</b> registry_item.h:61</div></div>
+<div class="ttc" id="aclass_kratos_1_1_registry_item_html_aac6f5a42d99e3d1fdcf1a787bb0e1c5c"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#aac6f5a42d99e3d1fdcf1a787bb0e1c5c">Kratos::RegistryItem::IsSameType</a></div><div class="ttdeci">bool IsSameType(const OtherType &amp;rOther) const</div><div class="ttdef"><b>Definition:</b> registry_item.h:289</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_item_html_ab2ed55d743f54d0ce4beaaf6d500368c"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#ab2ed55d743f54d0ce4beaaf6d500368c">Kratos::RegistryItem::PrintData</a></div><div class="ttdeci">void PrintData(std::ostream &amp;rOStream) const</div><div class="ttdoc">Print object's data.</div><div class="ttdef"><b>Definition:</b> registry_item.cpp:83</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_item_html_ad1d6bb7b1c878afb33cce9ee5f5da117"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#ad1d6bb7b1c878afb33cce9ee5f5da117">Kratos::RegistryItem::AddItem</a></div><div class="ttdeci">RegistryItem &amp; AddItem(std::string const &amp;ItemName, TArgumentsList &amp;&amp;... Arguments)</div><div class="ttdef"><b>Definition:</b> registry_item.h:200</div></div>
 <div class="ttc" id="aclass_kratos_1_1_registry_item_html_ad8883be73ffc6720a312406db384703b"><div class="ttname"><a href="../../d7/d08/class_kratos_1_1_registry_item.html#ad8883be73ffc6720a312406db384703b">Kratos::RegistryItem::RegistryItem</a></div><div class="ttdeci">RegistryItem(RegistryItem const &amp;rOther)=delete</div></div>
@@ -467,7 +478,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Nov 13 2024 03:20:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Thu Nov 14 2024 03:20:40 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
