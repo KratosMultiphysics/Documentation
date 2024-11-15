@@ -133,44 +133,46 @@ $(function() {
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
 <div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    <span class="keywordtype">bool</span>&amp; <a class="code" href="../../da/d07/namespace_kratos_1_1_python.html#afdd2f70c75c8e7c828cbab4a370a6d35">GetValue</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;bool&gt;</a>&amp; rThisVariable, <span class="keywordtype">bool</span>&amp; rValue) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="keywordtype">void</span> CalculateElasticMatrix(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; <a class="code" href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#ab45a4283c7c6241bac04288dfdfbc7ff">C</a>, <a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a>&amp; rValues) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;    <span class="keywordtype">void</span> CalculatePK2Stress(<span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp;                rStrainVector,</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                            <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp;                      rStressVector,</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                            <a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a>&amp; rValues) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="../../d5/d34/class_kratos_1_1_linear_elastic3_d_interface_law.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  187</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160; </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d1/dcb/class_kratos_1_1_linear_elastic2_d_interface_law.html">LinearElastic2DInterfaceLaw</a>)</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    }</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span></div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keyword">    </span>{</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d1/dcb/class_kratos_1_1_linear_elastic2_d_interface_law.html">LinearElastic2DInterfaceLaw</a>)</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;    }</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;}; <span class="comment">// Class LinearElastic2DInterfaceLaw</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="keyword">using</span> <a class="code" href="../../d1/dcb/class_kratos_1_1_linear_elastic2_d_interface_law.html#abbebc0ffba9a03efb6662d647d88f369">LinearElastic2DInterfaceLaw::GetValue</a>;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160; </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keywordtype">void</span> CalculateElasticMatrix(<a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Matrix</a>&amp; <a class="code" href="../../d3/da3/namespacegenerate__hyper__elastic__simo__taylor__neo__hookean.html#ab45a4283c7c6241bac04288dfdfbc7ff">C</a>, <a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a>&amp; rValues) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160; </div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;    <span class="keywordtype">void</span> CalculatePK2Stress(<span class="keyword">const</span> <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp;                rStrainVector,</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                            <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a>&amp;                      rStressVector,</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                            <a class="code" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a>&amp; rValues) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="../../d5/d34/class_kratos_1_1_linear_elastic3_d_interface_law.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  188</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#a534cb8a7eac3e4cf5d2c482b87b505a4">KRATOS_SERIALIZE_SAVE_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d1/dcb/class_kratos_1_1_linear_elastic2_d_interface_law.html">LinearElastic2DInterfaceLaw</a>)</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;    }</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160; </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer)<span class="keyword"> override</span></div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keyword">    </span>{</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;        <a class="code" href="../../df/d67/define_8h.html#ac41b129afec253cba3e0fc8efa241fd1">KRATOS_SERIALIZE_LOAD_BASE_CLASS</a>(rSerializer, <a class="code" href="../../d1/dcb/class_kratos_1_1_linear_elastic2_d_interface_law.html">LinearElastic2DInterfaceLaw</a>)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;}; <span class="comment">// Class LinearElastic2DInterfaceLaw</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;} <span class="comment">// namespace Kratos</span></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html">Kratos::ConstitutiveLaw</a></div><div class="ttdef"><b>Definition:</b> constitutive_law.h:47</div></div>
 <div class="ttc" id="aclass_kratos_1_1_constitutive_law_html_ad2f92c9305e9666dd35fca930b7e4f56"><div class="ttname"><a href="../../df/da7/class_kratos_1_1_constitutive_law.html#ad2f92c9305e9666dd35fca930b7e4f56">Kratos::ConstitutiveLaw::SizeType</a></div><div class="ttdeci">std::size_t SizeType</div><div class="ttdef"><b>Definition:</b> constitutive_law.h:82</div></div>
 <div class="ttc" id="aclass_kratos_1_1_geo_linear_elastic_law_html"><div class="ttname"><a href="../../d4/d27/class_kratos_1_1_geo_linear_elastic_law.html">Kratos::GeoLinearElasticLaw</a></div><div class="ttdef"><b>Definition:</b> linear_elastic_law.h:21</div></div>
 <div class="ttc" id="aclass_kratos_1_1_internals_1_1_matrix_html"><div class="ttname"><a href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Kratos::Internals::Matrix&lt; double, AMatrix::dynamic, AMatrix::dynamic &gt;</a></div></div>
 <div class="ttc" id="aclass_kratos_1_1_linear_elastic2_d_interface_law_html"><div class="ttname"><a href="../../d1/dcb/class_kratos_1_1_linear_elastic2_d_interface_law.html">Kratos::LinearElastic2DInterfaceLaw</a></div><div class="ttdoc">This class defines a small deformation linear elastic constitutive model for plane strain cases.</div><div class="ttdef"><b>Definition:</b> linear_elastic_2D_interface_law.h:47</div></div>
+<div class="ttc" id="aclass_kratos_1_1_linear_elastic2_d_interface_law_html_abbebc0ffba9a03efb6662d647d88f369"><div class="ttname"><a href="../../d1/dcb/class_kratos_1_1_linear_elastic2_d_interface_law.html#abbebc0ffba9a03efb6662d647d88f369">Kratos::LinearElastic2DInterfaceLaw::GetValue</a></div><div class="ttdeci">bool &amp; GetValue(const Variable&lt; bool &gt; &amp;rThisVariable, bool &amp;rValue) override</div><div class="ttdoc">Itreturns the value of a specified variable.</div><div class="ttdef"><b>Definition:</b> incremental_linear_elastic_law.cpp:67</div></div>
 <div class="ttc" id="aclass_kratos_1_1_linear_elastic3_d_interface_law_html"><div class="ttname"><a href="../../d5/d34/class_kratos_1_1_linear_elastic3_d_interface_law.html">Kratos::LinearElastic3DInterfaceLaw</a></div><div class="ttdoc">This class defines a small deformation linear elastic constitutive model for plane strain cases.</div><div class="ttdef"><b>Definition:</b> linear_elastic_3D_interface_law.h:47</div></div>
 <div class="ttc" id="aclass_kratos_1_1_linear_elastic3_d_interface_law_html_a094b45234d0f0d770dbcf92ba703ad9c"><div class="ttname"><a href="../../d5/d34/class_kratos_1_1_linear_elastic3_d_interface_law.html#a094b45234d0f0d770dbcf92ba703ad9c">Kratos::LinearElastic3DInterfaceLaw::GetStrainSize</a></div><div class="ttdeci">SizeType GetStrainSize() const override</div><div class="ttdoc">Voigt tensor size:</div><div class="ttdef"><b>Definition:</b> linear_elastic_3D_interface_law.h:99</div></div>
 <div class="ttc" id="aclass_kratos_1_1_linear_elastic3_d_interface_law_html_af77d8bef31cdd7d3893d85b8589aec1b"><div class="ttname"><a href="../../d5/d34/class_kratos_1_1_linear_elastic3_d_interface_law.html#af77d8bef31cdd7d3893d85b8589aec1b">Kratos::LinearElastic3DInterfaceLaw::WorkingSpaceDimension</a></div><div class="ttdeci">SizeType WorkingSpaceDimension() override</div><div class="ttdoc">Dimension of the law:</div><div class="ttdef"><b>Definition:</b> linear_elastic_3D_interface_law.h:93</div></div>
@@ -191,7 +193,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 14 2024 02:37:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Nov 15 2024 02:44:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

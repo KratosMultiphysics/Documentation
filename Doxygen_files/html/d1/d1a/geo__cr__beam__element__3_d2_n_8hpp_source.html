@@ -146,25 +146,27 @@ $(function() {
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../da/d07/namespace_kratos_1_1_python.html#a54334f8e2084f34bf0bd679f178cf8ff">CalculateOnIntegrationPoints</a>(<span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt;<a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a>&gt;&amp; rVariable,</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                                      std::vector&lt;<a class="code" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d&lt;double, 3&gt;</a>&gt;&amp;    rOutput,</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                                      <span class="keyword">const</span> <a class="code" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a>&amp; rCurrentProcessInfo) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordtype">void</span> ResetConstitutiveLaw() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="../../d1/d0c/class_kratos_1_1_geo_cr_beam_element3_d2_n.html#a05de08805f876a2eb40a353fccdbfcfe">   95</a></span>&#160;    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> mLocalForcesFinalized         = <a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(msElementSize);</div>
-<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d1/d0c/class_kratos_1_1_geo_cr_beam_element3_d2_n.html#a59461c2991dabd7c8df671c27a95cedd">   96</a></span>&#160;    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> mLocalForcesFinalizedPrevious = <a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(msElementSize);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keywordtype">bool</span> mIsInitialization = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="../../d1/d0c/class_kratos_1_1_geo_cr_beam_element3_d2_n.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  101</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;};</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;} <span class="comment">// namespace Kratos</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keyword">using</span> <a class="code" href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#aebff962d0e7e117e16b7ef5145e480d7">CrBeamElement3D2N::CalculateOnIntegrationPoints</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">void</span> ResetConstitutiveLaw() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="../../d1/d0c/class_kratos_1_1_geo_cr_beam_element3_d2_n.html#a05de08805f876a2eb40a353fccdbfcfe">   96</a></span>&#160;    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> mLocalForcesFinalized         = <a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(msElementSize);</div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="../../d1/d0c/class_kratos_1_1_geo_cr_beam_element3_d2_n.html#a59461c2991dabd7c8df671c27a95cedd">   97</a></span>&#160;    <a class="code" href="../../d9/dbb/class_kratos_1_1_internals_1_1_matrix.html">Vector</a> mLocalForcesFinalizedPrevious = <a class="code" href="../../db/d66/namespace_kratos.html#a0060702fbd6c7d45c773436101c9ded3">ZeroVector</a>(msElementSize);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordtype">bool</span> mIsInitialization = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="../../d1/d0c/class_kratos_1_1_geo_cr_beam_element3_d2_n.html#ad3f5346f31d572dd2ab4fcd658de5bc4">  102</a></span>&#160;    <span class="keyword">friend</span> <span class="keyword">class </span><a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    <span class="keywordtype">void</span> save(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="../../d2/df2/namespaceode__solve.html#a0b266774af0a13d56a57cf1ada122768">load</a>(<a class="code" href="../../dd/d32/class_kratos_1_1_serializer.html">Serializer</a>&amp; rSerializer) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;} <span class="comment">// namespace Kratos</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="ttc" id="aclass_kratos_1_1_cr_beam_element3_d2_n_html"><div class="ttname"><a href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html">Kratos::CrBeamElement3D2N</a></div><div class="ttdoc">This is a 3D-2node beam element with 3 translational dofs and 3 rotational dof per node.</div><div class="ttdef"><b>Definition:</b> cr_beam_element_3D2N.hpp:35</div></div>
+<div class="ttc" id="aclass_kratos_1_1_cr_beam_element3_d2_n_html_aebff962d0e7e117e16b7ef5145e480d7"><div class="ttname"><a href="../../da/d56/class_kratos_1_1_cr_beam_element3_d2_n.html#aebff962d0e7e117e16b7ef5145e480d7">Kratos::CrBeamElement3D2N::CalculateOnIntegrationPoints</a></div><div class="ttdeci">void CalculateOnIntegrationPoints(const Variable&lt; array_1d&lt; double, 3 &gt; &gt; &amp;rVariable, std::vector&lt; array_1d&lt; double, 3 &gt; &gt; &amp;rOutput, const ProcessInfo &amp;rCurrentProcessInfo) override</div><div class="ttdef"><b>Definition:</b> cr_beam_element_3D2N.cpp:1210</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_a55fa27d5cdbb596f0bc19f7ba572355c"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">Kratos::Element::SizeType</a></div><div class="ttdeci">std::size_t SizeType</div><div class="ttdef"><b>Definition:</b> element.h:94</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_a83ae9b09dd7a0ed7ab3bc1baa6429df5"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#a83ae9b09dd7a0ed7ab3bc1baa6429df5">Kratos::Element::DofsVectorType</a></div><div class="ttdeci">std::vector&lt; DofType::Pointer &gt; DofsVectorType</div><div class="ttdef"><b>Definition:</b> element.h:100</div></div>
 <div class="ttc" id="aclass_kratos_1_1_element_html_ae71a1a55ae484b69ec9ec5f18919e324"><div class="ttname"><a href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Kratos::Element::EquationIdVectorType</a></div><div class="ttdeci">std::vector&lt; std::size_t &gt; EquationIdVectorType</div><div class="ttdef"><b>Definition:</b> element.h:98</div></div>
@@ -202,7 +204,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 14 2024 02:37:50 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Nov 15 2024 02:44:50 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
