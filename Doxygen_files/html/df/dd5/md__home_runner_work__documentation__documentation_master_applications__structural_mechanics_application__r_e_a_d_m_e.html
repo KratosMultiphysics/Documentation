@@ -75,40 +75,55 @@ $(function() {
 <div class="title">Structural Mechanics Application </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>The Structural Mechanics Application contains a series of structural elements, as well as solid elements, constitutive laws and the corresponding strategies and solvers within <a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> Multiphysics.</p>
+<div class="textblock"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter"><b>Application</b>   </th><th class="markdownTableHeadCenter"><b>Description</b>   </th><th class="markdownTableHeadCenter"><b>Status</b>   </th><th class="markdownTableHeadCenter"><b>Authors</b>    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code><a class="el" href="../../d4/df6/namespace_structural_mechanics_application.html">StructuralMechanicsApplication</a></code>   </td><td class="markdownTableBodyCenter">The <em>Structural Mechanics Application</em> contains a series of structural elements, as well as solid elements, the corresponding strategies, solvers and <em>Constitutive Laws Application</em> within <em><a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> Multiphysics</em>.   </td><td class="markdownTableBodyCenter"><img src="https://img.shields.io/badge/Status-%F0%9F%9A%80%20Actively%20developed-Green" alt="" width="300px" class="inline"/>   </td><td class="markdownTableBodyCenter">@KratosMultiphysics/structural-mechanics   </td></tr>
+</table>
 <p align="center"></p>
-<p><img src="https://github.com/KratosMultiphysics/Examples/raw/master/structural_mechanics/validation/beam_roll_up/data/rollup.gif" alt="Solution" style="width: 600px;" class="inline"/> </p>
-<p>The application includes tests to check the proper functioning of the application</p>
-<h2>Features:</h2>
+<p><img src="https://github.com/KratosMultiphysics/Examples/raw/master/structural_mechanics/validation/beam_roll_up/data/rollup.gif" alt="Solution" style="width: 300px;" class="inline"/> <img src="https://github.com/KratosMultiphysics/Examples/raw/master/structural_mechanics/use_cases/tensile_test_example/data/animation.gif" alt="Solution" style="width: 300px;" class="inline"/> <img src="https://github.com/KratosMultiphysics/Examples/raw/master/structural_mechanics/validation/beam_shallow_angled_structure/data/shallowAngleBeam.gif" alt="Solution" style="width: 300px;" class="inline"/> <img src="https://github.com/KratosMultiphysics/Examples/raw/master/structural_mechanics/validation/catenoid_formfinding/data/catenoid_normal.gif" alt="Solution" style="width: 300px;" class="inline"/> <img src="https://github.com/KratosMultiphysics/Examples/raw/master/structural_mechanics/validation/four_point_sail_formfinding/data/fourpoint_sail.gif" alt="Solution" style="width: 300px;" class="inline"/> <img src="https://github.com/KratosMultiphysics/Examples/raw/master/structural_mechanics/validation/two_dimensional_circular_truss_arch_snapthrough/data/DispCtrl.gif" alt="Solution" style="width: 300px;" class="inline"/> </p>
+<p>The application includes tests to check the proper functioning of the application.</p>
+<h1>😎 Features:</h1>
 <ul>
-<li>A set of <em>Neumann</em> conditions:<ul>
-<li>Point loads (loads applied directly on the nodes)</li>
-<li>Point moment (a discret moment applied directly on the nodes)</li>
-<li>Line load (a distributed load applied over a line)</li>
-<li>Surface load (a distributed load applied over a face)</li>
-<li>A simple point contact conditions based on the distance</li>
+<li><b>A set of <em>Neumann</em> conditions</b>:<ul>
+<li><em>Point loads (loads applied directly on the nodes)</em></li>
+<li><em>Point moment (a discret moment applied directly on the nodes)</em></li>
+<li><em>Line load (a distributed load applied over a line)</em></li>
+<li><em>Surface load (a distributed load applied over a face)</em></li>
+<li><em>A simple point contact conditions based on the distance</em></li>
 </ul>
 </li>
-<li>Solid elements:<ul>
-<li>Small displacement elements</li>
-<li>Total Lagrangian elements</li>
-<li>Updated Lagrangian elements</li>
-<li>Total Lagrangian prismatic solid-shell element (SPrism)</li>
+<li><b>Solid elements</b>:<ul>
+<li><em>Small displacement elements</em><ul>
+<li>Irreducible (pure displacement)</li>
+<li>Mixed formulation ($BBar$)</li>
+<li>Mixed formulation ($U-\varepsilon$)</li>
 </ul>
 </li>
-<li>Structural elements:<ul>
-<li>Zero-dimensional elements :<ul>
+<li><em>Total Lagrangian elements</em><ul>
+<li>Irreducible (pure displacement)</li>
+<li>Mixed formulation ($U-\Delta V/V$)</li>
+<li>Mixed formulation ($Q1P0$)</li>
+</ul>
+</li>
+<li><em>Updated Lagrangian</em> elements <em>irreducible (pure displacement)</em></li>
+<li><em>Total Lagrangian prismatic solid-shell element (*SPrism</em>)*</li>
+</ul>
+</li>
+<li><b>Structural elements</b>:<ul>
+<li><em>Zero-dimensional elements</em> :<ul>
 <li>Nodal concentrated element (both 2D/3D). Includes nodal damping, nodal mass and nodal stiffness</li>
 </ul>
 </li>
-<li>Uni-dimensional elements :<ul>
+<li><em>Uni-dimensional elements</em> :<ul>
 <li>Spring-damper element (3D)</li>
 <li>Cable element (3D)</li>
 <li>Truss element (3D)</li>
 <li>Corrotational beam element (both 2D/3D)</li>
 </ul>
 </li>
-<li>Two-dimensional elements :<ul>
+<li><em>Two-dimensional elements</em> :<ul>
 <li>Membrane (pre-stressed)</li>
 <li>Isotropic shell element</li>
 <li>Thin shell (Quadrilateral and triangular)</li>
@@ -117,138 +132,48 @@ $(function() {
 </li>
 </ul>
 </li>
-<li>Constitutive laws:<ul>
-<li>Isotropic laws (Plane strain, plane stress and 3D)</li>
-<li>Orthotropic law (Plane stress)</li>
-<li>Hyperelastic laws:<ul>
-<li>Neo-Hookean</li>
-<li>Kirchhoff</li>
+<li><b>Constitutive laws</b>:<ul>
+<li><em>Isotropic laws (Plane strain, plane stress and 3D)</em></li>
+<li>*The ones available in <a href="https://github.com/KratosMultiphysics/Kratos/blob/master/applications/ConstitutiveLawsApplication/README.md"><code>ConstitutiveLawsApplication</code></a>*</li>
 </ul>
 </li>
-<li>Small displacement isotropic plasticity laws (just 3D):<ul>
-<li>Combining:<ul>
-<li>Yield surfaces:<ul>
-<li>VonMises</li>
-<li>ModifiedMohrCoulomb</li>
-<li>Tresca</li>
-<li>DruckerPrager</li>
+<li><b>Adjoint Sensitivity Analysis</b>:<ul>
+<li><em>This feature provides the framework to compute sensitivities of structural responses (e.g. displacements, strain energy or stresses) with respect to different types of design variables (e.g. nodal coordinates, material or cross-sectional properties or load intensity) with the adjoint approach</em></li>
 </ul>
 </li>
-<li>Plastic potential:<ul>
-<li>VonMises</li>
-<li>ModifiedMohrCoulomb</li>
-<li>Tresca</li>
-<li>DruckerPrager</li>
+<li><b>Strategies</b>:<ul>
+<li><em>Formfinding strategies</em></li>
+<li><em>Eigensolver strategy</em></li>
+<li><em>Harmonic analysis strategies</em></li>
 </ul>
 </li>
+<li><b>Schemes</b>:<ul>
+<li><em>Relaxation scheme</em></li>
+<li><em>Eigen solver scheme</em></li>
 </ul>
 </li>
-<li>Complete list:<ul>
-<li>SmallStrainIsotropicPlasticity3DVonMisesVonMises</li>
-<li>SmallStrainIsotropicPlasticity3DVonMisesModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicPlasticity3DVonMisesDruckerPrager</li>
-<li>SmallStrainIsotropicPlasticity3DVonMisesTresca</li>
-<li>SmallStrainIsotropicPlasticity3DModifiedMohrCoulombVonMises</li>
-<li>SmallStrainIsotropicPlasticity3DModifiedMohrCoulombModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicPlasticity3DModifiedMohrCoulombDruckerPrager</li>
-<li>SmallStrainIsotropicPlasticity3DModifiedMohrCoulombTresca</li>
-<li>SmallStrainIsotropicPlasticity3DTrescaVonMises</li>
-<li>SmallStrainIsotropicPlasticity3DTrescaModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicPlasticity3DTrescaDruckerPrager</li>
-<li>SmallStrainIsotropicPlasticity3DTrescaTresca</li>
-<li>SmallStrainIsotropicPlasticity3DDruckerPragerVonMises</li>
-<li>SmallStrainIsotropicPlasticity3DDruckerPragerModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicPlasticity3DDruckerPragerDruckerPrager</li>
-<li>SmallStrainIsotropicPlasticity3DDruckerPragerTresca</li>
+<li><b>Convergence criteria</b>:<ul>
+<li><em>For displacement and other *DoF**</em></li>
+<li><em>*For displacement and rotation</em></li>
 </ul>
 </li>
+<li><b>Utilities and processes</b>:<ul>
+<li><em>A process to post-process eigenvalues</em></li>
+<li><em>A *GiDIO</em> utility for eigen values*</li>
+<li><em>Process to compute the global mass of the system</em></li>
+<li><em>Process to identify the neighbours in a prismatic mesh</em></li>
+<li><em>Process to transform a pure shell mesh (local dimension equal to 2), to solid-shell mesh (pure 3D mesh)</em></li>
 </ul>
 </li>
-<li>Small displacement isotropic damage laws (just 3D):<ul>
-<li>Combining:<ul>
-<li>Yield surfaces:<ul>
-<li>VonMises</li>
-<li>ModifiedMohrCoulomb</li>
-<li>Tresca</li>
-<li>DruckerPrager</li>
-<li>Rankine</li>
-<li>SimoJu</li>
+<li><b>+100 Python unittest, including Validation tests, and several cpp tests</b></li>
 </ul>
-</li>
-<li>Damage potential:<ul>
-<li>VonMises</li>
-<li>ModifiedMohrCoulomb</li>
-<li>Tresca</li>
-<li>DruckerPrager</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Complete list:<ul>
-<li>SmallStrainIsotropicDamage3DVonMisesVonMises</li>
-<li>SmallStrainIsotropicDamage3DVonMisesModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicDamage3DVonMisesDruckerPrager</li>
-<li>SmallStrainIsotropicDamage3DVonMisesTresca</li>
-<li>SmallStrainIsotropicDamage3DModifiedMohrCoulombVonMises</li>
-<li>SmallStrainIsotropicDamage3DModifiedMohrCoulombModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicDamage3DModifiedMohrCoulombDruckerPrager</li>
-<li>SmallStrainIsotropicDamage3DModifiedMohrCoulombTresca</li>
-<li>SmallStrainIsotropicDamage3DTrescaVonMises</li>
-<li>SmallStrainIsotropicDamage3DTrescaModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicDamage3DTrescaDruckerPrager</li>
-<li>SmallStrainIsotropicDamage3DTrescaTresca</li>
-<li>SmallStrainIsotropicDamage3DDruckerPragerVonMises</li>
-<li>SmallStrainIsotropicDamage3DDruckerPragerModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicDamage3DDruckerPragerDruckerPrager</li>
-<li>SmallStrainIsotropicDamage3DDruckerPragerTresca</li>
-<li>SmallStrainIsotropicDamage3DRankineVonMises</li>
-<li>SmallStrainIsotropicDamage3DRankineModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicDamage3DRankineDruckerPrager</li>
-<li>SmallStrainIsotropicDamage3DRankineTresca</li>
-<li>SmallStrainIsotropicDamage3DSimoJuVonMises</li>
-<li>SmallStrainIsotropicDamage3DSimoJuModifiedMohrCoulomb</li>
-<li>SmallStrainIsotropicDamage3DSimoJuDruckerPrager</li>
-<li>SmallStrainIsotropicDamage3DSimoJuTresca</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Adjoint Sensitivity Analysis:<ul>
-<li>This feature provides the framework to compute sensitivities of structural responses (e.g. displacements, strain energy or stresses) with respect to different types of design variables (e.g. nodal coordinates, material or cross-sectional properties or load intensity) with the adjoint approach</li>
-</ul>
-</li>
-<li>Strategies:<ul>
-<li>Formfinding strategies</li>
-<li>Eigensolver strategy</li>
-<li>Harmonic analysis strategies</li>
-</ul>
-</li>
-<li>Schemes:<ul>
-<li>Relaxation scheme</li>
-<li>Eigen solver scheme</li>
-</ul>
-</li>
-<li>Convergence criteria:<ul>
-<li>For displacement and other DoF</li>
-<li>For displacement and rotation</li>
-</ul>
-</li>
-<li>Utilities and processe:<ul>
-<li>A process to post-process eigenvalues</li>
-<li>A GiDIO utility for eigen values</li>
-<li>Process to compute the global mass of the system</li>
-<li>Process to identify the neighbours in a prismatic mesh</li>
-<li>Process to transform a pure shell mesh (local dimension equal to 2), to solid-shell mesh (pure 3D mesh) </li>
-</ul>
-</li>
-</ul>
+<h1>⚙️ Examples:</h1>
+<p>Examples can be found <a href="https://github.com/KratosMultiphysics/Examples/tree/master/structural_mechanics">here</a>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 18 2024 03:36:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Nov 19 2024 03:34:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

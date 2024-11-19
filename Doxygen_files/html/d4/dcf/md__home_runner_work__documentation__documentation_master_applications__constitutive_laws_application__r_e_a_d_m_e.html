@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>KratosMultiphysics: README</title>
+<title>KratosMultiphysics: Constitutive Laws Application</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -72,14 +72,138 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">README </div>  </div>
+<div class="title">Constitutive Laws Application </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"></div></div><!-- contents -->
+<div class="textblock"><table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadCenter"><b>Application</b>   </th><th class="markdownTableHeadCenter"><b>Description</b>   </th><th class="markdownTableHeadCenter"><b>Status</b>   </th><th class="markdownTableHeadCenter"><b>Authors</b>    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyCenter"><code><a class="el" href="../../d2/d6c/namespace_constitutive_laws_application.html">ConstitutiveLawsApplication</a></code>   </td><td class="markdownTableBodyCenter">The <em>Constitutive Laws Application</em> contains a series of constitutive laws implementations within <em><a class="el" href="../../db/d66/namespace_kratos.html" title="REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.">Kratos</a> Multiphysics</em>.   </td><td class="markdownTableBodyCenter"><img src="https://img.shields.io/badge/Status-%F0%9F%9A%80%20Actively%20developed-Green" alt="" width="300px" class="inline"/>   </td><td class="markdownTableBodyCenter">Alejandro Cornejo Velázquez *(<a href="#" onclick="location.href='mai'+'lto:'+'aco'+'rn'+'ejo'+'@c'+'imn'+'e.'+'upc'+'.e'+'du'; return false;">acorn<span style="display: none;">.nosp@m.</span>ejo@<span style="display: none;">.nosp@m.</span>cimne<span style="display: none;">.nosp@m.</span>.upc<span style="display: none;">.nosp@m.</span>.edu</a> )* <br  />
+ Sergio Jimenez Reyes *(<a href="#" onclick="location.href='mai'+'lto:'+'sji'+'me'+'nez'+'@c'+'imn'+'e.'+'upc'+'.e'+'du'; return false;">sjime<span style="display: none;">.nosp@m.</span>nez@<span style="display: none;">.nosp@m.</span>cimne<span style="display: none;">.nosp@m.</span>.upc<span style="display: none;">.nosp@m.</span>.edu</a>)* <br  />
+ Riccardo Rossi *(<a href="#" onclick="location.href='mai'+'lto:'+'rro'+'ss'+'i@c'+'im'+'ne.'+'up'+'c.e'+'du'; return false;">rross<span style="display: none;">.nosp@m.</span>i@ci<span style="display: none;">.nosp@m.</span>mne.u<span style="display: none;">.nosp@m.</span>pc.e<span style="display: none;">.nosp@m.</span>du</a>)* <br  />
+ Rubén Zorrilla Martínez *(<a href="#" onclick="location.href='mai'+'lto:'+'rzo'+'rr'+'ill'+'a@'+'cim'+'ne'+'.up'+'c.'+'edu'; return false;">rzorr<span style="display: none;">.nosp@m.</span>illa<span style="display: none;">.nosp@m.</span>@cimn<span style="display: none;">.nosp@m.</span>e.up<span style="display: none;">.nosp@m.</span>c.edu</a>)* <br  />
+ Vicente Mataix Ferrándiz *(<a href="#" onclick="location.href='mai'+'lto:'+'vma'+'ta'+'ix@'+'al'+'tai'+'r.'+'com'; return false;">vmata<span style="display: none;">.nosp@m.</span>ix@a<span style="display: none;">.nosp@m.</span>ltair<span style="display: none;">.nosp@m.</span>.com</a>)*   </td></tr>
+</table>
+<p>The application includes tests to check the proper functioning of the application.</p>
+<h1>😎 Features:</h1>
+<ul>
+<li><b>Constitutive laws</b><ul>
+<li><em>Orthotropic law (Plane stress)</em></li>
+<li><em>Hyperelastic laws</em><ul>
+<li>Neo-Hookean</li>
+<li>Kirchhoff</li>
+</ul>
+</li>
+<li><em>Small displacement isotropic plasticity laws (just 3D)</em><ul>
+<li>Combining:<ul>
+<li>Yield surfaces:<ul>
+<li>VonMises</li>
+<li>ModifiedMohrCoulomb</li>
+<li>Tresca</li>
+<li>DruckerPrager</li>
+</ul>
+</li>
+<li>Plastic potential:<ul>
+<li>VonMises</li>
+<li>ModifiedMohrCoulomb</li>
+<li>Tresca</li>
+<li>DruckerPrager</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Complete list:<ul>
+<li>SmallStrainIsotropicPlasticity3DVonMisesVonMises</li>
+<li>SmallStrainIsotropicPlasticity3DVonMisesModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicPlasticity3DVonMisesDruckerPrager</li>
+<li>SmallStrainIsotropicPlasticity3DVonMisesTresca</li>
+<li>SmallStrainIsotropicPlasticity3DModifiedMohrCoulombVonMises</li>
+<li>SmallStrainIsotropicPlasticity3DModifiedMohrCoulombModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicPlasticity3DModifiedMohrCoulombDruckerPrager</li>
+<li>SmallStrainIsotropicPlasticity3DModifiedMohrCoulombTresca</li>
+<li>SmallStrainIsotropicPlasticity3DTrescaVonMises</li>
+<li>SmallStrainIsotropicPlasticity3DTrescaModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicPlasticity3DTrescaDruckerPrager</li>
+<li>SmallStrainIsotropicPlasticity3DTrescaTresca</li>
+<li>SmallStrainIsotropicPlasticity3DDruckerPragerVonMises</li>
+<li>SmallStrainIsotropicPlasticity3DDruckerPragerModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicPlasticity3DDruckerPragerDruckerPrager</li>
+<li>SmallStrainIsotropicPlasticity3DDruckerPragerTresca</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><em>Small displacement isotropic damage laws (just 3D)</em><ul>
+<li>Combining:<ul>
+<li>Yield surfaces:<ul>
+<li>VonMises</li>
+<li>ModifiedMohrCoulomb</li>
+<li>Tresca</li>
+<li>DruckerPrager</li>
+<li>Rankine</li>
+<li>SimoJu</li>
+</ul>
+</li>
+<li>Damage potential:<ul>
+<li>VonMises</li>
+<li>ModifiedMohrCoulomb</li>
+<li>Tresca</li>
+<li>DruckerPrager</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Complete list:<ul>
+<li>SmallStrainIsotropicDamage3DVonMisesVonMises</li>
+<li>SmallStrainIsotropicDamage3DVonMisesModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicDamage3DVonMisesDruckerPrager</li>
+<li>SmallStrainIsotropicDamage3DVonMisesTresca</li>
+<li>SmallStrainIsotropicDamage3DModifiedMohrCoulombVonMises</li>
+<li>SmallStrainIsotropicDamage3DModifiedMohrCoulombModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicDamage3DModifiedMohrCoulombDruckerPrager</li>
+<li>SmallStrainIsotropicDamage3DModifiedMohrCoulombTresca</li>
+<li>SmallStrainIsotropicDamage3DTrescaVonMises</li>
+<li>SmallStrainIsotropicDamage3DTrescaModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicDamage3DTrescaDruckerPrager</li>
+<li>SmallStrainIsotropicDamage3DTrescaTresca</li>
+<li>SmallStrainIsotropicDamage3DDruckerPragerVonMises</li>
+<li>SmallStrainIsotropicDamage3DDruckerPragerModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicDamage3DDruckerPragerDruckerPrager</li>
+<li>SmallStrainIsotropicDamage3DDruckerPragerTresca</li>
+<li>SmallStrainIsotropicDamage3DRankineVonMises</li>
+<li>SmallStrainIsotropicDamage3DRankineModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicDamage3DRankineDruckerPrager</li>
+<li>SmallStrainIsotropicDamage3DRankineTresca</li>
+<li>SmallStrainIsotropicDamage3DSimoJuVonMises</li>
+<li>SmallStrainIsotropicDamage3DSimoJuModifiedMohrCoulomb</li>
+<li>SmallStrainIsotropicDamage3DSimoJuDruckerPrager</li>
+<li>SmallStrainIsotropicDamage3DSimoJuTresca</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><b>Utilities</b><ul>
+<li><em>Generic constitutive laws utilities</em></li>
+<li><em>Tangent operator AD</em></li>
+</ul>
+</li>
+<li><b>Processes</b><ul>
+<li><em>Automatic initial damage</em></li>
+<li><em>Advance in time HCF</em></li>
+</ul>
+</li>
+<li><b>Several python unittest, including Validation tests, and several cpp tests</b></li>
+</ul>
+<h1>⚙️ Examples:</h1>
+<p>Examples can be found <a href="https://github.com/KratosMultiphysics/Examples/tree/master/structural_mechanics">in the same folder as the <em>Structural Mechanics Application</em></a>. </p>
+</div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Nov 18 2024 03:36:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Tue Nov 19 2024 03:34:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
