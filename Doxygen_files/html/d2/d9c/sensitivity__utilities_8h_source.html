@@ -116,7 +116,7 @@ $(function() {
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> DerivativeDimension,</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d1/d66/class_kratos_1_1_variable.html">Variable&lt;Matrix&gt;</a>&amp; rDerivativeVariable,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">const</span> std::unordered_map&lt;<span class="keywordtype">int</span>, std::vector&lt;int&gt;&gt;&amp; rNeighbourNodeIdsMap,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a1eb1df1661de49ee9992f34c066c78a1">std::unordered_map</a>&lt;<span class="keywordtype">int</span>, std::vector&lt;int&gt;&gt;&amp; rNeighbourNodeIdsMap,</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">double</span> Weight,</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a>&amp; rFlag,</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> CheckValue = <span class="keyword">true</span>);</div>
@@ -124,8 +124,8 @@ $(function() {
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> ComputeEntityGeometryNeighbourNodeMap(</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        std::unordered_map&lt;<span class="keywordtype">int</span>, std::unordered_map&lt;int, int&gt;&gt;&amp; rDerivativeNodesMap,</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> std::unordered_map&lt;<span class="keywordtype">int</span>, std::vector&lt;int&gt;&gt;&amp; rNeighbourNodeIdsMap,</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a1eb1df1661de49ee9992f34c066c78a1">std::unordered_map</a>&lt;<span class="keywordtype">int</span>, std::unordered_map&lt;int, int&gt;&gt;&amp; rDerivativeNodesMap,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a1eb1df1661de49ee9992f34c066c78a1">std::unordered_map</a>&lt;<span class="keywordtype">int</span>, std::vector&lt;int&gt;&gt;&amp; rNeighbourNodeIdsMap,</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../dc/dea/class_kratos_1_1_geometry.html">Geometry&lt;ModelPart::NodeType&gt;</a>&amp; rEntityGeometry,</div>
 <div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d9/d4f/class_kratos_1_1_flags.html">Flags</a>&amp; rFlag,</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">bool</span> CheckValue);</div>
@@ -161,10 +161,11 @@ $(function() {
 <div class="ttc" id="amodel__part_8h_html"><div class="ttname"><a href="../../dd/dfe/model__part_8h.html">model_part.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_1_1_container_expression_helper_utilities_html_a0394e644d05fba90e76d143e0f43ccdc"><div class="ttname"><a href="../../d7/db7/namespace_kratos_1_1_container_expression_helper_utilities.html#a0394e644d05fba90e76d143e0f43ccdc">Kratos::ContainerExpressionHelperUtilities::GetContainer</a></div><div class="ttdeci">TContainerType &amp; GetContainer(ModelPart::MeshType &amp;rMesh)</div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
+<div class="ttc" id="anamespace_kratos_html_a1eb1df1661de49ee9992f34c066c78a1"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a1eb1df1661de49ee9992f34c066c78a1">Kratos::unordered_map</a></div><div class="ttdeci">std::unordered_map&lt; T1, T2 &gt; unordered_map</div><div class="ttdef"><b>Definition:</b> unordered_map.h:26</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 19 2024 03:33:34 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Nov 20 2024 03:32:44 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

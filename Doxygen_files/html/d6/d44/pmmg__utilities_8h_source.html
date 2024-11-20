@@ -317,7 +317,7 @@ $(function() {
 <div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160; </div>
 <div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;    <span class="keywordtype">void</span> GenerateMeshDataFromModelPart(</div>
 <div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        std::unordered_map&lt;<a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a>,std::vector&lt;std::string&gt;&gt;&amp; rColors,</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;        <a class="code" href="../../db/d66/namespace_kratos.html#a1eb1df1661de49ee9992f34c066c78a1">std::unordered_map</a>&lt;<a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a>,std::vector&lt;std::string&gt;&gt;&amp; rColors,</div>
 <div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;        <a class="code" href="../../d0/dd1/class_kratos_1_1_par_mmg_utilities.html#a4b8f350a9b30770988e54c18c5dabefb">ColorsMapType</a>&amp; rColorMapCondition,</div>
 <div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;        <a class="code" href="../../d0/dd1/class_kratos_1_1_par_mmg_utilities.html#a4b8f350a9b30770988e54c18c5dabefb">ColorsMapType</a>&amp; rColorMapElement,</div>
 <div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a71b5414786c132932952a4cf2adaafe0">FrameworkEulerLagrange</a> Framework = <a class="code" href="../../db/d66/namespace_kratos.html#a71b5414786c132932952a4cf2adaafe0a802018a6e0eceae1844000fdc0e1d3e8">FrameworkEulerLagrange::EULERIAN</a>,</div>
@@ -346,7 +346,7 @@ $(function() {
 <div class="line"><a name="l00563"></a><span class="lineno">  563</span>&#160; </div>
 <div class="line"><a name="l00573"></a><span class="lineno">  573</span>&#160;    <span class="keywordtype">void</span> WriteMeshDataToModelPart(</div>
 <div class="line"><a name="l00574"></a><span class="lineno">  574</span>&#160;        <a class="code" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a>&amp; rModelPart,</div>
-<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;        <span class="keyword">const</span> std::unordered_map&lt;<a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a>,std::vector&lt;std::string&gt;&gt;&amp; rColors,</div>
+<div class="line"><a name="l00575"></a><span class="lineno">  575</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../db/d66/namespace_kratos.html#a1eb1df1661de49ee9992f34c066c78a1">std::unordered_map</a>&lt;<a class="code" href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">IndexType</a>,std::vector&lt;std::string&gt;&gt;&amp; rColors,</div>
 <div class="line"><a name="l00576"></a><span class="lineno">  576</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d5/ddd/class_kratos_1_1_node.html#ad3f09644217dd785fa39566c72ce3083">NodeType::DofsContainerType</a>&amp; rDofs,</div>
 <div class="line"><a name="l00577"></a><span class="lineno">  577</span>&#160;        <span class="keyword">const</span> <a class="code" href="../../d7/dc5/struct_kratos_1_1_p_m_m_g_mesh_info.html">PMMGMeshInfo&lt;TPMMGLibrary&gt;</a>&amp; rPMMGMeshInfo,</div>
 <div class="line"><a name="l00578"></a><span class="lineno">  578</span>&#160;        std::unordered_map&lt;IndexType,Condition::Pointer&gt;&amp; rMapPointersRefCondition,</div>
@@ -504,6 +504,7 @@ $(function() {
 <div class="ttc" id="agroup___kratos_core_html_ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91"><div class="ttname"><a href="../../d5/d4d/group___kratos_core.html#ga1ba1e34f0af6a7cfcfa9b43e1f8e8c91">Kratos::IndexType</a></div><div class="ttdeci">std::size_t IndexType</div><div class="ttdoc">The definition of the index type.</div><div class="ttdef"><b>Definition:</b> key_hash.h:35</div></div>
 <div class="ttc" id="ammg__utilities_8h_html"><div class="ttname"><a href="../../df/d70/mmg__utilities_8h.html">mmg_utilities.h</a></div></div>
 <div class="ttc" id="anamespace_kratos_html"><div class="ttname"><a href="../../db/d66/namespace_kratos.html">Kratos</a></div><div class="ttdoc">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES.</div><div class="ttdef"><b>Definition:</b> mesh_condition.cpp:21</div></div>
+<div class="ttc" id="anamespace_kratos_html_a1eb1df1661de49ee9992f34c066c78a1"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a1eb1df1661de49ee9992f34c066c78a1">Kratos::unordered_map</a></div><div class="ttdeci">std::unordered_map&lt; T1, T2 &gt; unordered_map</div><div class="ttdef"><b>Definition:</b> unordered_map.h:26</div></div>
 <div class="ttc" id="anamespace_kratos_html_a71b5414786c132932952a4cf2adaafe0"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a71b5414786c132932952a4cf2adaafe0">Kratos::FrameworkEulerLagrange</a></div><div class="ttdeci">FrameworkEulerLagrange</div><div class="ttdoc">This enums allows to differentiate the working framework.</div><div class="ttdef"><b>Definition:</b> meshing_application.h:66</div></div>
 <div class="ttc" id="anamespace_kratos_html_a71b5414786c132932952a4cf2adaafe0a802018a6e0eceae1844000fdc0e1d3e8"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a71b5414786c132932952a4cf2adaafe0a802018a6e0eceae1844000fdc0e1d3e8">Kratos::FrameworkEulerLagrange::EULERIAN</a></div><div class="ttdeci">@ EULERIAN</div></div>
 <div class="ttc" id="anamespace_kratos_html_a8b2d617fdb94b53f5f2bb88e1a7ebc18"><div class="ttname"><a href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">Kratos::SizeType</a></div><div class="ttdeci">std::size_t SizeType</div><div class="ttdoc">The definition of the size type.</div><div class="ttdef"><b>Definition:</b> mortar_classes.h:43</div></div>
@@ -519,7 +520,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Nov 19 2024 02:45:09 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Nov 20 2024 02:44:19 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
