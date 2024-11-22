@@ -237,6 +237,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a759151a8cb90505f59a8a689a0705adb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b77e2f8f65fa1b2cd67e584a981e994"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a8b77e2f8f65fa1b2cd67e584a981e994">GeoMechanicsNewtonRaphsonErosionProcessStrategy</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;model_part, typename TSchemeType::Pointer pScheme, typename TConvergenceCriteriaType::Pointer pNewConvergenceCriteria, typename TBuilderAndSolverType::Pointer pNewBuilderAndSolver, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Parameters</a> &amp;rParameters, <a class="el" href="../../db/d66/namespace_kratos.html#ac398e9982e45de7167981e05b7f5ff57">int</a> MaxIterations=30, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> CalculateReactions=false, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> ReformDofSetAtEachStep=false, <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> <a class="el" href="../../de/d0a/class_kratos_1_1_solving_strategy.html#ad2dda17b2c24e571bfdd05e9db418986">MoveMeshFlag</a>=false)</td></tr>
 <tr class="separator:a8b77e2f8f65fa1b2cd67e584a981e994"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8f784c2c66f2b16fc7592b91cb5602b2"><td class="memTemplParams" colspan="2">template&lt;typename PipingElementType &gt; </td></tr>
+<tr class="memitem:a8f784c2c66f2b16fc7592b91cb5602b2"><td class="memTemplItemLeft" align="right" valign="top">std::optional&lt; std::vector&lt; PipingElementType * &gt; &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a8f784c2c66f2b16fc7592b91cb5602b2">TryDownCastToPipingElement</a> (const std::vector&lt; <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> * &gt; &amp;rPipeElements)</td></tr>
+<tr class="separator:a8f784c2c66f2b16fc7592b91cb5602b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4206b0404542275b5ed5808ea3df4dfe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a4206b0404542275b5ed5808ea3df4dfe">FinalizeSolutionStep</a> () override</td></tr>
 <tr class="memdesc:a4206b0404542275b5ed5808ea3df4dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Performs all the required operations that should be done (for each step) after solving the solution step.  <a href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html#a4206b0404542275b5ed5808ea3df4dfe">More...</a><br /></td></tr>
 <tr class="separator:a4206b0404542275b5ed5808ea3df4dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -932,13 +935,43 @@ template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </
 
 </div>
 </div>
+<a id="a8f784c2c66f2b16fc7592b91cb5602b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8f784c2c66f2b16fc7592b91cb5602b2">&#9670;&nbsp;</a></span>TryDownCastToPipingElement()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class TSparseSpace , class TDenseSpace , class TLinearSolver &gt; </div>
+<div class="memtemplate">
+template&lt;typename PipingElementType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::optional&lt;std::vector&lt;PipingElementType*&gt; &gt; <a class="el" href="../../d0/dbb/class_kratos_1_1_geo_mechanics_newton_raphson_erosion_process_strategy.html">Kratos::GeoMechanicsNewtonRaphsonErosionProcessStrategy</a>&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;::TryDownCastToPipingElement </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rPipeElements</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>/home/runner/work/Documentation/Documentation/master/applications/GeoMechanicsApplication/custom_strategies/strategies/<a class="el" href="../../d2/d49/geo__mechanics__newton__raphson__erosion__process__strategy_8hpp_source.html">geo_mechanics_newton_raphson_erosion_process_strategy.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Nov 21 2024 04:06:59 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Nov 22 2024 04:07:03 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
