@@ -1539,6 +1539,9 @@ $(function() {
 <li>mCurrentResidualNorm
 : <a class="el" href="de/d05/class_kratos_1_1_residual_criteria.html#af6e5935cd1ad073a44232e8e98ea8a4a">Kratos::ResidualCriteria&lt; TSparseSpace, TDenseSpace &gt;</a>
 </li>
+<li>mCurrentSolverIndex
+: <a class="el" href="db/dc9/class_kratos_1_1_fallback_linear_solver.html#afe70b3ddfc9f69f09bccfc59c2943138">Kratos::FallbackLinearSolver&lt; TSparseSpaceType, TDenseSpaceType, TReordererType &gt;</a>
+</li>
 <li>mCurrentStrainResultantsVector
 : <a class="el" href="d4/daa/class_kratos_1_1_large_displacement_beam_e_m_c_element.html#a55011e9cffe99d6645cf28b60b796448">Kratos::LargeDisplacementBeamEMCElement</a>
 </li>
@@ -2819,7 +2822,7 @@ $(function() {
 </li>
 <li>mGPTitle
 : <a class="el" href="d6/d7d/class_kratos_1_1_gid_gauss_points_container.html#a0e8cdb305567adaafdaf9fda3e71e7a7">Kratos::GidGaussPointsContainer</a>
-, <a class="el" href="d4/dc4/class_kratos_1_1_pfem_gid_gauss_points_container.html#a675af6ee0dc1b4035d8eac5cf1cf0cc6">Kratos::PfemGidGaussPointsContainer</a>
+, <a class="el" href="d4/dc4/class_kratos_1_1_pfem_gid_gauss_points_container.html#ab8636f709ce5ed6076aaf9585b68a2af">Kratos::PfemGidGaussPointsContainer</a>
 </li>
 <li>mGradientModelPartName
 : <a class="el" href="db/d71/class_kratos_1_1_edge_based_gradient_recovery_process.html#a14dd0456c5f78ecfc3c06febe7fcc1f0">Kratos::EdgeBasedGradientRecoveryProcess&lt; TDataType, TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
@@ -4538,13 +4541,13 @@ $(function() {
 , <a class="el" href="dd/d14/class_main_coupling_pfem_fem_dem_1_1_main_coupling_pfem_fem_dem___solution.html#a68054041dcde6e4e8cc95946c3a469a6">MainCouplingPfemFemDem.MainCouplingPfemFemDem_Solution</a>
 , <a class="el" href="d4/d10/class_main_coupling_pfem_fem_dem_aitken_substepping_1_1_main_coupling_pfem_fem_dem_aitken_substepping___solution.html#af801039057c1d4dca38278eede532c5c">MainCouplingPfemFemDemAitkenSubstepping.MainCouplingPfemFemDemAitkenSubstepping_Solution</a>
 , <a class="el" href="d0/d71/class_main_coupling_pfem_fem_dem_substepping_1_1_main_coupling_pfem_fem_dem_substepping___solution.html#ae5e11f9649013fb9bc531061abf07252">MainCouplingPfemFemDemSubstepping.MainCouplingPfemFemDemSubstepping_Solution</a>
-, <a class="el" href="d7/d09/class_main_fem_dem_1_1_f_e_m___solution.html#a22c49f4f3ee4f0c67a57348559bb9ec0">MainFemDem.FEM_Solution</a>
 </li>
 <li>Model
 : <a class="el" href="d7/d09/class_main_fem_dem_1_1_f_e_m___solution.html#a61ed72029ef95a3ad2a180beccac222d">MainFemDem.FEM_Solution</a>
 </li>
 <li>model
-: <a class="el" href="d7/d7b/class_main_material_1_1_solution.html#aac343d51e3542eb124fba75d7fdf09d3">MainMaterial.Solution</a>
+: <a class="el" href="d7/d09/class_main_fem_dem_1_1_f_e_m___solution.html#a22c49f4f3ee4f0c67a57348559bb9ec0">MainFemDem.FEM_Solution</a>
+, <a class="el" href="d7/d7b/class_main_material_1_1_solution.html#aac343d51e3542eb124fba75d7fdf09d3">MainMaterial.Solution</a>
 </li>
 <li>Model
 : <a class="el" href="dc/d6c/class_main_solid_f_e_m_1_1_solution.html#a07d67d25f2f9e07591e49d7be27aa58b">MainSolidFEM.Solution</a>
@@ -5271,6 +5274,7 @@ $(function() {
 <li>mParameters
 : <a class="el" href="d9/dbd/class_kratos_1_1_apply_chimera.html#ab47f3eae7f46863c5b6c830c5b94834f">Kratos::ApplyChimera&lt; TDim &gt;</a>
 , <a class="el" href="d9/d0f/class_kratos_1_1_explicit_solver_strategy.html#acaad09ce4cbacf7287f51626f201e542">Kratos::ExplicitSolverStrategy</a>
+, <a class="el" href="db/dc9/class_kratos_1_1_fallback_linear_solver.html#a2719363040351e42f85f3634ac0c9905">Kratos::FallbackLinearSolver&lt; TSparseSpaceType, TDenseSpaceType, TReordererType &gt;</a>
 , <a class="el" href="d3/d4d/class_kratos_1_1_modeler.html#a58898f21991b267de755b97c051e8c4e">Kratos::Modeler</a>
 , <a class="el" href="de/dc2/class_kratos_1_1_normal_check_process.html#a02e29d4f3627c8140249beccc84caae9">Kratos::NormalCheckProcess</a>
 , <a class="el" href="df/d62/class_kratos_1_1_obj_i_o.html#a35ea0dadbf1cf9d147a45dfb377a3a2f">Kratos::ObjIO</a>
@@ -5463,6 +5467,9 @@ $(function() {
 </li>
 <li>mpDistanceVariable
 : <a class="el" href="d1/d1a/class_kratos_1_1_apply_ray_casting_process.html#a9ce57c0c007c5d0e55d0b9d5623d57ff">Kratos::ApplyRayCastingProcess&lt; TDim &gt;</a>
+</li>
+<li>mpDoFSet
+: <a class="el" href="db/dc9/class_kratos_1_1_fallback_linear_solver.html#a1c01e3e617a2b2d85d9590973a811324">Kratos::FallbackLinearSolver&lt; TSparseSpaceType, TDenseSpaceType, TReordererType &gt;</a>
 </li>
 <li>mpDofUpdater
 : <a class="el" href="da/d87/class_kratos_1_1_m_p_m_residual_based_bossak_scheme.html#a1534f19cae67e94cfcce008edbd5f6a1">Kratos::MPMResidualBasedBossakScheme&lt; TSparseSpace, TDenseSpace &gt;</a>
@@ -5808,6 +5815,7 @@ $(function() {
 </li>
 <li>mpModelPart
 : <a class="el" href="d7/d11/class_kratos_1_1_container_expression.html#a569d51baba65ab1c105050f0f66467be">Kratos::ContainerExpression&lt; TContainerType, TMeshType &gt;</a>
+, <a class="el" href="db/dc9/class_kratos_1_1_fallback_linear_solver.html#a28d19dba767750bff5feec20a9d283b2">Kratos::FallbackLinearSolver&lt; TSparseSpaceType, TDenseSpaceType, TReordererType &gt;</a>
 </li>
 <li>mpMomentumStrategy
 : <a class="el" href="d2/d4a/class_kratos_1_1_fractional_step_strategy.html#a4bfd141c98f1aa2a2ffb0a2c88906421">Kratos::FractionalStepStrategy&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
@@ -6685,6 +6693,9 @@ $(function() {
 , <a class="el" href="d6/d37/class_kratos_1_1_trilinos_level_set_convection_process.html#a8337f4056f7a9c9573bff0818facc90d">Kratos::TrilinosLevelSetConvectionProcess&lt; TDim, TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
 , <a class="el" href="dc/d35/class_kratos_1_1_trilinos_m_v_q_n_recursive_jacobian_convergence_accelerator.html#ae0dc5a3181e0a2bc6b6fae84115c025b">Kratos::TrilinosMVQNRecursiveJacobianConvergenceAccelerator&lt; TSparseSpace, TDenseSpace &gt;</a>
 </li>
+<li>mRequiresAdditionalData
+: <a class="el" href="db/dc9/class_kratos_1_1_fallback_linear_solver.html#a0ef624aeb211458691ff2031b04a4810">Kratos::FallbackLinearSolver&lt; TSparseSpaceType, TDenseSpaceType, TReordererType &gt;</a>
+</li>
 <li>mResetDofSetFlag
 : <a class="el" href="d1/d07/class_kratos_1_1_explicit_builder.html#a38db87184dcd5e3e1074763e2df0180f">Kratos::ExplicitBuilder&lt; TSparseSpace, TDenseSpace &gt;</a>
 </li>
@@ -6693,6 +6704,9 @@ $(function() {
 </li>
 <li>mResetRelationMatrixEachIteration
 : <a class="el" href="d2/da4/class_kratos_1_1_residual_based_elimination_builder_and_solver_with_constraints.html#a68a996b72c2d643c49db01f8d5f8cea6">Kratos::ResidualBasedEliminationBuilderAndSolverWithConstraints&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
+</li>
+<li>mResetSolverEachTry
+: <a class="el" href="db/dc9/class_kratos_1_1_fallback_linear_solver.html#a781160a1164ea057b36d5917e8ee99eb">Kratos::FallbackLinearSolver&lt; TSparseSpaceType, TDenseSpaceType, TReordererType &gt;</a>
 </li>
 <li>mReshapeMatrixFlag
 : <a class="el" href="d2/d88/class_kratos_1_1_builder_and_solver.html#a323ed13b15d59233fc3825c81c60711b">Kratos::BuilderAndSolver&lt; TSparseSpace, TDenseSpace, TLinearSolver &gt;</a>
@@ -7227,6 +7241,9 @@ $(function() {
 , <a class="el" href="d2/d13/classulf__strategy__python_1_1_u_l_f_strategy_python.html#a128a1c7da31985658d3819731b9c5aaf">ulf_strategy_python.ULFStrategyPython</a>
 , <a class="el" href="da/dc7/classulf__strategy__python__inc_1_1_u_l_f_strategy_python_inc.html#aa432d305f67fdeeadbfd140853af9660">ulf_strategy_python_inc.ULFStrategyPythonInc</a>
 , <a class="el" href="d7/d09/classulf__strategy__python__inc__rigid_1_1_u_l_f_strategy_python_inc.html#a234f377895fd29c7a731e3b4c5322274">ulf_strategy_python_inc_rigid.ULFStrategyPythonInc</a>
+</li>
+<li>mSolvers
+: <a class="el" href="db/dc9/class_kratos_1_1_fallback_linear_solver.html#ad87b70fb14cf48cb14264a6a4e145b39">Kratos::FallbackLinearSolver&lt; TSparseSpaceType, TDenseSpaceType, TReordererType &gt;</a>
 </li>
 <li>mSourceExpressions
 : <a class="el" href="d8/d58/class_kratos_1_1_unary_combine_expression.html#aaacb5bdcaf71d28369a2a04c7370d7d8">Kratos::UnaryCombineExpression</a>
@@ -8357,7 +8374,7 @@ $(function() {
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Dec 12 2024 04:37:00 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Dec 13 2024 04:34:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
