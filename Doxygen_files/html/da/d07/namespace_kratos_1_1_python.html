@@ -891,7 +891,7 @@ Functions</h2></td></tr>
 <tr class="memitem:a2afe7907cdfae06914f3e340c28a168b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#a2afe7907cdfae06914f3e340c28a168b">AddOperationsToPython</a> (pybind11::module &amp;m)</td></tr>
 <tr class="separator:a2afe7907cdfae06914f3e340c28a168b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5db5040ca2301e575984224dc88f93fd"><td class="memItemLeft" align="right" valign="top">pybind11::list&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#a5db5040ca2301e575984224dc88f93fd">GetSortedListOfFileNameDataHelper</a> (std::vector&lt; <a class="el" href="../../de/d3a/class_kratos_1_1_file_name_data_collector_1_1_file_name_data.html">FileNameDataCollector::FileNameData</a> &gt; &amp;rFileNameDataList, const std::vector&lt; std::string &gt; &amp;rSortingFlagsOrder)</td></tr>
-<tr class="memdesc:a5db5040ca2301e575984224dc88f93fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thin wrapper for GetSortedListOfFileNameData. The reason for having the wrapper is to replace the original lambda implementation as it causes gcc 4.8 to generate bad code on Centos7 which leads to memory corruption.  <a href="../../da/d07/namespace_kratos_1_1_python.html#a5db5040ca2301e575984224dc88f93fd">More...</a><br /></td></tr>
+<tr class="memdesc:a5db5040ca2301e575984224dc88f93fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">A thin wrapper for GetSortedListOfFileNameData.  <a href="../../da/d07/namespace_kratos_1_1_python.html#a5db5040ca2301e575984224dc88f93fd">More...</a><br /></td></tr>
 <tr class="separator:a5db5040ca2301e575984224dc88f93fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4284dae53e85ba953eda2a1a6671f42b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d07/namespace_kratos_1_1_python.html#a4284dae53e85ba953eda2a1a6671f42b">SetOnProcessInfo</a> (typename TableStreamUtility::Pointer pTable, <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;rCurrentProcessInfo)</td></tr>
 <tr class="memdesc:a4284dae53e85ba953eda2a1a6671f42b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the current table utility on the process info.  <a href="../../da/d07/namespace_kratos_1_1_python.html#a4284dae53e85ba953eda2a1a6671f42b">More...</a><br /></td></tr>
@@ -9700,7 +9700,9 @@ template&lt;class TContainerType &gt; </div>
       </table>
 </div><div class="memdoc">
 
-<p>A thin wrapper for GetSortedListOfFileNameData. The reason for having the wrapper is to replace the original lambda implementation as it causes gcc 4.8 to generate bad code on Centos7 which leads to memory corruption. </p>
+<p>A thin wrapper for GetSortedListOfFileNameData. </p>
+<dl class="section note"><dt>Note</dt><dd>The reason for having the wrapper is to replace the original lambda implementation as it causes gcc 4.8 to generate bad code on Centos7 which leads to memory corruption. </dd></dl>
+<dl class="todo"><dt><b><a class="el" href="../../dd/da0/todo.html#_todo000034">Todo:</a></b></dt><dd>Now that Centos support is dropped this cna be removed </dd></dl>
 
 </div>
 </div>
@@ -18566,7 +18568,7 @@ template&lt;std::size_t TDim&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 13 2024 04:34:33 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Dec 14 2024 04:28:46 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

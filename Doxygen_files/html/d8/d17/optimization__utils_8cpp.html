@@ -76,7 +76,9 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#namespaces">Namespaces</a>  </div>
+<a href="#namespaces">Namespaces</a> &#124;
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">optimization_utils.cpp File Reference</div>  </div>
 </div><!--header-->
@@ -99,11 +101,57 @@ Namespaces</h2></td></tr>
 <tr class="memitem:db/d66/namespace_kratos"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d66/namespace_kratos.html">Kratos</a></td></tr>
 <tr class="memdesc:db/d66/namespace_kratos"><td class="mdescLeft">&#160;</td><td class="mdescRight">REF: G. R. Cowper, GAUSSIAN QUADRATURE FORMULAS FOR TRIANGLES. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:d5/d52/namespace_kratos_1_1_optimization_helper_utils"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/namespace_kratos_1_1_optimization_helper_utils.html">Kratos::OptimizationHelperUtils</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:add3d26b666994a4c4e082a1bf7e966aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d8/d17/optimization__utils_8cpp.html#add3d26b666994a4c4e082a1bf7e966aa">KRATOS_OPTIMIZATION_UTILS_UPDATE_PROPERTIES_VARIABLE_RECURSIVELY</a>(CONTAINER_TYPE)</td></tr>
+<tr class="separator:add3d26b666994a4c4e082a1bf7e966aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a1736ba98ba04a644131ce38113a73b5d"><td class="memItemLeft" align="right" valign="top">Properties::Pointer&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d52/namespace_kratos_1_1_optimization_helper_utils.html#a1736ba98ba04a644131ce38113a73b5d">Kratos::OptimizationHelperUtils::CloneProperties</a> (IndexType &amp;rPropertiesId, const Properties &amp;rOriginProperties, ModelPart &amp;rModelPart, const bool IsRecursive)</td></tr>
+<tr class="separator:a1736ba98ba04a644131ce38113a73b5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae97e1b6cc7926918f27ccdebb6c5b9bb"><td class="memTemplParams" colspan="2">template&lt;class TDataType &gt; </td></tr>
+<tr class="memitem:ae97e1b6cc7926918f27ccdebb6c5b9bb"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d5/d52/namespace_kratos_1_1_optimization_helper_utils.html#ae97e1b6cc7926918f27ccdebb6c5b9bb">Kratos::OptimizationHelperUtils::UpdatePropertiesVariableRecursively</a> (Properties &amp;rProperties, const Variable&lt; TDataType &gt; &amp;rVariable, const TDataType &amp;rValue)</td></tr>
+<tr class="separator:ae97e1b6cc7926918f27ccdebb6c5b9bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77d1cb6bd32252690523f42830e17903"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d66/namespace_kratos.html#a77d1cb6bd32252690523f42830e17903">Kratos::KRATOS_OPTIMIZATION_UTILS_UPDATE_PROPERTIES_VARIABLE_RECURSIVELY</a> (ModelPart::ConditionsContainerType)</td></tr>
+<tr class="separator:a77d1cb6bd32252690523f42830e17903"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="add3d26b666994a4c4e082a1bf7e966aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#add3d26b666994a4c4e082a1bf7e966aa">&#9670;&nbsp;</a></span>KRATOS_OPTIMIZATION_UTILS_UPDATE_PROPERTIES_VARIABLE_RECURSIVELY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define KRATOS_OPTIMIZATION_UTILS_UPDATE_PROPERTIES_VARIABLE_RECURSIVELY</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">CONTAINER_TYPE</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><span class="keyword">template</span> <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> OptimizationUtils::UpdatePropertiesVariableWithRootValueRecursively&lt;CONTAINER_TYPE, bool&gt;(CONTAINER_TYPE&amp;, <span class="keyword">const</span> Variable&lt;bool&gt;&amp;);                                   \</div>
+<div class="line">template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> OptimizationUtils::UpdatePropertiesVariableWithRootValueRecursively&lt;CONTAINER_TYPE, int&gt;(CONTAINER_TYPE&amp;, <span class="keyword">const</span> Variable&lt;int&gt;&amp;);                                     \</div>
+<div class="line">template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> OptimizationUtils::UpdatePropertiesVariableWithRootValueRecursively&lt;CONTAINER_TYPE, double&gt;(CONTAINER_TYPE&amp;, <span class="keyword">const</span> Variable&lt;double&gt;&amp;);                               \</div>
+<div class="line">template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> OptimizationUtils::UpdatePropertiesVariableWithRootValueRecursively&lt;CONTAINER_TYPE, array_1d&lt;double, 3&gt;&gt;(CONTAINER_TYPE&amp;, <span class="keyword">const</span> Variable&lt;array_1d&lt;double, 3&gt;&gt;&amp;);     \</div>
+<div class="line">template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> OptimizationUtils::UpdatePropertiesVariableWithRootValueRecursively&lt;CONTAINER_TYPE, array_1d&lt;double, 4&gt;&gt;(CONTAINER_TYPE&amp;, <span class="keyword">const</span> Variable&lt;array_1d&lt;double, 4&gt;&gt;&amp;);     \</div>
+<div class="line">template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> OptimizationUtils::UpdatePropertiesVariableWithRootValueRecursively&lt;CONTAINER_TYPE, array_1d&lt;double, 6&gt;&gt;(CONTAINER_TYPE&amp;, <span class="keyword">const</span> Variable&lt;array_1d&lt;double, 6&gt;&gt;&amp;);     \</div>
+<div class="line">template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> OptimizationUtils::UpdatePropertiesVariableWithRootValueRecursively&lt;CONTAINER_TYPE, array_1d&lt;double, 9&gt;&gt;(CONTAINER_TYPE&amp;, <span class="keyword">const</span> Variable&lt;array_1d&lt;double, 9&gt;&gt;&amp;);     \</div>
+<div class="line">template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> OptimizationUtils::UpdatePropertiesVariableWithRootValueRecursively&lt;CONTAINER_TYPE, Matrix&gt;(CONTAINER_TYPE&amp;, <span class="keyword">const</span> Variable&lt;Matrix&gt;&amp;);                               \</div>
+<div class="line">template <a class="code" href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a>(OPTIMIZATION_APPLICATION) <span class="keywordtype">void</span> OptimizationUtils::UpdatePropertiesVariableWithRootValueRecursively&lt;CONTAINER_TYPE, Vector&gt;(CONTAINER_TYPE&amp;, <span class="keyword">const</span> Variable&lt;Vector&gt;&amp;);                               \</div>
+<div class="ttc" id="akratos__export__api_8h_html_a4a2ae55622388bff8ab6a766b5e0765e"><div class="ttname"><a href="../../dc/d25/kratos__export__api_8h.html#a4a2ae55622388bff8ab6a766b5e0765e">KRATOS_API</a></div><div class="ttdeci">#define KRATOS_API(...)</div><div class="ttdef"><b>Definition:</b> kratos_export_api.h:40</div></div>
+</div><!-- fragment -->
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Dec 13 2024 03:39:20 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Sat Dec 14 2024 03:33:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
