@@ -89,7 +89,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::Kernel:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d4e/class_kratos_1_1_kernel__coll__graph.svg" width="231" height="572"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+<div class="center"><div class="zoom"><iframe scrolling="no" frameborder="0" src="../../d8/d4e/class_kratos_1_1_kernel__coll__graph.svg" width="100%" height="600"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 </div>
 <table class="memberdecls">
@@ -125,8 +125,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab337b5322c5ac18ee4b229866ca94d27"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d35/class_kratos_1_1_kernel.html#ab337b5322c5ac18ee4b229866ca94d27">InitializeApplication</a> (<a class="el" href="../../d9/d33/class_kratos_1_1_kratos_application.html">KratosApplication</a> &amp;NewApplication)</td></tr>
 <tr class="memdesc:ab337b5322c5ac18ee4b229866ca94d27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes and synchronizes the list of variables, elements and conditions in each application.  <a href="../../da/d35/class_kratos_1_1_kernel.html#ab337b5322c5ac18ee4b229866ca94d27">More...</a><br /></td></tr>
 <tr class="separator:ab337b5322c5ac18ee4b229866ca94d27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab0ee38fb3a0fc257e1f29a04251017c5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d35/class_kratos_1_1_kernel.html#ab0ee38fb3a0fc257e1f29a04251017c5">IsImported</a> (const std::string &amp;ApplicationName) const</td></tr>
-<tr class="separator:ab0ee38fb3a0fc257e1f29a04251017c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3cf24b36991e27d632ebbde543629c2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d35/class_kratos_1_1_kernel.html#ab3cf24b36991e27d632ebbde543629c2">IsImported</a> (const std::string &amp;rApplicationName) const</td></tr>
+<tr class="separator:ab3cf24b36991e27d632ebbde543629c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a78229ddd8997bbfd698a80c0993fc68e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d35/class_kratos_1_1_kernel.html#a78229ddd8997bbfd698a80c0993fc68e">IsLibraryAvailable</a> (const std::string &amp;rLibraryName) const</td></tr>
+<tr class="separator:a78229ddd8997bbfd698a80c0993fc68e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4a230f45c8f2e80d26961ad8d56c3951"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d35/class_kratos_1_1_kernel.html#a4a230f45c8f2e80d26961ad8d56c3951">IsDistributedRun</a> ()</td></tr>
 <tr class="separator:a4a230f45c8f2e80d26961ad8d56c3951"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -144,6 +146,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af3cfe21cba8428174a21524fadf54854"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afefd91fe039872c1b996fe74f877bab1"><td class="memItemLeft" align="right" valign="top">static std::unordered_set&lt; std::string &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d35/class_kratos_1_1_kernel.html#afefd91fe039872c1b996fe74f877bab1">GetApplicationsList</a> ()</td></tr>
 <tr class="separator:afefd91fe039872c1b996fe74f877bab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e576b768be391460d7dc6fe1dcc08b8"><td class="memItemLeft" align="right" valign="top">static std::unordered_set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d35/class_kratos_1_1_kernel.html#a5e576b768be391460d7dc6fe1dcc08b8">GetLibraryList</a> ()</td></tr>
+<tr class="memdesc:a5e576b768be391460d7dc6fe1dcc08b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the list of libraries available in the system.  <a href="../../da/d35/class_kratos_1_1_kernel.html#a5e576b768be391460d7dc6fe1dcc08b8">More...</a><br /></td></tr>
+<tr class="separator:a5e576b768be391460d7dc6fe1dcc08b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6718f33b550023eaff01e39d4f9c98ab"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d35/class_kratos_1_1_kernel.html#a6718f33b550023eaff01e39d4f9c98ab">Version</a> ()</td></tr>
 <tr class="separator:a6718f33b550023eaff01e39d4f9c98ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa61a5766c9f8e0a0496c0aa01c890051"><td class="memItemLeft" align="right" valign="top">static std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../da/d35/class_kratos_1_1_kernel.html#aa61a5766c9f8e0a0496c0aa01c890051">BuildType</a> ()</td></tr>
@@ -338,6 +343,34 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a5e576b768be391460d7dc6fe1dcc08b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e576b768be391460d7dc6fe1dcc08b8">&#9670;&nbsp;</a></span>GetLibraryList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_set&lt; std::string &gt; Kratos::Kernel::GetLibraryList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the list of libraries available in the system. </p>
+<dl class="section return"><dt>Returns</dt><dd>The list of libraries available in the system (stored in a set) </dd></dl>
+
+</div>
+</div>
 <a id="aa5da1b79d8bab69e610a082c162e272e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa5da1b79d8bab69e610a082c162e272e">&#9670;&nbsp;</a></span>ImportApplication()</h2>
 
@@ -472,8 +505,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab0ee38fb3a0fc257e1f29a04251017c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab0ee38fb3a0fc257e1f29a04251017c5">&#9670;&nbsp;</a></span>IsImported()</h2>
+<a id="ab3cf24b36991e27d632ebbde543629c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3cf24b36991e27d632ebbde543629c2">&#9670;&nbsp;</a></span>IsImported()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -482,7 +515,25 @@ Public Member Functions</h2></td></tr>
           <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> Kratos::Kernel::IsImported </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>ApplicationName</em></td><td>)</td>
+          <td class="paramname"><em>rApplicationName</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a78229ddd8997bbfd698a80c0993fc68e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a78229ddd8997bbfd698a80c0993fc68e">&#9670;&nbsp;</a></span>IsLibraryAvailable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a14b9d687ed53c882489400b57cdf34cd">bool</a> Kratos::Kernel::IsLibraryAvailable </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>rLibraryName</em></td><td>)</td>
           <td> const</td>
         </tr>
       </table>
@@ -711,7 +762,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 17 2024 03:41:43 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Wed Dec 18 2024 03:37:51 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
