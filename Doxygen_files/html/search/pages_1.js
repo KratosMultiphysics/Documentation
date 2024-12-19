@@ -1,12 +1,5 @@
 var searchData=
 [
-  ['constitutive_20laws_79210',['Constitutive laws',['../de/d2d/md__home_runner_work__documentation__documentation_master_applications__geo_mechanics_applicatiod621b3cae75311cd02b5c7a541abe2a5.html',1,'']]],
-  ['constitutive_20laws_20application_79211',['Constitutive Laws Application',['../d4/dcf/md__home_runner_work__documentation__documentation_master_applications__constitutive_laws_application__r_e_a_d_m_e.html',1,'']]],
-  ['constitutive_20models_20application_79212',['Constitutive Models Application',['../df/dc1/md__home_runner_work__documentation__documentation_master_applications__constitutive_models_application__r_e_a_d_m_e.html',1,'']]],
-  ['contact_20mechanics_20application_79213',['Contact Mechanics Application',['../d8/d77/md__home_runner_work__documentation__documentation_master_applications__contact_mechanics_application__r_e_a_d_m_e.html',1,'']]],
-  ['contact_20structural_20mechanics_20application_79214',['Contact Structural Mechanics Application',['../d4/d42/md__home_runner_work__documentation__documentation_master_applications__contact_structural_mechanics_application__r_e_a_d_m_e.html',1,'']]],
-  ['convection_20diffusion_20application_79215',['Convection Diffusion Application',['../d0/d41/md__home_runner_work__documentation__documentation_master_applications__convection_diffusion_application__r_e_a_d_m_e.html',1,'']]],
-  ['cosimulation_20application_79216',['CoSimulation Application',['../dd/d98/md__home_runner_work__documentation__documentation_master_applications__co_simulation_application__r_e_a_d_m_e.html',1,'']]],
-  ['custom_20geometries_79217',['Custom Geometries',['../dc/dfb/md__home_runner_work__documentation__documentation_master_applications__geo_mechanics_applicatio8d12cf61bcbb5ef4dfb91bdbb3329895.html',1,'']]],
-  ['custom_20processes_79218',['Custom processes',['../d7/d80/md__home_runner_work__documentation__documentation_master_applications__geo_mechanics_application_custom_processes__r_e_a_d_m_e.html',1,'']]]
+  ['biomedical_20application_0',['Fluid Dynamics Biomedical Application',['../d5/dbc/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_fluid_dynamics_b309f313b74eeebda361f97468ee9538f.html',1,'']]],
+  ['boundary_20condition_1',['Microclimate Boundary Condition',['../d9/dfe/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_geo_mechanics_apc2aaa35b2bbfac76b32b85729275665b.html',1,'']]]
 ];

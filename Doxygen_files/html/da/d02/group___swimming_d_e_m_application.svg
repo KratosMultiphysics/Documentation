@@ -6,22 +6,32 @@
 <!-- Title: SwimmingDEMApplication Pages: 1 -->
 <svg width="478pt" height="40pt"
  viewBox="0.00 0.00 478.00 39.50" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 35.5)">
 <title>SwimmingDEMApplication</title>
 <!-- Node2 -->
-<g id="node1" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node1"><a xlink:href="../../d8/d46/group___structural_mechanics_application.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="470,-19 300,-19 300,0 470,0 470,-19"/>
+<g id="a_Node000002"><a xlink:href="../../d8/d46/group___structural_mechanics_application.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="470,-19 300,-19 300,0 470,0 470,-19"/>
 <text text-anchor="middle" x="385" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">StructuralMechanicsApplication</text>
 </a>
 </g>
 </g>
 <!-- Node1 -->
-<g id="node2" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node2"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="146,-19 0,-19 0,0 146,0 146,-19"/>
+<g id="a_Node000001"><a xlink:title=" ">
+<polygon fill="#999999" stroke="#666666" points="146,-19 0,-19 0,0 146,0 146,-19"/>
 <text text-anchor="middle" x="73" y="-7" font-family="Helvetica,sans-Serif" font-size="10.00">SwimmingDEMApplication</text>
 </a>
 </g>
@@ -34,4 +44,19 @@
 <text text-anchor="middle" x="223" y="-12.5" font-family="Helvetica,sans-Serif" font-size="10.00">Check</text>
 </g>
 </g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>

@@ -1,4 +1,13 @@
 var searchData=
 [
-  ['embedded_20ausas_20navier_2dstokes_20element_79223',['Embedded Ausas Navier-Stokes Element',['../dc/d72/md__home_runner_work__documentation__documentation_master_applications__fluid_dynamics_applicatibdbff9e626c3cd48c1372819f6c11107.html',1,'']]]
+  ['dam_20examples_0',['Dam Examples',['../d9/d2b/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_dam_application_2test__examples_2_r_e_a_d_m_e.html',1,'']]],
+  ['damapplication_1',['Using MPI in DamApplication',['../dc/d10/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_dam_application_2_r_e_a_d_m_e.html',1,'']]],
+  ['dem_20application_2',['dem application',['../d9/d8f/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_d_e_m_application_2_r_e_a_d_m_e.html',1,'DEM Application'],['../d2/d49/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_thermal_d_e_m_application_2_r_e_a_d_m_e.html',1,'Thermal DEM Application']]],
+  ['demstructurescoupling_20examples_3',['DemStructuresCoupling Examples',['../d7/d0d/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_dem_structures_c2bed686a28f928981d3c463d380756ab.html',1,'']]],
+  ['deprecated_20list_4',['Deprecated List',['../da/d58/deprecated.html',1,'']]],
+  ['differentiation_5',['differentiation',['../d2/dbe/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_fluid_dynamics_afab527bc371fa7194e3f4d5be40f560e.html',1,'Axisymmetric Navier-Stokes element automatic differentiation'],['../d7/dc6/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_fluid_dynamics_aa6de9824cd8fba6819d8eb7f1da723f6.html',1,'Incompressible Navier-Stokes P2/P1 continuous automatic differentiation'],['../d9/d71/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_fluid_dynamics_a450a8a161ae8c4e543febe5a5a01a1d5.html',1,'Weakly-compressible Navier-Stokes and Stokes elements automatic differentiation']]],
+  ['diffusion_20application_6',['Convection Diffusion Application',['../db/dbe/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_convection_diffusion_application_2_r_e_a_d_m_e.html',1,'']]],
+  ['dynamics_20application_7',['Fluid Dynamics Application',['../d4/d65/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_fluid_dynamics_application_2_r_e_a_d_m_e.html',1,'']]],
+  ['dynamics_20biomedical_20application_8',['Fluid Dynamics Biomedical Application',['../d5/dbc/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_fluid_dynamics_b309f313b74eeebda361f97468ee9538f.html',1,'']]],
+  ['dynamics_20hydraulics_20application_9',['Fluid Dynamics Hydraulics Application',['../d3/d94/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_fluid_dynamics_h68f8fcd2275751832e93383cc7b10fc8.html',1,'']]]
 ];

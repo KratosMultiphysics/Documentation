@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['u_2dpw_20continuum_20elements_79261',['U-Pw Continuum Elements',['../d9/dda/md__home_runner_work__documentation__documentation_master_applications__geo_mechanics_application_custom_elements__r_e_a_d_m_e.html',1,'']]],
-  ['using_20mpi_20in_20damapplication_79262',['Using MPI in DamApplication',['../d3/dc8/md__home_runner_work__documentation__documentation_master_applications__dam_application__r_e_a_d_m_e.html',1,'']]],
-  ['utilities_79263',['Utilities',['../d9/dfb/md__home_runner_work__documentation__documentation_master_applications__geo_mechanics_application_custom_utilities__r_e_a_d_m_e.html',1,'']]]
+  ['questions_20faqs_0',['MPM Application Frequently Asked Questions (FAQs)',['../d4/df3/md__2home_2runner_2work_2_documentation_2_documentation_2master_2applications_2_m_p_m_application_2_f_a_qs.html',1,'']]]
 ];

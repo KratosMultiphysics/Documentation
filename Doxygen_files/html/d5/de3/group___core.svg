@@ -6,22 +6,32 @@
 <!-- Title: Core Pages: 1 -->
 <svg width="309pt" height="130pt"
  viewBox="0.00 0.00 309.00 129.80" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+
+<svg id="main" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" onload="init(evt)">
+<style type="text/css"><![CDATA[
+.node, .edge {opacity: 0.7;}
+.node.selected, .edge.selected {opacity: 1;}
+.edge:hover path { stroke: red; }
+.edge:hover polygon { stroke: red; fill: red; }
+]]></style>
+<script type="application/ecmascript" xlink:href="../../svg.min.js"/>
+<svg id="graph" class="graph">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 125.8)">
 <title>Core</title>
 <!-- Node1 -->
-<g id="node1" class="node">
+<g id="Node000001" class="node">
 <title>Node1</title>
-<g id="a_node1"><a xlink:title=" ">
-<polygon fill="#bfbfbf" stroke="black" points="39,-56.3 0,-56.3 0,-37.3 39,-37.3 39,-56.3"/>
+<g id="a_Node000001"><a xlink:title=" ">
+<polygon fill="#999999" stroke="#666666" points="39,-56.3 0,-56.3 0,-37.3 39,-37.3 39,-56.3"/>
 <text text-anchor="middle" x="19.5" y="-44.3" font-family="Helvetica,sans-Serif" font-size="10.00">Core</text>
 </a>
 </g>
 </g>
 <!-- Node3 -->
-<g id="node2" class="node">
+<g id="Node000003" class="node">
 <title>Node3</title>
-<g id="a_node2"><a xlink:href="../../df/da3/group___kratos.html" target="_top" xlink:title=" ">
-<polygon fill="none" stroke="black" points="283.5,-90.3 244.5,-90.3 244.5,-71.3 283.5,-71.3 283.5,-90.3"/>
+<g id="a_Node000003"><a xlink:href="../../df/da3/group___kratos.html" target="_top" xlink:title=" ">
+<polygon fill="white" stroke="#666666" points="283.5,-90.3 244.5,-90.3 244.5,-71.3 283.5,-71.3 283.5,-90.3"/>
 <text text-anchor="middle" x="264" y="-78.3" font-family="Helvetica,sans-Serif" font-size="10.00">Core</text>
 </a>
 </g>
@@ -36,10 +46,10 @@
 <text text-anchor="middle" x="133" y="-80.8" font-family="Helvetica,sans-Serif" font-size="10.00">ConstraintsToNeighboursUtility</text>
 </g>
 <!-- Node2 -->
-<g id="node3" class="node">
+<g id="Node000002" class="node">
 <title>Node2</title>
-<g id="a_node3"><a xlink:href="../../d5/d4d/group___kratos_core.html" target="_top" xlink:title="The Kratos core comprises a basic set of classes used by all applications.">
-<polygon fill="none" stroke="black" points="301,-23.3 227,-23.3 227,-4.3 301,-4.3 301,-23.3"/>
+<g id="a_Node000002"><a xlink:href="../../d5/d4d/group___kratos_core.html" target="_top" xlink:title="The Kratos core comprises a basic set of classes used by all applications.">
+<polygon fill="white" stroke="#666666" points="301,-23.3 227,-23.3 227,-4.3 301,-4.3 301,-23.3"/>
 <text text-anchor="middle" x="264" y="-11.3" font-family="Helvetica,sans-Serif" font-size="10.00">Kratos Core</text>
 </a>
 </g>
@@ -54,4 +64,19 @@
 <text text-anchor="middle" x="133" y="-17.8" font-family="Helvetica,sans-Serif" font-size="10.00">ConstraintsToNeighboursUtility</text>
 </g>
 </g>
+</svg>
+</svg>
+
+<style type='text/css'>
+<![CDATA[
+[data-mouse-over-selected='false'] { opacity: 0.7; }
+[data-mouse-over-selected='true']  { opacity: 1.0; }
+]]>
+</style>
+<script type="application/ecmascript"><![CDATA[
+document.addEventListener('DOMContentLoaded', (event) => {
+  highlightEdges();
+  highlightAdjacentNodes();
+});
+]]></script>
 </svg>
