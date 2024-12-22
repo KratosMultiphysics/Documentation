@@ -659,6 +659,8 @@ Protected Member Functions</h2></td></tr>
 <tr class="separator:ab16f19053797cde30fceb1e4dc00be71"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6209ea4c3c5b71fe0c20a3e89008d11b" id="r_a6209ea4c3c5b71fe0c20a3e89008d11b"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfa/class_kratos_1_1_small_strain_u_pw_diff_order_element.html#a6209ea4c3c5b71fe0c20a3e89008d11b">CalculateBMatrices</a> (const <a class="el" href="../../dc/dea/class_kratos_1_1_geometry.html#ad9370894448bd7c3ae01013d09976d67">GeometryType::ShapeFunctionsGradientsType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rDN_DXContainer</a>, const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rNContainer</a>) const</td></tr>
 <tr class="separator:a6209ea4c3c5b71fe0c20a3e89008d11b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97ac1a395208c95dcd694364aeb9df8e" id="r_a97ac1a395208c95dcd694364aeb9df8e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d66/namespace_kratos.html#a66451ced5f6dab9db754c9e26f84f02b">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfa/class_kratos_1_1_small_strain_u_pw_diff_order_element.html#a97ac1a395208c95dcd694364aeb9df8e">GetPressures</a> (<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">size_t</a> n_nodes) const</td></tr>
+<tr class="separator:a97ac1a395208c95dcd694364aeb9df8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a208b7c9a567c7bac9bc2447c2cd05486" id="r_a208b7c9a567c7bac9bc2447c2cd05486"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfa/class_kratos_1_1_small_strain_u_pw_diff_order_element.html#a208b7c9a567c7bac9bc2447c2cd05486">AssignPressureToIntermediateNodes</a> ()</td></tr>
 <tr class="separator:a208b7c9a567c7bac9bc2447c2cd05486"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abadcc078df53140e9cb094a1a76dc7fb" id="r_abadcc078df53140e9cb094a1a76dc7fb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">virtual</a> <a class="el" href="../../db/d66/namespace_kratos.html#a66451ced5f6dab9db754c9e26f84f02b">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/dfa/class_kratos_1_1_small_strain_u_pw_diff_order_element.html#abadcc078df53140e9cb094a1a76dc7fb">CalculateGreenLagrangeStrain</a> (const <a class="el" href="../../db/d66/namespace_kratos.html#a546e4f1c8e62734795679d3b59448410">Matrix</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rDeformationGradient</a>) const</td></tr>
@@ -2824,6 +2826,32 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a97ac1a395208c95dcd694364aeb9df8e" name="a97ac1a395208c95dcd694364aeb9df8e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97ac1a395208c95dcd694364aeb9df8e">&#9670;&#160;</a></span>GetPressures()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../db/d66/namespace_kratos.html#a66451ced5f6dab9db754c9e26f84f02b">Vector</a> Kratos::SmallStrainUPwDiffOrderElement::GetPressures </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">size_t</a>&#160;</td>
+          <td class="paramname"><em>n_nodes</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a8d80cf4cb5f7878de2f5b0ac29ccb318" name="a8d80cf4cb5f7878de2f5b0ac29ccb318"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8d80cf4cb5f7878de2f5b0ac29ccb318">&#9670;&#160;</a></span>GetPressureSolutionVector()</h2>
 
@@ -3823,7 +3851,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Dec 21 2024 03:56:17 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Dec 22 2024 04:02:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
