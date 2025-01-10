@@ -229,6 +229,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a36afaf29729100d55967530839b6567d" id="r_a36afaf29729100d55967530839b6567d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#a36afaf29729100d55967530839b6567d">GetPropertyFromTemperatureTable</a> (const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rVariable</a>, <a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rValues</a>, const <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> Temperature)</td></tr>
 <tr class="memdesc:a36afaf29729100d55967530839b6567d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This retrieves a double type variable from a table if exists, assumes TEMPERATURE to be the independent variable.  <br /></td></tr>
 <tr class="separator:a36afaf29729100d55967530839b6567d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a092b22e9dd74508b48372da7619fb2bc" id="r_a092b22e9dd74508b48372da7619fb2bc"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#a092b22e9dd74508b48372da7619fb2bc">CalculateTangentTensorByPerturbation</a> (<a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rValues</a>, <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a> *pConstitutiveLaw, const <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6">ConstitutiveLaw::StressMeasure</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rStressMeasure</a>=<a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6a8be355c5ac52ce3507ab17e0fcdadf04">ConstitutiveLaw::StressMeasure_Cauchy</a>)</td></tr>
+<tr class="memdesc:a092b22e9dd74508b48372da7619fb2bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">This method computes the tangent tensor.  <br /></td></tr>
+<tr class="separator:a092b22e9dd74508b48372da7619fb2bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type definitions</h2></td></tr>
 <tr class="memitem:aea66cea9f6b42afbe6dbfc939889798a" id="r_aea66cea9f6b42afbe6dbfc939889798a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">using</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html#aea66cea9f6b42afbe6dbfc939889798a">IndexType</a> = std::size_t</td></tr>
@@ -1973,6 +1976,58 @@ template&lt;<a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94
 
 </div>
 </div>
+<a id="a092b22e9dd74508b48372da7619fb2bc" name="a092b22e9dd74508b48372da7619fb2bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a092b22e9dd74508b48372da7619fb2bc">&#9670;&#160;</a></span>CalculateTangentTensorByPerturbation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94b53f5f2bb88e1a7ebc18">SizeType</a> TVoigtSize&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="../../d9/d9c/class_kratos_1_1_advanced_constitutive_law_utilities.html">Kratos::AdvancedConstitutiveLawUtilities</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TVoigtSize</a> &gt;::CalculateTangentTensorByPerturbation </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../de/d2b/struct_kratos_1_1_constitutive_law_1_1_parameters.html">ConstitutiveLaw::Parameters</a> &amp;&#160;</td>
+          <td class="paramname"><em>rValues</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html">ConstitutiveLaw</a> *&#160;</td>
+          <td class="paramname"><em>pConstitutiveLaw</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6">ConstitutiveLaw::StressMeasure</a> &amp;&#160;</td>
+          <td class="paramname"><em>rStressMeasure</em> = <code><a class="el" href="../../df/da7/class_kratos_1_1_constitutive_law.html#a4aa7ede3775eade83e2fae640f6ebcb6a8be355c5ac52ce3507ab17e0fcdadf04">ConstitutiveLaw::StressMeasure_Cauchy</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>This method computes the tangent tensor. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rValues</td><td>The constitutive law parameters and flags </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a65ce1b9b82d0d71f80cad64d51f9366a" name="a65ce1b9b82d0d71f80cad64d51f9366a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a65ce1b9b82d0d71f80cad64d51f9366a">&#9670;&#160;</a></span>CalculateThirdVector()</h2>
 
@@ -2375,7 +2430,7 @@ template&lt;<a class="el" href="../../db/d66/namespace_kratos.html#a8b2d617fdb94
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 9 2025 04:11:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Fri Jan 10 2025 03:44:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
