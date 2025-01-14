@@ -102,73 +102,70 @@ $(document).ready(function() { init_codefold(1); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">//  Main authors:  Rafael Rangel (rrangel@cimne.upc.edu)</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">//</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#if !defined(NUMERICAL_INTEGRATION_METHOD_ADAPTIVE_SIMPSON_H_INCLUDED)</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define NUMERICAL_INTEGRATION_METHOD_ADAPTIVE_SIMPSON_H_INCLUDED</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">// System includes</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="comment">// External includes</span></div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="../../df/d67/define_8h.html">includes/define.h</a>&quot;</span></div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/dfe/model__part_8h.html">includes/model_part.h</a>&quot;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="comment">// Project includes</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d86/numerical__integration__method_8h.html">numerical_integration_method.h</a>&quot;</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>{</div>
-<div class="foldopen" id="foldopen00024" data-start="{" data-end="};">
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">   24</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">KRATOS_API(THERMAL_DEM_APPLICATION)</a> <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d3/dc1/class_kratos_1_1_numerical_integration_method.html">NumericalIntegrationMethod</a></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  {</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">public</span>:</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>      <span class="comment">// Pointer definition</span></div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno"><a class="line" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a556c31aceed6c315da06a30a12c01f4b">   29</a></span>      <a class="code hl_function" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a556c31aceed6c315da06a30a12c01f4b">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>);</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <span class="comment">// Constructor / Destructor</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>();</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>      <span class="keyword">virtual</span> <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">~AdaptiveSimpsonQuadrature</a>();</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="comment">// Public methods</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordtype">void</span>   SetNumericalIntegrationMethodInProperties (Properties::Pointer <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">pProp</a>, <span class="keywordtype">bool</span> verbose = <span class="keyword">true</span>) <span class="keyword">const override</span>;</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>      <span class="keywordtype">double</span> SolveIntegral                             (<span class="keywordtype">void</span>) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>      <span class="comment">// Clone</span></div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a0061e067644b648846628f7136540a36">   40</a></span>      <a class="code hl_class" href="../../d3/dc1/class_kratos_1_1_numerical_integration_method.html">NumericalIntegrationMethod</a>* <a class="code hl_function" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a0061e067644b648846628f7136540a36">CloneRaw</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <a class="code hl_class" href="../../d3/dc1/class_kratos_1_1_numerical_integration_method.html">NumericalIntegrationMethod</a>* <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">cloned_utl</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>(*<span class="keyword">this</span>));</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">cloned_utl</a>;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>      }</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">// System includes</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;limits&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">// External includes</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &quot;<a class="code" href="../../df/d67/define_8h.html">includes/define.h</a>&quot;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &quot;<a class="code" href="../../dd/dfe/model__part_8h.html">includes/model_part.h</a>&quot;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="comment">// Project includes</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &quot;<a class="code" href="../../db/d86/numerical__integration__method_8h.html">numerical_integration_method.h</a>&quot;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../db/d66/namespace_kratos.html">Kratos</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">   23</a></span>  <span class="keyword">class </span><a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">KRATOS_API(THERMAL_DEM_APPLICATION)</a> <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a> : <span class="keyword">public</span> <a class="code hl_class" href="../../d3/dc1/class_kratos_1_1_numerical_integration_method.html">NumericalIntegrationMethod</a></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  {</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>      <span class="comment">// Pointer definition</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a556c31aceed6c315da06a30a12c01f4b">   28</a></span>      <a class="code hl_function" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a556c31aceed6c315da06a30a12c01f4b">KRATOS_CLASS_POINTER_DEFINITION</a>(<a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>      <span class="comment">// Constructor / Destructor</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>      <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>();</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>      <span class="keyword">virtual</span> <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">~AdaptiveSimpsonQuadrature</a>();</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>      <span class="comment">// Public methods</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>      <span class="keywordtype">void</span>   SetNumericalIntegrationMethodInProperties (Properties::Pointer <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">pProp</a>, <span class="keywordtype">bool</span> verbose = <span class="keyword">true</span>) <span class="keyword">const override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>      <span class="keywordtype">double</span> SolveIntegral                             (<span class="keywordtype">void</span>) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>      <span class="comment">// Clone</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a0061e067644b648846628f7136540a36">   39</a></span>      <a class="code hl_class" href="../../d3/dc1/class_kratos_1_1_numerical_integration_method.html">NumericalIntegrationMethod</a>* <a class="code hl_function" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a0061e067644b648846628f7136540a36">CloneRaw</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        <a class="code hl_class" href="../../d3/dc1/class_kratos_1_1_numerical_integration_method.html">NumericalIntegrationMethod</a>* <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">cloned_utl</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>(*<span class="keyword">this</span>));</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">cloned_utl</a>;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>      }</div>
 </div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="foldopen" id="foldopen00045" data-start="{" data-end="}">
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a633954a2cb99de32e5a7d2903bc6d305">   45</a></span>      NumericalIntegrationMethod::Pointer <a class="code hl_function" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a633954a2cb99de32e5a7d2903bc6d305">CloneShared</a>()<span class="keyword"> const override </span>{</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        NumericalIntegrationMethod::Pointer <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">cloned_utl</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>(*<span class="keyword">this</span>));</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">cloned_utl</a>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      }</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00044" data-start="{" data-end="}">
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a633954a2cb99de32e5a7d2903bc6d305">   44</a></span>      NumericalIntegrationMethod::Pointer <a class="code hl_function" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a633954a2cb99de32e5a7d2903bc6d305">CloneShared</a>()<span class="keyword"> const override </span>{</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        NumericalIntegrationMethod::Pointer <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">cloned_utl</a>(<span class="keyword">new</span> <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>(*<span class="keyword">this</span>));</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keywordflow">return</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">cloned_utl</a>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>      }</div>
 </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>      </div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="comment">// Protected methods</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>      <span class="keywordtype">double</span> RecursiveIntegration (<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b, <span class="keywordtype">double</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">fa</a>, <span class="keywordtype">double</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">fb</a>, <span class="keywordtype">double</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">fc</a>);</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keyword">private</span>:</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <span class="comment">// Assignment operator / Copy constructor</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>&amp; operator=(<a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a> <span class="keyword">const</span>&amp; <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rOther</a>) {<span class="keywordflow">return</span> *<span class="keyword">this</span>;}</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>      AdaptiveSimpsonQuadrature(AdaptiveSimpsonQuadrature <span class="keyword">const</span>&amp; rOther) {*<span class="keyword">this</span> = rOther;}</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>  }; <span class="comment">// Class AdaptiveSimpsonQuadrature</span></div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>      </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>      <span class="comment">// Protected methods</span></div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>      <span class="keywordtype">double</span> RecursiveIntegration (<span class="keywordtype">double</span> a, <span class="keywordtype">double</span> b, <span class="keywordtype">double</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">fa</a>, <span class="keywordtype">double</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">fb</a>, <span class="keywordtype">double</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">fc</a>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>      <span class="comment">// Assignment operator / Copy constructor</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>      <a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a>&amp; operator=(<a class="code hl_class" href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">AdaptiveSimpsonQuadrature</a> <span class="keyword">const</span>&amp; <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rOther</a>) {<span class="keywordflow">return</span> *<span class="keyword">this</span>;}</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>      AdaptiveSimpsonQuadrature(AdaptiveSimpsonQuadrature <span class="keyword">const</span>&amp; rOther) {*<span class="keyword">this</span> = rOther;}</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>  }; <span class="comment">// Class AdaptiveSimpsonQuadrature</span></div>
 </div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>} <span class="comment">// namespace Kratos</span></div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span><span class="preprocessor">#endif </span><span class="comment">// NUMERICAL_INTEGRATION_METHOD_ADAPTIVE_SIMPSON_H_INCLUDED</span></div>
-<div class="ttc" id="aclass_kratos_1_1_adaptive_simpson_quadrature_html"><div class="ttname"><a href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">Kratos::AdaptiveSimpsonQuadrature</a></div><div class="ttdef"><b>Definition</b> numerical_integration_adaptive_simpson.h:25</div></div>
-<div class="ttc" id="aclass_kratos_1_1_adaptive_simpson_quadrature_html_a0061e067644b648846628f7136540a36"><div class="ttname"><a href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a0061e067644b648846628f7136540a36">Kratos::AdaptiveSimpsonQuadrature::CloneRaw</a></div><div class="ttdeci">NumericalIntegrationMethod * CloneRaw() const override</div><div class="ttdef"><b>Definition</b> numerical_integration_adaptive_simpson.h:40</div></div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace Kratos</span></div>
+<div class="ttc" id="aclass_kratos_1_1_adaptive_simpson_quadrature_html"><div class="ttname"><a href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html">Kratos::AdaptiveSimpsonQuadrature</a></div><div class="ttdef"><b>Definition</b> numerical_integration_adaptive_simpson.h:24</div></div>
+<div class="ttc" id="aclass_kratos_1_1_adaptive_simpson_quadrature_html_a0061e067644b648846628f7136540a36"><div class="ttname"><a href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a0061e067644b648846628f7136540a36">Kratos::AdaptiveSimpsonQuadrature::CloneRaw</a></div><div class="ttdeci">NumericalIntegrationMethod * CloneRaw() const override</div><div class="ttdef"><b>Definition</b> numerical_integration_adaptive_simpson.h:39</div></div>
 <div class="ttc" id="aclass_kratos_1_1_adaptive_simpson_quadrature_html_a556c31aceed6c315da06a30a12c01f4b"><div class="ttname"><a href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a556c31aceed6c315da06a30a12c01f4b">Kratos::AdaptiveSimpsonQuadrature::KRATOS_CLASS_POINTER_DEFINITION</a></div><div class="ttdeci">KRATOS_CLASS_POINTER_DEFINITION(AdaptiveSimpsonQuadrature)</div></div>
-<div class="ttc" id="aclass_kratos_1_1_adaptive_simpson_quadrature_html_a633954a2cb99de32e5a7d2903bc6d305"><div class="ttname"><a href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a633954a2cb99de32e5a7d2903bc6d305">Kratos::AdaptiveSimpsonQuadrature::CloneShared</a></div><div class="ttdeci">NumericalIntegrationMethod::Pointer CloneShared() const override</div><div class="ttdef"><b>Definition</b> numerical_integration_adaptive_simpson.h:45</div></div>
-<div class="ttc" id="aclass_kratos_1_1_numerical_integration_method_html"><div class="ttname"><a href="../../d3/dc1/class_kratos_1_1_numerical_integration_method.html">Kratos::NumericalIntegrationMethod</a></div><div class="ttdef"><b>Definition</b> numerical_integration_method.h:23</div></div>
+<div class="ttc" id="aclass_kratos_1_1_adaptive_simpson_quadrature_html_a633954a2cb99de32e5a7d2903bc6d305"><div class="ttname"><a href="../../d2/d25/class_kratos_1_1_adaptive_simpson_quadrature.html#a633954a2cb99de32e5a7d2903bc6d305">Kratos::AdaptiveSimpsonQuadrature::CloneShared</a></div><div class="ttdeci">NumericalIntegrationMethod::Pointer CloneShared() const override</div><div class="ttdef"><b>Definition</b> numerical_integration_adaptive_simpson.h:44</div></div>
+<div class="ttc" id="aclass_kratos_1_1_numerical_integration_method_html"><div class="ttname"><a href="../../d3/dc1/class_kratos_1_1_numerical_integration_method.html">Kratos::NumericalIntegrationMethod</a></div><div class="ttdef"><b>Definition</b> numerical_integration_method.h:22</div></div>
 <div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Kratos::Triangle3D3</a></div><div class="ttdoc">A three node 3D triangle geometry with linear shape functions.</div><div class="ttdef"><b>Definition</b> triangle_3d_3.h:77</div></div>
 <div class="ttc" id="adefine_8h_html"><div class="ttname"><a href="../../df/d67/define_8h.html">define.h</a></div></div>
 <div class="ttc" id="amodel__part_8h_html"><div class="ttname"><a href="../../dd/dfe/model__part_8h.html">model_part.h</a></div></div>
@@ -177,7 +174,7 @@ $(document).ready(function() { init_codefold(1); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 13 2025 03:15:35 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jan 14 2025 03:11:03 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

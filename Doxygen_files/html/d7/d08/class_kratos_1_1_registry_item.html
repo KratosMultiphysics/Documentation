@@ -93,7 +93,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p>The registry item to be stored by <a class="el" href="../../d2/d93/class_kratos_1_1_registry.html" title="Kratos base registry This class is intended to act as global registry Each time the AddItem method is...">Registry</a> class. It is the base class for some more specific ones.  
+<p>Represents a node in the registry hierarchy. A <code><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html" title="Represents a node in the registry hierarchy. A RegistryItem can store a value or act as a container f...">RegistryItem</a></code> can store a value or act as a container for sub-items, forming a tree structure. It is the base class for more specific registry item types.  
  <a href="../../d7/d08/class_kratos_1_1_registry_item.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d4/d5e/registry__item_8h_source.html">registry_item.h</a>&gt;</code></p>
@@ -106,80 +106,100 @@ Collaboration diagram for Kratos::RegistryItem:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d2e/class_kratos_1_1_registry_item_1_1_key_return_const_iterator.html">KeyReturnConstIterator</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom iterator with key as return type to be used in the <a class="el" href="../../da/d07/namespace_kratos_1_1_python.html">Python</a> export.  <a href="../../db/d2e/class_kratos_1_1_registry_item_1_1_key_return_const_iterator.html#details">More...</a><br /></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom iterator for registry items returning keys.  <a href="../../db/d2e/class_kratos_1_1_registry_item_1_1_key_return_const_iterator.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Life Cycle</div></td></tr>
 <tr class="memitem:a88e1f751d6e195371dff78c5e3dd92a7" id="r_a88e1f751d6e195371dff78c5e3dd92a7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a88e1f751d6e195371dff78c5e3dd92a7">RegistryItem</a> ()=<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">delete</a></td></tr>
-<tr class="memdesc:a88e1f751d6e195371dff78c5e3dd92a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor deleted.  <br /></td></tr>
+<tr class="memdesc:a88e1f751d6e195371dff78c5e3dd92a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor is deleted.  <br /></td></tr>
 <tr class="separator:a88e1f751d6e195371dff78c5e3dd92a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6273985a024115783aca7e0b25c4ed59" id="r_a6273985a024115783aca7e0b25c4ed59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a6273985a024115783aca7e0b25c4ed59">RegistryItem</a> (const std::string &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rName</a>)</td></tr>
-<tr class="memdesc:a6273985a024115783aca7e0b25c4ed59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with the name.  <br /></td></tr>
+<tr class="memdesc:a6273985a024115783aca7e0b25c4ed59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with name.  <br /></td></tr>
 <tr class="separator:a6273985a024115783aca7e0b25c4ed59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecf0c6c116eb8be0a58f09a8740829ba" id="r_aecf0c6c116eb8be0a58f09a8740829ba"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">typename</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TItemType</a> , typename... TArgs&gt; </td></tr>
 <tr class="memitem:aecf0c6c116eb8be0a58f09a8740829ba"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#aecf0c6c116eb8be0a58f09a8740829ba">RegistryItem</a> (const std::string &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rName</a>, const std::function&lt; std::shared_ptr&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TItemType</a> &gt;(TArgs...)&gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rValue</a>)</td></tr>
-<tr class="memdesc:aecf0c6c116eb8be0a58f09a8740829ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with the name and lambda.  <br /></td></tr>
+<tr class="memdesc:aecf0c6c116eb8be0a58f09a8740829ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with name and lambda function for value.  <br /></td></tr>
 <tr class="separator:aecf0c6c116eb8be0a58f09a8740829ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5545d7ff822c61e82bb46d99765c499d" id="r_a5545d7ff822c61e82bb46d99765c499d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TItemType</a> &gt; </td></tr>
 <tr class="memitem:a5545d7ff822c61e82bb46d99765c499d"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a5545d7ff822c61e82bb46d99765c499d">RegistryItem</a> (const std::string &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rName</a>, const <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TItemType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rValue</a>)</td></tr>
-<tr class="memdesc:a5545d7ff822c61e82bb46d99765c499d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with the name and value.  <br /></td></tr>
+<tr class="memdesc:a5545d7ff822c61e82bb46d99765c499d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with name and value.  <br /></td></tr>
 <tr class="separator:a5545d7ff822c61e82bb46d99765c499d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7631b950e4c83a18b4fc2c857b282c20" id="r_a7631b950e4c83a18b4fc2c857b282c20"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TItemType</a> &gt; </td></tr>
 <tr class="memitem:a7631b950e4c83a18b4fc2c857b282c20"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a7631b950e4c83a18b4fc2c857b282c20">RegistryItem</a> (const std::string &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rName</a>, const <a class="el" href="../../db/d66/namespace_kratos.html#a391139ce979b63717f77fcf0facf145c">shared_ptr</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TItemType</a> &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">pValue</a>)</td></tr>
-<tr class="memdesc:a7631b950e4c83a18b4fc2c857b282c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with the name and shared ptr.  <br /></td></tr>
+<tr class="memdesc:a7631b950e4c83a18b4fc2c857b282c20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructor with name and shared pointer to value.  <br /></td></tr>
 <tr class="separator:a7631b950e4c83a18b4fc2c857b282c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad8883be73ffc6720a312406db384703b" id="r_ad8883be73ffc6720a312406db384703b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#ad8883be73ffc6720a312406db384703b">RegistryItem</a> (<a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a> const &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rOther</a>)=<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">delete</a></td></tr>
+<tr class="memdesc:ad8883be73ffc6720a312406db384703b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Copy constructor is deleted.  <br /></td></tr>
 <tr class="separator:ad8883be73ffc6720a312406db384703b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb7441a4ee6c621bf1510159f799f2f7" id="r_afb7441a4ee6c621bf1510159f799f2f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#afb7441a4ee6c621bf1510159f799f2f7">~RegistryItem</a> ()=default</td></tr>
 <tr class="memdesc:afb7441a4ee6c621bf1510159f799f2f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destructor.  <br /></td></tr>
 <tr class="separator:afb7441a4ee6c621bf1510159f799f2f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae39e7027cf20c2ffd25dd1379e40b8d4" id="r_ae39e7027cf20c2ffd25dd1379e40b8d4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#ae39e7027cf20c2ffd25dd1379e40b8d4">operator=</a> (<a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rOther</a>)=<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">delete</a></td></tr>
-<tr class="memdesc:ae39e7027cf20c2ffd25dd1379e40b8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator deleted.  <br /></td></tr>
+<tr class="memdesc:ae39e7027cf20c2ffd25dd1379e40b8d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator is deleted.  <br /></td></tr>
 <tr class="separator:ae39e7027cf20c2ffd25dd1379e40b8d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Items</div></td></tr>
 <tr class="memitem:a3afc47eab683d3146799cd9bca02a91d" id="r_a3afc47eab683d3146799cd9bca02a91d"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">typename</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TItemType</a> , class... TArgumentsList&gt; </td></tr>
 <tr class="memitem:a3afc47eab683d3146799cd9bca02a91d"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a> &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a3afc47eab683d3146799cd9bca02a91d">AddItem</a> (std::string const &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">ItemName</a>, <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TArgumentsList</a> &amp;&amp;... <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Arguments</a>)</td></tr>
+<tr class="memdesc:a3afc47eab683d3146799cd9bca02a91d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adds a sub-item to the registry item.  <br /></td></tr>
 <tr class="separator:a3afc47eab683d3146799cd9bca02a91d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr><td colspan="2"><div class="groupHeader">Access</div></td></tr>
+<tr><td colspan="2"><div class="groupHeader">Iterators</div></td></tr>
 <tr class="memitem:af20ca291c4d25b341699a1bf51e01347" id="r_af20ca291c4d25b341699a1bf51e01347"><td class="memItemLeft" align="right" valign="top">SubRegistryItemType::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#af20ca291c4d25b341699a1bf51e01347">begin</a> ()</td></tr>
+<tr class="memdesc:af20ca291c4d25b341699a1bf51e01347"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning of sub-items.  <br /></td></tr>
 <tr class="separator:af20ca291c4d25b341699a1bf51e01347"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a55104797cef7b23d08e685a6431c5204" id="r_a55104797cef7b23d08e685a6431c5204"><td class="memItemLeft" align="right" valign="top">SubRegistryItemType::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a55104797cef7b23d08e685a6431c5204">cbegin</a> () const</td></tr>
+<tr class="memdesc:a55104797cef7b23d08e685a6431c5204"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant iterator to the beginning of sub-items.  <br /></td></tr>
 <tr class="separator:a55104797cef7b23d08e685a6431c5204"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac633d4fd3f0ed23ad8f42f2f434804f3" id="r_ac633d4fd3f0ed23ad8f42f2f434804f3"><td class="memItemLeft" align="right" valign="top">SubRegistryItemType::iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#ac633d4fd3f0ed23ad8f42f2f434804f3">end</a> ()</td></tr>
+<tr class="memdesc:ac633d4fd3f0ed23ad8f42f2f434804f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the end of sub-items.  <br /></td></tr>
 <tr class="separator:ac633d4fd3f0ed23ad8f42f2f434804f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a284cdf74af0da3ac3d9e62a2d0f8615f" id="r_a284cdf74af0da3ac3d9e62a2d0f8615f"><td class="memItemLeft" align="right" valign="top">SubRegistryItemType::const_iterator&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a284cdf74af0da3ac3d9e62a2d0f8615f">cend</a> () const</td></tr>
+<tr class="memdesc:a284cdf74af0da3ac3d9e62a2d0f8615f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a constant iterator to the end of sub-items.  <br /></td></tr>
 <tr class="separator:a284cdf74af0da3ac3d9e62a2d0f8615f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">Access</div></td></tr>
 <tr class="memitem:a952e383fd95de3b257fbf43e81a4c96d" id="r_a952e383fd95de3b257fbf43e81a4c96d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d2e/class_kratos_1_1_registry_item_1_1_key_return_const_iterator.html">KeyReturnConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a952e383fd95de3b257fbf43e81a4c96d">KeyConstBegin</a> () const</td></tr>
+<tr class="memdesc:a952e383fd95de3b257fbf43e81a4c96d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the beginning of sub-item keys.  <br /></td></tr>
 <tr class="separator:a952e383fd95de3b257fbf43e81a4c96d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a21f750be769bf05676cbd546f8b98c9a" id="r_a21f750be769bf05676cbd546f8b98c9a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../db/d2e/class_kratos_1_1_registry_item_1_1_key_return_const_iterator.html">KeyReturnConstIterator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a21f750be769bf05676cbd546f8b98c9a">KeyConstEnd</a> () const</td></tr>
+<tr class="memdesc:a21f750be769bf05676cbd546f8b98c9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an iterator to the end of sub-item keys.  <br /></td></tr>
 <tr class="separator:a21f750be769bf05676cbd546f8b98c9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af5a3a62e4fbd551f2b21008237768fff" id="r_af5a3a62e4fbd551f2b21008237768fff"><td class="memItemLeft" align="right" valign="top">const std::string &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#af5a3a62e4fbd551f2b21008237768fff">Name</a> () const</td></tr>
+<tr class="memdesc:af5a3a62e4fbd551f2b21008237768fff"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the name of the current registry item.  <br /></td></tr>
 <tr class="separator:af5a3a62e4fbd551f2b21008237768fff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a771395fea2eb6c4b037d574fc9e96c65" id="r_a771395fea2eb6c4b037d574fc9e96c65"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a> const &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a771395fea2eb6c4b037d574fc9e96c65">GetItem</a> (std::string const &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rItemName</a>) const</td></tr>
+<tr class="memdesc:a771395fea2eb6c4b037d574fc9e96c65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a sub-item by name.  <br /></td></tr>
 <tr class="separator:a771395fea2eb6c4b037d574fc9e96c65"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a926de8335cc15135dcd7f9ad50a2744d" id="r_a926de8335cc15135dcd7f9ad50a2744d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a926de8335cc15135dcd7f9ad50a2744d">GetItem</a> (std::string const &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rItemName</a>)</td></tr>
+<tr class="memdesc:a926de8335cc15135dcd7f9ad50a2744d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a sub-item by name.  <br /></td></tr>
 <tr class="separator:a926de8335cc15135dcd7f9ad50a2744d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a53572d50bf5b128530c0535eb7898e0b" id="r_a53572d50bf5b128530c0535eb7898e0b"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">typename</a> TDataType &gt; </td></tr>
 <tr class="memitem:a53572d50bf5b128530c0535eb7898e0b"><td class="memTemplItemLeft" align="right" valign="top">TDataType const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a53572d50bf5b128530c0535eb7898e0b">GetValue</a> () const</td></tr>
+<tr class="memdesc:a53572d50bf5b128530c0535eb7898e0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves the value stored in this registry item.  <br /></td></tr>
 <tr class="separator:a53572d50bf5b128530c0535eb7898e0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac691cf334418aaa04ab16ba56eb7dbc7" id="r_ac691cf334418aaa04ab16ba56eb7dbc7"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">typename</a> TDataType , <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">typename</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TCastType</a> &gt; </td></tr>
 <tr class="memitem:ac691cf334418aaa04ab16ba56eb7dbc7"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TCastType</a> const &amp;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#ac691cf334418aaa04ab16ba56eb7dbc7">GetValueAs</a> () const</td></tr>
+<tr class="memdesc:ac691cf334418aaa04ab16ba56eb7dbc7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieves a value casted to a derived type.  <br /></td></tr>
 <tr class="separator:ac691cf334418aaa04ab16ba56eb7dbc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bce67b8c57c0568b67d1bec47b3a7cc" id="r_a5bce67b8c57c0568b67d1bec47b3a7cc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a5bce67b8c57c0568b67d1bec47b3a7cc">RemoveItem</a> (std::string const &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rItemName</a>)</td></tr>
+<tr class="memdesc:a5bce67b8c57c0568b67d1bec47b3a7cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Removes a sub-item by name.  <br /></td></tr>
 <tr class="separator:a5bce67b8c57c0568b67d1bec47b3a7cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Inquiry</div></td></tr>
 <tr class="memitem:ae73afbd673b173d77e56e42c48bcb96e" id="r_ae73afbd673b173d77e56e42c48bcb96e"><td class="memItemLeft" align="right" valign="top">std::size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#ae73afbd673b173d77e56e42c48bcb96e">size</a> ()</td></tr>
+<tr class="memdesc:ae73afbd673b173d77e56e42c48bcb96e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of sub-items.  <br /></td></tr>
 <tr class="separator:ae73afbd673b173d77e56e42c48bcb96e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f8c45f65b91670b7f4d0cd88ab0cfa8" id="r_a3f8c45f65b91670b7f4d0cd88ab0cfa8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a3f8c45f65b91670b7f4d0cd88ab0cfa8">HasValue</a> () const</td></tr>
+<tr class="memdesc:a3f8c45f65b91670b7f4d0cd88ab0cfa8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the item holds a value.  <br /></td></tr>
 <tr class="separator:a3f8c45f65b91670b7f4d0cd88ab0cfa8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad7927c2cc43e9a6262365e02dc0f091f" id="r_ad7927c2cc43e9a6262365e02dc0f091f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#ad7927c2cc43e9a6262365e02dc0f091f">HasItems</a> () const</td></tr>
+<tr class="memdesc:ad7927c2cc43e9a6262365e02dc0f091f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the item has sub-items.  <br /></td></tr>
 <tr class="separator:ad7927c2cc43e9a6262365e02dc0f091f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7baba436ff3bab8eff7bcf6a1aa56248" id="r_a7baba436ff3bab8eff7bcf6a1aa56248"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">bool</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a7baba436ff3bab8eff7bcf6a1aa56248">HasItem</a> (std::string const &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rItemName</a>) const</td></tr>
+<tr class="memdesc:a7baba436ff3bab8eff7bcf6a1aa56248"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a sub-item exists.  <br /></td></tr>
 <tr class="separator:a7baba436ff3bab8eff7bcf6a1aa56248"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac6f5a42d99e3d1fdcf1a787bb0e1c5c" id="r_aac6f5a42d99e3d1fdcf1a787bb0e1c5c"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">OtherType</a> &gt; </td></tr>
 <tr class="memitem:aac6f5a42d99e3d1fdcf1a787bb0e1c5c"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">bool</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#aac6f5a42d99e3d1fdcf1a787bb0e1c5c">IsSameType</a> (const <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">OtherType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rOther</a>) const</td></tr>
+<tr class="memdesc:aac6f5a42d99e3d1fdcf1a787bb0e1c5c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the type of the stored value matches a given type.  <br /></td></tr>
 <tr class="separator:aac6f5a42d99e3d1fdcf1a787bb0e1c5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operations</div></td></tr>
 <tr class="memitem:a480bc7fd60d0cb56eef8b7346a76c3fb" id="r_a480bc7fd60d0cb56eef8b7346a76c3fb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a480bc7fd60d0cb56eef8b7346a76c3fb">GetSubItemAvailableList</a> () const</td></tr>
@@ -187,15 +207,16 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a480bc7fd60d0cb56eef8b7346a76c3fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Input and output</div></td></tr>
 <tr class="memitem:af8acc267d0620413ccd80b69e3b60c11" id="r_af8acc267d0620413ccd80b69e3b60c11"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#af8acc267d0620413ccd80b69e3b60c11">Info</a> () const</td></tr>
-<tr class="memdesc:af8acc267d0620413ccd80b69e3b60c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Turn back information as a string.  <br /></td></tr>
+<tr class="memdesc:af8acc267d0620413ccd80b69e3b60c11"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string representation of the item.  <br /></td></tr>
 <tr class="separator:af8acc267d0620413ccd80b69e3b60c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4f76f516f6bd48cb5c0ce0de9272e7b" id="r_af4f76f516f6bd48cb5c0ce0de9272e7b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#af4f76f516f6bd48cb5c0ce0de9272e7b">PrintInfo</a> (std::ostream &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rOStream</a>) const</td></tr>
-<tr class="memdesc:af4f76f516f6bd48cb5c0ce0de9272e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object.  <br /></td></tr>
+<tr class="memdesc:af4f76f516f6bd48cb5c0ce0de9272e7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints detailed information about the item.  <br /></td></tr>
 <tr class="separator:af4f76f516f6bd48cb5c0ce0de9272e7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2ed55d743f54d0ce4beaaf6d500368c" id="r_ab2ed55d743f54d0ce4beaaf6d500368c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#ab2ed55d743f54d0ce4beaaf6d500368c">PrintData</a> (std::ostream &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rOStream</a>) const</td></tr>
-<tr class="memdesc:ab2ed55d743f54d0ce4beaaf6d500368c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print object's data.  <br /></td></tr>
+<tr class="memdesc:ab2ed55d743f54d0ce4beaaf6d500368c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the item's data.  <br /></td></tr>
 <tr class="separator:ab2ed55d743f54d0ce4beaaf6d500368c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea32b27a84808281419e772f8588b8b2" id="r_aea32b27a84808281419e772f8588b8b2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#aea32b27a84808281419e772f8588b8b2">ToJson</a> (std::string const &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rTabSpacing</a>=&quot;&quot;, const std::size_t <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Level</a>=0) const</td></tr>
+<tr class="memdesc:aea32b27a84808281419e772f8588b8b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the item and its sub-items to JSON.  <br /></td></tr>
 <tr class="separator:aea32b27a84808281419e772f8588b8b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Type Definitions</h2></td></tr>
@@ -206,12 +227,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aac40150e802d32df42f5bb814e7d3666"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of SubRegistryItemType.  <br /></td></tr>
 <tr class="separator:aac40150e802d32df42f5bb814e7d3666"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a217e6c1c96917519904345c280b96dcd" id="r_a217e6c1c96917519904345c280b96dcd"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html#a217e6c1c96917519904345c280b96dcd">KRATOS_CLASS_POINTER_DEFINITION</a> (<a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html">RegistryItem</a>)</td></tr>
-<tr class="memdesc:a217e6c1c96917519904345c280b96dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html" title="The registry item to be stored by Registry class. It is the base class for some more specific ones.">RegistryItem</a>.  <br /></td></tr>
+<tr class="memdesc:a217e6c1c96917519904345c280b96dcd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pointer definition of <a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html" title="Represents a node in the registry hierarchy. A RegistryItem can store a value or act as a container f...">RegistryItem</a>.  <br /></td></tr>
 <tr class="separator:a217e6c1c96917519904345c280b96dcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The registry item to be stored by <a class="el" href="../../d2/d93/class_kratos_1_1_registry.html" title="Kratos base registry This class is intended to act as global registry Each time the AddItem method is...">Registry</a> class. It is the base class for some more specific ones. </p>
-<p><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html" title="The registry item to be stored by Registry class. It is the base class for some more specific ones.">RegistryItem</a> has a tree node structure and stores its name, an optional value, and an unorder_set of its sub data. This structure let us to have registry of the elements and then different registries for each elements inside it. Please note that <a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html" title="The registry item to be stored by Registry class. It is the base class for some more specific ones.">RegistryItem</a> stores a shared pointer to the value. </p>
+<div class="textblock"><p>Represents a node in the registry hierarchy. A <code><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html" title="Represents a node in the registry hierarchy. A RegistryItem can store a value or act as a container f...">RegistryItem</a></code> can store a value or act as a container for sub-items, forming a tree structure. It is the base class for more specific registry item types. </p>
+<ul>
+<li>Each <code><a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html" title="Represents a node in the registry hierarchy. A RegistryItem can store a value or act as a container f...">RegistryItem</a></code> has a unique name and optionally holds a value.</li>
+<li>Sub-items are stored in an unordered map for quick access.</li>
+<li>Supports serialization to JSON for debugging and inspection. <dl class="section author"><dt>Author</dt><dd>Pooyan Dadvand Ruben Zorrilla Carlos Roig </dd></dl>
+<dl class="section see"><dt>See also</dt><dd><a class="el" href="../../d2/d93/class_kratos_1_1_registry.html" title="Kratos base registry class This class serves as a global registry to store hierarchical data or objec...">Registry</a> </dd></dl>
+</li>
+</ul>
 </div><h2 class="groupheader">Member Typedef Documentation</h2>
 <a id="aac40150e802d32df42f5bb814e7d3666" name="aac40150e802d32df42f5bb814e7d3666"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aac40150e802d32df42f5bb814e7d3666">&#9670;&#160;</a></span>SubRegistryItemPointerType</h2>
@@ -269,7 +296,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Default constructor deleted. </p>
+<p>Default constructor is deleted. </p>
 
 </div>
 </div>
@@ -297,7 +324,13 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Constructor with the name. </p>
+<p>Constructor with name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rName</td><td>The name of the registry item </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -337,7 +370,21 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </table>
 </div><div class="memdoc">
 
-<p>Constructor with the name and lambda. </p>
+<p>Constructor with name and lambda function for value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TItemType</td><td>Type of the item </td></tr>
+    <tr><td class="paramname">TArgs</td><td>Argument types for the lambda </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rName</td><td>The name of the registry item </td></tr>
+    <tr><td class="paramname">rValue</td><td>Lambda function to initialize the value </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -377,7 +424,20 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </table>
 </div><div class="memdoc">
 
-<p>Constructor with the name and value. </p>
+<p>Constructor with name and value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TItemType</td><td>Type of the value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rName</td><td>The name of the registry item </td></tr>
+    <tr><td class="paramname">rValue</td><td>The value to store </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -417,7 +477,20 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </table>
 </div><div class="memdoc">
 
-<p>Constructor with the name and shared ptr. </p>
+<p>Constructor with name and shared pointer to value. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TItemType</td><td>Type of the value </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rName</td><td>The name of the registry item </td></tr>
+    <tr><td class="paramname">pValue</td><td>Shared pointer to the value </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -444,6 +517,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Copy constructor is deleted. </p>
 
 </div>
 </div>
@@ -511,6 +586,23 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </table>
 </div><div class="memdoc">
 
+<p>Adds a sub-item to the registry item. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TItemType</td><td>Type of the sub-item </td></tr>
+    <tr><td class="paramname">TArgumentsList</td><td>Variadic template arguments for the sub-item constructor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ItemName</td><td>Name of the sub-item </td></tr>
+    <tr><td class="paramname">Arguments</td><td>Arguments for the sub-item constructor </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the added sub-item </dd></dl>
+
 </div>
 </div>
 <a id="af20ca291c4d25b341699a1bf51e01347" name="af20ca291c4d25b341699a1bf51e01347"></a>
@@ -527,6 +619,15 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns an iterator to the beginning of sub-items. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator pointing to the first sub-item </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">An</td><td>error if the current item holds a value instead of sub-items </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -545,6 +646,15 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
+<p>Returns a constant iterator to the beginning of sub-items. </p>
+<dl class="section return"><dt>Returns</dt><dd>Constant iterator pointing to the first sub-item </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">An</td><td>error if the current item holds a value instead of sub-items </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a284cdf74af0da3ac3d9e62a2d0f8615f" name="a284cdf74af0da3ac3d9e62a2d0f8615f"></a>
@@ -562,6 +672,15 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
+<p>Returns a constant iterator to the end of sub-items. </p>
+<dl class="section return"><dt>Returns</dt><dd>Constant iterator pointing past the last sub-item </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">An</td><td>error if the current item holds a value instead of sub-items </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ac633d4fd3f0ed23ad8f42f2f434804f3" name="ac633d4fd3f0ed23ad8f42f2f434804f3"></a>
@@ -578,6 +697,15 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns an iterator to the end of sub-items. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator pointing past the last sub-item </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">An</td><td>error if the current item holds a value instead of sub-items </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -597,6 +725,21 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
+<p>Retrieves a sub-item by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rItemName</td><td>Name of the sub-item to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Reference to the requested sub-item </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">An</td><td>error if the sub-item does not exist </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a771395fea2eb6c4b037d574fc9e96c65" name="a771395fea2eb6c4b037d574fc9e96c65"></a>
@@ -614,6 +757,21 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Retrieves a sub-item by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rItemName</td><td>Name of the sub-item to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Constant reference to the requested sub-item </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">An</td><td>error if the sub-item does not exist </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -662,6 +820,21 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </table>
 </div><div class="memdoc">
 
+<p>Retrieves the value stored in this registry item. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TDataType</td><td>Type of the value to retrieve </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Constant reference to the value </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">An</td><td>error if the item does not store a value or if the type does not match </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ac691cf334418aaa04ab16ba56eb7dbc7" name="ac691cf334418aaa04ab16ba56eb7dbc7"></a>
@@ -689,6 +862,22 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </table>
 </div><div class="memdoc">
 
+<p>Retrieves a value casted to a derived type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TDataType</td><td>Base type of the stored value </td></tr>
+    <tr><td class="paramname">TCastType</td><td>Derived type to cast the value to </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Constant reference to the value casted to the derived type </dd></dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">An</td><td>error if the cast fails or if the type does not match </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="a7baba436ff3bab8eff7bcf6a1aa56248" name="a7baba436ff3bab8eff7bcf6a1aa56248"></a>
@@ -707,6 +896,15 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
+<p>Checks if a sub-item exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rItemName</td><td>Name of the sub-item to check </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the sub-item exists, false otherwise </dd></dl>
+
 </div>
 </div>
 <a id="ad7927c2cc43e9a6262365e02dc0f091f" name="ad7927c2cc43e9a6262365e02dc0f091f"></a>
@@ -723,6 +921,9 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Checks if the item has sub-items. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the item has sub-items, false otherwise </dd></dl>
 
 </div>
 </div>
@@ -741,6 +942,9 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
+<p>Checks if the item holds a value. </p>
+<dl class="section return"><dt>Returns</dt><dd>True if the item has a value, false otherwise </dd></dl>
+
 </div>
 </div>
 <a id="af8acc267d0620413ccd80b69e3b60c11" name="af8acc267d0620413ccd80b69e3b60c11"></a>
@@ -758,7 +962,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
-<p>Turn back information as a string. </p>
+<p>Returns a string representation of the item. </p>
+<dl class="section return"><dt>Returns</dt><dd>A string describing the registry item </dd></dl>
 
 </div>
 </div>
@@ -788,6 +993,21 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </table>
 </div><div class="memdoc">
 
+<p>Checks if the type of the stored value matches a given type. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">OtherType</td><td>Type to compare against </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rOther</td><td>A dummy variable of the type to compare against </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the types match, false otherwise </dd></dl>
+
 </div>
 </div>
 <a id="a952e383fd95de3b257fbf43e81a4c96d" name="a952e383fd95de3b257fbf43e81a4c96d"></a>
@@ -805,6 +1025,9 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
+<p>Returns an iterator to the beginning of sub-item keys. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator for sub-item keys </dd></dl>
+
 </div>
 </div>
 <a id="a21f750be769bf05676cbd546f8b98c9a" name="a21f750be769bf05676cbd546f8b98c9a"></a>
@@ -821,6 +1044,9 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns an iterator to the end of sub-item keys. </p>
+<dl class="section return"><dt>Returns</dt><dd>Iterator past the last sub-item key </dd></dl>
 
 </div>
 </div>
@@ -840,7 +1066,7 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
-<p>Pointer definition of <a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html" title="The registry item to be stored by Registry class. It is the base class for some more specific ones.">RegistryItem</a>. </p>
+<p>Pointer definition of <a class="el" href="../../d7/d08/class_kratos_1_1_registry_item.html" title="Represents a node in the registry hierarchy. A RegistryItem can store a value or act as a container f...">RegistryItem</a>. </p>
 
 </div>
 </div>
@@ -866,6 +1092,9 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Returns the name of the current registry item. </p>
+<dl class="section return"><dt>Returns</dt><dd>Name of the registry item </dd></dl>
 
 </div>
 </div>
@@ -893,7 +1122,7 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </table>
 </div><div class="memdoc">
 
-<p>Assignment operator deleted. </p>
+<p>Assignment operator is deleted. </p>
 
 </div>
 </div>
@@ -913,7 +1142,13 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
-<p>Print object's data. </p>
+<p>Prints the item's data. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rOStream</td><td>Output stream to write to </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -933,7 +1168,13 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
-<p>Print information about this object. </p>
+<p>Prints detailed information about the item. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rOStream</td><td>Output stream to write to </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -953,6 +1194,20 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
+<p>Removes a sub-item by name. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rItemName</td><td>Name of the sub-item to remove </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Exceptions</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">An</td><td>error if the sub-item does not exist </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae73afbd673b173d77e56e42c48bcb96e" name="ae73afbd673b173d77e56e42c48bcb96e"></a>
@@ -969,6 +1224,9 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Returns the number of sub-items. </p>
+<dl class="section return"><dt>Returns</dt><dd>Number of sub-items </dd></dl>
 
 </div>
 </div>
@@ -998,6 +1256,16 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
       </table>
 </div><div class="memdoc">
 
+<p>Serializes the item and its sub-items to JSON. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rTabSpacing</td><td>String to use for indentation </td></tr>
+    <tr><td class="paramname">Level</td><td>Depth of the current item in the hierarchy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A JSON string representing the item </dd></dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -1007,7 +1275,7 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 13 2025 04:02:53 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jan 14 2025 04:03:37 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

@@ -245,7 +245,7 @@ var searchData=
   ['fsgeneralizedwallcondition_242',['FSGeneralizedWallCondition',['../d3/d96/class_kratos_1_1_f_s_generalized_wall_condition.html',1,'Kratos']]],
   ['fsgeneralizedwallcondition_3c_202_2c_202_20_3e_243',['FSGeneralizedWallCondition&lt; 2, 2 &gt;',['../d3/d96/class_kratos_1_1_f_s_generalized_wall_condition.html',1,'Kratos']]],
   ['fsgeneralizedwallcondition_3c_203_2c_203_20_3e_244',['FSGeneralizedWallCondition&lt; 3, 3 &gt;',['../d3/d96/class_kratos_1_1_f_s_generalized_wall_condition.html',1,'Kratos']]],
-  ['fsianalysis_245',['fsianalysis',['../d7/d4a/classfsi__analysis_1_1_fsi_analysis.html',1,'fsi_analysis.FsiAnalysis'],['../d8/df4/classfsi__analysis_1_1_f_s_i_analysis.html',1,'fsi_analysis.FSIAnalysis']]],
+  ['fsianalysis_245',['fsianalysis',['../d8/df4/classfsi__analysis_1_1_f_s_i_analysis.html',1,'fsi_analysis.FSIAnalysis'],['../d7/d4a/classfsi__analysis_1_1_fsi_analysis.html',1,'fsi_analysis.FsiAnalysis']]],
   ['fsicouplinginterface_246',['FSICouplingInterface',['../d5/dee/classfsi__coupling__interface_1_1_f_s_i_coupling_interface.html',1,'fsi_coupling_interface']]],
   ['fsiutils_247',['FSIUtils',['../d0/d2d/class_kratos_1_1_f_s_i_utils.html',1,'Kratos']]],
   ['fsperiodiccondition_248',['FSPeriodicCondition',['../d9/dcc/class_kratos_1_1_f_s_periodic_condition.html',1,'Kratos']]],
