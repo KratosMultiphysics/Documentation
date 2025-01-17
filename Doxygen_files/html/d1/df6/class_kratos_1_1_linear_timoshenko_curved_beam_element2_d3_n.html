@@ -172,6 +172,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a06e100514aa13e78febf7167898de71a" id="r_a06e100514aa13e78febf7167898de71a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df6/class_kratos_1_1_linear_timoshenko_curved_beam_element2_d3_n.html#a06e100514aa13e78febf7167898de71a">GetJacobian</a> (const <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">xi</a>) const</td></tr>
 <tr class="memdesc:a06e100514aa13e78febf7167898de71a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the Jacobian of the isoparametric transformation of arc length s J = sqrt((dx)^2 + (dy)^2)  <br /></td></tr>
 <tr class="separator:a06e100514aa13e78febf7167898de71a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe427f8e3ce12950880fe35eb2ff148b" id="r_afe427f8e3ce12950880fe35eb2ff148b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df6/class_kratos_1_1_linear_timoshenko_curved_beam_element2_d3_n.html#afe427f8e3ce12950880fe35eb2ff148b">GetCrossArea</a> ()</td></tr>
+<tr class="memdesc:afe427f8e3ce12950880fe35eb2ff148b"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns a proper measure of the area. If the strain_size is 3 (standard Timoshenko beam), the area is the CROSS_AREA Else (plane strain Timoshenko beam), hence the area is per unit length.  <br /></td></tr>
+<tr class="separator:afe427f8e3ce12950880fe35eb2ff148b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ae7bee807cd3021f3509ac1bc8026db" id="r_a6ae7bee807cd3021f3509ac1bc8026db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df6/class_kratos_1_1_linear_timoshenko_curved_beam_element2_d3_n.html#a6ae7bee807cd3021f3509ac1bc8026db">GetTangentandTransverseUnitVectors</a> (const <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">xi</a>, <a class="el" href="../../d1/df6/class_kratos_1_1_linear_timoshenko_curved_beam_element2_d3_n.html#a18b9ed87fcb52dfe2a551128d71d7539">array_3</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rt</a>, <a class="el" href="../../d1/df6/class_kratos_1_1_linear_timoshenko_curved_beam_element2_d3_n.html#a18b9ed87fcb52dfe2a551128d71d7539">array_3</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rn</a>) const</td></tr>
 <tr class="memdesc:a6ae7bee807cd3021f3509ac1bc8026db"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns tangent and transverse unit vectors of the beam at coordinate xi.  <br /></td></tr>
 <tr class="separator:a6ae7bee807cd3021f3509ac1bc8026db"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -566,8 +569,6 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a444e2a7296fd712156d6998bcd53dcbc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a528fa67c3bfbf931e6fd88f7757c869b" id="r_a528fa67c3bfbf931e6fd88f7757c869b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">constexpr</a> <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df6/class_kratos_1_1_linear_timoshenko_curved_beam_element2_d3_n.html#a528fa67c3bfbf931e6fd88f7757c869b">DoFperNode</a> = 3</td></tr>
 <tr class="separator:a528fa67c3bfbf931e6fd88f7757c869b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af1a45855ba1f8a8bec713fb15dafc411" id="r_af1a45855ba1f8a8bec713fb15dafc411"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">constexpr</a> <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df6/class_kratos_1_1_linear_timoshenko_curved_beam_element2_d3_n.html#af1a45855ba1f8a8bec713fb15dafc411">StrainSize</a> = 3</td></tr>
-<tr class="separator:af1a45855ba1f8a8bec713fb15dafc411"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a888933449f0dc218d81ae48b876dbf6f" id="r_a888933449f0dc218d81ae48b876dbf6f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/df6/class_kratos_1_1_linear_timoshenko_curved_beam_element2_d3_n.html#a888933449f0dc218d81ae48b876dbf6f">KRATOS_CLASS_INTRUSIVE_POINTER_DEFINITION</a> (<a class="el" href="../../d1/df6/class_kratos_1_1_linear_timoshenko_curved_beam_element2_d3_n.html">LinearTimoshenkoCurvedBeamElement2D3N</a>)</td></tr>
 <tr class="separator:a888933449f0dc218d81ae48b876dbf6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -1490,6 +1491,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="afe427f8e3ce12950880fe35eb2ff148b" name="afe427f8e3ce12950880fe35eb2ff148b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe427f8e3ce12950880fe35eb2ff148b">&#9670;&#160;</a></span>GetCrossArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> Kratos::LinearTimoshenkoCurvedBeamElement2D3N::GetCrossArea </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function returns a proper measure of the area. If the strain_size is 3 (standard Timoshenko beam), the area is the CROSS_AREA Else (plane strain Timoshenko beam), hence the area is per unit length. </p>
+
+</div>
+</div>
 <a id="a8183336be814bb471640d6f016a27e96" name="a8183336be814bb471640d6f016a27e96"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8183336be814bb471640d6f016a27e96">&#9670;&#160;</a></span>GetDofList()</h2>
 
@@ -2240,28 +2260,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="af1a45855ba1f8a8bec713fb15dafc411" name="af1a45855ba1f8a8bec713fb15dafc411"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1a45855ba1f8a8bec713fb15dafc411">&#9670;&#160;</a></span>StrainSize</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">constexpr</a> <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#a55fa27d5cdbb596f0bc19f7ba572355c">SizeType</a> Kratos::LinearTimoshenkoCurvedBeamElement2D3N::StrainSize = 3</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">constexpr</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5e8926a1a048134ed8bc8df76f7cd7bd" name="a5e8926a1a048134ed8bc8df76f7cd7bd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5e8926a1a048134ed8bc8df76f7cd7bd">&#9670;&#160;</a></span>SystemSize</h2>
 
@@ -2291,7 +2289,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 16 2025 03:51:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Fri Jan 17 2025 03:57:59 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

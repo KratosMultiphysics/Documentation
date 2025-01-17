@@ -230,6 +230,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8384a34fde5631345b39fa950ee89272" id="r_a8384a34fde5631345b39fa950ee89272"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">int</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a8384a34fde5631345b39fa950ee89272">Check</a> (const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>) const <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
 <tr class="memdesc:a8384a34fde5631345b39fa950ee89272"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function provides the place to perform checks on the completeness of the input.  <br /></td></tr>
 <tr class="separator:a8384a34fde5631345b39fa950ee89272"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6923b0655f16bc7034165ec1849b2acb" id="r_a6923b0655f16bc7034165ec1849b2acb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a6923b0655f16bc7034165ec1849b2acb">GetCrossArea</a> ()</td></tr>
+<tr class="memdesc:a6923b0655f16bc7034165ec1849b2acb"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function returns a proper measure of the area. If the strain_size is 3 (standard Timoshenko beam), the area is the CROSS_AREA Else (plane strain Timoshenko beam), hence the area is per unit length.  <br /></td></tr>
+<tr class="separator:a6923b0655f16bc7034165ec1849b2acb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr><td colspan="2"><div class="groupHeader">Input and output</div></td></tr>
 <tr class="memitem:a19cdc0f2fc548a8a67cf73c39147e870" id="r_a19cdc0f2fc548a8a67cf73c39147e870"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d48/class_kratos_1_1_linear_timoshenko_beam_element2_d2_n.html#a19cdc0f2fc548a8a67cf73c39147e870">PrintInfo</a> (std::ostream &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rOStream</a>) const <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
 <tr class="memdesc:a19cdc0f2fc548a8a67cf73c39147e870"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print information about this object.  <br /></td></tr>
@@ -1711,6 +1714,25 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a6923b0655f16bc7034165ec1849b2acb" name="a6923b0655f16bc7034165ec1849b2acb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6923b0655f16bc7034165ec1849b2acb">&#9670;&#160;</a></span>GetCrossArea()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> Kratos::LinearTimoshenkoBeamElement2D2N::GetCrossArea </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>This function returns a proper measure of the area. If the strain_size is 3 (standard Timoshenko beam), the area is the CROSS_AREA Else (plane strain Timoshenko beam), hence the area is per unit length. </p>
+
+</div>
+</div>
 <a id="a800cfa22ad6fcf25f33b767d5ddf59fa" name="a800cfa22ad6fcf25f33b767d5ddf59fa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a800cfa22ad6fcf25f33b767d5ddf59fa">&#9670;&#160;</a></span>GetDofList()</h2>
 
@@ -2982,7 +3004,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 16 2025 03:51:23 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Fri Jan 17 2025 03:57:59 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
