@@ -23,6 +23,7 @@ pre.highlight {
     position: relative;
 }
 
+li code.highlighter-rouge,
 p code.highlighter-rouge,
 p kbd {
     color: #cc6666;
@@ -47,7 +48,7 @@ div.highlighter-rouge::before {
     position: absolute;
     display: block;
     height: 1.2rem;
-    right: 1rem;
+    right: 7rem;
     top: 0.5rem;
     z-index: 5;
 }
@@ -98,6 +99,21 @@ div.highlight table {
     color: $gray-200;
     border-radius: 8px;
     font-size: 1.3rem;
+}
+
+div.highlight {
+  position: relative;
+}
+
+div.highlight button {
+  position: absolute;
+  top: 2px;
+  right: 5px;
+  z-index: 10;
+  background-color: #2e3e4e;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
 }
 
 .highlight .hll { background-color: #373b41 }
