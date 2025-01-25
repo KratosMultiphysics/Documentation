@@ -188,24 +188,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad586d365bceea4eb0e31096bd44732ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae9d6f0dce0deaf26145a2eae1270018d" id="r_ae9d6f0dce0deaf26145a2eae1270018d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#ae9d6f0dce0deaf26145a2eae1270018d">PredictVariableForNode</a> (<a class="el" href="../../d5/ddd/class_kratos_1_1_node.html">Node</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rNode</a>, const <a class="el" href="../../db/d16/struct_kratos_1_1_second_order_vector_variable.html">SecondOrderVectorVariable</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rSecondOrderVariables</a>)</td></tr>
 <tr class="separator:ae9d6f0dce0deaf26145a2eae1270018d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a010494eebc775a47bebac0cdd23b4356" id="r_a010494eebc775a47bebac0cdd23b4356"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a010494eebc775a47bebac0cdd23b4356">CalculateSystemContributions</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentCondition</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">LHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">RHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
-<tr class="memdesc:a010494eebc775a47bebac0cdd23b4356"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions totally analogous to the precedent but applied to the "condition" objects.  <br /></td></tr>
-<tr class="separator:a010494eebc775a47bebac0cdd23b4356"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a19896c2ae4118b36d7a55308dca9092d" id="r_a19896c2ae4118b36d7a55308dca9092d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a19896c2ae4118b36d7a55308dca9092d">CalculateSystemContributions</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentElement</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">LHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">RHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
-<tr class="memdesc:a19896c2ae4118b36d7a55308dca9092d"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed to be called in the builder and solver to introduce the selected time integration scheme.  <br /></td></tr>
-<tr class="separator:a19896c2ae4118b36d7a55308dca9092d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5e14dfbd65cac814311233fbf23f647c" id="r_a5e14dfbd65cac814311233fbf23f647c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a5e14dfbd65cac814311233fbf23f647c">CalculateRHSContribution</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentElement</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">RHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
-<tr class="memdesc:a5e14dfbd65cac814311233fbf23f647c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed to calculate just the RHS contribution.  <br /></td></tr>
-<tr class="separator:a5e14dfbd65cac814311233fbf23f647c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82de45bf8f9426dbf0221f228cba771d" id="r_a82de45bf8f9426dbf0221f228cba771d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a82de45bf8f9426dbf0221f228cba771d">CalculateSystemContributions</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentCondition</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rLHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rRHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rEquationIds</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
+<tr class="memdesc:a82de45bf8f9426dbf0221f228cba771d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions totally analogous to the precedent but applied to the "condition" objects.  <br /></td></tr>
+<tr class="separator:a82de45bf8f9426dbf0221f228cba771d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4444be3d2212c6fd4ec33f450e9d2bc1" id="r_a4444be3d2212c6fd4ec33f450e9d2bc1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a4444be3d2212c6fd4ec33f450e9d2bc1">CalculateSystemContributions</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentElement</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rLHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rRHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rEquationIds</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
+<tr class="memdesc:a4444be3d2212c6fd4ec33f450e9d2bc1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed to be called in the builder and solver to introduce the selected time integration scheme.  <br /></td></tr>
+<tr class="separator:a4444be3d2212c6fd4ec33f450e9d2bc1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a62d07803c34ce78c7632132f73feb99c" id="r_a62d07803c34ce78c7632132f73feb99c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a62d07803c34ce78c7632132f73feb99c">CalculateRHSContribution</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentElement</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rRHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rEquationIds</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
+<tr class="memdesc:a62d07803c34ce78c7632132f73feb99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed to calculate just the RHS contribution.  <br /></td></tr>
+<tr class="separator:a62d07803c34ce78c7632132f73feb99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a233424b297fd272e5d25b807f8451ce0" id="r_a233424b297fd272e5d25b807f8451ce0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a233424b297fd272e5d25b807f8451ce0">CalculateRHSContribution</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentCondition</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rRHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rEquationIds</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
 <tr class="memdesc:a233424b297fd272e5d25b807f8451ce0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions totally analogous to the precedent but applied to the "condition" objects.  <br /></td></tr>
 <tr class="separator:a233424b297fd272e5d25b807f8451ce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4126ec90c5946e9ba9d0185238d53cf8" id="r_a4126ec90c5946e9ba9d0185238d53cf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a4126ec90c5946e9ba9d0185238d53cf8">CalculateLHSContribution</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentCondition</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">LHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
-<tr class="memdesc:a4126ec90c5946e9ba9d0185238d53cf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions totally analogous to the precedent but applied to the "condition" objects.  <br /></td></tr>
-<tr class="separator:a4126ec90c5946e9ba9d0185238d53cf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0c7f85001c10d27adc8e6a534a49a5f" id="r_af0c7f85001c10d27adc8e6a534a49a5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#af0c7f85001c10d27adc8e6a534a49a5f">CalculateLHSContribution</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentElement</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">LHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
-<tr class="memdesc:af0c7f85001c10d27adc8e6a534a49a5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed to calculate just the LHS contribution.  <br /></td></tr>
-<tr class="separator:af0c7f85001c10d27adc8e6a534a49a5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9fe73a84f9eb1e7ed46c3a2fb754b022" id="r_a9fe73a84f9eb1e7ed46c3a2fb754b022"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a9fe73a84f9eb1e7ed46c3a2fb754b022">CalculateLHSContribution</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentCondition</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rLHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rEquationIds</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
+<tr class="memdesc:a9fe73a84f9eb1e7ed46c3a2fb754b022"><td class="mdescLeft">&#160;</td><td class="mdescRight">Functions totally analogous to the precedent but applied to the "condition" objects.  <br /></td></tr>
+<tr class="separator:a9fe73a84f9eb1e7ed46c3a2fb754b022"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2495caaaf3a2338172a8c4137bbcaab1" id="r_a2495caaaf3a2338172a8c4137bbcaab1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2495caaaf3a2338172a8c4137bbcaab1">CalculateLHSContribution</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentElement</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rLHS_Contribution</a>, <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html#ae71a1a55ae484b69ec9ec5f18919e324">Element::EquationIdVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rEquationIds</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
+<tr class="memdesc:a2495caaaf3a2338172a8c4137bbcaab1"><td class="mdescLeft">&#160;</td><td class="mdescRight">This function is designed to calculate just the LHS contribution.  <br /></td></tr>
+<tr class="separator:a2495caaaf3a2338172a8c4137bbcaab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_kratos_1_1_generalized_newmark_scheme"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_kratos_1_1_generalized_newmark_scheme')"><img src="../../closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="../../db/d4b/class_kratos_1_1_generalized_newmark_scheme.html">Kratos::GeneralizedNewmarkScheme&lt; TSparseSpace, TDenseSpace &gt;</a></td></tr>
 <tr class="memitem:acee16416dfae2b495ec1a2266506e36c inherit pub_methods_class_kratos_1_1_generalized_newmark_scheme" id="r_acee16416dfae2b495ec1a2266506e36c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../db/d4b/class_kratos_1_1_generalized_newmark_scheme.html#acee16416dfae2b495ec1a2266506e36c">GeneralizedNewmarkScheme</a> (const std::vector&lt; <a class="el" href="../../d7/da1/struct_kratos_1_1_first_order_scalar_variable.html">FirstOrderScalarVariable</a> &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rFirstOrderScalarVariables</a>, const std::vector&lt; <a class="el" href="../../db/d16/struct_kratos_1_1_second_order_vector_variable.html">SecondOrderVectorVariable</a> &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rSecondOrderVectorVariables</a>, std::optional&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> &gt; beta, std::optional&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> &gt; gamma, std::optional&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> &gt; theta)</td></tr>
 <tr class="separator:acee16416dfae2b495ec1a2266506e36c inherit pub_methods_class_kratos_1_1_generalized_newmark_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -237,9 +237,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af90e3295305887741f40991b96919a3a inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme" id="r_af90e3295305887741f40991b96919a3a"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">typename</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">MemFuncPtr</a> &gt; </td></tr>
 <tr class="memitem:af90e3295305887741f40991b96919a3a inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#af90e3295305887741f40991b96919a3a">BlockForEachActiveCondition</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">MemFuncPtr</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">pMemberFunction</a>)</td></tr>
 <tr class="separator:af90e3295305887741f40991b96919a3a inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1bebb542c5bcdb76b5e2e2bbf8d02929 inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme" id="r_a1bebb542c5bcdb76b5e2e2bbf8d02929"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#a1bebb542c5bcdb76b5e2e2bbf8d02929">FinalizeSolutionStep</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#aee7b01aa9fccee5c9b0947355448e5da">TSystemMatrixType</a> &amp;A, <a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#ae9d214c14128ad8c0e78d80d2f3791b4">TSystemVectorType</a> &amp;Dx, <a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#ae9d214c14128ad8c0e78d80d2f3791b4">TSystemVectorType</a> &amp;b) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
-<tr class="memdesc:a1bebb542c5bcdb76b5e2e2bbf8d02929 inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called once at the end of a solution step, after convergence is reached if an iterative process is needed.  <br /></td></tr>
-<tr class="separator:a1bebb542c5bcdb76b5e2e2bbf8d02929 inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedcc2366b8a22d50b2c84e9374465596 inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme" id="r_aedcc2366b8a22d50b2c84e9374465596"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#aedcc2366b8a22d50b2c84e9374465596">FinalizeSolutionStep</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, <a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#aee7b01aa9fccee5c9b0947355448e5da">TSystemMatrixType</a> &amp;rA, <a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#ae9d214c14128ad8c0e78d80d2f3791b4">TSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rDx</a>, <a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#ae9d214c14128ad8c0e78d80d2f3791b4">TSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rb</a>) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
+<tr class="memdesc:aedcc2366b8a22d50b2c84e9374465596 inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function called once at the end of a solution step, after convergence is reached if an iterative process is needed.  <br /></td></tr>
+<tr class="separator:aedcc2366b8a22d50b2c84e9374465596 inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81f46dca1e236ca41b8801921dd9091b inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme" id="r_a81f46dca1e236ca41b8801921dd9091b"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">typename</a> T &gt; </td></tr>
 <tr class="memitem:a81f46dca1e236ca41b8801921dd9091b inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#a81f46dca1e236ca41b8801921dd9091b">CalculateSystemContributionsImpl</a> (T &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentComponent</a>, <a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#a9105a33f8ab8d393f07d128c52042014">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">LHS_Contribution</a>, <a class="el" href="../../d0/d98/class_kratos_1_1_geo_mechanics_time_integration_scheme.html#a04e15d25ce81dda699cc8b987e9e9d3d">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">RHS_Contribution</a>, <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">typename</a> T::EquationIdVectorType &amp;<a class="el" href="../../d1/da3/class_kratos_1_1_scheme.html#a5da1d04c9d91257a1c617f588b0394ad">EquationId</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
 <tr class="separator:a81f46dca1e236ca41b8801921dd9091b inherit pub_methods_class_kratos_1_1_geo_mechanics_time_integration_scheme"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -340,12 +340,12 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ab2f36e056075598cd22af34a816c47d3" id="r_ab2f36e056075598cd22af34a816c47d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#ab2f36e056075598cd22af34a816c47d3">AddDynamicsToLHS</a> (<a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">LHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;M, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;C, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
-<tr class="separator:ab2f36e056075598cd22af34a816c47d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9994de851013f1ecd3721768d3e7e901" id="r_a9994de851013f1ecd3721768d3e7e901"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a9994de851013f1ecd3721768d3e7e901">AddDynamicsToRHS</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentCondition</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">RHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;M, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;C, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
-<tr class="separator:a9994de851013f1ecd3721768d3e7e901"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a22cedfc92fb164ed552c72da04e44548" id="r_a22cedfc92fb164ed552c72da04e44548"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22cedfc92fb164ed552c72da04e44548">AddDynamicsToRHS</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentElement</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">RHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;M, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;C, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;CurrentProcessInfo)</td></tr>
-<tr class="separator:a22cedfc92fb164ed552c72da04e44548"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92554705aa5e41af55df4d904915d35e" id="r_a92554705aa5e41af55df4d904915d35e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a92554705aa5e41af55df4d904915d35e">AddDynamicsToLHS</a> (<a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rLHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rM</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rC</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>)</td></tr>
+<tr class="separator:a92554705aa5e41af55df4d904915d35e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af04240f66e4e12594fb57418819f484a" id="r_af04240f66e4e12594fb57418819f484a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#af04240f66e4e12594fb57418819f484a">AddDynamicsToRHS</a> (<a class="el" href="../../d1/d6e/class_kratos_1_1_condition.html">Condition</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentCondition</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rRHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rM</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rC</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>)</td></tr>
+<tr class="separator:af04240f66e4e12594fb57418819f484a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1b5a1d4fbde295b5014a2ce4697dfa1" id="r_ad1b5a1d4fbde295b5014a2ce4697dfa1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#ad1b5a1d4fbde295b5014a2ce4697dfa1">AddDynamicsToRHS</a> (<a class="el" href="../../d5/dd4/class_kratos_1_1_element.html">Element</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentElement</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rRHS_Contribution</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rM</a>, <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rC</a>, const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rCurrentProcessInfo</a>)</td></tr>
+<tr class="separator:ad1b5a1d4fbde295b5014a2ce4697dfa1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab52cc400c8f455fec3cc9bbb975ee36b" id="r_ab52cc400c8f455fec3cc9bbb975ee36b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#ab52cc400c8f455fec3cc9bbb975ee36b">UpdateVariablesDerivatives</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart) <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">override</a></td></tr>
 <tr class="separator:ab52cc400c8f455fec3cc9bbb975ee36b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_class_kratos_1_1_generalized_newmark_scheme"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_class_kratos_1_1_generalized_newmark_scheme')"><img src="../../closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="../../db/d4b/class_kratos_1_1_generalized_newmark_scheme.html">Kratos::GeneralizedNewmarkScheme&lt; TSparseSpace, TDenseSpace &gt;</a></td></tr>
@@ -541,8 +541,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab2f36e056075598cd22af34a816c47d3" name="ab2f36e056075598cd22af34a816c47d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2f36e056075598cd22af34a816c47d3">&#9670;&#160;</a></span>AddDynamicsToLHS()</h2>
+<a id="a92554705aa5e41af55df4d904915d35e" name="a92554705aa5e41af55df4d904915d35e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92554705aa5e41af55df4d904915d35e">&#9670;&#160;</a></span>AddDynamicsToLHS()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -556,25 +556,25 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
           <td class="memname">void <a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html">Kratos::NewmarkDynamicUPwScheme</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TSparseSpace</a>, <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">TDenseSpace</a> &gt;::AddDynamicsToLHS </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;&#160;</td>
-          <td class="paramname"><em>LHS_Contribution</em>, </td>
+          <td class="paramname"><em>rLHS_Contribution</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;&#160;</td>
-          <td class="paramname"><em>M</em>, </td>
+          <td class="paramname"><em>rM</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;&#160;</td>
-          <td class="paramname"><em>C</em>, </td>
+          <td class="paramname"><em>rC</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>CurrentProcessInfo</em>&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -591,8 +591,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 
 </div>
 </div>
-<a id="a9994de851013f1ecd3721768d3e7e901" name="a9994de851013f1ecd3721768d3e7e901"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9994de851013f1ecd3721768d3e7e901">&#9670;&#160;</a></span>AddDynamicsToRHS() <span class="overload">[1/2]</span></h2>
+<a id="af04240f66e4e12594fb57418819f484a" name="af04240f66e4e12594fb57418819f484a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af04240f66e4e12594fb57418819f484a">&#9670;&#160;</a></span>AddDynamicsToRHS() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -612,25 +612,25 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;&#160;</td>
-          <td class="paramname"><em>RHS_Contribution</em>, </td>
+          <td class="paramname"><em>rRHS_Contribution</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;&#160;</td>
-          <td class="paramname"><em>M</em>, </td>
+          <td class="paramname"><em>rM</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;&#160;</td>
-          <td class="paramname"><em>C</em>, </td>
+          <td class="paramname"><em>rC</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>CurrentProcessInfo</em>&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -647,8 +647,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 
 </div>
 </div>
-<a id="a22cedfc92fb164ed552c72da04e44548" name="a22cedfc92fb164ed552c72da04e44548"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a22cedfc92fb164ed552c72da04e44548">&#9670;&#160;</a></span>AddDynamicsToRHS() <span class="overload">[2/2]</span></h2>
+<a id="ad1b5a1d4fbde295b5014a2ce4697dfa1" name="ad1b5a1d4fbde295b5014a2ce4697dfa1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1b5a1d4fbde295b5014a2ce4697dfa1">&#9670;&#160;</a></span>AddDynamicsToRHS() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -668,25 +668,25 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a22f44cd14d0a50b14d0f5f4d5ed86c00">LocalSystemVectorType</a> &amp;&#160;</td>
-          <td class="paramname"><em>RHS_Contribution</em>, </td>
+          <td class="paramname"><em>rRHS_Contribution</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;&#160;</td>
-          <td class="paramname"><em>M</em>, </td>
+          <td class="paramname"><em>rM</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="../../d5/d7c/class_kratos_1_1_newmark_dynamic_u_pw_scheme.html#a2331db79812cada8104c5c5fde02d2e2">LocalSystemMatrixType</a> &amp;&#160;</td>
-          <td class="paramname"><em>C</em>, </td>
+          <td class="paramname"><em>rC</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const <a class="el" href="../../db/deb/class_kratos_1_1_process_info.html">ProcessInfo</a> &amp;&#160;</td>
-          <td class="paramname"><em>CurrentProcessInfo</em>&#160;</td>
+          <td class="paramname"><em>rCurrentProcessInfo</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -703,8 +703,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 
 </div>
 </div>
-<a id="a4126ec90c5946e9ba9d0185238d53cf8" name="a4126ec90c5946e9ba9d0185238d53cf8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4126ec90c5946e9ba9d0185238d53cf8">&#9670;&#160;</a></span>CalculateLHSContribution() <span class="overload">[1/2]</span></h2>
+<a id="a9fe73a84f9eb1e7ed46c3a2fb754b022" name="a9fe73a84f9eb1e7ed46c3a2fb754b022"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9fe73a84f9eb1e7ed46c3a2fb754b022">&#9670;&#160;</a></span>CalculateLHSContribution() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -766,8 +766,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 
 </div>
 </div>
-<a id="af0c7f85001c10d27adc8e6a534a49a5f" name="af0c7f85001c10d27adc8e6a534a49a5f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0c7f85001c10d27adc8e6a534a49a5f">&#9670;&#160;</a></span>CalculateLHSContribution() <span class="overload">[2/2]</span></h2>
+<a id="a2495caaaf3a2338172a8c4137bbcaab1" name="a2495caaaf3a2338172a8c4137bbcaab1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2495caaaf3a2338172a8c4137bbcaab1">&#9670;&#160;</a></span>CalculateLHSContribution() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -892,8 +892,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 
 </div>
 </div>
-<a id="a5e14dfbd65cac814311233fbf23f647c" name="a5e14dfbd65cac814311233fbf23f647c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5e14dfbd65cac814311233fbf23f647c">&#9670;&#160;</a></span>CalculateRHSContribution() <span class="overload">[2/2]</span></h2>
+<a id="a62d07803c34ce78c7632132f73feb99c" name="a62d07803c34ce78c7632132f73feb99c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62d07803c34ce78c7632132f73feb99c">&#9670;&#160;</a></span>CalculateRHSContribution() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -955,8 +955,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 
 </div>
 </div>
-<a id="a010494eebc775a47bebac0cdd23b4356" name="a010494eebc775a47bebac0cdd23b4356"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a010494eebc775a47bebac0cdd23b4356">&#9670;&#160;</a></span>CalculateSystemContributions() <span class="overload">[1/2]</span></h2>
+<a id="a82de45bf8f9426dbf0221f228cba771d" name="a82de45bf8f9426dbf0221f228cba771d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82de45bf8f9426dbf0221f228cba771d">&#9670;&#160;</a></span>CalculateSystemContributions() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1025,8 +1025,8 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 
 </div>
 </div>
-<a id="a19896c2ae4118b36d7a55308dca9092d" name="a19896c2ae4118b36d7a55308dca9092d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a19896c2ae4118b36d7a55308dca9092d">&#9670;&#160;</a></span>CalculateSystemContributions() <span class="overload">[2/2]</span></h2>
+<a id="a4444be3d2212c6fd4ec33f450e9d2bc1" name="a4444be3d2212c6fd4ec33f450e9d2bc1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4444be3d2212c6fd4ec33f450e9d2bc1">&#9670;&#160;</a></span>CalculateSystemContributions() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1315,7 +1315,7 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Jan 24 2025 04:03:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sat Jan 25 2025 03:44:02 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
