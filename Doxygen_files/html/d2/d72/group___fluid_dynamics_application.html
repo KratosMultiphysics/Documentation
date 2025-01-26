@@ -2484,6 +2484,12 @@ Friends</h2></td></tr>
 <tr class="memitem:ga5c02f35d9263908b7dba114d0f578d12" id="r_ga5c02f35d9263908b7dba114d0f578d12"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga5c02f35d9263908b7dba114d0f578d12">Kratos::FluidAuxiliaryUtilities::CalculateFluidPositiveVolume</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
 <tr class="memdesc:ga5c02f35d9263908b7dba114d0f578d12"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the fluid positive volume For the given model part, this function calculates the total positive fluid volume fraction. It is assumed that a unique element geometry type it is present in the mesh. Only simplex geometries (linear triangle and tetrahedron) are supported. The positive fraction must be described in terms of a continuous level set function stored in the variable DISTANCE of the historical database.  <br /></td></tr>
 <tr class="separator:ga5c02f35d9263908b7dba114d0f578d12"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga230ac86325387223528bb1a73fa8fa6b" id="r_ga230ac86325387223528bb1a73fa8fa6b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga230ac86325387223528bb1a73fa8fa6b">Kratos::FluidAuxiliaryUtilities::CalculateFluidCutElementsNegativeVolume</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
+<tr class="memdesc:ga230ac86325387223528bb1a73fa8fa6b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the fluid negative volume in cut elements For the given model part, this function calculates the total negative fluid volume fraction in the cut elements. It is assumed that a unique element geometry type it is present in the mesh. Only simplex geometries (linear triangle and tetrahedron) are supported. The negative fraction must be described in terms of a continuous level set function stored in the variable DISTANCE of the historical database.  <br /></td></tr>
+<tr class="separator:ga230ac86325387223528bb1a73fa8fa6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga15b3502314a4c579178979c31e263a06" id="r_ga15b3502314a4c579178979c31e263a06"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga15b3502314a4c579178979c31e263a06">Kratos::FluidAuxiliaryUtilities::CalculateFluidCutElementsPositiveVolume</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
+<tr class="memdesc:ga15b3502314a4c579178979c31e263a06"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the fluid positive volume in cut elements For the given model part, this function calculates the total positive fluid volume fraction in the cut elements. It is assumed that a unique element geometry type it is present in the mesh. Only simplex geometries (linear triangle and tetrahedron) are supported. The positive fraction must be described in terms of a continuous level set function stored in the variable DISTANCE of the historical database.  <br /></td></tr>
+<tr class="separator:ga15b3502314a4c579178979c31e263a06"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7441c5a76826facbba766098f1f90590" id="r_ga7441c5a76826facbba766098f1f90590"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d72/group___fluid_dynamics_application.html#ga7441c5a76826facbba766098f1f90590">Kratos::FluidAuxiliaryUtilities::CalculateFluidNegativeVolume</a> (const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart)</td></tr>
 <tr class="memdesc:ga7441c5a76826facbba766098f1f90590"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculate the fluid negative volume For the given model part, this function calculates the total negative fluid volume fraction. It is assumed that a unique element geometry type it is present in the mesh. Only simplex geometries (linear triangle and tetrahedron) are supported. The negative fraction must be described in terms of a continuous level set function stored in the variable DISTANCE of the historical database.  <br /></td></tr>
 <tr class="separator:ga7441c5a76826facbba766098f1f90590"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -13252,6 +13258,76 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double Flow rate </dd></dl>
+
+</div>
+</div>
+<a id="ga230ac86325387223528bb1a73fa8fa6b" name="ga230ac86325387223528bb1a73fa8fa6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga230ac86325387223528bb1a73fa8fa6b">&#9670;&#160;</a></span>CalculateFluidCutElementsNegativeVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> Kratos::FluidAuxiliaryUtilities::CalculateFluidCutElementsNegativeVolume </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the fluid negative volume in cut elements For the given model part, this function calculates the total negative fluid volume fraction in the cut elements. It is assumed that a unique element geometry type it is present in the mesh. Only simplex geometries (linear triangle and tetrahedron) are supported. The negative fraction must be described in terms of a continuous level set function stored in the variable DISTANCE of the historical database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part to calculate the negative volume </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double Fluid negative volume over the cut elements </dd></dl>
+
+</div>
+</div>
+<a id="ga15b3502314a4c579178979c31e263a06" name="ga15b3502314a4c579178979c31e263a06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga15b3502314a4c579178979c31e263a06">&#9670;&#160;</a></span>CalculateFluidCutElementsPositiveVolume()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a> Kratos::FluidAuxiliaryUtilities::CalculateFluidCutElementsPositiveVolume </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Calculate the fluid positive volume in cut elements For the given model part, this function calculates the total positive fluid volume fraction in the cut elements. It is assumed that a unique element geometry type it is present in the mesh. Only simplex geometries (linear triangle and tetrahedron) are supported. The positive fraction must be described in terms of a continuous level set function stored in the variable DISTANCE of the historical database. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part to calculate the positive volume </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double Fluid positive volume over the cut elements </dd></dl>
 
 </div>
 </div>
@@ -40774,7 +40850,7 @@ template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html"
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 25 2025 03:25:41 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Sun Jan 26 2025 03:41:42 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
