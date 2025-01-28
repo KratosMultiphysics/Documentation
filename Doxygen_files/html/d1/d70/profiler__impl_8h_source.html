@@ -136,38 +136,31 @@ $(document).ready(function() { init_codefold(1); });
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="foldopen" id="foldopen00043" data-start="{" data-end="}">
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno"><a class="line" href="../../dd/d1e/class_kratos_1_1_internals_1_1_profiler_1_1_scope.html#ae778e3b45c345e44594356932a7b3945">   43</a></span><a class="code hl_class" href="../../dd/d7e/class_kratos_1_1_internals_1_1_profiler.html">Profiler&lt;T&gt;::Scope::~Scope</a>()</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>Profiler&lt;T&gt;::Scope::~Scope()</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>{</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordflow">if</span> (!--mrItem.mRecursionLevel) {</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">duration</a> = std::chrono::duration_cast&lt;Profiler::TimeUnit&gt;(Clock::now() - mBegin);</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        mrItem.mCumulative += <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">duration</a>;</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        mrItem.mMin = std::min(mrItem.mMin, <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">duration</a>);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        mrItem.mMax = std::max(mrItem.mMax, <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">duration</a>);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        <span class="keyword">const</span> <span class="keyword">auto</span> duration = std::chrono::duration_cast&lt;Profiler::TimeUnit&gt;(Clock::now() - mBegin);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        mrItem.mCumulative += duration;</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        mrItem.mMin = std::min(mrItem.mMin, duration);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        mrItem.mMax = std::max(mrItem.mMax, duration);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    }</div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>}</div>
-</div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span><span class="keyword">template</span> &lt;<span class="keyword">class</span> T&gt;</div>
-<div class="foldopen" id="foldopen00055" data-start="{" data-end="}">
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="../../dd/d7e/class_kratos_1_1_internals_1_1_profiler.html#a7132ff614e93e53c41217c0ec702de57">   55</a></span><span class="keyword">typename</span> <a class="code hl_class" href="../../dd/d1e/class_kratos_1_1_internals_1_1_profiler_1_1_scope.html">Profiler&lt;T&gt;::Scope</a> <a class="code hl_class" href="../../dd/d7e/class_kratos_1_1_internals_1_1_profiler.html">Profiler&lt;T&gt;::Profile</a>(Item&amp; <a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rItem</a>)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keyword">typename</span> Profiler&lt;T&gt;::Scope Profiler&lt;T&gt;::Profile(Item&amp; rItem)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> <a class="code hl_class" href="../../dd/d1e/class_kratos_1_1_internals_1_1_profiler_1_1_scope.html">Scope</a>(<a class="code hl_class" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rItem</a>);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordflow">return</span> Scope(rItem);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
-</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>} <span class="comment">// namespace Kratos::Internals</span></div>
-<div class="ttc" id="aclass_kratos_1_1_internals_1_1_profiler_1_1_scope_html"><div class="ttname"><a href="../../dd/d1e/class_kratos_1_1_internals_1_1_profiler_1_1_scope.html">Kratos::Internals::Profiler::Scope</a></div><div class="ttdoc">RAII wrapper for updating an Item.</div><div class="ttdef"><b>Definition</b> profiler.h:106</div></div>
-<div class="ttc" id="aclass_kratos_1_1_internals_1_1_profiler_html"><div class="ttname"><a href="../../dd/d7e/class_kratos_1_1_internals_1_1_profiler.html">Kratos::Internals::Profiler</a></div><div class="ttdef"><b>Definition</b> profiler.h:33</div></div>
-<div class="ttc" id="aclass_kratos_1_1_triangle3_d3_html"><div class="ttname"><a href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">Kratos::Triangle3D3</a></div><div class="ttdoc">A three node 3D triangle geometry with linear shape functions.</div><div class="ttdef"><b>Definition</b> triangle_3d_3.h:77</div></div>
 <div class="ttc" id="anamespace_kratos_1_1_internals_html"><div class="ttname"><a href="../../de/d8f/namespace_kratos_1_1_internals.html">Kratos::Internals</a></div><div class="ttdef"><b>Definition</b> factory.h:208</div></div>
 <div class="ttc" id="aprofiler_8h_html"><div class="ttname"><a href="../../dd/dff/profiler_8h.html">profiler.h</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jan 27 2025 03:40:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Tue Jan 28 2025 03:40:11 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
