@@ -99,7 +99,7 @@ $(function() {
 <div class="dynheader">
 Collaboration diagram for Kratos::ConversionUtilities:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d22/class_kratos_1_1_conversion_utilities__coll__graph.svg" width="240" height="315"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d8/d22/class_kratos_1_1_conversion_utilities__coll__graph.svg" width="240" height="523"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -122,8 +122,22 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr><td colspan="2"><div class="groupHeader">Operations</div></td></tr>
-<tr class="memitem:ab623be63cb8c88fdc83ff5a5467546ec" id="r_ab623be63cb8c88fdc83ff5a5467546ec"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/dcf/class_kratos_1_1_conversion_utilities.html#ab623be63cb8c88fdc83ff5a5467546ec">ConvertElementalDataToNodalData</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>, 3 &gt; &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rElementalVariable</a>, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>, 3 &gt; &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rNodalVariable</a>)</td></tr>
-<tr class="separator:ab623be63cb8c88fdc83ff5a5467546ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09d110f69e06eff6399acb8bcca9511a" id="r_a09d110f69e06eff6399acb8bcca9511a"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> TDataType &gt; </td></tr>
+<tr class="memitem:a09d110f69e06eff6399acb8bcca9511a"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/dcf/class_kratos_1_1_conversion_utilities.html#a09d110f69e06eff6399acb8bcca9511a">ConvertElementalDataToNodalDataTranspose</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rElementalVariable</a>, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rNodalVariable</a>)</td></tr>
+<tr class="memdesc:a09d110f69e06eff6399acb8bcca9511a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts elemental data to nodal data by transpose operator. Nodal value is a sum of elemental values, where each elemental value is divided by the number of nodes. Hence the integrated sum is equal on nodes and elements.  <br /></td></tr>
+<tr class="separator:a09d110f69e06eff6399acb8bcca9511a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6657767ba670953a9b33d2f5e68a92b2" id="r_a6657767ba670953a9b33d2f5e68a92b2"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> TDataType &gt; </td></tr>
+<tr class="memitem:a6657767ba670953a9b33d2f5e68a92b2"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/dcf/class_kratos_1_1_conversion_utilities.html#a6657767ba670953a9b33d2f5e68a92b2">ConvertElementalDataToNodalDataDirect</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rElementalVariable</a>, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rNodalVariable</a>)</td></tr>
+<tr class="memdesc:a6657767ba670953a9b33d2f5e68a92b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts elemental data to nodal data directly. Nodal value is a sum of elemental values divided by the number of elements.  <br /></td></tr>
+<tr class="separator:a6657767ba670953a9b33d2f5e68a92b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe60469ef882d69fcd310322cb73340e" id="r_afe60469ef882d69fcd310322cb73340e"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> TDataType &gt; </td></tr>
+<tr class="memitem:afe60469ef882d69fcd310322cb73340e"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/dcf/class_kratos_1_1_conversion_utilities.html#afe60469ef882d69fcd310322cb73340e">ConvertNodalDataToElementalDataDirect</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rElementalVariable</a>, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rNodalVariable</a>)</td></tr>
+<tr class="memdesc:afe60469ef882d69fcd310322cb73340e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts nodal data to elemental data. <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> value is a sum of nodal values divided by the number of nodes.  <br /></td></tr>
+<tr class="separator:afe60469ef882d69fcd310322cb73340e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07b9094fc5686b178604ebe0d505d2e9" id="r_a07b9094fc5686b178604ebe0d505d2e9"><td class="memTemplParams" colspan="2">template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> TDataType &gt; </td></tr>
+<tr class="memitem:a07b9094fc5686b178604ebe0d505d2e9"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">static</a> void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="../../de/dcf/class_kratos_1_1_conversion_utilities.html#a07b9094fc5686b178604ebe0d505d2e9">ConvertNodalDataToElementalDataTranspose</a> (<a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;rModelPart, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rElementalVariable</a>, const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">rNodalVariable</a>)</td></tr>
+<tr class="memdesc:a07b9094fc5686b178604ebe0d505d2e9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts nodal data to elemental data using transpose operator. <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> value is a sum of nodal value contribution, which is split equally to all neighbouring elements.  <br /></td></tr>
+<tr class="separator:a07b9094fc5686b178604ebe0d505d2e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Short class definition. </p>
@@ -185,17 +199,19 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab623be63cb8c88fdc83ff5a5467546ec" name="ab623be63cb8c88fdc83ff5a5467546ec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab623be63cb8c88fdc83ff5a5467546ec">&#9670;&#160;</a></span>ConvertElementalDataToNodalData()</h2>
+<a id="a6657767ba670953a9b33d2f5e68a92b2" name="a6657767ba670953a9b33d2f5e68a92b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6657767ba670953a9b33d2f5e68a92b2">&#9670;&#160;</a></span>ConvertElementalDataToNodalDataDirect()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> TDataType &gt; </div>
 <table class="mlabels">
   <tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Kratos::ConversionUtilities::ConvertElementalDataToNodalData </td>
+          <td class="memname">template void Kratos::ConversionUtilities::ConvertElementalDataToNodalDataDirect&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>, 3 &gt; &gt; </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
           <td class="paramname"><em>rModelPart</em>, </td>
@@ -203,13 +219,13 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>, 3 &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;&#160;</td>
           <td class="paramname"><em>rElementalVariable</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>, 3 &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;&#160;</td>
           <td class="paramname"><em>rNodalVariable</em>&#160;</td>
         </tr>
         <tr>
@@ -224,6 +240,206 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>Converts elemental data to nodal data directly. Nodal value is a sum of elemental values divided by the number of elements. </p>
+<p>This function takes elemental data from a specified variable and converts it to nodal data, storing the result in another specified variable. The conversion is performed directly without any intermediate steps.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TDataType</td><td>The type of the data to be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part containing the elements and nodes. </td></tr>
+    <tr><td class="paramname">rElementalVariable</td><td>The variable containing the elemental data to be converted. </td></tr>
+    <tr><td class="paramname">rNodalVariable</td><td>The variable where the converted nodal data will be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a09d110f69e06eff6399acb8bcca9511a" name="a09d110f69e06eff6399acb8bcca9511a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09d110f69e06eff6399acb8bcca9511a">&#9670;&#160;</a></span>ConvertElementalDataToNodalDataTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> TDataType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template void Kratos::ConversionUtilities::ConvertElementalDataToNodalDataTranspose&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>, 3 &gt; &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rElementalVariable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rNodalVariable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts elemental data to nodal data by transpose operator. Nodal value is a sum of elemental values, where each elemental value is divided by the number of nodes. Hence the integrated sum is equal on nodes and elements. </p>
+<p>This utility function takes elemental data from a specified variable and converts it to nodal data, storing the result in another specified variable.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TDataType</td><td>The type of the data to be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The model part containing the elements and nodes. </td></tr>
+    <tr><td class="paramname">rElementalVariable</td><td>The variable containing the elemental data to be converted. </td></tr>
+    <tr><td class="paramname">rNodalVariable</td><td>The variable where the converted nodal data will be stored. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="afe60469ef882d69fcd310322cb73340e" name="afe60469ef882d69fcd310322cb73340e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe60469ef882d69fcd310322cb73340e">&#9670;&#160;</a></span>ConvertNodalDataToElementalDataDirect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> TDataType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template void Kratos::ConversionUtilities::ConvertNodalDataToElementalDataDirect&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>, 3 &gt; &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rElementalVariable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rNodalVariable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts nodal data to elemental data. <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> value is a sum of nodal values divided by the number of nodes. </p>
+<p>This utility function transfers data from nodal variables to elemental variables within a given <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a>. It is templated to work with various data types.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TDataType</td><td>The type of data to be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a> containing the nodes and elements. </td></tr>
+    <tr><td class="paramname">rElementalVariable</td><td>The variable to store the converted elemental data. </td></tr>
+    <tr><td class="paramname">rNodalVariable</td><td>The variable containing the nodal data to be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a07b9094fc5686b178604ebe0d505d2e9" name="a07b9094fc5686b178604ebe0d505d2e9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07b9094fc5686b178604ebe0d505d2e9">&#9670;&#160;</a></span>ConvertNodalDataToElementalDataTranspose()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;<a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">class</a> TDataType &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">template void Kratos::ConversionUtilities::ConvertNodalDataToElementalDataTranspose&lt; <a class="el" href="../../d4/ddc/class_kratos_1_1array__1d.html">array_1d</a>&lt; <a class="el" href="../../de/d3e/class_kratos_1_1_triangle3_d3.html">double</a>, 3 &gt; &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html">ModelPart</a> &amp;&#160;</td>
+          <td class="paramname"><em>rModelPart</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rElementalVariable</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="../../d1/d66/class_kratos_1_1_variable.html">Variable</a>&lt; TDataType &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rNodalVariable</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Converts nodal data to elemental data using transpose operator. <a class="el" href="../../d5/dd4/class_kratos_1_1_element.html" title="Base class for all Elements.">Element</a> value is a sum of nodal value contribution, which is split equally to all neighbouring elements. </p>
+<p>This utility function transfers data from nodal variables to elemental variables within a given <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a>. It is templated to work with various data types.</p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">TDataType</td><td>The type of data to be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rModelPart</td><td>The <a class="el" href="../../d1/d79/class_kratos_1_1_model_part.html" title="This class aims to manage meshes for multi-physics simulations.">ModelPart</a> containing the nodes and elements. </td></tr>
+    <tr><td class="paramname">rElementalVariable</td><td>The variable to store the converted elemental data. </td></tr>
+    <tr><td class="paramname">rNodalVariable</td><td>The variable containing the nodal data to be converted. </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -282,7 +498,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jan 28 2025 03:52:47 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Wed Jan 29 2025 03:40:01 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
