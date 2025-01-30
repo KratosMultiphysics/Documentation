@@ -439,7 +439,7 @@ $(document).ready(function() { init_codefold(1); });
 <div class="line"><a id="l00272" name="l00272"></a><span class="lineno">  272</span> </div>
 <div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>        <span class="keyword">auto</span> begin_of_first_side  = points.ptr_begin();</div>
 <div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span>        <span class="keyword">auto</span> begin_of_second_side = begin_of_first_side + number_of_midline_nodes;</div>
-<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keyword">auto</span> make_mid_point       = [](<span class="keyword">auto</span> pPoint1, <span class="keyword">auto</span> pPoint2) {</div>
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno">  275</span>        <span class="keyword">auto</span> make_mid_point       = [](<span class="keyword">const</span> <span class="keyword">auto</span>&amp; pPoint1, <span class="keyword">const</span> <span class="keyword">auto</span>&amp; pPoint2) {</div>
 <div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>            <span class="keywordflow">return</span> make_intrusive&lt;Node&gt;(pPoint1-&gt;Id(), Point{(*pPoint1 + *pPoint2) / 2});</div>
 <div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        };</div>
 <div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        std::transform(begin_of_first_side, begin_of_second_side, begin_of_second_side,</div>
@@ -518,7 +518,7 @@ $(document).ready(function() { init_codefold(1); });
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Jan 29 2025 02:41:10 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Thu Jan 30 2025 02:41:35 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
