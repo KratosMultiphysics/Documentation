@@ -93,10 +93,13 @@ $(function() {
   <div class="headertitle"><div class="title">opt_convergence.L2ConvCriterion Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class to check the convergence of an optimization problem using the L2 norm criterion.  
+ <a href="../../d2/d1c/classopt__convergence_1_1_l2_conv_criterion.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for opt_convergence.L2ConvCriterion:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d79/classopt__convergence_1_1_l2_conv_criterion__coll__graph.svg" width="244" height="156"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d7/d79/classopt__convergence_1_1_l2_conv_criterion__coll__graph.svg" width="244" height="176"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -105,6 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a101d4e0d2076c01e463c184d236c9c6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaca739a895fb381925396b6d6a2bfa5d" id="r_aaca739a895fb381925396b6d6a2bfa5d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1c/classopt__convergence_1_1_l2_conv_criterion.html#aaca739a895fb381925396b6d6a2bfa5d">__init__</a> (self, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Kratos.Parameters</a> parameters, OptimizationProblem optimization_problem)</td></tr>
 <tr class="separator:aaca739a895fb381925396b6d6a2bfa5d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae549d6646dcece78f040b03da0de80ce" id="r_ae549d6646dcece78f040b03da0de80ce"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1c/classopt__convergence_1_1_l2_conv_criterion.html#ae549d6646dcece78f040b03da0de80ce">IsMaxIterationsReached</a> (self)</td></tr>
+<tr class="separator:ae549d6646dcece78f040b03da0de80ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afb74c4e5df1f66ad3a7e4d5014981cce" id="r_afb74c4e5df1f66ad3a7e4d5014981cce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1c/classopt__convergence_1_1_l2_conv_criterion.html#afb74c4e5df1f66ad3a7e4d5014981cce">IsConverged</a> (self)</td></tr>
 <tr class="separator:afb74c4e5df1f66ad3a7e4d5014981cce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b49b6f74a9de87d86e15e05c5a5ad00" id="r_a2b49b6f74a9de87d86e15e05c5a5ad00"><td class="memItemLeft" align="right" valign="top">dict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1c/classopt__convergence_1_1_l2_conv_criterion.html#a2b49b6f74a9de87d86e15e05c5a5ad00">GetInfo</a> (self)</td></tr>
@@ -117,7 +122,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a240917710152e8d7a53eb4cff0acfd3d" id="r_a240917710152e8d7a53eb4cff0acfd3d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d1c/classopt__convergence_1_1_l2_conv_criterion.html#a240917710152e8d7a53eb4cff0acfd3d">norm</a></td></tr>
 <tr class="separator:a240917710152e8d7a53eb4cff0acfd3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class to check the convergence of an optimization problem using the L2 norm criterion. </p>
+<h2>Methods </h2>
+<p>GetDefaultParameters(): Returns the default parameters for the L2ConvCriterion.</p>
+<p><b>init</b>(parameters: <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html" title="This class provides to Kratos a data structure for I/O based on the standard of JSON.">Kratos.Parameters</a>, <a class="el" href="../../df/da3/namespaceoptimization__problem.html">optimization_problem</a>: OptimizationProblem): Initializes the L2ConvCriterion with given parameters and optimization problem.</p>
+<p>IsMaxIterationsReached() -&gt; bool: Checks if the maximum number of iterations has been reached.</p>
+<p>IsConverged() -&gt; bool: Checks if the optimization problem has converged based on the L2 norm of the search direction.</p>
+<p>GetInfo() -&gt; dict: Returns a dictionary with information about the current state of convergence. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaca739a895fb381925396b6d6a2bfa5d" name="aaca739a895fb381925396b6d6a2bfa5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaca739a895fb381925396b6d6a2bfa5d">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -207,6 +220,24 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ae549d6646dcece78f040b03da0de80ce" name="ae549d6646dcece78f040b03da0de80ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae549d6646dcece78f040b03da0de80ce">&#9670;&#160;</a></span>IsMaxIterationsReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">opt_convergence.L2ConvCriterion.IsMaxIterationsReached </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="ac326a6e6fb151e5eebe9a70df51e9dd5" name="ac326a6e6fb151e5eebe9a70df51e9dd5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac326a6e6fb151e5eebe9a70df51e9dd5">&#9670;&#160;</a></span>conv</h2>
@@ -242,7 +273,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 30 2025 03:56:21 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Fri Jan 31 2025 03:57:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

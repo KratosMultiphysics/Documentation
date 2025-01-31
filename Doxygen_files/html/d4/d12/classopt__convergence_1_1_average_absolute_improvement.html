@@ -93,10 +93,13 @@ $(function() {
   <div class="headertitle"><div class="title">opt_convergence.AverageAbsoluteImprovement Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A class to monitor the convergence of an optimization problem based on the average absolute improvement of a tracked value over a specified number of iterations.  
+ <a href="../../d4/d12/classopt__convergence_1_1_average_absolute_improvement.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for opt_convergence.AverageAbsoluteImprovement:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d6f/classopt__convergence_1_1_average_absolute_improvement__coll__graph.svg" width="250" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d9/d6f/classopt__convergence_1_1_average_absolute_improvement__coll__graph.svg" width="250" height="191"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -105,6 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1ceb0983ed5275556cae0f42b902cca1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaff98b08bc5008d42a15dbba4d94352f" id="r_aaff98b08bc5008d42a15dbba4d94352f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/classopt__convergence_1_1_average_absolute_improvement.html#aaff98b08bc5008d42a15dbba4d94352f">__init__</a> (self, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Kratos.Parameters</a> parameters, OptimizationProblem optimization_problem)</td></tr>
 <tr class="separator:aaff98b08bc5008d42a15dbba4d94352f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade3bd59bbf131c3981563ef664f3cd5e" id="r_ade3bd59bbf131c3981563ef664f3cd5e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/classopt__convergence_1_1_average_absolute_improvement.html#ade3bd59bbf131c3981563ef664f3cd5e">IsMaxIterationsReached</a> (self)</td></tr>
+<tr class="separator:ade3bd59bbf131c3981563ef664f3cd5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa6c9ada4edb44160ed1a975c2ce1a04b" id="r_aa6c9ada4edb44160ed1a975c2ce1a04b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/classopt__convergence_1_1_average_absolute_improvement.html#aa6c9ada4edb44160ed1a975c2ce1a04b">IsConverged</a> (self)</td></tr>
 <tr class="separator:aa6c9ada4edb44160ed1a975c2ce1a04b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa312975ae9dfbec259f3074731f704f9" id="r_aa312975ae9dfbec259f3074731f704f9"><td class="memItemLeft" align="right" valign="top">dict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/classopt__convergence_1_1_average_absolute_improvement.html#aa312975ae9dfbec259f3074731f704f9">GetInfo</a> (self)</td></tr>
@@ -117,7 +122,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ad43069686abbca8c2e6f234541f086ae" id="r_ad43069686abbca8c2e6f234541f086ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d4/d12/classopt__convergence_1_1_average_absolute_improvement.html#ad43069686abbca8c2e6f234541f086ae">conv</a></td></tr>
 <tr class="separator:ad43069686abbca8c2e6f234541f086ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A class to monitor the convergence of an optimization problem based on the average absolute improvement of a tracked value over a specified number of iterations. </p>
+<h2>Methods </h2>
+<p>GetDefaultParameters(): Returns the default parameters for the convergence criteria.</p>
+<p><b>init</b>(parameters: <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html" title="This class provides to Kratos a data structure for I/O based on the standard of JSON.">Kratos.Parameters</a>, <a class="el" href="../../df/da3/namespaceoptimization__problem.html">optimization_problem</a>: OptimizationProblem): Initializes the convergence criteria with the given parameters and optimization problem.</p>
+<p>IsMaxIterationsReached() -&gt; bool: Checks if the maximum number of iterations has been reached.</p>
+<p>IsConverged() -&gt; bool: Checks if the optimization problem has converged based on the average absolute improvement.</p>
+<p>GetInfo() -&gt; dict: Returns a dictionary with information about the current state of the convergence criteria. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaff98b08bc5008d42a15dbba4d94352f" name="aaff98b08bc5008d42a15dbba4d94352f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaff98b08bc5008d42a15dbba4d94352f">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -207,6 +220,24 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ade3bd59bbf131c3981563ef664f3cd5e" name="ade3bd59bbf131c3981563ef664f3cd5e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ade3bd59bbf131c3981563ef664f3cd5e">&#9670;&#160;</a></span>IsMaxIterationsReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">opt_convergence.AverageAbsoluteImprovement.IsMaxIterationsReached </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="ad43069686abbca8c2e6f234541f086ae" name="ad43069686abbca8c2e6f234541f086ae"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad43069686abbca8c2e6f234541f086ae">&#9670;&#160;</a></span>conv</h2>
@@ -242,7 +273,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 30 2025 03:56:21 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Fri Jan 31 2025 03:57:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>

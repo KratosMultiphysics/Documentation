@@ -93,10 +93,13 @@ $(function() {
   <div class="headertitle"><div class="title">opt_convergence.MaxIterConvCriterion Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A convergence criterion class that checks if the maximum number of iterations has been reached.  
+ <a href="../../de/da7/classopt__convergence_1_1_max_iter_conv_criterion.html#details">More...</a></p>
 <div class="dynheader">
 Collaboration diagram for opt_convergence.MaxIterConvCriterion:</div>
 <div class="dyncontent">
-<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d78/classopt__convergence_1_1_max_iter_conv_criterion__coll__graph.svg" width="223" height="151"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
+<div class="center"><iframe scrolling="no" frameborder="0" src="../../d2/d78/classopt__convergence_1_1_max_iter_conv_criterion__coll__graph.svg" width="223" height="171"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe></div>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -105,6 +108,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9d20499a82d67948adaab82e139f3586"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7660627bf7da8c68d22a68f547bb8498" id="r_a7660627bf7da8c68d22a68f547bb8498"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da7/classopt__convergence_1_1_max_iter_conv_criterion.html#a7660627bf7da8c68d22a68f547bb8498">__init__</a> (self, <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html">Kratos.Parameters</a> parameters, OptimizationProblem optimization_problem)</td></tr>
 <tr class="separator:a7660627bf7da8c68d22a68f547bb8498"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e9aa84f18b216b67e0c472f96b9ed41" id="r_a2e9aa84f18b216b67e0c472f96b9ed41"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da7/classopt__convergence_1_1_max_iter_conv_criterion.html#a2e9aa84f18b216b67e0c472f96b9ed41">IsMaxIterationsReached</a> (self)</td></tr>
+<tr class="separator:a2e9aa84f18b216b67e0c472f96b9ed41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6372d2cf3d2fd779a4940cf7cabf0458" id="r_a6372d2cf3d2fd779a4940cf7cabf0458"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da7/classopt__convergence_1_1_max_iter_conv_criterion.html#a6372d2cf3d2fd779a4940cf7cabf0458">IsConverged</a> (self, search_direction=None)</td></tr>
 <tr class="separator:a6372d2cf3d2fd779a4940cf7cabf0458"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac5590120e57c34042a4aca389a24c720" id="r_ac5590120e57c34042a4aca389a24c720"><td class="memItemLeft" align="right" valign="top">dict&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da7/classopt__convergence_1_1_max_iter_conv_criterion.html#ac5590120e57c34042a4aca389a24c720">GetInfo</a> (self)</td></tr>
@@ -115,7 +120,15 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0c67ef9f855e03fa6e6ce3a74399ac29" id="r_a0c67ef9f855e03fa6e6ce3a74399ac29"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/da7/classopt__convergence_1_1_max_iter_conv_criterion.html#a0c67ef9f855e03fa6e6ce3a74399ac29">conv</a></td></tr>
 <tr class="separator:a0c67ef9f855e03fa6e6ce3a74399ac29"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>A convergence criterion class that checks if the maximum number of iterations has been reached. </p>
+<h2>Methods </h2>
+<p>GetDefaultParameters(): Returns the default parameters for the convergence criterion.</p>
+<p><b>init</b>(parameters: <a class="el" href="../../dd/da0/class_kratos_1_1_parameters.html" title="This class provides to Kratos a data structure for I/O based on the standard of JSON.">Kratos.Parameters</a>, <a class="el" href="../../df/da3/namespaceoptimization__problem.html">optimization_problem</a>: OptimizationProblem): Initializes the convergence criterion with the given parameters and optimization problem.</p>
+<p>IsMaxIterationsReached(): Checks if the maximum number of iterations has been reached.</p>
+<p>IsConverged(search_direction=None) -&gt; bool: Checks if the optimization problem has converged based on the maximum number of iterations.</p>
+<p>GetInfo() -&gt; dict: Returns a dictionary with information about the current state of convergence. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a7660627bf7da8c68d22a68f547bb8498" name="a7660627bf7da8c68d22a68f547bb8498"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7660627bf7da8c68d22a68f547bb8498">&#9670;&#160;</a></span>__init__()</h2>
 
@@ -215,6 +228,24 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a2e9aa84f18b216b67e0c472f96b9ed41" name="a2e9aa84f18b216b67e0c472f96b9ed41"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e9aa84f18b216b67e0c472f96b9ed41">&#9670;&#160;</a></span>IsMaxIterationsReached()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">opt_convergence.MaxIterConvCriterion.IsMaxIterationsReached </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="a0c67ef9f855e03fa6e6ce3a74399ac29" name="a0c67ef9f855e03fa6e6ce3a74399ac29"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c67ef9f855e03fa6e6ce3a74399ac29">&#9670;&#160;</a></span>conv</h2>
@@ -236,7 +267,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 30 2025 03:56:21 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+Generated on Fri Jan 31 2025 03:57:24 for KratosMultiphysics by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
 </small></address>
 </body>
 </html>
